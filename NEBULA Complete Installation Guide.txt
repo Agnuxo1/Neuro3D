@@ -1,0 +1,396 @@
+# NEBULA Complete Installation Guide
+
+## System Requirements
+
+### Hardware Requirements
+**Minimum:**
+- GPU: NVIDIA RTX 3070 Ti (12GB VRAM)
+- CPU: Intel i7-10700K or AMD Ryzen 7 3700X
+- RAM: 32GB DDR4 3200MHz
+- Storage: 500GB NVMe SSD (PCIe 3.0)
+- Windows 11 Pro 64-bit
+
+**Recommended:**
+- GPU: NVIDIA RTX 4090 (24GB VRAM)
+- CPU: Intel i9-13900K or AMD Ryzen 9 7950X
+- RAM: 64GB DDR5 5600MHz
+- Storage: 2TB NVMe SSD (PCIe 4.0)
+
+## Step 1: Base Software Installation
+
+### 1.1 Install Visual Studio 2022
+```powershell
+# Download Visual Studio 2022 Community
+Invoke-WebRequest -Uri "https://aka.ms/vs/17/release/vs_community.exe" -OutFile "vs_installer.exe"
+
+# Install with required workloads
+.\vs_installer.exe --quiet --wait --add Microsoft.VisualStudio.Workload.NativeDesktop --add Microsoft.VisualStudio.Workload.NativeGame --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 --add Microsoft.VisualStudio.Component.Windows11SDK.22000
+```
+
+### 1.2 Install CUDA Toolkit 12.3
+```powershell
+# Download CUDA 12.3
+Invoke-WebRequest -Uri "https://developer.download.nvidia.com/compute/cuda/12.3.0/local_installers/cuda_12.3.0_545.84_windows.exe" -OutFile "cuda_installer.exe"
+
+# Run installer
+.\cuda_installer.exe -s
+
+# Verify installation
+nvcc --version
+```
+
+### 1.3 Install OptiX SDK 8.0
+1. Register at https://developer.nvidia.com/optix
+2. Download OptiX SDK 8.0
+3. Extract to `C:\ProgramData\NVIDIA Corporation\OptiX SDK 8.0.0`
+
+### 1.4 Install Epic Games Launcher and Unreal Engine 5.3
+```powershell
+# Download Epic Games Launcher
+Invoke-WebRequest -Uri "https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi" -OutFile "EpicInstaller.msi"
+
+# Install
+msiexec /i EpicInstaller.msi /quiet
+
+# Launch and install UE5.3 from within the launcher
+```
+
+## Step 2: NEBULA Project Setup
+
+### 2.1 Create Project Structure
+```powershell
+# Create project directory
+mkdir C:\NEBULA_PROJECT
+cd C:\NEBULA_PROJECT
+
+# Create folder structure
+mkdir Source
+mkdir Source\NEBULA
+mkdir Source\NEBULA\Public
+mkdir Source\NEBULA\Private
+mkdir Source\NEBULA\Shaders
+mkdir Source\ThirdParty
+mkdir Source\ThirdParty\CUDA
+mkdir Source\ThirdParty\OptiX
+mkdir Content
+mkdir Content\NEBULA
+mkdir Content\NEBULA\FX
+mkdir Content\NEBULA\Materials
+mkdir Content\NEBULA\Blueprints
+mkdir Config
+mkdir Plugins
+```
+
+### 2.2 Create Project Files
+
+Create `NEBULA.uproject`:
+```json
+{
+    "FileVersion": 3,
+    "EngineAssociation": "5.3",
+    "Category": "AI",
+    "Description": "NEBULA Emergent Neural Galaxy System",
+    "Modules": [
+        {
+            "Name": "NEBULA",
+            "Type": "Runtime",
+            "LoadingPhase": "Default",
+            "AdditionalDependencies": [
+                "Engine",
+                "Core",
+                "CoreUObject",
+                "Niagara",
+                "RenderCore",
+                "RHI",
+                "Projects"
+            ]
+        }
+    ],
+    "Plugins": [
+        {
+            "Name": "Niagara",
+            "Enabled": true
+        },
+        {
+            "Name": "NiagaraFluids",
+            "Enabled": true
+        }
+    ],
+    "TargetPlatforms": [
+        "Windows"
+    ]
+}
+```
+
+Create `Source\NEBULA\NEBULA.Build.cs`:
+```csharp
+using UnrealBuildTool;
+using System.IO;
+
+public class NEBULA : ModuleRules
+{
+    public NEBULA(ReadOnlyTargetRules Target) : base(Target)
+    {
+        PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+        
+        PublicDependencyModuleNames.AddRange(new string[] {
+            "Core",
+            "CoreUObject",
+            "Engine",
+            "InputCore",
+            "Niagara",
+            "NiagaraCore",
+            "RenderCore",
+            "RHI",
+            "RHICore",
+            "Projects",
+            "Json",
+            "JsonUtilities"
+        });
+        
+        // CUDA paths
+        string CUDAPath = "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.3";
+        PublicIncludePaths.Add(Path.Combine(CUDAPath, "include"));
+        PublicAdditionalLibraries.Add(Path.Combine(CUDAPath, "lib/x64/cudart_static.lib"));
+        PublicAdditionalLibraries.Add(Path.Combine(CUDAPath, "lib/x64/cuda.lib"));
+        
+        // OptiX paths
+        string OptiXPath = "C:/ProgramData/NVIDIA Corporation/OptiX SDK 8.0.0";
+        PublicIncludePaths.Add(Path.Combine(OptiXPath, "include"));
+        
+        // Enable exceptions for OptiX
+        bEnableExceptions = true;
+        
+        // Optimization
+        OptimizeCode = CodeOptimization.InShippingBuildsOnly;
+    }
+}
+```
+
+## Step 3: Install Medical Imaging Libraries
+
+### 3.1 ITK (Insight Toolkit)
+```powershell
+# Clone ITK
+git clone https://github.com/InsightSoftwareConsortium/ITK.git
+cd ITK
+git checkout v5.3.0
+
+# Build ITK
+mkdir build
+cd build
+cmake .. -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DITK_USE_GPU=ON
+cmake --build . --config Release
+cmake --install . --prefix C:\NEBULA_PROJECT\Source\ThirdParty\ITK
+```
+
+### 3.2 DCMTK (DICOM Toolkit)
+```powershell
+# Download and extract DCMTK
+Invoke-WebRequest -Uri "https://dicom.offis.de/download/dcmtk/dcmtk367/dcmtk-3.6.7-win64-dynamic-vs2019.zip" -OutFile "dcmtk.zip"
+Expand-Archive dcmtk.zip -DestinationPath C:\NEBULA_PROJECT\Source\ThirdParty\DCMTK
+```
+
+## Step 4: Copy NEBULA Source Files
+
+### 4.1 Core Implementation Files
+Save the following files to their respective locations:
+
+- `Source\NEBULA\Private\NebulaEmergent.cpp`
+- `Source\NEBULA\Public\NebulaEmergent.h`
+- `Source\NEBULA\Private\NeuronEvolution.cpp`
+- `Source\NEBULA\Private\PhotonPropagation.cpp`
+- `Source\NEBULA\Private\ValidityOracle.cpp`
+- `Source\NEBULA\Private\DiversityMaintenance.cpp`
+- `Source\NEBULA\Private\PatternDecoder.cpp`
+- `Source\NEBULA\Private\MetaOptimizer.cpp`
+- `Source\NEBULA\Private\MedicalTranslator.cpp`
+- `Source\NEBULA\Private\ARCSolver.cpp`
+
+### 4.2 Shader Files
+Create `Source\NEBULA\Shaders\NeuronEvolution.usf` with the compute shader code provided earlier.
+
+## Step 5: Configure CUDA Compilation
+
+### 5.1 Create Custom Build Rules
+Create `Source\NEBULA\NEBULA.CUDA.Build.cs`:
+```csharp
+using System.IO;
+using UnrealBuildTool;
+
+public class NEBULACUDABuildRules
+{
+    public static void CompileCUDAFiles(ModuleRules Rules, ReadOnlyTargetRules Target)
+    {
+        string CUDAPath = "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.3";
+        string nvccPath = Path.Combine(CUDAPath, "bin/nvcc.exe");
+        
+        string[] CUDAFiles = Directory.GetFiles(
+            Path.Combine(Rules.ModuleDirectory, "Private"), 
+            "*.cu"
+        );
+        
+        foreach (string CUDAFile in CUDAFiles)
+        {
+            string OutputFile = Path.ChangeExtension(CUDAFile, ".obj");
+            
+            string Arguments = string.Format(
+                "-c \"{0}\" -o \"{1}\" -arch=sm_86 -O3 --use_fast_math",
+                CUDAFile, OutputFile
+            );
+            
+            System.Diagnostics.Process.Start(nvccPath, Arguments).WaitForExit();
+            Rules.PublicAdditionalLibraries.Add(OutputFile);
+        }
+    }
+}
+```
+
+## Step 6: Generate Project Files and Build
+
+### 6.1 Generate Visual Studio Project
+```powershell
+cd C:\NEBULA_PROJECT
+
+# Right-click on NEBULA.uproject and select "Generate Visual Studio project files"
+# Or use command line:
+"C:\Program Files\Epic Games\UE_5.3\Engine\Build\BatchFiles\GenerateProjectFiles.bat" -project="C:\NEBULA_PROJECT\NEBULA.uproject" -game
+```
+
+### 6.2 Build the Project
+```powershell
+# Open in Visual Studio
+devenv NEBULA.sln
+
+# Or build from command line
+"C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\MSBuild.exe" NEBULA.sln /p:Configuration="Development Editor" /p:Platform=Win64
+```
+
+## Step 7: Configure Unreal Editor
+
+### 7.1 Open Project in Unreal Editor
+```powershell
+"C:\Program Files\Epic Games\UE_5.3\Engine\Binaries\Win64\UnrealEditor.exe" "C:\NEBULA_PROJECT\NEBULA.uproject"
+```
+
+### 7.2 Configure Project Settings
+In the editor:
+1. Edit → Project Settings → Engine → Rendering
+   - Enable "Ray Tracing" 
+   - Enable "Hardware Ray Tracing"
+   - Enable "Skin Cache"
+   - Set "Anti-Aliasing Method" to "Temporal Super-Resolution"
+
+2. Edit → Project Settings → Platforms → Windows
+   - Set "Default RHI" to "DirectX 12"
+
+### 7.3 Create Niagara System
+1. Content Browser → Right-click → FX → Niagara System
+2. Create from Template → Empty
+3. Name it "NS_GalaxyNeurons"
+4. Add GPU Sprite emitter
+5. Set spawn rate to 1,000,000
+6. Link to structured buffer data interface
+
+## Step 8: Testing the Installation
+
+### 8.1 Create Test Blueprint
+```cpp
+// Create a Blueprint class based on ANebulaEmergent
+// In the Event Graph:
+
+Event BeginPlay
+    → Spawn Actor from Class (ANebulaEmergent)
+    → Set Num Neurons (1000000)
+    → Initialize Galaxy
+    
+Event Tick
+    → Evolve Frame
+    → Update Niagara Parameters
+```
+
+### 8.2 Verify GPU Utilization
+```powershell
+# Monitor GPU usage
+nvidia-smi -l 1
+
+# Expected output:
+# GPU utilization should be >90%
+# Memory usage should show several GB allocated
+# Compute processes should show UnrealEditor.exe
+```
+
+### 8.3 Run Test Suite
+```cpp
+// In C++ or Blueprint:
+void RunInstallationTest()
+{
+    // Test 1: CUDA availability
+    int deviceCount;
+    cudaGetDeviceCount(&deviceCount);
+    check(deviceCount > 0);
+    
+    // Test 2: OptiX initialization
+    OptixDeviceContext context;
+    OptixResult result = optixDeviceContextCreate(0, nullptr, &context);
+    check(result == OPTIX_SUCCESS);
+    
+    // Test 3: Neuron evolution
+    ANebulaEmergent* Nebula = GetWorld()->SpawnActor<ANebulaEmergent>();
+    Nebula->InitializeGalaxy();
+    Nebula->EvolveFrame(0.016f);
+    
+    // Test 4: Medical data loading
+    FString TestDICOM = "C:/TestData/sample.dcm";
+    if (FPaths::FileExists(TestDICOM))
+    {
+        Nebula->LoadMedicalVolume(TestDICOM);
+    }
+    
+    UE_LOG(LogTemp, Warning, TEXT("All tests passed!"));
+}
+```
+
+## Step 9: Troubleshooting
+
+### Common Issues and Solutions
+
+**Issue 1: CUDA out of memory**
+```powershell
+# Reduce neuron count in Config/DefaultEngine.ini
+[NEBULA.Settings]
+DefaultNeuronCount=100000
+```
+
+**Issue 2: Shader compilation errors**
+```powershell
+# Clear shader cache
+Remove-Item -Recurse "C:\NEBULA_PROJECT\Intermediate\ShaderCache"
+Remove-Item -Recurse "C:\NEBULA_PROJECT\Saved\ShaderCache"
+```
+
+**Issue 3: OptiX not found**
+```powershell
+# Add to system PATH
+[Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\ProgramData\NVIDIA Corporation\OptiX SDK 8.0.0\bin", [EnvironmentVariableTarget]::Machine)
+```
+
+## Step 10: Load Competition Data
+
+### 10.1 Download ARC-AGI Dataset
+```powershell
+# Download ARC dataset
+Invoke-WebRequest -Uri "https://github.com/fchollet/ARC-AGI/archive/refs/heads/master.zip" -OutFile "arc.zip"
+Expand-Archive arc.zip -DestinationPath C:\NEBULA_PROJECT\Data\ARC
+```
+
+### 10.2 Configure Data Paths
+Edit `Config/DefaultNEBULA.ini`:
+```ini
+[NEBULA.Paths]
+ARCDataPath=C:/NEBULA_PROJECT/Data/ARC
+RSNADataPath=E:/rsna-intracranial-aneurysm-detection
+OutputPath=C:/NEBULA_PROJECT/Output
+```
+
+The system should now be fully installed and operational. Launch the editor, create a level, place the NEBULA actor, and press Play to see the neural galaxy evolve in real-time.

@@ -1,0 +1,75 @@
+# Unreal Engine 5 - Large binary directories (CRITICAL: exclude)
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
+Plugins/*/Binaries/
+Plugins/*/Intermediate/
+
+# Unreal Engine binary asset formats (large / not human-readable)
+*.pak
+*.uasset
+*.umap
+*.ubulk
+*.uptnl
+
+# Unreal Engine compiled shaders
+*.ushaderbytecode
+*.ushadercode
+
+# Unreal Engine VS project files (auto-generated)
+*.sln
+*.suo
+*.user
+*.opensdf
+*.sdf
+.vs/
+VisualStudioVersion.txt
+
+# FBX / 3D model source files (large)
+*.fbx
+*.obj
+*.dae
+
+# CUDA compiled
+*.o
+*.ptx
+*.cubin
+*.so
+*.a
+
+# Build artifacts
+*.dll
+*.exe
+*.lib
+*.exp
+*.pdb
+
+# Logs
+*.log
+Saved/Logs/
+Saved/Crashes/
+Saved/Backup/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*~
+
+# Config overrides (keep Config/ tracked for project settings)
+# Saved/Config/ - excluded via Saved/ above
+
+# Note: Keep tracked:
+# - Source/ (C++ source code)
+# - Config/DefaultEngine.ini, DefaultGame.ini etc.
+# - *.uproject (project descriptor)
+# - *.usf (shader source files)
+# - *.cu (CUDA source)
+# - *.cpp, *.h (C++ source)
