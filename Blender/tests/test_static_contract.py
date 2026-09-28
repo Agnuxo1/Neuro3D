@@ -16,7 +16,7 @@ class StaticContractTests(unittest.TestCase):
         source = (ROOT / "shaders" / "nebula_photonic_compute.glsl").read_text(encoding="utf-8")
         for token in ("#version", "local_size_x", "gl_GlobalInvocationID", "NeuronState", "activation_threshold"):
             self.assertIn(token, source)
-        addon = (ROOT / "addon" / "nebula_santo_grial" / "__init__.py").read_text(encoding="utf-8")
+        addon = (ROOT / "addon" / "neuro3d" / "__init__.py").read_text(encoding="utf-8")
         self.assertIn("GPU_ENABLED_BY_DEFAULT = False", addon)
         self.assertIn("CPU preview", addon)
 
