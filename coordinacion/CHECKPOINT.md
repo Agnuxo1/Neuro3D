@@ -1,6 +1,6 @@
 # Checkpoint factual de Neuro3D
 
-Actualizado: 2026-09-28 23:20 UTC.
+Actualizado: 2026-09-28 23:34 UTC.
 
 ## Objetivo
 
@@ -167,6 +167,14 @@ no se usa como marca.
   (DEC-012). Constructor, contrato y test estructural actualizados; los
   umbrales de potencia, balance y readback permanecen iguales. Falta
   comprobación runtime exacta y no se acepta reajuste post hoc.
+- Claude entregó barrido CPU adicional con `direction_tolerance=1e-5`:
+  0/2000 estados no ok para cada amplitud de perturbación ±1,2e-7,
+  ±2,4e-7, ±5e-7 y ±1e-6 rad; en el rango ±2,4e-7 el puerto oscuro máximo
+  fue 8,2e-11 (<1e-9). Codex leyó/ejecutó el script, no Blender.
+  `readback_reconstruct.direction_gaps` calcula separaciones nominales de
+  salida A/B a partir de matrices reabiertas y el wrapper las añade al
+  informe sin alterar aceptación. 32/32 tests del oráculo y 55/55 CPU/
+  estáticos pasan. La precisión real de Blender sigue sin probarse.
 
 ## Recursos y procesos
 

@@ -76,8 +76,10 @@ class MZRunnerStaticTests(unittest.TestCase):
     def test_readback_guard_detects_tampered_optical_property(self):
         record = synthetic_record()
         with patch.object(Path, "read_text", return_value=json.dumps(record)):
-            self.assertEqual(run_mz_exp001._verify_readback(Path("D:/fake/A.blend"))
-                             ["readback_worst_abs_diff"], 0.0)
+            verified = run_mz_exp001._verify_readback(Path("D:/fake/A.blend"))
+            self.assertEqual(verified["readback_worst_abs_diff"], 0.0)
+            self.assertIn("direction_diagnostic", verified)
+            self.assertTrue(verified["direction_diagnostic"]["within_tolerance"])
         record["optics"]["mz_mirror2"]["phase_shift"] = 3.141592653589793
         with patch.object(Path, "read_text", return_value=json.dumps(record)):
             with self.assertRaisesRegex(AssertionError, "Independent CPU readback failed"):

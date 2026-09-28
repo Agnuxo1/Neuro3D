@@ -5,7 +5,7 @@ import math
 import unittest
 
 from geometry_oracle import NonRectMZ
-from readback_reconstruct import compare, local_z, position
+from readback_reconstruct import compare, direction_gaps, local_z, position
 from mz_scene import Detector, MZScene, Mirror, Source, Splitter, trace_mz
 
 
@@ -85,6 +85,19 @@ class Readback(unittest.TestCase):
         del rec["optics"]["mz_bs2"]
         with self.assertRaises(KeyError):
             compare(rec)
+
+    def test_direction_gaps_are_diagnostic_not_acceptance(self):
+        record = synthetic_record()
+        record["optics"]["mz_bs2"]["direction_tolerance"] = 1e-5
+        aligned = direction_gaps(record)
+        self.assertTrue(aligned["within_tolerance"])
+        self.assertLess(max(aligned["gap_a"], aligned["gap_b"]), 1e-12)
+        # Move only the stored M2 orientation, not the stored output values.
+        record["objects"]["mz_mirror2"]["matrix_world"] = _matrix(
+            (0.0, 0.8452994616207483, 0.0), (0.8660254, -0.4999, 0.0))
+        misaligned = direction_gaps(record)
+        self.assertFalse(misaligned["within_tolerance"])
+        self.assertGreater(max(misaligned["gap_a"], misaligned["gap_b"]), 1e-5)
 
 
 if __name__ == "__main__":

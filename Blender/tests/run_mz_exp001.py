@@ -19,7 +19,7 @@ import psutil
 from mz_exp001_plan import controls
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "oracle"))
-from readback_reconstruct import compare as compare_readback  # noqa: E402
+from readback_reconstruct import compare as compare_readback, direction_gaps  # noqa: E402
 
 MAX_RSS = 1_500 * 2**20
 MIN_FREE = 2_500 * 2**20
@@ -92,7 +92,9 @@ def _verify_readback(artifact: Path) -> dict:
     result = compare_readback(record, tolerance=1e-12)
     if not result["passes"]:
         raise AssertionError(f"Independent CPU readback failed: {readback_path}: {result}")
-    return {"readback": str(readback_path), "readback_worst_abs_diff": result["worst_abs_diff"]}
+    return {"readback": str(readback_path),
+            "readback_worst_abs_diff": result["worst_abs_diff"],
+            "direction_diagnostic": direction_gaps(record)}
 
 
 def main() -> None:

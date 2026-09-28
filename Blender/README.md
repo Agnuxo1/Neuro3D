@@ -91,5 +91,8 @@ El verificador `oracle/readback_reconstruct.py` reconstruye una traza CPU desde
 las matrices y propiedades ópticas leídas tras reabrir el archivo y exige
 coincidencia con el adaptador a 1e-12; sus pruebas sintéticas no sustituyen
 la ejecución real.
+El informe también registrará la separación entre direcciones de salida
+reconstruidas desde las matrices reabiertas. Es un diagnóstico: no cambia
+los umbrales congelados ni convierte una escena fallida en válida.
 Requiere una opción explícita de autorización, limita Blender a un hilo,
 45 segundos y 1,5 GiB por fase, y no sobrescribe artefactos existentes.

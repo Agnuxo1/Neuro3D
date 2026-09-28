@@ -24,7 +24,7 @@ import pathlib
 import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "core"))
-from mz_scene import Detector, MZScene, Mirror, Source, Splitter, trace_mz  # noqa: E402
+from mz_scene import Detector, MZScene, Mirror, Source, Splitter, distance, reflected, trace_mz  # noqa: E402
 
 ROLES = ("mz_source", "mz_bs1", "mz_bs2", "mz_mirror1", "mz_mirror2", "mz_detector_a", "mz_detector_b")
 RESULT_KEYS = ("optical_a", "optical_b", "escape_rgb", "unresolved_rgb", "residual_rgb")
@@ -94,6 +94,24 @@ def compare(record: dict, tolerance: float = 1e-12) -> dict:
             worst = max(worst, abs(float(a) - float(b)))
     return {"status_match": result.status == stored["status"], "status": result.status,
             "worst_abs_diff": worst, "passes": result.status == stored["status"] and worst <= tolerance}
+
+
+def direction_gaps(record: dict) -> dict:
+    """Nominal output-direction gaps from reopened transforms; diagnostic only.
+
+    The rays might miss a mirror or BS2, so this cannot replace trace status.
+    It never changes EXP-001 acceptance criteria.
+    """
+
+    scene = rebuild(record)
+    arm1 = reflected(scene.source.direction, scene.mirror1.normal)
+    arm2_start = reflected(scene.source.direction, scene.bs1.normal)
+    arm2 = reflected(arm2_start, scene.mirror2.normal)
+    gap_a = distance(arm1, reflected(arm2, scene.bs2.normal))
+    gap_b = distance(reflected(arm1, scene.bs2.normal), arm2)
+    return {"gap_a": gap_a, "gap_b": gap_b,
+            "direction_tolerance": scene.direction_tolerance,
+            "within_tolerance": max(gap_a, gap_b) <= scene.direction_tolerance}
 
 
 if __name__ == "__main__":
