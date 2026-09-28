@@ -44,6 +44,8 @@ def create_mz_circuit(bpy, scene):
     source["phase"] = 0.0
     source["propagation_speed"] = 10.0
     source["absorption_per_unit"] = 0.0
+    source["beam_waist"] = 0.0  # 0 keeps the legacy ideal-mode CPU diagnostic
+    source["mutual_coherence"] = 1.0
 
     for role, name, position in (
         ("mz_bs1", "MZ Splitter 1", (0.0, 0.0, 0.0)),
@@ -131,10 +133,14 @@ def trace_mz_circuit(bpy, scene):
                         _rgb(obj, "responsivity_rgb"),
                         float(obj["activation_threshold"]), float(obj["response_gain"]))
 
+    waist = float(source_obj.get("beam_waist", 0.0))
+
     optical_scene = MZScene(
         Source(_point(source_obj), _local_z(source_obj), float(source_obj["power"]),
                _rgb(source_obj, "rgb"), float(source_obj["frequency"]),
-               float(source_obj["phase"])),
+               float(source_obj["phase"]),
+               None if waist == 0.0 else waist,
+               float(source_obj.get("mutual_coherence", 1.0))),
         splitter(bs1_obj), mirror(mirror1_obj), mirror(mirror2_obj),
         splitter(bs2_obj), detector(detector_a_obj), detector(detector_b_obj),
         float(source_obj["propagation_speed"]),
@@ -158,4 +164,8 @@ def trace_mz_circuit(bpy, scene):
     scene["neuro3d_mz_escape_rgb"] = list(result.escape_rgb)
     scene["neuro3d_mz_unresolved_rgb"] = list(result.unresolved_rgb)
     scene["neuro3d_mz_residual_rgb"] = list(result.residual_rgb)
+    # -1 means unavailable (one arm or unresolved mode), not a measured zero.
+    scene["neuro3d_mz_transverse_separation"] = -1.0 if result.transverse_separation is None else result.transverse_separation
+    scene["neuro3d_mz_mode_overlap"] = -1.0 if result.mode_overlap is None else result.mode_overlap
+    scene["neuro3d_mz_effective_coherence"] = -1.0 if result.effective_coherence is None else result.effective_coherence
     return result

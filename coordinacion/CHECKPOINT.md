@@ -1,6 +1,6 @@
 # Checkpoint factual de Neuro3D
 
-Actualizado: 2026-09-28 20:55 UTC.
+Actualizado: 2026-09-28 21:34 UTC.
 
 ## Objetivo
 
@@ -16,7 +16,7 @@ no se usa como marca.
 - Circuito de tres objetos verificado en Blender 4.5.14 LTS background CPU:
   intensidad 0,7053474966, activación 0,3657724623, cambios por geometría,
   reflectancia y frecuencia, persistencia en `.blend`.
-- 18 pruebas Python CPU/estáticas superadas en la última ejecución registrada.
+- 18 pruebas Python CPU/estáticas superadas en la línea base EXP-000 original.
 - Informe y límites en `Docs/BLENDER_RUNTIME_REPORT.md` y
   `Docs/BLENDER_ARCHITECTURE.md`.
 - La línea base publicada `732e908` no contiene acumulación coherente
@@ -36,9 +36,9 @@ no se usa como marca.
 - `Blender/addon/neuro3d/mz_scene_adapter.py` crea/lee objetos Blender y
   escribe resultados, pero solo se ha importado estáticamente; no se ha
   ejecutado dentro de Blender ni comprobado guardar/reabrir.
-- El control de interferencia por geometría y el incoherente aún faltan. Si
-  dos modos no se solapan en el combinador, el prototipo marca su potencia como
-  `unresolved` y no afirma interferencia.
+- El prototipo inicial no tenía controles de solape/coherencia; el estado
+  actual de OPT-002 con esos controles se resume más abajo. Si dos modos no
+  pasan sus compuertas de geometría, su potencia queda `unresolved`.
 - `OPT-008` ya entregó nueve hallazgos. Codex reprodujo el fallo alto de
   referencia de fase al combinar impactos distintos y el residuo de un brazo
   diminuto omitido. En el montaje cuadrado, mover el vértice común manteniendo
@@ -70,6 +70,27 @@ no se usa como marca.
   diagnóstico CPU y mantuvieron el bloqueo físico/Blender: el umbral de
   solape todavía representa una aproximación de ondas planas, sin anchura de
   haz ni control incoherente. EXP-001 permanece borrador.
+- Claude entregó `Blender/oracle/overlap_cases.py` y
+  `expected_overlap_coherence.json` como referencia preliminar separada para
+  el paso siguiente. Codex verificó en CPU ligera que el JSON coincide con el
+  generador; cuatro casos de anchura cierran potencia, nueve casos
+  incoherentes son independientes de la fase y una fórmula cerrada separada
+  reproduce los cuatro puertos/solapes con error máximo 0. Los archivos del
+  oráculo se conservan separados del motor y se incluyen como referencia, no
+  como validación física.
+- OPT-002 solape/coherencia (21:34 UTC): el motor admite anchura de haz
+  constante opcional y coherencia mutua declarada. Calcula separación
+  transversal entre modos de salida y solape gaussiano, mezcla puertos
+  coherentes/incoherentes conservando energía y exige que ambos rayos alcancen
+  cada detector; si no, deja la potencia sin resolver. El adaptador expone las
+  propiedades, pero no se ejecutó en Blender. Pasan 41/41 pruebas CPU/estáticas
+  y 26/26 del oráculo. Los casos nuevos cubren tres anchuras, nueve escenas
+  incoherentes, g=0,4, puertos asimétricos, parámetros inválidos y compuertas.
+  JEV remoto `provenance=jev` aprobó el alcance y mantuvo el bloqueo físico.
+  Claude informó un barrido independiente de 3000 escenas sobre una versión
+  anterior al nuevo control de detectores; pidió contrastar puertos asimétricos
+  y Codex añadió esa regresión. Informe para re-revisión en
+  `coordinacion/INFORME-OPT-002-SOLAPE-CPU.md`.
 
 ## Recursos y procesos
 
@@ -89,14 +110,14 @@ no se usa como marca.
 ## Trabajo activo y siguiente paso
 
 - `OPT-001` ya está entregada. `DEC-005` registra la revisión de Codex/JEV.
-- `OPT-002` corrigió su subfase de referencia de fase en CPU. El adaptador
-  sigue sin verificarse en Blender y `EXP-001-BORRADOR.md` debe cerrarse antes
-  de pruebas confirmatorias. Las comprobaciones actuales son exploratorias.
-- `OPT-003` queda bloqueada hasta especificar y probar solape espacial y
-  coherencia/incoherencia, cerrar los controles CPU y disponer de recursos.
-  Siguiente trabajo de Codex: control explícito de anchura de haz/solape y
-  control incoherente, con balance de energía y criterios numéricos. Claude
-  conserva el oráculo separado.
+- `OPT-002` tiene fase y solape/coherencia fenomenológicos implementados en
+  CPU; Claude debe revisar el último parche de detectores. El adaptador sigue
+  sin verificarse en Blender. Las comprobaciones actuales son exploratorias.
+- `OPT-003` queda bloqueada hasta cerrar EXP-001 con JEV y disponer de margen
+  de recursos. Claude propuso una preinscripción en
+  `coordinacion/experimentos/EXP-001-PROPUESTA-CLAUDE.md`; Codex debe revisar
+  sus supuestos, tolerancias y controles antes de adoptarla. No se ha aprobado
+  todavía y no se permite Blender/GPU.
 
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.

@@ -3,8 +3,9 @@
 Geometry determines whether paths reach the combiner, their lengths and their
 output rays. A lossless 2-port splitter combines complex scalar fields. RGB
 are independent labelled power channels sharing one simulated frequency, not
-three physical wavelengths. The position/direction overlap gate is a bounded
-ideal-plane-wave diagnostic, not a spatial beam-overlap or Maxwell solver.
+three physical wavelengths. An optional constant-width Gaussian field-overlap
+factor and declared mutual coherence attenuate interference. This is a
+phenomenological CPU model, not beam propagation or a Maxwell solver.
 """
 
 from __future__ import annotations
@@ -67,6 +68,8 @@ class Source:
     rgb: RGB = (1.0, 1.0, 1.0)
     frequency: float = 10.0
     phase: float = 0.0
+    beam_waist: float | None = None  # constant 1/e^2 intensity radius, BU; None is legacy ideal mode
+    mutual_coherence: float = 1.0  # declared real degree of coherence, not inferred from frequency
 
 
 @dataclass(frozen=True)
@@ -115,6 +118,8 @@ class MZResult:
     """Power ledger; path_lengths are distances to each actual BS2 hit.
 
     They are not the shared-wavefront lengths used internally for phase.
+    interference_valid means the two rays pass the model's geometry gates;
+    effective_coherence says how much interference remains inside them.
     """
 
     status: str
@@ -132,6 +137,9 @@ class MZResult:
     escape_rgb: RGB
     unresolved_rgb: RGB
     residual_rgb: RGB
+    transverse_separation: float | None
+    mode_overlap: float | None
+    effective_coherence: float | None
 
 
 @dataclass(frozen=True)
@@ -188,6 +196,10 @@ def _validate(scene: MZScene) -> RGB:
         raise ValueError("Transmissions, reflectances and responsivities must lie in [0, 1]")
     if not all(math.isfinite(x) and x >= 0 for x in src.rgb):
         raise ValueError("RGB weights must be finite and nonnegative")
+    if src.beam_waist is not None and (not math.isfinite(src.beam_waist) or src.beam_waist <= 0):
+        raise ValueError("Beam waist must be finite and positive when provided")
+    if not math.isfinite(src.mutual_coherence) or not 0 <= src.mutual_coherence <= 1:
+        raise ValueError("Mutual coherence must lie in [0, 1]")
     if not all(math.isfinite(x) for x in
                (src.phase, scene.mirror1.phase_shift, scene.mirror2.phase_shift)):
         raise ValueError("Phases must be finite")
@@ -221,7 +233,9 @@ def trace_mz(scene: MZScene) -> MZResult:
 
     Non-overlapping arrivals are *unresolved*, not a demonstrated interference
     or physical loss. A hit within overlap_tolerance is treated as a shared
-    ideal plane-wave mode only for CPU diagnosis; physical overlap is untested.
+    ideal mode only for CPU diagnosis. If beam_waist is supplied, its constant
+    Gaussian width sets a partial mode overlap inside that conservative gate.
+    Physical diffraction and detector-area integrals remain untested.
     """
 
     source_power = _validate(scene)
@@ -236,6 +250,9 @@ def trace_mz(scene: MZScene) -> MZResult:
     lengths: list[float | None] = [None, None]
     status = "ok"
     interference_valid = False
+    transverse_separation: float | None = None
+    mode_overlap: float | None = None
+    effective_coherence: float | None = None
     if first is None or not first.within:
         escaped[:] = source_power
         status = "missed_bs1"
@@ -307,18 +324,48 @@ def trace_mz(scene: MZScene) -> MZResult:
                 and distance(dir_a_1, dir_a_2) <= scene.direction_tolerance  # type: ignore[arg-type]
                 and distance(dir_b_1, dir_b_2) <= scene.direction_tolerance
             )
+            if interference_valid:
+                separation = sub(arm_hit[0].point, arm_hit[1].point)
+                # Both impacts lie on one splitter plane. Reflection changes
+                # only the normal component of direction, so a tangent
+                # separation has the same transverse norm in ports A and B.
+                transverse_separation = math.sqrt(max(0.0, dot(separation, separation)
+                                                       - dot(separation, dir_a_1) ** 2))
+                if not math.isfinite(transverse_separation):
+                    raise ValueError("Transverse separation is outside the finite numeric range")
+                mode_overlap = (1.0 if scene.source.beam_waist is None else
+                                math.exp(-0.5 * (transverse_separation / scene.source.beam_waist) ** 2))
+                effective_coherence = scene.source.mutual_coherence * mode_overlap
+                all_detector_modes_reach = all((
+                    _sphere_hit(arm_hit[0].point, dir_a_1, scene.detector_a),
+                    _sphere_hit(arm_hit[1].point, dir_a_2, scene.detector_a),
+                    _sphere_hit(arm_hit[0].point, dir_b_1, scene.detector_b),
+                    _sphere_hit(arm_hit[1].point, dir_b_2, scene.detector_b),
+                ))
+                if not all_detector_modes_reach:
+                    interference_valid = False
+                    transverse_separation = None
+                    mode_overlap = None
+                    effective_coherence = None
+                    status = "unresolved_detector_overlap"
+            else:
+                status = "unresolved_mode_overlap"
             if not interference_valid:
                 for c in range(3):
                     unresolved[c] += arm_power[0][c] + arm_power[1][c]
-                status = "unresolved_mode_overlap"
         if active and (len(active) == 1 or interference_valid):
             t = math.sqrt(scene.bs2.transmission)
             r = math.sqrt(1 - scene.bs2.transmission)
             for c in range(3):
                 e1 = math.sqrt(arm_power[0][c]) * cmath.exp(1j * arm_phase[0]) if 0 in active else 0j
                 e2 = 1j * math.sqrt(arm_power[1][c]) * cmath.exp(1j * arm_phase[1]) if 1 in active else 0j
-                optical[0][c] = abs(t * e1 + 1j * r * e2) ** 2
-                optical[1][c] = abs(1j * r * e1 + t * e2) ** 2
+                coherent_a = abs(t * e1 + 1j * r * e2) ** 2
+                coherent_b = abs(1j * r * e1 + t * e2) ** 2
+                incoherent_a = t * t * abs(e1) ** 2 + r * r * abs(e2) ** 2
+                incoherent_b = r * r * abs(e1) ** 2 + t * t * abs(e2) ** 2
+                g = effective_coherence if effective_coherence is not None else 0.0
+                optical[0][c] = g * coherent_a + (1 - g) * incoherent_a
+                optical[1][c] = g * coherent_b + (1 - g) * incoherent_b
             chosen = active[0]
             origin = arm_hit[chosen].point
             direction_a = arm_direction[0] if chosen == 0 else reflected(arm_direction[1], scene.bs2.normal)
@@ -345,4 +392,5 @@ def trace_mz(scene: MZScene) -> MZResult:
         raise ValueError("Optical result exceeds the finite numeric range")
     return MZResult(status, interference_valid, tuple(lengths), tuple(optical[0]), tuple(optical[1]),
                     signal_a, signal_b, activation_a, activation_b, source_power,
-                    tuple(absorbed), tuple(mirror_loss), tuple(escaped), tuple(unresolved), tuple(residual))
+                    tuple(absorbed), tuple(mirror_loss), tuple(escaped), tuple(unresolved), tuple(residual),
+                    transverse_separation, mode_overlap, effective_coherence)

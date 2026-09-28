@@ -1,0 +1,17 @@
+{
+  "mode": "v2-query",
+  "exit_code": 0,
+  "provenance": "jev",
+  "status": "connected",
+  "model": "jev-1.13.0",
+  "decisions": {
+    "model_scope": {
+      "value": "Add explicit positive constant beam waist and mutual coherence 0..1 as scene/source properties; use transverse output-mode displacement (not raw BS2 hit distance), Gaussian field overlap and coherent/incoherent power mixture; keep unresolved for centroids beyond existing tolerance or unmatched directions; label as phenomenological CPU model.",
+      "confidence": 1.0
+    },
+    "validation_gate": {
+      "value": "Require CPU tests against Claude's independent waist values, phase-independent gamma=0 sweep, per-channel energy conservation, invalid parameter rejection and no regression; leave Blender/physical gate closed.",
+      "confidence": 1.0
+    }
+  }
+}

@@ -103,6 +103,159 @@ class MZSceneTests(unittest.TestCase):
         self.assertEqual(result.status, "ok")
         self.assert_balanced(result)
 
+    def test_gaussian_overlap_uses_transverse_output_separation(self):
+        """OPT-002: independent oracle expects s=0.01, not BS2 hit gap 0.01414."""
+        baseline = default_scene()
+        case = falsifiable_square_case()
+        normal = unit(baseline.mirror2.normal)
+        d = case["mirror2_shift_along_minus_normal"]
+        shifted = tuple(p - d * n for p, n in zip(baseline.mirror2.position, normal))
+        # Reference values from Claude's expected_overlap_coherence.json.
+        expected = (
+            (0.2, 0.9987507809245809, 0.9993753904622904),
+            (0.05, 0.9801986733067553, 0.9900993366533777),
+            (0.01, 0.6065306597126334, 0.8032653298563167),
+        )
+        for waist, overlap, port_a in expected:
+            scene = replace(baseline,
+                            source=replace(baseline.source, frequency=500.0,
+                                           beam_waist=waist),
+                            mirror2=replace(baseline.mirror2, position=shifted))
+            result = trace_mz(scene)
+            self.assertEqual(result.status, "ok")
+            self.assertTrue(result.interference_valid)
+            self.assertAlmostEqual(result.transverse_separation, 0.01, places=12)
+            self.assertAlmostEqual(result.mode_overlap, overlap, places=12)
+            self.assertAlmostEqual(result.effective_coherence, overlap, places=12)
+            self.assertAlmostEqual(total(result.optical_a), port_a, places=12)
+            self.assertAlmostEqual(total(result.optical_b), 1 - port_a, places=12)
+            self.assert_balanced(result)
+
+    def test_zero_mutual_coherence_is_phase_independent(self):
+        baseline = default_scene()
+        baseline = replace(baseline, source=replace(baseline.source,
+                                                    beam_waist=0.2,
+                                                    mutual_coherence=0.0))
+        for phase in (0.0, math.pi / 3, math.pi, 5 * math.pi / 3):
+            scene = replace(baseline,
+                            mirror2=replace(baseline.mirror2, phase_shift=phase))
+            result = trace_mz(scene)
+            self.assertEqual(result.status, "ok")
+            self.assertEqual(result.effective_coherence, 0.0)
+            self.assertAlmostEqual(total(result.optical_a), 0.5, places=12)
+            self.assertAlmostEqual(total(result.optical_b), 0.5, places=12)
+            self.assert_balanced(result)
+
+    def test_incoherent_geometry_sweep_matches_nine_oracle_cases(self):
+        baseline = default_scene()
+        normal = unit(baseline.mirror2.normal)
+        half_cycle_shift = 0.02 / (2 * math.sqrt(2))
+        for k in range(9):
+            d = half_cycle_shift * k / 4
+            shifted = tuple(p - d * n for p, n in zip(baseline.mirror2.position, normal))
+            scene = replace(baseline,
+                            source=replace(baseline.source, frequency=500.0,
+                                           mutual_coherence=0.0),
+                            mirror2=replace(baseline.mirror2, position=shifted),
+                            overlap_tolerance=0.03)
+            result = trace_mz(scene)
+            self.assertEqual(result.status, "ok")
+            self.assertEqual(result.effective_coherence, 0.0)
+            self.assertAlmostEqual(total(result.optical_a), 0.5, places=12)
+            self.assertAlmostEqual(total(result.optical_b), 0.5, places=12)
+            self.assert_balanced(result)
+
+    def test_partial_mutual_coherence_reduces_visibility(self):
+        baseline = default_scene()
+        scene = replace(baseline, source=replace(baseline.source,
+                                                beam_waist=0.2,
+                                                mutual_coherence=0.4))
+        bright = trace_mz(scene)
+        dark = trace_mz(replace(scene,
+                                mirror2=replace(scene.mirror2, phase_shift=math.pi)))
+        self.assertAlmostEqual(bright.effective_coherence, 0.4, places=12)
+        self.assertAlmostEqual(total(bright.optical_a), 0.3, places=12)
+        self.assertAlmostEqual(total(bright.optical_b), 0.7, places=12)
+        self.assertAlmostEqual(total(dark.optical_a), 0.7, places=12)
+        self.assertAlmostEqual(total(dark.optical_b), 0.3, places=12)
+        self.assert_balanced(bright)
+        self.assert_balanced(dark)
+
+    def test_partial_coherence_keeps_per_channel_ledger_balanced(self):
+        baseline = default_scene()
+        scene = replace(
+            baseline,
+            source=replace(baseline.source, rgb=(1.0, 2.0, 3.0),
+                           beam_waist=0.01, mutual_coherence=0.4),
+            bs1=replace(baseline.bs1, transmission=0.8),
+            mirror1=replace(baseline.mirror1, reflectance=(0.8, 0.9, 1.0)),
+            absorption=0.05,
+        )
+        result = trace_mz(scene)
+        self.assertEqual(result.status, "ok")
+        self.assertAlmostEqual(result.effective_coherence, 0.4, places=12)
+        self.assert_balanced(result)
+
+    def test_asymmetric_partial_coherence_matches_independent_ledger(self):
+        baseline = default_scene()
+        reflectance = (0.8, 0.9, 1.0)
+        scene = replace(
+            baseline,
+            source=replace(baseline.source, rgb=(1.0, 2.0, 3.0),
+                           beam_waist=0.2, mutual_coherence=0.4),
+            bs1=replace(baseline.bs1, transmission=0.8),
+            mirror1=replace(baseline.mirror1, reflectance=reflectance),
+        )
+        result = trace_mz(scene)
+        self.assertEqual(result.status, "ok")
+        for channel, (weight, mirror_r) in enumerate(zip((1, 2, 3), reflectance)):
+            oracle = mz_ledger(weight / 6, 0.8, 0.5,
+                               Arm(mirror_reflectance=mirror_r), Arm(),
+                               0.0, gamma=0.4, overlap=1.0)
+            self.assertAlmostEqual(result.optical_a[channel], oracle["port_a"], places=12)
+            self.assertAlmostEqual(result.optical_b[channel], oracle["port_b"], places=12)
+            self.assertAlmostEqual(result.mirror_loss_rgb[channel], oracle["mirror_loss"], places=12)
+        self.assert_balanced(result)
+
+    def test_beam_waist_does_not_override_conservative_centroid_gate(self):
+        baseline = default_scene()
+        scene = replace(baseline,
+                        source=replace(baseline.source, beam_waist=0.2),
+                        mirror2=replace(baseline.mirror2, position=(0.0, 2.05, 0.0)))
+        result = trace_mz(scene)
+        self.assertEqual(result.status, "unresolved_mode_overlap")
+        self.assertFalse(result.interference_valid)
+        self.assertAlmostEqual(total(result.unresolved_rgb), 1.0, places=12)
+        self.assert_balanced(result)
+
+    def test_partial_overlap_requires_both_rays_to_reach_each_detector(self):
+        baseline = default_scene()
+        case = falsifiable_square_case()
+        normal = unit(baseline.mirror2.normal)
+        d = case["mirror2_shift_along_minus_normal"]
+        shifted = tuple(p - d * n for p, n in zip(baseline.mirror2.position, normal))
+        scene = replace(baseline,
+                        source=replace(baseline.source, frequency=500.0, beam_waist=0.2),
+                        mirror2=replace(baseline.mirror2, position=shifted),
+                        detector_a=replace(baseline.detector_a, radius=0.003),
+                        detector_b=replace(baseline.detector_b, radius=0.003))
+        result = trace_mz(scene)
+        self.assertEqual(result.status, "unresolved_detector_overlap")
+        self.assertFalse(result.interference_valid)
+        self.assertAlmostEqual(total(result.unresolved_rgb), 1.0, places=12)
+        self.assert_balanced(result)
+
+    def test_invalid_overlap_parameters_are_rejected(self):
+        baseline = default_scene()
+        for waist in (0.0, -0.1, float("nan"), float("inf")):
+            with self.subTest(waist=waist), self.assertRaises(ValueError):
+                trace_mz(replace(baseline, source=replace(baseline.source,
+                                                         beam_waist=waist)))
+        for coherence in (-0.1, 1.1, float("nan"), float("inf")):
+            with self.subTest(coherence=coherence), self.assertRaises(ValueError):
+                trace_mz(replace(baseline, source=replace(baseline.source,
+                                                         mutual_coherence=coherence)))
+
     def test_mirror_phase_swaps_ports(self):
         scene = default_scene()
         shifted = replace(scene, mirror2=replace(scene.mirror2, phase_shift=math.pi))

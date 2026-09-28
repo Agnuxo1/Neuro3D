@@ -1,0 +1,216 @@
+{
+  "note": "Plane-wave + Gaussian overlap reference; not a beam-propagation or Maxwell solver.",
+  "square_destructive_vs_waist": [
+    {
+      "d": 0.0070710678118654745,
+      "wavelength": 0.02,
+      "waist": null,
+      "gamma_source": 1.0,
+      "delta_L_wavefront": 0.01,
+      "s_perp": 0.01,
+      "hit_separation_on_bs2": 0.014142135623730949,
+      "overlap": 1.0,
+      "delta_phi": 3.141592653589793,
+      "port_a": 1.0,
+      "port_b": 0.0,
+      "residual": 0.0
+    },
+    {
+      "d": 0.0070710678118654745,
+      "wavelength": 0.02,
+      "waist": 0.2,
+      "gamma_source": 1.0,
+      "delta_L_wavefront": 0.01,
+      "s_perp": 0.01,
+      "hit_separation_on_bs2": 0.014142135623730949,
+      "overlap": 0.9987507809245809,
+      "delta_phi": 3.141592653589793,
+      "port_a": 0.9993753904622904,
+      "port_b": 0.0006246095377095418,
+      "residual": 0.0
+    },
+    {
+      "d": 0.0070710678118654745,
+      "wavelength": 0.02,
+      "waist": 0.05,
+      "gamma_source": 1.0,
+      "delta_L_wavefront": 0.01,
+      "s_perp": 0.01,
+      "hit_separation_on_bs2": 0.014142135623730949,
+      "overlap": 0.9801986733067553,
+      "delta_phi": 3.141592653589793,
+      "port_a": 0.9900993366533777,
+      "port_b": 0.009900663346622374,
+      "residual": 0.0
+    },
+    {
+      "d": 0.0070710678118654745,
+      "wavelength": 0.02,
+      "waist": 0.01,
+      "gamma_source": 1.0,
+      "delta_L_wavefront": 0.01,
+      "s_perp": 0.01,
+      "hit_separation_on_bs2": 0.014142135623730949,
+      "overlap": 0.6065306597126334,
+      "delta_phi": 3.141592653589793,
+      "port_a": 0.8032653298563167,
+      "port_b": 0.1967346701436833,
+      "residual": 0.0
+    }
+  ],
+  "incoherent_sweep_gamma0": [
+    {
+      "d": 0.0,
+      "wavelength": 0.02,
+      "waist": null,
+      "gamma_source": 0.0,
+      "delta_L_wavefront": 0.0,
+      "s_perp": 0.0,
+      "hit_separation_on_bs2": 0.0,
+      "overlap": 1.0,
+      "delta_phi": 0.0,
+      "port_a": 0.5,
+      "port_b": 0.5,
+      "residual": 0.0
+    },
+    {
+      "d": 0.0017677669529663686,
+      "wavelength": 0.02,
+      "waist": null,
+      "gamma_source": 0.0,
+      "delta_L_wavefront": 0.0025,
+      "s_perp": 0.0025,
+      "hit_separation_on_bs2": 0.0035355339059327372,
+      "overlap": 1.0,
+      "delta_phi": 0.7853981633974483,
+      "port_a": 0.5,
+      "port_b": 0.5,
+      "residual": 0.0
+    },
+    {
+      "d": 0.0035355339059327372,
+      "wavelength": 0.02,
+      "waist": null,
+      "gamma_source": 0.0,
+      "delta_L_wavefront": 0.005,
+      "s_perp": 0.005,
+      "hit_separation_on_bs2": 0.0070710678118654745,
+      "overlap": 1.0,
+      "delta_phi": 1.5707963267948966,
+      "port_a": 0.5,
+      "port_b": 0.5,
+      "residual": 0.0
+    },
+    {
+      "d": 0.005303300858899106,
+      "wavelength": 0.02,
+      "waist": null,
+      "gamma_source": 0.0,
+      "delta_L_wavefront": 0.0075,
+      "s_perp": 0.0075,
+      "hit_separation_on_bs2": 0.010606601717798212,
+      "overlap": 1.0,
+      "delta_phi": 2.356194490192345,
+      "port_a": 0.5,
+      "port_b": 0.5,
+      "residual": 0.0
+    },
+    {
+      "d": 0.0070710678118654745,
+      "wavelength": 0.02,
+      "waist": null,
+      "gamma_source": 0.0,
+      "delta_L_wavefront": 0.01,
+      "s_perp": 0.01,
+      "hit_separation_on_bs2": 0.014142135623730949,
+      "overlap": 1.0,
+      "delta_phi": 3.141592653589793,
+      "port_a": 0.5,
+      "port_b": 0.5,
+      "residual": 0.0
+    },
+    {
+      "d": 0.008838834764831844,
+      "wavelength": 0.02,
+      "waist": null,
+      "gamma_source": 0.0,
+      "delta_L_wavefront": 0.0125,
+      "s_perp": 0.0125,
+      "hit_separation_on_bs2": 0.017677669529663688,
+      "overlap": 1.0,
+      "delta_phi": 3.9269908169872414,
+      "port_a": 0.5,
+      "port_b": 0.5,
+      "residual": 0.0
+    },
+    {
+      "d": 0.010606601717798212,
+      "wavelength": 0.02,
+      "waist": null,
+      "gamma_source": 0.0,
+      "delta_L_wavefront": 0.015,
+      "s_perp": 0.015,
+      "hit_separation_on_bs2": 0.021213203435596423,
+      "overlap": 1.0,
+      "delta_phi": 4.71238898038469,
+      "port_a": 0.5,
+      "port_b": 0.5,
+      "residual": 0.0
+    },
+    {
+      "d": 0.01237436867076458,
+      "wavelength": 0.02,
+      "waist": null,
+      "gamma_source": 0.0,
+      "delta_L_wavefront": 0.017499999999999998,
+      "s_perp": 0.017499999999999998,
+      "hit_separation_on_bs2": 0.02474873734152916,
+      "overlap": 1.0,
+      "delta_phi": 5.497787143782137,
+      "port_a": 0.5,
+      "port_b": 0.5,
+      "residual": 0.0
+    },
+    {
+      "d": 0.014142135623730949,
+      "wavelength": 0.02,
+      "waist": null,
+      "gamma_source": 0.0,
+      "delta_L_wavefront": 0.02,
+      "s_perp": 0.02,
+      "hit_separation_on_bs2": 0.028284271247461898,
+      "overlap": 1.0,
+      "delta_phi": 6.283185307179586,
+      "port_a": 0.5,
+      "port_b": 0.5,
+      "residual": 0.0
+    }
+  ],
+  "frequency_mismatch_cross_factor": [
+    {
+      "delta_f": 0.0,
+      "t_int": 1.0,
+      "cross_factor_dphi0": 1.0
+    },
+    {
+      "delta_f": 0.5,
+      "t_int": 1.0,
+      "cross_factor_dphi0": 3.8981718325193755e-17
+    },
+    {
+      "delta_f": 1.0,
+      "t_int": 1.0,
+      "cross_factor_dphi0": -3.8981718325193755e-17
+    },
+    {
+      "delta_f": 10.0,
+      "t_int": 1.0,
+      "cross_factor_dphi0": -3.898171832519376e-17
+    },
+    {
+      "delta_f": 1000.0,
+      "t_int": 1.0,
+      "cross_factor_dphi0": -1.0231009598277845e-16
+    }
+  ]
+}

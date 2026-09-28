@@ -1,0 +1,8 @@
+{
+  "project": "Neuro3D",
+  "task": "Implement lightweight CPU overlap and coherence controls in existing MZ scene engine",
+  "constraints": "No Blender, GPU, render or heavy tests; preserve Claude's separate oracle and user-owned untracked files",
+  "current_engine": "Two arms use common-wavefront phase, two-port complex-field combination, conservative unresolved ledger for centroid/direction mismatch, and a hard 0.02 BU overlap diagnostic; no beam waist or incoherent control",
+  "independent_reference": "Claude's preliminary OPT-002 oracle gives Gaussian field overlap exp(-s_perp^2/(2w^2)), with s_perp being output-ray transverse separation, and mutual-coherence mixture of coherent and incoherent port powers; JSON was independently checked for four waists and nine incoherent cases",
+  "candidate_contract": "Add source-level constant beam waist (optional legacy ideal default) and mutual coherence in [0,1]; compute transverse separation at BS2; within existing conservative centroid/direction gate, mix coherent and incoherent powers with g=coherence*exp(-s_perp^2/(2w^2)); report g/overlap diagnostics; no physical/Blender promotion"
+}

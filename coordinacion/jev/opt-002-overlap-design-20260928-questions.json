@@ -1,0 +1,20 @@
+{
+  "model_scope": {
+    "type": "choice",
+    "instructions": "Choose the smallest scientifically honest implementation that permits CPU comparison against the independent square-MZ Gaussian overlap and incoherent reference while retaining a conservative spatial/direction gate and existing tests.",
+    "criteria": [
+      "Add explicit positive constant beam waist and mutual coherence 0..1 as scene/source properties; use transverse output-mode displacement (not raw BS2 hit distance), Gaussian field overlap and coherent/incoherent power mixture; keep unresolved for centroids beyond existing tolerance or unmatched directions; label as phenomenological CPU model.",
+      "Use raw BS2 hit distance as Gaussian shift and treat any two rays as fully detected even when spatial/direction gates fail.",
+      "Add only a display property without changing optical calculation."
+    ]
+  },
+  "validation_gate": {
+    "type": "choice",
+    "instructions": "Decide the immediate evidence threshold after code changes under occupied-PC constraints.",
+    "criteria": [
+      "Require CPU tests against Claude's independent waist values, phase-independent gamma=0 sweep, per-channel energy conservation, invalid parameter rejection and no regression; leave Blender/physical gate closed.",
+      "Promote as a physically validated photonic network after CPU-only formula agreement.",
+      "Run Blender/GPU immediately despite user resource restriction."
+    ]
+  }
+}
