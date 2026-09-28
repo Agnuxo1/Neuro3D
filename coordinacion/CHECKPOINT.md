@@ -1,6 +1,6 @@
 # Checkpoint factual de Neuro3D
 
-Actualizado: 2026-09-28 21:50 UTC.
+Actualizado: 2026-09-28 22:06 UTC.
 
 ## Objetivo
 
@@ -118,6 +118,15 @@ no se usa como marca.
   `NonRectMZ(60,2,2)`; pasan 49/49 pruebas CPU/estáticas. No se abrió Blender.
   Queda pendiente revisión independiente de Claude del constructor y crear
   un runner A–D de guardar/reabrir; no confundir esto con validación runtime.
+- Claude revisó después `nonrect60` con bpy simulado y la referencia
+  `NonRectMZ`: diferencias de posiciones/normales 0,0; una escena reconstruida
+  da A: B=1 y B-geo: A=1. Entregó los desplazamientos B-geo del grupo
+  `(0,2799038106, 0,1616025404, 0) BU` y de M1
+  `(0,1866025404, 0, 0) BU`. Codex leyó su script y añadió el plan puro
+  `Blender/tests/mz_exp001_plan.py` con A, B-geo, B-mat, tres controles C y D;
+  una prueba independiente verifica el desplazamiento contra `NonRectMZ`.
+  Pasan 51/51 pruebas CPU/estáticas. El README ya no afirma que el error
+  antiguo de fase siga presente. Aún NO existe runner runtime MZ.
 
 ## Recursos y procesos
 
@@ -140,8 +149,9 @@ no se usa como marca.
   CPU; OPT-011 acepta acotadamente el motor. El adaptador sigue sin verificarse
   en Blender. Las comprobaciones actuales son exploratorias.
 - `OPT-003` queda bloqueada. DEC-009 cerró el contrato pre-Blender y DEC-010
-  lo enmendó antes de ejecutar. Falta runner MZ A–D, revisión del constructor,
-  verificación runtime del empty padre y margen de RAM/autorización del usuario.
+  lo enmendó antes de ejecutar. Constructor revisado solo con bpy simulado;
+  falta runner MZ A–D, verificación runtime del empty padre y margen de
+  RAM/autorización del usuario.
   No se permite Blender/GPU.
 
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
