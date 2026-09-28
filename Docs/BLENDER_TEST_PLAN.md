@@ -16,17 +16,22 @@ la tarjeta gráfica.
 - Evolución: el checksum cambia después de un pulso y varios pasos.
 - Contrato estático: el shader contiene la interfaz esperada y el addon mantiene la
   ruta GPU desactivada por defecto.
+- Circuito óptico geométrico: espejo alineado entrega potencia; su rotación o el
+  desplazamiento del receptor corta la señal; reflectancia RGB filtra color;
+  absorción reduce potencia y longitud de camino cambia fase.
 
 ## Fase 1 — validación dentro de Blender, aún CPU
 
 Ejecutar en una máquina donde Blender esté disponible, con el dispositivo GPU no
 seleccionado para cómputo:
 
-- instalar el addon;
-- crear la escena CPU preview;
-- comprobar que el número de objetos coincide con `neuron_count`;
-- comprobar que posiciones y colores coinciden con `snapshot()`;
-- abrir, guardar y volver a abrir el `.blend` sin perder la escena;
+- instalar el addon y crear **Optical Circuit** (tres objetos vacíos);
+- ejecutar **Trace Optical Pulse (CPU)** y verificar en el receptor que
+  `optical_hit=True`, `received_intensity>0` y `received_rgb_power` tiene
+  tres canales y `activation>0`;
+- girar el reflector y confirmar `optical_hit=False` y potencia cero;
+- restaurarlo, variar `reflectance_rgb` y confirmar el cambio por canal;
+- guardar y reabrir el `.blend`, repetir el trazado y comparar el resultado;
 - confirmar que no se crea ningún shader compute ni buffer GPU.
 
 ## Fase 2 — primer gate GPU (requiere autorización explícita)

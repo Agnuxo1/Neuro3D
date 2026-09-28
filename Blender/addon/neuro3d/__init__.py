@@ -1,8 +1,4 @@
-"""Blender adapter for the Neuro3D CPU preview.
-
-The addon never starts GPU computation automatically. Its first operator creates
-an emissive CPU-preview scene; the dormant shader is a separate future gate.
-"""
+"""Blender adapter for a scene-driven optical circuit and legacy CPU preview."""
 
 from __future__ import annotations
 
@@ -12,18 +8,22 @@ import sys
 bl_info = {
     "name": "Neuro3D",
     "author": "Neuro3D contributors",
-    "version": (0, 1, 0),
+    "version": (0, 2, 0),
     "blender": (4, 3, 0),
     "location": "View3D > Sidebar > Neuro3D",
-    "description": "CPU-preview adapter for an optical-like neural galaxy",
+    "description": "Scene-driven CPU optical circuit and neural preview",
     "category": "3D View",
 }
 
 _CORE = Path(__file__).resolve().parents[2] / "core"
 if str(_CORE) not in sys.path:
     sys.path.insert(0, str(_CORE))
+_ADDON = Path(__file__).resolve().parent
+if str(_ADDON) not in sys.path:
+    sys.path.insert(0, str(_ADDON))
 
 from photonic_model import build_deterministic_graph, snapshot, step  # noqa: E402
+from optical_scene import create_circuit, trace_circuit  # noqa: E402
 
 try:
     import bpy
@@ -68,9 +68,35 @@ def build_cpu_preview_scene(neuron_count: int = 64, edges_per_neuron: int = 4):
 
 
 if bpy is not None:
+    class NEURO3D_OT_create_optical_circuit(bpy.types.Operator):
+        bl_idname = "neuro3d.create_optical_circuit"
+        bl_label = "Create Optical Circuit"
+        bl_options = {"REGISTER", "UNDO"}
+
+        def execute(self, context):
+            create_circuit(bpy, context.scene)
+            self.report({"INFO"}, "Created a three-object CPU optical circuit.")
+            return {"FINISHED"}
+
+
+    class NEURO3D_OT_trace_optical_circuit(bpy.types.Operator):
+        bl_idname = "neuro3d.trace_optical_circuit"
+        bl_label = "Trace Optical Pulse (CPU)"
+        bl_options = {"REGISTER", "UNDO"}
+
+        def execute(self, context):
+            try:
+                result = trace_circuit(bpy, context.scene)
+            except (KeyError, TypeError, ValueError) as exc:
+                self.report({"ERROR"}, str(exc))
+                return {"CANCELLED"}
+            self.report({"INFO"}, f"{result.reason}: received intensity {result.intensity:.6f}")
+            return {"FINISHED"}
+
+
     class NEBULA_OT_build_cpu_preview(bpy.types.Operator):
         bl_idname = "nebula.build_cpu_preview"
-        bl_label = "Build CPU Preview"
+        bl_label = "Build Legacy Visual Preview"
         bl_options = {"REGISTER", "UNDO"}
 
         def execute(self, context):
@@ -81,17 +107,26 @@ if bpy is not None:
 
     class NEBULA_PT_panel(bpy.types.Panel):
         bl_label = "Neuro3D"
-        bl_idname = "NEBULA_PT_santo_grial"
+        bl_idname = "NEURO3D_PT_panel"
         bl_space_type = "VIEW_3D"
         bl_region_type = "UI"
-        bl_category = "Nebula"
+        bl_category = "Neuro3D"
 
         def draw(self, context):
-            self.layout.label(text="CPU preview only")
+            self.layout.label(text="Scene-driven optical circuit (CPU)")
+            self.layout.operator(NEURO3D_OT_create_optical_circuit.bl_idname)
+            self.layout.operator(NEURO3D_OT_trace_optical_circuit.bl_idname)
+            self.layout.separator()
+            self.layout.label(text="Legacy visual preview")
             self.layout.operator(NEBULA_OT_build_cpu_preview.bl_idname)
 
 
-    _CLASSES = (NEBULA_OT_build_cpu_preview, NEBULA_PT_panel)
+    _CLASSES = (
+        NEURO3D_OT_create_optical_circuit,
+        NEURO3D_OT_trace_optical_circuit,
+        NEBULA_OT_build_cpu_preview,
+        NEBULA_PT_panel,
+    )
 
     def register():
         for cls in _CLASSES:

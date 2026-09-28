@@ -2,7 +2,7 @@
 
 ![Neuro3D](Docs/assets/neuro3d-hero.png)
 
-> Arquitectura experimental de una red neuronal digital de inspiración óptica: el estado de cada neurona combina intensidad, fase, frecuencia, energía y color, y las señales se propagan por un grafo dirigido para ser visualizadas como una galaxia 3D.
+> Arquitectura experimental en la que la geometría 3D y las propiedades ópticas de la escena determinan la propagación y transformación de señales entre neuronas. La apariencia visual es secundaria al cómputo.
 
 ![Estado del proyecto](https://img.shields.io/badge/estado-CPU--ready%20%7C%20GPU--dormant-6f42c1)
 ![Blender](https://img.shields.io/badge/Blender-adaptador%20preparado-e87d0d)
@@ -11,16 +11,17 @@
 
 ## Qué es
 
-Neuro3D explora una arquitectura neuronal visual en la que la información
-se representa mediante variables ópticas abstractas. El objetivo es aprovechar las
-fortalezas de la GPU —paralelismo, color, campos y renderizado— sin presentar el
-prototipo como hardware fotónico real ni como un solucionador completo de Maxwell.
+Neuro3D explora una red neuronal digital donde posición, orientación y respuesta
+óptica de los objetos determinan la información que recibe cada neurona. El
+primer circuito usa óptica geométrica simulada en CPU y mide intensidad, color,
+frecuencia y fase. La ambición posterior es escalarlo y aprovechar la GPU, sin
+confundir este prototipo con hardware fotónico real o un solucionador de Maxwell.
 
-La reconstrucción actual separa el modelo verificable de sus adaptadores visuales:
+La reconstrucción actual contiene:
 
 - **Oracle CPU**: referencia determinista, reproducible y ejecutable sin GPU.
-- **Blender**: laboratorio 3D con vista previa CPU y shader GPU preparado pero
-  deliberadamente dormido.
+- **Blender**: circuito escena → rayo reflejado → estado receptor, más la antigua
+  vista previa CPU y un contrato de shader GPU inactivo.
 - **Unreal Engine**: plugin `SantoGrialPhotonic` con ciclo RDG y compute shaders;
   su compilación real queda pendiente de disponer de UE 5.6.
 
@@ -28,9 +29,10 @@ La reconstrucción actual separa el modelo verificable de sus adaptadores visual
 
 ![Capas de la arquitectura](Docs/assets/architecture-layers.png)
 
-El flujo previsto es: configuración del grafo → emisión y acumulación de señales →
-estado neuronal → visualización 3D. La capa visual consume el estado; no vuelve a
-calcular la red.
+En el nuevo circuito Blender, los objetos de la escena son la fuente de verdad:
+sus transformaciones y propiedades ópticas alimentan el trazado, y el resultado
+se escribe en el receptor. Lee [la arquitectura óptica](Docs/BLENDER_ARCHITECTURE.md)
+para las ecuaciones, el alcance físico y los límites actuales.
 
 ## Cómo viaja una señal
 
@@ -53,6 +55,7 @@ Desde la raíz del repositorio:
 
 ```powershell
 python Blender/tests/test_photonic_model.py
+python Blender/tests/test_scene_optics.py
 python Blender/tests/test_static_contract.py
 ```
 
@@ -63,9 +66,10 @@ no ejecutan shaders.
 
 Consulta [Blender/README.md](Blender/README.md) y el [plan completo de pruebas](Docs/BLENDER_TEST_PLAN.md).
 
-La versión Blender está marcada como **CPU-ready / GPU-dormant**. Su addon crea una
-vista previa CPU cuando el usuario la ejecuta explícitamente; no activa cómputo GPU
-por defecto. El shader experimental está en
+La versión Blender está marcada como **CPU-ready / GPU-dormant**. El addon puede
+crear un circuito de tres objetos y calcular un pulso óptico con un rayo reflejado
+en CPU. La antigua vista previa visual se conserva aparte. Aún no se ha podido
+ejecutar el circuito dentro de Blender en esta máquina. El shader experimental está en
 `Blender/shaders/nebula_photonic_compute.glsl`.
 
 ## Versión Unreal Engine
@@ -94,8 +98,9 @@ credenciales— permanecen fuera del release mediante `.gitignore`.
 | Compuerta | Estado |
 |---|---|
 | Oracle CPU y checksums | Validado |
-| Pruebas CPU Blender | Preparadas para ejecutar sin GPU |
-| Contrato estático addon/shader | Preparado |
+| Pruebas CPU del circuito óptico | Geometría y propiedades verificadas; sin ejecución en Blender |
+| Circuito guardado/reabierto en Blender | Pendiente de disponer de Blender |
+| Contrato estático addon/shader | Verificado sin Blender |
 | Shader GPU Blender | No ejecutado por decisión de seguridad |
 | Paridad CPU/GPU Blender | Pendiente de autorización y GPU libre |
 | Compilación Unreal 5.6 | Pendiente de instalar/restaurar UE |
