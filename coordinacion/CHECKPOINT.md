@@ -1,6 +1,6 @@
 # Checkpoint factual de Neuro3D
 
-Actualizado: 2026-09-28 22:19 UTC.
+Actualizado: 2026-09-28 22:35 UTC.
 
 ## Objetivo
 
@@ -132,6 +132,16 @@ no se usa como marca.
   remoto (`provenance=jev`) eligió fijar +10° alrededor del Z mundial antes
   de Blender (DEC-011). El contrato y el plan lo explicitan; la nueva prueba
   CPU confirma status y potencias. 52/52 pruebas ligeras; no Blender/GPU.
+- Claude entregó un checklist para aplicar D con pivote local y leer
+  `matrix_world`. Codex escribió `Blender/tests/blender_mz_exp001.py` y
+  `run_mz_exp001.py`: controles A/B-geo/B-mat/C-A/C-B-geo/C-B-mat/D desde
+  la escena A; cada variante se guarda y reabre en otro proceso; compara
+  matrices, parentado, propiedades, salidas y criterios preinscritos.
+  Wrapper exige opción explícita de autorización, un hilo, prioridad baja,
+  45 s/fase, RSS≤1,5 GiB, RAM libre≥2,5 GiB y directorio nuevo. Solo se
+  comprobó AST, rechazo sin autorización y 52/52 tests CPU/estáticos;
+  NO se ejecutó Blender. Falta revisión independiente y añadir contraste de
+  una traza reconstruida de valores leídos del `.blend` antes del runtime.
 
 ## Recursos y procesos
 
@@ -155,8 +165,9 @@ no se usa como marca.
   en Blender. Las comprobaciones actuales son exploratorias.
 - `OPT-003` queda bloqueada. DEC-009 cerró el contrato pre-Blender y DEC-010
   lo enmendó antes de ejecutar. Constructor revisado solo con bpy simulado;
-  falta runner MZ A–D, verificación runtime del empty padre y margen de
-  RAM/autorización del usuario.
+  el runner MZ A–D está escrito pero sin revisión ni ejecución; falta la
+  traza independiente de readback, verificar runtime del empty padre y
+  margen de RAM/autorización del usuario.
   No se permite Blender/GPU.
 
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,

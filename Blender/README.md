@@ -82,3 +82,11 @@ no arrancan Blender ni la GPU. `tests/mz_exp001_plan.py` fija las ediciones y
 predicciones A–D para un futuro ejecutor; todavía no es una prueba runtime.
 El contrato vigente está en
 `../coordinacion/experimentos/EXP-001-PREINSCRIPCION.md`.
+
+El ejecutor experimental `tests/run_mz_exp001.py` prepara los siete controles
+primarios, guarda un `.blend` por control y lo reabre en una fase separada para
+comparar matrices, propiedades y resultados. **No se ha ejecutado en Blender**:
+la revisión independiente del ejecutor, la comparación adicional de una traza
+reconstruida desde el archivo y la autorización del usuario siguen pendientes.
+Requiere una opción explícita de autorización, limita Blender a un hilo,
+45 segundos y 1,5 GiB por fase, y no sobrescribe artefactos existentes.
