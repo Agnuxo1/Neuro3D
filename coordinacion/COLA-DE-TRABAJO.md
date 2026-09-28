@@ -1,6 +1,6 @@
 # Cola única de trabajo de Neuro3D
 
-Estado al 2026-09-28 21:46 UTC. Antes de iniciar una tarea, comprobar aquí que
+Estado al 2026-09-28 21:50 UTC. Antes de iniciar una tarea, comprobar aquí que
 no haya otra ejecución del mismo trabajo.
 
 | ID | Prioridad | Estado | Responsable | Modelo o ruta | Esfuerzo | Recursos reservados | Dependencias | Entregable | Criterio de aceptación |
@@ -12,8 +12,8 @@ no haya otra ejecución del mismo trabajo.
 | OPT-008 | P1 | Entregada; fallo principal reproducido por Codex | Claude | Auditoría cruzada de solo lectura | Medio | Lectura; GPU ninguna | Primer prototipo OPT-002 | `coordinacion/respuestas/OPT-008.json` | Hallazgos verificables sobre energía, geometría y contrato Blender; Codex decide correcciones. |
 | OPT-009 | P1 | Entregada; referencia CPU reproducida por Codex | Claude | Referencia geométrica independiente | Medio | CPU ligera; GPU ninguna | DEC-006 | `coordinacion/respuestas/OPT-009.json`, oráculo separado | Ecuación de frente de onda y caso falsable, categorías de pérdida sin duplicar el motor. |
 | OPT-010 | P1 | Entregada; casos reproducidos y corregidos por Codex en CPU | Claude | Oráculo y crítica independientes | Medio | CPU ligera; GPU ninguna | OPT-002, DEC-009 | `coordinacion/respuestas/OPT-010.json` y tablón | Revisión de atribución de detectores y compuerta de anchura; DEC-010 conserva limitaciones. |
-| OPT-011 | P1 | Solicitada: reauditar primer detector/solape tras DEC-010 | Claude | Oráculo y crítica independientes | Medio | CPU ligera; GPU ninguna | Parche actual, DEC-010 | `coordinacion/respuestas/OPT-011.json` | Casos reproducibles o aceptación acotada, sin modificar motor ni Blender/GPU. |
-| OPT-003 | P1 | Bloqueada por recursos y revisión runtime | Codex | Blender background CPU | Medio | Ninguno ahora; GPU ninguna | DEC-009/010, OPT-011, parentado real, margen de RAM y permiso | Smoke real de dos caminos en `.blend` | Guardar/reabrir objetos y comprobar A–D con umbrales congelados. |
+| OPT-011 | P1 | Entregada; hallazgo de constructor no rectangular reproducido y constructor añadido por Codex | Claude | Oráculo y crítica independientes | Medio | CPU ligera; GPU ninguna | Parche actual, DEC-010 | `coordinacion/respuestas/OPT-011.json` | Revisión del constructor nuevo solicitada; motor aceptado solo en CPU. |
+| OPT-003 | P1 | Bloqueada por recursos; preparación CPU ligera en curso | Codex | Agente principal; Blender background CPU solo tras autorización | Medio | CPU ligera ahora; GPU ninguna | DEC-009/010, runner MZ, parentado real, margen de RAM y permiso | Smoke real de dos caminos en `.blend` | Guardar/reabrir objetos y comprobar A–D con umbrales congelados. |
 | OPT-004 | P2 | En cola | Codex | Revisión manual | Bajo | Recursos interactivos cuando el PC esté libre | Ninguna | Comprobación del panel addon | Botones funcionan y no despachan GPU. |
 | OPT-005 | Pausada | Bloqueada por recursos | Sin asignar | Pendiente de JEV | Pendiente | GPU local reservada por trabajo ajeno | GPU libre y autorización posterior | Investigación de aceleración GPU | Paridad con baseline CPU y presupuesto acordado. |
 

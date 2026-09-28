@@ -7,6 +7,8 @@ three-object circuit and its UI operators.
 
 from __future__ import annotations
 
+import math
+
 from mz_scene import Detector, MZScene, Mirror, Source, Splitter, trace_mz
 
 
@@ -28,8 +30,38 @@ def _new_empty(bpy, collection, name, role, position, *, normal=None, shape="CIR
     return obj
 
 
-def create_mz_circuit(bpy, scene):
-    """Create seven optical empties plus one non-optical combiner parent."""
+def _nonrect60_layout():
+    """Closed-form 60-degree layout; independent of the test oracle."""
+
+    beta = math.radians(60.0)
+    c, s = math.cos(beta), math.sin(beta)
+    x = y = 2.0
+    # M1=(a1,0), M2=(0,a2); each reflected segment ends at P=(x,y).
+    a1 = x - y * c / s
+    a2 = y - x * c / s
+    def unit(v):
+        length = math.hypot(v[0], v[1])
+        return (v[0] / length, v[1] / length, 0.0)
+
+    v1, v2 = (c, s, 0.0), (s, c, 0.0)
+    return {
+        "combiner": (x, y, 0.0),
+        "mirror1": ((a1, 0.0, 0.0), unit((1.0 - c, -s))),
+        "mirror2": ((0.0, a2, 0.0), unit((-s, 1.0 - c))),
+        "detector_a": v1,
+        "detector_b": v2,
+    }
+
+
+def create_mz_circuit(bpy, scene, *, layout="square"):
+    """Create seven optical empties plus one non-optical combiner parent.
+
+    ``nonrect60`` is the fixed EXP-001 construction, not an experiment run.
+    """
+
+    if layout not in ("square", "nonrect60"):
+        raise ValueError(f"Unknown MZ layout: {layout}")
+    geometry = _nonrect60_layout() if layout == "nonrect60" else None
 
     collection = bpy.data.collections.new("Neuro3D MZ Experimental")
     scene.collection.children.link(collection)
@@ -40,17 +72,17 @@ def create_mz_circuit(bpy, scene):
                         normal=(1.0, 0.0, 0.0), shape="SINGLE_ARROW")
     source["power"] = 1.0
     source["rgb"] = [1.0, 1.0, 1.0]
-    source["frequency"] = 10.0
+    source["frequency"] = 100.0 if geometry else 10.0
     source["phase"] = 0.0
     source["propagation_speed"] = 10.0
     source["absorption_per_unit"] = 0.0
-    source["beam_waist"] = 0.0  # 0 keeps the legacy ideal-mode CPU diagnostic
+    source["beam_waist"] = 0.2 if geometry else 0.0  # 0 is the legacy ideal mode
     source["mutual_coherence"] = 1.0
 
     # BS2 and its two detectors move together in the geometry-only EXP-001
     # control. Child locations below are local to this translation-only empty.
     combiner = _new_empty(bpy, collection, "MZ Combiner Group", "mz_combiner_group",
-                          (2.0, 2.0, 0.0), shape="CUBE")
+                          geometry["combiner"] if geometry else (2.0, 2.0, 0.0), shape="CUBE")
 
     for role, name, position in (
         ("mz_bs1", "MZ Splitter 1", (0.0, 0.0, 0.0)),
@@ -66,17 +98,18 @@ def create_mz_circuit(bpy, scene):
             obj["direction_tolerance"] = 1e-6
 
     for role, name, position in (
-        ("mz_mirror1", "MZ Mirror 1", (2.0, 0.0, 0.0)),
-        ("mz_mirror2", "MZ Mirror 2", (0.0, 2.0, 0.0)),
+        ("mz_mirror1", "MZ Mirror 1", geometry["mirror1"][0] if geometry else (2.0, 0.0, 0.0)),
+        ("mz_mirror2", "MZ Mirror 2", geometry["mirror2"][0] if geometry else (0.0, 2.0, 0.0)),
     ):
-        obj = _new_empty(bpy, collection, name, role, position, normal=n)
+        normal = geometry["mirror1" if role == "mz_mirror1" else "mirror2"][1] if geometry else n
+        obj = _new_empty(bpy, collection, name, role, position, normal=normal)
         obj["radius"] = 0.4
         obj["reflectance_rgb"] = [1.0, 1.0, 1.0]
         obj["phase_shift"] = 0.0
 
     for role, name, position in (
-        ("mz_detector_a", "MZ Detector A", (0.0, 1.0, 0.0)),
-        ("mz_detector_b", "MZ Detector B", (1.0, 0.0, 0.0)),
+        ("mz_detector_a", "MZ Detector A", geometry["detector_a"] if geometry else (0.0, 1.0, 0.0)),
+        ("mz_detector_b", "MZ Detector B", geometry["detector_b"] if geometry else (1.0, 0.0, 0.0)),
     ):
         obj = _new_empty(bpy, collection, name, role, position, shape="SPHERE")
         obj.parent = combiner

@@ -1,6 +1,6 @@
 # Checkpoint factual de Neuro3D
 
-Actualizado: 2026-09-28 21:46 UTC.
+Actualizado: 2026-09-28 21:50 UTC.
 
 ## Objetivo
 
@@ -109,6 +109,15 @@ no se usa como marca.
   empty padre del adaptador pasa un test simulado, no Blender real. Informe
   `INFORME-OPT-010-GATE-CPU.md` y reauditoría OPT-011 solicitada a Claude.
   El contrato EXP-001 se enmendó antes de Blender sin cambiar umbrales.
+- Claude entregó OPT-011: aceptó la corrección del motor dentro del alcance
+  CPU (barrido propio de 20.000 escenas sin atribución falsa), pero halló que
+  el adaptador no construía `NonRectMZ(60)` ni existía runner MZ de Blender.
+  Codex añadió `create_mz_circuit(..., layout="nonrect60")` con geometría
+  cerrada independiente del oráculo, frecuencia 100, anchura 0,2 y detectores
+  bajo el grupo. La nueva prueba estática compara posiciones y normales con
+  `NonRectMZ(60,2,2)`; pasan 49/49 pruebas CPU/estáticas. No se abrió Blender.
+  Queda pendiente revisión independiente de Claude del constructor y crear
+  un runner A–D de guardar/reabrir; no confundir esto con validación runtime.
 
 ## Recursos y procesos
 
@@ -128,11 +137,12 @@ no se usa como marca.
 
 - `OPT-001` ya está entregada. `DEC-005` registra la revisión de Codex/JEV.
 - `OPT-002` tiene fase, solape/coherencia y primer detector implementados en
-  CPU; Claude debe reauditar el último parche (OPT-011). El adaptador sigue
-  sin verificarse en Blender. Las comprobaciones actuales son exploratorias.
+  CPU; OPT-011 acepta acotadamente el motor. El adaptador sigue sin verificarse
+  en Blender. Las comprobaciones actuales son exploratorias.
 - `OPT-003` queda bloqueada. DEC-009 cerró el contrato pre-Blender y DEC-010
-  lo enmendó antes de ejecutar; falta OPT-011, verificación runtime del empty
-  padre y margen de RAM/autorización del usuario. No se permite Blender/GPU.
+  lo enmendó antes de ejecutar. Falta runner MZ A–D, revisión del constructor,
+  verificación runtime del empty padre y margen de RAM/autorización del usuario.
+  No se permite Blender/GPU.
 
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.

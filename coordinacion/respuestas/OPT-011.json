@@ -1,0 +1,54 @@
+{
+  "task_id": "OPT-011",
+  "status": "completed",
+  "execution_note": "Revisé el motor y el adaptador sin editarlos (motor de la corrección de las 21:43, incluido en el commit a52f868). Ejecuté solo en CPU, sin Blender ni GPU, el script externo D:/PROJECTS/.cognition/neuro3d/opt-011/review.py, que usa la API pública trace_mz y el oráculo propio. También repetí opt-010/detector_fuzz.py (20.000 escenas) y opt-002-overlap/partial_coherence_check.py (3000 escenas).",
+  "summary": "La corrección de la compuerta es correcta en todos los casos pedidos. Casos 1, 3b y 4b: unresolved_detector_geometry sin potencia acreditada. Oclusión auténtica de Codex (B = (2,4; 2,4), r = 0,5): unresolved_detector_occlusion. Haz ancho con w = 1: ok, A = 0,003159. Empate entre detectores idénticos: unresolved. Con un solo brazo, el origen encerrado, el empate y la oclusión dejan sin resolver solo la potencia afectada y el balance cierra (residuo ≤ 3e-17). La regla O ≥ 0,01 es coherente: en un barrido de 400 pasos a través del umbral no aparece ningún ok por debajo ni ningún unresolved_mode_overlap por encima, y en la región ok el motor coincide con el oráculo con error 1,67e-13. Barrido de detectores: 0 atribuciones falsas en 20.000 escenas. No encontré defectos de código de severidad alta ni media en el motor. Hallazgo principal, de proceso: el adaptador solo construye el MZ CUADRADO. No hay forma de crear con objetos Blender la escena NonRectMZ(60, 2, 2) que exige EXP-001, ni un smoke de Blender para el MZ, así que OPT-003 no puede ejecutarse tal como está preinscrita aunque haya recursos.",
+  "findings": [
+    {
+      "severity": "high",
+      "type": "hueco de proceso o implementación (bloquea OPT-003)",
+      "claim": "create_mz_circuit (mz_scene_adapter.py:31) solo crea el MZ cuadrado; no existe un constructor de la escena no rectangular de 60° de EXP-001, ni un script de Blender background para el MZ (run_blender_smoke.py y blender_runtime_smoke.py cubren el circuito monocamino).",
+      "evidence": "grep de 'nonrect', 'beta' y '60' en Blender/addon y en los scripts de smoke: sin coincidencias. La prueba estática test_combiner_parent_preserves_local_layout_contract usa las posiciones cuadradas (BS2 en (2,2), detectores en (0,1) y (1,0) locales).",
+      "minimal_example": "No aplica (ausencia de funcionalidad).",
+      "recommendation": "Añadir create_mz_circuit(bpy, scene, layout='nonrect60') o un constructor aparte para EXP-001 que tome posiciones y normales de las fórmulas cerradas de NonRectMZ.scene(). Declararlo en el contrato: es construcción de escena, no medición. Añadir un runner para Blender background que ejecute A, B-geo, B-mat, C y D con guardar y reabrir, y que registre matrix_world antes y después."
+    },
+    {
+      "severity": "medium",
+      "type": "riesgo de runtime no verificado",
+      "claim": "El adaptador asigna obj.parent = combiner desde Python. En Blender, esa asignación deja matrix_parent_inverse en la identidad, así que la location del hijo se interpreta como local y las posiciones mundiales esperadas son (2,2)+local. Es lo que el diseño pretende, pero solo está comprobado con objetos simulados. Si el grupo se reparenta de forma interactiva (Ctrl+P), la inversa cambia; el motor sigue leyendo matrix_world, pero las locations locales dejarían de coincidir con la tabla del contrato.",
+      "evidence": "Inspección del diff de mz_scene_adapter.py y de test_mz_adapter_static.py (FakeObject sin matrix_world).",
+      "minimal_example": "No aplica sin Blender.",
+      "recommendation": "En OPT-003, comprobar que matrix_world.translation de BS2 y de los detectores es igual a la esperada (tolerancia float32), antes y después de guardar y reabrir. Documentar que el grupo solo admite traslación: sin rotación ni escala, porque la escala no se aplica a los radios."
+    },
+    {
+      "severity": "low",
+      "type": "diagnóstico con pérdida de información",
+      "claim": "Con un solo brazo, el status final puede ocultar la causa de lo no resuelto: una oclusión o un empate en el puerto A seguidos de un fallo de detector en el puerto B terminan con status = missed_detector, aunque unresolved = 0,25 procede de la oclusión o del empate.",
+      "evidence": "review.py, 'single arm, B occludes port A' y 'single arm, tie on port A': status missed_detector, unres 0,250, esc 0,750, residuo 3e-17. El balance es correcto; solo se pierde la etiqueta.",
+      "minimal_example": "replace(default_scene(), mirror2=replace(mirror2, normal=unit((1,-0.6,0))), detector_a=Detector((2,3.5,0)), detector_b=Detector((2,2.8,0), 0.3))",
+      "recommendation": "Guardar una lista de eventos o priorizar los estados unresolved_* sobre missed_*."
+    },
+    {
+      "severity": "low",
+      "type": "límite del modelo (discontinuidad)",
+      "claim": "En O = 0,01 la potencia salta de golpe de los puertos a unresolved: la salida es discontinua respecto de la geometría, justo en el umbral. No afecta a EXP-001 (O ≈ 1 en A, B y C), pero conviene tenerlo en cuenta para la optimización o el entrenamiento futuros (OPT-007).",
+      "evidence": "review.py, barrido de 400 pasos con w = 0,004 y λ = 0,02: sin inconsistencias con la regla, pero con un salto por construcción.",
+      "minimal_example": "No aplica.",
+      "recommendation": "Documentarlo como corte fenomenológico. Para entrenar, bastaría un modelo suave (γ = O sin compuerta, con toda la potencia atribuida) o una penalización."
+    },
+    {
+      "severity": "low",
+      "type": "corrección aceptada",
+      "claim": "Mi caso 1 de OPT-010 también encerraba el origen (distancia 0,49497 < 0,5); la variante de Codex con B = (2,4; 2,4) aísla la oclusión real y el motor la clasifica como unresolved_detector_occlusion.",
+      "evidence": "review.py, líneas '1 orig' y \"1' genuine occlusion\".",
+      "minimal_example": "replace(default_scene(), mirror2=replace(mirror2, phase_shift=pi), detector_a=Detector((2,3.5,0)), detector_b=Detector((2.4,2.4,0), 0.5))",
+      "recommendation": "Mantener ambos casos como regresiones separadas."
+    }
+  ],
+  "unverified": [
+    "Blender no se ejecutó: el parentesco, matrix_world y el guardar/reabrir con el grupo combinador no están comprobados.",
+    "El constructor no rectangular propuesto no existe todavía.",
+    "El barrido del umbral usa un solo w (0,004) y λ = 0,02; otros valores no se barrieron, aunque la regla es algebraica."
+  ],
+  "next_gate": "Motor: aceptable para EXP-001 en CPU. Antes de OPT-003: (1) un constructor de escena no rectangular en el adaptador, con prueba estructural de posiciones y normales frente a NonRectMZ; (2) un runner Blender background de A a D con guardar y reabrir, que registre matrix_world; (3) margen de recursos y autorización de Fran. Opcional: priorizar los estados unresolved_* en el status."
+}
