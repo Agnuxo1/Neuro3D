@@ -75,7 +75,7 @@ if bpy is not None:
 
         def execute(self, context):
             build_cpu_preview_scene()
-        self.report({"INFO"}, "Neuro3D CPU preview created; GPU remains dormant.")
+            self.report({"INFO"}, "Neuro3D CPU preview created; GPU remains dormant.")
             return {"FINISHED"}
 
 
