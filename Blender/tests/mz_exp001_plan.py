@@ -17,7 +17,7 @@ class Control:
     mirror1_delta: tuple[float, float, float] = (0.0, 0.0, 0.0)
     mirror2_phase: float = 0.0
     mutual_coherence: float = 1.0
-    mirror2_turn_deg: float = 0.0
+    mirror2_turn_deg: float = 0.0  # positive = CCW around world +Z, applied to normal
     expected_a: float = 0.0
     expected_b: float = 1.0
     expected_escape: float = 0.0

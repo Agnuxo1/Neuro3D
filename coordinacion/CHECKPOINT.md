@@ -1,6 +1,6 @@
 # Checkpoint factual de Neuro3D
 
-Actualizado: 2026-09-28 22:06 UTC.
+Actualizado: 2026-09-28 22:19 UTC.
 
 ## Objetivo
 
@@ -127,6 +127,11 @@ no se usa como marca.
   una prueba independiente verifica el desplazamiento contra `NonRectMZ`.
   Pasan 51/51 pruebas CPU/estáticas. El README ya no afirma que el error
   antiguo de fase siga presente. Aún NO existe runner runtime MZ.
+- Claude detectó una ambigüedad del giro D: +10° sobre +Z da
+  `missed_bs2`, −10° da `missed_bs2_aperture`, con iguales potencias. JEV
+  remoto (`provenance=jev`) eligió fijar +10° alrededor del Z mundial antes
+  de Blender (DEC-011). El contrato y el plan lo explicitan; la nueva prueba
+  CPU confirma status y potencias. 52/52 pruebas ligeras; no Blender/GPU.
 
 ## Recursos y procesos
 

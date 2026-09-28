@@ -193,3 +193,20 @@
   ejecutar Blender, sin tocar tolerancias de aceptación. OPT-003 permanece
   bloqueada por revisión independiente del nuevo parche, verificación real
   del adaptador/parentado y recursos/permiso del usuario.
+
+## DEC-011 · 2026-09-28 · Orientación reproducible del control D
+
+- **Hallazgo de Claude:** en `nonrect60`, girar la normal de M2 +10° y −10°
+  en el plano da las mismas potencias (A/B=0,25/0,25; escape=0,5), pero
+  `status=missed_bs2` y `missed_bs2_aperture`, respectivamente. El contrato
+  anterior no fijaba el signo ni el eje pese a exigir la primera etiqueta.
+- **JEV remoto:** consulta v2 con `exit_code=0`, `status=connected`,
+  `provenance=jev`, eligió `fix_plus_world_z` (confianza 0,95). La primera
+  consulta tenía criterios mal estructurados y devolvió una clave ambigua;
+  se corrigió el esquema y solo se tomó como decisión la segunda respuesta.
+- **Decisión:** antes de cualquier Blender, D queda definido como giro de la
+  **normal de M2 +10° sobre +Z mundial, antihorario visto desde +Z**, sin
+  mover el espejo. No cambia los umbrales ni las potencias esperadas.
+- **Evidencia:** prueba CPU nueva con la geometría `NonRectMZ(60,2,2)`:
+  `missed_bs2`, A=0,25, B=0,25, escape=0,5, balance <1e-12; suite 52/52.
+  No se ha ejecutado Blender; OPT-003 sigue bloqueada.

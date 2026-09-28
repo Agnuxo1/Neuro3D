@@ -1,0 +1,14 @@
+{
+  "mode": "v2-query",
+  "exit_code": 0,
+  "status": "connected",
+  "provenance": "jev",
+  "model": "jev-1.13.0",
+  "decision": {
+    "orientation": {
+      "value": "fix_plus_world_z",
+      "confidence": 0.95
+    }
+  },
+  "note": "Only the second query used a valid choice mapping; the earlier ambiguous result was discarded."
+}

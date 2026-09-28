@@ -53,7 +53,7 @@ escape, no resuelto, señal/activación y los diagnósticos de solape.
 | B-geo | M1 y grupo BS2+detectores; desplazar P `t=0,323205080756... BU` a lo largo de la dirección del brazo 2, M2 fijo | 1 / 0 | Solo geometría; `status=ok`, dos modos válidos, `unresolved=0` |
 | B-mat | Volver a A y sumar π rad a `phase_shift` de M2 | 1 / 0 | Solo propiedad óptica; `status=ok`, dos modos válidos, `unresolved=0` |
 | C | Repetir A, B-geo y B-mat con `mutual_coherence=0` | 0,5 / 0,5 en las tres | `effective_coherence=0`, `status=ok`, `unresolved=0`; no depende de la fase |
-| D | Desde A, girar M2 10° en el plano | 0,25 / 0,25 | `escape=0,5`, `unresolved=0`, `status=missed_bs2`, sin interferencia de dos brazos |
+| D | Desde A, girar la **normal de M2 +10° alrededor del eje Z mundial**, antihorario visto desde +Z; posición fija | 0,25 / 0,25 | `escape=0,5`, `unresolved=0`, `status=missed_bs2`, sin interferencia de dos brazos |
 
 La escena B-geo debe conservar coincidencia de impactos en BS2 dentro de
 la compuerta del modelo, coincidencia direccional y llegada de ambos modos a
