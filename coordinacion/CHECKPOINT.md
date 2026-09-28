@@ -1,6 +1,6 @@
 # Checkpoint factual de Neuro3D
 
-Actualizado: 2026-09-28 22:50 UTC.
+Actualizado: 2026-09-28 23:04 UTC.
 
 ## Objetivo
 
@@ -151,6 +151,13 @@ no se usa como marca.
   conserva un `report.json` parcial en fallo. AST OK, barrera sin permiso OK,
   52/52 tests CPU/estáticos y 31/31 del oráculo. No se lanzó Blender/GPU.
   Sigue pendiente auditoría de Claude sobre la integración y runtime real.
+- Sin respuesta nueva de Claude al 23:04 UTC, Codex añadió
+  `Blender/tests/test_mz_runner_static.py`: mocks sin Blender comprueban las
+  14 fases en orden (7 controles × guardar/reabrir), informe parcial con
+  `runtime_verified=false` si falla B-geo, y rechazo del readback si se
+  adultera `phase_shift`. Pasan 55/55 pruebas CPU/estáticas. No implica
+  que Blender real o el parentado hayan pasado; se espera la auditoría de
+  integración de Claude y el permiso explícito del usuario.
 
 ## Recursos y procesos
 
