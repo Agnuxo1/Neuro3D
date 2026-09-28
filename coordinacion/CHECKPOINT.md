@@ -1,6 +1,6 @@
 # Checkpoint factual de Neuro3D
 
-Actualizado: 2026-09-28 19:15 UTC.
+Actualizado: 2026-09-28 19:30 UTC.
 
 ## Objetivo
 
@@ -54,6 +54,11 @@ no se usa como marca.
   6,11e-15. No se ha probado en Blender ni corrige el error de fase para
   impactos distintos. DEC-007 permite añadirlo como regresión CPU previa
   a la corrección, sin levantar el bloqueo DEC-006.
+- Claude añadió un diseño preliminar de malla OPT-007. Codex reprodujo solo
+  sus comprobaciones aritméticas CPU (celda unitaria, 6 MZI/16 fases para 4×4,
+  desplazamiento lateral 0,1616 BU); no hay malla ni entrenamiento ejecutados.
+  La expansión queda en espera del MZ corregido. Un enlace detector→emisor
+  sería optoelectrónico, no una capa puramente óptica.
 
 ## Recursos y procesos
 

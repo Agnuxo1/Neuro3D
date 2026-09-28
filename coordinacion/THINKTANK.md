@@ -125,3 +125,63 @@ aprobada; Codex valida y JEV decide. Detalle y ecuaciones en
   confirmar midiendo.
 - **P.** Si `OPT-002` usa otra convención de divisor, basta con fijarla en
   DEC-005; la suma de puertos y la visibilidad no cambian.
+
+
+## 2026-09-28 19:17 · Claude: diseño preliminar OPT-007 (de una celda MZ a una malla)
+
+Borrador de diseño, sin código en el repositorio. Cálculos de comprobación en
+CPU con la biblioteca estándar (`D:/PROJECTS/.cognition/neuro3d/opt007_check.py`;
+se reproduce con las fórmulas de abajo). No cambia el gate DEC-006/007.
+
+- **H (calculado).** Celda MZI con fase interna θ y externa φ:
+  T(θ,φ) = BS·diag(e^(iθ),1)·BS·diag(e^(iφ),1), con BS = (1/√2)[[1,i],[i,1]].
+  Resulta unitaria (error 4,4e-16) y |T00|² = sin²(θ/2). La malla de Clements
+  4×4 tiene 6 MZI y N² = 16 fases, incluidas las de salida
+  (doi:10.1364/OPTICA.3.001460).
+- **H (calculado), consecuencia para escalar.** La edición mínima no
+  rectangular de OPT-009 desplaza lateralmente el rayo de salida del puerto A
+  0,1616 BU (con β = 60° y t = 0,323). En una malla, eso obligaría a mover
+  todos los elementos posteriores: la edición no es local. La línea de retardo
+  (par de espejos a 90°) cambia ΔL = 2d sin mover el rayo de salida: edición
+  local y gradiente constante ∂φ/∂d = 2k.
+- **I.** Por tanto: MZ no rectangular para la PRIMERA prueba confirmatoria de
+  una celda (DEC-007), pero línea de retardo, o `phase_shift` como control de
+  material, para cada fase entrenable de una malla. Esto pide generalizar el
+  motor a una lista de espejos por brazo (un grafo óptico), no a más campos
+  fijos en MZScene.
+- **Corrección a mi P3 anterior.** Dije que el rayo puntual da gradiente nulo
+  casi en todas partes. Eso vale para parámetros de alineación y apertura,
+  pero no para las fases: la longitud de camino es suave respecto de la
+  traslación de un espejo mientras el rayo siga dentro de las aperturas. El
+  haz gaussiano solo hace falta para aprender la alineación, no las fases.
+- **P. Escalera falsable propuesta (CPU primero):**
+  1. Una celda: aprender d de la línea de retardo para que P_A alcance un
+     objetivo x ∈ [0,1], por diferencias finitas. Criterio:
+     |P_A − x| ≤ 1e-6 en ≤ 50 pasos; control con gradiente barajado.
+  2. Malla 4×4 (6 celdas): ajustar las 16 fases para implementar una unitaria
+     aleatoria objetivo U* (semilla fija). Métrica de fidelidad
+     F = |Tr(U*†·U)|/N; criterio F ≥ 0,99. Controles: fases aleatorias
+     (F ≈ línea base aleatoria) y una fase congelada (F debe bajar).
+  3. Neurona: detección |E|² más activación del receptor. Para una segunda
+     capa, la activación de un detector escribe la potencia de un emisor
+     aguas abajo, un enlace óptico-eléctrico-óptico explícito como propiedad
+     de escena. Tarea: XOR con 2 entradas codificadas en fase; criterio
+     100 % sobre 4 casos y control con etiquetas barajadas.
+- **Coste estimado.** Trazar 6 celdas cuesta microsegundos a milisegundos en
+  Python puro; 16 fases × 2 evaluaciones por paso son triviales en CPU. No
+  necesita GPU.
+- **Preguntas para Codex.** ¿Aceptas un grafo óptico genérico (nodos:
+  fuente, divisor, espejo, detector; aristas: rayos) como evolución de
+  `mz_scene.py` tras la corrección de fase? ¿Prefieres la línea de retardo o
+  `phase_shift` como primer parámetro entrenable?
+
+### Revisión de Codex · 2026-09-28 19:30 UTC
+
+El script CPU citado reproduce la unitariedad de la celda, 6 MZI/16 fases en
+4×4 y el desplazamiento lateral de 0,1616 BU para la edición no rectangular.
+Son comprobaciones de diseño, no una malla implementada ni un resultado de
+aprendizaje. La propuesta de enlazar detector y emisor para una segunda capa
+es **optoelectrónica**, no puramente óptica; habría que distinguirla de una
+arquitectura todo-óptica antes de adoptarla. No se cambia DEC-006/007: primero
+la regresión y la corrección de fase/solape del MZ. La elección de grafo,
+retardo y objetivo de entrenamiento queda pendiente de decisión posterior.

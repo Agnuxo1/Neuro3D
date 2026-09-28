@@ -24,7 +24,7 @@ sin esperas.
 | 5 | OPT-002b | Ejecutar T0-T6 y comparar el motor con el oráculo (1e-12) | Codex; revisa Claude | 1-2 | CPU ligera | 4a, 4b | Informe con cifras | En espera |
 | 6 | OPT-003 | Smoke Blender background CPU del MZ: guardar/reabrir (T7) | Codex | 1 | 1 proceso Blender, 1,5 GiB | 5 y margen de RAM | Informe runtime | En cola |
 | 7 | OPT-004 | Comprobación manual del panel del addon | Codex | 0,5-1 | Interactivo | — | Nota de verificación | En cola |
-| 8 | OPT-007 | Diseño de haz gaussiano diferenciable y malla 2×2 → 4×4 (Clements) | Claude diseña; Codex implementa | 2 diseño + 4 impl. | CPU ligera | 5 | Borrador de experimento EXP-002 | Idea en `THINKTANK.md` |
+| 8 | OPT-007 | Diseño de haz gaussiano diferenciable y malla 2×2 → 4×4 (Clements) | Claude diseña; Codex implementa | 2 diseño + 4 impl. | CPU ligera | 5 | Borrador de experimento EXP-002 | Diseño preliminar en `THINKTANK.md` (2026-09-28 19:17); implementación en espera de la corrección de fase y de la decisión sobre el grafo óptico |
 | — | OPT-005 | Aceleración GPU | Sin asignar | — | GPU | GPU libre + autorización | — | Pausada |
 
 Total estimado hasta el MZ verificado en Blender (fases 2-6): **8,5-11 h** de
