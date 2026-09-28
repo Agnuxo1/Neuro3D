@@ -3,7 +3,8 @@
 Geometry determines whether paths reach the combiner, their lengths and their
 output rays. A lossless 2-port splitter combines complex scalar fields. RGB
 are independent labelled power channels sharing one simulated frequency, not
-three physical wavelengths. This is not a Maxwell or Blender render solver.
+three physical wavelengths. The position/direction overlap gate is a bounded
+ideal-plane-wave diagnostic, not a spatial beam-overlap or Maxwell solver.
 """
 
 from __future__ import annotations
@@ -42,6 +43,15 @@ def unit(a: Vec3) -> Vec3:
 
 def distance(a: Vec3, b: Vec3) -> float:
     return math.sqrt(dot(sub(a, b), sub(a, b)))
+
+
+def _wavefront_length(length_to_hit: float, hit: Vec3, arrival_dir: Vec3, reference: Vec3) -> float:
+    """Carry plane-wave phase from an arm's BS2 hit to a shared surface point.
+
+    Tangential phase is continuous at the splitter. Comparing raw distances
+    to different hit points gives a false relative phase for offset rays.
+    """
+    return length_to_hit + dot(arrival_dir, sub(reference, hit))
 
 
 def reflected(direction: Vec3, normal: Vec3) -> Vec3:
@@ -102,6 +112,11 @@ class MZScene:
 
 @dataclass(frozen=True)
 class MZResult:
+    """Power ledger; path_lengths are distances to each actual BS2 hit.
+
+    They are not the shared-wavefront lengths used internally for phase.
+    """
+
     status: str
     interference_valid: bool
     path_lengths: tuple[float | None, float | None]
@@ -205,7 +220,8 @@ def trace_mz(scene: MZScene) -> MZResult:
     """Trace two scene-defined arms, combine only overlapping output modes.
 
     Non-overlapping arrivals are *unresolved*, not a demonstrated interference
-    or physical loss. They remain in the power ledger and block promotion.
+    or physical loss. A hit within overlap_tolerance is treated as a shared
+    ideal plane-wave mode only for CPU diagnosis; physical overlap is untested.
     """
 
     source_power = _validate(scene)
@@ -235,7 +251,7 @@ def trace_mz(scene: MZScene) -> MZResult:
         arm_phase = [0.0, 0.0]
         for k, (direction, fraction, mirror) in enumerate(arm_starts):
             current = [p * fraction for p in after_first]
-            if fraction <= EPS:
+            if fraction == 0.0:
                 continue
             hit_mirror = _disc_hit(first.point, direction, mirror.position, mirror.normal, mirror.radius)
             if hit_mirror is None or not hit_mirror.within:
@@ -271,7 +287,9 @@ def trace_mz(scene: MZScene) -> MZResult:
             arm_hit[k] = hit_bs2
             arm_direction[k] = out_dir
             lengths[k] = first.length + hit_mirror.length + hit_bs2.length
-            cycles = (scene.source.frequency / scene.speed) * lengths[k]
+            referred_length = _wavefront_length(lengths[k], hit_bs2.point,
+                                                 out_dir, scene.bs2.position)
+            cycles = (scene.source.frequency / scene.speed) * referred_length
             if not math.isfinite(cycles):
                 raise ValueError("Propagation phase is outside the finite numeric range")
             arm_phase[k] = (math.remainder(scene.source.phase, 2 * math.pi)

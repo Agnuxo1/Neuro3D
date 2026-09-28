@@ -1,0 +1,17 @@
+{
+  "mode": "v2-query",
+  "exit_code": 0,
+  "provenance": "jev",
+  "status": "connected",
+  "model": "jev-1.13.0",
+  "decisions": {
+    "promotion_gate": {
+      "value": "Record OPT-002 phase subtask as CPU-diagnostic fixed, keep DEC-006 physical/Blender promotion block and EXP-001 draft until overlap/coherence controls and independent scene validation are ready.",
+      "confidence": 1.0
+    },
+    "next_cpu_step": {
+      "value": "Specify and test explicit spatial-overlap/beam-waist and coherent versus incoherent controls with conserved power, then close EXP-001 numeric criteria before any Blender test.",
+      "confidence": 1.0
+    }
+  }
+}

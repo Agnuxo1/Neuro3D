@@ -117,3 +117,27 @@
 - **Gate inalterado:** DEC-006 sigue bloqueando promoción y prueba MZ en
   Blender hasta que los dos controles pasen, el contrato esté cerrado y haya
   margen de recursos. Codex implementa y verifica el motor.
+
+## DEC-008 · 2026-09-28 · Fase corregida en CPU; promoción aún bloqueada
+
+- **Regresiones:** se añadió el MZ no rectangular de siete objetos, que pasa
+  antes y después del cambio, y el contraejemplo cuadrado con impactos
+  separados. Este último falló antes de la corrección: A≈0 frente a A=1
+  predicho por el oráculo. Después, el motor transporta cada fase desde su
+  impacto hasta un punto común del plano de BS2; el caso da A=1 y B≈3e-26.
+  Deslizar el punto de referencia sobre el mismo plano deja las salidas
+  invariantes. También se contabiliza un brazo no nulo de potencia diminuta.
+- **Verificación:** 32 pruebas CPU/estáticas del área Blender y 26 del oráculo
+  pasan por separado. Claude informó una revisión CPU independiente en el
+  tablón a las 20:53 UTC; la suite propia de Codex y el caso rojo-verde son
+  evidencia separada. No se ejecutó Blender, render ni GPU.
+- **JEV:** dos consultas v2 con `exit_code=0`, `status=connected` y
+  `provenance=jev`; recibos `jev/opt-002-phase-20260928-result.json` y
+  `jev/opt-002-next-gate-20260928-result.json`.
+- **Decisión:** la subfase de referencia de fase de OPT-002 queda corregida
+  como diagnóstico CPU. `overlap_tolerance` continúa siendo una compuerta
+  idealizada de ondas planas, no una medida de solape espacial de haces.
+  DEC-006 sigue bloqueando promoción, afirmaciones físicas y prueba MZ en
+  Blender. Próximo paso: especificar y probar control de anchura/solape y
+  coherencia frente a incoherencia, con balance de energía; cerrar EXP-001
+  antes de cualquier ejecución confirmatoria en Blender.

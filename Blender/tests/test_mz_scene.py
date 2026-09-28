@@ -9,7 +9,8 @@ from dataclasses import replace
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from core.mz_scene import default_scene, trace_mz
+from core.mz_scene import Detector, Mirror, Splitter, default_scene, trace_mz, unit
+from oracle.geometry_oracle import NonRectMZ, falsifiable_square_case, mz_ledger, Arm
 
 
 def total(rgb):
@@ -27,6 +28,79 @@ class MZSceneTests(unittest.TestCase):
         self.assertTrue(result.interference_valid)
         self.assertLess(total(result.optical_a), 1e-12)
         self.assertAlmostEqual(total(result.optical_b), 1.0, places=12)
+        self.assert_balanced(result)
+
+    def test_nonrectangular_scene_geometry_switches_ports(self):
+        """Independent closed-form geometry supplies the scene and expected ports."""
+        baseline = default_scene()
+        beta = 60.0
+        shift_x = 0.5 / (1 - math.tan(math.radians(beta / 2)))
+        for x, expected_a in ((2.0, 0.0), (2.0 + shift_x, 1.0)):
+            geometry = NonRectMZ(beta, x, 2.0)
+            positions = geometry.scene()
+            p = positions["bs2"]["position"]
+            da = positions["port_a_direction"]
+            db = positions["port_b_direction"]
+            scene = replace(
+                baseline,
+                mirror1=Mirror(positions["mirror1"]["position"], positions["mirror1"]["normal"]),
+                mirror2=Mirror(positions["mirror2"]["position"], positions["mirror2"]["normal"]),
+                bs2=Splitter(p, positions["bs2"]["normal"]),
+                detector_a=Detector(tuple(a + b for a, b in zip(p, da))),
+                detector_b=Detector(tuple(a + b for a, b in zip(p, db))),
+            )
+            result = trace_mz(scene)
+            oracle = mz_ledger(1.0, 0.5, 0.5, Arm(), Arm(),
+                               2 * math.pi * geometry.delta_L())
+            self.assertEqual(result.status, "ok")
+            self.assertTrue(result.interference_valid)
+            self.assertAlmostEqual(total(result.optical_a), expected_a, places=10)
+            self.assertAlmostEqual(total(result.optical_a), oracle["port_a"], places=10)
+            self.assertAlmostEqual(total(result.optical_b), oracle["port_b"], places=10)
+            self.assert_balanced(result)
+
+    def test_square_offset_hits_use_common_wavefront_phase(self):
+        """The old engine reports B=1 here because it compares different hit points."""
+        baseline = default_scene()
+        case = falsifiable_square_case()
+        normal = unit(baseline.mirror2.normal)
+        d = case["mirror2_shift_along_minus_normal"]
+        shifted = tuple(p - d * n for p, n in zip(baseline.mirror2.position, normal))
+        scene = replace(baseline,
+                        source=replace(baseline.source, frequency=500.0),
+                        mirror2=replace(baseline.mirror2, position=shifted))
+        result = trace_mz(scene)
+        self.assertEqual(result.status, "ok")
+        self.assertTrue(result.interference_valid)
+        self.assertAlmostEqual(total(result.optical_a), case["expected_port_a"], places=9)
+        self.assertAlmostEqual(total(result.optical_b), case["expected_port_b"], places=9)
+        self.assert_balanced(result)
+
+    def test_square_phase_is_invariant_to_reference_on_combiner_plane(self):
+        baseline = default_scene()
+        case = falsifiable_square_case()
+        normal = unit(baseline.mirror2.normal)
+        d = case["mirror2_shift_along_minus_normal"]
+        shifted = tuple(p - d * n for p, n in zip(baseline.mirror2.position, normal))
+        scene = replace(baseline,
+                        source=replace(baseline.source, frequency=500.0),
+                        mirror2=replace(baseline.mirror2, position=shifted))
+        reference = trace_mz(scene)
+        for displacement in (-0.1, 0.1):
+            # This translates the finite disc *within its own plane* only.
+            p = scene.bs2.position
+            moved = (p[0] + displacement, p[1] + displacement, p[2])
+            result = trace_mz(replace(scene, bs2=replace(scene.bs2, position=moved)))
+            self.assertEqual(result.status, "ok")
+            self.assertAlmostEqual(total(result.optical_a), total(reference.optical_a), places=9)
+            self.assertAlmostEqual(total(result.optical_b), total(reference.optical_b), places=9)
+            self.assert_balanced(result)
+
+    def test_tiny_nonzero_splitter_branch_is_accounted(self):
+        scene = default_scene()
+        scene = replace(scene, bs1=replace(scene.bs1, transmission=1e-10))
+        result = trace_mz(scene)
+        self.assertEqual(result.status, "ok")
         self.assert_balanced(result)
 
     def test_mirror_phase_swaps_ports(self):

@@ -1,0 +1,12 @@
+{
+  "project": "Neuro3D",
+  "phase": "OPT-002 light CPU regressions and phase-reference repair",
+  "constraints": "No Blender, GPU, render or heavy tests; preserve user-owned untracked files",
+  "evidence": {
+    "current_engine": "Two ideal scalar fields are combined using phase measured at each arm's own BS2 impact point; impacts may differ by up to 0.02 BU",
+    "independent_oracle": "OPT-009: common-wavefront length L_ref=L_hit+dot(arrival_dir,ref-hit); square shifted mirror yields delta=lambda/2 while raw hit lengths yield lambda",
+    "nonrectangular": "Seven-object beta=60-degree scene with coincident impacts switches B to A by moving scene geometry; previously reproduced on tiny CPU check",
+    "gate": "DEC-006 blocks Blender confirmation and physical/geometry-driven promotion until phase and overlap handling are verified"
+  },
+  "proposed_action": "Add nonrectangular and failing square-wavefront regressions; transport phases to common BS2 point; keep geometric-overlap limitations explicit and verify independent oracle and power ledger"
+}

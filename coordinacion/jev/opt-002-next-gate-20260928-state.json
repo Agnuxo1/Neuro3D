@@ -1,0 +1,10 @@
+{
+  "project": "Neuro3D",
+  "phase": "OPT-002 CPU phase fix verified; choose next promotion gate",
+  "evidence": {
+    "red_test": "Square offset-hit regression failed before fix: A approximately 0 instead of 1",
+    "green_tests": "After common-wavefront phase transport: 32 Blender/tests CPU-static tests and 26 oracle tests pass separately; nonrectangular geometry switches ports; BS2-plane reference invariance and tiny branch balance pass",
+    "independent_collaborator": "Claude reported separate CPU checks in TABLON at 20:53 UTC; no Blender execution",
+    "limitations": "overlap_tolerance is only an ideal-plane-wave diagnostic, no beam waist/coherence control; EXP-001 is still a draft; GPU and PC resources remain occupied"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "promotion_gate": {
+    "type": "choice",
+    "instructions": "Select the accurate project status after the phase-reference defect is fixed on lightweight CPU tests but spatial overlap, incoherence control, and real Blender validation are still absent.",
+    "criteria": [
+      "Record OPT-002 phase subtask as CPU-diagnostic fixed, keep DEC-006 physical/Blender promotion block and EXP-001 draft until overlap/coherence controls and independent scene validation are ready.",
+      "Declare a fully validated 3D optical neural network and remove all gates now.",
+      "Reject the CPU fix despite the failing-then-passing independent square regression."
+    ]
+  },
+  "next_cpu_step": {
+    "type": "choice",
+    "instructions": "Choose the next small CPU-only step under no-GPU/no-Blender constraints; preserve a falsifiable route to a scene-driven optical computing test.",
+    "criteria": [
+      "Specify and test explicit spatial-overlap/beam-waist and coherent versus incoherent controls with conserved power, then close EXP-001 numeric criteria before any Blender test.",
+      "Immediately build the 4x4 mesh despite missing single-cell overlap/coherence tests.",
+      "Run Blender confirmation now even though PC is occupied and contract remains draft."
+    ]
+  }
+}

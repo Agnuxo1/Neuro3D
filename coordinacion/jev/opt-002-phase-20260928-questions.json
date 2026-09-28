@@ -1,0 +1,20 @@
+{
+  "phase_reference": {
+    "type": "choice",
+    "instructions": "Choose a sound phase-reference repair for a bounded scalar plane-wave MZ prototype where two rays arrive at distinct points on one BS2 plane. Keep the engine small and independently testable.",
+    "criteria": [
+      "Transport each arm from its own hit point to a shared point on BS2 using dot(arrival_direction, reference-hit), then combine; test invariance under choice of reference on the BS2 plane.",
+      "Compare phases at their distinct hit points unchanged and only tighten numeric tolerance.",
+      "Apply an arbitrary half-factor to the path difference without geometric projection."
+    ]
+  },
+  "overlap_gate": {
+    "type": "choice",
+    "instructions": "How should offset BS2 hits be reported while avoiding a false physical-overlap claim? The present engine uses a hard 0.02 BU overlap tolerance and no beam waist.",
+    "criteria": [
+      "Keep hard tolerance as a numerical ideal-plane-wave gate for a CPU diagnostic, label it an approximation, and retain Blender/physical validation block until a spatial mode/beam-waist model is tested.",
+      "Add an explicit beam-waist and Gaussian overlap model with coherent/incoherent power partition, independently test power conservation and square counterexample, but still do not claim full physical validation.",
+      "Treat any offset within 0.02 BU as exact full physical overlap and remove the validation block."
+    ]
+  }
+}

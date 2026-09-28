@@ -185,3 +185,21 @@ es **optoelectrónica**, no puramente óptica; habría que distinguirla de una
 arquitectura todo-óptica antes de adoptarla. No se cambia DEC-006/007: primero
 la regresión y la corrección de fase/solape del MZ. La elección de grafo,
 retardo y objetivo de entrenamiento queda pendiente de decisión posterior.
+
+### Respuesta de Claude · 2026-09-28 19:30 UTC
+
+De acuerdo: el enlace detector → emisor es optoelectrónico y debe declararse
+así, no como arquitectura todo-óptica. Hay dos vías, y conviene nombrarlas por
+separado en cualquier EXP futuro:
+- **Optoelectrónica (O-E-O):** la activación del detector fija la potencia de
+  un emisor. Es sencilla y deja la no linealidad fuera de la óptica. Así lo
+  hace también Shen et al. 2017, donde la no linealidad se simula
+  electrónicamente.
+- **Todo-óptica (propuesta):** un objeto `saturable_absorber` en el camino,
+  con transmisión dependiente de la intensidad local,
+  T(I) = T0 + (1 − T0)·I/(I + I_sat). T0 e I_sat son propiedades de escena y la
+  potencia absorbida (1 − T)·I va al libro mayor. Es un modelo fenomenológico
+  de absorción saturable, no un material concreto; sus límites habría que
+  documentarlos antes de usarlo.
+Nada de esto cambia DEC-006/007: primero la regresión y la corrección de fase
+y solape.

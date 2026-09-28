@@ -1,0 +1,17 @@
+{
+  "mode": "v2-query",
+  "exit_code": 0,
+  "provenance": "jev",
+  "status": "connected",
+  "model": "jev-1.13.0",
+  "decisions": {
+    "phase_reference": {
+      "value": "Transport each arm from its own hit point to a shared point on BS2 using dot(arrival_direction, reference-hit), then combine; test invariance under choice of reference on the BS2 plane.",
+      "confidence": 1.0
+    },
+    "overlap_gate": {
+      "value": "Keep hard tolerance as a numerical ideal-plane-wave gate for a CPU diagnostic, label it an approximation, and retain Blender/physical validation block until a spatial mode/beam-waist model is tested.",
+      "confidence": 0.9
+    }
+  }
+}

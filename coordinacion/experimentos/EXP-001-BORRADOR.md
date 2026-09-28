@@ -7,11 +7,12 @@ no confirmatorias. Antes de ejecutar la prueba real Blender habrá que cerrar
 una preinscripción, conservar los resultados previos y no retocar umbrales
 después de ver la medición.
 
-**Bloqueo DEC-006:** OPT-008 detectó un error reproducido de referencia de fase
-cuando los caminos llegan a puntos distintos del combinador. No ejecutar una
-prueba confirmatoria MZ en Blender ni afirmar interferencia gobernada por
-geometría hasta corregir fase y solape y pasar una regresión CPU independiente.
-El resultado monocamino EXP-000 no está afectado por este error multirrayo.
+**Bloqueo DEC-006/008:** el error de referencia de fase con impactos distintos
+está corregido y la regresión CPU rojo-verde pasa. Aún no hay modelo explícito
+de solape espacial ni control incoherente, y este contrato sigue siendo un
+borrador. No ejecutar una prueba confirmatoria MZ en Blender ni afirmar
+validación física de interferencia gobernada por geometría. El resultado
+monocamino EXP-000 no está afectado por este error multirrayo.
 
 ## Pregunta e hipótesis
 

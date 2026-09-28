@@ -1,6 +1,6 @@
 # Checkpoint factual de Neuro3D
 
-Actualizado: 2026-09-28 19:30 UTC.
+Actualizado: 2026-09-28 20:55 UTC.
 
 ## Objetivo
 
@@ -29,8 +29,8 @@ no se usa como marca.
   principales. JEV confirmó el Mach–Zehnder de dos puertos como siguiente
   prototipo, con RGB como canales etiquetados y un control de solape obligatorio.
 - `Blender/core/mz_scene.py` implementa un primer motor CPU de siete objetos
-  geométricos, dos brazos, campos complejos y balance por canal. Diez pruebas
-  nuevas pasan; la suite CPU completa suma 28 pruebas en 0,026 s. Coincide
+  geométricos, dos brazos, campos complejos y balance por canal. La suite
+  inicial sumó 28 pruebas CPU/estáticas en 0,026 s. Coincide
   numéricamente con el oráculo independiente de Claude en 144 combinaciones
   (error máximo 4,72e-15). Coincidencia entre modelos, no prueba física.
 - `Blender/addon/neuro3d/mz_scene_adapter.py` crea/lee objetos Blender y
@@ -43,10 +43,9 @@ no se usa como marca.
   referencia de fase al combinar impactos distintos y el residuo de un brazo
   diminuto omitido. En el montaje cuadrado, mover el vértice común manteniendo
   impactos coincidentes no cambia la diferencia de caminos.
-- DEC-006 bloquea promoción, prueba confirmatoria MZ en Blender y afirmación
-  de interferencia geométrica. JEV remoto confirmó el bloqueo y la secuencia
-  de corrección. El motor publicado sigue siendo experimental; el circuito
-  monocamino previamente verificado no se invalida.
+- DEC-006 bloquea promoción y prueba confirmatoria MZ en Blender. JEV remoto
+  confirmó el bloqueo y la secuencia de corrección. El motor sigue siendo
+  experimental; el circuito monocamino previamente verificado no se invalida.
 - OPT-009 entregó una referencia geométrica independiente. Sus 26 pruebas
   ligeras pasan; Codex reprodujo un MZ no rectangular de siete objetos con
   impactos coincidentes que cambia de B=1 a A=1 al mover M1 y el grupo del
@@ -59,6 +58,18 @@ no se usa como marca.
   desplazamiento lateral 0,1616 BU); no hay malla ni entrenamiento ejecutados.
   La expansión queda en espera del MZ corregido. Un enlace detector→emisor
   sería optoelectrónico, no una capa puramente óptica.
+- DEC-008: Codex añadió dos regresiones CPU. La no rectangular pasa y la
+  cuadrada de impactos separados falló antes de la corrección: A≈0 cuando el
+  oráculo independiente predice A=1. Tras transportar la fase a un punto
+  común del plano de BS2, la cuadrada da A=1 y B≈3e-26; mover la referencia
+  sobre ese plano no cambia el resultado. Se corrigió además la omisión de
+  un brazo de potencia diminuta. Pasan 32 pruebas CPU/estáticas del área
+  Blender y 26 del oráculo, ejecutadas por separado. Claude informó una
+  revisión CPU adicional en el tablón a las 20:53 UTC. No se usó Blender.
+- Dos consultas JEV remotas con `provenance=jev` aceptaron la reparación como
+  diagnóstico CPU y mantuvieron el bloqueo físico/Blender: el umbral de
+  solape todavía representa una aproximación de ondas planas, sin anchura de
+  haz ni control incoherente. EXP-001 permanece borrador.
 
 ## Recursos y procesos
 
@@ -70,17 +81,22 @@ no se usa como marca.
   fue interrumpida. Otros procesos Claude preexistentes no se tocaron.
 - Archivo local no rastreado `Docs/assets/nebula-santo-grial-hero.png`:
   preservar y no añadir al repositorio público por accidente.
+- El vigilante de este hilo estaba configurado solo para cambios nuevos; por
+  eso no retomó OPT-002 aunque figuraba P0. Se corrigió su instrucción para
+  continuar un paso CPU ligero cuando quede una tarea P0 concreta y el hilo
+  esté inactivo; sigue evitando trabajo duplicado y GPU/Blender.
 
 ## Trabajo activo y siguiente paso
 
 - `OPT-001` ya está entregada. `DEC-005` registra la revisión de Codex/JEV.
-- `OPT-002` tiene un primer motor CPU y adaptador no verificado en Blender.
-  `EXP-001-BORRADOR.md` debe cerrarse antes de las pruebas confirmatorias;
-  las comprobaciones CPU realizadas hasta ahora son exploratorias.
-- `OPT-003` queda bloqueada hasta corregir fase/solape, cerrar los controles
-  CPU y disponer de margen de recursos. Siguiente trabajo de Codex: añadir la
-  regresión no rectangular y el contraejemplo cuadrado que falla; después
-  corregir el motor. Claude conserva el oráculo separado.
+- `OPT-002` corrigió su subfase de referencia de fase en CPU. El adaptador
+  sigue sin verificarse en Blender y `EXP-001-BORRADOR.md` debe cerrarse antes
+  de pruebas confirmatorias. Las comprobaciones actuales son exploratorias.
+- `OPT-003` queda bloqueada hasta especificar y probar solape espacial y
+  coherencia/incoherencia, cerrar los controles CPU y disponer de recursos.
+  Siguiente trabajo de Codex: control explícito de anchura de haz/solape y
+  control incoherente, con balance de energía y criterios numéricos. Claude
+  conserva el oráculo separado.
 
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.
