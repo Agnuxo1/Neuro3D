@@ -46,9 +46,11 @@ El primer resultado medible debe cumplir tres relaciones: al girar el espejo o
 mover el receptor se pierde la señal; al cambiar la reflectancia cambia su
 potencia por color; al cambiar distancia, absorción o frecuencia cambia la
 amplitud o fase conforme a las ecuaciones anteriores. Las pruebas ligeras del
-núcleo matemático cubren estas relaciones. La ejecución dentro de Blender, el
-guardado y la reapertura de un `.blend` siguen pendientes de disponer del
-ejecutable en esta máquina.
+núcleo matemático cubren estas relaciones. La ejecución mediante el API real de
+Blender 4.5.14, el guardado y la reapertura de un `.blend` se comprobaron en
+modo background con tres objetos; el informe está en
+[`BLENDER_RUNTIME_REPORT.md`](BLENDER_RUNTIME_REPORT.md). La instalación y
+operación manual del panel aún no se han comprobado.
 
 ## Límites actuales y evolución
 

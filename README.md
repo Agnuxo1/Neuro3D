@@ -66,10 +66,12 @@ no ejecutan shaders.
 
 Consulta [Blender/README.md](Blender/README.md) y el [plan completo de pruebas](Docs/BLENDER_TEST_PLAN.md).
 
-La versión Blender está marcada como **CPU-ready / GPU-dormant**. El addon puede
-crear un circuito de tres objetos y calcular un pulso óptico con un rayo reflejado
-en CPU. La antigua vista previa visual se conserva aparte. Aún no se ha podido
-ejecutar el circuito dentro de Blender en esta máquina. El shader experimental está en
+La versión Blender está marcada como **CPU-ready / GPU-dormant**. El addon crea
+un circuito de tres objetos y calcula un pulso óptico con un rayo reflejado en
+CPU. El circuito se ejecutó realmente en Blender 4.5.14 LTS en background, se
+guardó y se reabrió con el mismo estado. Consulta el
+[informe de ejecución](Docs/BLENDER_RUNTIME_REPORT.md). La antigua vista previa
+visual se conserva aparte. El shader experimental está en
 `Blender/shaders/nebula_photonic_compute.glsl`.
 
 ## Versión Unreal Engine
@@ -98,8 +100,9 @@ credenciales— permanecen fuera del release mediante `.gitignore`.
 | Compuerta | Estado |
 |---|---|
 | Oracle CPU y checksums | Validado |
-| Pruebas CPU del circuito óptico | Geometría y propiedades verificadas; sin ejecución en Blender |
-| Circuito guardado/reabierto en Blender | Pendiente de disponer de Blender |
+| Pruebas CPU del circuito óptico | 18/18 pruebas unitarias y estáticas |
+| Circuito guardado/reabierto en Blender | Verificado en 4.5.14 LTS, background CPU |
+| Panel interactivo del addon | Pendiente de comprobación visual |
 | Contrato estático addon/shader | Verificado sin Blender |
 | Shader GPU Blender | No ejecutado por decisión de seguridad |
 | Paridad CPU/GPU Blender | Pendiente de autorización y GPU libre |

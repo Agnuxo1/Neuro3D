@@ -2,9 +2,9 @@
 
 ## Regla de seguridad de esta entrega
 
-No se ejecuta Blender, no se inicializa un contexto GPU y no se despacha ningún
-shader. Esta entrega deja el material preparado y valida todo lo que no necesita
-la tarjeta gráfica.
+La validación usa Blender en background, un hilo, prioridad baja y una escena
+de tres objetos. No solicita render ni despacha shaders o llamadas de cómputo
+GPU. El runner detiene Blender por tiempo o presión de memoria.
 
 ## Fase 0 — pruebas sin GPU (incluidas)
 
@@ -22,17 +22,20 @@ la tarjeta gráfica.
 
 ## Fase 1 — validación dentro de Blender, aún CPU
 
-Ejecutar en una máquina donde Blender esté disponible, con el dispositivo GPU no
-seleccionado para cómputo:
+Verificada mediante el API de Blender 4.5.14 LTS en background:
 
-- instalar el addon y crear **Optical Circuit** (tres objetos vacíos);
+- importar el addon y crear **Optical Circuit** (tres objetos vacíos);
 - ejecutar **Trace Optical Pulse (CPU)** y verificar en el receptor que
   `optical_hit=True`, `received_intensity>0` y `received_rgb_power` tiene
   tres canales y `activation>0`;
 - girar el reflector y confirmar `optical_hit=False` y potencia cero;
 - restaurarlo, variar `reflectance_rgb` y confirmar el cambio por canal;
 - guardar y reabrir el `.blend`, repetir el trazado y comparar el resultado;
-- confirmar que no se crea ningún shader compute ni buffer GPU.
+- cambiar la frecuencia del emisor y confirmar el cambio de fase;
+- confirmar que el script no llama a render, shader compute ni buffer GPU.
+
+La instalación visual y el botón del panel quedan por comprobar de forma
+interactiva. Resultados en [`BLENDER_RUNTIME_REPORT.md`](BLENDER_RUNTIME_REPORT.md).
 
 ## Fase 2 — primer gate GPU (requiere autorización explícita)
 

@@ -31,9 +31,19 @@ El operador **Build Legacy Visual Preview** queda conservado, pero no es una
 prueba de cómputo óptico. El circuito nuevo usa tres objetos vacíos y no
 inicializa render, Cycles, Eevee, CUDA ni shaders GPU.
 
-Este adaptador aún no se ha ejecutado dentro de Blender en esta máquina porque
-no se ha localizado `blender.exe`. Su núcleo geométrico sí dispone de pruebas CPU.
+El circuito se verificó mediante el API real de Blender 4.5.14 LTS en modo
+background, sin render ni shaders GPU. Se creó, trazó, guardó y reabrió una
+escena de tres objetos. También se comprobaron cambios de posición, orientación,
+reflectancia RGB y frecuencia. El registro está en
+[`../Docs/BLENDER_RUNTIME_REPORT.md`](../Docs/BLENDER_RUNTIME_REPORT.md).
+La instalación visual del addon en la interfaz aún no se ha comprobado.
 Consulta `../Docs/BLENDER_ARCHITECTURE.md` para ecuaciones y límites del modelo.
+
+Para repetir la prueba en Windows con memoria y CPU limitadas:
+
+```powershell
+python Blender/tests/run_blender_smoke.py --blender D:\ruta\a\blender.exe --artifacts D:\ruta\de\resultados
+```
 
 ## Estado de la ruta GPU
 
