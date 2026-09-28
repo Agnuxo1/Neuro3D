@@ -210,3 +210,20 @@
 - **Evidencia:** prueba CPU nueva con la geometría `NonRectMZ(60,2,2)`:
   `missed_bs2`, A=0,25, B=0,25, escape=0,5, balance <1e-12; suite 52/52.
   No se ha ejecutado Blender; OPT-003 sigue bloqueada.
+
+## DEC-012 · 2026-09-28 · Compuerta direccional ante precisión float32
+
+- **Hallazgo de Claude:** emulación CPU de errores independientes de Euler
+  en `nonrect60`, sin Blender: ±1,2e-7 rad por ángulo produjo 0/2000
+  fallos de status; ±2,4e-7, 182/2000; ±5e-7, 1056/2000. Codex ejecutó
+  el script y reprodujo las cifras. El puerto oscuro de casos resueltos
+  quedó por debajo de 1e-9. No es la ruta exacta de matrices de Blender.
+- **JEV remoto:** `exit_code=0`, `status=connected`, `provenance=jev`;
+  recomendó `set_1e5_nonrect_only` (confianza 0,8). Recibo en
+  `jev/opt-003-angle-20260928-result.json`.
+- **Decisión anterior a Blender:** fijar `direction_tolerance=1e-5` solo
+  en el constructor `nonrect60`. El montaje cuadrado y el motor general
+  conservan 1e-6. No cambian criterios A–D de puertos, energía, persistencia
+  ni readback. Si el runtime falla, se registra sin reajuste post hoc.
+- **Gate:** sigue faltando verificación Blender, margen de recursos y
+  autorización explícita del usuario.

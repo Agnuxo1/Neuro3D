@@ -1,0 +1,9 @@
+{
+  "mode": "v2-query",
+  "exit_code": 0,
+  "status": "connected",
+  "provenance": "jev",
+  "model": "jev-1.13.0",
+  "decision": {"direction_gate": {"value": "set_1e5_nonrect_only", "confidence": 0.8}},
+  "note": "Decision before Blender; port, energy and persistence acceptance thresholds unchanged."
+}

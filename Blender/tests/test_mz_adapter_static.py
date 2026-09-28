@@ -64,6 +64,7 @@ class MZAdapterStaticTests(unittest.TestCase):
             self.assertIsNone(roles[role].parent)
         self.assertEqual(roles["mz_source"]["beam_waist"], 0.0)
         self.assertEqual(roles["mz_source"]["mutual_coherence"], 1.0)
+        self.assertEqual(roles["mz_bs2"]["direction_tolerance"], 1e-6)
         self.assertIs(scene.collection.children[0], collection)
 
     def test_nonrect60_layout_matches_independent_geometry_reference(self):
@@ -88,6 +89,7 @@ class MZAdapterStaticTests(unittest.TestCase):
                 self.assertAlmostEqual(got, expected, places=12)
         self.assertEqual(roles["mz_source"]["frequency"], 100.0)
         self.assertEqual(roles["mz_source"]["beam_waist"], 0.2)
+        self.assertEqual(roles["mz_bs2"]["direction_tolerance"], 1e-5)
 
     def test_unknown_layout_rejected_without_creating_collection(self):
         bpy = SimpleNamespace(data=SimpleNamespace(objects=Factories(), collections=Collections()))

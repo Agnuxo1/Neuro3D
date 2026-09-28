@@ -8,6 +8,12 @@ criterios para una futura prueba, no comunica un resultado experimental.
 Enmienda previa a toda ejecución Blender (DEC-010, 2026-09-28 21:45 UTC):
 primera intersección válida de detector y compuerta de solape dependiente
 de la anchura del haz. Los umbrales de aceptación de puertos no cambian.
+Enmienda previa a toda ejecución Blender (DEC-012, 2026-09-28 23:20 UTC):
+`direction_tolerance=1e-5` para el montaje `nonrect60` frente al redondeo
+float32 de Euler/matrices; es distancia entre vectores unitarios de salida,
+aproximadamente radianes para ángulos pequeños. El motor general y el montaje
+cuadrado conservan 1e-6. Las tolerancias de puertos, energía y readback no
+cambian; esta decisión no se toma a partir de una medición Blender.
 
 Las pruebas CPU exploratorias ya se hicieron antes de cerrar este contrato.
 Por tanto, la coincidencia CPU previa no se presentará como confirmación
@@ -60,6 +66,9 @@ la compuerta del modelo, coincidencia direccional y llegada de ambos modos a
 sus detectores **como primera esfera intersecada**. Con `beam_waist=0,2`,
 la compuerta espacial es `mode_overlap≥0,01`; el umbral absoluto
 `overlap_tolerance=0,02 BU` solo corresponde al modo ideal sin anchura.
+La coincidencia direccional exige distancia entre direcciones unitarias
+≤1e-5 en `nonrect60` (DEC-012); registrar la separación angular observada
+en Blender si el status no es `ok`, sin retocar el umbral después de medir.
 Ningún detector puede envolver el punto de salida BS2; un empate o un
 detector equivocado primero deja la potencia sin resolver. En A/B/C,
 registrar `transverse_separation`, `mode_overlap` y

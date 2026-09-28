@@ -1,6 +1,6 @@
 # Checkpoint factual de Neuro3D
 
-Actualizado: 2026-09-28 23:04 UTC.
+Actualizado: 2026-09-28 23:20 UTC.
 
 ## Objetivo
 
@@ -158,6 +158,15 @@ no se usa como marca.
   adultera `phase_shift`. Pasan 55/55 pruebas CPU/estáticas. No implica
   que Blender real o el parentado hayan pasado; se espera la auditoría de
   integración de Claude y el permiso explícito del usuario.
+
+- Claude halló riesgo de falso `unresolved_mode_overlap` por redondeo de
+  Euler float32 con `direction_tolerance=1e-6` en `nonrect60`. Codex ejecutó
+  su emulación CPU y reprodujo 182/2000 fallos con perturbaciones
+  independientes ±2,4e-7 rad, sin Blender. JEV remoto (`provenance=jev`)
+  recomendó fijar 1e-5 solo para el montaje no rectangular antes de medir
+  (DEC-012). Constructor, contrato y test estructural actualizados; los
+  umbrales de potencia, balance y readback permanecen iguales. Falta
+  comprobación runtime exacta y no se acepta reajuste post hoc.
 
 ## Recursos y procesos
 

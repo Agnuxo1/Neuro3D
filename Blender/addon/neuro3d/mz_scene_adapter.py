@@ -95,7 +95,9 @@ def create_mz_circuit(bpy, scene, *, layout="square"):
         obj["transmission"] = 0.5
         if role == "mz_bs2":
             obj["overlap_tolerance"] = 0.02
-            obj["direction_tolerance"] = 1e-6
+            # EXP-001's nonrect60 uses Blender float32 Euler/world matrices.
+            # This is a numerical alignment gate, not an optical fit parameter.
+            obj["direction_tolerance"] = 1e-5 if geometry else 1e-6
 
     for role, name, position in (
         ("mz_mirror1", "MZ Mirror 1", geometry["mirror1"][0] if geometry else (2.0, 0.0, 0.0)),
