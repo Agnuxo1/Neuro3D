@@ -1,135 +1,105 @@
-# NEBULA EMERGENT — Unreal Engine 5 Neural Simulation
+# Neuro3D
 
-[![UE5](https://img.shields.io/badge/Unreal%20Engine-5.6-purple.svg)](https://www.unrealengine.com/)
-[![CUDA](https://img.shields.io/badge/CUDA-13.0-green.svg)](https://developer.nvidia.com/cuda-toolkit)
-[![GPU](https://img.shields.io/badge/GPU-RTX%203090%2024GB-76b900.svg)](https://www.nvidia.com/)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+![Neuro3D](Docs/assets/neuro3d-hero.png)
 
-NEBULA EMERGENT is an Unreal Engine 5.6 project that implements emergent neural simulation with GPU-accelerated CUDA kernels integrated directly into the UE5 rendering pipeline. The system models complex neuronal behaviors including evolution, diversity maintenance, and photonic language expansion using real-time ray-traced shaders.
+> Arquitectura experimental de una red neuronal digital de inspiración óptica: el estado de cada neurona combina intensidad, fase, frecuencia, energía y color, y las señales se propagan por un grafo dirigido para ser visualizadas como una galaxia 3D.
 
----
+![Estado del proyecto](https://img.shields.io/badge/estado-CPU--ready%20%7C%20GPU--dormant-6f42c1)
+![Blender](https://img.shields.io/badge/Blender-adaptador%20preparado-e87d0d)
+![Unreal Engine](https://img.shields.io/badge/Unreal%20Engine-5.6%20plugin%20preparado-6e4c9b)
+![Licencia](https://img.shields.io/badge/licencia-MIT-2ea44f)
 
-## Features
+## Qué es
 
-- **UE5.6 Integration**: Full Unreal Engine 5.6 project with C++ source and custom Blueprint nodes
-- **CUDA 13.0 Neural Kernels**: `OptiXRayTracing.cu` — GPU ray tracing for neural field simulation
-- **Custom HLSL Shaders**: `NeuronEvolution.usf` — neuron lifecycle and evolution shader
-- **Emergent Behaviors**: `DiversityMaintenance.cpp`, `MetaOptimizer.cpp` — adaptive diversity and meta-optimization
-- **Medical Translation**: `NEBULA_MEDICAL_TRANSLATOR.cpp` — neural pattern to medical imaging bridge
-- **Physical Language Expansion**: `PhysicalLanguageExpansion.cpp` — physics-driven language model
-- **Pattern Decoding**: `PatternDecoder.cpp` — neural pattern recognition system
-- **Validity Oracle**: `ValidityOracle.cpp` — self-validation and quality assurance layer
-- **ARC-AGI Solver**: `NEBULA_ARC_AGI_SOLVER-UE5/` — AGI reasoning integration within UE5
+Neuro3D explora una arquitectura neuronal visual en la que la información
+se representa mediante variables ópticas abstractas. El objetivo es aprovechar las
+fortalezas de la GPU —paralelismo, color, campos y renderizado— sin presentar el
+prototipo como hardware fotónico real ni como un solucionador completo de Maxwell.
 
----
+La reconstrucción actual separa el modelo verificable de sus adaptadores visuales:
 
-## Architecture
+- **Oracle CPU**: referencia determinista, reproducible y ejecutable sin GPU.
+- **Blender**: laboratorio 3D con vista previa CPU y shader GPU preparado pero
+  deliberadamente dormido.
+- **Unreal Engine**: plugin `SantoGrialPhotonic` con ciclo RDG y compute shaders;
+  su compilación real queda pendiente de disponer de UE 5.6.
 
-```
-NEBULA EMERGENT (UE5 Project)
-├── NEBULA.uproject              # UE5 project descriptor
-├── Source/                      # C++ game module source
-│   ├── NEBULA_EMERGENT_UE5.h    # Main module header
-│   ├── DiversityMaintenance.cpp # Diversity control system
-│   ├── MetaOptimizer.cpp        # Meta-learning optimizer
-│   ├── NEBULA_MEDICAL_TRANSLATOR.cpp
-│   ├── PhysicalLanguageExpansion.cpp
-│   ├── PatternDecoder.cpp
-│   └── ValidityOracle.cpp
-├── Content/                     # UE5 assets (tracked separately)
-│   └── NEBULA/                  # NEBULA-specific assets
-├── Config/                      # UE5 project configuration
-│   ├── DefaultEngine.ini
-│   └── DefaultGame.ini
-├── Plugins/                     # UE5 plugins
-├── CUDA/
-│   └── OptiXRayTracing.cu       # CUDA neural ray tracer
-├── Shaders/
-│   ├── NeuronEvolution.usf      # HLSL neuron evolution shader
-│   └── NeuronEvolution_Fixed.usf
-├── NEBULA_ARC_AGI_SOLVER-UE5/   # AGI solver integration
-└── NEBULA.fbx                   # Neural geometry reference mesh
-```
+## Vista de arquitectura
 
----
+![Capas de la arquitectura](Docs/assets/architecture-layers.png)
 
-## Requirements
+El flujo previsto es: configuración del grafo → emisión y acumulación de señales →
+estado neuronal → visualización 3D. La capa visual consume el estado; no vuelve a
+calcular la red.
 
-### Hardware
-- **GPU**: NVIDIA RTX 3090 24 GB (CUDA 13.0 support)
-- **CPU**: 8+ cores (AMD Ryzen 9 / Intel Core i9 recommended)
-- **RAM**: 32 GB minimum (64 GB recommended)
-- **Storage**: 100 GB SSD for UE5 project + 50 GB for compiled shaders
+## Cómo viaja una señal
 
-### Software
-- **Unreal Engine**: 5.6 (via Epic Games Launcher)
-- **CUDA Toolkit**: 13.0+
-- **Visual Studio**: 2022 with C++ game development workload
-- **Windows**: 10/11 (64-bit)
+![Propagación de señales ópticas](Docs/assets/optical-signal-propagation.png)
 
----
+Cada arista tiene origen, destino, peso y retardo. La señal conserva una fase y una
+frecuencia, transporta color RGB y pierde amplitud mediante atenuación. La
+acumulación coherente modifica la activación, energía, fase y color del nodo destino.
 
-## Installation
+## Validación
+
+![Bucle de validación CPU y GPU](Docs/assets/validation-loop.png)
+
+La GPU no se considera validada por compilar un shader: debe producir un readback
+comparable con el oracle CPU, con error por campo, checksum y métricas de latencia.
+
+## Inicio rápido sin ocupar la GPU
+
+Desde la raíz del repositorio:
 
 ```powershell
-# 1. Clone the repository
-git clone https://github.com/Agnuxo1/NEBULA-New-Unreal-Engine-Neural-Simulation.git
-cd NEBULA-New-Unreal-Engine-Neural-Simulation
-
-# 2. Install UE5.6 via Epic Games Launcher
-
-# 3. Right-click NEBULA.uproject -> "Generate Visual Studio project files"
-
-# 4. Build C++ source
-# Open NEBULA.sln in Visual Studio 2022
-# Build -> Development Editor -> Win64
-
-# 5. Launch from UE5 Editor
-# Open Epic Games Launcher -> Library -> Launch UE 5.6
-# Open Project -> select NEBULA.uproject
+python Blender/tests/test_photonic_model.py
+python Blender/tests/test_static_contract.py
 ```
 
-### Alternative: PowerShell Scripts
+Estas pruebas no importan `bpy`, no inicializan un contexto GPU, no lanzan Blender y
+no ejecutan shaders.
 
-```powershell
-# Build automation
-.\Scripts\Build_NEBULA.ps1
+## Versión Blender
 
-# Launch NEBULA in UE5
-.\Scripts\Launch_NEBULA.ps1
-```
+Consulta [Blender/README.md](Blender/README.md) y el [plan completo de pruebas](Docs/BLENDER_TEST_PLAN.md).
 
----
+La versión Blender está marcada como **CPU-ready / GPU-dormant**. Su addon crea una
+vista previa CPU cuando el usuario la ejecuta explícitamente; no activa cómputo GPU
+por defecto. El shader experimental está en
+`Blender/shaders/nebula_photonic_compute.glsl`.
 
-## Key Components
+## Versión Unreal Engine
 
-### OptiXRayTracing.cu
-CUDA kernel implementing real-time neural field ray tracing. Integrates with UE5's RHI (Rendering Hardware Interface) via the CUDA-Vulkan interop.
+El plugin está en `Plugins/SantoGrialPhotonic`. Implementa una primera rebanada
+vertical con:
 
-### NeuronEvolution.usf
-HLSL compute shader running on the GPU's vertex/compute pipeline. Models neuron lifecycle, plasticity, and evolution over time.
+1. `EmitSignalsCS`.
+2. `AccumulateFieldsCS`.
+3. `UpdateNeuronsCS`.
+4. Readback periódico para checksum y energía.
 
-### DiversityMaintenance.cpp
-Implements genetic-diversity maintenance algorithms to prevent mode collapse in the neural simulation population.
+Lee [las decisiones de reconstrucción](Plugins/SantoGrialPhotonic/Docs/DECISIONS.md)
+antes de modificar el pipeline. No se debe añadir OptiX ni convertir Niagara en el
+núcleo computacional antes de pasar compilación UE, readback y paridad.
 
-### MetaOptimizer.cpp
-Meta-learning system that dynamically adjusts hyperparameters based on simulation performance metrics.
+## Versiones antiguas y compatibilidad
 
----
+Las fuentes y documentos previos se conservan en el árbol existente para mantener
+trazabilidad. No se borran ni se presentan como parte validada del nuevo corte. Los
+artefactos generados —`Binaries`, `Intermediate`, `Saved`, cachés, binarios y
+credenciales— permanecen fuera del release mediante `.gitignore`.
 
-## Note on Large Files
+## Estado de verificación
 
-UE5 binary assets (`.uasset`, `.umap`, `.pak`), compiled binaries (`Binaries/`), build artifacts (`Build/`, `DerivedDataCache/`, `Intermediate/`) are excluded from this repository via `.gitignore` to keep the repo manageable. Only source code, shaders, configuration, and the project descriptor are tracked.
+| Compuerta | Estado |
+|---|---|
+| Oracle CPU y checksums | Validado |
+| Pruebas CPU Blender | Preparadas para ejecutar sin GPU |
+| Contrato estático addon/shader | Preparado |
+| Shader GPU Blender | No ejecutado por decisión de seguridad |
+| Paridad CPU/GPU Blender | Pendiente de autorización y GPU libre |
+| Compilación Unreal 5.6 | Pendiente de instalar/restaurar UE |
 
----
+## Licencia
 
-## Author
-
-**Francisco Angulo de Lafuente**
-- GitHub: [@Agnuxo1](https://github.com/Agnuxo1)
-
----
-
-## License
-
-MIT License - see [LICENSE](LICENSE) for details.
+MIT. Consulta [LICENSE](LICENSE).

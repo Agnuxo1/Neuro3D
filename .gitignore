@@ -57,6 +57,23 @@ Saved/Backup/
 Thumbs.db
 desktop.ini
 
+# Python and Blender local state
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+*.blend1
+*.blend2
+Blender/.venv/
+
+# Local credentials and machine-specific overrides
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.secret
+
 # IDE
 .idea/
 .vscode/

@@ -12,10 +12,6 @@
 	],
 	"Plugins": [
 		{
-			"Name": "SantoGrialPhotonic",
-			"Enabled": true
-		},
-		{
 			"Name": "ModelingToolsEditorMode",
 			"Enabled": true,
 			"TargetAllowList": [

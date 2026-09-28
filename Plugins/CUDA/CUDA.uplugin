@@ -1,0 +1,23 @@
+{
+    "FileVersion": 3,
+    "Version": 1,
+    "VersionName": "1.0",
+    "FriendlyName": "CUDA Support",
+    "Description": "CUDA Support for NEBULA",
+    "Category": "Compute",
+    "CreatedBy": "NEBULA Project",
+    "CreatedByURL": "",
+    "DocsURL": "",
+    "MarketplaceURL": "",
+    "SupportURL": "",
+    "EnabledByDefault": true,
+    "CanContainContent": false,
+    "Installed": true,
+    "Modules": [
+        {
+            "Name": "CUDA",
+            "Type": "Runtime",
+            "LoadingPhase": "PostConfigInit"
+        }
+    ]
+}
