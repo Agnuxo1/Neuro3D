@@ -108,6 +108,12 @@ credenciales— permanecen fuera del release mediante `.gitignore`.
 | Paridad CPU/GPU Blender | Pendiente de autorización y GPU libre |
 | Compilación Unreal 5.6 | Pendiente de instalar/restaurar UE |
 
+## Investigación y continuidad
+
+La colaboración Codex–Claude–JEV y la agenda actual están documentadas en
+[`coordinacion/PROTOCOLO.md`](coordinacion/PROTOCOLO.md) y
+[`coordinacion/CHECKPOINT.md`](coordinacion/CHECKPOINT.md).
+
 ## Licencia
 
 MIT. Consulta [LICENSE](LICENSE).

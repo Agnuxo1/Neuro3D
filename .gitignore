@@ -64,6 +64,7 @@ __pycache__/
 .mypy_cache/
 *.blend1
 *.blend2
+coordinacion/work/
 Blender/.venv/
 
 # Local credentials and machine-specific overrides

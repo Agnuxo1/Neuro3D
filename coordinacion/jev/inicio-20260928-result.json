@@ -1,0 +1,20 @@
+{
+  "status": "connected",
+  "provenance": "jev",
+  "exit_code": 0,
+  "model": "jev-1.13.0",
+  "decisions": {
+    "first_priority": {
+      "value": "Define and verify scene-driven coherent accumulation from multiple optical paths on CPU before scaling.",
+      "confidence": 1.0
+    },
+    "claude_assignment": {
+      "value": "Read-only audit of optical equations, energy conservation, phase/coherence model and a falsifiable two-path test design.",
+      "confidence": 1.0
+    },
+    "claude_model": {
+      "value": "Claude Sonnet for a concise independent technical audit with evidence.",
+      "confidence": 0.98
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "required": ["task_id", "status", "summary", "findings", "proposed_model", "test_design", "unknowns"],
+  "properties": {
+    "task_id": {"const": "OPT-001"},
+    "status": {"enum": ["completed", "partial", "blocked"]},
+    "summary": {"type": "string"},
+    "findings": {"type": "array", "items": {"type": "object", "required": ["type", "claim", "evidence"], "properties": {"type": {"enum": ["fact", "inference", "proposal"]}, "claim": {"type": "string"}, "evidence": {"type": "string"}}}},
+    "proposed_model": {"type": "string"},
+    "test_design": {"type": "array", "items": {"type": "string"}},
+    "unknowns": {"type": "array", "items": {"type": "string"}}
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "first_priority": {
+    "type": "choice",
+    "instructions": "Select the first safe technical milestone for Neuro3D under the current resource constraint.",
+    "criteria": [
+      "Define and verify scene-driven coherent accumulation from multiple optical paths on CPU before scaling.",
+      "Polish the galaxy visuals first.",
+      "Start GPU shader dispatch or rendering now.",
+      "Train a large neural model now."
+    ]
+  },
+  "claude_assignment": {
+    "type": "choice",
+    "instructions": "Select a bounded independent Claude assignment that supports the next technical milestone without duplicating Codex implementation.",
+    "criteria": [
+      "Read-only audit of optical equations, energy conservation, phase/coherence model and a falsifiable two-path test design.",
+      "Implement the same multiray code in parallel with Codex.",
+      "Run Blender/GPU benchmarks immediately.",
+      "Write only a public-facing summary."
+    ]
+  },
+  "claude_model": {
+    "type": "choice",
+    "instructions": "Choose the Claude model class for a single bounded optics research review, considering quality and cost.",
+    "criteria": [
+      "Claude Sonnet for a concise independent technical audit with evidence.",
+      "Claude Opus for a deeper review only if Sonnet exposes unresolved physical-model risks.",
+      "No Claude involvement despite explicit user request."
+    ]
+  }
+}

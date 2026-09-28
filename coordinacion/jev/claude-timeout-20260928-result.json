@@ -1,0 +1,16 @@
+{
+  "status": "connected",
+  "provenance": "jev",
+  "exit_code": 0,
+  "model": "jev-1.13.0",
+  "decisions": {
+    "next_step": {
+      "value": "Draft only the falsifiable experiment contract and baseline metrics, leaving contested optical equations provisional until Claude review.",
+      "confidence": 1.0
+    },
+    "claude_recovery": {
+      "value": "Keep OPT-001 in the file inbox and use the manual bootstrap in the next Claude session; avoid another automatic retry now.",
+      "confidence": 1.0
+    }
+  }
+}

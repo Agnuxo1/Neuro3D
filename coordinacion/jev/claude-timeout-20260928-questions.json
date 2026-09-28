@@ -1,0 +1,20 @@
+{
+  "next_step": {
+    "type": "choice",
+    "instructions": "Choose the safest useful Codex step while the independent Claude optics review is pending.",
+    "criteria": [
+      "Draft only the falsifiable experiment contract and baseline metrics, leaving contested optical equations provisional until Claude review.",
+      "Block all Neuro3D progress until Claude is available.",
+      "Implement the full multi-ray optics model immediately without an independent review."
+    ]
+  },
+  "claude_recovery": {
+    "type": "choice",
+    "instructions": "Choose a low-resource recovery after one bounded Claude CLI attempt timed out with no output.",
+    "criteria": [
+      "Keep OPT-001 in the file inbox and use the manual bootstrap in the next Claude session; avoid another automatic retry now.",
+      "Launch multiple CLI attempts in parallel.",
+      "Drop the independent Claude review entirely."
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "project": "Neuro3D",
+  "current_priority": "scene-driven coherent multi-path CPU model",
+  "claude_task": "OPT-001 read-only optics review",
+  "claude_cli_attempt": "Sonnet returned no output within 60 seconds; this attempt was interrupted; no response artifact exists",
+  "resource_constraint": "No GPU tasks; avoid heavy CPU and duplicate agents",
+  "current_coordination": "Shared task, manual bootstrap and checkpoint are prepared"
+}

@@ -1,0 +1,14 @@
+{
+  "project": "Neuro3D",
+  "goal": "Scene-driven optical neural computation in Blender, not decorative 3D rendering",
+  "current_evidence": {
+    "blender_version": "4.5.14 LTS portable on D",
+    "scene_objects": 3,
+    "real_blender_cpu_smoke": "passed create/save/reopen, geometry, RGB reflectance and frequency affect output",
+    "unit_and_static_tests": "18 passed",
+    "multi_ray_coherence": "not implemented",
+    "gpu_optical_computation": "not validated"
+  },
+  "resource_constraint": "GPU occupied by user's other work; no GPU task, Blender render or heavy CPU process now",
+  "collaboration": "Codex implements and verifies; Claude independently reviews a bounded research question; JEV advises substantial decisions"
+}
