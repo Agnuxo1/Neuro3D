@@ -1,0 +1,13 @@
+{
+  "project": "Neuro3D",
+  "scope": "heartbeat review and decision triage; no GPU, Blender, render or heavy CPU",
+  "evidence": {
+    "review": "OPT-008 returned 9 findings on the two-port CPU prototype",
+    "reproduced_phase_error": "With mirror translation, ray impacts differ at BS2; raw path difference is one wavelength while phase transported to one common wavefront is half a wavelength for three small wavelength cases",
+    "reproduced_small_branch_error": "A nonzero BS1 arm fraction of 5e-10 is skipped, leaving a per-channel ledger residual about 1.67e-10 while status remains ok",
+    "reproduced_square_constraint": "When all seven-object square circuit impacts exactly coincide, both path lengths equal X+Y in tested layouts",
+    "remaining_uncertainty": "Nonrectangular geometry and a delay-line alternative have not been tested in Blender; true spatial mode overlap is not modeled"
+  },
+  "existing_status": "Experimental CPU prototype published; Blender MZ adapter has not been run; EXP-001 remains draft",
+  "resource_constraint": "GPU occupied and PC busy; only lightweight read-only CPU diagnostics in this heartbeat"
+}

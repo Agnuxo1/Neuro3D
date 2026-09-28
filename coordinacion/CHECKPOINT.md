@@ -1,6 +1,6 @@
 # Checkpoint factual de Neuro3D
 
-Actualizado: 2026-09-28 18:51 UTC.
+Actualizado: 2026-09-28 19:01 UTC.
 
 ## Objetivo
 
@@ -39,8 +39,14 @@ no se usa como marca.
 - El control de interferencia por geometría y el incoherente aún faltan. Si
   dos modos no se solapan en el combinador, el prototipo marca su potencia como
   `unresolved` y no afirma interferencia.
-- `OPT-008` encarga a Claude una auditoría de solo lectura del prototipo y del
-  adaptador; no es autorización para editar el motor en paralelo.
+- `OPT-008` ya entregó nueve hallazgos. Codex reprodujo el fallo alto de
+  referencia de fase al combinar impactos distintos y el residuo de un brazo
+  diminuto omitido. En el montaje cuadrado, mover el vértice común manteniendo
+  impactos coincidentes no cambia la diferencia de caminos.
+- DEC-006 bloquea promoción, prueba confirmatoria MZ en Blender y afirmación
+  de interferencia geométrica. JEV remoto confirmó el bloqueo y la secuencia
+  de corrección. El motor publicado sigue siendo experimental; el circuito
+  monocamino previamente verificado no se invalida.
 
 ## Recursos y procesos
 
@@ -59,8 +65,9 @@ no se usa como marca.
 - `OPT-002` tiene un primer motor CPU y adaptador no verificado en Blender.
   `EXP-001-BORRADOR.md` debe cerrarse antes de las pruebas confirmatorias;
   las comprobaciones CPU realizadas hasta ahora son exploratorias.
-- `OPT-003` prueba real Blender solo cuando el modelo CPU tenga controles
-  constructivo, destructivo e incoherente y el PC disponga de margen.
+- `OPT-003` queda bloqueada hasta corregir fase/solape, cerrar los controles
+  CPU y disponer de margen de recursos. `OPT-009` pide a Claude una referencia
+  geométrica independiente; Codex conserva la implementación del motor.
 
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.

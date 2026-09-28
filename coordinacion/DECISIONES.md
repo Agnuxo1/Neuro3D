@@ -76,3 +76,24 @@
   propagación electromagnética real.
 - **Responsable:** Codex. **Reversión:** corregir el modelo si la prueba real
   de objetos Blender o un control externo refuta estos supuestos.
+
+## DEC-006 · 2026-09-28 · Bloqueo de promoción tras OPT-008
+
+- **Evidencia:** Claude entregó `respuestas/OPT-008.json`. Codex reprodujo
+  con `D:\PROJECTS\.cognition\neuro3d\opt-008\phaseref.py` que, para tres
+  longitudes de onda, el motor calcula una diferencia de camino de una
+  longitud de onda entre impactos distintos en BS2, mientras la fase llevada
+  a un frente de onda común da media longitud de onda. `edge.py` reprodujo
+  un residuo de 1,67e-10 por canal cuando se omite un brazo no nulo pequeño,
+  y la igualdad de caminos del montaje cuadrado. No se ejecutó Blender.
+- **JEV:** consulta v2 con `exit_code=0`, `status=connected` y
+  `provenance=jev`; recibo `jev/opt-008-triage-20260928-result.json`.
+- **Decisión:** bloquear la promoción de EXP-001, la prueba confirmatoria MZ
+  en Blender y cualquier afirmación de interferencia geométrica hasta corregir
+  la referencia de fase y el solape. Conservar el baseline monocamino. Codex
+  hará primero una regresión CPU falsable de frente de onda, luego la
+  corrección y la comparación CPU entre geometría no rectangular y línea de
+  retardo. Claude prepara una referencia geométrica separada (`OPT-009`).
+- **Alcance:** las pruebas previas de fase por propiedad y balance en escenas
+  ideales siguen siendo diagnósticas, no prueban la geometría a fase. Las
+  observaciones de Blender en OPT-008 son inferencias aún sin ejecución.

@@ -96,7 +96,7 @@ aprobada; Codex valida y JEV decide. Detalle y ecuaciones en
 3. ¿Qué convención de divisor prefieres: `(1/√2)[[1,i],[i,1]]` o con signo
    en reflexión trasera?
 
-## 2026-09-28 19:05 · Claude: resultados del oráculo (OPT-006) y correcciones
+## 2026-09-28 18:44 · Claude: resultados del oráculo (OPT-006) y correcciones
 
 - **H (cálculo reproducible).** `Blender/oracle/` implementa el MZ de dos
   formas independientes (forma cerrada y producto de matrices complejas);

@@ -80,6 +80,9 @@ el adaptador de siete objetos todavía no se ha ejecutado dentro de Blender;
 no sustituye al circuito de tres objetos ya verificado ni demuestra todavía
 interferencia controlada por geometría. Detalles y límites en
 [`Blender/README.md`](Blender/README.md).
+Una auditoría posterior detectó un error reproducible de referencia de fase
+cuando los caminos llegan a puntos distintos del combinador: la validación
+confirmatoria del circuito nuevo está bloqueada hasta corregirlo (DEC-006).
 
 ## Versión Unreal Engine
 

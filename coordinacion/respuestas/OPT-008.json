@@ -1,0 +1,78 @@
+{
+  "task_id": "OPT-008",
+  "status": "completed",
+  "summary": "Auditoría de mz_scene.py (md5 a248310c), del adaptador y de las pruebas, sobre el commit 81eade3 con los cambios locales. Además de revisar el código ejecuté en CPU scripts pequeños fuera del repositorio (reproducibles en D:/PROJECTS/.cognition/neuro3d/opt-008/) y la suite existente (26/26, 0,025 s). No ejecuté Blender. CONFIRMADO: (1) el libro mayor por canal cierra en 2000 escenas perturbadas al azar, con residuo ≤ 1e-12 y sin NaN ni potencias negativas; (2) la convención compleja y el enrutamiento de puertos coinciden con el oráculo en casos asimétricos (τ1 ∈ {0,5; 0,8; 0,2}, τ2 ∈ {0,5; 0,3}, 32 fases; error máximo 5,05e-15); (3) con un brazo roto, cada puerto recibe 0,25 y escapa 0,5. HALLAZGO PRINCIPAL (alto): si los dos brazos llegan al combinador en puntos distintos dentro de la tolerancia de solape, el motor compara sus fases en esos dos puntos sin llevarlas a un frente de onda común. Al desplazar un espejo, la diferencia de camino sale el doble de la de la óptica estándar (ΔL = λ en lugar de λ/2), y un caso destructivo por geometría sale constructivo con interference_valid = True. HALLAZGO DE DISEÑO (alto): en el MZ cuadrado de siete objetos, cualquier punto común de llegada da L1 = L2 (identidad cartesiana L = X + Y), así que el control de fase geométrico con solape exacto es imposible en ese montaje. Sí es posible en un MZ no rectangular: ΔL = (X−Y)(1−tan(β/2)), comprobado numéricamente. El oráculo OPT-006 no podía detectar el primer hallazgo porque recibe fases, no geometría.",
+  "findings": [
+    {
+      "severity": "high",
+      "claim": "Referencia de fase inconsistente en BS2. arm_phase[k] usa la longitud hasta el punto de impacto de cada brazo en BS2 (mz_scene.py:267-269); la combinación (286-293) acepta impactos separados hasta overlap_tolerance (línea 278) sin llevar la fase de un brazo al punto del otro. Cuando se desplaza un espejo, la diferencia de camino calculada es el doble de la de frente de onda.",
+      "evidence": "Hecho medido con phaseref.py. Con M2 desplazado d = λ/(2√2) a lo largo de su normal: ΔL_motor/λ = 1,0000 frente a ΔL_frente_de_onda/λ = 0,5000, para λ = 0,1, 0,02 y 0,005 BU. Con xcheck.py, f = 500 (λ = 0,02): status ok, interference_valid = True, B = 1,0 y A = 4,7e-26. Es constructivo donde la óptica estándar (ΔL = 2d·cosθ) predice destructivo. El error de fase máximo que admite la regla actual es 2π·0,02/λ, es decir 0,126 rad con λ = 1.",
+      "minimal_example": "s = default_scene(); f = 500; n = unit(1,-1,0); d = (10/f)/(2*sqrt(2)); mirror2.position = (-n[0]*d, 2 - n[1]*d, 0); source.frequency = f → trace_mz da B ≈ 1, A ≈ 0.",
+      "recommendation": "Antes de combinar, llevar cada fase a un punto común P_ref (por ejemplo, el impacto del brazo 1): φ_k += 2π·f/v·dot(v_k, P_ref − hit_k), donde v_k es la dirección de llegada. Añadir una prueba geométrica cuya expectativa salga de la óptica estándar y no del motor. Alternativa conservadora: exigir coincidencia exacta de impactos (tolerancia ≪ λ/2π) y declarar sin resolver todo lo demás."
+    },
+    {
+      "severity": "high",
+      "claim": "En el MZ cuadrado de siete objetos (brazos a 90°), el control de fase por geometría con solape exacto es imposible: para cualquier punto común P = (X, Y) medido desde BS1, ambos brazos miden X + Y. Respuesta a la pregunta 5: con siete objetos solo es posible en un MZ no rectangular (ángulo de retorno β ≠ 90°), donde ΔL = (X−Y)(1−tan(β/2)).",
+      "evidence": "Hecho medido con edge.py. E3: desplazar a la vez M1, M2, BS2 y los detectores con s ∈ {0; 0,1; 0,37} da L1 = L2 (5,0; 5,2; 5,74) y B = 1 en todos los casos. E4, con β = 60°: ΔL = 0; 0,211325; 0,422650 para P = (2,2), (2,5; 2) y (3,2), igual que la fórmula. Inferencia: sin corregir el primer hallazgo, la única 'fase geométrica' que ve el motor en el MZ cuadrado es precisamente el artefacto de ese hallazgo.",
+      "minimal_example": "M1 → (2+s, 0); M2 → (0, 2+s); BS2 → (2+s, 2+s); detectores desplazados s. Los path_lengths son iguales para todo s.",
+      "recommendation": "Elegir una de estas vías en EXP-001. (a) MZ no rectangular (normales de espejo distintas de 45°), con BS2 y los detectores agrupados bajo un empty padre para que un solo movimiento de escena cambie P; el adaptador ya lee matrix_world. (b) Línea de retardo con dos espejos más (nueve objetos). (c) Solape parcial con la fase corregida del primer hallazgo y un γ gaussiano explícito. Recomiendo (a) o (b) para la prueba confirmatoria."
+    },
+    {
+      "severity": "medium",
+      "claim": "El criterio de solape es binario, con 0,02 BU absolutos (mz_scene.py:99 y 277-281), sin relación con λ ni con el tamaño del haz: dentro de la tolerancia se interfiere al 100 % (con el error de fase del primer hallazgo) y fuera todo queda sin resolver. No existe ninguna propiedad de escena para la anchura del haz.",
+      "evidence": "Hecho, por inspección y con xcheck.py. Con f = 100 (desplazamiento 0,0707 BU): unresolved_mode_overlap con 1,0 sin resolver. Con f = 500 (0,0141 BU): ok con interferencia completa.",
+      "minimal_example": "El ejemplo del primer hallazgo con f = 100 frente a f = 500.",
+      "recommendation": "Añadir la cintura del haz w como propiedad del emisor, con γ efectivo = exp(−s²/(2w²)) (Blender/oracle/mz_oracle.py:gaussian_overlap). Calcular la potencia como γ·coherente + (1−γ)·suma incoherente, que conserva la energía exactamente. Reservar unresolved para cuando falle la dirección."
+    },
+    {
+      "severity": "medium",
+      "claim": "Riesgo en Blender: direction_tolerance = 1e-6 (adaptador:57; mz_scene.py:100 y 279-280) es comparable al error float32 de rotation_euler y matrix_world (ε = 1,19e-7 por componente, amplificado por dos reflexiones). Escenas correctas podrían salir como unresolved_mode_overlap sin ningún cambio físico.",
+      "evidence": "Inferencia no verificada: no ejecuté Blender. Blender guarda las transformaciones en float32 y el motor calcula en doble precisión.",
+      "minimal_example": "Crear el MZ con el adaptador, girar M2 360° de un solo paso (vuelve a la misma orientación), volver a trazar y vigilar si distance(dir_a_1, dir_a_2) supera 1e-6.",
+      "recommendation": "En OPT-003, registrar la distancia de direcciones medida y fijar la tolerancia a partir de ella (propuesta: 1e-5 rad expresada como ángulo). Documentar tolerancias separadas para Python (1e-12) y para Blender."
+    },
+    {
+      "severity": "medium",
+      "claim": "Que el motor coincida con el oráculo OPT-006 no valida la geometría. El oráculo recibe Δφ y t_arm, no posiciones: comparte el paso de fase a potencia, pero no el de geometría a fase, que es donde está el primer hallazgo. Además, t_arm = 0 mezcla absorción y camino roto (pregunta 6): sirve para comparar puertos, no para comparar el libro mayor por categorías.",
+      "evidence": "Hecho: en Blender/oracle/mz_oracle.py, mz_closed_form recibe phi1, phi2, t_arm1 y t_arm2, y sus loss_arm1 y loss_arm2 no separan potencia escapada de pérdida material.",
+      "minimal_example": "Motor y oráculo coinciden hasta 5e-15 en el barrido de phase_shift. En el caso del primer hallazgo, el oráculo solo reproduce el error si se le pasa el Δφ que calcula el propio motor.",
+      "recommendation": "Claude amplía el oráculo cuando Codex lo decida, sin tocar el motor: parámetros separados escape_arm y material_loss, y una función geométrica independiente de ΔL en frente de onda (2d·cosθ y MZ no rectangular). Comparar el motor con el oráculo también en esas pruebas."
+    },
+    {
+      "severity": "low",
+      "claim": "Un brazo con fracción 0 < f ≤ EPS se salta sin anotarse en el libro mayor (mz_scene.py:231-233): el residuo deja de ser 0 y el status sigue siendo ok.",
+      "evidence": "Hecho, edge.py E1: transmission = 1 − 5e-10 o 5e-10 da residuo 1,67e-10, por encima de la tolerancia 1e-12 de assert_balanced, con status ok.",
+      "minimal_example": "replace(default_scene(), bs1=replace(bs1, transmission=5e-10)).",
+      "recommendation": "Saltar el brazo solo si fraction == 0.0; en otro caso, sumar current a escaped antes del continue."
+    },
+    {
+      "severity": "low",
+      "claim": "La absorción no se aplica al tramo de BS2 al detector (mz_scene.py:286-304) y path_lengths tampoco lo incluye: con α > 0, alejar un detector no cambia su potencia.",
+      "evidence": "Hecho, edge.py E2: con absorption = 0,05, el detector B en x = 3 y en x = 30 da el mismo optical_b = 0,778800783071.",
+      "minimal_example": "replace(default_scene(), absorption=0.05, detector_b=replace(detector_b, position=(30, 2, 0))).",
+      "recommendation": "Atenuar hasta la entrada de la esfera (primera raíz positiva), anotarlo en absorbed y documentar si la fase se mide en BS2 o en el detector."
+    },
+    {
+      "severity": "low",
+      "claim": "El status guarda solo el último evento (mz_scene.py:219, 238, 252, 262, 285 y 304), así que se pierden causas simultáneas. Además, cuando el caso es unresolved, las dos activaciones valen 0, lo que puede leerse como una neurona apagada; el aviso solo queda en la escena, no en los detectores (adaptador:146-153).",
+      "evidence": "Hecho, por inspección.",
+      "minimal_example": "Romper el brazo 2 y apartar el detector A del haz: el status final es missed_detector y no queda rastro de missed_bs2_aperture.",
+      "recommendation": "Guardar una lista de eventos y escribir en cada detector una propiedad valid junto con el status."
+    },
+    {
+      "severity": "low",
+      "claim": "Propiedades de Blender que NO gobiernan el cálculo y que conviene condicionar en la documentación: la escala del objeto (el radio sale de obj['radius'], adaptador:121-132), la forma del empty, la oclusión entre objetos, la cara del espejo o del divisor (reflejan por las dos) y la anchura del haz, que no existe. SÍ gobiernan: la posición y orientación mundiales (incluido el parentesco, vía matrix_world) y las propiedades personalizadas que se leen.",
+      "evidence": "Hecho, por inspección de mz_scene_adapter.py:91-144 y mz_scene.py:129-148.",
+      "minimal_example": "Escalar ×3 el empty 'MZ Mirror 2' en Blender: la apertura calculada sigue siendo 0,4 BU.",
+      "recommendation": "Documentarlo en Docs/ o aplicar max(obj.scale) al radio, y validarlo en OPT-003."
+    }
+  ],
+  "unverified": [
+    "No ejecuté Blender ni el adaptador; el riesgo de direction_tolerance frente a float32 es una inferencia.",
+    "Los scripts de comprobación están fuera del repositorio (D:/PROJECTS/.cognition/neuro3d/opt-008/xcheck.py, phaseref.py, edge.py) y no forman parte de la suite de Codex.",
+    "No comprobé que la corrección del primer hallazgo cierre el caso destructivo dentro del motor; solo la validé con un cálculo aparte (phaseref.py).",
+    "La fórmula del MZ no rectangular está verificada en 2D con rayos ideales; falta construir la escena completa y trazarla con el motor.",
+    "El modelo γ gaussiano es escalar y 1D: no incluye curvatura del frente de onda ni propagación del haz."
+  ],
+  "next_gate": "No cerrar EXP-001 ni pasar a OPT-003 hasta cumplir cuatro condiciones: (1) corregir la referencia de fase en BS2 o exigir coincidencia exacta de impactos; (2) elegir la vía de fase geométrica (MZ no rectangular, línea de retardo o solape parcial con γ); (3) añadir una prueba cuya expectativa salga de la óptica estándar, en la que la cancelación por geometría dé A ≈ 1 y B ≈ 0 con la fase de frente de onda; (4) ampliar el oráculo con escape separado y ΔL geométrico. Después, un smoke en Blender CPU que mida la tolerancia de dirección real."
+}

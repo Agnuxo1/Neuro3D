@@ -7,6 +7,12 @@ no confirmatorias. Antes de ejecutar la prueba real Blender habrá que cerrar
 una preinscripción, conservar los resultados previos y no retocar umbrales
 después de ver la medición.
 
+**Bloqueo DEC-006:** OPT-008 detectó un error reproducido de referencia de fase
+cuando los caminos llegan a puntos distintos del combinador. No ejecutar una
+prueba confirmatoria MZ en Blender ni afirmar interferencia gobernada por
+geometría hasta corregir fase y solape y pasar una regresión CPU independiente.
+El resultado monocamino EXP-000 no está afectado por este error multirrayo.
+
 ## Pregunta e hipótesis
 
 ¿Puede una escena Blender con dos caminos ópticos modificar la salida de una

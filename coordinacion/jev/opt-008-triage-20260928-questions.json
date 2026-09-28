@@ -1,0 +1,29 @@
+{
+  "validation_gate": {
+    "type": "choice",
+    "instructions": "Choose the immediate promotion gate after a reproducible geometric phase-reference error that can label constructive output where a common-wavefront calculation predicts destructive output.",
+    "criteria": [
+      "Block confirmatory Blender MZ tests and geometry-driven interference claims until phase reference and overlap are corrected and independently tested; keep the old one-path baseline valid.",
+      "Proceed to confirmatory Blender MZ testing with the known phase-reference error and call it geometry-driven interference.",
+      "Discard all previous single-path and CPU results including those unrelated to the new error."
+    ]
+  },
+  "fix_sequence": {
+    "type": "choice",
+    "instructions": "Select the safest implementation sequence for the phase and geometry issue while the PC is resource constrained.",
+    "criteria": [
+      "First add a failing CPU regression from an independently derived common-wavefront phase, then correct phase transport and mode-overlap handling, and only then compare nonrectangular versus delay-line geometry on CPU before Blender.",
+      "Tighten a numeric tolerance without a failing physical regression and assume that fixes the phase model.",
+      "Immediately add a large optical mesh before correcting the two-path unit."
+    ]
+  },
+  "oracle_task": {
+    "type": "choice",
+    "instructions": "Decide how Claude's independent oracle should support this correction without duplicating the engine.",
+    "criteria": [
+      "Ask Claude for a separate small geometric wavefront reference and explicit escape/material loss categories, with equations and one counterexample; Codex implements and verifies the engine.",
+      "Have Claude rewrite Codex's motor and tests in parallel without a separate reference.",
+      "Ignore the independent oracle and trust only engine self-tests."
+    ]
+  }
+}

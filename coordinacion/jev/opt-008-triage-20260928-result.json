@@ -1,0 +1,20 @@
+{
+  "status": "connected",
+  "provenance": "jev",
+  "exit_code": 0,
+  "model": "jev-1.13.0",
+  "decisions": {
+    "validation_gate": {
+      "value": "Block confirmatory Blender MZ tests and geometry-driven interference claims until phase reference and overlap are corrected and independently tested; preserve the single-path baseline.",
+      "confidence": 1.0
+    },
+    "fix_sequence": {
+      "value": "Add failing independent common-wavefront CPU regression, correct phase transport and overlap, compare nonrectangular and delay-line geometry on CPU, then consider Blender.",
+      "confidence": 1.0
+    },
+    "oracle_task": {
+      "value": "Claude prepares a separate geometric wavefront reference and separates escape from material loss; Codex retains engine implementation and verification.",
+      "confidence": 1.0
+    }
+  }
+}

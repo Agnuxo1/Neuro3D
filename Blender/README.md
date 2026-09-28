@@ -67,6 +67,12 @@ no representan tres longitudes de onda físicas. Si los dos rayos no llegan
 solapados al combinador, el motor marca la potencia como no resuelta y **no**
 afirma que hubo interferencia.
 
+Advertencia actual (DEC-006): si ambos caminos alcanzan puntos distintos del
+combinador pero caen dentro de la tolerancia, el prototipo compara fases sin
+transportarlas a un frente de onda común. Puede declarar constructiva una
+configuración geométricamente destructiva. No usarlo como prueba física ni
+promocionar sus resultados hasta corregir y verificar ese caso.
+
 `addon/neuro3d/mz_scene_adapter.py` prepara la creación y lectura de esos
 objetos en Blender, pero todavía no se ha ejecutado allí ni se ofrece en el
 panel. El circuito estable de tres objetos permanece intacto. Las pruebas
