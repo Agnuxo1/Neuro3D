@@ -29,7 +29,7 @@ def _new_empty(bpy, collection, name, role, position, *, normal=None, shape="CIR
 
 
 def create_mz_circuit(bpy, scene):
-    """Create seven empty objects holding all optical computation parameters."""
+    """Create seven optical empties plus one non-optical combiner parent."""
 
     collection = bpy.data.collections.new("Neuro3D MZ Experimental")
     scene.collection.children.link(collection)
@@ -47,11 +47,18 @@ def create_mz_circuit(bpy, scene):
     source["beam_waist"] = 0.0  # 0 keeps the legacy ideal-mode CPU diagnostic
     source["mutual_coherence"] = 1.0
 
+    # BS2 and its two detectors move together in the geometry-only EXP-001
+    # control. Child locations below are local to this translation-only empty.
+    combiner = _new_empty(bpy, collection, "MZ Combiner Group", "mz_combiner_group",
+                          (2.0, 2.0, 0.0), shape="CUBE")
+
     for role, name, position in (
         ("mz_bs1", "MZ Splitter 1", (0.0, 0.0, 0.0)),
-        ("mz_bs2", "MZ Splitter 2", (2.0, 2.0, 0.0)),
+        ("mz_bs2", "MZ Splitter 2", (0.0, 0.0, 0.0)),
     ):
         obj = _new_empty(bpy, collection, name, role, position, normal=n)
+        if role == "mz_bs2":
+            obj.parent = combiner
         obj["radius"] = 0.4
         obj["transmission"] = 0.5
         if role == "mz_bs2":
@@ -68,10 +75,11 @@ def create_mz_circuit(bpy, scene):
         obj["phase_shift"] = 0.0
 
     for role, name, position in (
-        ("mz_detector_a", "MZ Detector A", (2.0, 3.0, 0.0)),
-        ("mz_detector_b", "MZ Detector B", (3.0, 2.0, 0.0)),
+        ("mz_detector_a", "MZ Detector A", (0.0, 1.0, 0.0)),
+        ("mz_detector_b", "MZ Detector B", (1.0, 0.0, 0.0)),
     ):
         obj = _new_empty(bpy, collection, name, role, position, shape="SPHERE")
+        obj.parent = combiner
         obj["radius"] = 0.2
         obj["responsivity_rgb"] = [1.0, 1.0, 1.0]
         obj["activation_threshold"] = 0.25

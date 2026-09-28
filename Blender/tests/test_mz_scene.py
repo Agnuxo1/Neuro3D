@@ -217,11 +217,72 @@ class MZSceneTests(unittest.TestCase):
             self.assertAlmostEqual(result.mirror_loss_rgb[channel], oracle["mirror_loss"], places=12)
         self.assert_balanced(result)
 
-    def test_beam_waist_does_not_override_conservative_centroid_gate(self):
+    def test_legacy_ideal_mode_keeps_conservative_centroid_gate(self):
         baseline = default_scene()
         scene = replace(baseline,
-                        source=replace(baseline.source, beam_waist=0.2),
                         mirror2=replace(baseline.mirror2, position=(0.0, 2.05, 0.0)))
+        result = trace_mz(scene)
+        self.assertEqual(result.status, "unresolved_mode_overlap")
+        self.assertFalse(result.interference_valid)
+        self.assertAlmostEqual(total(result.unresolved_rgb), 1.0, places=12)
+        self.assert_balanced(result)
+
+    def test_detector_occlusion_does_not_credit_wrong_port(self):
+        baseline = default_scene()
+        scene = replace(baseline,
+                        mirror2=replace(baseline.mirror2, phase_shift=math.pi),
+                        detector_a=Detector((2.0, 3.5, 0.0)),
+                        detector_b=Detector((2.4, 2.4, 0.0), radius=0.5))
+        result = trace_mz(scene)
+        self.assertEqual(result.status, "unresolved_detector_occlusion")
+        self.assertFalse(result.interference_valid)
+        self.assertAlmostEqual(total(result.unresolved_rgb), 1.0, places=12)
+        self.assertAlmostEqual(total(result.optical_a) + total(result.optical_b), 0.0, places=12)
+        self.assert_balanced(result)
+
+    def test_detector_behind_combiner_enclosing_origin_is_rejected(self):
+        baseline = default_scene()
+        scene = replace(baseline,
+                        mirror2=replace(baseline.mirror2, phase_shift=math.pi),
+                        detector_a=Detector((2.0, 1.9, 0.0), radius=0.15))
+        result = trace_mz(scene)
+        self.assertEqual(result.status, "unresolved_detector_geometry")
+        self.assertFalse(result.interference_valid)
+        self.assertAlmostEqual(total(result.unresolved_rgb), 1.0, places=12)
+        self.assert_balanced(result)
+
+    def test_two_detectors_enclosing_combiner_are_rejected(self):
+        baseline = default_scene()
+        shared = Detector((2.0, 2.0, 0.0), radius=0.1)
+        scene = replace(baseline, detector_a=shared, detector_b=shared)
+        result = trace_mz(scene)
+        self.assertEqual(result.status, "unresolved_detector_geometry")
+        self.assertFalse(result.interference_valid)
+        self.assertAlmostEqual(total(result.unresolved_rgb), 1.0, places=12)
+        self.assert_balanced(result)
+
+    def test_finite_wide_beam_uses_gaussian_overlap_threshold(self):
+        baseline = default_scene()
+        normal = unit(baseline.mirror2.normal)
+        d = 0.0125
+        shifted = tuple(p - d * n for p, n in zip(baseline.mirror2.position, normal))
+        scene = replace(baseline,
+                        source=replace(baseline.source, beam_waist=1.0),
+                        mirror2=replace(baseline.mirror2, position=shifted))
+        result = trace_mz(scene)
+        self.assertEqual(result.status, "ok")
+        self.assertTrue(result.interference_valid)
+        self.assertAlmostEqual(result.mode_overlap, 0.9998437622063955, places=12)
+        self.assert_balanced(result)
+
+    def test_finite_narrow_beam_with_negligible_overlap_is_unresolved(self):
+        baseline = default_scene()
+        normal = unit(baseline.mirror2.normal)
+        d = 0.0125
+        shifted = tuple(p - d * n for p, n in zip(baseline.mirror2.position, normal))
+        scene = replace(baseline,
+                        source=replace(baseline.source, beam_waist=0.001),
+                        mirror2=replace(baseline.mirror2, position=shifted))
         result = trace_mz(scene)
         self.assertEqual(result.status, "unresolved_mode_overlap")
         self.assertFalse(result.interference_valid)

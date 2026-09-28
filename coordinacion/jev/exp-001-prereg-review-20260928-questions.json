@@ -1,0 +1,20 @@
+{
+  "adoption": {
+    "type": "choice",
+    "instructions": "Should the proposed EXP-001 contract be accepted now, accepted with explicit edits, or rejected? Select the scientifically sound next step before any Blender execution.",
+    "criteria": [
+      "Accept with explicit edits: primary A/B-geo/B-mat/C/D, separate E CPU visibility and F historical baseline as secondary controls, state geometry-only two coordinated edits and object readback, retain fixed numerical thresholds and no Blender until resources allow; publish the closed pre-Blender contract without calling it physical validation.",
+      "Accept exactly as written and declare the CPU exploratory results confirmatory physical Blender results.",
+      "Reject all controls and build a larger mesh before testing the cell."
+    ]
+  },
+  "tolerance_and_gate": {
+    "type": "choice",
+    "instructions": "Choose how to handle proposed 1e-9 Blender dark-port tolerance and float32 estimate when actual Blender object transforms have not been measured.",
+    "criteria": [
+      "Freeze 1e-9 as a preregistered acceptance threshold (and 1e-12 CPU), require actual save/reopen object readback and report any failure without changing thresholds; keep experiment blocked until resource gate and final review.",
+      "Retune the threshold after observing Blender results so the experiment passes.",
+      "Call the float32 emulation a Blender execution and remove the runtime gate."
+    ]
+  }
+}

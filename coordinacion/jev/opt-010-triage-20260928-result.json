@@ -1,0 +1,17 @@
+{
+  "mode": "v2-query",
+  "exit_code": 0,
+  "provenance": "jev",
+  "status": "connected",
+  "model": "jev-1.13.0",
+  "decisions": {
+    "detector_rule": {
+      "value": "Add failing CPU regressions, then require detectors to lie ahead of BS2 and route each output ray to its nearest positive sphere entry among both detectors; if the target is not first, a tie occurs, or a detector encloses the BS2 origin, mark power unresolved with explicit status and preserve the ledger. Reverify no regression.",
+      "confidence": 1.0
+    },
+    "width_gate": {
+      "value": "For positive beam waist use a documented threshold based on transverse offset (for example O>=0.01, equivalently s<=w*sqrt(-2 ln 0.01)), while retaining direction, aperture, first-detector gates; keep the 0.02 BU centroid gate only for legacy beam_waist=None. Test the wide-beam counterexample and rejected tiny-overlap case, keep Blender gate closed.",
+      "confidence": 0.76
+    }
+  }
+}

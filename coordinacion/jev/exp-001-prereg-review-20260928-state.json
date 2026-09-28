@@ -1,0 +1,11 @@
+{
+  "project": "Neuro3D",
+  "decision": "Review Claude's EXP-001 proposed pre-Blender preregistration, without running Blender",
+  "current_evidence": {
+    "engine": "CPU scalar MZ scene engine with common-wavefront phase, constant-width Gaussian mode overlap, declared mutual coherence, conservative detector/mode unresolved gate; 41 Blender-area CPU/static tests and 26 oracle tests pass",
+    "collaborator": "Claude reports 3000 asymmetric CPU cases versus separate oracle, max error 6.5e-14, on engine version before latest detector gate; source script inspected but not rerun",
+    "proposal": "Nonrectangular beta=60 degrees, lambda=0.1 BU, waist=0.2 BU. Controls A coherent baseline, B-geo geometry only, B-mat phase only, C incoherent, D broken arm, E visibility sweep, F old one-path parity. Proposed Blender dark-port tolerance 1e-9 based on CPU float32 approximation, but actual Euler/matrix-world/save-reopen not checked",
+    "resource": "PC busy; no Blender, render, GPU or heavy tests. CPU tests are exploratory, no physical or Blender confirmation"
+  },
+  "review_concerns": "B-geo is two coordinated scene edits (M1 and BS2/detector parent), so define it as geometry-only rather than one-object edit. E visibility and F old one-path baseline are useful controls but not the primary two-path geometry claim. Actual Blender transforms may exceed approximate float32 tolerance; do not retune after measuring. Require saved object readback and unresolved=0 in primary controls."
+}

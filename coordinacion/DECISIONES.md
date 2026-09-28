@@ -141,3 +141,55 @@
   Blender. Próximo paso: especificar y probar control de anchura/solape y
   coherencia frente a incoherencia, con balance de energía; cerrar EXP-001
   antes de cualquier ejecución confirmatoria en Blender.
+
+## DEC-009 · 2026-09-28 · Contrato EXP-001 cerrado antes de Blender
+
+- **Evidencia revisada:** Claude propuso
+  `experimentos/EXP-001-PROPUESTA-CLAUDE.md` con controles A–F y una
+  estimación float32; Codex leyó sus scripts de exploración CPU. No son
+  resultados de Blender ni validación física. La implementación actual de
+  solape/coherencia pasa 41 pruebas ligeras y el oráculo separado 26.
+- **JEV:** consulta v2 con `exit_code=0`, `status=connected`,
+  `provenance=jev`; recibo
+  `jev/exp-001-prereg-review-20260928-result.json`. Recomendó aceptar la
+  propuesta con ajustes y congelar umbrales antes de medir.
+- **Decisión:** `experimentos/EXP-001-PREINSCRIPCION.md` es el contrato
+  vigente para una futura prueba MZ en Blender. A, B-geo, B-mat, C y D son
+  primarios; E (visibilidad CPU) y F (baseline monocamino) son secundarios.
+  B-geo son dos ediciones de escena coordinadas: M1 y el empty padre de BS2
+  y detectores; no se llama edición de un único objeto. Se exige lectura
+  tras guardar/reabrir, modos resueltos en A/B/C y tolerancias fijas CPU
+  1e-12 / Blender 1e-9 para puertos. La estimación float32 no sustituye a
+  Blender. No retocar criterios tras conocer resultados.
+- **Gate:** sin Blender mientras el PC esté ocupado; hace falta implementar
+  y verificar el empty padre del adaptador, revisión final del contrato y
+  margen de recursos/autorización del usuario. Aunque pasase, EXP-001 solo
+  demostraría cálculo escalar dependiente de objetos de escena, no física
+  electromagnética real ni entrenamiento de una red completa.
+
+## DEC-010 · 2026-09-28 · Primer detector y solape dependiente del haz
+
+- **OPT-010:** Claude entregó contraejemplos CPU. Codex leyó y ejecutó el
+  script: se acreditaba potencia al puerto A con un detector detrás de BS2
+  que encerraba el origen, con dos detectores que lo encerraban y cuando el
+  rayo A atravesaba antes la esfera B. En el ejemplo original de oclusión,
+  B también encerraba BS2 (distancia 0,49497 < radio 0,5); una variante con
+  B=(2,4;2,4), radio 0,5 aísla la oclusión real.
+- **JEV:** consulta v2 `exit_code=0`, `status=connected`,
+  `provenance=jev`; recibo `jev/opt-010-triage-20260928-result.json`.
+- **Corrección:** añadir regresiones rojo-verde y exigir primera intersección
+  positiva entre ambas esferas de detector. Origen encerrado, empate,
+  detector equivocado primero o modo faltante quedan sin atribución falsa,
+  con estados `unresolved` y balance conservado. Para `beam_waist` positiva,
+  usar solape gaussiano mínimo `O≥0,01` y mantener dirección/aperturas/
+  detectores; `overlap_tolerance=0,02 BU` queda para el modo ideal heredado.
+  Este corte es fenomenológico, no validación física de haces.
+- **Evidencia:** 47/47 pruebas CPU/estáticas del área Blender, 26/26 del
+  oráculo y 3000/3000 escenas asimétricas del script de Claude con error
+  máximo 6,495e-14. El empty padre del adaptador pasa una prueba estructural
+  sin Blender. Informe `INFORME-OPT-010-GATE-CPU.md` enviado para nueva
+  revisión de Claude (OPT-011).
+- **Contrato y gate:** `EXP-001-PREINSCRIPCION.md` se enmendó antes de
+  ejecutar Blender, sin tocar tolerancias de aceptación. OPT-003 permanece
+  bloqueada por revisión independiente del nuevo parche, verificación real
+  del adaptador/parentado y recursos/permiso del usuario.

@@ -1,6 +1,6 @@
 # Checkpoint factual de Neuro3D
 
-Actualizado: 2026-09-28 21:34 UTC.
+Actualizado: 2026-09-28 21:46 UTC.
 
 ## Objetivo
 
@@ -91,6 +91,24 @@ no se usa como marca.
   anterior al nuevo control de detectores; pidió contrastar puertos asimétricos
   y Codex añadió esa regresión. Informe para re-revisión en
   `coordinacion/INFORME-OPT-002-SOLAPE-CPU.md`.
+- DEC-009: Codex revisó los scripts y la propuesta de preinscripción de
+  Claude; JEV remoto `provenance=jev` recomendó aceptarla con ajustes. El
+  contrato vigente es `coordinacion/experimentos/EXP-001-PREINSCRIPCION.md`:
+  A/B-geo/B-mat/C/D primarios, E/F secundarios, umbrales CPU 1e-12 y
+  Blender 1e-9 congelados antes de medir. La exploración CPU previa no cuenta
+  como prueba confirmatoria. No se ejecutó Blender.
+- Claude entregó OPT-010 con atribuciones falsas de detectores y un
+  contraejemplo para la compuerta fija 0,02 BU. Codex ejecutó el script y
+  reprodujo los casos; observó que el ejemplo original de «oclusión» también
+  encierra el origen BS2, y añadió una variante que aísla la oclusión.
+  DEC-010, supervisada por JEV remoto, exige la primera esfera de detector
+  positiva y rechaza origen encerrado/empates; con anchura positiva usa
+  `mode_overlap≥0,01`, conservando el umbral 0,02 BU solo en modo ideal.
+  Pasan 47/47 CPU/estáticas, 26/26 oráculo y 3000/3000 casos asimétricos
+  contra el oráculo de Claude (error máximo 6,495e-14). La geometría del
+  empty padre del adaptador pasa un test simulado, no Blender real. Informe
+  `INFORME-OPT-010-GATE-CPU.md` y reauditoría OPT-011 solicitada a Claude.
+  El contrato EXP-001 se enmendó antes de Blender sin cambiar umbrales.
 
 ## Recursos y procesos
 
@@ -102,22 +120,19 @@ no se usa como marca.
   fue interrumpida. Otros procesos Claude preexistentes no se tocaron.
 - Archivo local no rastreado `Docs/assets/nebula-santo-grial-hero.png`:
   preservar y no añadir al repositorio público por accidente.
-- El vigilante de este hilo estaba configurado solo para cambios nuevos; por
-  eso no retomó OPT-002 aunque figuraba P0. Se corrigió su instrucción para
-  continuar un paso CPU ligero cuando quede una tarea P0 concreta y el hilo
-  esté inactivo; sigue evitando trabajo duplicado y GPU/Blender.
+- El vigilante de este hilo se actualizó para avanzar en cada ciclo seguro
+  y entregar a Claude un informe/petición concreta en el tablón; ya no espera
+  solo cambios nuevos. Evita duplicar trabajo y no usa GPU/Blender.
 
 ## Trabajo activo y siguiente paso
 
 - `OPT-001` ya está entregada. `DEC-005` registra la revisión de Codex/JEV.
-- `OPT-002` tiene fase y solape/coherencia fenomenológicos implementados en
-  CPU; Claude debe revisar el último parche de detectores. El adaptador sigue
+- `OPT-002` tiene fase, solape/coherencia y primer detector implementados en
+  CPU; Claude debe reauditar el último parche (OPT-011). El adaptador sigue
   sin verificarse en Blender. Las comprobaciones actuales son exploratorias.
-- `OPT-003` queda bloqueada hasta cerrar EXP-001 con JEV y disponer de margen
-  de recursos. Claude propuso una preinscripción en
-  `coordinacion/experimentos/EXP-001-PROPUESTA-CLAUDE.md`; Codex debe revisar
-  sus supuestos, tolerancias y controles antes de adoptarla. No se ha aprobado
-  todavía y no se permite Blender/GPU.
+- `OPT-003` queda bloqueada. DEC-009 cerró el contrato pre-Blender y DEC-010
+  lo enmendó antes de ejecutar; falta OPT-011, verificación runtime del empty
+  padre y margen de RAM/autorización del usuario. No se permite Blender/GPU.
 
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.

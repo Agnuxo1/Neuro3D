@@ -1,0 +1,20 @@
+{
+  "detector_rule": {
+    "type": "choice",
+    "instructions": "Choose the safest bounded correction for wrong detector attribution in the scalar ray model before any Blender test.",
+    "criteria": [
+      "Add failing CPU regressions, then require detectors to lie ahead of BS2 and route each output ray to its nearest positive sphere entry among both detectors; if the target is not first, a tie occurs, or a detector encloses the BS2 origin, mark power unresolved with explicit status and preserve the ledger. Reverify no regression.",
+      "Keep checking only whether each target sphere is hit at any distance, even when another detector is encountered first.",
+      "Implement a full general-purpose occlusion renderer/GPU ray tracer immediately."
+    ]
+  },
+  "width_gate": {
+    "type": "choice",
+    "instructions": "Decide whether to change the hard 0.02 BU centroid gate now that an explicit positive beam waist exists, while avoiding a false physical overlap claim.",
+    "criteria": [
+      "For positive beam waist use a documented threshold based on transverse offset (for example O>=0.01, equivalently s<=w*sqrt(-2 ln 0.01)), while retaining direction, aperture, first-detector gates; keep the 0.02 BU centroid gate only for legacy beam_waist=None. Test the wide-beam counterexample and rejected tiny-overlap case, keep Blender gate closed.",
+      "Keep the 0.02 BU gate even for finite beam waist, but explicitly document that high-overlap wider beams are unresolved by design and do not call it a coherent beam model beyond that gate.",
+      "Drop all centroid, direction and detector checks whenever beam_waist is present."
+    ]
+  }
+}

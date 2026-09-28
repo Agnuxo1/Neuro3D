@@ -1,0 +1,11 @@
+{
+  "project": "Neuro3D",
+  "decision": "Triage independent OPT-010 detector attribution counterexamples and width gate",
+  "evidence": {
+    "reproduced": "CPU script gate_counterexamples.py: detector B sphere intercepts port-A ray before A but engine credits A=1; sphere behind BS2 enclosing impact credits A=1; two detectors enclosing impact also credit a port. Balance closes but assignment is wrong.",
+    "width_gate": "beam_waist=1 BU and BS2 hit separation=0.025 BU gives unresolved, although Gaussian field overlap would be 0.99984376; current hard gate is 0.02 BU. Existing test explicitly enforces the conservative gate.",
+    "positive_evidence": "Claude reports 3000/3000 asymmetric cases matched independent oracle before detector routing fix; core CPU/static suite 41 and oracle suite 26 pass. No Blender/GPU run.",
+    "current_contract": "EXP-001 pre-Blender contract closed with exact coincident impacts in primary geometry cases, but runtime remains blocked by resources and independent review"
+  },
+  "constraints": "Only lightweight CPU; no Blender, GPU, render or heavy tests. Keep primary contract and prior versions, do not falsely promote physical validation."
+}

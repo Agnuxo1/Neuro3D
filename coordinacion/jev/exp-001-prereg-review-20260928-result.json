@@ -1,0 +1,17 @@
+{
+  "mode": "v2-query",
+  "exit_code": 0,
+  "provenance": "jev",
+  "status": "connected",
+  "model": "jev-1.13.0",
+  "decisions": {
+    "adoption": {
+      "value": "Accept with explicit edits: primary A/B-geo/B-mat/C/D, separate E CPU visibility and F historical baseline as secondary controls, state geometry-only two coordinated edits and object readback, retain fixed numerical thresholds and no Blender until resources allow; publish the closed pre-Blender contract without calling it physical validation.",
+      "confidence": 1.0
+    },
+    "tolerance_and_gate": {
+      "value": "Freeze 1e-9 as a preregistered acceptance threshold (and 1e-12 CPU), require actual save/reopen object readback and report any failure without changing thresholds; keep experiment blocked until resource gate and final review.",
+      "confidence": 1.0
+    }
+  }
+}

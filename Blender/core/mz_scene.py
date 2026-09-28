@@ -17,6 +17,7 @@ import math
 Vec3 = tuple[float, float, float]
 RGB = tuple[float, float, float]
 EPS = 1e-9
+MIN_MODE_OVERLAP = 0.01  # phenomenological Gaussian mode gate when a waist is declared
 
 
 def dot(a: Vec3, b: Vec3) -> float:
@@ -161,14 +162,35 @@ def _disc_hit(origin: Vec3, direction: Vec3, position: Vec3, normal: Vec3, radiu
     return _DiscHit(point, length, distance(point, position) <= radius + EPS)
 
 
-def _sphere_hit(origin: Vec3, direction: Vec3, detector: Detector) -> bool:
+def _sphere_entry(origin: Vec3, direction: Vec3, detector: Detector) -> float | None:
+    """Distance to the near surface, only if the ray starts outside it."""
     offset = sub(origin, detector.position)
+    if dot(offset, offset) <= detector.radius ** 2 + EPS:
+        return None
     projection = dot(direction, offset)
     discriminant = projection * projection - (dot(offset, offset) - detector.radius ** 2)
     if discriminant < 0:
-        return False
+        return None
     root = math.sqrt(max(0.0, discriminant))
-    return -projection + root > EPS
+    near = -projection - root
+    return near if near > EPS else None
+
+
+def _detector_route(origin: Vec3, direction: Vec3, a: Detector, b: Detector) -> tuple[int | None, str]:
+    """First detector sphere on a ray; reject origins inside either detector."""
+    for detector in (a, b):
+        offset = sub(origin, detector.position)
+        if dot(offset, offset) <= detector.radius ** 2 + EPS:
+            return None, "origin_enclosed"
+    da = _sphere_entry(origin, direction, a)
+    db = _sphere_entry(origin, direction, b)
+    if da is None and db is None:
+        return None, "miss"
+    if da is not None and db is not None:
+        if abs(da - db) <= EPS:
+            return None, "ambiguous"
+        return (0, "hit") if da < db else (1, "hit")
+    return (0, "hit") if da is not None else (1, "hit")
 
 
 def _validate(scene: MZScene) -> RGB:
@@ -232,9 +254,10 @@ def trace_mz(scene: MZScene) -> MZResult:
     """Trace two scene-defined arms, combine only overlapping output modes.
 
     Non-overlapping arrivals are *unresolved*, not a demonstrated interference
-    or physical loss. A hit within overlap_tolerance is treated as a shared
-    ideal mode only for CPU diagnosis. If beam_waist is supplied, its constant
-    Gaussian width sets a partial mode overlap inside that conservative gate.
+    or physical loss. With no beam waist, the legacy centroid tolerance gates
+    the ideal mode. With a finite waist, Gaussian overlap >= 0.01 replaces
+    that absolute position gate; direction, aperture and first-detector gates
+    remain mandatory. This is still a phenomenological CPU approximation.
     Physical diffraction and detector-area integrals remain untested.
     """
 
@@ -319,12 +342,9 @@ def trace_mz(scene: MZScene) -> MZResult:
             dir_a_2 = reflected(arm_direction[1], scene.bs2.normal)  # type: ignore[arg-type]
             dir_b_1 = reflected(arm_direction[0], scene.bs2.normal)  # type: ignore[arg-type]
             dir_b_2 = arm_direction[1]
-            interference_valid = (
-                distance(arm_hit[0].point, arm_hit[1].point) <= scene.overlap_tolerance
-                and distance(dir_a_1, dir_a_2) <= scene.direction_tolerance  # type: ignore[arg-type]
-                and distance(dir_b_1, dir_b_2) <= scene.direction_tolerance
-            )
-            if interference_valid:
+            directions_match = (distance(dir_a_1, dir_a_2) <= scene.direction_tolerance
+                                and distance(dir_b_1, dir_b_2) <= scene.direction_tolerance)
+            if directions_match:
                 separation = sub(arm_hit[0].point, arm_hit[1].point)
                 # Both impacts lie on one splitter plane. Reflection changes
                 # only the normal component of direction, so a tangent
@@ -335,21 +355,29 @@ def trace_mz(scene: MZScene) -> MZResult:
                     raise ValueError("Transverse separation is outside the finite numeric range")
                 mode_overlap = (1.0 if scene.source.beam_waist is None else
                                 math.exp(-0.5 * (transverse_separation / scene.source.beam_waist) ** 2))
-                effective_coherence = scene.source.mutual_coherence * mode_overlap
-                all_detector_modes_reach = all((
-                    _sphere_hit(arm_hit[0].point, dir_a_1, scene.detector_a),
-                    _sphere_hit(arm_hit[1].point, dir_a_2, scene.detector_a),
-                    _sphere_hit(arm_hit[0].point, dir_b_1, scene.detector_b),
-                    _sphere_hit(arm_hit[1].point, dir_b_2, scene.detector_b),
-                ))
-                if not all_detector_modes_reach:
-                    interference_valid = False
-                    transverse_separation = None
-                    mode_overlap = None
-                    effective_coherence = None
-                    status = "unresolved_detector_overlap"
-            else:
+                interference_valid = (
+                    distance(arm_hit[0].point, arm_hit[1].point) <= scene.overlap_tolerance
+                    if scene.source.beam_waist is None else mode_overlap >= MIN_MODE_OVERLAP
+                )
+            if not interference_valid:
                 status = "unresolved_mode_overlap"
+            else:
+                effective_coherence = scene.source.mutual_coherence * mode_overlap
+                routes = (
+                    (0, *_detector_route(arm_hit[0].point, dir_a_1, scene.detector_a, scene.detector_b)),
+                    (0, *_detector_route(arm_hit[1].point, dir_a_2, scene.detector_a, scene.detector_b)),
+                    (1, *_detector_route(arm_hit[0].point, dir_b_1, scene.detector_a, scene.detector_b)),
+                    (1, *_detector_route(arm_hit[1].point, dir_b_2, scene.detector_a, scene.detector_b)),
+                )
+                if any(reason in ("origin_enclosed", "ambiguous") for _, _, reason in routes):
+                    status = "unresolved_detector_geometry"
+                elif any(route is not None and route != target for target, route, _ in routes):
+                    status = "unresolved_detector_occlusion"
+                elif any(route is None for _, route, _ in routes):
+                    status = "unresolved_detector_overlap"
+                if status.startswith("unresolved_detector"):
+                    interference_valid = False
+                    effective_coherence = None
             if not interference_valid:
                 for c in range(3):
                     unresolved[c] += arm_power[0][c] + arm_power[1][c]
@@ -366,17 +394,25 @@ def trace_mz(scene: MZScene) -> MZResult:
                 g = effective_coherence if effective_coherence is not None else 0.0
                 optical[0][c] = g * coherent_a + (1 - g) * incoherent_a
                 optical[1][c] = g * coherent_b + (1 - g) * incoherent_b
-            chosen = active[0]
-            origin = arm_hit[chosen].point
-            direction_a = arm_direction[0] if chosen == 0 else reflected(arm_direction[1], scene.bs2.normal)
-            direction_b = reflected(arm_direction[0], scene.bs2.normal) if chosen == 0 else arm_direction[1]
-            for port, detector, direction in ((0, scene.detector_a, direction_a),
-                                               (1, scene.detector_b, direction_b)):
-                if not _sphere_hit(origin, direction, detector):  # type: ignore[arg-type]
+            if len(active) == 1:
+                chosen = active[0]
+                origin = arm_hit[chosen].point
+                direction_a = arm_direction[0] if chosen == 0 else reflected(arm_direction[1], scene.bs2.normal)
+                direction_b = reflected(arm_direction[0], scene.bs2.normal) if chosen == 0 else arm_direction[1]
+                for port, direction in ((0, direction_a), (1, direction_b)):
+                    route, reason = _detector_route(origin, direction,
+                                                    scene.detector_a, scene.detector_b)
+                    if route == port:
+                        continue
                     for c in range(3):
-                        escaped[c] += optical[port][c]
+                        if reason == "miss":
+                            escaped[c] += optical[port][c]
+                        else:
+                            unresolved[c] += optical[port][c]
                         optical[port][c] = 0.0
-                    status = "missed_detector"
+                    status = ("missed_detector" if reason == "miss" else
+                              "unresolved_detector_geometry" if reason in ("origin_enclosed", "ambiguous") else
+                              "unresolved_detector_occlusion")
         elif not active and status == "ok":
             status = "no_arm_reached_combiner"
 

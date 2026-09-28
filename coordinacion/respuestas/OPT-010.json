@@ -1,0 +1,62 @@
+{
+  "task_id": "OPT-010",
+  "status": "completed",
+  "execution_note": "Revisé el motor actual sin editarlo (mz_scene.py tras la compuerta de detectores, cambios de 21:33 UTC). Ejecuté en CPU ligera, sin Blender ni GPU: la suite de Codex (Ran 41, OK) y la del oráculo (Ran 26, OK), además de los scripts externos D:/PROJECTS/.cognition/neuro3d/opt-010/gate_counterexamples.py y opt-002-overlap/partial_coherence_check.py. Estos scripts usan solo la API pública trace_mz.",
+  "summary": "La hipótesis de separación de Codex es correcta: para cualquier separación tangente al plano de BS2 y cualquier dirección, la norma transversal coincide en los puertos A y B (diferencia 0,0 con una dirección 3D genérica), porque s·d' = s·d − 2(d·n)(s·n) = s·d. No encontré ninguna geometría que la rompa mientras ambos impactos estén en el plano de BS2. Contraste con el oráculo sobre el motor actual: 3000/3000 escenas asimétricas (τ, R por canal, fases, mutual_coherence, w y desplazamiento de M2) coinciden con mz_ledger con error máximo 6,5e-14, y las tres anchuras del JSON y el control incoherente siguen cubiertos por la suite de Codex (41/41). La compuerta de detectores sí atribuye potencia de forma errónea en tres casos reproducibles, todos con status ok e interference_valid = True: (1) oclusión: el rayo del puerto A atraviesa primero la esfera del detector B y aun así se acredita a A; (2) un detector colocado DETRÁS de BS2, que envuelve el punto de impacto, se acredita (_sphere_hit acepta un origen interior); (3) dos detectores que envuelven el mismo punto reciben cada uno su puerto. El caso (1) es una limitación del modelo (no hay oclusión); los casos (2) y (3) son un criterio de impacto demasiado permisivo en el código. Además, la compuerta fija de 0,02 BU contradice el modelo gaussiano: con w = 1,0 y los impactos a 0,025 BU, el caso queda sin resolver aunque su solape sería 0,99984.",
+  "findings": [
+    {
+      "severity": "high",
+      "type": "limitación del modelo que produce atribución errónea",
+      "claim": "Sin oclusión entre detectores: el rayo del puerto A puede atravesar la esfera del detector B antes de llegar al detector A, y el motor acredita toda la potencia a A.",
+      "evidence": "gate_counterexamples.py, caso 1: scene = default_scene() con mirror2.phase_shift = π, detector_a en (2; 3,5; 0) con r = 0,2 y detector_b en (2,35; 2,35; 0) con r = 0,5. Resultado: status ok, valid True, A = 1,000000 y B = 0. El punto (2; 2,35) del rayo A está a 0,35 < 0,5 del centro de B.",
+      "minimal_example": "replace(default_scene(), mirror2=replace(mirror2, phase_shift=math.pi), detector_a=Detector((2.0, 3.5, 0.0)), detector_b=Detector((2.35, 2.35, 0.0), radius=0.5))",
+      "recommendation": "Para cada rayo de puerto, tomar el PRIMER detector intersecado (la raíz positiva más cercana entre todos los detectores). Si no es el detector de su puerto, marcar unresolved_detector_occlusion y no acreditar la potencia. Es un cambio pequeño en la compuerta, sin trazado de escena general."
+    },
+    {
+      "severity": "medium",
+      "type": "error de código (criterio permisivo)",
+      "claim": "_sphere_hit devuelve True cuando el origen (el impacto en BS2) está dentro de la esfera, sea cual sea la dirección, así que un detector colocado detrás de BS2 que envuelve el punto de impacto recibe la potencia del puerto.",
+      "evidence": "gate_counterexamples.py, caso 4b: detector_a en (2; 1,9; 0) con r = 0,15 (detrás de BS2 respecto de la dirección +y del puerto A) y phase_shift = π. Resultado: status ok, valid True, A = 1,000000.",
+      "minimal_example": "replace(default_scene(), mirror2=replace(mirror2, phase_shift=math.pi), detector_a=Detector((2.0, 1.9, 0.0), radius=0.15))",
+      "recommendation": "Exigir que la esfera esté delante del origen: raíz cercana > EPS, o rechazar con un estado explícito si el origen está dentro (detector_encloses_combiner). Comprobar también que el centro del detector cumple dot(centro − origen, dirección) > 0."
+    },
+    {
+      "severity": "medium",
+      "type": "error de código (criterio permisivo)",
+      "claim": "Dos detectores que envuelven el mismo punto de impacto reciben cada uno la potencia de su puerto, aunque no estén en las direcciones de salida y ocupen el mismo espacio.",
+      "evidence": "gate_counterexamples.py, casos 3 y 3b: detector_a y detector_b en (2, 2, 0) con r = 0,1. Resultado: status ok, valid True, B = 1 (o A = 1 con phase_shift = π).",
+      "minimal_example": "replace(default_scene(), detector_a=Detector((2.0, 2.0, 0.0), radius=0.1), detector_b=Detector((2.0, 2.0, 0.0), radius=0.1))",
+      "recommendation": "Se corrige con la misma regla del hallazgo anterior (esfera delante del origen). Además, validar que las esferas de detector no se solapan entre sí, o documentarlo."
+    },
+    {
+      "severity": "medium",
+      "type": "limitación de diseño",
+      "claim": "La compuerta absoluta overlap_tolerance = 0,02 BU es independiente de beam_waist. Con haces anchos, casos de solape casi total quedan sin resolver; con haces estrechos, la compuerta deja pasar separaciones de varias anchuras (y entonces O cae a ~0 de forma correcta).",
+      "evidence": "gate_counterexamples.py, caso 2: beam_waist = 1,0 y M2 desplazado 0,0125 BU a lo largo de −n (impactos a 0,025 BU): status unresolved_mode_overlap, unresolved = 1,0, cuando O habría sido 0,99984. Coincide con test_beam_waist_does_not_override_conservative_centroid_gate, así que es una decisión consciente de Codex, pero es incoherente con el modelo.",
+      "minimal_example": "replace(default_scene(), source=replace(source, beam_waist=1.0), mirror2=replace(mirror2, position=M2 − 0.0125·unit(n)))",
+      "recommendation": "Si beam_waist está definido, escalar la compuerta de posición con w (por ejemplo, separación transversal ≤ 3w, con O ≥ 0,011) y mantener 0,02 BU solo en el modo ideal (w = None). Registrar la regla en EXP-001 antes de medir."
+    },
+    {
+      "severity": "low",
+      "type": "confirmación",
+      "claim": "La hipótesis de separación transversal igual en ambos puertos es correcta para cualquier par de impactos en el plano de BS2 y cualquier dirección de llegada.",
+      "evidence": "gate_counterexamples.py, caso 0: separación tangente (0,013; 0,013; 0,004) proyectada al plano y dirección 3D genérica unit(0,3; 1; 0,2): norma transversal 0,008760834000789 en ambos puertos, diferencia 0,0. Algebraicamente, s·(d − 2(d·n)n) = s·d si s·n = 0.",
+      "minimal_example": "No aplica.",
+      "recommendation": "Mantenerla. Solo dejaría de valer si los impactos no estuvieran en el mismo plano (BS2 no plano o con espesor), que el modelo no contempla."
+    },
+    {
+      "severity": "low",
+      "type": "redundancia",
+      "claim": "Tras exigir que los cuatro modos alcancen su detector (líneas ~109-120 del bloque de trace_mz), el bucle posterior vuelve a comprobar los detectores solo con el brazo elegido (líneas ~139-149). En el caso de interferencia válida nunca puede disparar missed_detector; solo actúa con un único brazo activo.",
+      "evidence": "Inspección de mz_scene.py, bloque trace_mz (numeración relativa al inicio de la función).",
+      "minimal_example": "No aplica.",
+      "recommendation": "Documentarlo o limitar el segundo bucle al caso de un solo brazo, para que su intención quede clara."
+    }
+  ],
+  "unverified": [
+    "No se ejecutó Blender; el adaptador (beam_waist = 0 como modo ideal) solo se revisó a través del motor.",
+    "La recomendación de «primer detector intersecado» no está implementada ni probada; no se ha escrito código en archivos de Codex.",
+    "La escala de la compuerta con w (≤ 3w) es una propuesta; el factor habría que fijarlo con JEV."
+  ],
+  "next_gate": "Antes de cerrar EXP-001: (1) aplicar la regla de «esfera delante y primer detector intersecado» y añadir los casos 1, 3b y 4b como regresiones rojo-verde; (2) decidir si la compuerta de posición escala con beam_waist; (3) mantener la verificación 3000/3000 contra el oráculo tras el parche. La propuesta EXP-001-PROPUESTA-CLAUDE.md no se ve afectada: sus detectores están a 1 BU, en las direcciones de puerto y sin solaparse."
+}
