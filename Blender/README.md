@@ -86,7 +86,10 @@ El contrato vigente está en
 El ejecutor experimental `tests/run_mz_exp001.py` prepara los siete controles
 primarios, guarda un `.blend` por control y lo reabre en una fase separada para
 comparar matrices, propiedades y resultados. **No se ha ejecutado en Blender**:
-la revisión independiente del ejecutor, la comparación adicional de una traza
-reconstruida desde el archivo y la autorización del usuario siguen pendientes.
+la revisión final del ejecutor y la autorización del usuario siguen pendientes.
+El verificador `oracle/readback_reconstruct.py` reconstruye una traza CPU desde
+las matrices y propiedades ópticas leídas tras reabrir el archivo y exige
+coincidencia con el adaptador a 1e-12; sus pruebas sintéticas no sustituyen
+la ejecución real.
 Requiere una opción explícita de autorización, limita Blender a un hilo,
 45 segundos y 1,5 GiB por fase, y no sobrescribe artefactos existentes.

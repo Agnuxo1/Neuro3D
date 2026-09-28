@@ -20,6 +20,17 @@ sys.path[:0] = [str(REPO / "Blender" / "core"),
 from mz_scene_adapter import create_mz_circuit, trace_mz_circuit
 from mz_exp001_plan import controls
 
+OPTICAL_KEYS = {
+    "mz_source": ("power", "rgb", "frequency", "phase", "propagation_speed",
+                  "absorption_per_unit", "beam_waist", "mutual_coherence"),
+    "mz_bs1": ("radius", "transmission"),
+    "mz_bs2": ("radius", "transmission", "overlap_tolerance", "direction_tolerance"),
+    "mz_mirror1": ("radius", "reflectance_rgb", "phase_shift"),
+    "mz_mirror2": ("radius", "reflectance_rgb", "phase_shift"),
+    "mz_detector_a": ("radius", "responsivity_rgb", "activation_threshold", "response_gain"),
+    "mz_detector_b": ("radius", "responsivity_rgb", "activation_threshold", "response_gain"),
+}
+
 
 def _roles():
     scene = bpy.context.scene
@@ -41,17 +52,17 @@ def _capture(roles, result):
             "location": [float(v) for v in obj.location],
             "parent": obj.parent.get("neuro3d_role") if obj.parent else None,
         }
-    source = roles["mz_source"]
-    m2 = roles["mz_mirror2"]
+    optics = {}
+    for role, keys in OPTICAL_KEYS.items():
+        obj = roles[role]
+        optics[role] = {}
+        for key in keys:
+            raw = obj[key]
+            optics[role][key] = (float(raw) if isinstance(raw, (int, float))
+                                 else [float(value) for value in raw])
     return {
         "objects": objects,
-        "properties": {
-            "frequency": float(source["frequency"]),
-            "speed": float(source["propagation_speed"]),
-            "beam_waist": float(source["beam_waist"]),
-            "mutual_coherence": float(source["mutual_coherence"]),
-            "mirror2_phase": float(m2["phase_shift"]),
-        },
+        "optics": optics,
         "result": {
             "status": result.status,
             "optical_a": [float(v) for v in result.optical_a],
@@ -107,8 +118,16 @@ def _compare(saved, current):
         for key in ("matrix_world", "location"):
             for left, right in zip(before[key], after[key]):
                 _close(left, right, 1e-6)
-    for key, before in saved["properties"].items():
-        _close(before, current["properties"][key], 1e-6)
+    for role, properties in saved["optics"].items():
+        for key, before in properties.items():
+            after = current["optics"][role][key]
+            if isinstance(before, list):
+                if len(before) != len(after):
+                    raise AssertionError(f"Optical property length changed: {role}.{key}")
+                for left, right in zip(before, after):
+                    _close(left, right, 1e-6)
+            else:
+                _close(before, after, 1e-6)
     if saved["result"]["status"] != current["result"]["status"]:
         raise AssertionError("Status changed on reopening")
     if saved["scene_status"] != current["scene_status"]:
@@ -173,6 +192,10 @@ def main():
         record = _capture(roles, result)
         _compare(saved, record)
         _accept(case, record)
+        readback_path = output.with_suffix(".readback.json")
+        if readback_path.exists():
+            raise FileExistsError("EXP-001 refuses to overwrite a readback record")
+        readback_path.write_text(json.dumps(record, indent=2), encoding="utf-8")
     print("NEURO3D_MZ_EXP001 " + json.dumps({
         "phase": mode, "control": name, "status": result.status,
         "a": sum(result.optical_a), "b": sum(result.optical_b),

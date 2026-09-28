@@ -11,11 +11,15 @@ import argparse
 import json
 from pathlib import Path
 import subprocess
+import sys
 import time
 
 import psutil
 
 from mz_exp001_plan import controls
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "oracle"))
+from readback_reconstruct import compare as compare_readback  # noqa: E402
 
 MAX_RSS = 1_500 * 2**20
 MIN_FREE = 2_500 * 2**20
@@ -68,7 +72,11 @@ def _run(blender: Path, script: Path, input_blend: Path | None,
                 process.kill()
                 break
             time.sleep(0.1)
-        process.wait(timeout=5)
+        try:
+            process.wait(timeout=5)
+        except subprocess.TimeoutExpired as exc:
+            process.kill()
+            raise RuntimeError(f"{case}/{mode}: child did not exit after kill; log={log_path}") from exc
     output = log_path.read_text(encoding="utf-8", errors="replace")
     records = [json.loads(line[len(MARKER):]) for line in output.splitlines()
                if line.startswith(MARKER)]
@@ -76,6 +84,15 @@ def _run(blender: Path, script: Path, input_blend: Path | None,
         raise RuntimeError(f"{case}/{mode}: {stop_reason or 'phase failed'}; "
                            f"exit={process.returncode}; log={log_path}")
     return {**records[0], "peak_rss_mib": round(peak / 2**20, 1), "log": str(log_path)}
+
+
+def _verify_readback(artifact: Path) -> dict:
+    readback_path = artifact.with_suffix(".readback.json")
+    record = json.loads(readback_path.read_text(encoding="utf-8"))
+    result = compare_readback(record, tolerance=1e-12)
+    if not result["passes"]:
+        raise AssertionError(f"Independent CPU readback failed: {readback_path}: {result}")
+    return {"readback": str(readback_path), "readback_worst_abs_diff": result["worst_abs_diff"]}
 
 
 def main() -> None:
@@ -96,16 +113,26 @@ def main() -> None:
     args.artifacts.mkdir(parents=True, exist_ok=False)
     script = Path(__file__).with_name("blender_mz_exp001.py")
     base = args.artifacts / "A.blend"
-    records = [_run(args.blender, script, None, base, "init", "A")]
-    records.append(_run(args.blender, script, base, base, "verify", "A"))
-    for case in controls()[1:]:
-        artifact = args.artifacts / f"{case.name}.blend"
-        records.append(_run(args.blender, script, base, artifact, "edit", case.name))
-        records.append(_run(args.blender, script, artifact, artifact, "verify", case.name))
-    report = {"experiment": "EXP-001", "blender": str(args.blender),
-              "controls": records, "runtime_verified": True}
+    records = []
+    failure = None
     report_path = args.artifacts / "report.json"
-    report_path.write_text(json.dumps(report, indent=2), encoding="utf-8")
+    try:
+        records.append(_run(args.blender, script, None, base, "init", "A"))
+        verified = _run(args.blender, script, base, base, "verify", "A")
+        records.append({**verified, **_verify_readback(base)})
+        for case in controls()[1:]:
+            artifact = args.artifacts / f"{case.name}.blend"
+            records.append(_run(args.blender, script, base, artifact, "edit", case.name))
+            verified = _run(args.blender, script, artifact, artifact, "verify", case.name)
+            records.append({**verified, **_verify_readback(artifact)})
+    except BaseException as exc:
+        failure = {"type": type(exc).__name__, "detail": str(exc)}
+        raise
+    finally:
+        report = {"experiment": "EXP-001", "blender": str(args.blender),
+                  "controls": records, "runtime_verified": failure is None,
+                  "failure": failure}
+        report_path.write_text(json.dumps(report, indent=2), encoding="utf-8")
     print(json.dumps({"report": str(report_path), "phases": len(records)}))
 
 

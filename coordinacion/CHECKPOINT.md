@@ -1,6 +1,6 @@
 # Checkpoint factual de Neuro3D
 
-Actualizado: 2026-09-28 22:35 UTC.
+Actualizado: 2026-09-28 22:50 UTC.
 
 ## Objetivo
 
@@ -142,6 +142,15 @@ no se usa como marca.
   comprobó AST, rechazo sin autorización y 52/52 tests CPU/estáticos;
   NO se ejecutó Blender. Falta revisión independiente y añadir contraste de
   una traza reconstruida de valores leídos del `.blend` antes del runtime.
+- Claude entregó `Blender/oracle/readback_reconstruct.py` y cinco pruebas
+  sintéticas independientes del adaptador. Codex las leyó y comprobó 31/31
+  pruebas del oráculo. `_capture` ahora incluye matrices y TODAS las
+  propiedades ópticas declaradas de los siete roles; tras reabrir cada
+  `.blend`, el script escribe un JSON de readback separado y el wrapper lo
+  retraza fuera de Blender con `trace_mz`, exigiendo ≤1e-12. El wrapper
+  conserva un `report.json` parcial en fallo. AST OK, barrera sin permiso OK,
+  52/52 tests CPU/estáticos y 31/31 del oráculo. No se lanzó Blender/GPU.
+  Sigue pendiente auditoría de Claude sobre la integración y runtime real.
 
 ## Recursos y procesos
 
@@ -165,8 +174,8 @@ no se usa como marca.
   en Blender. Las comprobaciones actuales son exploratorias.
 - `OPT-003` queda bloqueada. DEC-009 cerró el contrato pre-Blender y DEC-010
   lo enmendó antes de ejecutar. Constructor revisado solo con bpy simulado;
-  el runner MZ A–D está escrito pero sin revisión ni ejecución; falta la
-  traza independiente de readback, verificar runtime del empty padre y
+  el runner MZ A–D y el readback CPU están integrados pero sin ejecución;
+  falta revisión final de la integración, verificar runtime del empty padre y
   margen de RAM/autorización del usuario.
   No se permite Blender/GPU.
 
