@@ -12,6 +12,12 @@ estándar y CPU.
   `python -m unittest` desde esta carpeta (0,01 s).
 - `make_expected.py` → `expected_values.json`: valores esperados de T0-T6.
 
+- `geometry_oracle.py` (OPT-009): fase en frente de onda común en BS2, MZ
+  cuadrado frente a no rectangular (construye posiciones y normales), línea de
+  retardo y balance con categorías separadas (escape frente a pérdida
+  material). No importa el motor de Codex. Pruebas en
+  `test_geometry_oracle.py`; con `python -m unittest` se ejecutan las 26.
+
 La convención del divisor está en la cabecera de `mz_oracle.py`. Si `OPT-002`
 adopta otra, los puertos A y B pueden intercambiarse, pero la suma y la
 visibilidad no cambian. No es un resultado experimental ni simula fotones.

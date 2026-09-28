@@ -1,0 +1,29 @@
+{
+  "sequence": {
+    "type": "choice",
+    "instructions": "Choose the next lightweight CPU sequence after an independent nonrectangular two-path case succeeds with exact impact overlap, while a separate offset-impact phase bug remains.",
+    "criteria": [
+      "Add the nonrectangular case as a diagnostic regression now, also add a failing square-wavefront counterexample, then fix phase transport and overlap; keep DEC-006 Blender/promotion block until all pass.",
+      "Treat the successful nonrectangular CPU case as full validation and remove the Blender/promotion block immediately.",
+      "Discard the nonrectangular evidence and implement a larger delay-line motor before any regression."
+    ]
+  },
+  "first_geometry": {
+    "type": "choice",
+    "instructions": "Select the first candidate for a later confirmatory geometry-driven interference test, subject to phase fix and Blender scene validation.",
+    "criteria": [
+      "Use a seven-object nonrectangular MZ with exact coincident impacts, because it has a small independent CPU reference; keep a two-mirror delay line as later cross-check.",
+      "Use only an abstract material phase_shift and call it geometry-driven.",
+      "Require a nine-object delay line before documenting the already reproducible nonrectangular seven-object CPU case."
+    ]
+  },
+  "oracle_status": {
+    "type": "choice",
+    "instructions": "Decide whether OPT-009 should be accepted as an independent diagnostic reference or treated as physical validation.",
+    "criteria": [
+      "Accept OPT-009 as a provisional independent CPU diagnostic, preserving its plane-wave assumptions and Blender/GPU unverified status.",
+      "Declare OPT-009 proof of electromagnetic photonic computation in Blender.",
+      "Reject OPT-009 despite reproducible tests and no contradictory evidence."
+    ]
+  }
+}

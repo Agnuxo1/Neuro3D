@@ -1,0 +1,59 @@
+{
+  "task_id": "OPT-009",
+  "status": "completed",
+  "execution_note": "Entrega con análisis y cálculos EJECUTADOS en CPU ligera, sin Blender, GPU ni render. (a) Referencia propia Blender/oracle/geometry_oracle.py con sus pruebas test_geometry_oracle.py: 26/26 pruebas del oráculo en 0,012 s, sumando las 14 de OPT-006. No importa ni copia el motor de Codex. (b) Comprobaciones externas en D:/PROJECTS/.cognition/neuro3d/opt-009/ (nonrect_vs_engine.py, minimal_edit.py): llaman a la función pública trace_mz para contrastar predicciones, sin modificarla. No se tocaron mz_scene.py, su adaptador ni las pruebas de Codex.",
+  "summary": "1) La fase de dos ondas que llegan a puntos distintos de BS2 se compara en un punto común de la superficie: L_ref = L_hit + v·(P_ref − hit). El resultado no depende del punto de referencia elegido cuando la normal de BS2 es paralela a v2 − v1 (comprobado). 2) Contraejemplo para el motor actual: MZ cuadrado, λ = 0,02 BU, M2 desplazado 0,0070711 BU a lo largo de −n. La referencia predice el puerto A = 1 y B = 0 (ΔL = λ/2); el motor da B = 1 y A ≈ 0 porque calcula ΔL = λ. La separación entre impactos, 0,0141 BU, queda dentro de su tolerancia de 0,02. 3) El MZ no rectangular se puede verificar PRIMERO y con el motor ACTUAL: sus dos haces llegan al mismo punto de BS2, de modo que no les afecta el error de referencia. En un barrido de 7 puntos con β = 60° el motor coincide con la referencia (error máximo 6,1e-15), y la edición mínima (M1 + grupo del combinador, con M2 fijo) pasa de B = 1 a A = 1 con status ok, interference_valid = True y residuo 1,1e-16. La línea de retardo exige cambiar el motor (dos espejos más por brazo) y no se puede probar hoy. 4) El oráculo separa ya la potencia escapada de la pérdida material (mz_ledger con Arm(escaped=True)).",
+  "equations": [
+    "Supuestos: óptica escalar de ondas planas por rayo; unidades en BU, rad y potencia simulada Ps; k = 2π·f/v (rad/BU); sin difracción, curvatura del frente de onda ni polarización.",
+    "Transporte de fase a lo largo de la dirección de llegada v_k (unitaria): L_k,ref = L_k,hit + v_k·(P_ref − hit_k); φ_k,ref = φ_k,0 + k·L_k,ref.",
+    "Diferencia relativa: ΔL = L_2,ref − L_1,ref. Si hit_1, hit_2 y P_ref están en la superficie de BS2 y n_BS2 ∥ (v2 − v1), ΔL no depende de P_ref, porque (v2 − v1)·(hit_1 − hit_2) = 0. Es la condición de continuidad de fase en la superficie.",
+    "Espejo desplazado d a lo largo de su normal, con incidencia θ: ΔL_frente = 2d·cosθ; desplazamiento lateral del rayo s = 2d·sinθ; separación de impactos en un BS2 a 45°: s/cos45°. Con θ = 45°, comparar longitudes en los propios puntos de impacto da 2√2·d = 2·ΔL_frente.",
+    "MZ cuadrado (brazos a 0°/90°) con punto común P = (X, Y) desde BS1: L1 = L2 = X + Y, así que la fase geométrica con solape exacto es imposible.",
+    "MZ no rectangular: el brazo 1 sale por u1 = x̂ y vuelve por v1 = (cosβ, sinβ); el brazo 2 sale por u2 = ŷ y vuelve por v2 = (sinβ, cosβ). ΔL = L1 − L2 = (X − Y)(1 − tan(β/2)). Normal del espejo k: n_k ∝ u_k − v_k. Normal de BS2 ∥ (1, −1, 0).",
+    "Edición mínima: P se mueve a lo largo de v2 una distancia t y M2 queda fijo. d(ΔL)/dt = (sinβ − cosβ)(1 − tan(β/2)), que vale 0,154701 con β = 60°. Para ΔL = λ/2: t = λ/(2·0,154701).",
+    "Línea de retardo (par de espejos a 90° movido d): ΔL = 2d, sin desplazamiento lateral.",
+    "Balance por categorías (mz_ledger): P_in = P_A + P_B + absorbida + pérdida de espejo + escapada. Con coherencia efectiva g = γ·solape: P_A = a + b − 2g√(ab)cosΔφ y P_B = c + d + 2g√(cd)cosΔφ, con a = τ2·p1, b = (1−τ2)·p2, c = (1−τ2)·p1 y d = τ2·p2. El balance cierra exactamente para cualquier g. Convención de puertos: con fases iguales, toda la potencia sale por B."
+  ],
+  "counterexample": {
+    "scene": "Escena default_scene() de mz_scene.py (MZ cuadrado), source.frequency = 500 y speed = 10, es decir λ = 0,02 BU. Mirror2.position = (−n_x·d, 2 − n_y·d, 0) con n = unit(1, −1, 0) y d = λ/(2√2) = 0,0070710678 BU.",
+    "prediction_not_computed_by_engine": "Referencia (geometry_oracle.falsifiable_square_case): ΔL_frente = 0,01 BU = λ/2, Δφ = π, P_A = 1,0 y P_B = 0,0. La separación de impactos en BS2 es 0,01414 BU, dentro de overlap_tolerance = 0,02.",
+    "current_engine_output": "status ok, interference_valid True, A = 4,7e-26 y B = 1,0 (medido en OPT-008 con xcheck.py). El motor calcula ΔL = λ (2√2·d).",
+    "falsification_rule": "La corrección de OPT-002 pasa si este caso da A ≥ 1 − 1e-9 y B ≤ 1e-9 y, además, el caso con d = 0 sigue dando B = 1. Falla si da B ≈ 1 o si el resultado cambia al mover el punto de referencia sobre BS2."
+  },
+  "geometry_options": [
+    {
+      "option": "MZ no rectangular (β ≠ 90°), 7 objetos",
+      "verifiable_first": true,
+      "why": "No necesita cambios de código: los haces coinciden en BS2, así que el error de referencia no les afecta. Ya comprobado con el motor actual (nonrect_vs_engine.py): 7 puntos con β = 60° y λ = 1, error máximo 6,1e-15 frente a la referencia. En el punto ΔL = λ/2 (X = 3,183) el motor da A = 1 y B = 0.",
+      "minimal_scene_edit": "λ = 0,1 (f = 100, v = 10) y β = 60°. Desde P = (2, 2), mover P a lo largo de v2 una distancia t = 0,323205 BU. Resultado: M2 no se mueve, M1 se desplaza 0,186603 BU a lo largo de x̂, y BS2 y los dos detectores se desplazan (t·sinβ, t·cosβ). Con minimal_edit.py, la base da A = 5e-28 y B = 1; la escena movida da A = 1 y B = 4,5e-27, status ok, valid True, residuo 1,1e-16. En Blender conviene agrupar BS2 y los detectores bajo un empty padre; el adaptador ya lee matrix_world.",
+      "limits": "Exige mover dos cosas a la vez (M1 y el grupo del combinador). La palanca d(ΔL)/dt es menor que 1 (0,1547 con β = 60°). Hay un rango de P alcanzable: con β = 60° y Y = 2 exige X < 3,46. Construir la escena depende de las normales de espejo que genere NonRectMZ.scene()."
+    },
+    {
+      "option": "Línea de retardo de dos espejos (9 objetos)",
+      "verifiable_first": false,
+      "why": "Es la vía más limpia físicamente (ΔL = 2d exacto, sin desplazamiento lateral y válida para cualquier λ), pero el motor actual admite un solo espejo por brazo (MZScene tiene los campos mirror1 y mirror2), así que habría que generalizarlo a una lista de espejos. No es verificable hoy sin cambiar código.",
+      "minimal_scene_edit": "Mover d el par rígido de espejos a lo largo del eje del haz: ΔL = 2d.",
+      "limits": "Más objetos y más código. Queda como segunda fase o como control cruzado del MZ no rectangular."
+    },
+    {
+      "option": "Solape parcial con fase corregida y γ gaussiano",
+      "verifiable_first": false,
+      "why": "Requiere la corrección de la referencia de fase y una propiedad de anchura de haz. Es útil para la robustez frente al desalineamiento, no para la primera prueba confirmatoria.",
+      "minimal_scene_edit": "Desplazar un solo espejo; γ = exp(−s²/(2w²)).",
+      "limits": "Modelo 1D escalar; sin curvatura del frente de onda."
+    }
+  ],
+  "oracle_changes": [
+    "Nuevo Blender/oracle/geometry_oracle.py: wavefront_length y wavefront_delta, square_single_mirror, naive_hit_delta (solo diagnóstico), combiner_hit_separation, manhattan_equal_arms, NonRectMZ (construye posiciones y normales), delay_line, Arm y mz_ledger (categorías separadas) y falsifiable_square_case.",
+    "Nuevo Blender/oracle/test_geometry_oracle.py con 12 pruebas: dependencia del punto de referencia, cuadrado igual a Manhattan, ΔL no rectangular, espejos que envían los rayos a P, brazo roto contado como escapado y no como pérdida, categorías con pérdidas, conservación con solape parcial y caso falsable.",
+    "mz_oracle.py no cambia; mz_ledger reproduce mz_closed_form sin pérdidas hasta 1e-12."
+  ],
+  "unknowns": [
+    "Blender no se ejecutó: el MZ no rectangular construido por el adaptador (normales vía to_track_quat y float32) no está comprobado; puede tropezar con direction_tolerance = 1e-6 (ver OPT-008).",
+    "El motor corregido aún no existe: el contraejemplo es una predicción sobre la corrección futura.",
+    "La referencia de ondas planas ignora la curvatura del frente de onda y el tamaño finito del haz; para solapes parciales hace falta la anchura del haz como propiedad de escena.",
+    "No se evaluó la línea de retardo con un motor generalizado; su ventaja es solo analítica.",
+    "Elegir λ (f/v) para la prueba confirmatoria sigue abierto: con λ = 1, la edición mínima necesitaría t = 3,23 BU; con λ = 0,1, t = 0,32 BU."
+  ],
+  "next_gate": "Propuesta para Codex/JEV: (1) añadir ya a la suite de Codex la prueba del MZ no rectangular (dos escenas de minimal_edit.py, B = 1 frente a A = 1), que pasa con el motor actual y convierte en verificable la fase gobernada por geometría; (2) corregir la referencia de fase y añadir el contraejemplo cuadrado como regresión con A ≈ 1; (3) confirmar que el contraejemplo no depende del punto de referencia; (4) solo después cerrar EXP-001 con el MZ no rectangular como control geométrico y el desfase del espejo como control de material, y preparar OPT-003 en Blender CPU midiendo la tolerancia de dirección real. EXP-001 no queda cerrada ni OPT-003 autorizada por esta entrega."
+}

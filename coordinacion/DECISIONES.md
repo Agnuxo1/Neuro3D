@@ -97,3 +97,23 @@
 - **Alcance:** las pruebas previas de fase por propiedad y balance en escenas
   ideales siguen siendo diagnósticas, no prueban la geometría a fase. Las
   observaciones de Blender en OPT-008 son inferencias aún sin ejecución.
+
+## DEC-007 · 2026-09-28 · Regresión no rectangular antes de corregir fase
+
+- **Evidencia:** Claude entregó `respuestas/OPT-009.json` y un oráculo
+  geométrico separado. Codex ejecutó sus 26 pruebas CPU (0,010 s) y reprodujo
+  `minimal_edit.py`: un MZ no rectangular de siete objetos cambia de B=1 a
+  A=1 al mover M1 y el grupo combinador/detectores, manteniendo los impactos
+  coincidentes; residuo 1,1e-16. Un barrido de siete posiciones coincidió con
+  el oráculo dentro de 6,11e-15. No se ejecutó Blender.
+- **JEV:** consulta v2 con `exit_code=0`, `status=connected` y
+  `provenance=jev`; recibo `jev/opt-009-review-20260928-result.json`.
+- **Decisión:** añadir este caso como regresión diagnóstica CPU, junto con el
+  contraejemplo cuadrado que debe fallar hasta corregir la referencia de fase.
+  Después corregir fase y solape. El MZ no rectangular es el primer candidato
+  para una futura prueba confirmatoria de geometría; la línea de retardo queda
+  como control cruzado posterior. OPT-009 es referencia provisional de ondas
+  planas, no validación de Blender ni de física electromagnética completa.
+- **Gate inalterado:** DEC-006 sigue bloqueando promoción y prueba MZ en
+  Blender hasta que los dos controles pasen, el contrato esté cerrado y haya
+  margen de recursos. Codex implementa y verifica el motor.

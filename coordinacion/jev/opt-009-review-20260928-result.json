@@ -1,0 +1,20 @@
+{
+  "status": "connected",
+  "provenance": "jev",
+  "exit_code": 0,
+  "model": "jev-1.13.0",
+  "decisions": {
+    "sequence": {
+      "value": "Add the nonrectangular case as a diagnostic CPU regression now, add the failing square common-wavefront counterexample, then fix phase transport and overlap; keep DEC-006 promotion/Blender block.",
+      "confidence": 1.0
+    },
+    "first_geometry": {
+      "value": "Use seven-object nonrectangular MZ with coincident impacts as first later confirmatory geometry candidate; two-mirror delay line remains a cross-check.",
+      "confidence": 0.99
+    },
+    "oracle_status": {
+      "value": "OPT-009 is a provisional independent CPU diagnostic, not proof of Blender or electromagnetic computation.",
+      "confidence": 1.0
+    }
+  }
+}

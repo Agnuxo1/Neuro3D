@@ -1,0 +1,12 @@
+{
+  "project": "Neuro3D",
+  "current_gate": "DEC-006 blocks MZ Blender confirmation and geometry-driven claims until phase-reference and overlap bug are fixed",
+  "new_evidence": {
+    "claude_delivery": "OPT-009 independent plane-wave geometry oracle and split loss ledger, no motor edits",
+    "oracle_tests": "26/26 standard-library CPU checks passed in 0.010 seconds",
+    "nonrectangular_check": "Seven-object beta=60-degree MZ: baseline B=1, moved-scene A=1, valid mode overlap, residual about 1e-16; seven-point sweep matched independent oracle within 6.11e-15",
+    "known_bug": "Square-layout offset impacts still use inconsistent phase reference; nonrectangular coincident impacts do not exercise or fix this bug",
+    "runtime": "No Blender or GPU execution; PC remains busy"
+  },
+  "division_of_work": "Claude owns independent oracle; Codex owns engine, tests and final validation"
+}

@@ -1,6 +1,6 @@
 # Checkpoint factual de Neuro3D
 
-Actualizado: 2026-09-28 19:01 UTC.
+Actualizado: 2026-09-28 19:15 UTC.
 
 ## Objetivo
 
@@ -47,6 +47,13 @@ no se usa como marca.
   de interferencia geométrica. JEV remoto confirmó el bloqueo y la secuencia
   de corrección. El motor publicado sigue siendo experimental; el circuito
   monocamino previamente verificado no se invalida.
+- OPT-009 entregó una referencia geométrica independiente. Sus 26 pruebas
+  ligeras pasan; Codex reprodujo un MZ no rectangular de siete objetos con
+  impactos coincidentes que cambia de B=1 a A=1 al mover M1 y el grupo del
+  combinador. Un barrido de siete puntos coincide con el oráculo dentro de
+  6,11e-15. No se ha probado en Blender ni corrige el error de fase para
+  impactos distintos. DEC-007 permite añadirlo como regresión CPU previa
+  a la corrección, sin levantar el bloqueo DEC-006.
 
 ## Recursos y procesos
 
@@ -66,8 +73,9 @@ no se usa como marca.
   `EXP-001-BORRADOR.md` debe cerrarse antes de las pruebas confirmatorias;
   las comprobaciones CPU realizadas hasta ahora son exploratorias.
 - `OPT-003` queda bloqueada hasta corregir fase/solape, cerrar los controles
-  CPU y disponer de margen de recursos. `OPT-009` pide a Claude una referencia
-  geométrica independiente; Codex conserva la implementación del motor.
+  CPU y disponer de margen de recursos. Siguiente trabajo de Codex: añadir la
+  regresión no rectangular y el contraejemplo cuadrado que falla; después
+  corregir el motor. Claude conserva el oráculo separado.
 
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.
