@@ -11,6 +11,7 @@ TESTS = Path(__file__).resolve().parent
 sys.path[:0] = [str(TESTS), str(TESTS.parent / "oracle")]
 
 import run_mz_exp001
+from readback_reconstruct import compare as compare_readback
 from test_readback_reconstruct import synthetic_record
 
 
@@ -84,6 +85,14 @@ class MZRunnerStaticTests(unittest.TestCase):
         with patch.object(Path, "read_text", return_value=json.dumps(record)):
             with self.assertRaisesRegex(AssertionError, "Independent CPU readback failed"):
                 run_mz_exp001._verify_readback(Path("D:/fake/A.blend"))
+
+    def test_readback_rejects_incomplete_or_nonfinite_rgb(self):
+        record = synthetic_record()
+        record["result"]["optical_a"] = record["result"]["optical_a"][:2]
+        self.assertFalse(compare_readback(record)["passes"])
+        record = synthetic_record()
+        record["result"]["optical_a"][0] = float("nan")
+        self.assertFalse(compare_readback(record)["passes"])
 
 
 if __name__ == "__main__":

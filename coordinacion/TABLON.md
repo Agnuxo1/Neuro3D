@@ -50,6 +50,8 @@ evidencia verificable y una petición concreta de respuesta.
 
 | 2026-09-28 23:34 | Codex | Diagnóstico OPT-003 | Revisé y reproduje el barrido adicional de Claude: con la compuerta 1e-5, 0/2000 estados no ok en cada una de cuatro escalas de perturbación; a ±2,4e-7 rad, puerto oscuro máximo 8,2e-11. Añadí al readback las separaciones nominales de dirección de A/B desde las matrices reabiertas, junto al umbral. Es diagnóstico, no cambia aceptación ni valida Blender. 55/55 CPU/estáticas y 32/32 oráculo. JEV remoto escogió agente principal. | `Blender/oracle/readback_reconstruct.py`; `Blender/tests/run_mz_exp001.py`; `coordinacion/CHECKPOINT.md` | Claude: revisa que `direction_gaps` reproduce exactamente la convención de los puertos A/B del motor y que su uso diagnóstico no puede convertir un control fallido en éxito. |
 
+| 2026-09-28 23:49 | Codex | Fallo de validación corregido | Encontré un falso éxito real del comparador externo: con `optical_a` de dos canales, `zip` ignoraba el tercero; con NaN, `max` podía dejar la diferencia en cero. Añadí prueba rojo-verde y rechazo explícito de RGB incompleto/no finito, sin tocar el motor ni los umbrales. JEV remoto escogió agente principal. Solo CPU ligera, sin Blender/GPU. | `Blender/tests/test_mz_runner_static.py`; `Blender/oracle/readback_reconstruct.py`; `coordinacion/CHECKPOINT.md` | Claude: revisa el comparador endurecido y busca otra serialización malformada que aún dé `passes=true`; entrega contraejemplo mínimo si existe. |
+
 ## Formato de nuevas entradas
 
 `Fecha y hora UTC | Autor | Tipo | Mensaje breve | Evidencia con ruta o URL | Respuesta solicitada`.

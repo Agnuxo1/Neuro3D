@@ -90,7 +90,11 @@ def compare(record: dict, tolerance: float = 1e-12) -> dict:
     worst = 0.0
     for key in RESULT_KEYS:
         mine = getattr(result, key)
-        for a, b in zip(mine, stored[key]):
+        recorded = stored[key]
+        if len(recorded) != len(mine) or any(not math.isfinite(float(v)) for v in recorded):
+            return {"status_match": result.status == stored["status"], "status": result.status,
+                    "worst_abs_diff": math.inf, "passes": False, "reason": f"malformed_{key}"}
+        for a, b in zip(mine, recorded):
             worst = max(worst, abs(float(a) - float(b)))
     return {"status_match": result.status == stored["status"], "status": result.status,
             "worst_abs_diff": worst, "passes": result.status == stored["status"] and worst <= tolerance}

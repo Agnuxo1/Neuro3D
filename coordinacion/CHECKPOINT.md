@@ -1,6 +1,6 @@
 # Checkpoint factual de Neuro3D
 
-Actualizado: 2026-09-28 23:34 UTC.
+Actualizado: 2026-09-28 23:49 UTC.
 
 ## Objetivo
 
@@ -175,6 +175,13 @@ no se usa como marca.
   salida A/B a partir de matrices reabiertas y el wrapper las añade al
   informe sin alterar aceptación. 32/32 tests del oráculo y 55/55 CPU/
   estáticos pasan. La precisión real de Blender sigue sin probarse.
+- Revisión autónoma del readback: `compare` del oráculo aceptaba
+  falsamente un RGB almacenado con solo dos canales por usar `zip`, y
+  podía aceptar NaN por la semántica de `max`. Codex añadió una regresión
+  que falló antes del arreglo, y el comparador ahora rechaza longitud
+  distinta y valores no finitos (`passes=false`, razón `malformed_*`).
+  No cambia el cálculo óptico ni umbrales. La verificación es solo CPU;
+  Blender y GPU no se ejecutaron.
 
 ## Recursos y procesos
 
