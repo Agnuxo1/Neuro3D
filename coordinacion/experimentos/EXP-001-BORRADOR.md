@@ -1,9 +1,11 @@
 # EXP-001 · Borrador de contrato para interferencia de dos caminos
 
-Estado: **BORRADOR, NO EJECUTABLE**. JEV autorizó redactar el contrato mientras
-Claude audita el modelo; no se fijan aún las ecuaciones de combinación ni los
-umbrales numéricos. Antes de ejecutar habrá que convertir este borrador en una
-preinscripción cerrada, con revisión de Claude y decisión de JEV.
+Estado: **BORRADOR, NO PREINSCRITO**. Claude entregó OPT-001 y JEV confirmó
+en DEC-005 un Mach–Zehnder de dos puertos, pero aún faltan controles y umbrales
+cerrados. Las pruebas CPU ya realizadas con el prototipo son exploratorias,
+no confirmatorias. Antes de ejecutar la prueba real Blender habrá que cerrar
+una preinscripción, conservar los resultados previos y no retocar umbrales
+después de ver la medición.
 
 ## Pregunta e hipótesis
 
@@ -34,16 +36,17 @@ un camino debe reducir el circuito al control de un solo camino.
 - Datos: escena sintética mínima guardada en `.blend`, sin dataset externo.
 - Control A: dos caminos coherentes, fase relativa inicial.
 - Control B: misma escena y potencia, solo fase relativa desplazada medio ciclo.
-- Control C: dos caminos marcados incoherentes; variar fase relativa no debe
-  modificar la potencia total dentro de tolerancia.
+- Control C: una condición de incoherencia justificada por propiedades de
+  fuente/detector; variar fase relativa no debe modificar la potencia total
+  dentro de tolerancia. El prototipo actual aún no implementa este caso.
 - Control D: bloquear uno de los dos caminos moviendo o girando un reflector;
   debe coincidir con el control monorrayo comparable.
 - Métrica primaria propuesta: potencia RGB total detectada por el receptor,
   registrada junto a potencia por canal y fase. Registrar también activación,
   potencia de entrada y balance de todas las salidas modeladas.
-- Métrica de seguridad: ninguna salida NaN/Inf; potencia de salida total no
-  superior a la potencia disponible tras pérdidas, según una contabilidad
-  explícita aprobada antes de ejecutar.
+- Métrica de seguridad: ninguna salida NaN/Inf; los dos puertos, absorción,
+  pérdidas de espejo, potencia escapada y potencia no resuelta deben cerrar
+  el balance por canal. La potencia no resuelta impide promocionar el caso.
 
 ## Presupuesto y parada
 

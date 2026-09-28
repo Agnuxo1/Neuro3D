@@ -57,3 +57,20 @@ una futura prueba de compute shader. Antes de habilitarlo habrá que validar:
 5. estabilidad y coste en la GPU objetivo.
 
 Consulta el plan completo en `../Docs/BLENDER_TEST_PLAN.md`.
+
+## Prototipo experimental de dos caminos (solo CPU)
+
+`core/mz_scene.py` calcula un Mach–Zehnder de siete objetos geométricos con
+dos detectores, campos escalares complejos y balance de potencia RGB. Los
+canales RGB son etiquetas de potencia con una frecuencia simulada común; aún
+no representan tres longitudes de onda físicas. Si los dos rayos no llegan
+solapados al combinador, el motor marca la potencia como no resuelta y **no**
+afirma que hubo interferencia.
+
+`addon/neuro3d/mz_scene_adapter.py` prepara la creación y lectura de esos
+objetos en Blender, pero todavía no se ha ejecutado allí ni se ofrece en el
+panel. El circuito estable de tres objetos permanece intacto. Las pruebas
+ligeras del nuevo núcleo se ejecutan con
+`python -m unittest discover -s Blender/tests -p 'test_*.py' -q` desde la raíz;
+no arrancan Blender ni la GPU. El contrato experimental sigue en
+`../coordinacion/experimentos/EXP-001-BORRADOR.md`.

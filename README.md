@@ -74,6 +74,13 @@ guardó y se reabrió con el mismo estado. Consulta el
 visual se conserva aparte. El shader experimental está en
 `Blender/shaders/nebula_photonic_compute.glsl`.
 
+Existe además un **prototipo experimental CPU de dos caminos** con dos salidas,
+campos complejos y balance de potencia por canal. Sus pruebas CPU pasan, pero
+el adaptador de siete objetos todavía no se ha ejecutado dentro de Blender;
+no sustituye al circuito de tres objetos ya verificado ni demuestra todavía
+interferencia controlada por geometría. Detalles y límites en
+[`Blender/README.md`](Blender/README.md).
+
 ## Versión Unreal Engine
 
 El plugin está en `Plugins/SantoGrialPhotonic`. Implementa una primera rebanada
@@ -100,7 +107,7 @@ credenciales— permanecen fuera del release mediante `.gitignore`.
 | Compuerta | Estado |
 |---|---|
 | Oracle CPU y checksums | Validado |
-| Pruebas CPU del circuito óptico | 18/18 pruebas unitarias y estáticas |
+| Pruebas CPU y estáticas Blender | 28/28; incluye 10 del prototipo MZ, sin prueba Blender del MZ |
 | Circuito guardado/reabierto en Blender | Verificado en 4.5.14 LTS, background CPU |
 | Panel interactivo del addon | Pendiente de comprobación visual |
 | Contrato estático addon/shader | Verificado sin Blender |

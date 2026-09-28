@@ -1,0 +1,12 @@
+{
+  "project": "Neuro3D",
+  "goal": "scene-driven optical neural computation in Blender, not decorative rendering",
+  "evidence": {
+    "baseline": "one reflected path in Blender CPU passed create/save/reopen and parameter perturbations; multi-path not implemented",
+    "claude_review": "OPT-001 delivered 15 findings and a proposed two-port Mach-Zehnder with coherent complex amplitudes, per-channel power and energy ledger",
+    "local_check": "JSON required fields valid, cited single-path code inspected; independent oracle self-tests 14/14 CPU in 0.009 seconds",
+    "limits": "oracle is untracked and has not been compared against a scene-driven MZ engine; geometry and overlap claims remain provisional"
+  },
+  "constraints": "GPU occupied; no GPU/render/Blender/heavy CPU now; CPU-light deterministic design and code checks allowed",
+  "coordination": "Codex owns decisions and implementation; Claude contributes review and a separate oracle; avoid duplicate work"
+}

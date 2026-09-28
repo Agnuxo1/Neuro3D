@@ -1,0 +1,38 @@
+{
+  "first_architecture": {
+    "type": "choice",
+    "instructions": "Choose the first falsifiable multi-path scene architecture balancing optical coherence, energy conservation and the user's scene-driven objective. State why in a short answer.",
+    "criteria": [
+      "Two-port Mach-Zehnder with explicit scene objects for splitters, mirrors and detectors; complex fields and full energy ledger before larger networks.",
+      "Two coherent paths summed only at one point detector, with no second output port and no whole-system energy ledger.",
+      "Skip multi-path and directly build a large optical mesh without a small falsifiable unit."
+    ]
+  },
+  "spectral_scope": {
+    "type": "choice",
+    "instructions": "Choose the first transparent RGB/frequency representation for a bounded CPU prototype, without claiming unmodeled physical color behavior.",
+    "criteria": [
+      "Treat RGB as independent power channels sharing one simulation frequency initially; document that RGB is not yet three physical wavelengths, and extend later with per-channel frequencies and detector integration.",
+      "Claim RGB are physical optical wavelengths while using one common frequency and phase for all three channels.",
+      "Implement full continuous-spectrum wave optics before the first two-path test."
+    ]
+  },
+  "geometry_gate": {
+    "type": "choice",
+    "instructions": "Choose the minimum experiment gate to show that scene geometry, not only a phase knob, controls interference, while avoiding false validation from non-overlapping beams.",
+    "criteria": [
+      "Require two separate tests: phase-shift control and a geometrically varied path with verified recombination/overlap and energy ledger; defer a geometry claim if overlap cannot be verified.",
+      "Use only an abstract phase_shift property and call it geometry-driven interference.",
+      "Translate one mirror by a nominal distance and assume interference without checking where the ray reaches the combiner."
+    ]
+  },
+  "oracle_role": {
+    "type": "choice",
+    "instructions": "Decide how to treat Claude's untracked CPU oracle whose 14 self-tests passed but has not been compared to a scene-driven engine.",
+    "criteria": [
+      "Keep as provisional independent reference; review equations and assumptions, then compare against independently implemented scene-driven engine and tests before accepting.",
+      "Treat 14 self-tests alone as proof that the Neuro3D optical engine works.",
+      "Discard the oracle without review."
+    ]
+  }
+}

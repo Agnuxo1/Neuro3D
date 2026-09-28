@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "required": ["task_id", "status", "summary", "findings", "unverified", "next_gate"],
+  "properties": {
+    "task_id": {"const": "OPT-008"},
+    "status": {"enum": ["completed", "partial", "blocked"]},
+    "summary": {"type": "string"},
+    "findings": {"type": "array", "items": {"type": "object", "required": ["severity", "claim", "evidence", "minimal_example", "recommendation"], "properties": {"severity": {"enum": ["critical", "high", "medium", "low"]}, "claim": {"type": "string"}, "evidence": {"type": "string"}, "minimal_example": {"type": "string"}, "recommendation": {"type": "string"}}}},
+    "unverified": {"type": "array", "items": {"type": "string"}},
+    "next_gate": {"type": "string"}
+  }
+}

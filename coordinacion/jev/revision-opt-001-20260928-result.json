@@ -1,0 +1,24 @@
+{
+  "status": "connected",
+  "provenance": "jev",
+  "exit_code": 0,
+  "model": "jev-1.13.0",
+  "decisions": {
+    "first_architecture": {
+      "value": "Two-port Mach-Zehnder with explicit scene objects, complex fields and full energy ledger before larger networks.",
+      "confidence": 1.0
+    },
+    "spectral_scope": {
+      "value": "RGB are independent labelled power channels at a common simulation frequency initially, not physical wavelengths.",
+      "confidence": 1.0
+    },
+    "geometry_gate": {
+      "value": "Separate phase-shift and geometry-controlled tests; verify recombination and overlap before claiming geometry-driven interference.",
+      "confidence": 1.0
+    },
+    "oracle_role": {
+      "value": "Provisional independent reference; review and compare against a separate scene-driven engine before accepting.",
+      "confidence": 1.0
+    }
+  }
+}

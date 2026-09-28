@@ -22,5 +22,29 @@
 
 ## Próximo experimento
 
-No se inicia hasta registrar hipótesis, control monorrayo, variable principal,
-métrica, presupuesto, parada y criterio de promoción para `OPT-002/003`.
+La prueba confirmatoria Blender no se inicia hasta registrar hipótesis,
+control monorrayo, variable principal, métrica, presupuesto, parada y criterio
+de promoción para `OPT-002/003`. Las comprobaciones CPU posteriores se
+etiquetan exploratorias, como se indica abajo.
+
+## OPT-002 · Comprobaciones exploratorias CPU · 2026-09-28
+
+- **Hipótesis provisional:** un circuito de dos puertos con campos complejos
+  redistribuye la potencia sin crearla y distingue fase relativa de potencia.
+- **Cambio respecto de EXP-000:** siete objetos y dos caminos; no se ha
+  sustituido ni modificado el circuito monocamino verificado en Blender.
+- **Datos:** escena sintética `default_scene()` del nuevo motor CPU; ningún
+  archivo `.blend` nuevo se creó ni se abrió Blender.
+- **Controles:** fase 0 y π, divisor asimétrico, reflectancia/absorción,
+  camino roto, receptividad y solape fallido. Entradas extremas finitas
+  provocan resultado finito o rechazo explícito.
+- **Resultado:** 28/28 pruebas CPU/estáticas en 0,026 s, incluidas 10 nuevas;
+  144 comparaciones con el oráculo separado de Claude, error máximo 4,72e-15.
+  Estas coincidencias comparten supuestos y no validan física real.
+- **Balance:** residuo por canal <1e-12 en los casos ensayados. La potencia
+  que llega sin solape queda `unresolved` y bloquea la afirmación de
+  interferencia; no se presenta como pérdida material.
+- **Límite y decisión:** el adaptador Blender solo se importó, no se ejecutó;
+  el control incoherente y una variación geométrica con recombinación válida
+  siguen pendientes. Mantener EXP-001 como borrador y pedir OPT-008 a Claude.
+- **Reproducción:** `python -m unittest discover -s Blender/tests -p 'test_*.py' -q`.

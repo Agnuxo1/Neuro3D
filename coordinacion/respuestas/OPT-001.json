@@ -1,0 +1,107 @@
+{
+  "task_id": "OPT-001",
+  "status": "completed",
+  "summary": "Auditoría de solo lectura sobre el commit 81eade39b8e90c46776a4d0e8ebf4e8e5144667a. El núcleo actual transporta potencia RGB real y una única fase escalar compartida por los tres canales. Por tanto no puede representar interferencia sin cambios, y una suma de amplitudes en un único receptor puntual puede aparentar creación de energía: dos caminos 50/50 coherentes en fase dan |√0,5+√0,5|² = 2 veces la potencia inyectada. Propuesta: campo complejo por camino y canal, E = √P·e^{iφ}; suma coherente solo dentro de un grupo de coherencia explícito derivado de la escena; responsividad aplicada después de |ΣE|²; y, como primer ensayo, un interferómetro Mach-Zehnder con divisor y combinador unitarios y DOS receptores, de modo que la conservación P_D1 + P_D2 + pérdidas = P_in sea comprobable. Con los valores por defecto (f = 1, v = 10) la longitud de onda simulada es λ = v/f = 10 unidades Blender, mayor que toda la escena, así que la geometría apenas modula la fase: hay que fijar f/v antes de cerrar EXP-001. La línea base monocamino (0,7053474966 / 0,3657724623; fase 2,6376104167 rad) se reconstruyó a mano a partir de las ecuaciones, sin ejecutar Blender ni el código del repositorio. Nada de esto es un resultado experimental.",
+  "findings": [
+    {
+      "type": "fact",
+      "claim": "La salida por camino es potencia real por canal; no existe amplitud compleja. P_c = I·(color_c/Σcolor)·R_c·r_c·exp(-αL). La responsividad del detector r_c se multiplica dentro de la potencia de cada canal antes de sumar.",
+      "evidence": "Blender/core/scene_optics.py:151-158; Docs/BLENDER_ARCHITECTURE.md:21"
+    },
+    {
+      "type": "fact",
+      "claim": "Hay una sola fase y una sola frecuencia para los tres canales RGB: φ = φ_emisor + δ_reflector + 2π f L / v, reducida a [-π, π]. Los canales R, G y B comparten fase aunque, si representaran longitudes de onda, deberían tener frecuencias y fases distintas.",
+      "evidence": "Blender/core/scene_optics.py:83, 160-164; Docs/BLENDER_ARCHITECTURE.md:26"
+    },
+    {
+      "type": "fact",
+      "claim": "phase_shift está en radianes. La reconstrucción de la escena por defecto da L = 2 + 1,8 = 3,8 BU, T = exp(-0,05·3,8) = 0,8269591339, P = 0,7053474966, a = 0,3657724623 y φ = 0,25 + 2π·3,8/10 = 2,6376104167 rad. Coincide con el informe, que no lista la fase. Es aritmética manual (python -c), no una ejecución del código ni de Blender.",
+      "evidence": "Blender/addon/neuro3d/optical_scene.py:34-66; Blender/core/scene_optics.py:150-164; Docs/BLENDER_RUNTIME_REPORT.md:18-19"
+    },
+    {
+      "type": "inference",
+      "claim": "Con f = 1 ciclo/s simulado y v = 10 BU/s (valores por defecto), λ = v/f = 10 BU. Una cancelación destructiva por geometría exige ΔL = λ/2 = 5 BU, más que el tamaño del circuito (~4 BU). En la práctica, la fase relativa solo la controlaría la propiedad phase_shift, y la afirmación de que 'la geometría gobierna la interferencia' quedaría débil.",
+      "evidence": "Blender/core/scene_optics.py:97, 162; Blender/addon/neuro3d/optical_scene.py:39"
+    },
+    {
+      "type": "inference",
+      "claim": "Riesgo de energía aparente en EXP-001: con dos caminos coherentes sobre UN receptor puntual, P = P1 + P2 + 2√(P1P2)cosΔφ puede llegar a 2(P1 + P2), es decir, 2·P_in con división 50/50. No es una violación física: en un sistema real la energía se redistribuye en franjas o hacia otro puerto. Pero la métrica de seguridad 'potencia de salida no superior a la disponible' fallaría o sería ambigua si solo se contabiliza ese receptor.",
+      "evidence": "coordinacion/experimentos/EXP-001-BORRADOR.md:14-17, 41-46; comprobación aritmética |√0,5+√0,5|² = 2,0"
+    },
+    {
+      "type": "inference",
+      "claim": "El control incoherente C, tal como está redactado ('marcados incoherentes'), es casi tautológico: solo prueba que una rama if suma potencias. La incoherencia debería derivarse de propiedades de escena (emisores distintos, frecuencias con |Δf|·T_int ≫ 1 o γ = 0 declarado en el emisor), y probarse con un barrido de fase.",
+      "evidence": "coordinacion/experimentos/EXP-001-BORRADOR.md:38-39"
+    },
+    {
+      "type": "fact",
+      "claim": "El disco reflector refleja por ambas caras: solo se rechaza |d·n| ≈ 0 y no se comprueba el signo de d·n. Esto es ambiguo para espejos de una cara y para divisores con cara frontal y trasera.",
+      "evidence": "Blender/core/scene_optics.py:126-131, 137"
+    },
+    {
+      "type": "fact",
+      "claim": "No hay oclusión: otros objetos, incluido el receptor, no bloquean el tramo incidente. Un 'camino roto' solo puede producirse fallando una apertura, no interponiendo un objeto.",
+      "evidence": "Blender/core/scene_optics.py:100-106 (docstring), 124-148"
+    },
+    {
+      "type": "fact",
+      "claim": "Los radios del reflector y del receptor salen de propiedades personalizadas; la escala del objeto se ignora porque _world_point usa solo translation y _world_z solo la rotación. Escalar un objeto en el visor cambia su tamaño visible pero no su apertura de cómputo.",
+      "evidence": "Blender/addon/neuro3d/optical_scene.py:80-87, 109, 113"
+    },
+    {
+      "type": "fact",
+      "claim": "El modelo es un rayo puntual con impacto binario: la potencia no depende del tamaño de las aperturas, de 1/r² ni de dónde impacte dentro de la esfera. La salida es constante a trozos respecto a la geometría y su gradiente es nulo casi en todas partes, lo que importa si más adelante se entrenan parámetros de escena.",
+      "evidence": "Blender/core/scene_optics.py:134-158"
+    },
+    {
+      "type": "fact",
+      "claim": "El circuito exige exactamente un objeto por rol, así que el esquema actual no admite dos reflectores, un divisor ni dos receptores sin cambiarlo.",
+      "evidence": "Blender/addon/neuro3d/optical_scene.py:73-77, 98-100"
+    },
+    {
+      "type": "fact",
+      "claim": "energy = power, con una integración implícita de 1 s simulado; intensity y energy son el mismo número con nombres distintos. Además, intensity es potencia DETECTADA, ya ponderada por r_c, no potencia óptica: no sirve directamente para un balance de conservación.",
+      "evidence": "Blender/core/scene_optics.py:153-158, 165; Blender/addon/neuro3d/optical_scene.py:121-125"
+    },
+    {
+      "type": "inference",
+      "claim": "Ambigüedad de unidades: α actúa sobre la potencia (exp(-αL)). Al pasar a amplitudes, el factor de amplitud debe ser exp(-αL/2) y el de reflectancia √R_c. Si se reutiliza exp(-αL) sobre la amplitud, la atenuación se duplica sin que ninguna prueba monocamino lo detecte, salvo una prueba de paridad explícita.",
+      "evidence": "Blender/core/scene_optics.py:151-155; Docs/BLENDER_ARCHITECTURE.md:21, 29"
+    },
+    {
+      "type": "proposal",
+      "claim": "Primer ensayo con un Mach-Zehnder de dos puertos de salida en lugar de dos caminos hacia un único receptor. Emisor, divisor BS1, espejos M1 y M2, combinador BS2 y receptores D1 y D2. BS1 y BS2 serían objetos de escena con un rol nuevo ('splitter') y una matriz unitaria declarada. Así la conservación es exacta y falsable: D1 + D2 = P_in·(pérdidas).",
+      "evidence": "Diseño propuesto; convención estándar de divisor sin pérdidas (1/√2)[[1, i],[i, 1]]; ver proposed_model"
+    },
+    {
+      "type": "proposal",
+      "claim": "Fijar f/v de modo que λ ≈ 0,5-1 BU (por ejemplo f = 10, v = 10, λ = 1 BU) e incluir un caso destructivo producido SOLO por la geometría: desplazar M2 a lo largo de su normal una distancia d, con ΔL = 2d·cosθ_i = λ/2. Para θ_i = 45° y λ = 1 BU, d = λ/(4cos45°) ≈ 0,3536 BU. Otro caso separado usaría phase_shift.",
+      "evidence": "Blender/core/scene_optics.py:162; geometría de reflexión especular"
+    }
+  ],
+  "proposed_model": "SUPUESTOS: óptica escalar de rayos; sin polarización, difracción ni superposición espacial de haces; tiempo simulado; unidades Blender (BU). La potencia está en unidades arbitrarias de potencia simulada (Ps); no son fotones ni vatios físicos.\n\n1) Representación. Para cada camino k y cada canal c ∈ {R, G, B}: E_{k,c} = A_{k,c}·exp(i·φ_{k,c}), con A en √Ps y φ en rad. A_{k,c} = √(P_in·w_c)·Π_j t_{j,k}·Π_m √R_{m,c}·exp(-α·L_k/2), donde w_c = color_c/Σcolor, t_{j,k} es el coeficiente complejo de amplitud de cada divisor atravesado y R_{m,c} la reflectancia en potencia de cada espejo. φ_{k,c} = φ_emisor + Σ_m δ_m + Σ_j arg(t_{j,k}) + 2π·f_c·L_k/v. Cada canal necesita su frecuencia f_c: o se guardan tres frecuencias en el emisor, o se declara que RGB son etiquetas de canal sin significado espectral y comparten f. Esa decisión queda abierta.\n\n2) Coherencia. Clave de grupo g = (id_fuente_coherente, c, f_c, γ). Dos contribuciones solo se suman como amplitudes si comparten g. Detección en el puerto D, por canal: I_{D,c} = Σ_g |Σ_{k∈g} E_{k,c}|². Entre grupos distintos se suman potencias. Coherencia parcial entre dos caminos: I = P1 + P2 + 2γ√(P1P2)·cosΔφ, con γ ∈ [0, 1]; γ = 1 coherente y γ = 0 incoherente. Las fases aleatorias NO se muestrean, para conservar el determinismo: se usa su valor esperado, E[cosΔφ] = 0, es decir γ = 0. Frecuencias distintas: el término cruzado promediado sobre la ventana de integración T_int del detector vale sinc(π·Δf·T_int)·cos(...). Si |Δf|·T_int ≫ 1 se trata como incoherente; si |Δf|·T_int ≲ 1 hay batido temporal, fuera de alcance: marcar el caso y rechazarlo, sin aproximarlo. Extensión opcional: γ = exp(-|ΔL|/ℓ_c), con una longitud de coherencia ℓ_c como propiedad del emisor.\n\n3) Detector. Señal S_D = Σ_c r_c·I_{D,c}, con la responsividad aplicada DESPUÉS de |ΣE|², nunca dentro de la amplitud. La activación se mantiene: a = 1 - exp(-g·max(0, S_D - θ)). Registrar por separado la potencia óptica I_D, sin r_c, para el balance.\n\n4) Energía. Divisor sin pérdidas: matriz 2×2 unitaria, por ejemplo U = (1/√2)[[1, i],[i, 1]] o una razón general [[√τ, i√(1-τ)],[i√(1-τ), √τ]]. Libro mayor obligatorio, por canal: P_in,c = Σ_D I_{D,c} + Σ_m (1-R_{m,c})·P_incidente + P_atenuación(α) + P_escapada (aperturas falladas) + P_puertos_no_detectados. Criterio: |residuo| ≤ 1e-12·P_in. Un receptor aislado sin combinador mide intensidad local, no potencia de salida, y no debe usarse para la verificación de conservación.\n\n5) Paridad. Con un solo camino, sin divisores y r_c aplicado al final, el modelo reproduce exactamente las ecuaciones actuales: |E|² = P_in·w_c·R_c·exp(-αL). El circuito de tres objetos debe dar 0,7053474966 / 0,3657724623 y la fase 2,6376104167 rad.",
+  "test_design": [
+    "Escena MZ (propuesta): emisor en BS1 con f = 10 y v = 10 (λ = 1 BU); brazos de 45°; M1 y M2 con R = (1, 1, 1); α = 0 en los casos ideales y α = 0,05 en un caso con pérdidas; BS2 50/50; receptores D1 y D2. Todos los parámetros se leen de objetos de escena guardados y reabiertos. Primero en Python CPU, sin Blender.",
+    "T0 Paridad monocamino: el circuito actual de tres objetos, pasado por el nuevo motor, reproduce P = 0,7053474966, a = 0,3657724623 y φ = 2,6376104167 rad con tolerancia 1e-12. Falla si difiere, por ejemplo por la doble atenuación exp(-αL) sobre la amplitud.",
+    "T1 Constructivo: ΔL ≡ 0 (mod λ) y δ iguales. Predicción ideal: I_D1 = P_in y I_D2 = 0 (o al revés según la convención de U), con tolerancia 1e-12·P_in. Con pérdidas: I_D1 + I_D2 = P_in·exp(-αL̄)·ΠR.",
+    "T2 Destructivo por geometría: desplazar M2 a lo largo de su normal d = λ/(4cos45°) ≈ 0,3536 BU (ΔL = λ/2). Predicción: los puertos se intercambian, I_D1 = 0 e I_D2 = P_in. T2b, destructivo por material: sin mover nada, phase_shift de M2 += π rad. Debe dar el mismo resultado que T2. Nota: el desplazamiento también mueve lateralmente el rayo 2d·sinθ_i; las aperturas de BS2, D1 y D2 deben cubrirlo, y el modelo no penaliza la falta de solape de los haces (ver unknowns).",
+    "T3 Barrido y visibilidad: Δφ en 32 pasos sobre [0, 2π). Predicción: I_D1 = (P_in/2)(1 + V·cos(Δφ + φ0)) con V = 1 si la división es 50/50. Con BS1 de τ = 0,8 debe dar V = 2√(0,8·0,2) = 0,8. Esta predicción no trivial distingue una implementación real de una codificada a mano. En todos los pasos, |I_D1 + I_D2 - P_in| ≤ 1e-12·P_in.",
+    "T4 Incoherente: misma geometría, con incoherencia DERIVADA de la escena (dos emisores independientes, o un emisor con γ = 0, o f_1 ≠ f_2 con |Δf|·T_int ≥ 100). Predicción: I_D1 = I_D2 = P_in/2 en todo el barrido de T3, con variación relativa ≤ 1e-12, y V = 0. Falla si aparece dependencia de Δφ.",
+    "T5 Camino roto: girar M2 10° sobre un eje perpendicular al plano, de modo que su rayo falle la apertura de BS2 (motivo 'missed_*'). Predicción: I_D1 = I_D2 = P_in/4, es decir, la potencia del brazo 1 dividida 50/50 en BS2. P_escapada = P_in/2 aparece en el libro mayor, y D1 y D2 coinciden con un trazado monocamino del brazo 1 (tolerancia 1e-12). Falla si el camino roto sigue interfiriendo.",
+    "T6 Conservación global y seguridad: en todos los casos, sin NaN ni Inf; el residuo del libro mayor ≤ 1e-12·P_in; I_D ≥ 0; y ninguna potencia óptica por puerto supera P_in. La activación se registra, pero no es métrica de conservación.",
+    "T7 Persistencia (OPT-003, solo cuando se autorice): guardar y reabrir el .blend, repetir T1, T2 y T5 en Blender background CPU y obtener las mismas cifras que en Python CPU (1e-12).",
+    "Si se mantiene la variante del borrador con dos caminos hacia UN receptor: definir la métrica como intensidad local y no como potencia de salida, aceptar I_max = (√P1 + √P2)² como esperado, y no usar ese receptor para la verificación de conservación."
+  ],
+  "unknowns": [
+    "¿Qué significan los canales RGB: longitudes de onda (tres frecuencias f_c y fases distintas) o etiquetas de canal sin física espectral? Condiciona la fórmula de la fase y la coherencia entre canales.",
+    "¿Qué valores de f y v se adoptan? Sin λ del orden de la escena, la geometría no controla la interferencia.",
+    "¿Cómo se trata el solape de haces? En un modelo de rayos puntuales, dos rayos que llegan a puntos distintos de un receptor, ¿interfieren? Hace falta un criterio: mismo objeto receptor, tolerancia lateral o anchura de haz gaussiana.",
+    "¿Qué matriz y convención de fase tendrá el divisor (±i, signo en reflexión frontal o trasera) y cómo se representa en Blender (nuevo rol 'splitter', cara activa, razón τ)?",
+    "¿Qué ventana de integración T_int tiene el detector? Sin ella no puede decidirse cuándo frecuencias distintas cuentan como incoherentes.",
+    "¿Se aplicará la escala de los objetos a los radios, o se documenta que solo cuenta la propiedad radius?",
+    "¿Espejos de una cara o de dos? El código actual refleja por ambas.",
+    "Oclusión: no está modelada. Decidir si T5 basta con fallar una apertura o si también se exige bloqueo por un objeto interpuesto.",
+    "No se ha verificado la suite de 18 pruebas ni el runtime de Blender en esta auditoría (solo lectura). Las cifras de línea base se reconstruyeron por aritmética, no ejecutando el código.",
+    "No se consultó a JEV desde esta sesión; las propuestas son de Claude y requieren decisión documentada por Codex/JEV."
+  ]
+}

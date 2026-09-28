@@ -1,0 +1,103 @@
+{
+  "convention": "U(tau)=[[sqrt(tau), i sqrt(1-tau)],[i sqrt(1-tau), sqrt(tau)]]; arm1=transmitted; port B bright when phases equal",
+  "T0_baseline_single_path": {
+    "power": 0.7053474965987503,
+    "activation": 0.3657724622611257,
+    "phase": 2.6376104167282426
+  },
+  "T1_constructive_ideal": {
+    "port_a": 0.0,
+    "port_b": 1.0,
+    "loss_arm1": 0.0,
+    "loss_arm2": 0.0,
+    "residual": 0.0,
+    "visibility": 1.0
+  },
+  "T1_constructive_lossy_alpha0.05_L2": {
+    "port_a": 0.0,
+    "port_b": 0.9048374180359595,
+    "loss_arm1": 0.04758129098202024,
+    "loss_arm2": 0.04758129098202024,
+    "residual": 0.0,
+    "visibility": 1.0
+  },
+  "T2_destructive_ideal": {
+    "port_a": 1.0,
+    "port_b": 0.0,
+    "loss_arm1": 0.0,
+    "loss_arm2": 0.0,
+    "residual": 0.0,
+    "visibility": 1.0
+  },
+  "T3_sweep_tau1_0.8_portB": [
+    0.8999999999999999,
+    0.8923141121612921,
+    0.8695518130045147,
+    0.832587844921018,
+    0.782842712474619,
+    0.7222280932078409,
+    0.653073372946036,
+    0.5780361288064513,
+    0.5,
+    0.4219638711935487,
+    0.34692662705396415,
+    0.27777190679215924,
+    0.21715728752538105,
+    0.16741215507898188,
+    0.13044818699548533,
+    0.10768588783870786,
+    0.10000000000000003,
+    0.10768588783870786,
+    0.13044818699548527,
+    0.16741215507898183,
+    0.21715728752538094,
+    0.27777190679215913,
+    0.3469266270539639,
+    0.42196387119354856,
+    0.49999999999999994,
+    0.5780361288064513,
+    0.653073372946036,
+    0.7222280932078408,
+    0.7828427124746189,
+    0.832587844921018,
+    0.8695518130045146,
+    0.8923141121612921
+  ],
+  "T3_expected_visibility_tau1_0.8": 0.8,
+  "T4_incoherent_any_phase": {
+    "port_a": 0.5,
+    "port_b": 0.5,
+    "loss_arm1": 0.0,
+    "loss_arm2": 0.0,
+    "residual": 0.0,
+    "visibility": 0.0
+  },
+  "T4_freq_mismatch_crossfactor_df1_Tint100": 6.2528371445095934e-18,
+  "T5_broken_arm2": {
+    "port_a": 0.25,
+    "port_b": 0.25,
+    "loss_arm1": 0.0,
+    "loss_arm2": 0.5,
+    "residual": 0.0,
+    "visibility": 0.0
+  },
+  "geometry_single_mirror_lambda1_w0.2": {
+    "wavelength": 1.0,
+    "mirror_shift": 0.35355339059327373,
+    "delta_L": 0.5,
+    "lateral_shift": 0.5,
+    "overlap_gamma": 0.043936933623407434
+  },
+  "geometry_single_mirror_lambda0.05_w0.2": {
+    "wavelength": 0.05,
+    "mirror_shift": 0.017677669529663688,
+    "delta_L": 0.025,
+    "lateral_shift": 0.025,
+    "overlap_gamma": 0.9922179382602435
+  },
+  "geometry_delay_line_lambda1": {
+    "stage_shift": 0.25,
+    "lateral_shift": 0.0
+  },
+  "max_lambda_single_mirror_overlap_0.99_w0.2": 0.05671073507829416
+}

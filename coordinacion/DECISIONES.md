@@ -53,3 +53,26 @@
 - **Responsable:** Codex.
 - **Reversión:** al recibir una respuesta Claude verificable, reevaluar el
   contrato y fijar umbrales antes de cualquier experimento.
+
+## DEC-005 · 2026-09-28 · Primera arquitectura multirrayo
+
+- **Revisión:** Claude entregó `respuestas/OPT-001.json`. Codex comprobó su
+  estructura, contrastó las observaciones principales con `scene_optics.py` y
+  ejecutó las 14 autocomprobaciones CPU del oráculo (0,009 s). La respuesta
+  contiene propuestas, no un resultado experimental de Blender.
+- **JEV:** consulta v2 remota con `exit_code=0`, `status=connected` y
+  `provenance=jev`, modelo `jev-1.13.0`; recibo en
+  `jev/revision-opt-001-20260928-result.json`.
+- **Decisión:** prototipo Mach–Zehnder de dos salidas, objetos explícitos,
+  campos escalares complejos y balance de potencia por canal. RGB son canales
+  de potencia etiquetados con una frecuencia común, no longitudes de onda
+  físicas. Separar el control por `phase_shift` del control por geometría; no
+  reclamar interferencia geométrica si los modos no llegan solapados al
+  combinador. El oráculo de Claude es referencia provisional hasta compararlo
+  con un motor independiente gobernado por la escena.
+- **Caveats:** el oráculo usa `t_arm=0` tanto para pérdida como para camino
+  roto; el motor debe distinguir pérdida material de potencia escapada. Las
+  autocomprobaciones y la coincidencia analítica no prueban aún Blender ni
+  propagación electromagnética real.
+- **Responsable:** Codex. **Reversión:** corregir el modelo si la prueba real
+  de objetos Blender o un control externo refuta estos supuestos.

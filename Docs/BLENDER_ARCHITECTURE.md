@@ -59,3 +59,24 @@ oclusiones, refracción, difracción, dispersión, interferencia entre caminos,
 polarización ni entrenamiento de pesos. Tampoco usa Cycles, Eevee, shaders de
 cómputo o GPU. La siguiente extensión debe añadir varios emisores/caminos y
 acumulación coherente con una prueba de paridad frente al circuito mínimo.
+
+## Extensión experimental de dos puertos
+
+`Blender/core/mz_scene.py` implementa un primer Mach–Zehnder CPU separado del
+circuito mínimo. Una escena de siete objetos define emisor, dos divisores,
+dos espejos y dos detectores. El trazado calcula recorridos y aperturas desde
+la geometría; los campos escalares complejos se combinan únicamente cuando
+los rayos llegan solapados al segundo divisor. La matriz ideal de cada divisor
+es `[[√τ, i√(1−τ)], [i√(1−τ), √τ]]`. Se registran por separado potencia en
+ambos detectores, absorción, pérdidas de espejo, potencia escapada y potencia
+no resuelta. La responsividad del detector se aplica después de calcular
+`|E|²`, y no entra en el balance óptico.
+
+RGB son aquí tres canales de potencia independientes a una frecuencia común;
+no equivalen todavía a longitudes de onda físicas. El adaptador
+`Blender/addon/neuro3d/mz_scene_adapter.py` lee/escribe objetos, pero aún no
+ha sido ejecutado en Blender. El control incoherente y la interferencia
+modificada por geometría con solape conservado siguen pendientes. Las pruebas
+CPU son exploratorias y no una validación electromagnética ni una prueba de
+rendimiento GPU. JEV y la revisión independiente de Claude están registrados
+en `coordinacion/DECISIONES.md`; el contrato experimental continúa abierto.

@@ -1,6 +1,6 @@
 # Checkpoint factual de Neuro3D
 
-Actualizado: 2026-09-28 17:16 UTC.
+Actualizado: 2026-09-28 18:51 UTC.
 
 ## Objetivo
 
@@ -19,7 +19,28 @@ no se usa como marca.
 - 18 pruebas Python CPU/estáticas superadas en la última ejecución registrada.
 - Informe y límites en `Docs/BLENDER_RUNTIME_REPORT.md` y
   `Docs/BLENDER_ARCHITECTURE.md`.
-- No existe aún acumulación coherente multirrayo ni red óptica completa.
+- La línea base publicada `732e908` no contiene acumulación coherente
+  multirrayo ni una red óptica completa; el prototipo local nuevo se describe
+  por separado a continuación.
+
+## Avance nuevo aún no promocionado
+
+- Claude entregó `respuestas/OPT-001.json`; Codex comprobó las referencias
+  principales. JEV confirmó el Mach–Zehnder de dos puertos como siguiente
+  prototipo, con RGB como canales etiquetados y un control de solape obligatorio.
+- `Blender/core/mz_scene.py` implementa un primer motor CPU de siete objetos
+  geométricos, dos brazos, campos complejos y balance por canal. Diez pruebas
+  nuevas pasan; la suite CPU completa suma 28 pruebas en 0,026 s. Coincide
+  numéricamente con el oráculo independiente de Claude en 144 combinaciones
+  (error máximo 4,72e-15). Coincidencia entre modelos, no prueba física.
+- `Blender/addon/neuro3d/mz_scene_adapter.py` crea/lee objetos Blender y
+  escribe resultados, pero solo se ha importado estáticamente; no se ha
+  ejecutado dentro de Blender ni comprobado guardar/reabrir.
+- El control de interferencia por geometría y el incoherente aún faltan. Si
+  dos modos no se solapan en el combinador, el prototipo marca su potencia como
+  `unresolved` y no afirma interferencia.
+- `OPT-008` encarga a Claude una auditoría de solo lectura del prototipo y del
+  adaptador; no es autorización para editar el motor en paralelo.
 
 ## Recursos y procesos
 
@@ -34,12 +55,10 @@ no se usa como marca.
 
 ## Trabajo activo y siguiente paso
 
-- `OPT-001`: revisión de óptica por Claude, de solo lectura y con una única
-  respuesta estructurada. Pendiente: la CLI no respondió; el arranque manual
-  está en `CLAUDE_BOOTSTRAP.md`.
-- JEV indicó preparar un contrato falsable sin fijar aún ecuaciones disputadas.
-  Codex creó `experimentos/EXP-001-BORRADOR.md`; la implementación de
-  `OPT-002` espera la auditoría OPT-001 y una decisión documentada.
+- `OPT-001` ya está entregada. `DEC-005` registra la revisión de Codex/JEV.
+- `OPT-002` tiene un primer motor CPU y adaptador no verificado en Blender.
+  `EXP-001-BORRADOR.md` debe cerrarse antes de las pruebas confirmatorias;
+  las comprobaciones CPU realizadas hasta ahora son exploratorias.
 - `OPT-003` prueba real Blender solo cuando el modelo CPU tenga controles
   constructivo, destructivo e incoherente y el PC disponga de margen.
 
