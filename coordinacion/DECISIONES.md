@@ -348,3 +348,26 @@
   escena: hoy la escena guarda pesos y NumPy hace la interferencia. La
   fase CPU ray-cast debe tener fixture y revisión antes de ejecución; GPU
   o multicelda serían fases separadas, no autorizadas por esta decisión.
+
+## DEC-019 · 2026-09-29 · Contrastes adicionales pre-run en EXP-003
+
+- **Propuesta:** Claude detectó que los tres d iniciales solo producen
+  `P_A≤0,0955` y propuso `d=0,0125` y `0,025 BU` para media señal e
+  intercambio total. El fixture de dos archivos quedó versionado por
+  Claude en la rama `claude/opt-015-fixture`, commit `17b2740`; Codex
+  verificó que esos son los únicos archivos nuevos y que los hashes de
+  las copias locales coinciden.
+- **Evidencia independiente:** `Blender/tests/exp003_first_hit_preflight.py`
+  busca el primer impacto entre todos los discos. En los cinco d conserva
+  las rutas previstas y error máximo de `ΔL−2d=3,54e-16 BU`. Dos tests
+  sintéticos comprueban caso válido y oclusión cruzada; suite ligera 82/82.
+- **JEV remoto:** consulta tipada mínima con `exit_code=0`,
+  `status=connected`, `provenance=jev`, modelo `jev-1.13.0`; eligió
+  `add_both_contrasts` con confianza 0,99. La probabilidad de estar ya
+  listo para corrida fue 0,14.
+- **Decisión:** adoptar `EXP-003-ENMIENDA-001.md` ahora, sin tocar la
+  preinscripción anterior. Claude versionó la revisión de cinco d en
+  `f8d7fc5`, preservando `17b2740`; Codex verificó diff limitado a listas
+  y dos salidas esperadas, blobs locales coincidentes y preflight 82/82.
+  Codex revisará el runner y recursos antes de cualquier Blender.
+  No hay autorización nueva de GPU/Blender para este hilo.

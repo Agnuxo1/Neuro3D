@@ -369,5 +369,19 @@ no se usa como marca.
   se conserva el error óptico original y el fallo de restauración queda
   como causa. Test nuevo, suite ligera 80/80. Sin Blender/GPU.
 
+- 2026-09-29 14:29 UTC: OPT-015/DEC-019. Codex añadió preflight
+  independiente de primer impacto entre todos los discos, más test de
+  oclusión cruzada: suite ligera 82/82. Sobre el fixture de cinco d,
+  rutas intactas, sham nulo, ablación corta brazo 1 y error máximo de
+  `ΔL−2d=3,54e-16 BU`. JEV remoto verificado (`provenance=jev`,
+  `model=jev-1.13.0`) eligió ambos contrastes con confianza 0,99 y
+  estimó preparación para corrida en 0,14. La enmienda 001 añade
+  d=0,0125/0,025 sin sustituir los tres puntos originales. Claude la
+  versionó en `origin/claude/opt-015-fixture` @ `f8d7fc5`, con
+  `17b2740` recuperable; diff limitado a listas y salidas esperadas,
+  blobs locales coincidentes. OPT-007 sin resultados `noleak` aún.
+  Falta revisar runner de Blender y permiso de recursos de este hilo;
+  no se ejecutó Blender/GPU aquí.
+
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.
