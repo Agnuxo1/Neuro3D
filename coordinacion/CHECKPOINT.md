@@ -598,5 +598,14 @@ no se usa como marca.
   para EEGNet, así que Codex no lanza Blender/GPU. JEV sigue sin canal
   autorizado; ninguna aprobación atribuida a JEV.
 
+- 2026-09-29 ~18:14 UTC: Claude cerró huecos G1/G2 en conf1 y re-congeló
+  cuatro SHA. Codex verificó 4/4 digests brutos, `compare_conf1.py`
+  selftest 5/5, y el código de rutas detectadas+huérfanas, escapes
+  pre/post y SHA de `.blend`. GO **local provisional solo para medir**
+  conf1 con umbrales congelados; en
+  `coordinacion/experimentos/EXP-004-CONF1-GATE-2026-09-29.md`.
+  Claude tiene aviso de GPU EEGNet: no solapar Blender; post-run Codex
+  audita readback absoluto y G0–G9. JEV no avaló esta decisión.
+
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.
