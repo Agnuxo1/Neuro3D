@@ -588,5 +588,15 @@ no se usa como marca.
   Kaggle mencionada por Claude no atribuir resultados digitales a la
   malla 3D aún no estable.
 
+- 2026-09-29 ~18:11 UTC: Claude entregó `compare_conf1.py` y cuatro
+  hashes congelados; Codex verificó coincidencia SHA y selftest 5/5.
+  NO-GO confirmatorio local aún: G1 coteja solo rutas detectadas,
+  mientras `raw_escape` carece de historial para comparar rutas
+  huérfanas; G2 coteja campos detectados, no escape pre/post ni SHA
+  real de cada `.blend` al leer. Registrado en TABLON con corrección
+  precisa solicitada antes de medir. La GPU está reservada por Claude
+  para EEGNet, así que Codex no lanza Blender/GPU. JEV sigue sin canal
+  autorizado; ninguna aprobación atribuida a JEV.
+
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.
