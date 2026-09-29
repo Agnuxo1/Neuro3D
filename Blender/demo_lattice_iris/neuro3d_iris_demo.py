@@ -229,6 +229,9 @@ def build_scene(theta, ref):
     return sc
 
 
+SEG_L = {}          # segment -> optical path length at its start (filled by trace, used by the live animation)
+
+
 def _set_excluded(flag):
     for lc in bpy.context.view_layer.layer_collection.children:
         if lc.name != "Optics": lc.exclude = flag
@@ -240,7 +243,7 @@ def trace(amps):
     Returns detector fields, per-segment coherent field (for rendering) and the number of casts."""
     sc = bpy.context.scene; _set_excluded(True); bpy.context.view_layer.update()
     try:
-        dg = bpy.context.evaluated_depsgraph_get(); det, seg, casts = {}, {}, 0
+        dg = bpy.context.evaluated_depsgraph_get(); det, seg, casts = {}, {}, 0; SEG_L.clear()
         for s in json.loads(sc["sources"]):
             a0 = amps.get(s["id"], 0)
             if a0 == 0: continue
@@ -253,6 +256,7 @@ def trace(amps):
                 end = loc if hit else o + d * 3.0
                 key = (frm, ob.name if hit else "escape", tuple(round(c, 4) for c in o), tuple(round(c, 4) for c in end))
                 seg[key] = seg.get(key, 0) + amp * cmath.exp(1j * KW * L)
+                SEG_L[key] = min(SEG_L.get(key, 1e9), L)
                 if not hit: continue
                 L2 = L + (loc - o).length; kind = ob["kind"]
                 if kind == "det":
@@ -275,7 +279,7 @@ def classify(x_row):
     return int(np.argmax(P)), P, det, seg, casts
 
 
-def show(seg, P, pred, truth=None, x_row=None):
+def show(seg, P, pred, truth=None, x_row=None, hidden=False):
     """Beams as emissive tubes; radius and brightness follow the coherent power on each segment."""
     for ob in list(bpy.data.collections["Beams"].objects): bpy.data.objects.remove(ob, do_unlink=True)
     for ob in list(bpy.data.collections["Labels"].objects):
@@ -293,6 +297,8 @@ def show(seg, P, pred, truth=None, x_row=None):
         q = min(1.0, math.sqrt(pw) * 1.6); col = cold.lerp(hot, q)
         if key[1] == "escape": col = Vector((1.0, 0.25, 0.1))
         c.data.materials.append(mat(f"beam_{n}", tuple(col), emit=1.5 + 22.0 * pw))
+        c["L0"] = float(SEG_L.get(key, 0.0)); c["L1"] = c["L0"] + L
+        if hidden: c.hide_viewport = c.hide_render = True
     tot = sum(P) + 1e-12
     for k, did in enumerate(CLASS_DET):
         b = bpy.data.materials[f"det_{did}"].node_tree.nodes["Principled BSDF"]
@@ -371,11 +377,62 @@ class NEURO3D_OT_build(bpy.types.Operator):
         build_scene(np.array(st["theta"]).reshape(K, K), st["ref"]); setup_render(); return {"FINISHED"}
 
 
+# ----------------------------------------------------------------------------------------------
+# live mode (GUI): flowers are traced one after another; light is revealed as it propagates
+LIVE = {"on": False, "phase": "trace", "front": 0.0, "hold": 0, "P": None, "pred": 0}
+LIGHT_SPEED = 1.2          # BU revealed per timer tick (visual only)
+
+
+def _dim_detectors():
+    for did in CLASS_DET:
+        bpy.data.materials[f"det_{did}"].node_tree.nodes["Principled BSDF"].inputs["Emission Strength"].default_value = 0.3
+
+
+def _live_tick():
+    if not LIVE["on"]: return None
+    sc = bpy.context.scene; x, y, _ = load_iris()
+    if LIVE["phase"] == "trace":
+        sc["flower"] = int(sc.get("flower", -1) + 1) % len(y); n = sc["flower"]
+        pred, P, _, seg, casts = classify(x[n])
+        show(seg, P, pred, truth=int(y[n]), x_row=x[n], hidden=True); _dim_detectors()
+        for ob in bpy.data.collections["Labels"].objects:
+            if ob.name.startswith(("hud.pred", "hud.det")): ob.hide_viewport = ob.hide_render = True
+        LIVE.update(phase="propagate", front=0.0, P=P, pred=pred, casts=casts); return 0.05
+    if LIVE["phase"] == "propagate":
+        LIVE["front"] += LIGHT_SPEED; left = 0
+        for ob in bpy.data.collections["Beams"].objects:
+            if ob.hide_viewport and ob["L0"] <= LIVE["front"]: ob.hide_viewport = ob.hide_render = False
+            if ob.hide_viewport: left += 1
+        if left == 0:
+            P, pred = LIVE["P"], LIVE["pred"]; tot = sum(P) + 1e-12
+            for k, did in enumerate(CLASS_DET):
+                b = bpy.data.materials[f"det_{did}"].node_tree.nodes["Principled BSDF"]
+                b.inputs["Emission Strength"].default_value = 0.3 + (45.0 if k == pred else 6.0) * P[k] / tot
+            for ob in bpy.data.collections["Labels"].objects:
+                if ob.name.startswith(("hud.pred", "hud.det")): ob.hide_viewport = ob.hide_render = False
+            LIVE["phase"] = "hold"; LIVE["hold"] = 0
+        return 0.05
+    LIVE["hold"] += 1
+    if LIVE["hold"] > 30: LIVE["phase"] = "trace"
+    return 0.05
+
+
+class NEURO3D_OT_live(bpy.types.Operator):
+    bl_idname = "neuro3d.live"; bl_label = "Play / pause live network"
+
+    def execute(self, context):
+        LIVE["on"] = not LIVE["on"]; LIVE["phase"] = "trace"
+        if LIVE["on"] and not bpy.app.timers.is_registered(_live_tick): bpy.app.timers.register(_live_tick, first_interval=0.1)
+        return {"FINISHED"}
+
+
 class NEURO3D_PT_panel(bpy.types.Panel):
     bl_space_type = "VIEW_3D"; bl_region_type = "UI"; bl_category = "Neuro3D"; bl_label = "Optical lattice (Iris)"
 
     def draw(self, context):
         col = self.layout.column(align=True)
+        col.operator("neuro3d.live", text=("Pause" if LIVE["on"] else "Play live"), icon=("PAUSE" if LIVE["on"] else "PLAY"))
+        col.separator()
         col.operator("neuro3d.build_trained", icon="LIGHT_SUN")
         row = col.row(align=True)
         row.operator("neuro3d.classify_flower", text="Previous", icon="TRIA_LEFT").step = -1
@@ -384,7 +441,7 @@ class NEURO3D_PT_panel(bpy.types.Panel):
 
 
 def register():
-    for c in (NEURO3D_OT_classify, NEURO3D_OT_build, NEURO3D_PT_panel):
+    for c in (NEURO3D_OT_classify, NEURO3D_OT_build, NEURO3D_OT_live, NEURO3D_PT_panel):
         try: bpy.utils.register_class(c)
         except ValueError: pass
 
@@ -442,3 +499,4 @@ if __name__ == "__main__":
                         except Exception: pass
             return None
         bpy.app.timers.register(_present, first_interval=1.0)
+        LIVE["on"] = True; bpy.app.timers.register(_live_tick, first_interval=2.0)   # start the live demo

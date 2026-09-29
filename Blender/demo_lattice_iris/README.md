@@ -32,9 +32,17 @@ Headless (train, verify every flower by ray tracing, render three examples):
 python run_blender.py "<path>/blender.exe" --train --verify --render renders
 ```
 
-Interactive: open `renders/neuro3d_iris_lattice.blend` (or run `neuro3d_iris_demo.py` from
-Blender's Scripting tab). In **3D View › Sidebar › Neuro3D**, press *Build trained lattice*,
-then *Previous / Next*. Each click ray-traces one flower through the scene.
+Live, in the Blender GUI:
+
+```bash
+blender renders/neuro3d_iris_lattice.blend --python neuro3d_iris_demo.py
+```
+
+The viewport opens in the camera view in rendered mode and the network **runs live**. Each
+flower is ray-traced through the scene at that moment (about 2 s), the beams light up in
+order of optical path length as the light propagates, and then the class detectors glow and
+the prediction appears. The same *Play / Pause*, *Previous / Next* and *Build trained lattice*
+controls are in **3D View › Sidebar (N) › Neuro3D**.
 
 Tested with Blender 4.5 LTS (EEVEE Next for the render, numpy bundled with Blender).
 
