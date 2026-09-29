@@ -13,6 +13,7 @@ from exp005_scene_readback import export_snapshot
 class OffsetMatrix:
     def __init__(self, x=0): self.x = x
     def __matmul__(self, vector): return (vector[0]+self.x, vector[1], vector[2])
+    def determinant(self): return 1.0
 
 
 class Object(dict):
@@ -44,6 +45,62 @@ class Scene(dict):
 
 
 class ReadbackTests(unittest.TestCase):
+    def graph(self,scene):
+        evaluated=[]
+        for name in ('mirror','detector'):
+            base=scene.objects[name]; ob=Object(name,base['kind']); ob.update(base)
+            ob.original=base; ob.matrix_world=base.matrix_world; ob.data=base.data
+            evaluated.append(ob)
+        return NS(mode='VIEWPORT',objects=evaluated)
+
+    def test_evaluated_object_set_mandatory_when_graph_supplied(self):
+        scene=Scene(); graph=self.graph(scene)
+        self.assertTrue(export_snapshot(scene,depsgraph=graph)['evaluated_optics_checked'])
+        self.assertFalse(export_snapshot(scene)['evaluated_optics_checked'])
+        graph.objects.pop()
+        with self.assertRaises(ValueError): export_snapshot(scene,depsgraph=graph)
+
+    def test_view_layer_hidden_object_rejected(self):
+        scene=Scene(); scene.objects['mirror'].hide_get=lambda **kwargs:True
+        with self.assertRaises(ValueError): export_snapshot(scene)
+
+    def test_evaluated_mesh_phase_and_identity_mismatch(self):
+        for change in ('vertices','phase','identity','kind','render'):
+            scene=Scene(); graph=self.graph(scene); ob=graph.objects[0]
+            if change=='vertices': ob.matrix_world=OffsetMatrix(3)
+            elif change=='phase': ob['phase_rad']=.5
+            elif change=='identity': ob.original=copy.deepcopy(ob.original)
+            elif change=='kind': ob['kind']='bs'
+            else: graph.mode='RENDER'
+            with self.assertRaises(ValueError): export_snapshot(scene,depsgraph=graph)
+
+    def test_duplicate_and_extra_evaluated_optics_rejected(self):
+        scene=Scene(); graph=self.graph(scene); graph.objects.append(graph.objects[0])
+        with self.assertRaises(ValueError): export_snapshot(scene,depsgraph=graph)
+        graph=self.graph(scene); surprise=Object('surprise','mirror'); surprise.original=surprise
+        graph.objects.append(surprise)
+        with self.assertRaises(ValueError): export_snapshot(scene,depsgraph=graph)
+
+    def test_shared_mesh_does_not_share_object_phase(self):
+        scene=Scene(); other=Object('second','mirror'); other.data=scene.objects['mirror'].data
+        scene.objects['second']=other
+        scene['optical_object_ids']=json.dumps(['mirror','second','detector'])
+        scene.objects['mirror']['phase_rad']=.5
+        result=export_snapshot(scene)
+        self.assertEqual(result['objects']['second']['phase_rad'],0)
+        del other['phase_rad']; other.data.phase_rad=.2
+        with self.assertRaises(KeyError): export_snapshot(scene)
+
+    def test_hidden_optics_fail_closed(self):
+        for attribute in ('hide_viewport','hide_render'):
+            scene=Scene(); setattr(scene.objects['mirror'],attribute,True)
+            with self.assertRaises(ValueError): export_snapshot(scene)
+
+    def test_negative_and_singular_world_transform_rejected(self):
+        for determinant in (-1.,0.):
+            scene=Scene(); scene.objects['mirror'].matrix_world.determinant=lambda:determinant
+            with self.assertRaises(ValueError): export_snapshot(scene)
+
     def test_geometry_exported_from_world_vertices(self):
         result = export_snapshot(Scene())
         self.assertEqual(result['objects']['mirror']['vertices_world_BU'][1],[3,0,0])
