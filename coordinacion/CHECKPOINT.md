@@ -554,5 +554,18 @@ no se usa como marca.
   exacto antes de medir. JEV continúa bloqueado; elección de rejilla
   solo candidata local provisional.
 
+- 2026-09-29 ~17:44 UTC: Claude ejecutó la rejilla K=4 en Blender CPU:
+  rutas iguales a su oráculo y geometría persistida, pero su gate
+  numérico original FALLÓ (`|ΔL|` sham `1,0097e-5` vs `1e-5 BU`, balance
+  ablación `7,524e-5` vs `1e-6`). Codex abrió independientemente los
+  cuatro `.blend` K4 en solo lectura mediante `exp004_independent_readback.py`:
+  SHA/roles/geometría/fuentes/tratamientos PASS, posición máxima 0 BU,
+  normal `3,43e-8`, radio `9,23e-9`; gpuq liberado. Recombinar
+  superposiciones 1+1/1+i reveló balance máximo `1,1927e-4` en ablación;
+  hasta 36 impactos por camino, no ~15. Informe
+  `Docs/EXP-004-INDEPENDENT-AUDIT-2026-09-29.md`. No aceptar umbrales
+  ampliados a posteriori; preinscribir presupuesto numérico y fixtures
+  confirmatorios nuevos. JEV aún bloqueado, fallback local explícito.
+
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.
