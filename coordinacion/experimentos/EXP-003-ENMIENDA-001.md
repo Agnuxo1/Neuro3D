@@ -40,3 +40,17 @@ con `f8d7fc5` (`fixture.py=e270ba1`, `fixture.json=4e0ea03`). El runner
 debe fijarse a esa revisión exacta antes de cualquier corrida.
 Un fixture estático y una comprobación CPU no sustituyen revisión del
 runner Blender ni autorización vigente de recursos.
+
+## Gate de anclaje absoluto antes de medir
+
+La revisión independiente de Claude detectó una degeneración: trasladar
+R1 y R2 `+0,3 BU` en x mantiene la ruta y `ΔL=2d`, pero cambia la
+longitud base de brazo 1 a `5,6 BU`. El puerto A base puede seguir oscuro
+por periodicidad, de modo que la fase relativa no detecta el cambio.
+Codex añadió `exp003_fixture_guard.py`: fijar SHA-256 del fixture JSON
+`89cdd5f50bf23716a6143e074cbcfd9b5c1123b78ae2f17782f43c176faa886b`,
+comprobar al construir y reabrir posición y normal mundiales, radio, escala
+unitaria, una cara, al menos 32 vértices y cero modificadores en cada disco
+(tolerancia `1e-6`). Antes de intervenciones, exigir en el ray-cast de
+Blender `L1=5,0±1e-4 BU` y `L2=3,0±1e-4 BU`. Este gate comprueba la
+escena observada; las longitudes absolutas no se inyectan en inferencia.

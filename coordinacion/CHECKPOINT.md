@@ -427,5 +427,15 @@ no se usa como marca.
   La ablación deberá retirar/desvincular la malla del depsgraph, no
   confiar en `hide_render`. Sin Blender/GPU; JEV sigue bloqueado.
 
+- 2026-09-29 15:27 UTC: Claude encontró otro contraejemplo importante:
+  desplazar R1/R2 +0,3 BU cambia L1 de 5 a 5,6 sin romper ruta ni
+  `ΔL=2d`; por periodicidad, A base aún puede ser oscuro. Codex añadió
+  gate CPU independiente de SHA-256 del fixture, matrices/normal/radio/
+  topología/modificadores y longitudes absolutas L1/L2. El fixture
+  local coincide con SHA-256 congelado y conserva cinco d. Cuatro tests
+  nuevos (incluido desplazamiento +0,3) pasan; suite ligera 95/95.
+  No se ejecutó Blender/GPU. Falta construir mallas y observarlas
+  mediante Blender para aplicar el gate de verdad; JEV sigue bloqueado.
+
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.
