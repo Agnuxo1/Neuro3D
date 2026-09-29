@@ -89,3 +89,44 @@ def scene_evaluator(roles, baseline: Baseline,
         (place_sham_u if sham else place_u)(roles, baseline, u)
         return trace()
     return evaluate
+
+
+def verify_final_binding(baseline_record: dict, reopened_record: dict,
+                         final_u: float, last_u: float,
+                         last_power_a: float) -> dict[str, float]:
+    """Check EXP-002 X2 against matrices retraced from a reopened scene.
+
+    Records use the EXP-001 readback format. This function does not reopen
+    Blender itself; callers must supply a fresh post-reopen capture.
+    """
+    if not all(math.isfinite(v) for v in (final_u, last_u, last_power_a)):
+        raise ValueError("Non-finite final fit record")
+    if not 0.0 <= final_u <= 1.0 or abs(final_u - last_u) > 1e-12:
+        raise AssertionError("Last optical observation is not at final_u")
+    edit = controls()[1]
+    worst_position_error = 0.0
+    for role, delta in (("mz_combiner_group", edit.group_delta),
+                        ("mz_mirror1", edit.mirror1_delta)):
+        def world_xyz(record):
+            matrix = record["objects"][role]["matrix_world"]
+            if len(matrix) != 16 or not all(math.isfinite(float(v)) for v in matrix):
+                raise ValueError(f"Malformed world matrix for {role}")
+            return tuple(float(matrix[i]) for i in (3, 7, 11))
+        before = world_xyz(baseline_record)
+        after = world_xyz(reopened_record)
+        error = math.dist(after, tuple(before[i] + final_u * delta[i]
+                                       for i in range(3)))
+        worst_position_error = max(worst_position_error, error)
+        if error > 1e-6:
+            raise AssertionError(f"Final {role} is not bound to final_u: {error} BU")
+    result = reopened_record["result"]
+    if result["status"] != "ok":
+        raise AssertionError("Reopened optical trace is not valid")
+    channels = tuple(float(v) for v in result["optical_a"])
+    if len(channels) != 3 or not all(math.isfinite(v) for v in channels):
+        raise ValueError("Malformed reopened optical_a")
+    power_error = abs(sum(channels) - last_power_a)
+    if power_error > 1e-9:
+        raise AssertionError(f"Reopened P_A differs from final observation: {power_error}")
+    return {"position_error_bu": worst_position_error,
+            "power_a_error": power_error}

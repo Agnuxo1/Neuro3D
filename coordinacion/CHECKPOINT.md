@@ -296,6 +296,13 @@ no se usa como marca.
   sea ópticamente nulo en Blender, ni corrido EXP-002. Falta el vínculo
   de matrices finales y la revisión de Claude. El enrutador JEV rechazó
   por riesgo de exportar un transcript amplio; no hay nueva decisión JEV.
+- 2026-09-29 12:32 UTC: OPT-014 incorpora `verify_final_binding`, un gate
+  CPU para registros capturados **tras reabrir**: compara matrices mundiales
+  de M1/grupo contra A + `u_final` por los deltas, exige última observación
+  en ese mismo `u` y potencia A retrazada a ≤1e-9. Tres tests mock nuevos
+  detectan posición `u+h`, última muestra distinta y potencia alterada;
+  suite ligera 75/75. No se reabrió Blender ni se ejecutó EXP-002. Queda
+  integrar este gate en el futuro runner y obtener revisión de Claude.
 
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.

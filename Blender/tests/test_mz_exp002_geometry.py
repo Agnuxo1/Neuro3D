@@ -7,7 +7,8 @@ import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from mz_exp001_plan import controls
-from mz_exp002_geometry import capture_baseline, place_u, place_sham_u, scene_evaluator
+from mz_exp002_geometry import (capture_baseline, place_u, place_sham_u,
+                                scene_evaluator, verify_final_binding)
 
 
 class FakeObject:
@@ -30,6 +31,22 @@ def roles_a():
         "mz_detector_a": FakeObject((1.0, 0.0, 0.0), group),
         "mz_detector_b": FakeObject((0.0, 1.0, 0.0), group),
     }
+
+
+def record_at_u(u, power_a=.75):
+    edit = controls()[1]
+    objects = {}
+    for role, base, delta in (
+        ("mz_combiner_group", (2., 2., 0.), edit.group_delta),
+        ("mz_mirror1", (2. - 2. / math.sqrt(3.), 0., 0.), edit.mirror1_delta),
+    ):
+        xyz = [base[i] + u * delta[i] for i in range(3)]
+        objects[role] = {"matrix_world": [1., 0., 0., xyz[0],
+                                          0., 1., 0., xyz[1],
+                                          0., 0., 1., xyz[2],
+                                          0., 0., 0., 1.]}
+    return {"objects": objects,
+            "result": {"status": "ok", "optical_a": [power_a, 0., 0.]}}
 
 
 class EXP002GeometryTests(unittest.TestCase):
@@ -131,6 +148,25 @@ class EXP002GeometryTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             evaluate(float("nan"))
         self.assertEqual(len(seen), 1)
+
+    def test_final_binding_accepts_reopened_matrices_and_power(self):
+        verdict = verify_final_binding(record_at_u(0), record_at_u(2. / 3.),
+                                       2. / 3., 2. / 3., .75)
+        self.assertLessEqual(verdict["position_error_bu"], 1e-12)
+        self.assertEqual(verdict["power_a_error"], 0.)
+
+    def test_final_binding_rejects_last_gradient_probe_position(self):
+        with self.assertRaisesRegex(AssertionError, "not bound"):
+            verify_final_binding(record_at_u(0), record_at_u(.5001),
+                                 .5, .5, .75)
+
+    def test_final_binding_rejects_wrong_last_sample_or_retrace(self):
+        with self.assertRaisesRegex(AssertionError, "Last optical observation"):
+            verify_final_binding(record_at_u(0), record_at_u(.5),
+                                 .5, .5001, .75)
+        with self.assertRaisesRegex(AssertionError, "Reopened P_A"):
+            verify_final_binding(record_at_u(0), record_at_u(.5, .74),
+                                 .5, .5, .75)
 
 
 if __name__ == "__main__":
