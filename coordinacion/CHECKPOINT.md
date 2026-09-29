@@ -410,5 +410,13 @@ no se usa como marca.
   explícita para ese envío/canal. Próximo: revisión del adaptador Blender,
   reserva de recursos y EXP-003, antes de comparar nichos.
 
+- 2026-09-29 15:13 UTC: OPT-015 recibió un adaptador mínimo de
+  `scene.ray_cast` en `exp003_scene_cast.py`. Devuelve el primer impacto
+  de Blender (rol, punto y normal) al acumulador; un objeto ajeno queda
+  visible como `unmapped:*`, y un miss no activa fallback de fixture.
+  Tres tests mock nuevos; suite ligera 90/90. Aún falta constructor de
+  mallas, prueba Blender real, save/reopen y libro mayor; no se ha
+  lanzado Blender ni GPU. JEV sigue pendiente por el bloqueo documentado.
+
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.
