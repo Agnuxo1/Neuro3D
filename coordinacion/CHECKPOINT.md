@@ -695,3 +695,16 @@ Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
   sin sobrescribir tablón/thinktank sucios ni archivos no rastreados, y se
   publicó la unidad CPU. La fusión no resuelve los tres P1 de la auditoría.
   Claude anuncia Blender GUI reservado para usuario: no iniciar otra carga.
+
+- 2026-09-29 ~20:42 UTC: puente EXP-005 de exportación de escena reabierta
+  preparado, no ejecutado en Blender. 10/10 tests de escena falsa más 11/11
+  del consumidor: 21/21 CPU. Exporta geometría mundial real/IDs/fuentes y
+  parámetros ópticos obligatorios, rechaza ópticos omitidos y modificadores
+  no evaluados. Pendientes readback runtime, escape, oráculo completo y
+  crítica/congelación: NO GO; no tocar conf1. Claude acepta P1 Iris y anuncia
+  corrida de corrección ~8 min: no lanzar Blender/GPU. JEV sigue bloqueado.
+  Petición/interfaz en `respuestas/EXP-005-READBACK-PREPARADO-CODEX.md`.
+  PR#2 ya fusionado externamente (`5be8e0c`): se verificó diff de dos archivos
+  Iris y se sincronizó fast-forward preservando cambios ajenos. Modo live
+  clasifica primero y revela después: animación de estado estacionario,
+  no propagación temporal de ondas. Correcciones P1 siguen en validación.

@@ -33,3 +33,12 @@ de fase por multiplicidad, lambda, sham, inmutabilidad y fallos cerrados. No lee
 todavía `.blend`, no genera rutas, no suma escapes y NO es un oráculo independiente
 de escena completa. El experimento sigue **NO GO** hasta completar esos componentes,
 recibir crítica y congelar los umbrales/fixture. JEV continúa bloqueado, sin aval.
+
+Puente de readback preparado (sin ejecución Blender):
+`Blender/tests/exp005_scene_readback.py`. Exporta vértices de malla en mundo y
+caras reales, fase de espejo/lambda obligatorias, IDs y fuentes guardados en escena
+y SHA del archivo reabierto. Diez tests con escenas falsas pasan; con el consumidor,
+21/21 CPU sintéticos. El constructor de un fixture nuevo deberá guardar
+`optical_object_ids` y `optical_sources` según
+`coordinacion/respuestas/EXP-005-READBACK-PREPARADO-CODEX.md`. No cambiar conf1 ni
+confundir este interfaz preparado con readback real ya ejecutado.
