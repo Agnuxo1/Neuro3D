@@ -19,7 +19,7 @@ def digest(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
-def main(fixture_path, output_root):
+def run_in_dir(fixture_path, run_dir):
     import bpy
     from mathutils import Vector
 
@@ -31,8 +31,6 @@ def main(fixture_path, output_root):
     from exp003_ray_paths import trace_paths
     from exp003_scene_cast import make_scene_cast, observe_scene_disks
 
-    run_dir = Path(output_root) / ("run-" + uuid4().hex[:12])
-    run_dir.mkdir(parents=True, exist_ok=False)
     bpy.ops.wm.read_factory_settings(use_empty=True)
     scene = bpy.context.scene
     fixture, fixture_hash, _ = build_scene_disks(scene, fixture_path)
@@ -72,6 +70,10 @@ def main(fixture_path, output_root):
     results = {}
 
     for name, delay_d, sham_z, removed in cases:
+        progress_file = run_dir / "progress.json"
+        progress_file.write_text(json.dumps({"current_case": name,
+                                             "stage": "opening_base",
+                                             "completed": results}, indent=2), encoding="utf-8")
         bpy.ops.wm.open_mainfile(filepath=str(base_file), load_ui=False)
         if Path(bpy.data.filepath).resolve() != base_file.resolve():
             raise ValueError("Did not reopen frozen base")
@@ -84,6 +86,10 @@ def main(fixture_path, output_root):
             if len(ablated.users_collection) != 0 or ablated.name in scene.objects:
                 raise ValueError("Ablated object still in scene/depsgraph")
         before = read_scene(delay_d, sham_z, removed)
+        progress_file.write_text(json.dumps({"current_case": name,
+                                             "stage": "pre_save_traced",
+                                             "before": before,
+                                             "completed": results}, indent=2), encoding="utf-8")
         case_file = run_dir / f"{name}.blend"
         bpy.ops.wm.save_as_mainfile(filepath=str(case_file))
         saved_hash = digest(case_file)
@@ -91,6 +97,10 @@ def main(fixture_path, output_root):
         if Path(bpy.data.filepath).resolve() != case_file.resolve() or digest(case_file) != saved_hash:
             raise ValueError(f"Treatment reopen mismatch: {name}")
         after = read_scene(delay_d, sham_z, removed)
+        progress_file.write_text(json.dumps({"current_case": name,
+                                             "stage": "post_reopen_traced",
+                                             "before": before, "after": after,
+                                             "completed": results}, indent=2), encoding="utf-8")
         max_matrix_error = max((abs(x-y)
                                 for role in before["matrices"]
                                 for row_a, row_b in zip(before["matrices"][role],
@@ -98,8 +108,9 @@ def main(fixture_path, output_root):
                                 for x, y in zip(row_a, row_b)), default=0.0)
         if max_matrix_error > 1e-6:
             raise ValueError(f"World matrix changed on reopen: {name}")
-        if any(abs(before["optics"][port] - after["optics"][port]) > 1e-3
-               for port in ("P_A", "P_B")):
+        max_port_reopen_error = max(abs(before["optics"][port] - after["optics"][port])
+                                    for port in ("P_A", "P_B"))
+        if max_port_reopen_error > 1e-3:
             raise ValueError(f"Port power changed on reopen: {name}")
         paths, optics = after["paths"], after["optics"]
         if optics["balance_error"] > 1e-6 or optics["unresolved"] > 1e-9:
@@ -107,6 +118,10 @@ def main(fixture_path, output_root):
         if removed:
             if paths["arm1"]["status"] != "lost" or paths["arm2"]["status"] != "reached_bs2":
                 raise ValueError("Ablation did not remove only arm 1")
+            if any(abs(optics[port] - .25) > 1e-3 for port in ("P_A", "P_B")):
+                raise ValueError("Ablation ports differ from half-arm split")
+            if abs(optics["escape"] - .5) > 1e-6:
+                raise ValueError("Ablation escape ledger differs")
         else:
             if any(paths[arm]["status"] != "reached_bs2" for arm in ("arm1", "arm2")):
                 raise ValueError(f"Expected path lost: {name}")
@@ -125,8 +140,12 @@ def main(fixture_path, output_root):
                 raise ValueError(f"Port A contrast failed: {name}")
             if sham_z and abs(optics["P_A"] - base["optics"]["P_A"]) > 1e-3:
                 raise ValueError("Sham altered port A")
+            if sham_z and any(abs(paths[arm]["length"] - base["paths"][arm]["length"]) > 1e-6
+                              for arm in ("arm1", "arm2")):
+                raise ValueError("Sham altered measured path length")
         results[name] = {"file": str(case_file), "sha256": saved_hash,
                          "max_matrix_reopen_error": max_matrix_error,
+                         "max_port_reopen_error": max_port_reopen_error,
                          "paths": paths, "optics": optics}
 
     report = {"fixture_sha256": fixture_hash, "base_sha256": base_hash,
@@ -136,6 +155,20 @@ def main(fixture_path, output_root):
     report_file.write_text(json.dumps(report, indent=2), encoding="utf-8")
     print("EXP003_RESULT " + json.dumps({"status": "PASS", "run_dir": str(run_dir),
                                          "case_count": len(results)}, sort_keys=True))
+
+
+def main(fixture_path, output_root):
+    run_dir = Path(output_root) / ("run-" + uuid4().hex[:12])
+    run_dir.mkdir(parents=True, exist_ok=False)
+    try:
+        return run_in_dir(fixture_path, run_dir)
+    except Exception as exc:
+        failure = {"status": "FAIL", "error_type": type(exc).__name__,
+                   "message": str(exc), "run_dir": str(run_dir),
+                   "progress_file": str(run_dir / "progress.json")}
+        (run_dir / "failure.json").write_text(json.dumps(failure, indent=2), encoding="utf-8")
+        print("EXP003_FAILURE " + json.dumps(failure, sort_keys=True))
+        raise
 
 
 if __name__ == "__main__":

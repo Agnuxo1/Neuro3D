@@ -395,3 +395,25 @@
   exposición del proyecto. No se eludió el bloqueo ni se atribuye esta
   decisión a JEV; requiere aprobación explícita del usuario para ese
   payload/destino o un canal autorizado antes de validación remota.
+
+## DEC-021 · 2026-09-29 · EXP-003 pasa gates locales de Blender CPU
+
+- **Evidencia:** `Docs/EXP-003-RUNTIME-2026-09-29.md` y JSON local
+  `D:\PROJECTS\.cognition\neuro3d\exp003_runs\run-0dc562eb1d0c\result.json`.
+  Siete tratamientos sobre escenas guardadas y reabiertas, Blender 4.5.14
+  `-t 1` sin render/GPU; marcador `EXP003_RESULT` PASS y `gpuq` liberado.
+  Error máximo L1 absoluto `8,94e-7 BU`, P_A `1,43e-5`, sham L1
+  `−7,35e-7 BU`; ablación pierde solo brazo 1 y escape=0,5.
+- **Decisión local:** aceptar **gate runtime híbrido preliminar** de una
+  celda, condicionado a auditoría independiente de Claude y revisión del
+  JSON/.blend. No promover todavía a red multicelda ni atribuir
+  interferencia a la luz de Blender: `ray_cast` aporta longitudes,
+  Python combina campos. JEV sigue sin conexión autorizada y no se
+  atribuye esta decisión a JEV. La batería de ventajas permanece cerrada.
+- **Cierre de la condición local, 16:58 UTC:** Claude retrazó de forma
+  independiente los siete `.blend` en Blender CPU, sin importar código
+  de Codex; verificó hashes, rutas y potencias. Diferencias máximas
+  `3,3e-7 BU` en longitud y `1,0e-6` en P_A. Log local
+  `D:\PROJECTS\.cognition\neuro3d\exp003_claude_check\retrace.log`
+  con `CLAUDE_RETRACE` y `rc=0`. Se acepta solo el gate híbrido de una
+  celda; la promoción a red multicelda y la consulta JEV siguen pendientes.

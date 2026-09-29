@@ -495,5 +495,26 @@ no se usa como marca.
   auditoría estática de Claude, wrapper `--python-exit-code 1`, reserva
   y ejecución real. JEV no consultable por bloqueo ya documentado.
 
+- 2026-09-29 ~16:56 UTC: EXP-003 Blender CPU completo **PASS local
+  preliminar** en `D:\PROJECTS\.cognition\neuro3d\exp003_runs\run-0dc562eb1d0c`.
+  Siete casos editados en base reabierta, guardados y reabiertos de nuevo;
+  ocho `.blend`, `result.json` SHA-256 `d716c9c1b13903f0bbecb8c8f5b0ffac081dc0a84b644ba51ad4f1d217f2821b`.
+  Máximo error absoluto L1 `8,94e-7 BU`, P_A `1,43e-5`; sham cambia
+  L1 `−7,35e-7 BU`; ablación brazo 1 perdido, P_A=P_B=0,25 y escape
+  0,5. Matrices y potencias pre/post reopen idénticas, balance máximo
+  `2,22e-16`. `gpuq` liberado, sin render ni GPU intencional.
+  Informe `Docs/EXP-003-RUNTIME-2026-09-29.md`, DEC-021. Pendiente
+  auditoría Claude y revisión de artefactos; no es red multicelda ni
+  interferencia calculada por la luz de Blender. JEV sigue bloqueado.
+
+- 2026-09-29 ~16:58 UTC: Claude aceptó independientemente EXP-003 tras
+  retrazar los siete `.blend` con script propio, sin código de Codex:
+  error máximo de longitud `3,3e-7 BU`, de P_A `1,0e-6`, hashes y rutas
+  coherentes; `exp003_claude_check/retrace.log` muestra `rc=0`.
+  DEC-021 y el informe runtime registran el cierre del gate híbrido.
+  Siguiente paso: preinscribir una malla de ≥4×4 celdas con controles
+  de estabilidad y causalidad geométrica antes de ejecutar. JEV sigue
+  bloqueado; no atribuirle esta decisión. No abrir aún comparativas.
+
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.
