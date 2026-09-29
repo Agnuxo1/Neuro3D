@@ -7,7 +7,7 @@ import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from mz_exp001_plan import controls
-from mz_exp002_geometry import capture_baseline, place_u
+from mz_exp002_geometry import capture_baseline, place_u, scene_evaluator
 
 
 class FakeObject:
@@ -80,6 +80,24 @@ class EXP002GeometryTests(unittest.TestCase):
                 place_u(roles, baseline, bad)
         self.assertEqual(tuple(roles["mz_combiner_group"].location), baseline.group)
         self.assertEqual(tuple(roles["mz_mirror1"].location), baseline.mirror1)
+
+    def test_evaluator_places_scene_before_calling_supplied_trace(self):
+        roles = roles_a()
+        baseline = capture_baseline(roles)
+        seen = []
+        token = object()
+        def trace():
+            seen.append((tuple(roles["mz_combiner_group"].location),
+                         tuple(roles["mz_mirror1"].location)))
+            return token
+        evaluate = scene_evaluator(roles, baseline, trace)
+        self.assertIs(evaluate(.25), token)
+        edit = controls()[1]
+        self.assertAlmostEqual(seen[0][0][0], baseline.group[0] + .25 * edit.group_delta[0])
+        self.assertAlmostEqual(seen[0][1][0], baseline.mirror1[0] + .25 * edit.mirror1_delta[0])
+        with self.assertRaises(ValueError):
+            evaluate(float("nan"))
+        self.assertEqual(len(seen), 1)
 
 
 if __name__ == "__main__":

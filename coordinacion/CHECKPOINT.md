@@ -269,6 +269,13 @@ no se usa como marca.
   2,07e-8 BU frente al baseline previsto y parentado esperado. Solo
   preparación estática/CPU; no se corrió el motor, Blender ni GPU.
   Falta evaluador de escena y revisión de Claude antes de ejecución EXP-002.
+- 2026-09-29 11:47 UTC: sigue sin respuesta nueva de Claude. Se añadió
+  `scene_evaluator` a la colocación EXP-002: aplica `u` antes de llamar
+  al trazador que reciba del futuro runner. Un test mock comprueba orden,
+  desplazamiento y rechazo de `u` no finito; suite ligera 70/70.
+  JEV remoto eligió agente principal, confianza de ruta 0,43 (baja);
+  por ello no se amplió el paso. No se llamó al motor MZ ni a Blender/GPU.
+  Falta que Claude audite el contrato y luego enlazar el trazador real.
 
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.

@@ -9,10 +9,12 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 import math
+from typing import Callable, TypeVar
 
 from mz_exp001_plan import controls
 
 EXPECTED_MIRROR = 2.0 - 2.0 / math.sqrt(3.0)
+ResultT = TypeVar("ResultT")
 
 
 @dataclass(frozen=True)
@@ -57,3 +59,16 @@ def place_u(roles, baseline: Baseline, u: float) -> None:
     for obj, base, delta in positions:
         for i in range(3):
             obj.location[i] = base[i] + u * delta[i]
+
+
+def scene_evaluator(roles, baseline: Baseline,
+                    trace: Callable[[], ResultT]) -> Callable[[float], ResultT]:
+    """Bind placement to a supplied live-scene trace, without importing bpy.
+
+    The future Blender runner must supply trace_mz_circuit(bpy, scene) here.
+    Nothing in this function computes or injects expected optical power.
+    """
+    def evaluate(u: float) -> ResultT:
+        place_u(roles, baseline, u)
+        return trace()
+    return evaluate
