@@ -46,6 +46,9 @@ def record_at_u(u, power_a=.75):
                                           0., 0., 1., xyz[2],
                                           0., 0., 0., 1.]}
     return {"objects": objects,
+            "optics": {"mz_source": {"power": 1., "rgb": [1., 1., 1.]},
+                       "mz_mirror1": {"phase_shift": 0.},
+                       "mz_mirror2": {"phase_shift": 0.}},
             "result": {"status": "ok", "optical_a": [power_a, 0., 0.]}}
 
 
@@ -167,6 +170,16 @@ class EXP002GeometryTests(unittest.TestCase):
         with self.assertRaisesRegex(AssertionError, "Reopened P_A"):
             verify_final_binding(record_at_u(0), record_at_u(.5, .74),
                                  .5, .5, .75)
+
+    def test_final_binding_rejects_hidden_phase_or_source_edit(self):
+        final = record_at_u(.5)
+        final["optics"]["mz_mirror2"]["phase_shift"] = math.pi
+        with self.assertRaisesRegex(AssertionError, "Optical property changed"):
+            verify_final_binding(record_at_u(0), final, .5, .5, .75)
+        final = record_at_u(.5)
+        final["optics"]["mz_source"]["rgb"][1] = .9
+        with self.assertRaisesRegex(AssertionError, "Optical property changed"):
+            verify_final_binding(record_at_u(0), final, .5, .5, .75)
 
 
 if __name__ == "__main__":

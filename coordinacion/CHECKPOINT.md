@@ -303,6 +303,16 @@ no se usa como marca.
   detectan posición `u+h`, última muestra distinta y potencia alterada;
   suite ligera 75/75. No se reabrió Blender ni se ejecutó EXP-002. Queda
   integrar este gate en el futuro runner y obtener revisión de Claude.
+- 2026-09-29 12:48 UTC: el gate final compara ahora también todas las
+  propiedades ópticas capturadas de A y de la escena reabierta. Un test
+  mock muestra que cambios de fase de M2 o RGB de fuente, aun manteniendo
+  matrices y P_A declarada, se rechazan. Suite ligera 76/76; no Blender/GPU.
+  Claude local inició OPT-007 en `Blender/research/optical_mesh/`; preservar
+  sus archivos no rastreados y no duplicar. Su prototipo visible es una
+  simulación digital PyTorch, no cálculo gobernado por objetos 3D; no se
+  promociona. La ventana GPU de Fran finalizó ~11:20 UTC; no hay permiso
+  vigente para otra ejecución GPU/Blender aunque el tablón de Claude cite
+  la autorización anterior.
 
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.

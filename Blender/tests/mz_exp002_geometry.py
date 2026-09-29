@@ -103,6 +103,26 @@ def verify_final_binding(baseline_record: dict, reopened_record: dict,
         raise ValueError("Non-finite final fit record")
     if not 0.0 <= final_u <= 1.0 or abs(final_u - last_u) > 1e-12:
         raise AssertionError("Last optical observation is not at final_u")
+    # The protocol freezes source/material/detector settings. Matrices and
+    # P_A alone could pass after a compensating optical-property edit.
+    frozen = baseline_record["optics"]
+    reopened = reopened_record["optics"]
+    if frozen.keys() != reopened.keys():
+        raise AssertionError("Optical roles changed on reopening")
+    for role, properties in frozen.items():
+        if properties.keys() != reopened[role].keys():
+            raise AssertionError(f"Optical properties changed for {role}")
+        for key, before in properties.items():
+            after = reopened[role][key]
+            before_values = before if isinstance(before, list) else [before]
+            after_values = after if isinstance(after, list) else [after]
+            if len(before_values) != len(after_values):
+                raise AssertionError(f"Optical property shape changed: {role}.{key}")
+            for x, y in zip(before_values, after_values):
+                if not math.isfinite(float(x)) or not math.isfinite(float(y)):
+                    raise ValueError(f"Non-finite optical property: {role}.{key}")
+                if abs(float(x) - float(y)) > 1e-6:
+                    raise AssertionError(f"Optical property changed: {role}.{key}")
     edit = controls()[1]
     worst_position_error = 0.0
     for role, delta in (("mz_combiner_group", edit.group_delta),
