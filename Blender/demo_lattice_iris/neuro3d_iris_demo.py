@@ -482,7 +482,7 @@ def register():
 # ----------------------------------------------------------------------------------------------
 def main(argv):
     x, y, _ = load_iris(); out_dir = None; state_path = os.path.join(HERE, "trained_lattice.json")
-    if "--render" in argv: out_dir = argv[argv.index("--render") + 1]; os.makedirs(out_dir, exist_ok=True)
+    if "--render" in argv: out_dir = os.path.join(HERE, argv[argv.index("--render") + 1]); os.makedirs(out_dir, exist_ok=True)
     tr, te = split()
     if "--train" in argv:
         x, y, scaler = load_iris(scaler=(load_raw()[0][tr].min(0), load_raw()[0][tr].max(0)))
