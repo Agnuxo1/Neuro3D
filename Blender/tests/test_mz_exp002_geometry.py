@@ -7,7 +7,7 @@ import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from mz_exp001_plan import controls
-from mz_exp002_geometry import capture_baseline, place_u, scene_evaluator
+from mz_exp002_geometry import capture_baseline, place_u, place_sham_u, scene_evaluator
 
 
 class FakeObject:
@@ -95,6 +95,39 @@ class EXP002GeometryTests(unittest.TestCase):
         edit = controls()[1]
         self.assertAlmostEqual(seen[0][0][0], baseline.group[0] + .25 * edit.group_delta[0])
         self.assertAlmostEqual(seen[0][1][0], baseline.mirror1[0] + .25 * edit.mirror1_delta[0])
+        with self.assertRaises(ValueError):
+            evaluate(float("nan"))
+        self.assertEqual(len(seen), 1)
+
+    def test_sham_moves_only_combiner_in_plane_without_accumulation(self):
+        roles = roles_a()
+        baseline = capture_baseline(roles)
+        mirror_before = tuple(roles["mz_mirror1"].location)
+        for u in (.2, .8, .2):
+            place_sham_u(roles, baseline, u)
+        tangent = .3 * .2 / math.sqrt(2.0)
+        self.assertAlmostEqual(roles["mz_combiner_group"].location[0],
+                               baseline.group[0] + tangent)
+        self.assertAlmostEqual(roles["mz_combiner_group"].location[1],
+                               baseline.group[1] + tangent)
+        self.assertEqual(roles["mz_combiner_group"].location[2], baseline.group[2])
+        self.assertEqual(tuple(roles["mz_mirror1"].location), mirror_before)
+        place_sham_u(roles, baseline, 0.0)
+        self.assertEqual(tuple(roles["mz_combiner_group"].location), baseline.group)
+
+    def test_sham_evaluator_traces_edited_scene_and_rejects_bad_u(self):
+        roles = roles_a()
+        baseline = capture_baseline(roles)
+        seen = []
+        evaluate = scene_evaluator(
+            roles, baseline,
+            lambda: seen.append((tuple(roles["mz_combiner_group"].location),
+                                 tuple(roles["mz_mirror1"].location))),
+            sham=True,
+        )
+        evaluate(.5)
+        self.assertAlmostEqual(seen[0][0][0], baseline.group[0] + .15 / math.sqrt(2.0))
+        self.assertEqual(seen[0][1], baseline.mirror1)
         with self.assertRaises(ValueError):
             evaluate(float("nan"))
         self.assertEqual(len(seen), 1)

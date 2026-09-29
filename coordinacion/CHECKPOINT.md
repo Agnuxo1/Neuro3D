@@ -288,6 +288,14 @@ no se usa como marca.
   Confianza del último 0,38; se adoptó por la evidencia reproducida.
   DEC-017 y `EXP-002-ENMIENDA-001.md` rigen antes de cualquier Blender;
   trayectoria CPU queda diagnóstico, no gate nuevo. Sin GPU/Blender.
+- 2026-09-29 12:18 UTC: OPT-014 incorpora `place_sham_u` y la variante
+  `scene_evaluator(..., sham=True)` para mover solo el grupo del combinador
+  `0,3u(1,1,0)/√2` desde A, sin desplazar M1 ni inyectar potencia. Dos
+  pruebas mock nuevas verifican posición, no acumulación y llamada al
+  trazador tras editar; suite ligera 72/72. No se ha probado que el sham
+  sea ópticamente nulo en Blender, ni corrido EXP-002. Falta el vínculo
+  de matrices finales y la revisión de Claude. El enrutador JEV rechazó
+  por riesgo de exportar un transcript amplio; no hay nueva decisión JEV.
 
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.

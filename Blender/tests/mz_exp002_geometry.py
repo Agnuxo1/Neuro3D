@@ -61,14 +61,31 @@ def place_u(roles, baseline: Baseline, u: float) -> None:
             obj.location[i] = base[i] + u * delta[i]
 
 
+def place_sham_u(roles, baseline: Baseline, u: float) -> None:
+    """Move the combiner in its plane; leave M1 and optical inputs untouched.
+
+    This negative control must use the same optimizer as the real edit. Its
+    predicted optical null is a hypothesis to check in the live scene, not a
+    power value supplied by this function.
+    """
+    if not math.isfinite(u) or not 0.0 <= u <= 1.0:
+        raise ValueError("u must be a finite fraction in [0,1]")
+    group = roles["mz_combiner_group"]
+    tangent = 0.3 * u / math.sqrt(2.0)
+    group.location[0] = baseline.group[0] + tangent
+    group.location[1] = baseline.group[1] + tangent
+    group.location[2] = baseline.group[2]
+
+
 def scene_evaluator(roles, baseline: Baseline,
-                    trace: Callable[[], ResultT]) -> Callable[[float], ResultT]:
+                    trace: Callable[[], ResultT], *,
+                    sham: bool = False) -> Callable[[float], ResultT]:
     """Bind placement to a supplied live-scene trace, without importing bpy.
 
     The future Blender runner must supply trace_mz_circuit(bpy, scene) here.
     Nothing in this function computes or injects expected optical power.
     """
     def evaluate(u: float) -> ResultT:
-        place_u(roles, baseline, u)
+        (place_sham_u if sham else place_u)(roles, baseline, u)
         return trace()
     return evaluate
