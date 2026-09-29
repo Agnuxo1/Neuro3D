@@ -17,7 +17,7 @@ Conf1 conserva 16 MZI/8 modos y pasa el gate híbrido local DEC-022. En `blender
 
 - G0: hashes de código/fixture y tres `.blend` registrados; readback exacto de propiedades ópticas y de geometría no editada.
 - G1: `base→fase` conserva multiconjunto de rutas y longitudes dentro de `1e-6 BU` por impacto. Un camino que toca `c12.r1` **n veces** recibe el factor relativo `exp(i·n·0,1)`; los que no lo tocan conservan campo por camino. Si esta topología garantiza n≤1, demostrarlo con el historial, no asumirlo. Un camino contrario refuta el gate.
-- G2: `base→lambda` conserva multiconjunto y longitudes; para cada camino de longitud L, la fase relativa esperada es `exp[i·2πL·(1/0,101−1/0,100)]`. Se evalúa el campo complejo, no solo intensidades.
+- G2: `base→lambda` conserva multiconjunto y longitudes; para cada camino de longitud efectiva `L_eff = L + dot(direction, mode_origin-hit)`, la fase relativa esperada es `exp[i·2πL_eff·(1/0,101−1/0,100)]`. La corrección transporta cada llegada a una referencia común del modo terminal; L sola basta únicamente si la corrección es cero. Se evalúa el campo complejo, no solo intensidades.
 - G3: ambas perturbaciones cambian al menos una salida de forma concordante con el oráculo; el sham deja campos complejos iguales. El umbral mínimo de cambio se fijará a partir del oráculo **antes** de la medición, no a posteriori.
 - G4: conservación de energía de la matriz ampliada de detectores/escapes, incluidos los 28 pares de entradas con fases 1/i; objetivo `max|S†S−I| ≤ 1e-3` en los tratamientos sin pérdida.
 - G5: si eliminar o ignorar las propiedades guardadas en escena deja la salida igual, el experimento falla aunque las intensidades aparenten ser plausibles.
@@ -42,3 +42,16 @@ y SHA del archivo reabierto. Diez tests con escenas falsas pasan; con el consumi
 `optical_object_ids` y `optical_sources` según
 `coordinacion/respuestas/EXP-005-READBACK-PREPARADO-CODEX.md`. No cambiar conf1 ni
 confundir este interfaz preparado con readback real ya ejecutado.
+
+## Avance separado de una celda — 2026-09-29 21:01 UTC
+
+Ahora hay oráculo independiente de triángulos (`exp005_triangle_oracle.py`),
+ledger coherente de escapes y referencia común por puerto, con 40 tests CPU.
+Det/escape requieren `mode_origin_BU` y `mode_direction` guardados en objeto.
+El primer smoke real de una celda guardó/reabrió cinco `.blend` nuevos y comparó
+raycasts de Blender con el oráculo: PASS, complejo máximo 8,22e-6, distancia
+1,49e-6 BU, error contra ley cerrada de potencia 1,29e-5, sham exactamente 0.
+Umbrales fijados ANTES: 2e-3 / 5e-6 BU / 1e-4 respectivamente.
+Esto valida el puente en ese caso, NO congela/promueve EXP-005 multicelda ni
+resuelve su matriz ampliada/ortogonalidad/28 pares. Conf1 sigue intacto.
+Evidencia y límites: `Docs/EXP-005-SINGLE-CELL-SMOKE-2026-09-29.md`.

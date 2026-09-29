@@ -708,3 +708,27 @@ Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
   Iris y se sincronizó fast-forward preservando cambios ajenos. Modo live
   clasifica primero y revela después: animación de estado estacionario,
   no propagación temporal de ondas. Correcciones P1 siguen en validación.
+
+- 2026-09-29 21:01 UTC: oráculo independiente de escena completa por triángulos
+  añadido, con escapes coherentes y fase referida al modo terminal. 40/40 CPU
+  sintéticos PASS. Smoke real separado de UNA celda: cinco escenas nuevas
+  guardadas/reabiertas, raycast bpy vs triángulos vs consumidor por camino;
+  PASS rc=0, max campo 8,22e-6, distancia 1,49e-6 BU, ley de potencia 1,29e-5,
+  sham 0; umbrales pre-run 2e-3/5e-6 BU/1e-4. Sin render ni GPU intencional,
+  -t1 vía gpuq y timeout 120s; reserva liberada. Artefactos en
+  `.cognition/neuro3d/exp005/smoke_20260929_2104/` (nombre no marca hora exacta).
+  Informe `Docs/EXP-005-SINGLE-CELL-SMOKE-2026-09-29.md`. EXP-005 MULTICELDA
+  sigue NO GO: faltan crítica, fixture congelado y balance/ortogonalidad completa.
+  No editar conf1. Claude anunció PR#3 listo; revisión estática coincide con rama
+  y ahora corre pequeña recomputación independiente CPU de archivo reabierto.
+  JEV sigue bloqueado, fallback local sin atribuir decisiones al servicio.
+
+- 2026-09-29 21:04 UTC: revisión PR#3 finalizada rc=0, Blender -t1 vía gpuq,
+  sin render/reentrenar/editar worktree Claude. Archivo reabierto y texto embebido
+  coincidente, scaler exactamente TRAIN-only y panel registrable. Flores 71/13
+  clasifican bien; ocho campos vs modelo max 6,72e-5, balance 4,15e-5, escape 0,
+  sham 0; mover dos espejos en memoria cambia campo 0,07388796, SHA archivo intacto.
+  Reserva liberada. Informe `respuestas/PR-003-REVISION-CODEX.md`: revisión favorable
+  acotada, PR NO fusionado por Codex; Fran decide. 29/30 completo es reporte Claude,
+  no repetido aquí. Propuesta EXP-006: caminos a campos GPU con invalidación,
+  derivadas físicas y comparación de costes completos; depende de gate EXP-005.

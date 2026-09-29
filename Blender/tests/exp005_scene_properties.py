@@ -38,7 +38,7 @@ def decode_scene(snapshot):
         if not isinstance(name, str) or not name:
             raise ValueError('object identifier required')
         kind = record['kind']
-        if kind not in ('mirror', 'bs', 'det'):
+        if kind not in ('mirror', 'bs', 'det', 'escape'):
             raise ValueError(f'unknown optical kind: {name}')
         kinds[name] = kind
         if kind == 'mirror':
@@ -46,12 +46,13 @@ def decode_scene(snapshot):
     return SceneOptics(wavelength, MappingProxyType(kinds), MappingProxyType(phases))
 
 
-def field_for_path(optics, hits, initial_field=1+0j):
+def field_for_path(optics, hits, initial_field=1+0j, *, reference_offset_BU=0):
     """Trace coefficients and fields for ONE supplied path, without summing paths.
 
     Each distance is measured from the previous hit/source to this hit in BU.
-    Supported events: t/r on a splitter, mirror, then a terminal detect event.
-    Escapes and a full scene oracle are intentionally outside this first unit.
+    Supported events: t/r on a splitter, mirror, then terminal detect/escape.
+    Escape is a declared readout boundary, NOT optical absorption. Its supplied
+    distance must reach that boundary; ray generation/oracle remain external.
     """
     field = complex(initial_field)
     if not math.isfinite(field.real) or not math.isfinite(field.imag):
@@ -70,6 +71,8 @@ def field_for_path(optics, hits, initial_field=1+0j):
             coefficient = -cmath.exp(1j*optics.phases_rad[name])
         elif kind == 'det' and event == 'detect' and index == len(hits)-1:
             coefficient = 1+0j
+        elif kind == 'escape' and event == 'escape' and index == len(hits)-1:
+            coefficient = 1+0j
         else:
             raise ValueError(f'incompatible event or nonterminal detector: {name}')
         incoming = field * cmath.exp(2j*math.pi*distance/optics.wavelength_BU)
@@ -78,6 +81,32 @@ def field_for_path(optics, hits, initial_field=1+0j):
         trace.append({'object_id': name, 'event': event, 'distance_BU': distance,
                       'coefficient': coefficient, 'field_at_hit': incoming,
                       'field_out': field})
-    if hits[-1]['event'] != 'detect':
-        raise ValueError('incomplete path; escape support not implemented here')
-    return {'field': field, 'length_BU': length, 'hits': trace}
+    if hits[-1]['event'] not in ('detect','escape'):
+        raise ValueError('incomplete path; explicit terminal channel required')
+    offset = finite_number(reference_offset_BU, 'reference_offset_BU')
+    field *= cmath.exp(2j*math.pi*offset/optics.wavelength_BU)
+    return {'field': field, 'length_BU': length, 'reference_offset_BU': offset,
+            'hits': trace}
+
+
+def sum_declared_channels(optics, paths):
+    """Coherent ledger, without renormalization or claims of channel orthogonality.
+
+    Caller must demonstrate that each declared terminal represents one common
+    phase-reference mode and that distinct channels are orthogonal. That is a
+    pending geometry/oracle gate, not something channel names prove.
+    Every record needs an explicit initial_field and a complete supplied path.
+    """
+    if not paths:
+        raise ValueError('nonempty path set required')
+    fields, counts = {}, {}
+    for path in paths:
+        result = field_for_path(optics, path['hits'], path['initial_field'],
+                                reference_offset_BU=path.get('reference_offset_BU',0))
+        name = path['hits'][-1]['object_id']
+        fields[name] = fields.get(name, 0j) + result['field']
+        counts[name] = counts.get(name, 0) + 1
+    powers = {name: abs(field)**2 for name,field in fields.items()}
+    return {'fields': fields, 'powers': powers, 'path_counts': counts,
+            'detected_power': sum(p for n,p in powers.items() if optics.kinds[n] == 'det'),
+            'escape_power': sum(p for n,p in powers.items() if optics.kinds[n] == 'escape')}
