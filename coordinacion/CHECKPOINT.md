@@ -462,5 +462,15 @@ no se usa como marca.
   cinco d, sham, ablación, potencias, balance y save/reopen. El proceso
   terminó. JEV sigue bloqueado.
 
+- 2026-09-29 16:12 UTC: Claude aceptó estáticamente constructor y sonda
+  base, con cuatro exigencias para EXP-003 completo: `--python-exit-code`,
+  intervenir la escena base guardada/reabierta (no reconstruirla), anclar
+  L1=5+2d/L2=3 en cada d y renovar depsgraph/readback tras reabrir.
+  Codex añadió `exp003_interventions.py`: mueve los mismos R1/R2 y
+  desvincula R2 de la colección de la escena para ablación, sin usar
+  `hide_render`. Dos tests mock nuevos; suite ligera 102/102. No hay
+  nueva corrida Blender/GPU. Próximo: runner que reabre escena, aplica
+  estas intervenciones, comprueba cuatro gates y registra resultados.
+
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.
