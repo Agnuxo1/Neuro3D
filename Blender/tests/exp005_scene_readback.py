@@ -27,7 +27,7 @@ def export_snapshot(scene):
     if (not isinstance(ids, list) or not ids or
             any(not isinstance(n, str) or not n for n in ids) or len(set(ids)) != len(ids)):
         raise ValueError('explicit unique optical object IDs required')
-    if any(obj.get('kind') in ('mirror','bs','det') and obj.name not in ids
+    if any(obj.get('kind') in ('mirror','bs','det','escape') and obj.name not in ids
            for obj in scene.objects):
         raise ValueError('optical object omitted from scene declaration')
     result = {'schema': 'exp005-readback-v1', 'lambda_BU': scene['lambda_BU'],
@@ -41,6 +41,11 @@ def export_snapshot(scene):
         record = {'kind': obj['kind']}
         if record['kind'] == 'mirror':
             record['phase_rad'] = obj['phase_rad']
+        if record['kind'] in ('det','escape'):
+            record['mode_origin_BU'] = vector3(obj['mode_origin_BU'],'mode reference')
+            record['mode_direction'] = vector3(obj['mode_direction'],'mode direction')
+            if sum(v*v for v in record['mode_direction']) <= 0:
+                raise ValueError('nonzero terminal mode direction required')
         vertices = [vector3(obj.matrix_world @ vert.co, 'world vertex')
                     for vert in obj.data.vertices]
         faces = [list(face.vertices) for face in obj.data.polygons]

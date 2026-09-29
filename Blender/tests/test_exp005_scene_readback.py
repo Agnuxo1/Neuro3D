@@ -19,6 +19,9 @@ class Object(dict):
     def __init__(self, name, kind, x=0):
         super().__init__(kind=kind)
         if kind == 'mirror': self['phase_rad'] = 0.0
+        if kind in ('det','escape'):
+            self['mode_origin_BU'] = [0,0,0]
+            self['mode_direction'] = [0,0,1]
         self.name, self.type = name, 'MESH'
         self.modifiers = []
         self.matrix_world = OffsetMatrix(x)
