@@ -21,7 +21,43 @@ def vector3(value, label):
     return [finite_number(v, label) for v in value]
 
 
-def export_snapshot(scene):
+def evaluated_optics(scene, ids, depsgraph):
+    """Reject divergence from the viewport depsgraph used for scene.ray_cast.
+
+No graph is allowed for legacy CPU diagnostics, explicitly marked unchecked.
+This does NOT validate render/OptiX geometry or optical propagation.
+"""
+    if depsgraph is None:
+        return None
+    if depsgraph.mode != 'VIEWPORT':
+        raise ValueError('viewport raycast depsgraph required; render parity not implemented')
+    evaluated = {}
+    for ob in depsgraph.objects:
+        original = ob.original
+        if original.get('kind') in ('mirror','bs','det','escape'):
+            if original.name not in ids or original.name in evaluated:
+                raise ValueError('evaluated optical set differs or duplicates declared objects')
+            evaluated[original.name] = ob
+    if set(evaluated) != set(ids):
+        raise ValueError('declared optics missing from evaluated depsgraph')
+    for name, ob in evaluated.items():
+        base = scene.objects[name]
+        if hasattr(base,'as_pointer') and hasattr(ob.original,'as_pointer'):
+            same = base.as_pointer() == ob.original.as_pointer()
+        else:
+            same = ob.original is base
+        if not same or ob.type != 'MESH' or ob.get('kind') != base.get('kind'):
+            raise ValueError('evaluated identity/kind mismatch')
+        if base.get('kind') == 'mirror' and ob.get('phase_rad') != base.get('phase_rad'):
+            raise ValueError('evaluated optical phase mismatch')
+        actual = [vector3(ob.matrix_world @ v.co,'evaluated vertex') for v in ob.data.vertices]
+        declared = [vector3(base.matrix_world @ v.co,'base vertex') for v in base.data.vertices]
+        if actual != declared or [list(p.vertices) for p in ob.data.polygons] != [list(p.vertices) for p in base.data.polygons]:
+            raise ValueError('evaluated geometry differs from exported base mesh')
+    return evaluated
+
+
+def export_snapshot(scene, *, depsgraph=None, view_layer=None):
     """Duck-typed for lightweight tests; the production input is a bpy scene."""
     ids = json.loads(scene['optical_object_ids'])
     if (not isinstance(ids, list) or not ids or
@@ -30,12 +66,23 @@ def export_snapshot(scene):
     if any(obj.get('kind') in ('mirror','bs','det','escape') and obj.name not in ids
            for obj in scene.objects):
         raise ValueError('optical object omitted from scene declaration')
+    evaluated = evaluated_optics(scene,ids,depsgraph)
     result = {'schema': 'exp005-readback-v1', 'lambda_BU': scene['lambda_BU'],
-              'objects': {}, 'sources': []}
+              'objects': {}, 'sources': [],
+              'evaluated_optics_checked': evaluated is not None,
+              'evaluated_optical_ids': sorted(evaluated) if evaluated is not None else [],
+              'evaluation_scope': 'viewport raycast only; no render/RT or wave validation'}
     for name in ids:
         obj = scene.objects[name]  # missing declared object must fail closed
         if obj.type != 'MESH':
             raise ValueError(f'{name}: optical mesh required')
+        if getattr(obj,'hide_viewport',False) or getattr(obj,'hide_render',False):
+            raise ValueError(f'{name}: hidden optics unsupported')
+        if hasattr(obj,'hide_get') and obj.hide_get(view_layer=view_layer):
+            raise ValueError(f'{name}: optical object hidden in view layer')
+        determinant = finite_number(obj.matrix_world.determinant(),'world determinant')
+        if determinant <= 0:
+            raise ValueError(f'{name}: negative/singular world orientation unsupported')
         if obj.modifiers:
             raise ValueError(f'{name}: evaluated modifiers unsupported; no silent base-mesh export')
         record = {'kind': obj['kind']}
@@ -96,7 +143,10 @@ def main():
     args = parser.parse_args(sys.argv[sys.argv.index('--')+1:])
     blend = Path(args.blend).resolve()
     bpy.ops.wm.open_mainfile(filepath=str(blend))
-    snapshot = export_snapshot(bpy.context.scene)
+    bpy.context.view_layer.update()
+    snapshot = export_snapshot(bpy.context.scene,
+                               depsgraph=bpy.context.evaluated_depsgraph_get(),
+                               view_layer=bpy.context.view_layer)
     snapshot['blend_sha256'] = hashlib.sha256(blend.read_bytes()).hexdigest()
     snapshot['blender_version'] = bpy.app.version_string
     Path(args.output).resolve().write_text(json.dumps(snapshot, indent=2)+'\n', encoding='utf-8')

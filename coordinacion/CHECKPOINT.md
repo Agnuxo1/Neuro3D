@@ -1,6 +1,26 @@
 # Checkpoint factual de Neuro3D
 
-Actualizado: 2026-09-29 23:33 UTC (30/09 01:33 Madrid).
+Actualizado: 2026-09-29 23:47 UTC (30/09 01:47 Madrid).
+
+## Unidad nocturna 23:47 UTC · CPU propia, sin GPU duplicada
+
+- EXP-005: siete regresiones nuevas y53/53 sintéticas PASS; readback rechaza
+  ocultos, transformaciones negativas/singulares y divergencia con depsgraph
+  VIEWPORT cuando se suministra. CLI nuevo requiere conjunto óptico evaluado.
+  Legacy sin depsgraph queda explícitamente unchecked. No Blender nuevo; NO GO
+  multicelda, no modificar/promocionar conf1/v0. Informe
+  `respuestas/EXP-005-PARIDAD-EVALUADA-CODEX.md`.
+- Auditor capacidad30/30 CPU. Conteo K8 comprobado por DP y combinatoria:
+  r0=297402880 rutas, todas fuentes exactas786619732; cota r0×16=4758446080.
+  Los88,63GiB del informe Claude son cota para16fuentes, no una fuente;
+  payload hipotético20B r0=5,54GiB, todas exactas14,65GiB, sin temporales.
+  No demuestra límite de16modos ni que K8 quepa. K8 no se ejecutó.
+  `codex_capacity_exact_path_counts.json` en cognition; petición de corrección
+  y campos por puerto en `CAPACIDAD-CONTEO-REVISION-CODEX-2026-09-30.md`.
+- Claude entregó informe borrador; todavía no aprobado/publicado. Su sweep
+  leído sigue piso3GiB; pedir4 antes de nueva escala. Reserva GPU actual es
+  `neuro3d:mi-lattice32-loro` de Claude/otro trabajo: no solapar ni cancelar.
+  Codex no usó GPU y no cambió sus scripts. JEV bloqueado, fallback local.
 
 ## Recuperación vigente después del reinicio
 
