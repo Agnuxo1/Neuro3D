@@ -47,8 +47,22 @@ python Blender/tests/run_blender_smoke.py --blender D:\ruta\a\blender.exe --arti
 
 ## Estado de la ruta GPU
 
-`shaders/nebula_photonic_compute.glsl` es un contrato experimental preparado para
-una futura prueba de compute shader. Antes de habilitarlo habrá que validar:
+`shaders/nebula_photonic_compute.glsl` compiló y se ejecutó mediante un
+contexto OpenGL externo a Blender en una RTX 3090 durante la ventana
+autorizada del 2026-09-29. Su regla local coincide con
+una referencia de esa misma regla, pero **no** con el motor de grafo CPU ni
+con el Mach–Zehnder de la escena; no es la red óptica funcional.
+
+`tests/mz_scene_gpu_ray_probe.py` es una sonda GPU separada y limitada:
+lee matrices y propiedades de siete escenas Blender guardadas y reabiertas,
+traza discos de divisor/espejos/combinador y calcula fase e intensidad.
+Pasó los siete controles preinscritos con error máximo de potencia total
+1,10e-12 y coincidencia de estado de rayos. Exige autorización explícita
+al ejecutarse. No implementa primera llegada a detectores, solape gaussiano,
+absorción, materiales generales ni aprendizaje; tampoco demuestra óptica
+física. El informe y los fallos de prototipos anteriores se conservan en
+`D:\PROJECTS\.cognition\neuro3d\exp001-20260929T1023Z`.
+Antes de ampliar la ruta GPU habrá que validar:
 
 1. compilación GLSL en la versión concreta de Blender;
 2. buffers de entrada/salida y sincronización;
@@ -71,27 +85,29 @@ La referencia de fase en el combinador se corrigió y se contrastó en CPU con
 un oráculo independiente (DEC-008). También se añadieron controles de solape,
 coherencia y primera llegada a detectores (DEC-010). Esto sigue siendo un
 modelo escalar fenomenológico, no una simulación electromagnética completa ni
-una red neuronal entrenada. EXP-001 aún no se ha ejecutado en Blender.
+una red neuronal entrenada. EXP-001 se ejecutó en Blender 4.5.14 en
+background el 2026-09-29: pasaron las 14 fases de los siete controles
+guardados/reabiertos. La traza óptica de Blender sigue siendo CPU.
 
-`addon/neuro3d/mz_scene_adapter.py` prepara la creación y lectura de esos
-objetos en Blender, incluido el montaje `layout="nonrect60"` de EXP-001, pero
-todavía no se ha ejecutado allí ni se ofrece en el panel. El circuito estable
+`addon/neuro3d/mz_scene_adapter.py` crea y lee esos objetos en Blender,
+incluido `layout="nonrect60"` de EXP-001; se verificó mediante el ejecutor
+background, pero todavía no se ofrece en el panel. El circuito estable
 de tres objetos permanece intacto. Las pruebas ligeras del nuevo núcleo se ejecutan con
 `python -m unittest discover -s Blender/tests -p 'test_*.py' -q` desde la raíz;
 no arrancan Blender ni la GPU. `tests/mz_exp001_plan.py` fija las ediciones y
-predicciones A–D para un futuro ejecutor; todavía no es una prueba runtime.
+predicciones A–D del ejecutor runtime ya usado.
 El contrato vigente está en
 `../coordinacion/experimentos/EXP-001-PREINSCRIPCION.md`.
 
 El ejecutor experimental `tests/run_mz_exp001.py` prepara los siete controles
 primarios, guarda un `.blend` por control y lo reabre en una fase separada para
-comparar matrices, propiedades y resultados. **No se ha ejecutado en Blender**:
-la revisión final del ejecutor y la autorización del usuario siguen pendientes.
+comparar matrices, propiedades y resultados. Se ejecutó una vez en la ventana
+autorizada; informe: `D:\PROJECTS\.cognition\neuro3d\exp001-20260929T1023Z\report.json`.
 El verificador `oracle/readback_reconstruct.py` reconstruye una traza CPU desde
 las matrices y propiedades ópticas leídas tras reabrir el archivo y exige
 coincidencia con el adaptador a 1e-12; sus pruebas sintéticas no sustituyen
 la ejecución real.
-El informe también registrará la separación entre direcciones de salida
+El informe también registra la separación entre direcciones de salida
 reconstruidas desde las matrices reabiertas. Es un diagnóstico: no cambia
 los umbrales congelados ni convierte una escena fallida en válida.
 Requiere una opción explícita de autorización, limita Blender a un hilo,

@@ -210,7 +210,10 @@ no se usa como marca.
   se adopta una arquitectura nueva en este hito. Siguiente paso: autorización
   explícita y recursos para OPT-003, o nuevo defecto concreto. Sin GPU/Blender.
 
-- GPU ocupada según el usuario; no iniciar ninguna tarea GPU.
+- La restricción previa de GPU ocupada fue sustituida temporalmente por
+  autorización de Fran de una hora desde ~10:20 UTC del 2026-09-29.
+  No iniciar una nueva ejecución GPU después de ~11:20 UTC sin autorización
+  adicional. Ningún proceso de las pruebas seguía activo a las 10:39 UTC.
 - Sondeo de CPU/RAM/disco en `coordinacion/RECURSOS.md`.
 - Ningún proceso Blender quedó tras el smoke anterior; no se ha iniciado
   ninguno en esta sesión de coordinación.
@@ -228,12 +231,19 @@ no se usa como marca.
 - `OPT-002` tiene fase, solape/coherencia y primer detector implementados en
   CPU; OPT-011 acepta acotadamente el motor. El adaptador sigue sin verificarse
   en Blender. Las comprobaciones actuales son exploratorias.
-- `OPT-003` queda bloqueada. DEC-009 cerró el contrato pre-Blender y DEC-010
-  lo enmendó antes de ejecutar. Constructor revisado solo con bpy simulado;
-  el runner MZ A–D y el readback CPU están integrados pero sin ejecución;
-  OPT-012 cerró la auditoría estática; faltan runtime del empty padre y
-  margen de RAM/autorización del usuario.
-  No se permite Blender/GPU.
+- `OPT-003` runtime está completada (DEC-015): Blender 4.5.14 background
+  ejecutó 14/14 fases, siete controles A–D guardados/reabiertos, informe
+  `D:/PROJECTS/.cognition/neuro3d/exp001-20260929T1023Z/report.json`.
+  B-geo cambió el puerto por edición geométrica; D dio 0,25/0,25/0,5.
+  Readback externo máximo 2,26e-13; RSS máximo 130,7 MiB. Sin render.
+- `OPT-005` tiene sonda GPU ideal 7/7 con matrices Blender guardadas:
+  `mz_scene_gpu_ray_probe-v3.json`, máximo 1,10e-12 en potencia total y
+  estado de rayos conforme. La sonda previa fallida y el shader heredado sin
+  paridad están documentados en `Docs/EXP-001-RUNTIME-2026-09-29.md`.
+  No hay paridad del motor general ni red neuronal entrenada.
+- `OPT-013` se solicitó a Claude en el tablón: auditoría independiente de
+  sonda GPU/readbacks, solo lectura y CPU ligera. JEV remoto confirmó
+  aceptación acotada y auditoría posterior; DEC-015. No duplicar esa revisión.
 
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.

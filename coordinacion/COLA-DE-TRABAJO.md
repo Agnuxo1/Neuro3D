@@ -1,6 +1,6 @@
 # Cola única de trabajo de Neuro3D
 
-Estado al 2026-09-29 00:34 UTC. Antes de iniciar una tarea, comprobar aquí que
+Estado al 2026-09-29 10:42 UTC. Antes de iniciar una tarea, comprobar aquí que
 no haya otra ejecución del mismo trabajo.
 
 | ID | Prioridad | Estado | Responsable | Modelo o ruta | Esfuerzo | Recursos reservados | Dependencias | Entregable | Criterio de aceptación |
@@ -14,9 +14,10 @@ no haya otra ejecución del mismo trabajo.
 | OPT-010 | P1 | Entregada; casos reproducidos y corregidos por Codex en CPU | Claude | Oráculo y crítica independientes | Medio | CPU ligera; GPU ninguna | OPT-002, DEC-009 | `coordinacion/respuestas/OPT-010.json` y tablón | Revisión de atribución de detectores y compuerta de anchura; DEC-010 conserva limitaciones. |
 | OPT-011 | P1 | Entregada; hallazgo de constructor no rectangular reproducido y constructor añadido por Codex | Claude | Oráculo y crítica independientes | Medio | CPU ligera; GPU ninguna | Parche actual, DEC-010 | `coordinacion/respuestas/OPT-011.json` | Revisión del constructor nuevo solicitada; motor aceptado solo en CPU. |
 | OPT-012 | P1 | Cerrada solo en auditoría estática; Claude acepta H1/H2/H3 y JEV confirma DEC-014 | Claude | Revisión independiente de solo lectura | Medio | CPU ligera; GPU ninguna | Commit `4785c65`, DEC-014 | Tablón 00:21 y `Blender/tests/` | Aceptación estática acotada; no implica Blender real. |
-| OPT-003 | P1 | Prueba real bloqueada por permiso y recursos; código aceptado estáticamente | Codex | Agente principal; Blender background CPU solo tras autorización | Alto | Ningún Blender/GPU ahora | DEC-014, parentado real, margen de RAM y permiso | Smoke real de dos caminos en `.blend` | Guardar/reabrir objetos y comprobar A–D con umbrales congelados. |
+| OPT-003 | P1 | Runtime Blender completado: 14/14 fases, 7 controles, readback conforme | Codex | Agente principal | Alto | CPU/Blender usados en ventana autorizada; proceso finalizado | DEC-014 y permiso del usuario | `Docs/EXP-001-RUNTIME-2026-09-29.md` y artefactos locales | Guardar/reabrir objetos y comprobar A–D con umbrales congelados: cumplido. |
 | OPT-004 | P2 | En cola | Codex | Revisión manual | Bajo | Recursos interactivos cuando el PC esté libre | Ninguna | Comprobación del panel addon | Botones funcionan y no despachan GPU. |
-| OPT-005 | Pausada | Bloqueada por recursos | Sin asignar | Pendiente de JEV | Pendiente | GPU local reservada por trabajo ajeno | GPU libre y autorización posterior | Investigación de aceleración GPU | Paridad con baseline CPU y presupuesto acordado. |
+| OPT-005 | P1 | Sonda GPU ideal 7/7; falta auditoría y paridad con motor general | Codex | Sonda OpenGL acotada; JEV consultado | Medio | RTX 3090 usada solo en ventana autorizada; sin proceso residual | OPT-003 runtime | `Blender/tests/mz_scene_gpu_ray_probe.py` e informe experimental | No promocionar como red completa: detector, solape, absorción y topología aún ausentes. |
+| OPT-013 | P1 | Solicitada | Claude | Auditoría independiente, solo lectura y CPU ligera | Medio | Sin GPU/Blender hasta nueva autorización | OPT-003/005, DEC-015 | Contraejemplo mínimo o aceptación acotada del shader y compuertas | Verificar geometría real de readback, estado D, referencia de fase, dominio de coseno y límites declarados. |
 
 Una propuesta de Claude no cambia el estado de la cola hasta que Codex la
 compruebe y registre la decisión.

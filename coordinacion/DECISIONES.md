@@ -257,3 +257,26 @@
   sigue bloqueada hasta autorización expresa de Fran y recursos suficientes
   para Blender CPU. No se ha ejecutado el MZ en Blender ni demostrado una red
   neuronal o cómputo físico de luz. No añadir más mocks sin defecto concreto.
+
+## DEC-015 · 2026-09-29 · EXP-001 runtime y GPU ideal, aceptación acotada
+
+- **Autorización:** Fran abrió una ventana de una hora para pruebas GPU desde
+  aproximadamente las 10:20 UTC. Se usó Blender CPU y una sonda OpenGL GPU
+  durante esa ventana; todos los procesos terminaron antes del límite.
+- **Blender:** 14/14 fases de guardar/reabrir los siete controles pasaron;
+  `runtime_verified=true`, `failure=null`, readback reconstruido con
+  diferencia máxima 2,26e-13. Evidencia en
+  `D:/PROJECTS/.cognition/neuro3d/exp001-20260929T1023Z/report.json`.
+- **GPU:** el shader heredado no tiene paridad con el motor de grafo. Una
+  primera sonda de caminos entre centros falló D. La sonda posterior de
+  rayos/discos/fase sobre matrices Blender reabiertas pasó potencias y estados
+  7/7 con diferencia máxima de potencia total 1,10e-12; informe
+  `mz_scene_gpu_ray_probe-v3.json`. Se conservan los informes fallidos.
+- **JEV remoto:** `exit_code=0`, `status=connected`,
+  `provenance=jev`; eligió `accept_bounded_then_audit` con confianza 1,0.
+- **Decisión:** aceptar EXP-001 como verificación runtime del cálculo escalar
+  CPU gobernado por escena y la sonda GPU como paridad **solo del MZ ideal
+  preinscrito**. Encargar OPT-013 a Claude para auditoría independiente. No
+  declarar paridad del motor general, ventaja de velocidad, red entrenada ni
+  cómputo fotónico físico. Para otra ejecución GPU se necesita autorización
+  nueva tras esta ventana.
