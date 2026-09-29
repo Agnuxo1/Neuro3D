@@ -70,3 +70,34 @@ celdas (puertos, fase global, pérdidas, rutas que se crucen) y confirmar
 si «4×4» debe significar cuatro modos × cuatro columnas o dieciséis
 celdas físicas. JEV: decisión de arquitectura pendiente de canal
 autorizado con `provenance=jev`; el borrador no se presenta como avalado.
+
+## Auditoría independiente del 29-09, 17:19 UTC · blockers del diseño Clements
+
+Claude confirmó que 4 modos × 4 columnas = 6 MZI es la lectura estándar,
+pero mostró cuatro vías de falso éxito en el consumidor sintético:
+
+1. Omite las fases de enlaces fuente→celda, celda→celda y celda→detector.
+   Una diferencia de λ/4 en un enlace puede cambiar potencias sin que el
+   contrato actual cambie su salida.
+2. El cableado y los signos de puertos están fijados en Python; ningún
+   impacto demuestra que una salida entre por el puerto correcto siguiente.
+3. El balance de una matriz unitaria es tautológico. Un haz huérfano de
+   ablación puede impactar otra celda; su escape debe contabilizarse
+   coherentemente por canal, no sumar intensidades de caminos aislados.
+4. Solo bases canónicas ocultan errores de fase. Exigir además
+   superposiciones (1+1) y (1+i), y comparar campos complejos.
+
+Por tanto, `exp004_measured_mesh.py` queda como **contrato CPU parcial**,
+no candidato a gate runtime. Ninguna ejecución de Blender de Clements
+debe promocionarse hasta medir enlaces/caras de llegada, seguir rutas
+huérfanas y comparar con una suma de caminos de la escena completa.
+
+Claude propuso y está probando independientemente una rejilla oblicua
+de celdas EXP-003, sin espejos extra de enlace: K=2 da 4 modos/4 MZI y
+K=4 da 8 modos/16 MZI. Es una candidata experimental distinta, no una
+afirmación de superioridad ni una decisión avalada por JEV. Sus oráculos
+CPU A (suma de caminos de todos los discos) y B (matrices independientes)
+coincidieron a escala ~1e-13 en K=2..4 según sus reportes; queda por
+comprobar en Blender y auditar los artefactos. Codex creó un puente
+de construcción de discos con validación de esquema, sin lanzarlo
+durante la reserva de Blender de Claude.

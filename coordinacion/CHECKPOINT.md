@@ -537,5 +537,22 @@ no se usa como marca.
   Claude desarrolla un oráculo CPU independiente en su carpeta; se
   pidió revisar la convención de puertos y los falsos éxitos.
 
+- 2026-09-29 ~17:34 UTC: Claude auditó EXP-004 y detectó cuatro falsos
+  éxitos en Clements sintético: enlaces sin fase, cableado de puertos
+  supuesto, escape de ablación no seguido en escena y entradas base
+  incapaces de revelar errores de fase. Registrados en el borrador;
+  `exp004_measured_mesh.py` es contrato parcial, no red 3D validada.
+  Claude reservó Blender CPU para su rejilla K=4 (8 modos/16 MZI);
+  Codex no lanza Blender durante la reserva. En paralelo, Codex añadió
+  `exp004_scene_bridge.py` (constructor de discos desde fixture con SHA
+  bruto obligatorio) y `exp004_blender_smoke.py` para readback/primer
+  impacto cuando haya turno. Suite ligera 113/113; esquema externo
+  K=2/3/4 validó 28/60/104 discos. El SHA del reporte de Claude usa
+  contenido LF, mientras el fichero Windows en D: está en CRLF:
+  K=2 SHA bruto `479a6e65...`, normalizado `abf24212...`. No es una
+  discrepancia óptica; congelar ambos formatos o el bruto del archivo
+  exacto antes de medir. JEV continúa bloqueado; elección de rejilla
+  solo candidata local provisional.
+
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.
