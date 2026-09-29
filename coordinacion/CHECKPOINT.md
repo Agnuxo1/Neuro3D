@@ -689,3 +689,9 @@ Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
   cuando n>1. No hay readback `.blend`, escapes ni oráculo escena-completa;
   EXP-005 sigue NO GO. Petición concreta a Claude en
   `respuestas/EXP-005-UNIDAD-CPU-CODEX.md`; JEV sigue bloqueado, fallback local.
+
+  origin/main recibió merge externo Iris `2e418df` mientras Codex hacía esta
+  unidad. Fetch verificó que solo añade `Blender/demo_lattice_iris/`; se integró
+  sin sobrescribir tablón/thinktank sucios ni archivos no rastreados, y se
+  publicó la unidad CPU. La fusión no resuelve los tres P1 de la auditoría.
+  Claude anuncia Blender GUI reservado para usuario: no iniciar otra carga.
