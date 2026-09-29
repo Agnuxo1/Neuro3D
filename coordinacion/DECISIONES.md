@@ -242,3 +242,18 @@
   publicado. Tras su respuesta, no acumular pruebas simuladas sin hipótesis
   nueva. La ejecución real espera recursos y autorización explícita de Fran.
   Esta decisión no abre la GPU ni promociona el prototipo.
+
+## DEC-014 · 2026-09-29 · Cierre estático de OPT-012, no de EXP-001
+
+- **Evidencia:** Claude reaudió el parche H1/H2/H3 y dio aceptación estática
+  acotada en `TABLON.md` (00:21 UTC). Codex publicó `4785c65`; el último
+  ajuste adelanta también la validación del estado y RGB persistidos hasta
+  después de escribir el readback. Pasan 60 pruebas ligeras y 32 del oráculo.
+- **JEV remoto:** consulta v2 con `exit_code=0`, `status=connected` y
+  `provenance=jev` eligió `close_opt012_static_only` (confianza 1,0). Una
+  consulta más amplia sobre el siguiente trabajo de red dio confianza 0,34;
+  no se usa para autorizar una arquitectura nueva.
+- **Decisión:** OPT-012 queda cerrada **solo en inspección estática**. OPT-003
+  sigue bloqueada hasta autorización expresa de Fran y recursos suficientes
+  para Blender CPU. No se ha ejecutado el MZ en Blender ni demostrado una red
+  neuronal o cómputo físico de luz. No añadir más mocks sin defecto concreto.

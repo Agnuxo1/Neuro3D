@@ -202,6 +202,13 @@ no se usa como marca.
   JEV remoto (`remote_decision=true`, plan 1790641140-debug) eligió agente
   principal. Pendiente reauditoría independiente de Claude del parche y
   permiso explícito del usuario para cualquier ejecución real de Blender.
+- 2026-09-29 00:34 UTC: Claude reaudió H1/H2/H3 y aceptó estáticamente el
+  protocolo; JEV remoto (`status=connected`, `provenance=jev`, confianza 1,0)
+  confirmó cerrar solo OPT-012 estática (DEC-014). `4785c65` está publicado.
+  No hay nuevos defectos reproducibles ni autorización Blender. La consulta
+  JEV sobre diseñar la red futura tuvo confianza baja (0,34), por lo que no
+  se adopta una arquitectura nueva en este hito. Siguiente paso: autorización
+  explícita y recursos para OPT-003, o nuevo defecto concreto. Sin GPU/Blender.
 
 - GPU ocupada según el usuario; no iniciar ninguna tarea GPU.
 - Sondeo de CPU/RAM/disco en `coordinacion/RECURSOS.md`.
@@ -224,7 +231,7 @@ no se usa como marca.
 - `OPT-003` queda bloqueada. DEC-009 cerró el contrato pre-Blender y DEC-010
   lo enmendó antes de ejecutar. Constructor revisado solo con bpy simulado;
   el runner MZ A–D y el readback CPU están integrados pero sin ejecución;
-  OPT-012 revisa la integración final; después faltan runtime del empty padre y
+  OPT-012 cerró la auditoría estática; faltan runtime del empty padre y
   margen de RAM/autorización del usuario.
   No se permite Blender/GPU.
 
