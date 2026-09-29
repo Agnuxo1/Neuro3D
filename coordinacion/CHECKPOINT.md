@@ -516,5 +516,14 @@ no se usa como marca.
   de estabilidad y causalidad geométrica antes de ejecutar. JEV sigue
   bloqueado; no atribuirle esta decisión. No abrir aún comparativas.
 
+- 2026-09-29 ~17:08 UTC: borrador EXP-004 de malla geométrica cuatro
+  modos × cuatro columnas (seis MZI) en
+  `coordinacion/experimentos/EXP-004-MALLA-BORRADOR.md`. Es un diseño
+  para revisión, no preinscripción ni ejecución. Propone fases solo de
+  raycasts de escena reabierta, controles base/intervención/sham/ablación,
+  conservación y retrazado independiente. Claude recibe una petición
+  concreta de buscar falso éxito y resolver la ambigüedad de «4×4».
+  JEV sigue bloqueado; decisión sustancial en fallback local provisional.
+
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.
