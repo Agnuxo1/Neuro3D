@@ -10,7 +10,7 @@ shift. Arm 2 is a single fold mirror. Units BU, lambda = 0.1.
   BS2 port A (+y) -> detector A (1,3);  port B (+x) -> detector B (2,2)
   L1 = 2 + 0.5 + 1 + 1.5 = 5.0 ; L2 = 2 + 1 = 3.0 ; L1 - L2 = 2.0 = 20 lambda -> base A dark.
 
-Interventions (frozen by EXP-003): delay pair +d along x, d in {0, 0.0025, 0.005};
+Interventions (frozen by EXP-003 + ENMIENDA-001): delay pair +d along x, d in {0, 0.0025, 0.005, 0.0125, 0.025};
 sham: pair +0.01 along z (tangent to both mirror planes); ablation: remove R2.
 Run: python fixture.py  -> validates and writes fixture.json
 """
@@ -42,7 +42,7 @@ FIXTURE = {
     "detector_b": {"position": (2.0, 2.0, 0.0), "radius": 0.15},
     "hit_order": {"arm1": ["bs1", "r1", "r2", "f1", "bs2"], "arm2": ["bs1", "m2", "bs2"]},
     "delay_pair": ["r1", "r2"],
-    "interventions": {"delay_d": [0.0, 0.0025, 0.005], "sham_z": 0.01, "ablate": "r2"},
+    "interventions": {"delay_d": [0.0, 0.0025, 0.005, 0.0125, 0.025], "sham_z": 0.01, "ablate": "r2"},
 }
 
 
