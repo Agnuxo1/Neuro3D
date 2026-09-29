@@ -1,6 +1,6 @@
 # Checkpoint factual de Neuro3D
 
-Actualizado: 2026-09-28 23:49 UTC.
+Actualizado: 2026-09-29 00:03 UTC.
 
 ## Objetivo
 
@@ -182,6 +182,12 @@ no se usa como marca.
   distinta y valores no finitos (`passes=false`, razón `malformed_*`).
   No cambia el cálculo óptico ni umbrales. La verificación es solo CPU;
   Blender y GPU no se ejecutaron.
+- Claude confirmó el falso positivo RGB/NaN y su corrección. JEV remoto
+  (`provenance=jev`) recomendó cerrar la fase estática con una última
+  auditoría integrada de Claude y después esperar permiso/recursos, en vez
+  de seguir acumulando mocks (DEC-013). OPT-012 se encargó sobre el commit
+  `6fe9dd1`; EXP-001 queda congelado salvo defecto reproducible. No hay
+  autorización para Blender ni GPU y no se ha ejecutado el MZ allí.
 
 ## Recursos y procesos
 
@@ -206,7 +212,7 @@ no se usa como marca.
 - `OPT-003` queda bloqueada. DEC-009 cerró el contrato pre-Blender y DEC-010
   lo enmendó antes de ejecutar. Constructor revisado solo con bpy simulado;
   el runner MZ A–D y el readback CPU están integrados pero sin ejecución;
-  falta revisión final de la integración, verificar runtime del empty padre y
+  OPT-012 revisa la integración final; después faltan runtime del empty padre y
   margen de RAM/autorización del usuario.
   No se permite Blender/GPU.
 

@@ -1,0 +1,9 @@
+{
+  "mode": "v2-query",
+  "exit_code": 0,
+  "status": "connected",
+  "provenance": "jev",
+  "model": "jev-1.13.0",
+  "decision": {"next_step": {"value": "final_audit_then_wait", "confidence": 0.99}},
+  "scope": "Final integrated read-only audit before requesting authorization for Blender; no runtime permission implied."
+}

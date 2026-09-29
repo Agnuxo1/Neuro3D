@@ -227,3 +227,18 @@
   ni readback. Si el runtime falla, se registra sin reajuste post hoc.
 - **Gate:** sigue faltando verificación Blender, margen de recursos y
   autorización explícita del usuario.
+
+## DEC-013 · 2026-09-29 · Cierre de la fase estática OPT-003
+
+- **Estado:** el runner/readback MZ está implementado, pero nunca ejecutado
+  en Blender. Pasan 56 pruebas ligeras del área y 32 del oráculo. Claude
+  confirmó el arreglo del falso positivo RGB; no ha emitido una auditoría
+  final integrada sobre todos los parches posteriores.
+- **JEV remoto:** consulta v2 `exit_code=0`, `status=connected`,
+  `provenance=jev`; eligió `final_audit_then_wait` con confianza 0,99.
+  Recibo `jev/opt-003-next-20260929-result.json`.
+- **Decisión:** congelar cambios de alcance EXP-001 salvo defecto reproducible;
+  encargar a Claude OPT-012, auditoría integrada de solo lectura del commit
+  publicado. Tras su respuesta, no acumular pruebas simuladas sin hipótesis
+  nueva. La ejecución real espera recursos y autorización explícita de Fran.
+  Esta decisión no abre la GPU ni promociona el prototipo.

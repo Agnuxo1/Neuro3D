@@ -1,6 +1,6 @@
 # Cola única de trabajo de Neuro3D
 
-Estado al 2026-09-28 22:50 UTC. Antes de iniciar una tarea, comprobar aquí que
+Estado al 2026-09-29 00:03 UTC. Antes de iniciar una tarea, comprobar aquí que
 no haya otra ejecución del mismo trabajo.
 
 | ID | Prioridad | Estado | Responsable | Modelo o ruta | Esfuerzo | Recursos reservados | Dependencias | Entregable | Criterio de aceptación |
@@ -13,7 +13,8 @@ no haya otra ejecución del mismo trabajo.
 | OPT-009 | P1 | Entregada; referencia CPU reproducida por Codex | Claude | Referencia geométrica independiente | Medio | CPU ligera; GPU ninguna | DEC-006 | `coordinacion/respuestas/OPT-009.json`, oráculo separado | Ecuación de frente de onda y caso falsable, categorías de pérdida sin duplicar el motor. |
 | OPT-010 | P1 | Entregada; casos reproducidos y corregidos por Codex en CPU | Claude | Oráculo y crítica independientes | Medio | CPU ligera; GPU ninguna | OPT-002, DEC-009 | `coordinacion/respuestas/OPT-010.json` y tablón | Revisión de atribución de detectores y compuerta de anchura; DEC-010 conserva limitaciones. |
 | OPT-011 | P1 | Entregada; hallazgo de constructor no rectangular reproducido y constructor añadido por Codex | Claude | Oráculo y crítica independientes | Medio | CPU ligera; GPU ninguna | Parche actual, DEC-010 | `coordinacion/respuestas/OPT-011.json` | Revisión del constructor nuevo solicitada; motor aceptado solo en CPU. |
-| OPT-003 | P1 | Runner/readback integrados, solo revisión CPU/estática; prueba real bloqueada | Codex | Agente principal; Blender background CPU solo tras autorización | Alto | CPU ligera ahora; GPU ninguna | DEC-009/010/011, revisión final Claude del runner, parentado real, margen de RAM y permiso | Smoke real de dos caminos en `.blend` | Guardar/reabrir objetos y comprobar A–D con umbrales congelados. |
+| OPT-012 | P1 | Solicitada: auditoría final integrada y acotada de OPT-003 | Claude | Revisión independiente de solo lectura | Medio | CPU ligera; GPU ninguna | Commit `6fe9dd1`, DEC-012 | `coordinacion/tareas/OPT-012.md` y respuesta en tablón | Aceptación estática acotada o hallazgos reproducibles; no ejecutar Blender. |
+| OPT-003 | P1 | Código congelado para auditoría OPT-012; prueba real bloqueada | Codex | Agente principal; Blender background CPU solo tras autorización | Alto | Ningún Blender/GPU ahora | DEC-009/010/011/012, OPT-012, parentado real, margen de RAM y permiso | Smoke real de dos caminos en `.blend` | Guardar/reabrir objetos y comprobar A–D con umbrales congelados. |
 | OPT-004 | P2 | En cola | Codex | Revisión manual | Bajo | Recursos interactivos cuando el PC esté libre | Ninguna | Comprobación del panel addon | Botones funcionan y no despachan GPU. |
 | OPT-005 | Pausada | Bloqueada por recursos | Sin asignar | Pendiente de JEV | Pendiente | GPU local reservada por trabajo ajeno | GPU libre y autorización posterior | Investigación de aceleración GPU | Paridad con baseline CPU y presupuesto acordado. |
 
