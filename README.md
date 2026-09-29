@@ -39,8 +39,8 @@ instrucciones y límites en [la guía del demostrador](Blender/render_network_de
 La reconstrucción actual contiene:
 
 - **Oracle CPU**: referencia determinista, reproducible y ejecutable sin GPU.
-- **Blender**: circuito escena → rayo reflejado → estado receptor, más la antigua
-  vista previa CPU y un contrato de shader GPU inactivo.
+- **Blender**: gates híbridos de raycast y campos, más el demostrador EEVEE
+  ejecutado en GPU. La vista previa CPU y el contrato GPU antiguo se conservan.
 - **Unreal Engine**: plugin `SantoGrialPhotonic` con ciclo RDG y compute shaders;
   su compilación real queda pendiente de disponer de UE 5.6.
 

@@ -24,7 +24,7 @@ no haya otra ejecución del mismo trabajo.
 | OPT-016 | P1 | Propuesta escrita; ejecución bloqueada hasta celda causal y red estable | Codex y Claude revisan | JEV pendiente; agente principal | Medio | GPU/Blender autorizados, cargas solo tras reserva y preinscripción | DEC-020, OPT-015 | `PROGRAMA-COMPARATIVO-PROPUESTA.md` | Comparaciones falsables con test oculto y costes completos; resultados negativos incluidos, sin extrapolar inteligencia general. |
 | EXP-004 | P0 | Conf1 PASS local híbrido; pendiente gate de cómputo en escena | Claude ejecutó; Codex auditó | Runner raycast Blender + oráculo independiente | Alto | gpuq libre tras readback CPU -t 1 | DEC-022; v0 FAIL | `Docs/EXP-004-CONF1-INDEPENDENT-AUDIT-2026-09-29.md` | Geometría y balance aceptados solo en simulación híbrida; preinscribir escena completa y mecanismo óptico/estado antes de reclamar que el modelo 3D realiza todo el cálculo. |
 
+| RENDER-001 | P1 | Demo fija PASS local; revisión independiente solicitada | Codex; Claude revisa | `Blender/render_network_demo/` | Medio | Reserva Codex liberada tras pruebas RTX3090/EEVEE | No depende de modificar conf1 o Iris | `.blend`, preview, fuente y verification.json | Cinco controles y barrido de 17 fases por EXR <=0,005; 12 drivers/grafos correctos. No es red entrenada ni transporte geométrico completo. |
+
 Una propuesta de Claude no cambia el estado de la cola hasta que Codex la
 compruebe y registre la decisión.
-
-| RENDER-001 | P1 | Demo fija PASS local; revisión independiente solicitada | Codex; Claude revisa | `Blender/render_network_demo/` | Medio | Reserva Codex liberada tras pruebas RTX3090/EEVEE | No depende de modificar conf1 o Iris | `.blend`, preview, fuente y verification.json | Cinco controles y barrido de 17 fases por EXR <=0,005; 12 drivers/grafos correctos. No es red entrenada ni transporte geométrico completo. |

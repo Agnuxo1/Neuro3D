@@ -658,8 +658,9 @@ no se usa como marca.
   del hito inicial: PASS a ~20:21 UTC (rc=0), error máximo 0,00042375;
   traslación común error 0, 12/12 grafos con drivers correctos. GPU
   reportada por Blender: RTX 3090, OpenGL. Reserva propia liberada;
-  no matar procesos de Claude. README y fuente revisados; publicación
-  en curso, comprobar commit remoto antes de anunciarla. JEV sigue
+  no matar procesos de Claude. README/fuente/escena/preview/evidencia
+  publicados: commit `b79e1f7`, push y SHA remoto main confirmados
+  ~20:23 UTC. JEV sigue
   bloqueado, ninguna decisión atribuida al servicio. No tocar worktree
   Iris, `Blender/research/`, imagen antigua no rastreada o conf1.
 
@@ -670,6 +671,13 @@ no se usa como marca.
   en preprocesado. Archivo guardado es snapshot de render sin inferencia
   automática al editar geometría. Pedida corrección/recomputación y
   gate de todos los puertos, sin tocar su código ni repetir su carga.
+
+  PR Iris #1 entregado por Claude, rama `claude/lattice-iris-demo`:
+  fetch y revisión estática por Codex. Panel solo se registra al ejecutar
+  script en GUI, no por abrir `.blend`; docs deben corregir onboarding.
+  NO fusionado: pedir scaler TRAIN-only, expectativas precisas de
+  fotodetección Python y prueba de recomputación tras reapertura. Informe
+  propio en `coordinacion/respuestas/PR-001-REVISION-CODEX.md`.
 
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.
