@@ -431,3 +431,14 @@ if __name__ == "__main__":
         main(sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else [])
     else:
         register()   # GUI: use the Neuro3D tab in the 3D view sidebar
+
+        def _present():
+            for win in bpy.context.window_manager.windows:
+                for area in win.screen.areas:
+                    if area.type == "VIEW_3D":
+                        sp = area.spaces.active; sp.shading.type = "RENDERED"; sp.region_3d.view_perspective = "CAMERA"
+                        sp.show_region_ui = True
+                        try: sp.overlay.show_overlays = False
+                        except Exception: pass
+            return None
+        bpy.app.timers.register(_present, first_interval=1.0)
