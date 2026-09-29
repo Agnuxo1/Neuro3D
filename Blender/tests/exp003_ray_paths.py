@@ -62,7 +62,8 @@ def trace_paths(cast, source_position, source_direction, expected_routes=None):
             if not math.isfinite(distance) or distance <= EPSILON / 2:
                 raise ValueError("Non-progressing or invalid scene ray hit")
             segments.append({"object": name, "point": hit_point,
-                             "length": distance})
+                             "incoming_direction": tuple(ray),
+                             "length": distance, "status": "hit"})
             point = hit_point
             if name.startswith("unmapped:"):
                 status = "invalid_unmapped_hit"

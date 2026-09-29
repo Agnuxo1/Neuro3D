@@ -484,5 +484,16 @@ no se usa como marca.
   suite ligera 105/105. No nueva corrida Blender/GPU. Siguiente:
   runner save/reopen con esos cuatro gates; JEV sigue bloqueado.
 
+- 2026-09-29 16:42 UTC: Codex escribió `exp003_blender_run.py`, aún
+  **sin ejecutar**. En un proceso Blender CPU dedicado crea base,
+  guarda/reabre; para cada uno de cinco d, sham y ablación reabre base,
+  re-resuelve objetos, edita los existentes, guarda tratamiento,
+  reabre, verifica ruta/geométrica/digest/matrices/potencias y anclaje
+  absoluto. Usa depsgraph nuevo en cada lectura, `expected_routes`
+  y salida JSON; las trazas ahora registran dirección y status por
+  impacto. Sintaxis AST válida y suite CPU ligera 105/105. Faltan
+  auditoría estática de Claude, wrapper `--python-exit-code 1`, reserva
+  y ejecución real. JEV no consultable por bloqueo ya documentado.
+
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.
