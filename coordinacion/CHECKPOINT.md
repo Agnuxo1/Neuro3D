@@ -245,6 +245,13 @@ no se usa como marca.
 - `OPT-013` se solicitó a Claude en el tablón: auditoría independiente de
   sonda GPU/readbacks, solo lectura y CPU ligera. JEV remoto confirmó
   aceptación acotada y auditoría posterior; DEC-015. No duplicar esa revisión.
+- 2026-09-29 11:04 UTC: sin respuesta nueva de Claude. JEV remoto eligió
+  diseñar una celda ajustable por geometría (confianza 1,0), agente principal
+  sin paralelismo. `OPT-014` y EXP-002 quedaron preinscritos con dos objetivos,
+  control geométrico congelado, coherencia nula y readback final. Solo una
+  comprobación de viabilidad de la **fórmula ideal** (20 pasos por objetivo);
+  no se ejecutó el motor, Blender ni GPU. Claude debe revisar el contrato
+  después de OPT-013, antes de la corrida confirmatoria.
 
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.

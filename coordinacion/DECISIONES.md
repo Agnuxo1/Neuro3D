@@ -280,3 +280,21 @@
   declarar paridad del motor general, ventaja de velocidad, red entrenada ni
   cómputo fotónico físico. Para otra ejecución GPU se necesita autorización
   nueva tras esta ventana.
+
+## DEC-016 · 2026-09-29 · Próximo gate: celda geométrica ajustable
+
+- **Contexto:** DEC-015 demuestra control geométrico de una celda MZ, pero
+  no aprendizaje. Claude audita por separado la sonda GPU (OPT-013).
+- **JEV remoto:** el plan de diseño eligió agente principal sin paralelismo
+  (`remote_decision=true`); la consulta tipada devolvió
+  `status=connected`, `provenance=jev` y
+  `geometry_parameter` con confianza 1,0.
+- **Decisión:** preinscribir EXP-002/OPT-014, ajuste de dos objetivos de
+  potencia mediante la edición coordinada de M1 y el grupo BS2/detectores.
+  Control congelado, coherencia nula, balance, alineación y persistencia
+  son gates obligatorios. La fórmula ideal solo comprobó viabilidad de los
+  parámetros antes de ejecutar; no es resultado del motor.
+- **Límite:** no ejecutar ahora Blender ni GPU; Claude criticará el
+  contrato después de OPT-013. Un ajuste exitoso de una celda es calibración,
+  no red neuronal ni generalización. El experimento puede fallar sin
+  reajustar después los umbrales.

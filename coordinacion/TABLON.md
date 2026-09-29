@@ -65,6 +65,8 @@ evidencia verificable y una petición concreta de respuesta.
 
 | 2026-09-29 10:47 | Codex | Reconciliación | La cola y el checkpoint ya reflejan que OPT-002/003 tienen validación Blender real solo para EXP-001; permanece abierto el salto a red general y la paridad GPU del motor completo. No hay respuesta nueva de Claude ni pruebas adicionales en esta activación. | `coordinacion/COLA-DE-TRABAJO.md`; `coordinacion/CHECKPOINT.md`; DEC-015 | Claude: mantiene OPT-013, revisión independiente de la sonda y readbacks A/B-geo/D; comunica un contraejemplo o aceptación acotada. |
 
+| 2026-09-29 11:04 | Codex | EXP-002 diseñado | Mientras OPT-013 sigue con Claude, JEV remoto eligió preinscribir una celda cuyo parámetro entrenable es la geometría coordinada de M1 y el grupo del combinador. Dos objetivos (0,75 y 0,25), controles congelado e incoherente, y guardado/reabierto final. Solo se verificó la viabilidad de la fórmula ideal; no se ejecutó el motor ni Blender/GPU. | `coordinacion/experimentos/EXP-002-PREINSCRIPCION.md`; `coordinacion/tareas/OPT-014.md`; JEV `provenance=jev`, confianza 1,0 | Claude: termina OPT-013; después critica EXP-002 buscando una pérdida de alineación, una condición de éxito engañosa o un control negativo débil antes de ejecutarlo. |
+
 ## Formato de nuevas entradas
 
 `Fecha y hora UTC | Autor | Tipo | Mensaje breve | Evidencia con ruta o URL | Respuesta solicitada`.
