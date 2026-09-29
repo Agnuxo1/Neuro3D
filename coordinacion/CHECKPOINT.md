@@ -261,6 +261,14 @@ no se usa como marca.
   `py_compile` aislado no pudo escribir `__pycache__` por permisos del
   sandbox; la importación y los 65 tests sí pasaron. Claude revisará el
   contrato y esta rutina tras OPT-013.
+- 2026-09-29 11:33 UTC: sin respuesta nueva de Claude. `OPT-014` añadió
+  `Blender/tests/mz_exp002_geometry.py`: captura A no rectangular y coloca
+  M1 + el grupo BS2/detectores desde posiciones base, sin sumar ediciones
+  sucesivas. Cuatro tests con objetos mock; suite ligera 69/69. Lectura
+  independiente del `A.readback.json` real: máximo error de posición
+  2,07e-8 BU frente al baseline previsto y parentado esperado. Solo
+  preparación estática/CPU; no se corrió el motor, Blender ni GPU.
+  Falta evaluador de escena y revisión de Claude antes de ejecución EXP-002.
 
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.

@@ -1,0 +1,86 @@
+"""Mock-object tests for absolute placement; no bpy, optics engine or GPU."""
+
+import math
+from pathlib import Path
+import sys
+import unittest
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from mz_exp001_plan import controls
+from mz_exp002_geometry import capture_baseline, place_u
+
+
+class FakeObject:
+    def __init__(self, xyz, parent=None):
+        self.location = list(xyz)
+        self.parent = parent
+        self.phase_shift = 0.0
+
+
+def roles_a():
+    group = FakeObject((2.0, 2.0, 0.0))
+    mirror1 = FakeObject((2.0 - 2.0 / math.sqrt(3.0), 0.0, 0.0))
+    return {
+        "mz_combiner_group": group,
+        "mz_mirror1": mirror1,
+        "mz_mirror2": FakeObject((0.0, 2.0 - 2.0 / math.sqrt(3.0), 0.0)),
+        "mz_source": FakeObject((-1.0, 0.0, 0.0)),
+        "mz_bs1": FakeObject((0.0, 0.0, 0.0)),
+        "mz_bs2": FakeObject((0.0, 0.0, 0.0), group),
+        "mz_detector_a": FakeObject((1.0, 0.0, 0.0), group),
+        "mz_detector_b": FakeObject((0.0, 1.0, 0.0), group),
+    }
+
+
+class EXP002GeometryTests(unittest.TestCase):
+    def test_absolute_path_matches_frozen_bgeo_and_restores_a(self):
+        roles = roles_a()
+        baseline = capture_baseline(roles)
+        before = {name: tuple(obj.location) for name, obj in roles.items()}
+        edit = controls()[1]
+        place_u(roles, baseline, 1.0)
+        for i in range(3):
+            self.assertAlmostEqual(roles["mz_combiner_group"].location[i],
+                                   baseline.group[i] + edit.group_delta[i])
+            self.assertAlmostEqual(roles["mz_mirror1"].location[i],
+                                   baseline.mirror1[i] + edit.mirror1_delta[i])
+        for name in before.keys() - {"mz_combiner_group", "mz_mirror1"}:
+            self.assertEqual(tuple(roles[name].location), before[name])
+        for u in (0.1, 0.9, 0.1, 0.0):
+            place_u(roles, baseline, u)
+        self.assertEqual(tuple(roles["mz_combiner_group"].location), baseline.group)
+        self.assertEqual(tuple(roles["mz_mirror1"].location), baseline.mirror1)
+
+    def test_repeated_gradient_probes_do_not_accumulate_motion(self):
+        roles = roles_a()
+        baseline = capture_baseline(roles)
+        place_u(roles, baseline, .1001)
+        place_u(roles, baseline, .0999)
+        place_u(roles, baseline, .1)
+        final = tuple(roles["mz_combiner_group"].location)
+        direct = roles_a()
+        place_u(direct, capture_baseline(direct), .1)
+        self.assertEqual(final, tuple(direct["mz_combiner_group"].location))
+
+    def test_reject_wrong_layout_or_parent_before_edit(self):
+        roles = roles_a()
+        roles["mz_mirror1"].location[0] = 2.0
+        with self.assertRaisesRegex(ValueError, "nonrect60"):
+            capture_baseline(roles)
+        roles = roles_a()
+        roles["mz_detector_a"].parent = None
+        with self.assertRaisesRegex(ValueError, "parented"):
+            capture_baseline(roles)
+
+    def test_reject_bad_u_without_motion(self):
+        roles = roles_a()
+        baseline = capture_baseline(roles)
+        for bad in (-.01, 1.01, float("nan"), float("inf")):
+            with self.subTest(bad=bad), self.assertRaises(ValueError):
+                place_u(roles, baseline, bad)
+        self.assertEqual(tuple(roles["mz_combiner_group"].location), baseline.group)
+        self.assertEqual(tuple(roles["mz_mirror1"].location), baseline.mirror1)
+
+
+if __name__ == "__main__":
+    unittest.main()
