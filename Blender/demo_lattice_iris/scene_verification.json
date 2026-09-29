@@ -1,0 +1,8 @@
+{
+ "scene_test_acc": 0.9666666666666667,
+ "scene_train_acc": 0.9833333333333333,
+ "scene_vs_model_max_power_diff": 4.1493478219523094e-05,
+ "ray_casts_total": 8450242,
+ "seconds": 286.982328414917,
+ "per_sample_ms": 1913.2155227661133
+}
