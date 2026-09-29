@@ -229,8 +229,9 @@ no se usa como marca.
 
 - `OPT-001` ya está entregada. `DEC-005` registra la revisión de Codex/JEV.
 - `OPT-002` tiene fase, solape/coherencia y primer detector implementados en
-  CPU; OPT-011 acepta acotadamente el motor. El adaptador sigue sin verificarse
-  en Blender. Las comprobaciones actuales son exploratorias.
+  CPU; OPT-011 aceptó acotadamente el motor. DEC-015 ya verificó el adaptador
+  con Blender real solo en los siete controles EXP-001. La generalización a
+  red entrenable y la paridad GPU del motor completo siguen pendientes.
 - `OPT-003` runtime está completada (DEC-015): Blender 4.5.14 background
   ejecutó 14/14 fases, siete controles A–D guardados/reabiertos, informe
   `D:/PROJECTS/.cognition/neuro3d/exp001-20260929T1023Z/report.json`.
