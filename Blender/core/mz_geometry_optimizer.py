@@ -77,7 +77,8 @@ def _measure(u: float, evaluate: Callable[[float], OpticalResult]) -> Observatio
 
 
 def fit_port_a(
-    evaluate: Callable[[float], OpticalResult], target: float, start: float
+    evaluate: Callable[[float], OpticalResult], target: float, start: float,
+    *, restore: Callable[[float], None] | None = None,
 ) -> FitRun:
     """Apply the frozen EXP-002 finite-difference update to a scene evaluator.
 
@@ -90,26 +91,31 @@ def fit_port_a(
         raise ValueError("target and start must be finite fractions")
     observations: list[Observation] = []
     u = start
-    for updates in range(MAX_UPDATES + 1):
-        here = _measure(u, evaluate)
-        observations.append(here)
-        if abs(here.power_a - target) <= TARGET_TOLERANCE:
-            return FitRun(target, start, u, updates, True, "target", tuple(observations))
-        if updates == MAX_UPDATES:
-            break
-        lo, hi = max(0.0, u - H), min(1.0, u + H)
-        low = _measure(lo, evaluate)
-        high = _measure(hi, evaluate)
-        observations.extend((low, high))
-        gradient = (high.power_a - low.power_a) / (hi - lo)
-        if not math.isfinite(gradient):
-            raise ValueError("non-finite optical gradient")
-        if gradient == 0.0:
-            # The high probe was the last callback; restore the reported u
-            # so a Blender caller cannot accidentally save the probe scene.
-            observations.append(_measure(u, evaluate))
-            return FitRun(target, start, u, updates, False, "zero_gradient",
-                          tuple(observations))
-        u = min(1.0, max(0.0, u + STEP * (target - here.power_a) * gradient))
-    return FitRun(target, start, u, MAX_UPDATES, False, "max_updates",
-                  tuple(observations))
+    try:
+        for updates in range(MAX_UPDATES + 1):
+            here = _measure(u, evaluate)
+            observations.append(here)
+            if abs(here.power_a - target) <= TARGET_TOLERANCE:
+                return FitRun(target, start, u, updates, True, "target", tuple(observations))
+            if updates == MAX_UPDATES:
+                break
+            lo, hi = max(0.0, u - H), min(1.0, u + H)
+            low = _measure(lo, evaluate)
+            high = _measure(hi, evaluate)
+            observations.extend((low, high))
+            gradient = (high.power_a - low.power_a) / (hi - lo)
+            if not math.isfinite(gradient):
+                raise ValueError("non-finite optical gradient")
+            if gradient == 0.0:
+                # The high probe was last; retrace at the reported u.
+                observations.append(_measure(u, evaluate))
+                return FitRun(target, start, u, updates, False, "zero_gradient",
+                              tuple(observations))
+            u = min(1.0, max(0.0, u + STEP * (target - here.power_a) * gradient))
+        return FitRun(target, start, u, MAX_UPDATES, False, "max_updates",
+                      tuple(observations))
+    finally:
+        # A live runner passes the geometry-only placement callback. Restore
+        # even when a probe raises, without issuing another optical trace.
+        if restore is not None:
+            restore(u)

@@ -313,6 +313,16 @@ no se usa como marca.
   promociona. La ventana GPU de Fran finalizó ~11:20 UTC; no hay permiso
   vigente para otra ejecución GPU/Blender aunque el tablón de Claude cite
   la autorización anterior.
+- 2026-09-29 13:03 UTC: OPT-014 `fit_port_a` acepta un callback opcional
+  `restore(u)` que reubica la escena al parámetro vigente en `finally`,
+  incluso si una sonda de gradiente falla; no vuelve a trazar al restaurar.
+  Dos tests mock nuevos cubren excepción y éxito, suite ligera 78/78.
+  El futuro runner debe pasar `place_u`/`place_sham_u` como callback; no
+  hay ejecución Blender/GPU. Claude local publicó OPT-007 exploratorio
+  CPU (PyTorch, 1500 épocas), sin escena Blender real. Su nota anuncia
+  continuar con GPU, pero el permiso local terminó ~11:20 UTC; se pide
+  detener GPU/Blender hasta una nueva autorización. No se integra su
+  carpeta no rastreada ni se reclama mejora óptica física.
 
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.

@@ -61,6 +61,30 @@ class GeometryOptimizerProcedureTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "fractions"):
             fit_port_a(lambda _u: fake_result(.2), float("nan"), .1)
 
+    def test_exception_at_gradient_probe_restores_current_geometry(self):
+        scene = {"u": None}
+        def evaluate(u):
+            scene["u"] = u
+            if u > .1:
+                raise RuntimeError("probe failed")
+            return fake_result(.02)
+        with self.assertRaisesRegex(RuntimeError, "probe failed"):
+            fit_port_a(evaluate, .75, .1,
+                       restore=lambda u: scene.__setitem__("u", u))
+        self.assertEqual(scene["u"], .1)
+
+    def test_success_also_restores_final_geometry_without_extra_trace(self):
+        scene = {"u": None, "traces": 0}
+        def evaluate(u):
+            scene["u"] = u
+            scene["traces"] += 1
+            return fake_result(math.sin(math.pi * u / 2) ** 2)
+        run = fit_port_a(evaluate, .75, .1,
+                         restore=lambda u: scene.__setitem__("u", u))
+        self.assertTrue(run.converged)
+        self.assertEqual(scene["u"], run.final_u)
+        self.assertEqual(scene["traces"], len(run.observations))
+
 
 if __name__ == "__main__":
     unittest.main()
