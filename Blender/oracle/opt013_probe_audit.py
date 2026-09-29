@@ -35,6 +35,7 @@ import copy
 import json
 import math
 from pathlib import Path
+import struct
 import sys
 import types
 
@@ -48,7 +49,10 @@ for p in (str(HERE), str(TESTS), str(CORE)):
 # The probe modules import glfw/moderngl at module level; stub them so the
 # pure-Python packing code can be imported unchanged. No context is created.
 for _name in ("glfw", "moderngl"):
-    sys.modules.setdefault(_name, types.ModuleType(_name))
+    try:
+        __import__(_name)
+    except ImportError:
+        sys.modules[_name] = types.ModuleType(_name)
 
 import mz_scene_gpu_ray_probe as probe  # noqa: E402  (real host code)
 from geometry_oracle import NonRectMZ  # noqa: E402
@@ -255,6 +259,34 @@ def exp001_records():
 
 def run_probe_on(record):
     return host_accepts(emulate_shader(probe.input_record(record)), record["result"])
+
+
+def run_glsl(records: list[dict]) -> list[list[float]] | None:
+    """Execute the probe's REAL GLSL source on a headless software GL.
+
+    Uses Mesa llvmpipe through EGL (CPU, no GPU). Returns None if no OpenGL
+    4.3 context can be created. This checks the shader text itself (GLSL
+    semantics, FP64 path, buffer layout), not NVIDIA arithmetic.
+    """
+    try:
+        import moderngl as mgl
+        ctx = mgl.create_standalone_context(require=430, backend="egl")
+    except Exception:
+        return None
+    try:
+        values = [v for r in records for v in probe.input_record(r)]
+        shader = ctx.compute_shader(probe.SHADER)
+        src = ctx.buffer(struct.pack(f"<{len(values)}d", *values))
+        dst = ctx.buffer(reserve=len(records) * probe.OUT_STRIDE * 8)
+        src.bind_to_storage_buffer(0)
+        dst.bind_to_storage_buffer(1)
+        shader["control_count"].value = len(records)
+        shader.run(group_x=(len(records) + 31) // 32)
+        ctx.finish()
+        flat = struct.unpack(f"<{len(records) * probe.OUT_STRIDE}d", dst.read())
+        return [list(flat[i * 12:(i + 1) * 12]) for i in range(len(records))]
+    finally:
+        ctx.release()
 
 
 # --------------------------------------------------------------------------

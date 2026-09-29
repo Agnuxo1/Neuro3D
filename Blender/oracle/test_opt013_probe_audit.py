@@ -90,5 +90,32 @@ class PhaseGuardFragility(unittest.TestCase):
         self.assertGreater(raised, 30)
 
 
+class RealGlslOnSoftwareGL(unittest.TestCase):
+    """F7: runs the probe's actual GLSL text on Mesa llvmpipe (CPU, no GPU)."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.records = list(audit.exp001_records().values())
+        if audit.run_glsl(cls.records[:1]) is None:
+            raise unittest.SkipTest("no headless OpenGL 4.3 context (Mesa llvmpipe/EGL)")
+
+    def test_unsuffixed_two_pi_literal_is_single_precision(self):
+        out = audit.run_glsl(self.records)
+        b_geo = out[1]
+        self.assertGreater(abs(b_geo[10]) - math.pi, 5e-8)   # float32 2*pi
+        self.assertFalse(audit.host_accepts(b_geo, self.records[1]["result"])["accepted"])
+
+    def test_lf_suffix_restores_bit_exact_fp64(self):
+        original = audit.probe.SHADER
+        try:
+            audit.probe.SHADER = original.replace("6.2831853071795864769", "6.2831853071795864769LF")
+            out = audit.run_glsl(self.records)
+        finally:
+            audit.probe.SHADER = original
+        for rec, y in zip(self.records, out):
+            self.assertEqual(y, audit.emulate_shader(audit.probe.input_record(rec)))
+            self.assertTrue(audit.host_accepts(y, rec["result"])["accepted"])
+
+
 if __name__ == "__main__":
     unittest.main()
