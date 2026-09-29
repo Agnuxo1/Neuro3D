@@ -447,5 +447,20 @@ no se usa como marca.
   suite CPU ligera 98/98. La observación Blender sigue sin ejecución
   real; no se usó GPU/Blender. JEV permanece bloqueado.
 
+- 2026-09-29 16:02 UTC: primer runtime Blender CPU real de OPT-015.
+  Constructor de seis discos con fixture SHA-256 congelado, cara plana
+  de 64 vértices, roles y sin auxiliares; `observe_scene_disks` y gate
+  absoluto pasaron tras `view_layer.update()`. `scene.ray_cast` devolvió
+  brazo 1 R1→R2→F1→BS2, L1=4,9999999702 BU, y brazo 2 M2→BS2,
+  L2=2,9999998808 BU (ambos a <1,2e-7 BU de referencia).
+  Blender 4.5.14, background `-t 1`, `CUDA_VISIBLE_DEVICES=-1`, sin render,
+  sin guardado y sin GPU intencional; gpuq libre, ~11,3 GiB RAM libre,
+  sin otro Blender observado antes. Primer arranque falló por ruta de
+  importación, corregida; Blender reportó exit 0 pese a traceback, por
+  lo que futuros wrappers deben exigir marcador `EXP003_SMOKE` además
+  del código de salida. Sonda base exitosa, NO EXP-003 completo: faltan
+  cinco d, sham, ablación, potencias, balance y save/reopen. El proceso
+  terminó. JEV sigue bloqueado.
+
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.
