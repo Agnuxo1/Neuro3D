@@ -732,3 +732,15 @@ Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
   acotada, PR NO fusionado por Codex; Fran decide. 29/30 completo es reporte Claude,
   no repetido aquí. Propuesta EXP-006: caminos a campos GPU con invalidación,
   derivadas físicas y comparación de costes completos; depende de gate EXP-005.
+
+- 2026-09-29 21:11 UTC: sin respuestas nuevas de Claude, unidad independiente CPU
+  de diagnóstico modal: columnas de transferencia + retrazado directo 1+1/1+i,
+  Gram y todos los canales det/escape. Seis regresiones nuevas, total 46/46
+  sintéticos PASS (0,356s). Fase errónea +0,02 solo en pares pasa intensidad pero
+  falla campo; dos fuentes coincidentes no se cuentan como modos independientes.
+  Límite 1–8 entradas, 4096 rayos/traza; no ejecutar multicelda sin contrato.
+  `geometry_gate_passed=False` deliberado, EXP-005 sigue NO GO multicelda.
+  No Blender/GPU, no benchmark de capacidad ni trabajo duplicado de Claude.
+  Petición acotada en `respuestas/EXP-005-AUDITORIA-MODOS-CODEX.md`.
+  JEV bloqueado, fallback local. Próximo paso: crítica de modos/oráculo y fixture
+  nuevo congelado; no repetir smoke de una celda ni tocar conf1/Iris.
