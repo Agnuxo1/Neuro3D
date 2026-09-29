@@ -437,5 +437,15 @@ no se usa como marca.
   No se ejecutó Blender/GPU. Falta construir mallas y observarlas
   mediante Blender para aplicar el gate de verdad; JEV sigue bloqueado.
 
+- 2026-09-29 15:42 UTC: revisión de Claude al gate absoluto: el +Z
+  nominal podía ocultar normales de cara giradas; un padre podía añadir
+  escala/cizalla, y una cara no plana podía producir normales distintas.
+  Codex reforzó el gate con normal ± de cara, padres prohibidos, ejes
+  mundiales unitarios/ortogonales, vertices coplanares y a radio real,
+  rechazo de NaN, y lectura de Blender desde `mesh.polygons[0].normal`,
+  vértices y `matrix_world` en `observe_scene_disks`. Tres tests nuevos:
+  suite CPU ligera 98/98. La observación Blender sigue sin ejecución
+  real; no se usó GPU/Blender. JEV permanece bloqueado.
+
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.

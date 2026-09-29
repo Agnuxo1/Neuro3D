@@ -15,7 +15,11 @@ def observed_for(data):
                    "normal": data[role]["normal"],
                    "radius": data[role]["radius"],
                    "faces": 1, "vertices": 32, "modifiers": False,
-                   "scale": (1., 1., 1.)}
+                   "scale": (1., 1., 1.), "parented": False,
+                   "world_axes": ((1., 0., 0.), (0., 1., 0.), (0., 0., 1.)),
+                   "local_vertices": tuple((data[role]["radius"] * math.cos(2 * math.pi * i / 32),
+                                            data[role]["radius"] * math.sin(2 * math.pi * i / 32),
+                                            0.) for i in range(32))}
             for role in ("bs1", "r1", "r2", "f1", "m2", "bs2")}
 
 
@@ -51,6 +55,40 @@ class FixtureGuardTests(unittest.TestCase):
         base["arm1"]["length"] = 5.6
         with self.assertRaisesRegex(ValueError, "length differs"):
             validate_baseline_paths(base)
+
+    def test_face_normal_and_parent_transform_are_checked(self):
+        data = fixture()
+        obs = observed_for(data)
+        obs["r1"]["normal"] = (0., 0., 1.)
+        with self.assertRaisesRegex(ValueError, "normal"):
+            validate_observed_disks(data, obs)
+        obs = observed_for(data)
+        obs["r1"]["parented"] = True
+        with self.assertRaisesRegex(ValueError, "Parented"):
+            validate_observed_disks(data, obs)
+        obs = observed_for(data)
+        obs["r1"]["world_axes"] = ((1., 0., 0.), (.1, 1., 0.), (0., 0., 1.))
+        with self.assertRaisesRegex(ValueError, "World"):
+            validate_observed_disks(data, obs)
+
+    def test_nonplanar_vertices_are_rejected_and_reversed_normal_is_recorded(self):
+        data = fixture()
+        obs = observed_for(data)
+        vertices = list(obs["r1"]["local_vertices"])
+        vertices[0] = (*vertices[0][:2], .001)
+        obs["r1"]["local_vertices"] = vertices
+        with self.assertRaisesRegex(ValueError, "vertices"):
+            validate_observed_disks(data, obs)
+        obs = observed_for(data)
+        obs["r1"]["normal"] = tuple(-x for x in obs["r1"]["normal"])
+        self.assertEqual(validate_observed_disks(data, obs)["normal_signs"]["r1"], -1)
+
+    def test_nonfinite_readback_is_not_accepted(self):
+        data = fixture()
+        obs = observed_for(data)
+        obs["r1"]["radius"] = float("nan")
+        with self.assertRaisesRegex(ValueError, "Radius"):
+            validate_observed_disks(data, obs)
 
 
 if __name__ == "__main__":

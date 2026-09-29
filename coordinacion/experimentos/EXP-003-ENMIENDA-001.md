@@ -54,3 +54,10 @@ unitaria, una cara, al menos 32 vértices y cero modificadores en cada disco
 (tolerancia `1e-6`). Antes de intervenciones, exigir en el ray-cast de
 Blender `L1=5,0±1e-4 BU` y `L2=3,0±1e-4 BU`. Este gate comprueba la
 escena observada; las longitudes absolutas no se inyectan en inferencia.
+La revisión de Claude añadió un requisito de procedencia del readback:
+usar la normal de la **cara real** transformada a mundo, no el +Z nominal
+del objeto; rechazar padres, cizalla, escala mundial no unitaria,
+vértices no coplanares o fuera del radio, modificadores y mallas extras.
+El signo ± de la normal se registra pero ambos representan el mismo
+plano reflectante. El observador `observe_scene_disks` lee malla y
+matriz mundiales; falta verificarlo ejecutando Blender.
