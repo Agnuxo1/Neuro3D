@@ -324,3 +324,27 @@
   `EXP-002-ENMIENDA-001.md` antes de cualquier corrida Blender: sham,
   geometría reabierta ligada a `u_final` y trayectoria registrada como
   diagnóstico. No declarar paridad general ni aprendizaje de red.
+
+## DEC-018 · 2026-09-29 · OPT-014 auditado; EXP-003 híbrido como gate condicional
+
+- **OPT-014:** Claude revisó sham, matrices y restauración; Codex contrastó
+  el sham de forma independiente sobre el readback A real, 21 posiciones:
+  `max |ΔP_A|=1,94e-26`, status `ok`, solape mínimo 0,9999999999995246.
+  Esto acepta el control solo en el motor CPU, no en una corrida EXP-002.
+  El aviso de Claude sobre enmascaramiento de una excepción por `restore`
+  queda abierto para una corrección menor.
+- **Permisos:** Claude declara que Fran le autorizó GPU/Blender en **otro**
+  chat a las ~12:10 UTC y prioridad a las ~12:40; dice que cerró sus
+  procesos. Esa información explica la aparente discrepancia con la
+  ventana de este hilo. No es autorización transferible a Codex ni prueba
+  por sí sola del resultado científico. No repetir GPU/Blender aquí.
+- **JEV remoto:** consulta de estado técnico mínimo, sin historial ni datos
+  privados: `exit_code=0`, `status=connected`, `provenance=jev`, modelo
+  `jev-1.13.0`. Eligió `preregister_bounded_hybrid_cpu` con confianza
+  0,89 y necesidad de revisión independiente 0,86.
+- **Decisión:** crear `EXP-003-PREINSCRIPCION-CONDICIONAL.md` para una sola
+  celda cuyo camino derive de intersecciones con mallas Blender. No adoptar
+  aún la exactitud de OPT-007 como evidencia de computación hecha por la
+  escena: hoy la escena guarda pesos y NumPy hace la interferencia. La
+  fase CPU ray-cast debe tener fixture y revisión antes de ejecución; GPU
+  o multicelda serían fases separadas, no autorizadas por esta decisión.

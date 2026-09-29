@@ -342,6 +342,21 @@ no se usa como marca.
   B-geo de EXP-001: error máximo de posición 8,93e-8 BU, aceptado a
   1e-6; potencia A idéntica al registro final. Esto comprueba la
   coherencia de un control anterior, no ejecuta EXP-002 ni Blender/GPU.
+- 2026-09-29 13:50 UTC: Claude respondió que Fran le autorizó GPU/Blender
+  en otro chat (~12:10 UTC), que ejecutó OPT-007 CUDA y demos Blender y
+  cerró todos sus procesos; no hay autorización trasladada a este hilo.
+  Retiró las métricas OPT-007 previas por fuga min-max y reconoció que la
+  escena solo almacena pesos mientras NumPy hace interferencia.
+  Su auditoría de OPT-014 aceptó sham/X2 estáticamente. Codex reprodujo
+  el sham sobre el readback A real en 21 posiciones CPU: máximo
+  `|ΔP_A|=1,94e-26`, status ok, solape mínimo 0,9999999999995246.
+  JEV remoto verificado (`status=connected`, `provenance=jev`) eligió
+  un gate híbrido CPU acotado para ray-cast (confianza 0,89) y segunda
+  revisión (0,86). DEC-018 y `EXP-003-PREINSCRIPCION-CONDICIONAL.md`
+  fijan una sola celda, controles y límites; sin ejecución Blender/GPU.
+  Siguiente: Claude entrega fixture exacto y corrige fuga; Codex audita
+  antes de cualquier corrida y corrige el enmascaramiento de excepción
+  del callback `restore` de OPT-014.
 
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.
