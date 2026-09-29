@@ -1,10 +1,11 @@
 # Cola única de trabajo de Neuro3D
 
-Estado al 2026-09-29 10:42 UTC. Antes de iniciar una tarea, comprobar aquí que
+Estado al 2026-09-29 23:33 UTC. Antes de iniciar una tarea, comprobar aquí que
 no haya otra ejecución del mismo trabajo.
 
 | ID | Prioridad | Estado | Responsable | Modelo o ruta | Esfuerzo | Recursos reservados | Dependencias | Entregable | Criterio de aceptación |
 |---|---|---|---|---|---|---|---|---|---|
+| CAP-001 | P0 | Reanudada tras reinicio; auditoría CPU de 8 readbacks completa, nueva carga pendiente de guard/reserva | Claude backend; Codex auditor independiente | Carpetas separadas capacity y capacity_audit | Alto | Ticket Claude solicita 8 GiB RAM; no solapar ni forzar entrada | NOCHE-CAPACIDAD; cierre 30/09 06:00 UTC | X/W/Y con hashes, informe independiente, guard propio y nuevos artefactos brutos | No escalar casos incorrectos, no ejecutar cerca del límite sin preflight/watchdog, no equiparar productos render + suma CPU con red coherente RT. |
 | OPS-001 | P0 | Completada | Codex | Agente principal y JEV | Medio | Lecturas CPU ligeras; GPU ninguna | Repositorio existente | `coordinacion/INFORME-INICIAL.md` y documentos de coordinación | Estado previo preservado, recursos sondeados y prioridad JEV registrada. |
 | OPT-001 | P0 | Entregada; referencias clave contrastadas por Codex | Claude | Sonnet, revisión independiente | Medio | Solo lectura; red y CPU ligera; GPU ninguna | Circuito óptico actual | `coordinacion/respuestas/OPT-001.json` | Ecuaciones, riesgos y prueba falsable de dos caminos con evidencia verificable. |
 | OPT-002 | P0 | Motor escalar CPU y adaptador verificados solo en EXP-001; generalización pendiente | Codex | Agente principal, JEV supervisa | Alto | CPU ligera; sin nueva GPU/Blender | DEC-006/008/015 y contrato EXP-001 congelado | Motor/adaptador; 60 pruebas CPU/estáticas y 14 fases Blender reales | La escena gobierna los siete controles MZ; no promocionar a red general ni óptica física sin gates nuevos. |

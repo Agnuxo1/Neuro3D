@@ -1,6 +1,42 @@
 # Checkpoint factual de Neuro3D
 
-Actualizado: 2026-09-29 00:03 UTC.
+Actualizado: 2026-09-29 23:33 UTC (30/09 01:33 Madrid).
+
+## Recuperación vigente después del reinicio
+
+- Arranque comprobado con psutil: 29/09 21:45:06 UTC. System evento 41 muestra
+  BugcheckCode=159 (0x9F); no se identifica el controlador causante aquí ni se
+  demuestra OOM/TDR. La ejecución Codex previa no sobrevive; archivos intactos.
+- Claude retomó capacidad en su carpeta. Su ticket `capacity-render-big` espera
+  8 GiB de RAM; se midieron 6,9–7,9 GiB disponibles. No cancelar su proceso ni
+  bajar reservas artificialmente; pedir reencolar caso pequeño seguro.
+- Codex: `Blender/benchmarks/capacity_audit/`, 21/21 pruebas CPU en 0,076 s.
+  Auditor independiente de ocho readbacks actuales: Iris 29/30 test, acuerdo
+  100% con matvec float64 y predicción guardada; error L2 6,09125e-6. Siete lotes
+  aleatorios: error L2 máximo 6,25057e-7. Informe con hashes en
+  `D:/PROJECTS/.cognition/neuro3d/codex_capacity_post_restart_audit.json`.
+- Alcance: referencia independiente de arrays guardados, no prueba de consumo
+  histórico de inputs, nuevo render, red coherente RT ni inferencia íntegra GPU.
+  `cycles_batch.py` suma filas y detecta intensidad/clase en CPU. EXR borrada por
+  el productor; solicitar conservación y nuevos controles causales.
+- Nuevo guard propio con preflight y watchdog de hijo: RAM libre>=4 GiB, total
+  VRAM<=18 GiB, <=80°C, <=600 s y corte 06:00 UTC. Su integración en los jobs
+  de Claude sigue pendiente. Baseline antiguo sigue sin preflight antes de
+  asignar y construye Linear en RAM: no reejecutar tamaños próximos al límite.
+- Hito nuevo: 25/25 tests propios; guard probado en dos procesos CPU reales,
+  uno terminó y otro fue detenido por timeout, sin PID superviviente. Cuatro
+  EXR nuevas de Claude leídas con OpenCV CPU independiente: producto por píxel
+  max8,27e-8, salida float64 max1,20e-7, sham0; cambio de peso solo su columna,
+  cambio de entrada solo su muestra. Evidencia `codex_capacity_exr_controls_audit.json`
+  en la carpeta cognition. Sigue siendo intensidad + reducción CPU, no fase RT.
+- Auditoría sweep nuevo: mata por RAM<3GiB (incumple piso4); estimación400 bytes
+  por celda inferior a pico medido921. Corrección solicitada antes de escalar.
+  3072 abortado por RAM y4096 omitido: no contar como capacidad estable.
+- Reparto nocturno y heartbeat cada 5 min siguen guardados, cierre 30/09 08:00
+  Madrid. Próximo: guard corregido por Claude y log backend / reducción GPU;
+  Codex puede avanzar EXP-005 CPU independientemente. No repetir smoke del guard
+  ni controles EXR ya comprobados sin un cambio que justifique repetición.
+  Conf1/v0 intactos. JEV bloqueado por seguridad, fallback local explícito.
 
 ## Objetivo
 
