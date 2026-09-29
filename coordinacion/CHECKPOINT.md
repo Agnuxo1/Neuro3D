@@ -639,5 +639,13 @@ no se usa como marca.
   Claude debe corroborarlo de forma independiente. Sigue siendo
   propagación simulada con suma de campos en Python.
 
+- 2026-09-29 ~19:38 UTC: sin respuesta nueva de Claude, Codex preparó
+  borrador **NO GO** de EXP-005 en
+  `coordinacion/experimentos/EXP-005-PROPIEDADES-ESCENA-BORRADOR.md`:
+  fase de espejo y longitud de onda guardadas en `.blend`, readback,
+  perturbaciones causales, sham visual, campos por camino y energía.
+  Claude tiene petición de refutación/revisión; no se lanzó Blender/GPU,
+  ni se tocó conf1. JEV sigue bloqueado; decisión experimental pendiente.
+
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.
