@@ -45,4 +45,3 @@ Un guard no garantiza evitar un fallo del driver entre dos muestras.
 Contrasta cada producto por píxel y reduce filas en float64; los controles de
 peso/entrada/sham se revisan desde las cuatro EXR retenidas. No calcula ondas
 ni certifica RT hardware. Esta inspección posterior es diagnóstica.
-
