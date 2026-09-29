@@ -1,9 +1,11 @@
 """Pure CPU orchestration checks for EXP-001; never starts Blender."""
 
 import json
+import ast
+import importlib.util
 from pathlib import Path
 import sys
-from types import SimpleNamespace
+from types import ModuleType, SimpleNamespace
 import unittest
 from unittest.mock import patch
 
@@ -16,6 +18,71 @@ from test_readback_reconstruct import synthetic_record
 
 
 class MZRunnerStaticTests(unittest.TestCase):
+    def test_scene_comparator_rejects_short_rgb_without_blender(self):
+        fake_adapter = ModuleType("mz_scene_adapter")
+        fake_adapter.create_mz_circuit = lambda *args: None
+        fake_adapter.trace_mz_circuit = lambda *args: None
+        fake_mathutils = ModuleType("mathutils")
+        fake_mathutils.Matrix = object
+        fake_mathutils.Vector = object
+        spec = importlib.util.spec_from_file_location(
+            "blender_mz_exp001_test", TESTS / "blender_mz_exp001.py")
+        module = importlib.util.module_from_spec(spec)
+        with patch.dict(sys.modules, {"bpy": ModuleType("bpy"),
+                                      "mathutils": fake_mathutils,
+                                      "mz_scene_adapter": fake_adapter}):
+            spec.loader.exec_module(module)
+        with self.assertRaisesRegex(AssertionError, "vector length"):
+            module._compare_vector([1.0, 2.0], [1.0, 2.0, 3.0], 3, 1e-12, "RGB")
+
+    def test_verify_persists_readback_before_comparison_and_acceptance(self):
+        source = (TESTS / "blender_mz_exp001.py").read_text(encoding="utf-8")
+        tree = ast.parse(source)
+        main = next(node for node in tree.body
+                    if isinstance(node, ast.FunctionDef) and node.name == "main")
+        calls = [(node.lineno, ast.unparse(node.func)) for node in ast.walk(main)
+                 if isinstance(node, ast.Call)]
+        write = next(line for line, name in calls if name == "readback_path.write_text")
+        compare = next(line for line, name in calls if name == "_compare")
+        accept = next(line for line, name in calls if name == "_accept")
+        self.assertLess(write, compare)
+        self.assertLess(write, accept)
+
+    def test_failure_diagnostic_keeps_direction_gap_without_blender(self):
+        record = synthetic_record()
+        record["result"]["status"] = "unresolved_mode_overlap"
+        with patch.object(Path, "is_file", return_value=True), \
+             patch.object(Path, "read_text", return_value=json.dumps(record)):
+            diagnostic = run_mz_exp001._failure_diagnostic(Path("D:/fake/A.blend"))
+        self.assertEqual(diagnostic["status"], "unresolved_mode_overlap")
+        self.assertIn("direction_diagnostic", diagnostic)
+
+    def test_failed_verify_keeps_diagnostic_in_partial_report(self):
+        patches = self._patch_environment()
+        mocks = []
+        for item in patches:
+            mocks.append(item.start())
+            self.addCleanup(item.stop)
+        record = synthetic_record()
+        record["result"]["status"] = "unresolved_mode_overlap"
+
+        def fake_phase(_blender, _script, _input, _output, mode, case):
+            if mode == "verify" and case == "A":
+                raise RuntimeError("synthetic acceptance failure")
+            return {"phase": mode, "control": case}
+
+        with patch.object(run_mz_exp001, "_run", side_effect=fake_phase), \
+             patch.object(run_mz_exp001, "_failure_diagnostic",
+                          return_value={"status": record["result"]["status"],
+                                        "direction_diagnostic": {"within_tolerance": False}}):
+            with self.assertRaisesRegex(RuntimeError, "synthetic acceptance failure"):
+                run_mz_exp001.main()
+        report = json.loads(mocks[4].mock_calls[-1].args[0])
+        self.assertFalse(report["runtime_verified"])
+        self.assertEqual(report["failure"]["diagnostic"]["status"],
+                         "unresolved_mode_overlap")
+        self.assertFalse(report["failure"]["diagnostic"]["direction_diagnostic"]["within_tolerance"])
+
     def _patch_environment(self):
         return (
             patch.object(sys, "argv", ["run_mz_exp001.py", "--blender", "D:/fake/blender.exe",

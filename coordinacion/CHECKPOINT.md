@@ -191,6 +191,18 @@ no se usa como marca.
 
 ## Recursos y procesos
 
+- 2026-09-29 00:20 UTC: OPT-012 de Claude confirmó tres defectos del
+  protocolo (H1/H2/H3) en el código publicado. Codex corrigió en
+  `Blender/tests/blender_mz_exp001.py` el guardado del readback antes de
+  comparar/aceptar, añadió input, absorción, pérdida de espejos, señales,
+  activaciones y separación transversal, y rechazó vectores incompletos.
+  `Blender/tests/run_mz_exp001.py` conserva `direction_diagnostic` en el
+  informe parcial cuando verify falla y hay readback. 60/60 tests CPU/
+  estáticos y 32/32 oráculo pasan; ninguna prueba Blender/GPU ejecutada.
+  JEV remoto (`remote_decision=true`, plan 1790641140-debug) eligió agente
+  principal. Pendiente reauditoría independiente de Claude del parche y
+  permiso explícito del usuario para cualquier ejecución real de Blender.
+
 - GPU ocupada según el usuario; no iniciar ninguna tarea GPU.
 - Sondeo de CPU/RAM/disco en `coordinacion/RECURSOS.md`.
 - Ningún proceso Blender quedó tras el smoke anterior; no se ha iniciado

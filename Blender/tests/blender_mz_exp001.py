@@ -67,11 +67,19 @@ def _capture(roles, result):
             "status": result.status,
             "optical_a": [float(v) for v in result.optical_a],
             "optical_b": [float(v) for v in result.optical_b],
+            "input_rgb": [float(v) for v in result.input_rgb],
+            "absorption_rgb": [float(v) for v in result.absorption_rgb],
+            "mirror_loss_rgb": [float(v) for v in result.mirror_loss_rgb],
             "escape_rgb": [float(v) for v in result.escape_rgb],
             "unresolved_rgb": [float(v) for v in result.unresolved_rgb],
             "residual_rgb": [float(v) for v in result.residual_rgb],
             "mode_overlap": result.mode_overlap,
             "effective_coherence": result.effective_coherence,
+            "transverse_separation": result.transverse_separation,
+            "signal_a": result.signal_a,
+            "signal_b": result.signal_b,
+            "activation_a": result.activation_a,
+            "activation_b": result.activation_b,
         },
         "scene_status": bpy.context.scene.get("neuro3d_mz_status"),
     }
@@ -108,6 +116,13 @@ def _close(a, b, tolerance):
         raise AssertionError(f"Readback mismatch: {a} != {b} (tol={tolerance})")
 
 
+def _compare_vector(before, after, length, tolerance, name):
+    if len(before) != length or len(after) != length:
+        raise AssertionError(f"Readback vector length mismatch: {name}")
+    for left, right in zip(before, after):
+        _close(left, right, tolerance)
+
+
 def _compare(saved, current):
     if saved["objects"].keys() != current["objects"].keys():
         raise AssertionError("Scene roles changed on reopening")
@@ -116,13 +131,13 @@ def _compare(saved, current):
         if before["parent"] != after["parent"]:
             raise AssertionError(f"Parent changed for {role}")
         for key in ("matrix_world", "location"):
-            for left, right in zip(before[key], after[key]):
-                _close(left, right, 1e-6)
+            _compare_vector(before[key], after[key],
+                            16 if key == "matrix_world" else 3, 1e-6, f"{role}.{key}")
     for role, properties in saved["optics"].items():
         for key, before in properties.items():
             after = current["optics"][role][key]
             if isinstance(before, list):
-                if len(before) != len(after):
+                if not isinstance(after, list) or len(before) != len(after):
                     raise AssertionError(f"Optical property length changed: {role}.{key}")
                 for left, right in zip(before, after):
                     _close(left, right, 1e-6)
@@ -132,9 +147,17 @@ def _compare(saved, current):
         raise AssertionError("Status changed on reopening")
     if saved["scene_status"] != current["scene_status"]:
         raise AssertionError("Stored scene status changed on reopening")
-    for key in ("optical_a", "optical_b", "escape_rgb", "unresolved_rgb", "residual_rgb"):
-        for left, right in zip(saved["result"][key], current["result"][key]):
-            _close(left, right, 1e-12)
+    for key in ("optical_a", "optical_b", "input_rgb", "absorption_rgb",
+                "mirror_loss_rgb", "escape_rgb", "unresolved_rgb", "residual_rgb"):
+        _compare_vector(saved["result"][key], current["result"][key], 3, 1e-12, key)
+    for key in ("signal_a", "signal_b", "activation_a", "activation_b",
+                "mode_overlap", "effective_coherence", "transverse_separation"):
+        before, after = saved["result"][key], current["result"][key]
+        if before is None or after is None:
+            if before is not None or after is not None:
+                raise AssertionError(f"Readback optional value changed: {key}")
+        else:
+            _close(before, after, 1e-12)
 
 
 def _accept(case, record):
@@ -182,20 +205,19 @@ def main():
         # Capture stored detector/scene outputs before retracing, then compare.
         stored_a = tuple(float(v) for v in roles["mz_detector_a"]["received_optical_rgb"])
         stored_b = tuple(float(v) for v in roles["mz_detector_b"]["received_optical_rgb"])
-        if bpy.context.scene.get("neuro3d_mz_status") != saved["scene_status"]:
-            raise AssertionError("Persisted scene status differs from saved result")
-        for actual, expected in zip(stored_a, saved["result"]["optical_a"]):
-            _close(actual, expected, 1e-12)
-        for actual, expected in zip(stored_b, saved["result"]["optical_b"]):
-            _close(actual, expected, 1e-12)
+        stored_status = bpy.context.scene.get("neuro3d_mz_status")
         result = trace_mz_circuit(bpy, bpy.context.scene)
         record = _capture(roles, result)
-        _compare(saved, record)
-        _accept(case, record)
         readback_path = output.with_suffix(".readback.json")
         if readback_path.exists():
             raise FileExistsError("EXP-001 refuses to overwrite a readback record")
         readback_path.write_text(json.dumps(record, indent=2), encoding="utf-8")
+        if stored_status != saved["scene_status"]:
+            raise AssertionError("Persisted scene status differs from saved result")
+        _compare_vector(stored_a, saved["result"]["optical_a"], 3, 1e-12, "stored_a")
+        _compare_vector(stored_b, saved["result"]["optical_b"], 3, 1e-12, "stored_b")
+        _compare(saved, record)
+        _accept(case, record)
     print("NEURO3D_MZ_EXP001 " + json.dumps({
         "phase": mode, "control": name, "status": result.status,
         "a": sum(result.optical_a), "b": sum(result.optical_b),

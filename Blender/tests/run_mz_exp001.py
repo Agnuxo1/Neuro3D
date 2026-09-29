@@ -97,6 +97,23 @@ def _verify_readback(artifact: Path) -> dict:
             "direction_diagnostic": direction_gaps(record)}
 
 
+def _failure_diagnostic(artifact: Path | None) -> dict | None:
+    """Keep geometric evidence even when Blender exits nonzero on acceptance."""
+    if artifact is None:
+        return None
+    readback_path = artifact.with_suffix(".readback.json")
+    if not readback_path.is_file():
+        return None
+    try:
+        record = json.loads(readback_path.read_text(encoding="utf-8"))
+        return {"readback": str(readback_path),
+                "status": record.get("result", {}).get("status"),
+                "direction_diagnostic": direction_gaps(record)}
+    except (OSError, ValueError, KeyError, TypeError, AssertionError) as exc:
+        return {"readback": str(readback_path),
+                "diagnostic_error": f"{type(exc).__name__}: {exc}"}
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--blender", required=True, type=Path)
@@ -117,18 +134,24 @@ def main() -> None:
     base = args.artifacts / "A.blend"
     records = []
     failure = None
+    current_artifact = None
     report_path = args.artifacts / "report.json"
     try:
+        current_artifact = base
         records.append(_run(args.blender, script, None, base, "init", "A"))
         verified = _run(args.blender, script, base, base, "verify", "A")
         records.append({**verified, **_verify_readback(base)})
         for case in controls()[1:]:
             artifact = args.artifacts / f"{case.name}.blend"
+            current_artifact = artifact
             records.append(_run(args.blender, script, base, artifact, "edit", case.name))
             verified = _run(args.blender, script, artifact, artifact, "verify", case.name)
             records.append({**verified, **_verify_readback(artifact)})
     except BaseException as exc:
         failure = {"type": type(exc).__name__, "detail": str(exc)}
+        diagnostic = _failure_diagnostic(current_artifact)
+        if diagnostic is not None:
+            failure["diagnostic"] = diagnostic
         raise
     finally:
         report = {"experiment": "EXP-001", "blender": str(args.blender),
