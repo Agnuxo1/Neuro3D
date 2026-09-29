@@ -472,5 +472,17 @@ no se usa como marca.
   nueva corrida Blender/GPU. Próximo: runner que reabre escena, aplica
   estas intervenciones, comprueba cuatro gates y registra resultados.
 
+- 2026-09-29 16:27 UTC: Claude revisó intervenciones in situ y fijó
+  cuatro riesgos del futuro runner: re-resolver objetos tras abrir,
+  guardar/reabrir cada tratamiento antes de trazar, comprobar que
+  ablación sale del depsgraph y verificar fichero de tratamiento distinto
+  del base. Codex añadió el combinador híbrido
+  `exp003_optics_from_paths.py`: fase solo de longitudes ray_cast
+  aceptadas, potencias de ambos puertos, escape por brazo perdido y
+  balance. Estados inválidos no se reinterpretan como pérdida.
+  Casos oscuro/medio/brillante, ablación y estado inválido cubiertos;
+  suite ligera 105/105. No nueva corrida Blender/GPU. Siguiente:
+  runner save/reopen con esos cuatro gates; JEV sigue bloqueado.
+
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.
