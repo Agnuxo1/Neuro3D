@@ -125,20 +125,34 @@ def verify_final_binding(baseline_record: dict, reopened_record: dict,
                     raise AssertionError(f"Optical property changed: {role}.{key}")
     edit = controls()[1]
     worst_position_error = 0.0
-    for role, delta in (("mz_combiner_group", edit.group_delta),
-                        ("mz_mirror1", edit.mirror1_delta)):
-        def world_xyz(record):
-            matrix = record["objects"][role]["matrix_world"]
-            if len(matrix) != 16 or not all(math.isfinite(float(v)) for v in matrix):
-                raise ValueError(f"Malformed world matrix for {role}")
-            return tuple(float(matrix[i]) for i in (3, 7, 11))
-        before = world_xyz(baseline_record)
-        after = world_xyz(reopened_record)
+    expected_roles = {"mz_source", "mz_bs1", "mz_bs2", "mz_mirror1",
+                      "mz_mirror2", "mz_detector_a", "mz_detector_b",
+                      "mz_combiner_group"}
+    before_objects = baseline_record["objects"]
+    after_objects = reopened_record["objects"]
+    if set(before_objects) != expected_roles or set(after_objects) != expected_roles:
+        raise AssertionError("EXP-002 optical roles changed on reopening")
+    moving_group = {"mz_combiner_group", "mz_bs2", "mz_detector_a", "mz_detector_b"}
+    for role in sorted(expected_roles):
+        before_obj, after_obj = before_objects[role], after_objects[role]
+        if before_obj["parent"] != after_obj["parent"]:
+            raise AssertionError(f"Parent changed for {role}")
+        before_matrix, after_matrix = before_obj["matrix_world"], after_obj["matrix_world"]
+        if (len(before_matrix) != 16 or len(after_matrix) != 16 or
+                not all(math.isfinite(float(v)) for v in before_matrix + after_matrix)):
+            raise ValueError(f"Malformed world matrix for {role}")
+        delta = (edit.group_delta if role in moving_group else
+                 edit.mirror1_delta if role == "mz_mirror1" else (0., 0., 0.))
+        before = tuple(float(before_matrix[i]) for i in (3, 7, 11))
+        after = tuple(float(after_matrix[i]) for i in (3, 7, 11))
         error = math.dist(after, tuple(before[i] + final_u * delta[i]
                                        for i in range(3)))
         worst_position_error = max(worst_position_error, error)
         if error > 1e-6:
             raise AssertionError(f"Final {role} is not bound to final_u: {error} BU")
+        if any(abs(float(after_matrix[i]) - float(before_matrix[i])) > 1e-6
+               for i in range(16) if i not in (3, 7, 11)):
+            raise AssertionError(f"Final {role} changed rotation or scale")
     result = reopened_record["result"]
     if result["status"] != "ok":
         raise AssertionError("Reopened optical trace is not valid")

@@ -36,15 +36,23 @@ def roles_a():
 def record_at_u(u, power_a=.75):
     edit = controls()[1]
     objects = {}
-    for role, base, delta in (
-        ("mz_combiner_group", (2., 2., 0.), edit.group_delta),
-        ("mz_mirror1", (2. - 2. / math.sqrt(3.), 0., 0.), edit.mirror1_delta),
-    ):
+    bases = {"mz_source": (-1., 0., 0.), "mz_bs1": (0., 0., 0.),
+             "mz_mirror1": (2. - 2. / math.sqrt(3.), 0., 0.),
+             "mz_mirror2": (0., 2. - 2. / math.sqrt(3.), 0.),
+             "mz_combiner_group": (2., 2., 0.), "mz_bs2": (2., 2., 0.),
+             "mz_detector_a": (2.5, 2.866, 0.),
+             "mz_detector_b": (2.866, 2.5, 0.)}
+    moving_group = {"mz_combiner_group", "mz_bs2", "mz_detector_a", "mz_detector_b"}
+    for role, base in bases.items():
+        delta = (edit.group_delta if role in moving_group else
+                 edit.mirror1_delta if role == "mz_mirror1" else (0., 0., 0.))
         xyz = [base[i] + u * delta[i] for i in range(3)]
         objects[role] = {"matrix_world": [1., 0., 0., xyz[0],
                                           0., 1., 0., xyz[1],
                                           0., 0., 1., xyz[2],
-                                          0., 0., 0., 1.]}
+                                          0., 0., 0., 1.],
+                         "parent": ("mz_combiner_group" if role in
+                                    {"mz_bs2", "mz_detector_a", "mz_detector_b"} else None)}
     return {"objects": objects,
             "optics": {"mz_source": {"power": 1., "rgb": [1., 1., 1.]},
                        "mz_mirror1": {"phase_shift": 0.},
@@ -175,6 +183,16 @@ class EXP002GeometryTests(unittest.TestCase):
         final = record_at_u(.5)
         final["optics"]["mz_mirror2"]["phase_shift"] = math.pi
         with self.assertRaisesRegex(AssertionError, "Optical property changed"):
+            verify_final_binding(record_at_u(0), final, .5, .5, .75)
+
+    def test_final_binding_rejects_hidden_other_object_motion(self):
+        final = record_at_u(.5)
+        final["objects"]["mz_mirror2"]["matrix_world"][3] += .01
+        with self.assertRaisesRegex(AssertionError, "mz_mirror2 is not bound"):
+            verify_final_binding(record_at_u(0), final, .5, .5, .75)
+        final = record_at_u(.5)
+        final["objects"]["mz_detector_a"]["parent"] = None
+        with self.assertRaisesRegex(AssertionError, "Parent changed"):
             verify_final_binding(record_at_u(0), final, .5, .5, .75)
         final = record_at_u(.5)
         final["optics"]["mz_source"]["rgb"][1] = .9

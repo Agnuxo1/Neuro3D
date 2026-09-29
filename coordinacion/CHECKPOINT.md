@@ -323,6 +323,25 @@ no se usa como marca.
   continuar con GPU, pero el permiso local terminó ~11:20 UTC; se pide
   detener GPU/Blender hasta una nueva autorización. No se integra su
   carpeta no rastreada ni se reclama mejora óptica física.
+- 2026-09-29 13:17 UTC: apareció en la carpeta no rastreada de Claude
+  `results_cuda.json` (`device=cuda`, modificación 13:11:38 UTC), posterior
+  al fin ~11:20 UTC de la única ventana GPU conocida. No consta nueva
+  autorización en este hilo. Se observó un proceso Blender PID 41356, pero
+  no se pudo atribuir a Neuro3D con una lectura fiable; no se detuvo.
+  `blender_mesh_scene.py` lee alturas de cubos como pesos y ejecuta
+  `forward` con NumPy en CPU: es persistencia/visualización de parámetros,
+  no computación óptica realizada por la geometría o la luz en Blender.
+  No integrar ni promover OPT-007 hasta revisión causal y permiso explícito
+  de recursos; pedir a Claude detener nuevos lanzamientos GPU/Blender.
+- 2026-09-29 13:32 UTC: sin respuesta nueva de Claude ni permiso nuevo.
+  OPT-014 verifica ahora las matrices mundiales y parentado de los ocho
+  objetos del circuito: M1 usa su delta; combinador, BS2 y detectores
+  comparten el delta de grupo; fuente, BS1 y M2 quedan fijos. Un test mock
+  nuevo rechaza movimiento oculto de M2 o desparentado de detector;
+  suite ligera 79/79. Aplicado solo en lectura a los readbacks reales A y
+  B-geo de EXP-001: error máximo de posición 8,93e-8 BU, aceptado a
+  1e-6; potencia A idéntica al registro final. Esto comprueba la
+  coherencia de un control anterior, no ejecuta EXP-002 ni Blender/GPU.
 
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.
