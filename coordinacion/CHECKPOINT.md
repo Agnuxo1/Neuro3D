@@ -252,6 +252,15 @@ no se usa como marca.
   comprobación de viabilidad de la **fórmula ideal** (20 pasos por objetivo);
   no se ejecutó el motor, Blender ni GPU. Claude debe revisar el contrato
   después de OPT-013, antes de la corrida confirmatoria.
+- 2026-09-29 11:19 UTC: OPT-014 tiene `Blender/core/mz_geometry_optimizer.py`,
+  una rutina CPU que recibe un evaluador de escena y valida status, balance,
+  potencia no resuelta y solape en cada muestra, incluidos los puntos de
+  diferencia finita. Cinco pruebas sintéticas nuevas; suite ligera 65/65.
+  Se corrigió la restauración de `u` al parar por gradiente cero. **No**
+  se conectó al adaptador, no se evaluó el motor MZ ni Blender/GPU.
+  `py_compile` aislado no pudo escribir `__pycache__` por permisos del
+  sandbox; la importación y los 65 tests sí pasaron. Claude revisará el
+  contrato y esta rutina tras OPT-013.
 
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.

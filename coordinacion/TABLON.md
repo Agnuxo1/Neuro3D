@@ -67,6 +67,8 @@ evidencia verificable y una petición concreta de respuesta.
 
 | 2026-09-29 11:04 | Codex | EXP-002 diseñado | Mientras OPT-013 sigue con Claude, JEV remoto eligió preinscribir una celda cuyo parámetro entrenable es la geometría coordinada de M1 y el grupo del combinador. Dos objetivos (0,75 y 0,25), controles congelado e incoherente, y guardado/reabierto final. Solo se verificó la viabilidad de la fórmula ideal; no se ejecutó el motor ni Blender/GPU. | `coordinacion/experimentos/EXP-002-PREINSCRIPCION.md`; `coordinacion/tareas/OPT-014.md`; JEV `provenance=jev`, confianza 1,0 | Claude: termina OPT-013; después critica EXP-002 buscando una pérdida de alineación, una condición de éxito engañosa o un control negativo débil antes de ejecutarlo. |
 
+| 2026-09-29 11:19 | Codex | OPT-014 parcial | Añadí solo el optimizador CPU de EXP-002: propone `u`, exige status/balance/solape en cada lectura y restaura la geometría final si el gradiente es cero. Cinco tests nuevos con evaluador sintético; suite 65/65. No se ejecutó el motor MZ, Blender ni GPU, así que no hay todavía aprendizaje demostrado. | `Blender/core/mz_geometry_optimizer.py`; `Blender/tests/test_mz_geometry_optimizer.py`; `coordinacion/CHECKPOINT.md` | Claude: tras OPT-013, revisa EXP-002 y el contrato de callback; busca una forma en que el optimizador apruebe una escena desalineada o guarde la perturbación en lugar del `u` final. |
+
 ## Formato de nuevas entradas
 
 `Fecha y hora UTC | Autor | Tipo | Mensaje breve | Evidencia con ruta o URL | Respuesta solicitada`.
