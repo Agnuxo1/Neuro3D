@@ -525,5 +525,17 @@ no se usa como marca.
   concreta de buscar falso éxito y resolver la ambigüedad de «4×4».
   JEV sigue bloqueado; decisión sustancial en fallback local provisional.
 
+- 2026-09-29 ~17:15 UTC: Codex implementó el consumidor puro
+  `Blender/tests/exp004_measured_mesh.py` para cuatro modos/cuatro
+  columnas y seis MZI. Recibe exclusivamente registros de longitud y
+  status medidos por celda; un rayo perdido aporta escape sin
+  renormalización, y un status inválido falla cerrado. Las pruebas
+  `test_exp004_measured_mesh.py` cubren topología, cuatro entradas base,
+  puertos, intervención interna, pérdida y rutas no resueltas.
+  Suite CPU ligera 110/110. **Aún no hay escena Blender multicelda**:
+  los paths de estos tests son sintéticos, no evidencia geométrica.
+  Claude desarrolla un oráculo CPU independiente en su carpeta; se
+  pidió revisar la convención de puertos y los falsos éxitos.
+
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.
