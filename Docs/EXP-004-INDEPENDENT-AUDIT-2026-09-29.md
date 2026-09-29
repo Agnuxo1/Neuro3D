@@ -54,6 +54,24 @@ un límite global de `2e-5 BU`. Los umbrales nuevos sugeridos (`2e-5 BU`,
 `1e-3` de campo, `2e-4` de balance) no pueden convertir la primera
 corrida en PASS retrospectivo.
 
+Se añadió `Blender/tests/exp004_coherent_balance.py`: sin ray tracing,
+construye la matriz de dispersión aumentada de los campos y escapes
+guardados y evalúa `S†S−I` y **todos** los pares de entradas con fases
+relativas `1` e `i`. Las cuatro mediciones K=4 dieron:
+
+| Tratamiento | error máximo S†S−I | balance máximo superposición |
+|---|---:|---:|
+| base | 8,163e-5 | 6,337e-5 |
+| delta | 9,148e-5 | 6,340e-5 |
+| sham | 1,0225e-4 | 8,182e-5 |
+| ablación | 8,107e-5 | 1,1927e-4 |
+
+El escape usa la clave de canal que emitió el trazador de Claude;
+queda pendiente demostrar que esa agrupación corresponde siempre a
+un único canal físico bajo otras geometrías. El control es más amplio
+que las dos superposiciones iniciales, pero tampoco rescata el gate
+numérico original.
+
 ## Siguiente gate propuesto
 
 Antes de otra corrida, congelar por separado:

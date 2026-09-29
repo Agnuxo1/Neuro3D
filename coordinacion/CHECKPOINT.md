@@ -567,5 +567,14 @@ no se usa como marca.
   ampliados a posteriori; preinscribir presupuesto numérico y fixtures
   confirmatorios nuevos. JEV aún bloqueado, fallback local explícito.
 
+- 2026-09-29 ~17:50 UTC: añadida auditoría reproducible de dispersión
+  aumentada `exp004_coherent_balance.py` con tests puros 116/116.
+  Incluye todos los pares de ocho entradas con fases relativas 1/i y
+  campos de escape agrupados por canal. En K4, `max|S†S−I|` llegó
+  a `1,0225e-4` (sham) y el peor balance superpuesto a `1,1927e-4`
+  (ablación). No hay PASS retroactivo. Claude debe auditar identidad
+  física de canales de escape y presupuesto de precisión para hasta
+  36 impactos.
+
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.
