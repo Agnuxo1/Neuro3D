@@ -394,5 +394,21 @@ no se usa como marca.
   Siguiente: adaptador Blender con mallas y readback, auditoría independiente
   de Claude y permiso de recursos antes de ejecutarlo.
 
+- 2026-09-29 15:05 UTC: nueva autorización explícita del usuario para
+  GPU y Blender, con batería comparativa **después** de una red estable.
+  Claude propuso nichos en THINKTANK y entregó resultados OPT-007
+  sin fuga; Codex leyó JSON, comprobó split→escalado y diferencias por
+  seed: dígitos 0,8933 vs logreg 0,8844 / MLP 0,8841; Iris 0,7867 vs
+  logreg 0,9200. Exploratorio digital, entrenamiento no reproducido.
+  `PROGRAMA-COMPARATIVO-PROPUESTA.md` fija gates y controles, no inicia
+  benchmarks. Revisión Claude del contrato EXP-003 señaló longitud
+  parcial de brazo perdido y autoimpacto; Codex corrigió ambos, añadió
+  gate de ruta opcional y tests: suite CPU ligera 87/87. Sin Blender/GPU
+  ejecutados aquí. JEV no conectó (`provenance=local`) y auto-review
+  rechazó enviarle el estado del proyecto; no reintentar por atajo.
+  DEC-020 es local provisional; consultar JEV solo tras aprobación
+  explícita para ese envío/canal. Próximo: revisión del adaptador Blender,
+  reserva de recursos y EXP-003, antes de comparar nichos.
+
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.

@@ -46,6 +46,7 @@ class RayPathTests(unittest.TestCase):
                              data["source"]["position"],
                              data["source"]["direction"])
         self.assertEqual(result["arm1"]["status"], "lost")
+        self.assertIsNone(result["arm1"]["length"])
         self.assertEqual(result["arm2"]["status"], "reached_bs2")
 
     def test_cross_occluder_is_reported(self):
@@ -56,6 +57,32 @@ class RayPathTests(unittest.TestCase):
                              data["source"]["position"],
                              data["source"]["direction"])
         self.assertEqual(result["arm1"]["hits"][0]["object"], "occluder")
+
+    def test_self_hit_cannot_produce_a_usable_phase(self):
+        data = fixture()
+        base = cast_for(data)
+        previous = [None]
+
+        def self_hitting_cast(origin, direction):
+            if previous[0] == "r1":
+                previous[0] = None
+                return "r1", (2., .0001, 0.), data["r1"]["normal"]
+            hit = base(origin, direction)
+            previous[0] = hit[0] if hit else None
+            return hit
+
+        result = trace_paths(self_hitting_cast, data["source"]["position"],
+                             data["source"]["direction"])
+        self.assertEqual(result["arm1"]["status"], "invalid_self_hit")
+        self.assertIsNone(result["arm1"]["length"])
+
+    def test_unexpected_route_is_not_relabelled_as_success(self):
+        data = fixture()
+        wrong = {"arm1": ("r1", "bs2"), "arm2": ("m2", "bs2")}
+        result = trace_paths(cast_for(data), data["source"]["position"],
+                             data["source"]["direction"], expected_routes=wrong)
+        self.assertEqual(result["arm1"]["status"], "unexpected_route")
+        self.assertIsNone(result["arm1"]["length"])
 
 
 if __name__ == "__main__":

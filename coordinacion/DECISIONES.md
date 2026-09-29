@@ -371,3 +371,27 @@
   y dos salidas esperadas, blobs locales coincidentes y preflight 82/82.
   Codex revisará el runner y recursos antes de cualquier Blender.
   No hay autorización nueva de GPU/Blender para este hilo.
+
+## DEC-020 · 2026-09-29 · Batería comparativa condicionada y nueva autorización
+
+- El usuario autorizó GPU y Blender en este hilo para pruebas necesarias,
+  y pidió investigar ventajas concretas **una vez** que la red sea estable
+  y funcional. Se mantiene coordinación de recursos con Claude y `gpuq`.
+- La red no cumple aún esa condición: EXP-003 no ha ejecutado ray-cast
+  Blender y la malla OPT-007 solo guarda pesos en escena mientras NumPy
+  calcula. Los resultados CPU corregidos de OPT-007 se registran como
+  exploratorios: 0,8933 en dígitos 4×4 frente a 0,8844 de logreg y
+  0,8841 de MLP; en Iris 0,7867 frente a 0,9200 de logreg. Codex
+  comprobó JSON y orden split→escalado, no reprodujo entrenamiento.
+- **Decisión local provisional:** preparar
+  `PROGRAMA-COMPARATIVO-PROPUESTA.md` y condicionar la batería a los
+  gates de celda causal y red multicelda estable. Primera hipótesis
+  candidata: señales de fase relativa; después memoria, visión,
+  robustez y sistemas. Ni métricas OPT-007 ni uso de GPU prueban ventaja
+  óptica o general.
+- **JEV pendiente:** el conector devolvió `status=blocked`,
+  `provenance=local`; doctor/probe también bloqueados. La revisión de
+  seguridad rechazó el envío externo del estado compacto por riesgo de
+  exposición del proyecto. No se eludió el bloqueo ni se atribuye esta
+  decisión a JEV; requiere aprobación explícita del usuario para ese
+  payload/destino o un canal autorizado antes de validación remota.

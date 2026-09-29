@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import math
 
-EPSILON = 1e-6
+EPSILON = 1e-4
 MAX_HITS = 8
 
 
@@ -37,7 +37,7 @@ def _reflect(direction, normal):
     return _unit(_add(direction, _scale(normal, -2 * _dot(direction, normal))))
 
 
-def trace_paths(cast, source_position, source_direction):
+def trace_paths(cast, source_position, source_direction, expected_routes=None):
     """Return measured BS1-to-BS2 paths; missing hits remain explicit loss."""
     direction = _unit(source_direction)
     first = cast(tuple(source_position), direction)
@@ -51,6 +51,7 @@ def trace_paths(cast, source_position, source_direction):
         ray = launch
         segments = []
         status = "lost"
+        previous_name = "bs1"
         for _ in range(MAX_HITS):
             hit = cast(_add(point, _scale(ray, EPSILON)), ray)
             if hit is None:
@@ -63,13 +64,22 @@ def trace_paths(cast, source_position, source_direction):
             segments.append({"object": name, "point": hit_point,
                              "length": distance})
             point = hit_point
+            if name == previous_name:
+                status = "invalid_self_hit"
+                break
+            previous_name = name
             if name == "bs2":
                 status = "reached_bs2"
                 break
             if name == "bs1":
                 raise ValueError("Unexpected second BS1 impact")
             ray = _reflect(ray, tuple(normal))
+        if expected_routes is not None and status == "reached_bs2":
+            if tuple(item["object"] for item in segments) != tuple(expected_routes[arm]):
+                status = "unexpected_route"
+        traversed = sum(item["length"] for item in segments)
         results[arm] = {"status": status,
-                        "length": sum(item["length"] for item in segments),
+                        "length": traversed if status == "reached_bs2" else None,
+                        "traversed_length": traversed,
                         "hits": segments}
     return results

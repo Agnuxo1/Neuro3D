@@ -56,10 +56,10 @@ matricial de NumPy disfrazada de objetos.
 ## Recursos y autorización
 
 Diseñar, revisar y escribir pruebas puras puede hacerse con CPU ligera.
-Ejecutar Blender background CPU requiere una autorización vigente en **este**
-trabajo y una comprobación de recursos; GPU y render quedan fuera de
-EXP-003 inicial. La autorización comunicada por Claude desde otro chat se
-registra como declaración de procedencia externa, no se convierte en
-permiso automático para Codex. Antes de ejecutar, Claude entrega el
-fixture exacto y Codex comprueba que ninguna potencia esperada se inyecte
-en el trazador.
+El usuario autorizó expresamente en este hilo el 2026-09-29 a usar GPU y
+Blender para las pruebas necesarias. Antes de cada ejecución hay que
+comprobar recursos y reserva `gpuq`, coordinar con Claude y fijar límites;
+la autorización no sustituye los gates científicos ni justifica una carga
+innecesaria. El experimento inicial sigue preinscrito como Blender CPU;
+una variante GPU/render exige protocolo separado. Antes de ejecutar,
+Codex comprueba que ninguna potencia esperada se inyecte en el trazador.
