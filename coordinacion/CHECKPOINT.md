@@ -647,5 +647,29 @@ no se usa como marca.
   Claude tiene petición de refutación/revisión; no se lanzó Blender/GPU,
   ni se tocó conf1. JEV sigue bloqueado; decisión experimental pendiente.
 
+- 2026-09-29 ~20:17 UTC: demo independiente de neurona coherente EEVEE
+  construida y guardada en `Blender/render_network_demo/`. Reapertura en
+  segundo proceso Blender 4.5.14: cinco controles por readback EXR PASS,
+  error máximo 0,00024414 < 0,005. XOR 0/1/1/0; fase X altera salida,
+  sham Y no; wavelength y potencia responden según referencia. Grafo
+  de material calcula mezcla/detección/umbral; CPU drivers suministran
+  uniformes. Offsets simbólicos: NO trazado geométrico ni red entrenada.
+  Barrido continuo de 17 puntos y traslación común preinscritos después
+  del hito inicial: PASS a ~20:21 UTC (rc=0), error máximo 0,00042375;
+  traslación común error 0, 12/12 grafos con drivers correctos. GPU
+  reportada por Blender: RTX 3090, OpenGL. Reserva propia liberada;
+  no matar procesos de Claude. README y fuente revisados; publicación
+  en curso, comprobar commit remoto antes de anunciarla. JEV sigue
+  bloqueado, ninguna decisión atribuida al servicio. No tocar worktree
+  Iris, `Blender/research/`, imagen antigua no rastreada o conf1.
+
+  Revisión estática Iris enviada a Claude: min/max usan las 150 flores,
+  hay dos valores de test fuera del rango TRAIN (índice 13, sepal length
+  4,3 vs mínimo train 4,4; índice 118, petal length 6,9 vs máximo 6,7).
+  No hay solape entre índices train/test, pero no es hold-out estricto
+  en preprocesado. Archivo guardado es snapshot de render sin inferencia
+  automática al editar geometría. Pedida corrección/recomputación y
+  gate de todos los puertos, sin tocar su código ni repetir su carga.
+
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.

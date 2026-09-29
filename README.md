@@ -4,8 +4,8 @@
 
 > Arquitectura experimental en la que la geometría 3D y las propiedades ópticas de la escena determinan la propagación y transformación de señales entre neuronas. La apariencia visual es secundaria al cómputo.
 
-![Estado del proyecto](https://img.shields.io/badge/estado-CPU--ready%20%7C%20GPU--dormant-6f42c1)
-![Blender](https://img.shields.io/badge/Blender-adaptador%20preparado-e87d0d)
+![Estado del proyecto](https://img.shields.io/badge/estado-experimental%20%7C%20render%20verificado-6f42c1)
+![Blender](https://img.shields.io/badge/Blender-4.5%20LTS-e87d0d)
 ![Unreal Engine](https://img.shields.io/badge/Unreal%20Engine-5.6%20plugin%20preparado-6e4c9b)
 ![Licencia](https://img.shields.io/badge/licencia-MIT-2ea44f)
 
@@ -16,6 +16,25 @@ Neuro3D explora una red neuronal digital donde posición, orientación y respues
 primer circuito usa óptica geométrica simulada en CPU y mide intensidad, color,
 frecuencia y fase. La ambición posterior es escalarlo y aprovechar la GPU, sin
 confundir este prototipo con hardware fotónico real o un solucionador de Maxwell.
+
+## Demostrador ejecutable dentro de Blender
+
+![Neurona coherente calculada durante el render](Docs/assets/neuro3d-render-network.png)
+
+Abre [Neuro3D_Render_Network.blend](Blender/render_network_demo/Neuro3D_Render_Network.blend)
+en Blender 4.5 y pulsa **F12**. Sus nodos de material calculan interferencia,
+fotodetección y activación durante el render EEVEE; Python no suma campos durante
+esa inferencia. Las posiciones X de los codificadores y las propiedades de escena
+controlan fase, longitud de onda, potencia y umbral. Cuatro copias de una neurona
+coherente mínima muestran XOR, con una presentación lista para inspeccionar.
+
+Es un **modelo digital ideal de shader con offsets simbólicos**, no una red
+entrenada general, trazado geométrico de esos haces ni computación óptica física.
+Los drivers suministran parámetros desde CPU y el render sigue haciendo aritmética.
+No hay ventaja de velocidad o eficiencia demostrada. Pruebas por readback EXR,
+instrucciones y límites en [la guía del demostrador](Blender/render_network_demo/README.md).
+
+## Rutas de implementación
 
 La reconstrucción actual contiene:
 
@@ -66,7 +85,8 @@ no ejecutan shaders.
 
 Consulta [Blender/README.md](Blender/README.md) y el [plan completo de pruebas](Docs/BLENDER_TEST_PLAN.md).
 
-La versión Blender está marcada como **CPU-ready / GPU-dormant**. El addon crea
+El addon original sigue siendo un circuito CPU; la demo EEVEE anterior es una
+ruta separada, ahora ejecutada y verificada. El addon crea
 un circuito de tres objetos y calcula un pulso óptico con un rayo reflejado en
 CPU. El circuito se ejecutó realmente en Blender 4.5.14 LTS en background, se
 guardó y se reabrió con el mismo estado. Consulta el
@@ -74,15 +94,13 @@ guardó y se reabrió con el mismo estado. Consulta el
 visual se conserva aparte. El shader experimental está en
 `Blender/shaders/nebula_photonic_compute.glsl`.
 
-Existe además un **prototipo experimental CPU de dos caminos** con dos salidas,
-campos complejos y balance de potencia por canal. Sus pruebas CPU pasan, pero
-el adaptador de siete objetos todavía no se ha ejecutado dentro de Blender;
-no sustituye al circuito de tres objetos ya verificado ni demuestra todavía
-interferencia controlada por geometría. Detalles y límites en
-[`Blender/README.md`](Blender/README.md).
-Una auditoría posterior detectó un error reproducible de referencia de fase
-cuando los caminos llegan a puntos distintos del combinador: la validación
-confirmatoria del circuito nuevo está bloqueada hasta corregirlo (DEC-006).
+Las validaciones posteriores de una celda y una malla de 16 interferómetros
+(8 modos) superaron gates locales híbridos: Blender determina geometría y
+longitudes por raycast, mientras Python suma los campos complejos. El fallo
+histórico de referencia de fase y el primer fixture multicelda fallido se
+conservan en el historial, sin convertirlos retrospectivamente en éxitos.
+Consulta [la auditoría independiente de EXP-004 conf1](Docs/EXP-004-CONF1-INDEPENDENT-AUDIT-2026-09-29.md).
+Estos gates no validan óptica física ni el transporte geométrico del nuevo shader.
 
 ## Versión Unreal Engine
 
