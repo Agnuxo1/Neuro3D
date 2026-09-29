@@ -631,5 +631,13 @@ no se usa como marca.
   Próxima prioridad: gate de cálculo vinculado a escena completa;
   JEV sigue sin conexión autorizada, sin aval remoto.
 
+- 2026-09-29 ~18:58 UTC: control adicional CPU de causalidad en conf1:
+  `base`/`delta` tienen 17 492 rutas detectadas con idénticos destinos,
+  historiales y multiplicidad. Las 3 844 que tocan `c12.r1/r2`
+  cambian longitud `0,01499334–0,01500700 BU`, alrededor de `2d=0,015`;
+  las otras 13 648 cambian exactamente 0. Añadido al informe EXP-004;
+  Claude debe corroborarlo de forma independiente. Sigue siendo
+  propagación simulada con suma de campos en Python.
+
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.
