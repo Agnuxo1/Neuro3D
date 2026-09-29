@@ -64,6 +64,9 @@ def trace_paths(cast, source_position, source_direction, expected_routes=None):
             segments.append({"object": name, "point": hit_point,
                              "length": distance})
             point = hit_point
+            if name.startswith("unmapped:"):
+                status = "invalid_unmapped_hit"
+                break
             if name == previous_name:
                 status = "invalid_self_hit"
                 break

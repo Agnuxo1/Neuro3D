@@ -418,5 +418,14 @@ no se usa como marca.
   mallas, prueba Blender real, save/reopen y libro mayor; no se ha
   lanzado Blender ni GPU. JEV sigue pendiente por el bloqueo documentado.
 
+- 2026-09-29 15:17 UTC: Claude halló un falso éxito en la frontera
+  ray-cast: sustituir R1 por una malla sin `neuro3d_role` podía llegar
+  a BS2 con longitud 5 si no se activaba `expected_routes`. Codex hizo
+  inválido todo impacto `unmapped:*`, con `length=None`, y añadió el
+  contraejemplo como test; suite CPU ligera 91/91. `expected_routes`
+  sigue siendo gate adicional y será obligatorio en el runner EXP-003.
+  La ablación deberá retirar/desvincular la malla del depsgraph, no
+  confiar en `hide_render`. Sin Blender/GPU; JEV sigue bloqueado.
+
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.

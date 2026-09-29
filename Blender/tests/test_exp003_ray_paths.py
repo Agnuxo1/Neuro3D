@@ -84,6 +84,21 @@ class RayPathTests(unittest.TestCase):
         self.assertEqual(result["arm1"]["status"], "unexpected_route")
         self.assertIsNone(result["arm1"]["length"])
 
+    def test_unmapped_replacement_cannot_produce_usable_length(self):
+        data = fixture()
+        base = cast_for(data)
+
+        def cast(origin, direction):
+            hit = base(origin, direction)
+            if hit is not None and hit[0] == "r1":
+                return "unmapped:stray", hit[1], hit[2]
+            return hit
+
+        result = trace_paths(cast, data["source"]["position"],
+                             data["source"]["direction"])
+        self.assertEqual(result["arm1"]["status"], "invalid_unmapped_hit")
+        self.assertIsNone(result["arm1"]["length"])
+
 
 if __name__ == "__main__":
     unittest.main()
