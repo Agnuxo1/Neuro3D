@@ -383,5 +383,16 @@ no se usa como marca.
   Falta revisar runner de Blender y permiso de recursos de este hilo;
   no se ejecutó Blender/GPU aquí.
 
+- 2026-09-29 14:40 UTC: OPT-015 avanzó sin Blender/GPU. Codex añadió
+  `exp003_ray_paths.py`, un acumulador que solo recibe del callback de
+  escena el **primer impacto real** (objeto, punto y normal), suma
+  segmentos medidos desde los puntos de impacto, y marca pérdida si
+  falta un espejo; no lee longitudes ni potencias previstas del fixture.
+  Tres tests sintéticos cubren ruta válida, ablación sin fallback y
+  oclusión cruzada; suite CPU ligera 85/85. Es solo contrato de integración,
+  no implementación ni validación del `scene.ray_cast` de Blender.
+  Siguiente: adaptador Blender con mallas y readback, auditoría independiente
+  de Claude y permiso de recursos antes de ejecutarlo.
+
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.
