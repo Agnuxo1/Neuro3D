@@ -576,5 +576,17 @@ no se usa como marca.
   física de canales de escape y presupuesto de precisión para hasta
   36 impactos.
 
+- 2026-09-29 ~18:02 UTC: conf1 fixture K4 nuevo leído, SHA bruto
+  `6aea0ee4500e0398882fd14f758671aed40808c68a3f85f228aabada90c99b52`.
+  NO-GO temporal: comparador `exp004/compare.py` aún conserva umbrales
+  v0 y no implementa agrupación `raw_escape` ni pares 1/i. Claude debe
+  congelar comparador ejecutable antes de la corrida confirmatoria.
+  Codex añadió `exp004_escape_channels.py` y pruebas adversarias de
+  rayos coincidentes, paralelos separados, borde angular/lateral y
+  cadenas no transitivas; CPU ligera 121/121. Es diagnóstico
+  independiente, no decisión de tolerancias ni aval JEV. En la cola de
+  Kaggle mencionada por Claude no atribuir resultados digitales a la
+  malla 3D aún no estable.
+
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.
