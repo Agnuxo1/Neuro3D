@@ -276,6 +276,18 @@ no se usa como marca.
   JEV remoto eligió agente principal, confianza de ruta 0,43 (baja);
   por ello no se amplió el paso. No se llamó al motor MZ ni a Blender/GPU.
   Falta que Claude audite el contrato y luego enlazar el trazador real.
+- 2026-09-29 12:06 UTC: Claude sí entregó rama separada `aeb973a` con
+  OPT-013 y revisión EXP-002; su entrada del tablón 11:48 era nueva.
+  Codex inspeccionó e importó seis archivos nuevos, sin sobrescribir el
+  tablón. Pasaron 8/8 y 5/5 de Claude, 45/45 del oráculo y 70/70 del área.
+  El port FP64 leyó los readbacks reales de EXP-001: 7/7 acotado,
+  `ray_status=1` en D. Reprodujo además que el evaluador de fórmula
+  supera los criterios viejos de EXP-002 y que el sham lo discrimina.
+  JEV remoto (`provenance=jev`) eligió integrar, reducir la fase antes
+  del coseno en una sonda futura y añadir sham/vínculo de matrices.
+  Confianza del último 0,38; se adoptó por la evidencia reproducida.
+  DEC-017 y `EXP-002-ENMIENDA-001.md` rigen antes de cualquier Blender;
+  trayectoria CPU queda diagnóstico, no gate nuevo. Sin GPU/Blender.
 
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.

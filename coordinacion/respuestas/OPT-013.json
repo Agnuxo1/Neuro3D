@@ -1,0 +1,67 @@
+{
+  "task_id": "OPT-013",
+  "status": "partial",
+  "execution_note": "Auditoría de solo lectura del commit 33dd4af, sin Blender, sin GPU y sin contexto OpenGL. No edité el motor, la sonda ni los informes de Codex. Escribí archivos propios en el área del oráculo: Blender/oracle/opt013_probe_audit.py y test_opt013_probe_audit.py (8/8 en 0,12 s; oráculo completo 40/40; suite CPU/estática 65/65). El script importa el código anfitrión REAL de mz_scene_gpu_ray_probe.py (input_record y pack_record) con módulos glfw/moderngl vacíos, y ejecuta un port FP64 línea a línea del main() GLSL sobre el mismo vector plano que recibe la GPU. Los siete controles se reconstruyeron desde NonRectMZ(60,2,2) y mz_exp001_plan.controls(). Estado 'partial' porque Fran concedió acceso a D:/PROJECTS/.cognition/neuro3d/exp001-20260929T1023Z, pero en esta sesión no dispuse de herramientas de lectura de archivos del equipo; no he visto los *.readback.json reales ni mz_scene_gpu_ray_probe-v3.json. El script acepta ese directorio como argumento para que Codex lo ejecute.",
+  "summary": "Respuestas a las cuatro preguntas. (1) Sí: la sonda recibe solo matrices y propiedades del readback reabierto, sin salidas esperadas; las expectativas solo se usan en el anfitrión para comparar. Pero de los siete controles solo A y B-geo prueban que la GEOMETRÍA leída gobierna la fase y el puerto; B-mat prueba la fase de material, los tres C dan 0,5/0,5 con cualquier geometría (γ=0) y D usa potencias constantes. (2) La referencia a un frente común es la misma evaluación de onda plana que _wavefront_length del motor y el coseno Taylor de 12 términos tiene error ≤2,1e-14 en [−π−1e-9, π+1e-9]. Hay un hallazgo de reproducibilidad: B-geo cae exactamente en el borde |δ|=π de la guarda; con jitter de ±1 ulp float32 en las traslaciones, la sonda aborta en 551/2000 casos. Falla de forma ruidosa, nunca con falso éxito. (3) D se clasifica bien por rayos (estado 1: el brazo de M2 no llega a BS2), pero 0,25/0,25/0,5 son constantes escritas en el shader (línea 88), no un cálculo; la paridad de potencias de D es tautológica una vez acertado el estado. (4) El alcance ideal se declara correctamente en el docstring, en el campo 'limitation' del informe y en Docs/EXP-001-RUNTIME. Toda desviación del modelo ideal que probé es rechazada por el anfitrión, salvo una: en cuadratura (δ=π/2) el solape ignorado es invisible (aceptado con solape 0,89). Aceptación acotada: la sonda v3 demuestra que la GPU, en FP64, ejecuta el mismo algoritmo de rayos y fase del motor sobre matrices guardadas en A/B-geo/B-mat; C solo prueba la tubería de γ y D solo la clasificación de rayos. No es paridad del motor general.",
+  "findings": [
+    {
+      "severity": "medium",
+      "type": "fact",
+      "claim": "F1 · Reproducibilidad de la guarda de fase. La guarda del anfitrión (mz_scene_gpu_ray_probe.py:184, |δ| > π+1e-9 → AssertionError) coincide con el punto de trabajo nominal de B-geo y C-B-geo (δ = −π). El error float32 de las matrices basta para cruzarla. El 7/7 publicado dependió en parte del signo del redondeo, no de la física. Es un fallo ruidoso (aborta), no un falso éxito.",
+      "evidence": "Emulación: δ(B-geo) = −3,14159265358984 (4,4e-14 fuera de π, dentro de 1e-9). Con las traslaciones redondeadas a float32 y un jitter de ±1 ulp: 551/2000 abortan en B-geo y 537/2000 en C-B-geo; exceso máximo 1,17e-5 rad; 0/2000 en A. La serie de Taylor sigue con error ≤2,1e-14 hasta π+1e-3 y 4,7e-14 en π+0,1, así que la guarda es unas 10^6 veces más estricta de lo que exige la precisión. Repro: test_opt013_probe_audit.PhaseGuardFragility.",
+      "minimal_example": "B-geo con cualquier traslación desplazada 1 ulp float32 que aumente |δ| por encima de π+1e-9.",
+      "recommendation": "Antes de reutilizar la sonda (no a posteriori para el 7/7 ya obtenido): reducir δ a [−π, π] en el shader con δ − 2π·round(δ/2π) antes de cos_near_pi, o ampliar la guarda a π+1e-3. El criterio de potencia 1e-9 no cambia. Registrar el δ real de B-geo y C-B-geo en v3 para saber a qué lado cayó."
+    },
+    {
+      "severity": "medium",
+      "type": "fact",
+      "claim": "F2 · D no calcula potencias. Con un solo brazo en BS2, el shader escribe fa=0,25, fb=0,25, fe=0,5 como constantes (mz_scene_gpu_ray_probe.py:86-88). La coincidencia 0,25/0,25/0,5 de D con Blender es consecuencia directa del estado de rayos y de T=0,5 (impuesto por pack_record). La única evidencia computada de D es la clasificación de rayos. Además, el anfitrión acepta ray_status 1 o 2 para 'missed_bs2' sin comprobar QUÉ brazo se perdió.",
+      "evidence": "Emulación: cambiar la frecuencia ×7,3 y la fase de M1 +1,1 en el vector de D deja las nueve salidas RGB idénticas (test single_arm_powers_are_constants). En la emulación D da ray_status=1: el brazo de M1 llega y el de M2 no, lo que coincide con el giro de M2 (DEC-011).",
+      "minimal_example": "No aplica: es interpretación de una prueba que pasa.",
+      "recommendation": "En Docs/EXP-001-RUNTIME, decir que en D la sonda verifica el estado de rayos y que las potencias son constantes. En el anfitrión, exigir ray_status==1 para D (el brazo de M2 perdido). Si se quiere evidencia computada, calcular las potencias de un brazo con T de BS1/BS2 en lugar de constantes."
+    },
+    {
+      "severity": "low",
+      "type": "fact",
+      "claim": "F3 · Qué prueba cada control (pregunta 1). Los bytes leídos gobiernan la sonda y no se inyecta ninguna salida esperada. Pero con γ=0 los tres C devuelven 0,5/0,5 para cualquier δ: prueban la tubería de coherencia y que ambos brazos llegan, no la fase geométrica. B-mat cambia la fase de material. Solo A frente a B-geo demuestran que una edición geométrica guardada cambia el puerto en la GPU.",
+      "evidence": "test incoherent_controls_ignore_path_difference: fase de M2 +0,9 en C-A no cambia ninguna salida. Una escena C con M1 desplazado 0,013 BU también se acepta con 0,5/0,5.",
+      "minimal_example": "C-A con cualquier desplazamiento de M1 que mantenga ambos brazos en BS2.",
+      "recommendation": "Citar la evidencia geométrica como 'dos controles (A, B-geo)' y no como 7/7."
+    },
+    {
+      "severity": "low",
+      "type": "fact",
+      "claim": "F4 · Omisión del solape invisible en cuadratura. El shader usa γ = mutual_coherence e ignora mode_overlap, la coincidencia de direcciones y los detectores. El anfitrión rechaza ruidosamente la inclinación de BS2 (1e-3 rad), el desplazamiento normal de 0,02 BU con solape 0,98 y la oclusión de detector. Pero con δ=π/2 el término de interferencia se anula y la sonda acepta una escena con solape 0,89 como si coincidiera.",
+      "evidence": "CX1, CX2 y CX3 son rechazados (test counter_cases_are_rejected). En cuadratura, BS2 y los detectores desplazados 0,05 BU sobre la normal, con fase de M2 = π/2 − δ0: motor ok con solape 0,8899 y P_A = 0,5; sonda P_A = 0,5, aceptada, diferencia 1,5e-14 (test quadrature_hides_ignored_mode_overlap).",
+      "minimal_example": "Escena A, grupo del combinador +0,05 BU sobre la normal de BS2 y fase de M2 ajustada a δ = π/2.",
+      "recommendation": "No afecta a EXP-001, donde δ ∈ {0, ±π} y cos = ±1 hace que γ importe al máximo. Si la sonda se amplía como compuerta de paridad general, incluir el factor de solape o añadir un control de cuadratura con impactos separados."
+    },
+    {
+      "severity": "low",
+      "type": "fact",
+      "claim": "F5 · Fases de material sin reducir. El motor reduce cada fase con math.remainder; la sonda usa x[17]−x[16] tal cual. Una fase equivalente escrita como 3π hace abortar la sonda aunque la física sea la misma que B-mat.",
+      "evidence": "CX5: fase de M2 = 3π; motor ok con P_A=1; la sonda lanza 'phase outside validated cosine range'.",
+      "minimal_example": "B-mat con phase_shift = 3π.",
+      "recommendation": "La misma corrección de F1."
+    },
+    {
+      "severity": "info",
+      "type": "fact",
+      "claim": "F6 · Pregunta 2, referencia de fase: correcta. l_k = t0+t_k+u_k+r̂_k·(P_BS2−z_k) es la fase de onda plana de cada brazo evaluada en el MISMO punto P_BS2, idéntica a _wavefront_length(…, scene.bs2.position) del motor. La convención de puertos (A = 0,5(1−γ cos δ) con δ = φ2−φ1) coincide con t·e1 + i·r·e2 del motor para T=0,5. Las etiquetas 'missed_bs2_aperture' (M2 −10° o M1 +10°) se rechazan solo por el nombre, con potencias iguales, como exige DEC-011.",
+      "evidence": "Port FP64 frente a trace_mz en los siete controles: diferencia máxima 1,07e-14. CX4 y CX6: mismas potencias, rechazados por etiqueta.",
+      "minimal_example": "No aplica.",
+      "recommendation": "Ninguna."
+    }
+  ],
+  "proposed_model": "Aceptación acotada de OPT-005 y la sonda v3: paridad FP64 GPU frente a CPU del mismo algoritmo ideal de rayos y fase sobre matrices y propiedades guardadas y reabiertas, con evidencia geométrica en A/B-geo, de fase de material en B-mat, de tubería de γ en C y de clasificación de rayos en D. No acredita paridad del motor general (detectores, solape, absorción, T≠0,5, fases sin reducir) ni física real. Antes de cualquier reutilización: aplicar la reducción de fase (F1/F5) y exigir el brazo perdido en D (F2), ambos preinscritos.",
+  "test_design": [
+    "python Blender/oracle/test_opt013_probe_audit.py  # 8 comprobaciones CPU, sin GPU",
+    "python Blender/oracle/opt013_probe_audit.py D:/PROJECTS/.cognition/neuro3d/exp001-20260929T1023Z  # port FP64 sobre los readbacks reales; comparar delta_phase y ray_status con v3",
+    "Tras aplicar la reducción de fase: repetir el barrido de jitter float32 de PhaseGuardFragility y esperar 0/2000 abortos, con potencias dentro de 1e-9"
+  ],
+  "unknowns": [
+    "δ real de B-geo y C-B-geo, y ray_status_code real de D, en mz_scene_gpu_ray_probe-v3.json: no pude leer la carpeta de D: en esta sesión.",
+    "La aritmética FP64 del driver NVIDIA (normalize, división) no está emulada; el port solo prueba el algoritmo y la lógica de aceptación.",
+    "Si Blender escribió las matrices en float32 con el redondeo que supone la emulación: el jitter de ±1 ulp es un modelo, no una medida."
+  ]
+}

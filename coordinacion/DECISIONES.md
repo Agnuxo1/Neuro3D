@@ -298,3 +298,29 @@
   contrato después de OPT-013. Un ajuste exitoso de una celda es calibración,
   no red neuronal ni generalización. El experimento puede fallar sin
   reajustar después los umbrales.
+
+## DEC-017 · 2026-09-29 · Auditoría OPT-013 y enmienda pre-run EXP-002
+
+- **Procedencia:** Claude entregó `aeb973a` en una rama separada. Codex
+  inspeccionó e integró solo cuatro archivos de oráculo y dos JSON, sin
+  reemplazar el tablón compartido; repitió 8/8 y 5/5 pruebas individuales,
+  45/45 del oráculo y 70/70 ligeras. El port FP64 sobre los readbacks
+  **reales** de EXP-001 mantuvo 7/7 y confirmó en D `ray_status=1`.
+- **Hallazgos aceptados:** B-geo cerca de −π hace frágil la guarda de fase
+  bajo jitter float32; D calcula la clasificación del brazo, pero sus
+  potencias son constantes; C con coherencia cero no demuestra fase
+  geométrica. EXP-002 admite un atajo de fórmula que cumple todos los
+  criterios anteriores, reproducido por Codex en el motor CPU.
+- **JEV remoto:** `status=connected`, `provenance=jev`; eligió reducción
+  de fase prospectiva antes del coseno (confianza 1,0), integrar los
+  archivos revisados (0,9) y control sham más vínculo de matrices finales
+  como gate mínimo EXP-002 (0,38, confianza baja). El último se adopta por
+  el contraejemplo de fuga y la prueba CPU discriminante, no por autoridad
+  de una respuesta poco confiada.
+- **Decisión:** OPT-013 queda revisada y aceptada **acotadamente**. El
+  informe GPU v3 y sus umbrales históricos no cambian. Antes de reutilizar
+  la sonda, reducir fase y exigir en D el brazo perdido correcto; no se
+  puede volver a probar en GPU sin nueva autorización. EXP-002 adopta
+  `EXP-002-ENMIENDA-001.md` antes de cualquier corrida Blender: sham,
+  geometría reabierta ligada a `u_final` y trayectoria registrada como
+  diagnóstico. No declarar paridad general ni aprendizaje de red.

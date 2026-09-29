@@ -1,0 +1,66 @@
+{
+  "task_id": "EXP-002-REVISION",
+  "status": "completed",
+  "execution_note": "Revisión previa a la ejecución de coordinacion/experimentos/EXP-002-PREINSCRIPCION.md y Blender/core/mz_geometry_optimizer.py (commit 33dd4af), sin editarlos, sin Blender y sin GPU. Archivos propios: Blender/oracle/exp002_review.py y test_exp002_review.py (5/5; oráculo 45/45). El optimizador congelado de Codex se alimentó con evaluadores sobre el motor CPU real (trace_mz), con la geometría nonrect60 editada por u·delta del plan de EXP-001.",
+  "summary": "El contrato y el optimizador son internamente correctos, pero el criterio de éxito no distingue una ejecución honesta sobre la escena de un ejecutor que, por error, eluda la escena. Hallazgo principal: en el motor, P_A(u) coincide con la curva de diseño sin²(πu/2) con error ≤7,2e-14. Por tanto, un evaluador que ignore la geometría y devuelva esa fórmula (leyendo γ de la escena) cumple TODOS los criterios actuales: converge en 20 actualizaciones en ambas carreras con el mismo error final, el control de geometría congelada no alcanza el objetivo y el control incoherente se mantiene en 0,5. El control congelado es débil por construcción. Propongo un control 'sham', en el que u mueve una edición ópticamente nula (el grupo del combinador dentro del plano de BS2), y un criterio de trayectoria frente a CPU: ambos separan los dos casos. Sobre la pregunta del tablón: no encontré ningún camino en que el optimizador apruebe una escena desalineada ni guarde la perturbación en lugar del u final, salvo cuando una compuerta aborta a mitad de una diferencia finita.",
+  "findings": [
+    {
+      "severity": "high",
+      "type": "fact",
+      "claim": "X1 · Condición de éxito no discriminante. Como P_A(u) del motor = sin²(πu/2) a 7e-14, la trayectoria de EXP-002 está completamente predeterminada: 20 actualizaciones, u_final = 0,666613 y 0,333387, error final 7,35e-5 en ambas carreras. Un ejecutor que no mueva objetos y calcule la fórmula de diseño produce la misma trayectoria y pasa los criterios y los dos controles negativos congelados.",
+      "evidence": "exp002_review.criteria(scene_evaluator) y criteria(leaky_evaluator): ambos both_targets_converged=true, updates [20,20], frozen_control_fails_as_required=true, incoherent_control_holds=true; las diferencias de u_final son de ~2e-14. Test: test_leaky_runner_is_indistinguishable_by_current_contract.",
+      "minimal_example": "leaky_evaluator: P_A = 0,5(1−γ cos πu) con γ leído de la escena y la geometría sin tocar.",
+      "recommendation": "Preinscribir, antes de medir, un control SHAM: la misma rutina con u aplicado a un desplazamiento del grupo del combinador en el plano de BS2 (dirección (1,1,0)/√2, amplitud 0,3u BU), ópticamente nulo en este modelo. Un ejecutor honesto NO debe alcanzar ningún objetivo; un ejecutor con fuga lo alcanza. Resultado CPU: honesto sin convergencia (max_updates y zero_gradient, P_A ≈ 0); con fuga, ambos objetivos alcanzados. Test: test_sham_control_separates_honest_from_leaky."
+    },
+    {
+      "severity": "medium",
+      "type": "proposal",
+      "claim": "X2 · Criterio de vinculación escena–u. El contrato exige guardar, reabrir y retrazar el resultado final, pero no que las matrices reabiertas correspondan a u_final. Un .blend guardado en otro u (una sonda de diferencias finitas, u de inicio) pasaría la comprobación de persistencia si su potencia retrazada coincide con la potencia registrada de esa misma escena.",
+      "evidence": "EXP-002, sección 'Criterios', primer punto: compara potencia antes y después del guardado, no la geometría frente a u.",
+      "minimal_example": "Guardar la escena de la última sonda u+h: la potencia retrazada coincide consigo misma, pero no es la escena de u_final.",
+      "recommendation": "Añadir: la traslación reabierta del empty del combinador y de M1 debe ser igual a A + u_final·delta dentro de 1e-6 BU, y el P_A retrazado debe estar a ≤1e-9 del último P_A registrado para u_final."
+    },
+    {
+      "severity": "medium",
+      "type": "proposal",
+      "claim": "X3 · Un criterio más informativo: la trayectoria. Como la trayectoria CPU es determinista, la prueba falsable de Blender no es 'alcanzar 1e-4', que es seguro si el motor es correcto, sino reproducir la secuencia u_k y P_A(u_k) calculada en CPU. Blender añade solo el redondeo float32 de las ubicaciones: h·t_π = 3,2e-5 BU frente a un cuanto de ~2,4e-7 BU, lo que da un error de gradiente de ~1%.",
+      "evidence": "exp002_review.criteria(scene_evaluator): u_k reproducible en CPU; análisis de cuantización en este informe.",
+      "minimal_example": "No aplica.",
+      "recommendation": "Congelar antes de medir la trayectoria CPU de referencia y exigir |u_k(Blender) − u_k(CPU)| ≤ 1e-4 y |P_A,k(Blender) − P_A,k(CPU)| ≤ 1e-5 en cada actualización. El número de actualizaciones puede diferir en ±1 por el margen fino (X4)."
+    },
+    {
+      "severity": "low",
+      "type": "fact",
+      "claim": "X4 · Margen fino de convergencia. La primera iteración dentro de tolerancia tiene error 7,35e-5, solo un 26% por debajo del umbral 1e-4, y llega por un solo lado. El ruido float32 de Blender (δφ ~2e-6 rad → ΔP ~1e-6) no debería cruzarlo, pero el número exacto de actualizaciones (20) puede cambiar en Blender.",
+      "evidence": "test_final_error_margin_is_thin.",
+      "minimal_example": "No aplica.",
+      "recommendation": "No usar '20 actualizaciones' como criterio; reportarlo como dato."
+    },
+    {
+      "severity": "low",
+      "type": "fact",
+      "claim": "X5 · Pregunta del tablón sobre desalineación y guardado de la perturbación. _measure exige status ok, interference_valid, unresolved ≤1e-12, balance ≤1e-12 y mode_overlap ≥ 1−1e-9 en TODAS las lecturas, incluidas las de diferencias finitas. Mover solo el grupo, sin M1, aborta en la primera sonda con 'insufficient mode overlap'. En las ramas target y max_updates la última evaluación es u_final; en zero_gradient se restaura. El único caso restante: si una compuerta lanza ValueError durante una sonda u±h, la escena queda en la sonda y la excepción no informa qué u se evaluó por última vez.",
+      "evidence": "Blender/core/mz_geometry_optimizer.py:80-106. Prueba CPU: evaluador solo del grupo → ValueError en u=0,1. El motor mantiene mode_overlap = 1,0 en u ∈ {0; 0,1; 1/3; 0,5; 2/3; 0,9; 1}, porque P se desplaza sobre v2 y M1 linealmente, lo que conserva la coincidencia de impactos.",
+      "minimal_example": "Evaluador que falla la compuerta en u+h.",
+      "recommendation": "Que el ejecutor Blender no guarde tras una excepción y registre el último u evaluado. Opcional: añadir last_evaluated_u a FitRun y a la excepción."
+    },
+    {
+      "severity": "info",
+      "type": "inference",
+      "claim": "X6 · Alcance. El diseño ya declara que es recalibración de un parámetro y no aprendizaje ni red. Con X1, ni siquiera la recalibración aporta información nueva sobre la óptica simulada: la aportación de EXP-002 es comprobar que el camino Blender (editar, trazar, guardar, reabrir) sostiene un bucle de 60-120 evaluaciones sin pérdida de alineación.",
+      "evidence": "Igualdad motor–diseño a 7e-14.",
+      "minimal_example": "No aplica.",
+      "recommendation": "Describir el resultado como 'bucle de ajuste geométrico reproducible en Blender', no como aprendizaje."
+    }
+  ],
+  "proposed_model": "Mantener EXP-002 con tres enmiendas preinscritas antes de cualquier ejecución: (1) control SHAM con u en una edición ópticamente nula, que no debe converger; (2) vinculación de las matrices reabiertas con u_final a 1e-6 BU; (3) trayectoria CPU congelada como referencia paso a paso. Umbrales, objetivos, pasos y dominio de u sin cambios.",
+  "test_design": [
+    "python Blender/oracle/test_exp002_review.py  # 5 comprobaciones CPU",
+    "python Blender/oracle/exp002_review.py  # informe honesto/fuga/sham",
+    "En el ejecutor Blender: sham con el mismo presupuesto de 50 actualizaciones y el mismo registro de observaciones"
+  ],
+  "unknowns": [
+    "Que el desplazamiento en el plano de BS2 sea también nulo en Blender con float32: previsiblemente sí (≤1e-7 BU fuera del plano), pero hay que comprobarlo en el primer paso del sham.",
+    "Tiempo real por evaluación en Blender: 3 evaluaciones por actualización × 20 × 2 carreras, más los controles, dan unas 150 fases si cada una reabre."
+  ]
+}
