@@ -3,7 +3,10 @@
 PR: https://github.com/Agnuxo1/Neuro3D/pull/1
 Branch fetched and inspected: `origin/claude/lattice-iris-demo`, 2026-09-29.
 Review scope: source and published JSON only, not a new heavy runtime execution.
-Disposition: **do not merge yet**; preserve this candidate and its existing results.
+Original review disposition: **do not merge yet**. Update: origin/main now
+contains external merge `2e418df` (verified 2026-09-29 ~20:30 UTC). That merge
+does not close the findings below or constitute Codex's independent acceptance.
+Preserve existing results and correct the merged implementation in a follow-up.
 
 ## Required before acceptance
 
