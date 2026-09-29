@@ -85,6 +85,18 @@ class GeometryOptimizerProcedureTests(unittest.TestCase):
         self.assertEqual(scene["u"], run.final_u)
         self.assertEqual(scene["traces"], len(run.observations))
 
+    def test_restore_failure_does_not_hide_original_probe_failure(self):
+        def evaluate(u):
+            if u > .1:
+                raise RuntimeError("optical probe failed")
+            return fake_result(.02)
+        def restore(_u):
+            raise ValueError("placement restore failed")
+        with self.assertRaisesRegex(RuntimeError, "optical probe failed") as caught:
+            fit_port_a(evaluate, .75, .1, restore=restore)
+        self.assertIsInstance(caught.exception.__cause__, ValueError)
+        self.assertIn("placement restore failed", str(caught.exception.__cause__))
+
 
 if __name__ == "__main__":
     unittest.main()

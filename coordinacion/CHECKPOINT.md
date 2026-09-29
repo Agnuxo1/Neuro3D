@@ -357,6 +357,17 @@ no se usa como marca.
   Siguiente: Claude entrega fixture exacto y corrige fuga; Codex audita
   antes de cualquier corrida y corrige el enmascaramiento de excepción
   del callback `restore` de OPT-014.
+- 2026-09-29 14:03 UTC: Claude entregó `Blender/research/exp003/fixture.py`
+  y `fixture.json` como archivos no rastreados. Codex los leyó sin editar y
+  construyó una comprobación independiente de **primer impacto entre
+  todos los discos**: para d=0/0,0025/0,005 los caminos fueron
+  R1→R2→F1→BS2 y M2→BS2, longitudes 5+2d y 3; el sham z=0,01 mantuvo
+  L1=5 y retirar R2 perdió el brazo 1. Auditoría geométrica estática
+  favorable, pero fixture aún no congelado en Git ni ray_cast Blender
+  verificado. Los resultados CPU corregidos de OPT-007 aún no llegaron.
+  OPT-014 corrigió enmascaramiento de excepciones: si restaurar falla,
+  se conserva el error óptico original y el fallo de restauración queda
+  como causa. Test nuevo, suite ligera 80/80. Sin Blender/GPU.
 
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.

@@ -9,6 +9,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 import math
+import sys
 from typing import Callable, Protocol
 
 
@@ -118,4 +119,12 @@ def fit_port_a(
         # A live runner passes the geometry-only placement callback. Restore
         # even when a probe raises, without issuing another optical trace.
         if restore is not None:
-            restore(u)
+            original_error = sys.exc_info()[1]
+            try:
+                restore(u)
+            except Exception as restore_error:
+                # Keep the optical failure primary while exposing the failed
+                # restoration as its explicit cause. Either way, fail closed.
+                if original_error is not None:
+                    raise original_error from restore_error
+                raise
