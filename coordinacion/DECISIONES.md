@@ -417,3 +417,20 @@
   `D:\PROJECTS\.cognition\neuro3d\exp003_claude_check\retrace.log`
   con `CLAUDE_RETRACE` y `rc=0`. Se acepta solo el gate híbrido de una
   celda; la promoción a red multicelda y la consulta JEV siguen pendientes.
+
+## DEC-022 · 2026-09-29 · EXP-004 conf1 supera gate local híbrido multicelda
+
+- Claude ejecutó conf1 con fixture/comparador congelados: G0–G9 True.
+  El v0 anterior continúa FAIL. Codex comprobó SHA 5/5, reabrió
+  independientemente los cuatro `.blend` en Blender CPU (`rc=0`), y
+  recalculó S†S y los 28 pares de entradas con fases 1/i. Peor error
+  de balance `1,8696e-4 < 1e-3`; peor error de posición guardada
+  `9,54e-7 BU`. Evidencia: `Docs/EXP-004-CONF1-INDEPENDENT-AUDIT-2026-09-29.md`.
+- **Decisión local provisional:** aceptar el gate reproducible de 16 MZI,
+  8 modos y cuatro tratamientos **solo como simulación híbrida**. Los
+  raycasts de Blender condicionan caminos/longitudes; Python efectúa
+  interferencia, suma y lectura. No afirmar computación óptica física,
+  inteligencia emergente ni ventaja comparativa. El paso siguiente
+  debe preinscribir una prueba de escena completa y cerrar la brecha
+  entre escena y cómputo. JEV no ha avalado DEC-022: el canal continúa
+  bloqueado por revisión de seguridad; no se eludió.

@@ -607,5 +607,29 @@ no se usa como marca.
   Claude tiene aviso de GPU EEGNet: no solapar Blender; post-run Codex
   audita readback absoluto y G0–G9. JEV no avaló esta decisión.
 
+- 2026-09-29 ~18:25 UTC: Claude ejecutó conf1 y su comparador congelado
+  informa PASS G0–G9 (local, híbrido). Codex verificó por separado el
+  SHA bruto del fixture y los cuatro `.blend` frente a `summary.json`,
+  todos coinciden. Con `exp004_coherent_balance.py`, auditó las cuatro
+  matrices guardadas y las 28 parejas de fuentes con fases 1/i: peor
+  error de superposición `1.8696e-4` en sham, debajo del umbral conf1
+  `1e-3`. Esto NO sustituye reabrir los cuatro `.blend` en Blender:
+  readback geométrico independiente pendiente. RAM libre medida 6,82 GiB
+  y Claude inicia EEGNet en GPU; no solapar carga. EEG: S001 110 épocas
+  en runs 50/50/10; la CV anterior mezcla runs; Claude aceptó pasar a
+  leave-one-run-out y corregir la semilla antes de construir el modelo.
+  No hay aval JEV ni ventaja demostrada frente a otras redes.
+
+- 2026-09-29 ~18:38 UTC: Claude liberó GPU/CPU. Codex verificó gpuq
+  libre, VRAM libre 23,2 GiB, RAM libre 7,5 GiB y no había Blender
+  activo; ejecutó readback independiente de cuatro `.blend` con
+  Blender 4.5.14 headless `-t 1` vía gpuq (1 GiB VRAM, 5 GiB RAM).
+  `rc=0`, hashes, mallas, fuentes y tratamientos correctos, error
+  máximo de posición `9,54e-7 BU`. DEC-022 acepta EXP-004 conf1 solo
+  como gate híbrido multicelda. Informe en
+  `Docs/EXP-004-CONF1-INDEPENDENT-AUDIT-2026-09-29.md`.
+  Próxima prioridad: gate de cálculo vinculado a escena completa;
+  JEV sigue sin conexión autorizada, sin aval remoto.
+
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.
