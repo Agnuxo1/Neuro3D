@@ -16,10 +16,20 @@ Conf1 conserva 16 MZI/8 modos y pasa el gate híbrido local DEC-022. En `blender
 ## Gates falsables antes de cualquier promoción
 
 - G0: hashes de código/fixture y tres `.blend` registrados; readback exacto de propiedades ópticas y de geometría no editada.
-- G1: `base→fase` conserva multiconjunto de rutas y longitudes dentro de `1e-6 BU` por impacto. Solo los caminos que tocan `c12.r1` reciben el factor relativo `exp(i·0,1)`; todos los demás conservan campo por camino. Un camino contrario refuta el gate.
+- G1: `base→fase` conserva multiconjunto de rutas y longitudes dentro de `1e-6 BU` por impacto. Un camino que toca `c12.r1` **n veces** recibe el factor relativo `exp(i·n·0,1)`; los que no lo tocan conservan campo por camino. Si esta topología garantiza n≤1, demostrarlo con el historial, no asumirlo. Un camino contrario refuta el gate.
 - G2: `base→lambda` conserva multiconjunto y longitudes; para cada camino de longitud L, la fase relativa esperada es `exp[i·2πL·(1/0,101−1/0,100)]`. Se evalúa el campo complejo, no solo intensidades.
 - G3: ambas perturbaciones cambian al menos una salida de forma concordante con el oráculo; el sham deja campos complejos iguales. El umbral mínimo de cambio se fijará a partir del oráculo **antes** de la medición, no a posteriori.
 - G4: conservación de energía de la matriz ampliada de detectores/escapes, incluidos los 28 pares de entradas con fases 1/i; objetivo `max|S†S−I| ≤ 1e-3` en los tratamientos sin pérdida.
 - G5: si eliminar o ignorar las propiedades guardadas en escena deja la salida igual, el experimento falla aunque las intensidades aparenten ser plausibles.
 
 No iniciar benchmarks de ventaja con este resultado por sí solo: demostraría propiedades de escena consumidas por software, todavía no computación óptica física ni neuronas dependientes de intensidad. Para esa meta hará falta otro gate de no linealidad, libro mayor de absorción y una comparación honesta de coste/precisión con cómputo digital.
+
+## Unidad CPU previa al runtime — 2026-09-29
+
+`Blender/tests/exp005_scene_properties.py` valida una instantánea con longitud de
+onda y fases explícitas, sin defaults del fixture, y registra coeficiente y campo
+por impacto de un camino suministrado. Once pruebas CPU sintéticas pasan: factores
+de fase por multiplicidad, lambda, sham, inmutabilidad y fallos cerrados. No lee
+todavía `.blend`, no genera rutas, no suma escapes y NO es un oráculo independiente
+de escena completa. El experimento sigue **NO GO** hasta completar esos componentes,
+recibir crítica y congelar los umbrales/fixture. JEV continúa bloqueado, sin aval.

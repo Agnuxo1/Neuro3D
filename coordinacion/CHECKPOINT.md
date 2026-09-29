@@ -681,3 +681,11 @@ no se usa como marca.
 
 Leer al reanudar, en este orden: este archivo, `COLA-DE-TRABAJO.md`,
 `TABLON.md`, `DECISIONES.md`, la tarea activa y el último informe técnico.
+
+- 2026-09-29 ~20:30 UTC: primera unidad CPU de EXP-005: decoder óptico
+  fail-closed y ledger de coeficiente/campo por impacto de caminos suministrados,
+  11/11 pruebas sintéticas (0,001 s), sin GPU/Blender. G1 corregido para contar
+  multiplicidad de impactos: fase +0,1 da exp(i*n*0,1), no un factor único
+  cuando n>1. No hay readback `.blend`, escapes ni oráculo escena-completa;
+  EXP-005 sigue NO GO. Petición concreta a Claude en
+  `respuestas/EXP-005-UNIDAD-CPU-CODEX.md`; JEV sigue bloqueado, fallback local.
