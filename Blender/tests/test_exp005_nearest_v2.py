@@ -8,6 +8,7 @@ sys.path.insert(0, str(Path(__file__).parents[1]/'benchmarks'/'capacity_audit'))
 from nearest_hit_v2 import BASE, BASE_SHA, Candidate, select, shader_source
 from exp005_peer_ambiguity_audit import plane
 from exp005_triangle_oracle import triangle_hit, unit
+from exp005_blender_gpu import split_double
 
 
 class NearestV2Tests(unittest.TestCase):
@@ -75,6 +76,30 @@ class NearestV2Tests(unittest.TestCase):
                Candidate(2, 0, (float('nan'), 0, 0))]
         for item in bad:
             with self.assertRaises(ValueError): select([Candidate(1, 0, (1, 0, 0)), item])
+
+    def test_non_dyadic_geometry_requires_low_parts_to_keep_hit_order(self):
+        values = [5., 5.-.9e-9, 5.-1.8e-9]
+        parts = [split_double(v) for v in values]
+        self.assertEqual(len(set(hi for hi, lo in parts)), 1)
+        reconstructed = [hi+lo for hi, lo in parts]
+        self.assertEqual(len(set(reconstructed)), 3)
+        self.assertLess(max(abs(a-b) for a, b in zip(values, reconstructed)), 1e-14)
+        self.assertTrue(select([Candidate(t, i, (1, 0, 0)) for i, t in enumerate(reconstructed)])[1])
+
+    def test_remaining_bias_limitation_is_not_hidden_by_nearest_fix(self):
+        # A distinct forward surface 1e-8 away is visible from the exact hit,
+        # but invisible after the unchanged 1e-6 origin advance. V2 is NOT a
+        # fix for fine-gap geometry; this is a retained limitation, not a gate.
+        obj = plane(5.+1e-8, 'mirror')
+        tri = tuple(obj['vertices_world_BU'][i] for i in obj['faces'][0])
+        self.assertIsNotNone(triangle_hit((5., 0, 0), (1, 0, 0), tri, 1e-9))
+        self.assertIsNone(triangle_hit((5.+1e-6, 0, 0), (1, 0, 0), tri, 1e-9))
+
+    def test_remaining_terminal_tolerance_gap_is_explicit(self):
+        arrival = unit((1., 4e-4, 0.))
+        alignment = arrival[0]
+        self.assertGreaterEqual(alignment, 1.-1e-6)  # Frozen GPU terminal check accepts.
+        self.assertLess(alignment, 1.-1e-9)  # Independent CPU mode check rejects.
 
     def test_composed_shader_preserves_base_and_non_nearest_optics(self):
         raw = BASE.read_bytes()

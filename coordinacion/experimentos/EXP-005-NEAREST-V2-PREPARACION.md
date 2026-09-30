@@ -35,6 +35,12 @@ SHA, reemplaza solamente nearest y conserva main/amplitudes/ledger/flags.
 Los runners anteriores NO seleccionan V2 automáticamente. Bias1e−6,
 epsilon1e−9, terminal tolerancia1e−6 y perfiles/caps siguen SIN corregir:
 esta versión sola no resuelve CE1/CE2/hi-lo/overflow ni modos físicos.
+Regresiones CPU adicionales RETIENEN las limitaciones: una superficie a1e−8
+BU se pierde con bias1e−6; llegada normalizada(1,4e−4,0) es aceptada por el
+umbral GPU1e−6 y rechazada por oráculo1e−9. Son contraejemplos pendientes,
+no funcionalidades reparadas. Geometría CE3 tiene todas las partes high
+FP32 iguales; el split high+low distingue tres planos a error<1e−14CPU.
+Eso NO mide precisión del hardwareRT ni del kernel compilado.
 
 ## Antes de GPU
 
