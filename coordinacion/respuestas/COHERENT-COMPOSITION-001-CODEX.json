@@ -1,0 +1,426 @@
+{
+  "task_id": "COHERENT-COMPOSITION-001-CODEX",
+  "created_utc": "2026-09-30T21:29:02.013367+00:00",
+  "scope": "conditional supplied-field CPU L1 composition, no native admission or upstream certification",
+  "skill_influence": "focused feature workflow: new opt-in pure module, new targeted tests, frozen files unchanged; cognition factual checkpoint",
+  "test_runs": {
+    "initial_before_wavelength_binding": {
+      "rc": 0,
+      "elapsed_s": 0.15999669999291655,
+      "stdout": "",
+      "stderr": "........\n----------------------------------------------------------------------\nRan 8 tests in 0.004s\n\nOK\n"
+    },
+    "final_with_wavelength_binding": {
+      "rc": 0,
+      "elapsed_s": 0.16790539999783505,
+      "stdout": "",
+      "stderr": "........\n----------------------------------------------------------------------\nRan 8 tests in 0.004s\n\nOK\n"
+    },
+    "reason_for_second_run": "new exact wavelength-binding requirement and negative regression added"
+  },
+  "new_code_sha256": {
+    "Blender/benchmarks/capacity_audit/coherent_error_composition_cpu_v1.py": "7e7988ecdb014d2eb3efff09af8c0e4aaf7cf94b39835fb8b0dfa18d99693879",
+    "Blender/tests/test_coherent_error_composition_cpu.py": "ea7acb67bb5957c1e0bff236788496481a9e0cbab9e2f039cf5f9dd7db219409",
+    "Docs/EXP-005-COHERENT-ERROR-COMPOSITION-CPU-V1.md": "f80b9a1fa48729248254a2515ba7ba2aed2d56f383cefc1a603d7fb607769fd9"
+  },
+  "preserved_frozen_sha256": {
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\coherent_reduction_cpu_v1.py": "cfd71837b19fd39cbf321ad41319587cd497397d266cc221d9da0c02c4f7d785",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\tests\\test_coherent_reduction_cpu.py": "b6f3919eadc9d29cef8046943de871b8fa85a7a1c917fbd08e9cd874f9554f2d",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Docs\\EXP-005-COHERENT-REDUCTION-CPU-V1.md": "f5726ced773a0b9c86c852e1d47c598358ebc01b05de9ee4aa28797a857746ff",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\shaders\\exp005_signed_phase_probe.glsl": "2f9aa95ae4d15755765d0ba6cd38fdcd0fc313a3b248530feeb0478464806b29",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\shaders\\exp005_shared_frontier.glsl": "914bf2962ead3c6a7b721a8dc2aa6c1e796af4bde1892db1802c3ca93ebdfcd1",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\scalar_job_launcher_v1.py": "2f5211d63ac09fb026858c19641f591be4d8bbb6add5d90cf0d6155f25d79aa8"
+  },
+  "all_six_frozen_unchanged": true,
+  "resource_snapshot": {
+    "utc": "2026-09-30T21:24:12.701638+00:00",
+    "ram_free_GiB": 2.5615882873535156,
+    "holder": "filament:FIL-011c ms_learned_cons_40k clip-fix lowmem",
+    "tickets": [],
+    "own_GPU_or_Blender": false
+  },
+  "samples": {
+    "unit_field_power_gate": {
+      "rows": [
+        {
+          "id": 0,
+          "source_id": "s",
+          "port": "p",
+          "field_uint32": [
+            1065353216,
+            0
+          ]
+        }
+      ],
+      "path_error_bounds": [
+        {
+          "id": 0,
+          "source_id": "s",
+          "port": "p",
+          "field_uint32": [
+            1065353216,
+            0
+          ],
+          "coherence_group": "g",
+          "phase_reference_id": "origin0",
+          "lambda_BU": 0.125,
+          "field_error_L1_upper_rational": [
+            1,
+            10000
+          ]
+        }
+      ],
+      "output": {
+        "schema": "coherent-error-composition-CPU-v1",
+        "algorithm": "neumaier32",
+        "field_budget_rational": [
+          7378697629483821,
+          73786976294838210000
+        ],
+        "intensity_budget_rational": [
+          7378697629483821,
+          36893488147419103000
+        ],
+        "represented_reduction": {
+          "schema": "coherent-reduction-CPU-v1",
+          "algorithm": "neumaier32",
+          "ports": {
+            "p": {
+              "groups": {
+                "g": {
+                  "supplied_path_count": 1,
+                  "reference_field_rational": [
+                    [
+                      1,
+                      1
+                    ],
+                    [
+                      0,
+                      1
+                    ]
+                  ],
+                  "modeled_field_reim": [
+                    1,
+                    0
+                  ],
+                  "field_error_L1_rational": [
+                    0,
+                    1
+                  ],
+                  "intensity_error_rational": [
+                    0,
+                    1
+                  ],
+                  "reference_intensity_rational": [
+                    1,
+                    1
+                  ],
+                  "field_budget_satisfied": true
+                }
+              },
+              "intensity_error_bound_rational": [
+                0,
+                1
+              ],
+              "intensity_budget_satisfied": true
+            }
+          },
+          "accepted_represented_reduction_only": true,
+          "native_promotion_allowed": false,
+          "geometry_or_scene_inference": false,
+          "GPU_executed": false,
+          "no_jev_aval": true,
+          "scope": "conditional ideal reduction of supplied represented fields, CPU RN32 model only",
+          "excluded": [
+            "input field/phase/geometry/coefficient errors",
+            "GPU/libm/FTZ/reassociation",
+            "native detection or intensity arithmetic",
+            "physical coherence/mode overlap",
+            "scene completeness and native precision"
+          ]
+        },
+        "ports": {
+          "p": {
+            "groups": {
+              "g": {
+                "phase_reference_id": "origin0",
+                "supplied_path_count": 1,
+                "assumed_upstream_error_L1_upper_rational": [
+                  1,
+                  10000
+                ],
+                "represented_reduction_error_L1_rational": [
+                  0,
+                  1
+                ],
+                "composed_field_error_upper_rational": [
+                  1,
+                  10000
+                ],
+                "represented_reference_L1_rational": [
+                  1,
+                  1
+                ],
+                "upstream_intensity_error_upper_rational": [
+                  20001,
+                  100000000
+                ],
+                "composed_intensity_error_upper_rational": [
+                  20001,
+                  100000000
+                ],
+                "field_budget_satisfied": true
+              }
+            },
+            "intensity_error_upper_rational": [
+              20001,
+              100000000
+            ],
+            "intensity_budget_satisfied": false
+          }
+        },
+        "accepted_conditional_upstream_and_reduction_only": false,
+        "upstream_bounds_independently_certified": false,
+        "native_promotion_allowed": false,
+        "geometry_or_scene_inference": false,
+        "GPU_executed": false,
+        "no_jev_aval": true,
+        "excluded": [
+          "upstream producer/scene completeness certification",
+          "native sin/cos, GPU reduction, FTZ/reassociation",
+          "native detection/intensity arithmetic",
+          "physical coherence, mode overlap, all native precision"
+        ]
+      }
+    },
+    "highgain_synthetic_only": {
+      "rows": [
+        {
+          "id": 0,
+          "source_id": "s",
+          "port": "p",
+          "field_uint32": [
+            1275068416,
+            0
+          ]
+        },
+        {
+          "id": 1,
+          "source_id": "s",
+          "port": "p",
+          "field_uint32": [
+            1065353216,
+            0
+          ]
+        },
+        {
+          "id": 2,
+          "source_id": "s",
+          "port": "p",
+          "field_uint32": [
+            3422552064,
+            0
+          ]
+        }
+      ],
+      "path_error_bounds": [
+        {
+          "id": 0,
+          "source_id": "s",
+          "port": "p",
+          "field_uint32": [
+            1275068416,
+            0
+          ],
+          "coherence_group": "g",
+          "phase_reference_id": "origin0",
+          "lambda_BU": 0.125,
+          "field_error_L1_upper_rational": [
+            1,
+            20000
+          ]
+        },
+        {
+          "id": 1,
+          "source_id": "s",
+          "port": "p",
+          "field_uint32": [
+            1065353216,
+            0
+          ],
+          "coherence_group": "g",
+          "phase_reference_id": "origin0",
+          "lambda_BU": 0.125,
+          "field_error_L1_upper_rational": [
+            1,
+            20000
+          ]
+        },
+        {
+          "id": 2,
+          "source_id": "s",
+          "port": "p",
+          "field_uint32": [
+            3422552064,
+            0
+          ],
+          "coherence_group": "g",
+          "phase_reference_id": "origin0",
+          "lambda_BU": 0.125,
+          "field_error_L1_upper_rational": [
+            1,
+            20000
+          ]
+        }
+      ],
+      "output": {
+        "schema": "coherent-error-composition-CPU-v1",
+        "algorithm": "neumaier32",
+        "field_budget_rational": [
+          7378697629483821,
+          73786976294838210000
+        ],
+        "intensity_budget_rational": [
+          7378697629483821,
+          36893488147419103000
+        ],
+        "represented_reduction": {
+          "schema": "coherent-reduction-CPU-v1",
+          "algorithm": "neumaier32",
+          "ports": {
+            "p": {
+              "groups": {
+                "g": {
+                  "supplied_path_count": 3,
+                  "reference_field_rational": [
+                    [
+                      1,
+                      1
+                    ],
+                    [
+                      0,
+                      1
+                    ]
+                  ],
+                  "modeled_field_reim": [
+                    1,
+                    0
+                  ],
+                  "field_error_L1_rational": [
+                    0,
+                    1
+                  ],
+                  "intensity_error_rational": [
+                    0,
+                    1
+                  ],
+                  "reference_intensity_rational": [
+                    1,
+                    1
+                  ],
+                  "field_budget_satisfied": true
+                }
+              },
+              "intensity_error_bound_rational": [
+                0,
+                1
+              ],
+              "intensity_budget_satisfied": true
+            }
+          },
+          "accepted_represented_reduction_only": true,
+          "native_promotion_allowed": false,
+          "geometry_or_scene_inference": false,
+          "GPU_executed": false,
+          "no_jev_aval": true,
+          "scope": "conditional ideal reduction of supplied represented fields, CPU RN32 model only",
+          "excluded": [
+            "input field/phase/geometry/coefficient errors",
+            "GPU/libm/FTZ/reassociation",
+            "native detection or intensity arithmetic",
+            "physical coherence/mode overlap",
+            "scene completeness and native precision"
+          ]
+        },
+        "ports": {
+          "p": {
+            "groups": {
+              "g": {
+                "phase_reference_id": "origin0",
+                "supplied_path_count": 3,
+                "assumed_upstream_error_L1_upper_rational": [
+                  3,
+                  20000
+                ],
+                "represented_reduction_error_L1_rational": [
+                  0,
+                  1
+                ],
+                "composed_field_error_upper_rational": [
+                  3,
+                  20000
+                ],
+                "represented_reference_L1_rational": [
+                  1,
+                  1
+                ],
+                "upstream_intensity_error_upper_rational": [
+                  120009,
+                  400000000
+                ],
+                "composed_intensity_error_upper_rational": [
+                  120009,
+                  400000000
+                ],
+                "field_budget_satisfied": false
+              }
+            },
+            "intensity_error_upper_rational": [
+              120009,
+              400000000
+            ],
+            "intensity_budget_satisfied": false
+          }
+        },
+        "accepted_conditional_upstream_and_reduction_only": false,
+        "upstream_bounds_independently_certified": false,
+        "native_promotion_allowed": false,
+        "geometry_or_scene_inference": false,
+        "GPU_executed": false,
+        "no_jev_aval": true,
+        "excluded": [
+          "upstream producer/scene completeness certification",
+          "native sin/cos, GPU reduction, FTZ/reassociation",
+          "native detection/intensity arithmetic",
+          "physical coherence, mode overlap, all native precision"
+        ]
+      }
+    }
+  },
+  "new_test_coverage": [
+    "zero upstream reproduces reduction only",
+    "six orders: exact compensated reduction passes but conditional upstream budget rejects",
+    "field gate passes while power gate fails",
+    "25 exact rational complex perturbations bound the composed field/power errors",
+    "independent groups sum power bounds never fields",
+    "missing/duplicate/wrong ID/source/port/words/group/reference/wavelength bindings reject",
+    "noncanonical/negative/bool/zero-denominator/over256bit rational reject",
+    "coherent sources require common phase reference and same represented wavelength"
+  ],
+  "acceptance": {
+    "tests_passed": true,
+    "native_promotion_allowed": false,
+    "upstream_independently_certified": false,
+    "total_native_precision": false,
+    "geometry_or_scene_inference": false,
+    "RT": false,
+    "speed_or_efficiency_advantage_claimed": false
+  },
+  "limitations": [
+    "Supplied per-path L1 upper bounds are assumptions; rejection of a conservative bound is NOT observed network error.",
+    "Previously retained phase norm bounds require component-wise derivation or conservative norm2-to-L1 conversion before integration.",
+    "No native libm, geometry/hi-lo/source/coefficient error certificate, detection arithmetic or scene completeness.",
+    "No JEV remote approval: security-blocked explicit local fallback."
+  ],
+  "next": "Bind per-path upstream L1 bounds and fields from SAME producer/reference/scene with completeness evidence before promotion. Claude can append existing raw field/error artifacts ID/SHA to grouped acknowledgment013; no new suite/job required."
+}
