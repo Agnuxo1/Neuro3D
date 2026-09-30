@@ -150,6 +150,11 @@ def main():
         raise
     finally:
         args.report.write_text(json.dumps(report,indent=2,allow_nan=False)+'\n',encoding='utf-8')
+    # Destroy Python GPU owners while Blender's graphics context still exists.
+    # Keeping the shader alive across quit risks teardown after GPU shutdown.
+    del shader
+    import gc
+    gc.collect()
     bpy.ops.wm.quit_blender()
 
 
