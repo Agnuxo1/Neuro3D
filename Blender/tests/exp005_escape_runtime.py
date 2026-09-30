@@ -20,6 +20,7 @@ def main():
     from exp005_scene_readback import export_snapshot
     from exp005_triangle_oracle import trace_scene
     from exp005_gpu_pack import pack_paths
+    from exp005_mode_gate import validate_native_modes
     from exp005_blender_gpu import native_shader,dispatch,schedule_exit
     from exp005_runtime_smoke import write_json,key
     parser=argparse.ArgumentParser(); parser.add_argument('--evidence',type=Path,required=True)
@@ -62,6 +63,7 @@ def main():
                 scene['optical_sources']=json.dumps(sources)
                 supplied=readback(); oracle=trace_scene(supplied)
                 paths,rays=raycast_paths(scene)
+                validate_native_modes(supplied,paths)
                 expected={key(p):p for p in oracle['paths']}; actual={key(p):p for p in paths}
                 if len(expected)!=len(oracle['paths']) or len(actual)!=len(paths) or set(expected)!=set(actual):
                     raise ValueError('path identity/multiplicity mismatch')
@@ -115,6 +117,8 @@ def main():
         report['code_sha256']={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in
             (Path(__file__),Path(__file__).with_name('exp005_escape_fixture.py'),Path(__file__).with_name('exp005_blender_gpu.py'),
              Path(__file__).parents[1]/'shaders'/'exp005_blender_fields.glsl')}
+        gate=Path(__file__).with_name('exp005_mode_gate.py')
+        report['code_sha256'][gate.name]=hashlib.sha256(gate.read_bytes()).hexdigest()
         report['passed']=True; print('EXP005_ESCAPE_NATIVE_GPU_PASS',flush=True)
     except Exception as exc:
         report['error']=f'{type(exc).__name__}: {exc}'
