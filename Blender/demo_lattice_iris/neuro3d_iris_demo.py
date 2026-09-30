@@ -23,7 +23,18 @@ import bpy
 import numpy as np
 from mathutils import Vector
 
-HERE = os.path.dirname(os.path.abspath(__file__)) if "__file__" in dir() else os.getcwd()
+def _demo_dir():
+    cands = []
+    try: cands.append(os.path.dirname(os.path.abspath(__file__)))
+    except NameError: pass
+    if bpy.data.filepath: cands += [os.path.dirname(bpy.data.filepath), os.path.dirname(os.path.dirname(bpy.data.filepath))]
+    cands.append(os.getcwd())
+    for c in cands:
+        if os.path.exists(os.path.join(c, "iris.csv")): return c
+    return cands[0]
+
+
+HERE = _demo_dir()
 LAM = 0.1                                   # wavelength (Blender units)
 KW = 2 * math.pi / LAM
 T, R, MIR = 1 / math.sqrt(2), 1j / math.sqrt(2), -1.0   # beam splitter t, r; mirror reflection
@@ -114,10 +125,25 @@ def encode(x, ref):
     return a / np.sqrt((np.abs(a) ** 2).sum(1, keepdims=True))
 
 
-def load_iris():
+def load_raw():
     rows = [l.strip().split(",") for l in open(os.path.join(HERE, "iris.csv")).read().splitlines()[1:]]
-    x = np.array([[float(v) for v in r[:4]] for r in rows]); y = np.array([SPECIES.index(r[4]) for r in rows])
-    lo, hi = x.min(0), x.max(0); return (x - lo) / (hi - lo), y, (lo, hi)
+    return np.array([[float(v) for v in r[:4]] for r in rows]), np.array([SPECIES.index(r[4]) for r in rows])
+
+
+def split():
+    rng = np.random.default_rng(0); idx = rng.permutation(150); return idx[30:], idx[:30]   # train, fixed hold-out
+
+
+def load_iris(scaler=None):
+    """Features scaled with a min/max fitted on the TRAIN rows only (persisted with the weights)."""
+    x, y = load_raw()
+    if scaler is None:
+        st_path = os.path.join(HERE, "trained_lattice.json")
+        if os.path.exists(st_path) and "scaler_lo" in json.load(open(st_path)):
+            st = json.load(open(st_path)); scaler = (np.array(st["scaler_lo"]), np.array(st["scaler_hi"]))
+        else:
+            tr, _ = split(); scaler = (x[tr].min(0), x[tr].max(0))
+    lo, hi = scaler; return (x - lo) / (hi - lo), y, scaler
 
 
 def loss_acc(p, x, y):
@@ -229,21 +255,27 @@ def build_scene(theta, ref):
     return sc
 
 
+TRACE_INFO = {"escape": 0.0}   # incoherent escaped power of the last trace (0 when every ray reaches a detector)
 SEG_L = {}          # segment -> optical path length at its start (filled by trace, used by the live animation)
 
 
-def _set_excluded(flag):
+def _set_excluded(flag, previous=None):
+    """flag=True: exclude every non-Optics collection and return the previous flags; flag=False: restore them."""
+    prev = {}
     for lc in bpy.context.view_layer.layer_collection.children:
-        if lc.name != "Optics": lc.exclude = flag
+        if lc.name == "Optics": continue
+        prev[lc.name] = lc.exclude
+        lc.exclude = True if flag else (previous or {}).get(lc.name, False)
+    return prev
 
 
 def trace(amps):
     """Coherent path sum with scene.ray_cast. amps: {source_id: complex}. Only the Optics collection is
     visible to the rays (decor, beams and labels are excluded from the depsgraph while tracing).
     Returns detector fields, per-segment coherent field (for rendering) and the number of casts."""
-    sc = bpy.context.scene; _set_excluded(True); bpy.context.view_layer.update()
+    sc = bpy.context.scene; prev = _set_excluded(True); bpy.context.view_layer.update()
     try:
-        dg = bpy.context.evaluated_depsgraph_get(); det, seg, casts = {}, {}, 0; SEG_L.clear()
+        dg = bpy.context.evaluated_depsgraph_get(); det, seg, casts = {}, {}, 0; SEG_L.clear(); TRACE_INFO["escape"] = 0.0
         for s in json.loads(sc["sources"]):
             a0 = amps.get(s["id"], 0)
             if a0 == 0: continue
@@ -257,7 +289,8 @@ def trace(amps):
                 key = (frm, ob.name if hit else "escape", tuple(round(c, 4) for c in o), tuple(round(c, 4) for c in end))
                 seg[key] = seg.get(key, 0) + amp * cmath.exp(1j * KW * L)
                 SEG_L[key] = min(SEG_L.get(key, 1e9), L)
-                if not hit: continue
+                if not hit:
+                    TRACE_INFO["escape"] += abs(amp) ** 2; continue
                 L2 = L + (loc - o).length; kind = ob["kind"]
                 if kind == "det":
                     det[ob.name[4:]] = det.get(ob.name[4:], 0) + amp * cmath.exp(1j * KW * L2); continue
@@ -268,7 +301,7 @@ def trace(amps):
                     stack.append((loc, rd, amp * R, L2, ob.name, depth + 1))
         return det, seg, casts
     finally:
-        _set_excluded(False)
+        _set_excluded(False, prev)
 
 
 def classify(x_row):
@@ -449,11 +482,13 @@ def register():
 # ----------------------------------------------------------------------------------------------
 def main(argv):
     x, y, _ = load_iris(); out_dir = None; state_path = os.path.join(HERE, "trained_lattice.json")
-    if "--render" in argv: out_dir = argv[argv.index("--render") + 1]; os.makedirs(out_dir, exist_ok=True)
-    rng = np.random.default_rng(0); idx = rng.permutation(len(y)); te, tr = idx[:30], idx[30:]   # fixed hold-out
+    if "--render" in argv: out_dir = os.path.join(HERE, argv[argv.index("--render") + 1]); os.makedirs(out_dir, exist_ok=True)
+    tr, te = split()
     if "--train" in argv:
+        x, y, scaler = load_iris(scaler=(load_raw()[0][tr].min(0), load_raw()[0][tr].max(0)))
         t0 = time.time(); p = train(x[tr], y[tr])
         json.dump({"theta": p[:16].tolist(), "ref": p[16], "logt": p[17], "train_idx": tr.tolist(), "test_idx": te.tolist(),
+                   "scaler_lo": scaler[0].tolist(), "scaler_hi": scaler[1].tolist(), "scaler_fit": "train rows only",
                    "train_acc_model": loss_acc(p, x[tr], y[tr])[1], "test_acc_model": loss_acc(p, x[te], y[te])[1],
                    "seconds": time.time() - t0}, open(state_path, "w"), indent=1)
         print("TRAINED", json.load(open(state_path))["test_acc_model"], flush=True)
@@ -471,7 +506,27 @@ def main(argv):
         rep = {"scene_test_acc": float((preds[te] == y[te]).mean()), "scene_train_acc": float((preds[tr] == y[tr]).mean()),
                "scene_vs_model_max_power_diff": maxdiff, "ray_casts_total": casts, "seconds": time.time() - t0,
                "per_sample_ms": 1000 * (time.time() - t0) / len(y)}
+        # extended gate on the hold-out flowers: all 8 complex outputs + escape, decoration invariance, save/reopen
+        ins, outs = modes(); probe = [int(n) for n in te]
+        def outputs(n):
+            a = encode(x[n][None], st["ref"])[0]; det, _, _ = trace({sid: a[ins.index(sid)] for sid in INPUTS + [REF]})
+            return [det.get(o, 0j) for o in outs], TRACE_INFO["escape"]
+        before = {n: outputs(n) for n in probe}
+        pred, P, _, seg, _ = classify(x[probe[0]]); show(seg, P, pred, truth=int(y[probe[0]]), x_row=x[probe[0]])   # add decoration
+        after = {n: outputs(n) for n in probe}
+        blend = os.path.join(HERE, "renders", "verify_tmp.blend"); os.makedirs(os.path.dirname(blend), exist_ok=True)
+        bpy.ops.wm.save_as_mainfile(filepath=blend); bpy.ops.wm.open_mainfile(filepath=blend)
+        reopened = {n: outputs(n) for n in probe}
+        U = model_U(theta * LAM / (4 * math.pi))
+        model = {n: list(U @ encode(x[n][None], st["ref"])[0]) for n in probe}
+        diff = lambda A, B: max(max(abs(a - b) for a, b in zip(A[n][0], B[n][0])) for n in probe)
+        rep.update({"outputs_complex_vs_model_max": max(max(abs(a - b) for a, b in zip(before[n][0], model[n])) for n in probe),
+                    "decoration_invariance_max": diff(before, after), "save_reopen_max": diff(before, reopened),
+                    "escape_max": max(v[1] for v in before.values()),
+                    "power_balance_max_err": max(abs(sum(abs(c) ** 2 for c in v[0]) + v[1] - 1) for v in before.values())})
+        os.remove(blend)
         json.dump(rep, open(os.path.join(HERE, "scene_verification.json"), "w"), indent=1); print("VERIFY", rep, flush=True)
+        st2 = json.load(open(state_path)); theta = np.array(st2["theta"]).reshape(K, K); build_scene(theta, st2["ref"])
     if out_dir:
         setup_render(); sc = bpy.context.scene
         picks = [int(te[np.where(y[te] == c)[0][0]]) for c in range(3)]
@@ -479,6 +534,8 @@ def main(argv):
             pred, P, _, seg, _ = classify(x[n]); show(seg, P, pred, truth=int(y[n]), x_row=x[n])
             sc.render.filepath = os.path.join(out_dir, f"iris_{SPECIES[y[n]]}.png"); bpy.ops.render.render(write_still=True)
             print("RENDERED", sc.render.filepath, flush=True)
+        txt = bpy.data.texts.get("neuro3d_iris_demo.py") or bpy.data.texts.new("neuro3d_iris_demo.py")
+        txt.from_string(open(os.path.join(HERE, "neuro3d_iris_demo.py"), encoding="utf-8").read())
         bpy.ops.wm.save_as_mainfile(filepath=os.path.join(out_dir, "neuro3d_iris_lattice.blend"))
     print("NEURO3D_IRIS_DONE", flush=True)
 
