@@ -1,6 +1,35 @@
 # Checkpoint factual de Neuro3D
 
-Actualizado: 2026-09-29 23:47 UTC (30/09 01:47 Madrid).
+Actualizado: 2026-09-29 23:56 UTC (30/09 01:56 Madrid).
+
+## Hito confirmado 23:55 UTC · no repetir el smoke sin cambio
+
+- Paridad real Blender4.5.14LTS10/10PASS: diez escenas nuevas guardadas/reabiertas,
+  dos aceptadas y ocho rechazadas por motivos predefinidos. Fases0,2/0,4 de
+  objetos con misma malla siguen independientes. No render/raycast/campos/RT.
+- Reserva Codex adquirida tras liberarse Claude y liberada23:55:06UTCrc0.
+  Guard completed,11,82s, RAMmín muestreada9,12GiB, VRAMtotalmáx0,69GiB,32°C.
+  56 tests CPU previos. Informe `Docs/EXP-005-PARITY-RUNTIME-2026-09-30.md`.
+- Runtime evidencia `exp005_parity_cpu_20260929_2354/parity_runtime.json` y
+  guard `exp005_parity_guard_20260929_2354.json` en cognition. No queda mi waiter.
+- MulticeldaNO GO sigue; próximo contrato/fixture multicelda pequeño, oráculo
+  completo y campos/superposiciones. No reejecutar unidades ya comprobadas;
+  revisar respuesta Claude al error de conteo y pedir guardRAM4 antes de escala.
+  JEVbloqueado, fallbacklocal; conf1/v0/Iris intactos.
+
+## Plan anterior de paridad · ejecutado, conservar como procedencia
+
+- `exp005_parity_runtime.py`: contrato de diez escenas NUEVAS guardadas/reabiertas,
+  dos aceptaciones y ocho rechazos de visibilidad/colección/transformación/
+  fase/modificador. Solo readback, sin raycast/campos/render/GPU. 56/56 CPU
+  sintéticos (3 AST nuevos), aún sin resultado runtime.
+- Claude sigue con reserva MI-lattice32-loro. Lanzar SOLO mediante gpuq y guard
+  de hijo propio, RAM libre>=4GiB, una hebraCPU, timeout120s, carpeta nueva.
+  No duplicar si hay waiter Codex para `neuro3d:codex-exp005-parity`.
+- Evidencia prevista `D:/PROJECTS/.cognition/neuro3d/exp005_parity_cpu_20260929_2354/`;
+  supervisor `exp005_parity_guard_20260929_2354.json`. Si la cola expira, el smoke
+  NO se ejecutó: reencolar al liberar, sin bypass. No contar preparación como PASS.
+  Plan `respuestas/EXP-005-PARIDAD-PLAN-RUNTIME-CODEX.md`. JEV bloqueado.
 
 ## Unidad nocturna 23:47 UTC · CPU propia, sin GPU duplicada
 
