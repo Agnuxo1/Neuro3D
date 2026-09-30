@@ -1,6 +1,6 @@
 # Cola única de trabajo de Neuro3D
 
-Estado al 2026-09-29 23:56 UTC. Antes de iniciar una tarea, comprobar aquí que
+Estado al 2026-09-30 00:08 UTC. Antes de iniciar una tarea, comprobar aquí que
 no haya otra ejecución del mismo trabajo.
 
 | ID | Prioridad | Estado | Responsable | Modelo o ruta | Esfuerzo | Recursos reservados | Dependencias | Entregable | Criterio de aceptación |
@@ -26,7 +26,7 @@ no haya otra ejecución del mismo trabajo.
 | EXP-004 | P0 | Conf1 PASS local híbrido; pendiente gate de cómputo en escena | Claude ejecutó; Codex auditó | Runner raycast Blender + oráculo independiente | Alto | gpuq libre tras readback CPU -t 1 | DEC-022; v0 FAIL | `Docs/EXP-004-CONF1-INDEPENDENT-AUDIT-2026-09-29.md` | Geometría y balance aceptados solo en simulación híbrida; preinscribir escena completa y mecanismo óptico/estado antes de reclamar que el modelo 3D realiza todo el cálculo. |
 
 | RENDER-001 | P1 | Demo fija PASS local; revisión independiente solicitada | Codex; Claude revisa | `Blender/render_network_demo/` | Medio | Reserva Codex liberada tras pruebas RTX3090/EEVEE | No depende de modificar conf1 o Iris | `.blend`, preview, fuente y verification.json | Cinco controles y barrido de 17 fases por EXR <=0,005; 12 drivers/grafos correctos. No es red entrenada ni transporte geométrico completo. |
-| EXP-005 | P0 | 56/56 CPU y paridad real10/10PASS; NO GO multicelda | Codex; Claude critica | `Blender/tests/exp005_*` | Alto | Reserva Codex finalizada/liberada23:55UTC; sin trabajo propio activo | Contrato y fixture multicelda pequeño congelado | Oráculo, escape coherente y readback evaluado; informe PARITY-RUNTIME | No confundir paridad de objetos con campos/interferencia/RT; ortogonalidad y todos los modos/superposiciones pendientes. |
+| EXP-005 | P0 | 63/63 CPU; fixture nuevo de dos celdas/3modos; paridad real anterior10/10; NO GO multicelda real | Codex; Claude critica | `Blender/tests/exp005_*` | Alto | Sin reserva ni proceso Blender Codex; GPU ajena MI-predict-lattice32 | Revisión composición y nuevo contrato runtime | Cascada conectada, composición independiente y contraejemplo de potencia conservada | No confundir escenas sintéticas con Blender real; guardar/reabrir/raycast, ortogonalidad y todos los modos/superposiciones pendientes. |
 
 Una propuesta de Claude no cambia el estado de la cola hasta que Codex la
 compruebe y registre la decisión.

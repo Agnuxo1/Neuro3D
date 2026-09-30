@@ -1,6 +1,24 @@
 # Checkpoint factual de Neuro3D
 
-Actualizado: 2026-09-29 23:56 UTC (30/09 01:56 Madrid).
+Actualizado: 2026-09-30 00:08 UTC (02:08 Madrid).
+
+## Siguiente fixture conectado preparado y probado solo en CPU
+
+- `exp005_cascade_fixture.py`: dos MZI conectados, tres fuentes/puertos,
+  15 superficies. Tres bases + seis pares por tratamiento comparados con
+  composición analítica independiente, 63/63 pruebas CPU (siete nuevas).
+  Fases0,2/0,37: campo1,84e-13, Gram5,71e-14, balancepares1,29e-13.
+- Contraejemplo: retirar b.bs1 conserva energía pero altera campos0,697;
+  expectativa inicial de pérdida falsada y enmienda documentada. b.r1
+  eliminado sí pierde rayos. No basta potencia para certificar red correcta.
+- No Blender/GPU en esta unidad; todavía NO GO multicelda real. Próximo:
+  convertir ESTA escena nueva a Blender, guardar/reabrir/depsgraph y comparar
+  raycast con oráculo completo en todas las bases/pares, tras reserva/guard.
+  Informe `respuestas/EXP-005-CASCADA-CPU-CODEX.md` y PLAN asociado.
+- Claude capacidadv2 reconoce conteos y alcance torch/CPU, v1 conservada.
+  Sweep aún leído300B/celda y piso3GiB; corrección pedida antes de escala.
+  GPU reservada por MI-predict-lattice32 ajeno; no solapada. JEV bloqueado,
+  fallback local; ninguna modificación a sus archivos/fixtures históricos.
 
 ## Hito confirmado 23:55 UTC · no repetir el smoke sin cambio
 
