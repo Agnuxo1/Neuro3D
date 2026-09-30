@@ -1,6 +1,24 @@
 # Checkpoint factual de Neuro3D
 
-Actualizado: 2026-09-30 01:38 UTC (03:38 Madrid).
+Actualizado: 2026-09-30 01:55 UTC (03:55 Madrid).
+
+## Hito numérico nuevo: divisor configurable63/63; validación live pendiente
+
+- Nuevo esquemav2 exige T porbs, shaderV2 separado sqrt(T)/i sqrt(1-T), geometríaCPU.
+  V1CPUrechazado6626178 por simetríaT=.2/.8 preservado; V2eb07c4b congelada antesGPU.
+  100CPU,7escenas nuevas guardadas/reabiertas63probes, campo2,797e-6,
+  potencia3,083e-6/balance5,292e-6. EfectoT.2/.5=0,092304, fase0,084912,
+  T.2/.8potenciaigual5,96e-8/campodistinto0,618558,sham0. Artefactos0151.
+- OperativoPASS rc0/guard8,570s,01:53:29–38UTC,PID30156gone/sinBlender.
+  Los5rechazos bpy aparecen como evaluated-transmittance-mismatch: alcance
+  PARCIAL para validación de valores porque la copia del depsgraph estaba stale.
+  No declarar prueba runtime de cada tipo/rango por esos mensajes. CPU sí los valida.
+- Próximo Codex: probar actualización explícita de objeto en vivo, T positivo
+  cambia readback/resultado y negativos actualizados llegan a gates de tipo/rango.
+  No guardar sobre fixtures0151/0119. Resto físico/RT/ventajas sigue pendiente.
+- Contraste escapeClaude01:26 re-auditado54valores (6puertos oscuros ausentes,
+  registrados), max1,032733e-5/balance5,019e-6; solo18bases, pares/rechazos pendientes.
+  JEVbloqueado/fallbacklocal. Ningún archivoClaude modificado ni push/merge.
 
 ## Hito nuevo: gate modal nativo8rechazos +9probes PASS, turno libre
 
