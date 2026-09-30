@@ -1,6 +1,6 @@
 # Cola única de trabajo de Neuro3D
 
-Estado al 2026-09-30 00:18 UTC. Antes de iniciar una tarea, comprobar aquí que
+Estado al 2026-09-30 00:37 UTC. Antes de iniciar una tarea, comprobar aquí que
 no haya otra ejecución del mismo trabajo.
 
 | ID | Prioridad | Estado | Responsable | Modelo o ruta | Esfuerzo | Recursos reservados | Dependencias | Entregable | Criterio de aceptación |
@@ -26,7 +26,7 @@ no haya otra ejecución del mismo trabajo.
 | EXP-004 | P0 | Conf1 PASS local híbrido; pendiente gate de cómputo en escena | Claude ejecutó; Codex auditó | Runner raycast Blender + oráculo independiente | Alto | gpuq libre tras readback CPU -t 1 | DEC-022; v0 FAIL | `Docs/EXP-004-CONF1-INDEPENDENT-AUDIT-2026-09-29.md` | Geometría y balance aceptados solo en simulación híbrida; preinscribir escena completa y mecanismo óptico/estado antes de reclamar que el modelo 3D realiza todo el cálculo. |
 
 | RENDER-001 | P1 | Demo fija PASS local; revisión independiente solicitada | Codex; Claude revisa | `Blender/render_network_demo/` | Medio | Reserva Codex liberada tras pruebas RTX3090/EEVEE | No depende de modificar conf1 o Iris | `.blend`, preview, fuente y verification.json | Cinco controles y barrido de 17 fases por EXR <=0,005; 12 drivers/grafos correctos. No es red entrenada ni transporte geométrico completo. |
-| EXP-005 | P0 | 66/66 CPU; cascada runtime congelada8164062 y aceptada por Claude; espera expirada sin ejecutar | Codex; Claude critica | `Blender/tests/exp005_*` | Alto | Sin ticket/job Codex activo; MI-bands-windows ajena | Reencolar smoke120s cuando libere gpuq y haya RAM | Seis .blend nuevos,54probes; comparar campos/historiales/composición bajo guard | No contar cola expirada como fallo óptico/PASS; NO GO EXP-005completo/RT, no tocar conf1/v0. |
+| EXP-005 | P0 | Cascada v4 PASS local6escenas/54probes;72/72 CPU; v1/v2/v3 FAIL preservados | Codex; Claude retraza | `Blender/tests/exp005_*` | Alto | Turno Codex liberado00:34:19UTC; no procesos propios | Retrazado independiente y contrato siguiente de escape/propiedades/GPU | `Docs/EXP-005-CASCADE-RUNTIME-2026-09-30.md`, campos completos/rutas/hashes | Aceptación solo híbrida de dos celdas; no red RT ni ortogonalidad física/EXP-005completo; no repetir sin cambio. |
 
 Una propuesta de Claude no cambia el estado de la cola hasta que Codex la
 compruebe y registre la decisión.
