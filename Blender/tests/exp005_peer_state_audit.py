@@ -63,7 +63,9 @@ def audit(peer_path):
             fields = [[float(x.real), float(x.imag)] for x in result['U'][:, 0, 0].tolist()]
             comparisons = evaluate_fields(scenes, fields)
             row = {'case': label, 'rejected': False, 'inputs': scenes, 'comparisons': comparisons,
-                   'stored_lambda_BU': batch.lam, 'states': result['states'],
+                   'stored_lambda_BU': getattr(batch, 'lam', None),
+                   'wave_numbers': batch.k.tolist() if isinstance(batch.k, torch.Tensor) else batch.k,
+                   'states': result['states'],
                    'max_complex_error': max(r['complex_error'] for r in comparisons)}
         if scenes != preserved:
             raise ValueError('peer changed caller inputs')
@@ -73,7 +75,22 @@ def audit(peer_path):
     sc = torch.tensor([0, 0], dtype=torch.int64)
     points = torch.tensor([[5., 0., 0.], [5.+.4e-9, 0., 0.]], dtype=torch.float64)
     directions = torch.tensor([[1., 0., 0.], [1., 0., 0.]], dtype=torch.float64)
-    keys = peer._hash(sc, points, directions, 1e-9, 1e-9).tolist()
+    exact_quantized_keys = hasattr(peer, '_qkey')
+    keys = (peer._hash(peer._qkey(sc, points, directions, 1e-9, 1e-9))
+            if exact_quantized_keys else peer._hash(sc, points, directions, 1e-9, 1e-9)).tolist()
+    collision_control = {'available': exact_quantized_keys, 'rejected': False}
+    if exact_quantized_keys:
+        original_hash = peer._hash
+        # Mutant only in this imported module/process, never peer source files.
+        peer._hash = lambda qk: torch.zeros(qk.shape[0], dtype=torch.int64, device=qk.device)
+        try:
+            peer.trace(peer.Batch([fixture(.125), fixture(.14)], dev='cpu'), max_levels=8)
+        except peer.TraceError as exc:
+            collision_control.update(rejected='colision' in str(exc), error=str(exc))
+        finally:
+            peer._hash = original_hash
+        if not collision_control['rejected']:
+            raise ValueError('different quantized keys sharing hash were not rejected')
     delta = float(points[1, 0]-points[0, 0])
     # Analytic future segment to a common phase reference, NOT a full trace:
     # distinct origins imply a different path phase at equal local amplitude.
@@ -85,6 +102,7 @@ def audit(peer_path):
     return {'scope': 'CPU execution of retained peer torch code plus independent triangular oracle; no GPU/Blender',
         'peer_sha256': before, 'field_threshold': FIELD_TOL, 'torch_version': torch.__version__,
         'cpu_threads': 1, 'cuda_initialized': False, 'cases': rows,
+        'forced_hash_collision_control': collision_control,
         'mixed_lambda_unsafe': any(not r['rejected'] and r['max_complex_error'] > FIELD_TOL for r in rows[1:]),
         'quantization_alias': {'keys': keys, 'same_key': keys[0] == keys[1],
             'distinct_positions': bool(delta != 0), 'position_delta_BU': delta,
