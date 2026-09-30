@@ -1,0 +1,318 @@
+{
+  "task_id": "PHASE-CIRCULAR-001-CODEX",
+  "timestamp_utc": "2026-09-30T16:52:04.572632+00:00",
+  "tests": 6,
+  "test_output": "......\n----------------------------------------------------------------------\nRan 6 tests in 0.001s\n\nOK\n",
+  "cases": [
+    {
+      "L_BU": 0,
+      "lambda_BU": 0.125,
+      "observed_CPU_libm_field_difference": 0,
+      "cycle_error_circular_rational": [
+        0,
+        1
+      ],
+      "cycle_term_upper_rad": [
+        0,
+        1
+      ],
+      "tau_term_upper_rad": [
+        0,
+        1
+      ],
+      "multiply_and_cast_term_rad": [
+        0,
+        1
+      ],
+      "ideal_unit_phasor_error_upper_rational": [
+        0,
+        1
+      ],
+      "ideal_unit_phasor_error_upper_float": 0,
+      "field_budget_satisfied_arithmetic_only": true,
+      "represented_RN_trace_validated": true,
+      "trace_execution_authenticated": false,
+      "uniform_domain_bound_proved": false,
+      "sin_cos_driver_certified": false,
+      "native_promotion_allowed": false,
+      "scope": "conditional point-scalars and ideal exponential; excludes scene/driver/inputs uncertainty"
+    },
+    {
+      "L_BU": 4.03125,
+      "lambda_BU": 0.125,
+      "observed_CPU_libm_field_difference": 4.371139006309477e-8,
+      "cycle_error_circular_rational": [
+        0,
+        1
+      ],
+      "cycle_term_upper_rad": [
+        0,
+        1
+      ],
+      "tau_term_upper_rad": [
+        1.2246467991473532e+34,
+        2e+50
+      ],
+      "multiply_and_cast_term_rad": [
+        24607325,
+        562949953421312
+      ],
+      "ideal_unit_phasor_error_upper_rational": [
+        8.742278024865422e+42,
+        2e+50
+      ],
+      "ideal_unit_phasor_error_upper_float": 4.371139012432711e-8,
+      "field_budget_satisfied_arithmetic_only": true,
+      "represented_RN_trace_validated": true,
+      "trace_execution_authenticated": false,
+      "uniform_domain_bound_proved": false,
+      "sin_cos_driver_certified": false,
+      "native_promotion_allowed": false,
+      "scope": "conditional point-scalars and ideal exponential; excludes scene/driver/inputs uncertainty"
+    },
+    {
+      "L_BU": 1000001.8750002384,
+      "lambda_BU": 0.00000286102294921875,
+      "observed_CPU_libm_field_difference": 4.635697296189552e-8,
+      "cycle_error_circular_rational": [
+        1,
+        54043195528445950
+      ],
+      "cycle_term_upper_rad": [
+        1.0471975511965978e+50,
+        9.007199254740993e+65
+      ],
+      "tau_term_upper_rad": [
+        9.192198113834151e+49,
+        9.007199254740993e+65
+      ],
+      "multiply_and_cast_term_rad": [
+        1.1752888903077605e+23,
+        2.535301200456459e+30
+      ],
+      "ideal_unit_phasor_error_upper_rational": [
+        2.087732468401408e+58,
+        4.503599627370496e+65
+      ],
+      "ideal_unit_phasor_error_upper_float": 4.635697311353511e-8,
+      "field_budget_satisfied_arithmetic_only": true,
+      "represented_RN_trace_validated": true,
+      "trace_execution_authenticated": false,
+      "uniform_domain_bound_proved": false,
+      "sin_cos_driver_certified": false,
+      "native_promotion_allowed": false,
+      "scope": "conditional point-scalars and ideal exponential; excludes scene/driver/inputs uncertainty"
+    },
+    {
+      "L_BU": 1000.0625,
+      "lambda_BU": 1.00416693877201e-12,
+      "observed_CPU_libm_field_difference": 1.2055843426830042e-8,
+      "cycle_error_circular_rational": [
+        52954682137535,
+        1.1196835519171547e+31
+      ],
+      "cycle_term_upper_rad": [
+        1.1090802691764173e+63,
+        3.7322785063905157e+79
+      ],
+      "tau_term_upper_rad": [
+        5.69320323737493e+49,
+        9.007199254740993e+65
+      ],
+      "multiply_and_cast_term_rad": [
+        3.056519426052745e+22,
+        2.535301200456459e+30
+      ],
+      "ideal_unit_phasor_error_upper_rational": [
+        1.1248941392146955e+72,
+        9.33069626597629e+79
+      ],
+      "ideal_unit_phasor_error_upper_float": 1.2055843499231037e-8,
+      "field_budget_satisfied_arithmetic_only": true,
+      "represented_RN_trace_validated": true,
+      "trace_execution_authenticated": false,
+      "uniform_domain_bound_proved": false,
+      "sin_cos_driver_certified": false,
+      "native_promotion_allowed": false,
+      "scope": "conditional point-scalars and ideal exponential; excludes scene/driver/inputs uncertainty"
+    },
+    {
+      "L_BU": 0.49999999999999994,
+      "lambda_BU": 1,
+      "observed_CPU_libm_field_difference": 8.742277943717093e-8,
+      "cycle_error_circular_rational": [
+        1,
+        18014398509481984
+      ],
+      "cycle_term_upper_rad": [
+        3.1415926535897932e+50,
+        9.007199254740993e+65
+      ],
+      "tau_term_upper_rad": [
+        1.2246467991473532e+34,
+        1e+50
+      ],
+      "multiply_and_cast_term_rad": [
+        24607325,
+        281474976710656
+      ],
+      "ideal_unit_phasor_error_upper_rational": [
+        7.874344042446564e+58,
+        9.007199254740993e+65
+      ],
+      "ideal_unit_phasor_error_upper_float": 8.742278059744107e-8,
+      "field_budget_satisfied_arithmetic_only": true,
+      "represented_RN_trace_validated": true,
+      "trace_execution_authenticated": false,
+      "uniform_domain_bound_proved": false,
+      "sin_cos_driver_certified": false,
+      "native_promotion_allowed": false,
+      "scope": "conditional point-scalars and ideal exponential; excludes scene/driver/inputs uncertainty"
+    },
+    {
+      "L_BU": 0.5,
+      "lambda_BU": 1,
+      "observed_CPU_libm_field_difference": 8.742278012618951e-8,
+      "cycle_error_circular_rational": [
+        0,
+        1
+      ],
+      "cycle_term_upper_rad": [
+        0,
+        1
+      ],
+      "tau_term_upper_rad": [
+        1.2246467991473532e+34,
+        1e+50
+      ],
+      "multiply_and_cast_term_rad": [
+        24607325,
+        281474976710656
+      ],
+      "ideal_unit_phasor_error_upper_rational": [
+        8.742278024865422e+42,
+        1e+50
+      ],
+      "ideal_unit_phasor_error_upper_float": 8.742278024865422e-8,
+      "field_budget_satisfied_arithmetic_only": true,
+      "represented_RN_trace_validated": true,
+      "trace_execution_authenticated": false,
+      "uniform_domain_bound_proved": false,
+      "sin_cos_driver_certified": false,
+      "native_promotion_allowed": false,
+      "scope": "conditional point-scalars and ideal exponential; excludes scene/driver/inputs uncertainty"
+    },
+    {
+      "L_BU": 0.5000000000000001,
+      "lambda_BU": 1,
+      "observed_CPU_libm_field_difference": 8.742278101436793e-8,
+      "cycle_error_circular_rational": [
+        0,
+        1
+      ],
+      "cycle_term_upper_rad": [
+        0,
+        1
+      ],
+      "tau_term_upper_rad": [
+        1.1030637736600978e+49,
+        9.007199254740992e+64
+      ],
+      "multiply_and_cast_term_rad": [
+        1.1082154058486442e+23,
+        1.2676506002282294e+30
+      ],
+      "ideal_unit_phasor_error_upper_rational": [
+        7.874344073862491e+57,
+        9.007199254740992e+64
+      ],
+      "ideal_unit_phasor_error_upper_float": 8.742278094622793e-8,
+      "field_budget_satisfied_arithmetic_only": true,
+      "represented_RN_trace_validated": true,
+      "trace_execution_authenticated": false,
+      "uniform_domain_bound_proved": false,
+      "sin_cos_driver_certified": false,
+      "native_promotion_allowed": false,
+      "scope": "conditional point-scalars and ideal exponential; excludes scene/driver/inputs uncertainty"
+    },
+    {
+      "L_BU": 1.5,
+      "lambda_BU": 1,
+      "observed_CPU_libm_field_difference": 8.742278012618951e-8,
+      "cycle_error_circular_rational": [
+        0,
+        1
+      ],
+      "cycle_term_upper_rad": [
+        0,
+        1
+      ],
+      "tau_term_upper_rad": [
+        1.2246467991473532e+34,
+        1e+50
+      ],
+      "multiply_and_cast_term_rad": [
+        24607325,
+        281474976710656
+      ],
+      "ideal_unit_phasor_error_upper_rational": [
+        8.742278024865422e+42,
+        1e+50
+      ],
+      "ideal_unit_phasor_error_upper_float": 8.742278024865422e-8,
+      "field_budget_satisfied_arithmetic_only": true,
+      "represented_RN_trace_validated": true,
+      "trace_execution_authenticated": false,
+      "uniform_domain_bound_proved": false,
+      "sin_cos_driver_certified": false,
+      "native_promotion_allowed": false,
+      "scope": "conditional point-scalars and ideal exponential; excludes scene/driver/inputs uncertainty"
+    },
+    {
+      "L_BU": 2.2250738585072014e-308,
+      "lambda_BU": 2.225073858507202e-308,
+      "observed_CPU_libm_field_difference": 3.882351374356572e-23,
+      "cycle_error_circular_rational": [
+        -1,
+        2.0282409603651675e+31
+      ],
+      "cycle_term_upper_rad": [
+        3.1415926535897932e+50,
+        1.0141204801825838e+81
+      ],
+      "tau_term_upper_rad": [
+        1.2246467991473532e+34,
+        2.251799813685248e+65
+      ],
+      "multiply_and_cast_term_rad": [
+        24607325,
+        6.338253001141147e+29
+      ],
+      "ideal_unit_phasor_error_upper_rational": [
+        1.968586018465623e+58,
+        5.070602400912919e+80
+      ],
+      "ideal_unit_phasor_error_upper_float": 3.882351371330547e-23,
+      "field_budget_satisfied_arithmetic_only": true,
+      "represented_RN_trace_validated": true,
+      "trace_execution_authenticated": false,
+      "uniform_domain_bound_proved": false,
+      "sin_cos_driver_certified": false,
+      "native_promotion_allowed": false,
+      "scope": "conditional point-scalars and ideal exponential; excludes scene/driver/inputs uncertainty"
+    }
+  ],
+  "seconds": 0.003877499999362044,
+  "code_sha256": {
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\tests\\test_phase_circular_budget_cpu.py": "6499030effb3c52c542a32aca3d3c8e98259b3143baa10cebe3170a38265ee05",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_circular_budget_cpu_v1.py": "829620a715a1d5ccc3c80225f47f19fd428be3f6d1669be8fdbbeacbd5975e29",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_compensated_cpu_v1.py": "32c0ceb114e6cd0bee8886dcec142c0b68a89091b7b0481440a7cd2b05b6c577",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\shaders\\exp005_shared_frontier.glsl": "914bf2962ead3c6a7b721a8dc2aa6c1e796af4bde1892db1802c3ca93ebdfcd1"
+  },
+  "maximum_ideal_phasor_bound": 8.742278094622793e-8,
+  "field_threshold_unchanged": 0.0001,
+  "CPU_libm_diagnostic_slack_only": 1e-13,
+  "native_promotion_allowed": false,
+  "no_jev_aval": true,
+  "request_to_claude": "Incluir esta cota puntual en la MISMA critica CPU de PHASE-COMPENSATED-001: una omision o contraejemplo si aparece; sin nuevo barrido, guardreview ni carga, RT-CAP-006 prioridad."
+}
