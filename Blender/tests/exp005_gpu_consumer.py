@@ -72,6 +72,8 @@ def main():
     glfw = None
     try:
         jobs, hashes = prepare(args.evidence)
+        if any(code not in (0,1,2,3) for job in jobs for code in job[3].hits[2::4]):
+            raise ValueError('external v1 shader cannot consume variable-splitter hit codes')
         report['input_sha256'] = hashes
         report['code_sha256'] = {p.name: sha(p) for p in
             (Path(__file__), Path(__file__).with_name('exp005_gpu_pack.py'), SHADER)}
