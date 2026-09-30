@@ -39,6 +39,18 @@ def flatten(value):
     return [value]
 
 
+def schedule_exit(bpy):
+    """Quit only once GUI event-loop/window context exists, not during CLI setup."""
+    def close():
+        windows=list(bpy.context.window_manager.windows)
+        if not windows:
+            raise RuntimeError('No Blender window for clean shutdown')
+        with bpy.context.temp_override(window=windows[0]):
+            bpy.ops.wm.quit_blender()
+        return None
+    bpy.app.timers.register(close,first_interval=.1)
+
+
 def native_shader(gpu):
     info=gpu.types.GPUShaderCreateInfo()
     for slot,name in enumerate(('paths_hi','paths_lo','hits_hi','hits_lo')):
@@ -155,7 +167,7 @@ def main():
     del shader
     import gc
     gc.collect()
-    bpy.ops.wm.quit_blender()
+    schedule_exit(bpy)
 
 
 if __name__=='__main__': main()
