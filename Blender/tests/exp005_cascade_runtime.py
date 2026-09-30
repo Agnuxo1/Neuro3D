@@ -55,7 +55,7 @@ def main():
                      'exp005_cascade_bpy_paths.py','exp005_reflection.py')}
     for case in CASES:
         phases=(.6,.37) if case=='phase_a' else (.2,.8) if case=='phase_b' else (.2,.37)
-        fixture=cascade_fixture(*phases,wavelength=.101 if case=='lambda' else .1)
+        fixture=cascade_fixture(*phases,wavelength=.101 if case=='lambda' else .1,surface='binary_quad')
         bpy.ops.wm.read_factory_settings(use_empty=True); scene=bpy.context.scene
         scene['lambda_BU']=fixture['lambda_BU']
         scene['optical_object_ids']=json.dumps(list(fixture['objects']))
