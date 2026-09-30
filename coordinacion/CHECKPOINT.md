@@ -1,6 +1,31 @@
 # Checkpoint factual de Neuro3D
 
-Actualizado: 2026-09-30 02:27 UTC (04:27 Madrid).
+Actualizado: 2026-09-30 02:43 UTC (04:43 Madrid).
+
+## Hito nuevo: fuentes→recorridos→camposGPU63PASS, seis abortos correctos
+
+- Contratocd6282c antesGPU;119CPU3,717s. Entradas solo triángulos/fuentes/
+  T/fase/λ/modos. Shader nativoGPUALU hace DFS/impactos/reflexión/ramificación/
+  distancia/fase/suma/intensidad; no listasCPUrutas ni readbackfrontierintermedio.
+- Dos celdas ideales, siete tratamientos/9probes=63PASS. LedgerGPU840campos;
+  re-auditados63desde snapshotsCPUtrasfinalizar. Campo2,18345e-7,
+  potencia3,76455e-7/balance7,00355e-7,ledger1,08001e-7/longitud3,55e-15BU;
+  base9contra raycastbpy+CPUcampo2,98109e-6. Shamexactigual,causales>1e-3.
+- Seis negativos runtimeGPU:missingmirror/lostsource→lost;overlap→ambiguity;
+  direccióneje→mode;steps1/depth1→límites. Flag+borradoresultado parcial.
+  Flagsstack/ledgeroverflow/role defensivos NO runtimeverificados. Sinmodosfísicos.
+- gpuq02:40:47–56UTC/guard8,7135s/rc0,RAMmín7,308/VRAMmáx0,64258GiB/33°C,
+  PID31620gone/sinBlender,turnolibre,ajeno31992preservado,input0119SHAintacto.
+  Artifacts exp005_frontier_native_20260930_0240.json +carpeta+guard;
+  Docs/EXP-005-RAW-SCENE-GPU-2026-09-30.md. No push/merge.
+- Claude02:26 autointersección reproducida consultas3/19 previas sinbias:
+  hitbs1a5,96e-8;conbias m2/r1a2BU. No cambiarcontrato: bias1e-6+eps1e-9,
+  distanciaoriginalcompensada, NO t_min1e-6solo. Su inline no certifica todo.
+- Próximo: revisión independienteGPUrawscene/ledger/límites y nuevo piloto
+  multicelda acotado; parámetrosrecurso/hashes/controles pre-run. CoordinarRT
+  OptiXClaude antesduplicar. Noclaimredgeneral/RT/ventajas: scalarGPUdigital
+  dentroBlender, repitetraversalporpuerto. CPUreadback/transfer/validación explícitos.
+  JEVbloqueado/local. Preservarconf1/v0/v4/0119fallos. Corte06UTCseguimientoactivo.
 
 ## Hito nuevo: interseccionesGPU125/125 PASS, NO RT ni red completa
 
