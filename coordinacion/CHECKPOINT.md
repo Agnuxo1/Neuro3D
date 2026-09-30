@@ -1,6 +1,22 @@
 # Checkpoint factual de Neuro3D
 
-Actualizado: 2026-09-30 00:37 UTC (02:37 Madrid).
+Actualizado: 2026-09-30 00:51 UTC (02:51 Madrid).
+
+## Consumidor GPU preparado; todavía no ejecutado
+
+- Unidad independiente mientras Claude retraza v4: `exp005_gpu_pack.py`,
+  `exp005_gpu_consumer.py`, shader `exp005_path_fields.glsl`, contrato
+  `experimentos/EXP-005-GPU-CONSUMER-V1.md`. CPU valida/empaqueta datos crudos
+  por impacto; GPU prevista calcula propagación/fases, coeficientes, suma
+  compleja e intensidad. Sin matriz precomputada ni suma CPU en inferencia.
+- 77/77 CPU (5 nuevas ABI);54inputs reales v4 preparados/66hashes,20caminos
+  máximo por caso. Esto NO es PASS GPU: contexto externo OpenGL futuro, no bpy,
+  intersecciones aún CPU, sin RT ni nueva ventaja comparativa.
+- gpuq observado00:49: MI-predict-f12w3 de Claude activo y retrazado independiente
+  detrás. No invadir/cancelar; próximo job propio breve después, guard120s,
+  host1GiB/device0,5GiB,RAMlibre4GiB,VRAMtotal18GiB,temp80,cierre06UTC.
+- Claude00:40 comprobó convenciones a mano y preparó retrazador propio; aún
+  pendiente evidencia runtime. Fallback local: JEV bloqueado por seguridad.
 
 ## Hito v4: cascada real Blender PASS local, revisión externa pendiente
 
