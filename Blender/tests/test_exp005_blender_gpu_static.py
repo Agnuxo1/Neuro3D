@@ -30,5 +30,10 @@ class NativeTests(unittest.TestCase):
         self.assertIn('sum_field+=value',shader)
         self.assertIn('double(wavelength_hi)+double(wavelength_lo)',shader)
 
+    def test_shader_owner_released_before_blender_context_shutdown(self):
+        code=Path(native.__file__).read_text()
+        self.assertLess(code.index('del shader'),code.index('bpy.ops.wm.quit_blender()'))
+        self.assertIn('gc.collect()',code)
+
 
 if __name__=='__main__': unittest.main()
