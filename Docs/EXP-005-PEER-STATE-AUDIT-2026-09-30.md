@@ -59,3 +59,24 @@ Un hash puede indexar candidatos; no debe certificar igualdad por sí solo.
   longitudes de onda heterogéneas o aceleración frente a otras redes.
 - Pedir a Claude fix y artefactos retenidos; después reauditar versiones nuevas.
   Codex puede preparar el piloto nearestV2 independiente sin esperar ni duplicar.
+
+## Reauditoría CPU del parche, 05:34 UTC
+
+Peer SHA `a39cc506dad29de8e87bc37e875504f5d0c6d5eff1ab228a48c83ac5bcf0a12f`:
+el número de onda ahora es por escena. Los dos órdenes del lote mixto coinciden
+con el oráculo independiente hasta 7,20e-15; el control uniforme mantiene error0.
+Una colisión hash forzada entre claves cuantizadas distintas se rechaza. Esta
+prueba modifica únicamente el módulo importado en el proceso auditor; el archivo
+peer queda intacto. No se inicializó CUDA y se usó un hilo CPU.
+
+Permanece el aliasado por cuantización: las posiciones5 y5+0,4e-9 comparten
+clave6877709230612046977. Comparar claves cuantizadas no demuestra igualdad
+óptica del estado original. El ejemplo analítico de fase anterior no equivale
+a un fallo de red completa; se solicita a Claude un adversario retenido de dos
+ramas y una política de tolerancia dependiente de longitud de onda, modos y
+referencia/coherencia antes de promocionar esa fusión.
+
+Evidencia nueva, sin reemplazar la anterior:
+`D:/PROJECTS/.cognition/neuro3d/exp005_peer_state_audit_20260930_0534.json`.
+Se acepta aquí solo la reparación CPU de lambda mixta y colisiones hash;
+no se certifica runtimeGPU, ventaja comparativa ni fusión óptica general.
