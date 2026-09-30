@@ -50,6 +50,8 @@ This does NOT validate render/OptiX geometry or optical propagation.
             raise ValueError('evaluated identity/kind mismatch')
         if base.get('kind') == 'mirror' and ob.get('phase_rad') != base.get('phase_rad'):
             raise ValueError('evaluated optical phase mismatch')
+        if base.get('kind') == 'bs' and ob.get('power_transmittance') != base.get('power_transmittance'):
+            raise ValueError('evaluated splitter transmittance mismatch')
         actual = [vector3(ob.matrix_world @ v.co,'evaluated vertex') for v in ob.data.vertices]
         declared = [vector3(base.matrix_world @ v.co,'base vertex') for v in base.data.vertices]
         if actual != declared or [list(p.vertices) for p in ob.data.polygons] != [list(p.vertices) for p in base.data.polygons]:
@@ -67,7 +69,10 @@ def export_snapshot(scene, *, depsgraph=None, view_layer=None):
            for obj in scene.objects):
         raise ValueError('optical object omitted from scene declaration')
     evaluated = evaluated_optics(scene,ids,depsgraph)
-    result = {'schema': 'exp005-readback-v1', 'lambda_BU': scene['lambda_BU'],
+    schema=scene.get('optical_contract','exp005-readback-v1')
+    if schema not in ('exp005-readback-v1','exp005-readback-v2'):
+        raise ValueError('unsupported scene optical contract')
+    result = {'schema': schema, 'lambda_BU': scene['lambda_BU'],
               'objects': {}, 'sources': [],
               'evaluated_optics_checked': evaluated is not None,
               'evaluated_optical_ids': sorted(evaluated) if evaluated is not None else [],
@@ -86,6 +91,8 @@ def export_snapshot(scene, *, depsgraph=None, view_layer=None):
         if obj.modifiers:
             raise ValueError(f'{name}: evaluated modifiers unsupported; no silent base-mesh export')
         record = {'kind': obj['kind']}
+        if record['kind']=='bs' and (schema=='exp005-readback-v2' or 'power_transmittance' in obj):
+            record['power_transmittance']=obj['power_transmittance']
         if record['kind'] == 'mirror':
             record['phase_rad'] = obj['phase_rad']
         if record['kind'] in ('det','escape'):
