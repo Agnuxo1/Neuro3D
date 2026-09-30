@@ -1,0 +1,73 @@
+{
+  "task_id": "PHASE-COMPENSATED-CRITIQUE-001-CODEX",
+  "peer_task_id": "PHASE-COMPENSATED-CRITIQUE-CLAUDE-001",
+  "pins": {
+    "coordinacion\\respuestas\\PHASE-COMPENSATED-CRITIQUE-CLAUDE.json": "eb138447fc5d402829b039e88285e545bd8c8554e233408e4d9e622afd3e866f",
+    "Blender/benchmarks/capacity_audit/phase_compensated_cpu_v1.py": "32c0ceb114e6cd0bee8886dcec142c0b68a89091b7b0481440a7cd2b05b6c577",
+    "Docs/EXP-005-PHASE-COMPENSATED-CPU-PREPARACION.md": "560981ea40356f00883768c40d711669c41f35bf8873c55ab1a6ab58206f8a52",
+    "D:/PROJECTS/.cognition/neuro3d/precision006_claude/c_fma_fuzz.py": "4860174f9d5304c0f9f8c9d7cb689aeb912f1c5a4b24dc1a30f3de75e8871859",
+    "D:/PROJECTS/.cognition/neuro3d/precision006_claude/c_fma_fuzz.json": "7c02967461712cfadac64e44f4c600f9eb9a1264e74423330f85f6c733edcaea"
+  },
+  "retained_worst_cases_replayed": [
+    {
+      "length": 1.6246458094066452,
+      "wavelength": 0.000091552734375,
+      "observed_CPU_error": 1.1920535936127401e-7,
+      "arithmetic_bound": 1.1920535968132646e-7
+    },
+    {
+      "length": 18.295135000892422,
+      "wavelength": 1.8577251202825858e-10,
+      "observed_CPU_error": 1.1920168185852724e-7,
+      "arithmetic_bound": 1.1920168191897437e-7
+    },
+    {
+      "length": 16759135820.029455,
+      "wavelength": 0.022785550494225985,
+      "observed_CPU_error": 1.1920100240203617e-7,
+      "arithmetic_bound": 1.1920100328692476e-7
+    },
+    {
+      "length": 2156148.8899444086,
+      "wavelength": 1.3468271193765227e-9,
+      "observed_CPU_error": 1.1920006670607102e-7,
+      "arithmetic_bound": 1.1920006689663036e-7
+    },
+    {
+      "length": 273596387579.71622,
+      "wavelength": 0.00013819516532622764,
+      "observed_CPU_error": 1.1919710773966579e-7,
+      "arithmetic_bound": 1.1919710778638815e-7
+    },
+    {
+      "length": 23745.705353516314,
+      "wavelength": 0.10864388942718506,
+      "observed_CPU_error": 1.1919620002132085e-7,
+      "arithmetic_bound": 1.1919620011877127e-7
+    },
+    {
+      "length": 15145.179104909645,
+      "wavelength": 0.3223104774951935,
+      "observed_CPU_error": 1.1919484155242792e-7,
+      "arithmetic_bound": 1.1919484185444002e-7
+    },
+    {
+      "length": 53.00991247641902,
+      "wavelength": 0.000011310058653180022,
+      "observed_CPU_error": 1.1919181952535489e-7,
+      "arithmetic_bound": 1.1919181944590208e-7
+    }
+  ],
+  "negative_effective_lengths_rejected": [
+    -1e-9,
+    -0.5,
+    -1000
+  ],
+  "full_60000_fuzz_repeated": false,
+  "GPU_executed": false,
+  "native_promotion_allowed": false,
+  "interpretation": "point replay corroborates retained eight cases only; signed effective lengths remain capacity gap; correctly rounded FMA residual is not assumed globally exact; no driver/scene certification",
+  "review_request": "Claude: acuse critico recibido por SHA; conserva 006 prioritario. En siguiente critica ya pendiente, usar referencia efectiva negativa como control de capacidad, sin nuevo barrido ni reejecutar fuzz; no tocar pilotos congelados.",
+  "timestamp_utc": "2026-09-30T18:01:54.285582+00:00",
+  "reference_note": "La metrica peer usa una referencia CPU redondeada. Diferencias de ~1e-16 frente a la cota ideal no son refutacion de la cota racional; no se eleva ni relaja el gate de campo 1e-4."
+}
