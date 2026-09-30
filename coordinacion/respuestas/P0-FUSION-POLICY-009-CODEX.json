@@ -1,0 +1,40 @@
+{
+  "task_id": "P0-FUSION-POLICY-009-CODEX",
+  "code_sha256": {
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_checker_v2.py": "d4ba59108695084af4e2b9b9487e3a17a98e9c6866f059df3e931499d55b17a0",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_checker_v2_tests.py": "a2cf07c26ace4c4282157d17fa68a16bd41c3a2ae12afbd5449dd4e51b68e86e",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_checker_v2_tests.json": "1bcb4ea300995673f2b47ee8a2b4f226e22257d8540938cb94e0a42a2cd9d258",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_harness_v4.py": "31075e4a71ce8df323868a7013b030774476806adb9499141918732f87a627bc",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_v4_cpu.json": "de76955ef5a5867eeeb7998f9f0888f40be0a1a8846382fbe98075e9d269255d",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_v4_cpu_verdict_v2.json": "195d8699c40bd9df51fee58f3ad37ea04d44d1ce8c91c101c5de8bb108cf2296",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_v3_cpu_verdict_v2.json": "14ca328a84ee65a633cc1e44e70de66b9acfb26c3ce7c8ca4d9a43a7ae4f870c",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_manifest.json": "3343fa298cef2286e6643026a7e8b23ac4a6db011b443ffdf8c9c625fa89fe5b",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_checker.py": "f1f02626907d89d924f81fa91eb8ea3dfa8bc6c7bf12224e5c1d9fb4c3429bd5",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_harness_v3.py": "5d9f13b81b17354395113d825bf66da2f561bfaf08dbe12c2ab724ccada0f62e",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\coordinacion\\respuestas\\P0-FUSION-POLICY-008-CLAUDE.json": "f3cbb04d7e8dfc4810ed61414e3718a113a627e5b90989ae5d9164f0e031380e",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\coordinacion\\respuestas\\P0-FUSION-POLICY-007-CODEX.json": "83485bef19b30c55e667a3b6b65c99a0d3c423275520915fed380779a7154ca6",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\coordinacion\\tareas\\P0-FUSION-POLICY-008-CLAUDE.md": "69fef6f87aa4784472d9263d8672017765d247ea92601e644364dc7f3c5eda17",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\exp005_peer_phaseB_binding_probe.py": "c8f65aea33e486863350fffd356c2e9109d955c7cb9cd08f285c652679ec6db3"
+  },
+  "peer_ack_ID_and_SHA_verified": true,
+  "valid_v4_control_failures": [],
+  "valid_v4_control_warnings": [],
+  "tamper": {
+    "original_quant": 3.978873577297384e-11,
+    "altered_quant": 0.00003978873577297384,
+    "checker_failures": [
+      "escena global 0: politica quant = 3.978873577297384e-05, esperado desde la escena 3.978873577297384e-11"
+    ]
+  },
+  "quant_result_data_repair_confirmed": true,
+  "scope": "two retained-data CPU checker calls only, not 104 scene replay or GPU authentication",
+  "not_verified": [
+    "runtime use of dquant",
+    "native GPU execution",
+    "angular/accumulation bounds",
+    "general malformed-data coverage"
+  ],
+  "native_promotion_allowed": false,
+  "no_jev_aval": true,
+  "timestamp_utc": "2026-09-30 19:40:48 UTC"
+}

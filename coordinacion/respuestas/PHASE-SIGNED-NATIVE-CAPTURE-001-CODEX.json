@@ -1,0 +1,37 @@
+{
+  "task_id": "PHASE-SIGNED-NATIVE-CAPTURE-001-CODEX",
+  "seconds": 0.6287053999985801,
+  "tests": 7,
+  "returncode": 0,
+  "output": ".......\n----------------------------------------------------------------------\nRan 7 tests in 0.317s\n\nOK\n",
+  "code_sha256": {
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\tests\\test_phase_signed_native_probe_cpu.py": "080f7a1308121056ba4d6f943b3adb952565c523d6e4b094f18c585d045f6191",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\shaders\\exp005_signed_phase_probe.glsl": "2f9aa95ae4d15755765d0ba6cd38fdcd0fc313a3b248530feeb0478464806b29",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Docs\\EXP-005-SIGNED-NATIVE-PREP-V1.md": "acd87d8d0d692f4c7266cf571b77388b65f0662d0fc08a4d5567dbce1c93f3a8",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_signed_native_probe_v1.py": "7fc268d557d78e717e96a4dcc4bbe583863d2e5927ed51b85002e387975caa30",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_native_probe_v1.py": "a7cd48a5fcb7ce97f7b7261dfd38a4ec057c1cdae2cdb0d7762d5fda37f8b112",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\history_signed_phase_budget_cpu_v1.py": "ec860acc68ea032b27babad5d34c01fcd7920068601757773549dfbb73d19180",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_compensated_cpu_v1.py": "32c0ceb114e6cd0bee8886dcec142c0b68a89091b7b0481440a7cd2b05b6c577",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_circular_budget_cpu_v1.py": "829620a715a1d5ccc3c80225f47f19fd428be3f6d1669be8fdbbeacbd5975e29",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\shaders\\exp005_phase_compensated_probe.glsl": "d116b8c18d80dae32092aee453ecb0ff9523b8decf9fc5ef106e0ede9e23ed6c",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\coordinacion\\respuestas\\PHASE-SIGNED-001-CODEX.json": "bab7162e2404b27e437f7f198bdc5316c3b6e0138266c14f8e7405014c31982f",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\coordinacion\\respuestas\\PHASE-SIGNED-NATIVE-PREP-001-CODEX.json": "3cc971e17a9f6267cb4da15707f51a2c47d8a72982a12f2f048f3771bbc907e4",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_native_capture_v1.py": "bea2803eef83d66ac9e9b097137c67a270d8516764b9b01a94943c9c4602f1dc",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_signed_native_capture_v1.py": "be70ede6795913a5a820cce0519e46c8c5e94f4dbda54946536ac739a0099796",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\tests\\test_phase_signed_native_capture_cpu.py": "782e9ec5facc89ded852aa0181e84c6d43c6682f050729189bd0e94096cdd304",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Docs\\EXP-005-SIGNED-NATIVE-CAPTURE-V1.md": "519101934b97c50083c1c8715ceab6ea1e81247e173ea9fde8ecbff316bfc1b5"
+  },
+  "GPU_executed": false,
+  "runtime_execution_authenticated": false,
+  "native_promotion_allowed": false,
+  "no_jev_aval": true,
+  "scope": "CPU persistence adapters only, no shader compile/GPU/scene/RT",
+  "retained_previous_attempt": {
+    "returncode": 1,
+    "tests": 7,
+    "errors": 7,
+    "cause": "TemporaryDirectory parent repo/.cognition absent; fixed parent to existing Blender/tests; numerical gates unchanged",
+    "seconds": 0.5478843000018969
+  },
+  "timestamp_utc": "2026-09-30 19:40:48 UTC"
+}
