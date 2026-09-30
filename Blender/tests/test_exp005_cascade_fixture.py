@@ -2,6 +2,7 @@
 import cmath
 import copy
 import math
+import struct
 import unittest
 
 from exp005_cascade_fixture import cascade_fixture, closed_form_columns
@@ -10,6 +11,19 @@ from exp005_triangle_oracle import trace_scene
 
 
 class CascadeFixtureTests(unittest.TestCase):
+    def test_binary_quad_coplanarity_survives_float32_world_storage(self):
+        from exp005_triangle_oracle import cross,sub,dot,unit
+        scene=cascade_fixture(surface='binary_quad')
+        for record in scene['objects'].values():
+            vertices=[tuple(struct.unpack('f',struct.pack('f',v))[0] for v in xyz)
+                      for xyz in record['vertices_world_BU']]
+            record['vertices_world_BU']=vertices
+            a,b,c=vertices[:3]; normal=unit(cross(sub(b,a),sub(c,a)))
+            self.assertEqual(dot(sub(vertices[3],a),normal),0.)
+        audit=modal_audit(scene)
+        self.assertLess(max(abs(a-b) for col,ref in zip(audit['columns'],closed_form_columns())
+                            for a,b in zip(col,ref)),1e-12)
+
     def test_connected_fixture_and_all_complex_ports_against_closed_form(self):
         for phases in [(0.,0.),(.2,.37),(.9,-.4)]:
             scene = cascade_fixture(*phases)

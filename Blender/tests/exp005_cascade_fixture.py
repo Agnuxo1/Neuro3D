@@ -8,7 +8,7 @@ import cmath
 import math
 
 
-def _surface(center, normal, kind):
+def _surface(center, normal, kind, *, surface='disk'):
     norm = math.hypot(*normal)
     n = tuple(v/norm for v in normal)
     tangent = (n[1], -n[0], 0.0)
@@ -19,12 +19,21 @@ def _surface(center, normal, kind):
                                 (1 if j==2 else 0)*math.cos(angle)) for j in range(3)))
     result = {'kind':kind,'vertices_world_BU':vertices,
               'faces':[(0,i+1,(i+1)%12+1) for i in range(12)]}
+    if surface=='binary_quad':
+        # Dyadic offsets keep these axis/45-degree planes exactly coplanar
+        # after float32 storage at all of this fixture's integer/half centers.
+        raw_tangent=(normal[1],-normal[0],0)
+        result['vertices_world_BU']=[tuple(center[j]+.125*(s*raw_tangent[j]+
+                                   t*(1 if j==2 else 0)) for j in range(3))
+                                   for s,t in ((-1,-1),(1,-1),(1,1),(-1,1))]
+        result['faces']=[(0,1,2),(0,2,3)]
+    elif surface!='disk': raise ValueError('unknown surface construction')
     if kind=='mirror': result['phase_rad']=0.0
     if kind=='det': result.update(mode_origin_BU=center,mode_direction=normal)
     return result
 
 
-def cascade_fixture(phase_a=.2, phase_b=.37, wavelength=.1):
+def cascade_fixture(phase_a=.2, phase_b=.37, wavelength=.1, *, surface='disk'):
     layout = [('bs1',(0,0,0),(1,-1,0),'bs'),
               ('r1',(2,0,0),(1,-1,0),'mirror'),
               ('r2',(2,.5,0),(1,1,0),'mirror'),
@@ -38,7 +47,7 @@ def cascade_fixture(phase_a=.2, phase_b=.37, wavelength=.1):
         for name, position, normal, kind in layout:
             if prefix=='a' and name=='X': continue  # open connector, no detector
             center = tuple(v+d for v,d in zip(position,offset))
-            record = _surface(center,normal,kind)
+            record = _surface(center,normal,kind,surface=surface)
             if name=='r1': record['phase_rad']=phase
             objects[f'{prefix}.{name}']=record
     return {'schema':'exp005-readback-v1','lambda_BU':wavelength,'objects':objects,
