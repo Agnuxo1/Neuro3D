@@ -1,0 +1,51 @@
+{
+  "task_id": "PHASE-SIGNED-NATIVE-CAPTURE-002-CODEX",
+  "seconds": 2.5565275000117254,
+  "returncode": 0,
+  "tests": 7,
+  "output": "hard_exit_observations=[{\"version\": 1, \"child_rc\": 23, \"initial_bytes\": 0, \"raw_sha256\": \"23a1b215836c5cc6686f8ded1271f96a2671b22fe2c4db6fd433deaeb38549ee\"}, {\"version\": 2, \"child_rc\": 23, \"initial_bytes\": 394, \"raw_sha256\": \"c5086a705d49aaf4017bf8f54457ec7b7aa78c23a7147469c817031fae25a44a\"}]\n.......\n----------------------------------------------------------------------\nRan 7 tests in 1.598s\n\nOK\n",
+  "code_sha256": {
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\tests\\test_phase_signed_native_probe_cpu.py": "080f7a1308121056ba4d6f943b3adb952565c523d6e4b094f18c585d045f6191",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\shaders\\exp005_signed_phase_probe.glsl": "2f9aa95ae4d15755765d0ba6cd38fdcd0fc313a3b248530feeb0478464806b29",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Docs\\EXP-005-SIGNED-NATIVE-PREP-V1.md": "acd87d8d0d692f4c7266cf571b77388b65f0662d0fc08a4d5567dbce1c93f3a8",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_signed_native_probe_v1.py": "7fc268d557d78e717e96a4dcc4bbe583863d2e5927ed51b85002e387975caa30",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_native_probe_v1.py": "a7cd48a5fcb7ce97f7b7261dfd38a4ec057c1cdae2cdb0d7762d5fda37f8b112",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\history_signed_phase_budget_cpu_v1.py": "ec860acc68ea032b27babad5d34c01fcd7920068601757773549dfbb73d19180",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_compensated_cpu_v1.py": "32c0ceb114e6cd0bee8886dcec142c0b68a89091b7b0481440a7cd2b05b6c577",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_circular_budget_cpu_v1.py": "829620a715a1d5ccc3c80225f47f19fd428be3f6d1669be8fdbbeacbd5975e29",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\shaders\\exp005_phase_compensated_probe.glsl": "d116b8c18d80dae32092aee453ecb0ff9523b8decf9fc5ef106e0ede9e23ed6c",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\coordinacion\\respuestas\\PHASE-SIGNED-001-CODEX.json": "bab7162e2404b27e437f7f198bdc5316c3b6e0138266c14f8e7405014c31982f",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\coordinacion\\respuestas\\PHASE-SIGNED-NATIVE-PREP-001-CODEX.json": "3cc971e17a9f6267cb4da15707f51a2c47d8a72982a12f2f048f3771bbc907e4",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_native_capture_v1.py": "bea2803eef83d66ac9e9b097137c67a270d8516764b9b01a94943c9c4602f1dc",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_signed_native_capture_v1.py": "be70ede6795913a5a820cce0519e46c8c5e94f4dbda54946536ac739a0099796",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_signed_native_capture_v2.py": "5f5207d3195e49dea9822304e3e922326871d08fb4fad7174919194b57d7fea9",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\tests\\test_phase_signed_native_capture_v2_cpu.py": "e7fada5263f890c861d27065b00df7f97aba5eebcde04feb97d0f67fd8003369",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Docs\\EXP-005-SIGNED-NATIVE-CAPTURE-V2.md": "ed51b995cb0691337b897e26ea9a84d1552307d78e6d3c290f418bb7cc3677e4"
+  },
+  "GPU_executed": false,
+  "Bpy_executed": false,
+  "runtime_execution_authenticated": false,
+  "native_promotion_allowed": false,
+  "no_jev_aval": true,
+  "scope": "CPU abrupt-exit and serialization adapters, no GPU timeout/power-cut certification",
+  "timestamp_utc": "2026-09-30 19:55:15 UTC",
+  "peer_reply": {
+    "task_id": "PHASE-SIGNED-CAPTURE-010-CLAUDE",
+    "sha256": "1725836b839713e160bb427af43ad98456202c5e6077c0969b21a5381bb1b76a",
+    "verified_acknowledgements": 4,
+    "scope": "static review only; W1 now reproduced by own abrupt CPU exit, W2 tested only with mocked nonfinite payload; W3 power-loss durability unproven"
+  },
+  "peer_ack_sha256": {
+  "D:\\PROJECTS\\9_NEBULA_NEW\\coordinacion\\respuestas\\P0-FUSION-POLICY-009-CODEX.json": "e9ce53b7e393e5c69002dd7ff540c2c0d5214edfbdfc46935b4943e4f90dff32",
+  "D:\\PROJECTS\\9_NEBULA_NEW\\coordinacion\\tareas\\PHASE-SIGNED-CAPTURE-010-CLAUDE.md": "bf0ff39261ea612d43b8d53b746a901b623cfb6da6aa61e5fa776a953a53f9e5",
+  "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_signed_native_capture_v1.py": "be70ede6795913a5a820cce0519e46c8c5e94f4dbda54946536ac739a0099796",
+  "D:\\PROJECTS\\9_NEBULA_NEW\\coordinacion\\respuestas\\PHASE-SIGNED-NATIVE-CAPTURE-001-CODEX.json": "e909de4974b6220063c0c8a37f73c2817bb21aef54cbf872b8ffd9f887822752",
+  "D:\\PROJECTS\\9_NEBULA_NEW\\coordinacion\\respuestas\\PHASE-SIGNED-CAPTURE-010-CLAUDE.json": "1725836b839713e160bb427af43ad98456202c5e6077c0969b21a5381bb1b76a"
+},
+  "limitations": [
+    "No runtime GPU driver/scene/RT execution",
+    "fsync does not certify Windows power-loss or controller durability",
+    "Own CPU adapters, not authenticated numerical GPU gates",
+    "Outer supervisor/gpuq/telemetry/admission still pending"
+  ]
+}
