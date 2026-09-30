@@ -32,8 +32,10 @@ class NativeTests(unittest.TestCase):
 
     def test_shader_owner_released_before_blender_context_shutdown(self):
         code=Path(native.__file__).read_text()
-        self.assertLess(code.index('del shader'),code.index('bpy.ops.wm.quit_blender()'))
+        self.assertLess(code.index('del shader'),code.rindex('schedule_exit(bpy)'))
         self.assertIn('gc.collect()',code)
+        self.assertIn('bpy.app.timers.register(close',code)
+        self.assertIn('bpy.context.temp_override(window=windows[0])',code)
 
 
 if __name__=='__main__': unittest.main()
