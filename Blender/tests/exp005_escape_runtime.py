@@ -97,6 +97,14 @@ def main():
         report['incoherent_control_gap']=abs(base['incoherent_escape_negative_control']-base['escape_power'])
         # Negative geometry: remove boundary transiently, never save it over fixture.
         bpy.ops.wm.open_mainfile(filepath=str(folder/'base.blend'))
+        invalid=readback()
+        x,y,z=invalid['objects'][ESCAPE]['mode_origin_BU']
+        invalid['objects'][ESCAPE]['mode_origin_BU']=[x+.03125,y,z]
+        try: trace_scene(invalid)
+        except ValueError as exc:
+            if 'planar phase-reference surface' not in str(exc): raise
+            report['offplane_reference_rejection']=str(exc)
+        else: raise ValueError('offplane reference silently accepted')
         bpy.data.objects.remove(bpy.data.objects[ESCAPE],do_unlink=True)
         try: raycast_paths(bpy.context.scene)
         except ValueError as exc: report['missing_boundary_rejection']=str(exc)

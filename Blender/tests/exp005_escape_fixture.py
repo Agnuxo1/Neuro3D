@@ -13,7 +13,10 @@ def escape_fixture(case='base'):
                           wavelength=.126 if case=='lambda' else .125,surface='binary_quad')
     boundary=scene['objects'].pop('b.X')
     boundary['kind']='escape'
-    if case in ('boundary_shift','reference_shift'):
+    if case=='boundary_shift':
+        # Move aperture tangentially inside the SAME reference plane; beams remain covered.
+        boundary['vertices_world_BU']=[(x,y+SHIFT_BU,z) for x,y,z in boundary['vertices_world_BU']]
+    if case=='reference_shift':
         boundary['vertices_world_BU']=[(x+SHIFT_BU,y,z) for x,y,z in boundary['vertices_world_BU']]
     if case=='reference_shift':
         x,y,z=boundary['mode_origin_BU']; boundary['mode_origin_BU']=(x+SHIFT_BU,y,z)

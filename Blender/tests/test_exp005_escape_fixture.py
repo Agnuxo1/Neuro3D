@@ -20,7 +20,7 @@ class EscapeTests(unittest.TestCase):
     def test_coherent_escape_and_detected_power_balance_all_inputs(self):
         for _,amps in probes():
             scene=with_inputs(escape_fixture(),amps); oracle=trace_scene(scene)
-            inputs={s['id']:s['field_reim'] for s in scene['sources']}
+            inputs={s['id']:complex(*s['field_reim']) for s in scene['sources']}
             paths=[dict(p,initial_field=inputs[p['source_id']]) for p in oracle['paths']]
             ledger=sum_declared_channels(decode_scene(scene),paths)
             self.assertEqual(ledger['escape_power'],ledger['powers'][ESCAPE])
@@ -45,7 +45,8 @@ class EscapeTests(unittest.TestCase):
     def test_missing_boundary_or_wrong_mode_fails_closed(self):
         absent=escape_fixture(); del absent['objects'][ESCAPE]
         wrong=escape_fixture(); wrong['objects'][ESCAPE]['mode_direction']=(0,1,0)
-        for scene in (absent,wrong):
+        reference=escape_fixture(); reference['objects'][ESCAPE]['mode_origin_BU']=(6.03125,4,0)
+        for scene in (absent,wrong,reference):
             with self.assertRaises(ValueError): trace_scene(scene)
 
     def test_phase_is_causal_and_sham_has_no_effect(self):
