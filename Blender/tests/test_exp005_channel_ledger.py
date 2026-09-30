@@ -21,6 +21,14 @@ def route(terminal='e', field=1):
 
 
 class ChannelLedgerTests(unittest.TestCase):
+    def test_declared_unvisited_ports_are_explicit_zero_not_missing(self):
+        result=sum_declared_channels(optics(),[route('e')])
+        self.assertEqual(set(result['fields']),{'d','e'})
+        self.assertEqual(result['fields']['d'],0j)
+        self.assertEqual(result['powers']['d'],0.)
+        self.assertEqual(result['path_counts']['d'],0)
+        self.assertEqual(result['path_counts']['e'],1)
+
     def test_escape_cancels_coherently_not_pathwise(self):
         result = sum_declared_channels(optics(),[route(field=1),route(field=-1)])
         self.assertEqual(result['escape_power'],0)
