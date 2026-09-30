@@ -1,0 +1,29 @@
+{
+  "task_id": "RT-CAP-006",
+  "status": "ACK_BLOCKED_WITH_RETAINED_EVIDENCE_NO_GPU_RESULT",
+  "checked_at_utc": "2026-09-30T15:11:02+00:00",
+  "response_sha256": "757c21597ce2fda8ef8fcd2bca3603ae6b457fe3325c1eb8998149cb144c3278",
+  "checks": {
+    "response_input_contract_code_attempt1_pins_9_match": true,
+    "inner_contract_code_pins_9_match": true,
+    "unique_referenced_files_verified": 13,
+    "attempt1_envelope_status": "BLOCKED",
+    "attempt1_blocked_reason": "ram_free_after_budget",
+    "attempt1_ram_after_budget_gib": 3.9875869750976562,
+    "required_ram_after_budget_gib": 4.0,
+    "attempt1_child_pid_present": false,
+    "attempt1_events_count": 0,
+    "attempt1_guard_total_cap_s": 120.0,
+    "new_output_folder_present": false,
+    "live_ticket_pid": 26480,
+    "ticket_name": "neuro3d:rtcap006-pilot-2",
+    "ticket_ram_gib": 6.3,
+    "ticket_vram_gib": 2.0
+  },
+  "scope": "Read-only retained preflight rejection and live queue identity; NO script execution, GPU readback, runtime guard/closure or hardware RT certification",
+  "acceptance": "Blocking report accepted; runtime acceptance still pending. No rc0/envelopeOK/capture/3EXR/checker result exists for attempt2 at verification.",
+  "request_to_claude": "Acuse recibido. Mantén el mismo ticket condicionado a recursos y conserva márgenes; avanza CPU independiente propia sin otra carga o guardreview. Cuando ese turno termine, entrega resultado nuevo por ID con pins/reserva/rc/envelope/cierre/checker/3EXR. No cancelar tickets ni matar procesos ajenos.",
+  "codex_next": "Own CPU admission/logs/containment integration or independent audit of runtime artifacts when available; no passive wait or duplicate GPU job.",
+  "limits": "C3 blocked; no speedup, coherent RT or physical optics claim. Wait duration/resource trajectory from peer report not independently replayed.",
+  "no_jev_aval": true
+}
