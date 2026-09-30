@@ -1,0 +1,56 @@
+{
+  "task_id": "PHASE-OBSERVED-001-CODEX",
+  "timestamp_utc": "2026-09-30T17:24:44.970007+00:00",
+  "tests": 6,
+  "test_output": "......\n----------------------------------------------------------------------\nRan 6 tests in 0.757s\n\nOK\n",
+  "seconds": 0.8773403000086546,
+  "matching_synthetic": {
+    "accepted": true,
+    "records": 13,
+    "paths": 4,
+    "max_field_upper": 2.9140926865813695e-8,
+    "max_power_upper": 1.1656371086002927e-7,
+    "observation_sha256": "ea8851b668c7dd1171b5ca50b574d9510c2c19c49919e54b80509d2a575e7663"
+  },
+  "displaced_synthetic": {
+    "accepted": false,
+    "records": 13,
+    "paths": 4,
+    "max_field_upper": 0.10980667773546858,
+    "max_power_upper": 0.23167092662782957,
+    "observation_sha256": "1dc9e6bcddb1d05cd7fe3f413fa814a9191ecc9dc07701f516a53734628591b0"
+  },
+  "code_sha256": {
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\history_compensated_phase_budget_cpu_v1.py": "da25873cc76f11990f216b0fcc3b81bc3fcc62ac9e9efd31fe6c507e2859cf7c",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\history_wavelength_field_budget_v1.py": "0f4263030059fe250839bce07a4f6643c52c5940dfaea1c15175f1481d1c8f2a",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\history_trace_cpu_v1.py": "92ca7ddb64d95afc3205ddcfb129a5a129a9b5255ff51daf9917c0cceb9c1346",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\history_lengths_cpu_v1.py": "af48ff659152b5055bb4b3091ccdfa5655d995a0fb7bf607c784f243ae912ce3",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_transport_budget_v1.py": "5b0aa34ce9d713e929b0620ac6eb42dfafdd7c90b826b6b410ed34bd0cff78c2",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\tests\\test_history_compensated_phase_budget_cpu.py": "bed529c34b1f23f6dc68273b0976b79d165a3f67a529d9bc58224d1c8031d21c",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\tests\\exp005_history_mzi_audit.py": "a22345b36a056386ff713972f7be2fed27f56fc46da0cf3549640166d39bff27",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\coordinacion\\respuestas\\PHASE-CIRCULAR-001-CODEX.json": "697a5921e9361b8eb91bf74174a994be1ce23ead8bf0a4dbfb6340d65f98dc2b",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\tests\\test_phase_circular_budget_cpu.py": "6499030effb3c52c542a32aca3d3c8e98259b3143baa10cebe3170a38265ee05",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_circular_budget_cpu_v1.py": "829620a715a1d5ccc3c80225f47f19fd428be3f6d1669be8fdbbeacbd5975e29",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_compensated_cpu_v1.py": "32c0ceb114e6cd0bee8886dcec142c0b68a89091b7b0481440a7cd2b05b6c577",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\shaders\\exp005_shared_frontier.glsl": "914bf2962ead3c6a7b721a8dc2aa6c1e796af4bde1892db1802c3ca93ebdfcd1",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\tests\\test_history_observed_phase_cpu.py": "a80c821fc1eb4c50eb9a81d7281b7621b6af49fdc6e69f28d1ed839fd0164451",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\history_observed_phase_cpu_v1.py": "383dd1c49341722ab95f00499078027aa925cf937926b61b25a3840bd9ac9961",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\coordinacion\\respuestas\\PHASE-COMPOSED-001-CODEX.json": "45247bba869e7b0bed6a7f0ed99c8e2a9a7a8ef4d5c8042532051ba013efe738"
+  },
+  "native_promotion_allowed": false,
+  "observation_execution_authenticated": false,
+  "initial_failure_retained": {
+    "tests": 6,
+    "errors": 2,
+    "exit_code": 1,
+    "reason": "new schema mistakenly required string terminal IDs; frozen CPU tracer uses nonnegative integers",
+    "repair": "new opt-in validator matches existing integer ABI and rejects bool; no frozen code or thresholds changed"
+  },
+  "no_jev_aval": true,
+  "scope": "CPU synthetic data consistency and conditional ideal budget; NO runtime/GPU/Bpy",
+  "review_request": {
+    "parent": "PHASE-COMPENSATED-001-CODEX",
+    "owner": "Claude",
+    "request": "En la MISMA critica CPU opcional, comprobar si el contraste de longitud observada contra la referencia regenerada omite un caso; una refutacion pequena, sin nuevo job/barrido/guardreview. RT-CAP-006 sigue prioritario."
+  }
+}
