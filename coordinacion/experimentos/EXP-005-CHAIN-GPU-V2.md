@@ -1,7 +1,8 @@
-# Preparación V2: cascadas de tres y cuatro celdas
+# Contrato V2: cascadas de tres y cuatro celdas
 
-Estado: **CPU sintético validado, runtime Blender/GPU aún no implementado ni
-ejecutado**. No modificar contrato/fixtures/resultados V1 o conf1. Esta es
+Estado: **contrato runtime congelado antes de GPU, 2026-09-30 03:14 UTC**.
+Builder/runner exp005_chain_runtime.py; ejecución todavía pendiente.
+No modificar contrato/fixtures/resultados V1 o conf1. Esta es
 una cascada nueva, no la rejilla de16MZI de Claude. JEV bloqueado/local.
 
 Nueva geometría: dyadic quads, siete objetos por celda más escape final;
@@ -19,7 +20,7 @@ Kernel sin cambio: hasta64triángulos/stack33/depth32/steps4096 porfuente/
 ledger128 porpuerto. Decoder limita casts por número real de fuentes.
 No activar perfil5 en un job V1 ni promover resultados viejos a V2.
 
-## Próximo contrato runtime por congelar
+## Contrato runtime
 
 Nuevo builder/runner propio guardará/reabrirá escenas en carpeta nueva, con
 readback evaluado de vértices/propiedades/fuentes antes de dispatch perfil5.
@@ -31,9 +32,11 @@ Comparar todoscampos y ledger con oráculo triangular independiente (<=1e-4),
 potencia/balanceescape<=2e-4, longitudledger<=1e-5BU/conteoscaminos exactos,
 shamGPUexactigual, todoscausalesbasis0ΔP>1e-3. Bases yfase aλ.125 también
 contra composiciónanalítica independiente (solo oráculo, nunca inputGPU).
-Negativos:espejoúltimoausente,solape,direcciónejereadout,steps/depth bajos.
-Diseñar antes de medir un control ledger/stackoverflow si el ABI lo permite;
-no declarar ejecución de esos flags solo por tests del decoder.
+Negativos cinco por tamaño:espejoúltimoausente,solape,direcciónejereadout,
+steps1/depth1. Diez abortos específicos, todos los puertos inválidos con
+resultados parciales borrados. Stack33/depth32 impide overflow de stack en
+estas escenas; máximo46 caminos/puerto no fuerza ledger128. No declarar
+ejecución de esos flags ni del rol inválido solo por tests del decoder.
 
 Conservar artefactos y FAIL, nunca bajar umbral tras medir. AntesGPU exige
 runner revisado +tests +commit de contrato final. CPUprobes/gates previos en

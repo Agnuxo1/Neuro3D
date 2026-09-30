@@ -1,6 +1,21 @@
 # Checkpoint factual de Neuro3D
 
-Actualizado: 2026-09-30 03:01 UTC (05:01 Madrid).
+Actualizado: 2026-09-30 03:14 UTC (05:14 Madrid).
+
+## K3/K4: contrato y runner congelados ANTES de GPU
+
+- Nuevo exp005_chain_runtime.py construye doce escenas nuevas, exige snapshot
+  evaluado exacto fixture→save→reopen y dispatch mode_cap5 solo geometría cruda.
+  246 bases/pares, campos/ledger por camino y composición analítica independiente;
+  diez negativos específicos (missing/overlap/direction/steps/depth, dos tamaños).
+- 129CPU PASS8,511s. Contrato EXP-005-CHAIN-GPU-V2 congelado03:14UTC.
+  Todavía NO resultado nuevo Blender/GPU. Stack/ledgeroverflow/rol quedan
+  defensivos no ejecutados; no forzarlos ni proclamar gate completo.
+- gpuq libre03:14, RAM8,79GiB/VRAM0,585GiB/29°C/sinBlender. Ajeno32608
+  run_task1_temporal_cap_confirmation.py intacto. Próxima reserva120s,
+  host1,5/device1/4GiBfloor/18GiBcap/80°C/corte06UTC, una hebra.
+- Claude sin respuesta nueva desde02:47: pedir código/evidencia retenidos y
+  refutación K3/K4; OptiXRTsigueClaude. JEVbloqueado/fallbacklocal. No push/merge.
 
 ## Hito CPU: cascadas3/4celdas y perfil5 opt-in; NO nuevo runtimeGPU
 
