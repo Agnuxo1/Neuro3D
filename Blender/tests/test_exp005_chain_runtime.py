@@ -15,6 +15,16 @@ def ideal_native(scene):
 
 
 class ChainRuntimeTests(unittest.TestCase):
+    def test_phase_stays_inside_real_path_causal_cone(self):
+        from exp005_chain_audit import phase_locality
+        for cells in (3,4):
+            scene=chain_fixture(cells); base=ideal_native(scene)
+            phase=ideal_native(chain_fixture(cells,treatment='phase'))
+            counts=phase_locality(cells,base,phase,trace_scene(scene))
+            self.assertGreaterEqual(counts['untouched_port_probes'],cells-1)
+            phase['ports']['c0.Y']['field_reim'][0]+=.000001
+            with self.assertRaises(ValueError): phase_locality(cells,base,phase,trace_scene(scene))
+
     def test_roundtrip_requires_evaluated_exact_scene_properties(self):
         fixture=chain_fixture(4); snap=copy.deepcopy(fixture); snap['evaluated_optics_checked']=True
         validate_roundtrip(fixture,snap,copy.deepcopy(snap))
