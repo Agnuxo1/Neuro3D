@@ -1,0 +1,58 @@
+{
+  "task_id": "PHASE-SCALAR-BUNDLE-001-CODEX",
+  "tests": 8,
+  "returncode": 0,
+  "seconds": 2.20607800000289,
+  "output": "........\n----------------------------------------------------------------------\nRan 8 tests in 1.558s\n\nOK\n",
+  "code_sha256": {
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\tests\\test_phase_signed_native_probe_cpu.py": "080f7a1308121056ba4d6f943b3adb952565c523d6e4b094f18c585d045f6191",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\shaders\\exp005_signed_phase_probe.glsl": "2f9aa95ae4d15755765d0ba6cd38fdcd0fc313a3b248530feeb0478464806b29",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Docs\\EXP-005-SIGNED-NATIVE-PREP-V1.md": "acd87d8d0d692f4c7266cf571b77388b65f0662d0fc08a4d5567dbce1c93f3a8",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_signed_native_probe_v1.py": "7fc268d557d78e717e96a4dcc4bbe583863d2e5927ed51b85002e387975caa30",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_native_probe_v1.py": "a7cd48a5fcb7ce97f7b7261dfd38a4ec057c1cdae2cdb0d7762d5fda37f8b112",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\history_signed_phase_budget_cpu_v1.py": "ec860acc68ea032b27babad5d34c01fcd7920068601757773549dfbb73d19180",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_compensated_cpu_v1.py": "32c0ceb114e6cd0bee8886dcec142c0b68a89091b7b0481440a7cd2b05b6c577",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_circular_budget_cpu_v1.py": "829620a715a1d5ccc3c80225f47f19fd428be3f6d1669be8fdbbeacbd5975e29",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\shaders\\exp005_phase_compensated_probe.glsl": "d116b8c18d80dae32092aee453ecb0ff9523b8decf9fc5ef106e0ede9e23ed6c",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\coordinacion\\respuestas\\PHASE-SIGNED-001-CODEX.json": "bab7162e2404b27e437f7f198bdc5316c3b6e0138266c14f8e7405014c31982f",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\coordinacion\\respuestas\\PHASE-SIGNED-NATIVE-PREP-001-CODEX.json": "3cc971e17a9f6267cb4da15707f51a2c47d8a72982a12f2f048f3771bbc907e4",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_native_capture_v1.py": "bea2803eef83d66ac9e9b097137c67a270d8516764b9b01a94943c9c4602f1dc",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_signed_native_capture_v1.py": "be70ede6795913a5a820cce0519e46c8c5e94f4dbda54946536ac739a0099796",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_signed_native_capture_v2.py": "5f5207d3195e49dea9822304e3e922326871d08fb4fad7174919194b57d7fea9",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\scalar_job_supervisor_v1.py": "60c174a00c4e407cbf4f409a6a539e415f217bb159554b0688c0575d71b71c30",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\tests\\test_scalar_job_supervisor_cpu.py": "c0386956409a1ff5a00788f8ad1e388bb5fbb3e87cf2506b596f2ba65a396e8f",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Docs\\EXP-005-SCALAR-SUPERVISOR-V1.md": "31ce9c547208b637de2da349618a2098f6db2cb2fb2f650e251dd870b31b6201",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\guarded_job.py": "958163c3bba7f16d619c9788893771eaf7fc6a17b1e295eae8cf84b15bfcd818",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\coordinacion\\respuestas\\PHASE-SIGNED-NATIVE-CAPTURE-002-CODEX.json": "d41d777e20e6d164bd3ff91072f5a5252ea4bdf18850008be71acad56aede487",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\coordinacion\\respuestas\\PHASE-SCALAR-SUPERVISOR-001-CODEX.json": "bb280b865f8635493cbcb75ba0b084a6a7007f3a6b21c3a47cd5993565713913",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\scalar_job_bundle_v1.py": "582a331dc0bdcc447a3db8fc2d25679c0af246b7f4f02e3dcba43728cfc06d88",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\tests\\test_scalar_job_bundle_cpu.py": "9a450108e490db9ed59415cb2b7f81f6501ac7656884e33124a1dd46e7c1eed3",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Docs\\EXP-005-SCALAR-JOB-BUNDLE-V1.md": "eeb3b5e5dbe6b0938db2cd306a4a196600e8916cfdab9768ffd4771757577cc4"
+  },
+  "scope": "synthetic envelopes + CPU generated336uint32 words redecoded, no native execution",
+  "valid_cases": 8,
+  "abort_cases": 4,
+  "GPU_executed": false,
+  "Bpy_executed": false,
+  "actual_gpuq_reservation_verified": false,
+  "runtime_execution_authenticated": false,
+  "native_promotion_allowed": false,
+  "operational_gate_passed": false,
+  "no_jev_aval": true,
+  "timestamp_utc": "2026-09-30 20:27:33 UTC",
+  "resource_snapshot": {
+    "ram_available_GiB": 3.8793716430664062,
+    "holder_present": false,
+    "tickets": [
+      "neuro3d:rtcap006-pilot-2",
+      "filament:FIL-011c ms_learned_cons_40k clip-fix"
+    ],
+    "scope": "read-only before CPU tests, no pruning/acquisition/GPU admission"
+  },
+  "pending": [
+    "Private Blender child entrypoint and executable binding not implemented",
+    "No real reserved runtime envelope or NVIDIA telemetry yet",
+    "Deadline must originate inside acquired job, never before queue wait",
+    "SHA/CPU raw consistency does not authenticate runtime or driver"
+  ]
+}
