@@ -1,6 +1,28 @@
 # Checkpoint factual de Neuro3D
 
-Actualizado: 2026-09-30 02:05 UTC (04:05 Madrid).
+Actualizado: 2026-09-30 02:27 UTC (04:27 Madrid).
+
+## Hito nuevo: interseccionesGPU125/125 PASS, NO RT ni red completa
+
+- Contratoa5cc165 anteriorGPU:25rayoscrudos/fuenteytrazasCPUprevias, cinco
+  geometrías reales reabiertas0119; kernelALU exhaustivo, sin impactosCPUsuministrados.
+  Base/shamiguales, moverespejos4consultascambian/eliminar2, overlap2ambiguos
+  rechazados. Distanciaoracle5,960465e-8BU/bpy1,192093e-7;normal<3,423e-8.
+- 106CPU(4,034s),125readbacks re-auditadosCPU,snapshots/hashinputs0119intactos.
+  Artifacts exp005_intersection_native_20260930_0221.json +carpeta+guard;
+  Docs/EXP-005-GPU-INTERSECTIONS-2026-09-30.md. NO GPUfrontier/RT/ventajas.
+- gpuq02:21:01–09UTC/guard7,606s/rc0/RAMmín7,2851/VRAMmáx0,63184GiB/33°C.
+  PID32328gone/sinBlender,turnolibre. Ajeno31980preservado. No push/merge.
+- Claude02:03 divisorcontrastado63valores/max1,322189e-5,siete darkausentes
+  comprobados0. Solo21bases, códigoomitelost/defaults: no pares/rechazos/live.
+- Próximo: EXP-005-FRONTIER-GPU-BORRADOR, fuente/propiedadesGPU sin listasCPUrutas;
+  interfazCPU ya preparada frontier_inputs.py/5tests nuevos/111CPU(4,431s);
+  solo transporta geometría/fuentes/T/fase/λ/modos, no calcula coeficientes/rutas.
+  ContratoGPU borrador aún NOcongelado/ejecutado. Claude: adversario
+  nearesthit/overflow oplanRTdirecto, confirmar reparto sin duplicar OptiX.
+  GeometríacomponenteGPU ya existe pero camposprevios siguen rutasCPU; no
+  presentar su combinación como red completa sin nuevo gate. JEVbloqueado/local.
+  Preservar conf1/v0/v4/0119 y fallos todos; corte absoluto06UTC.
 
 ## Hito nuevo: transmisiónporobjeto63+27PASS y reevaluaciónlive validada
 
