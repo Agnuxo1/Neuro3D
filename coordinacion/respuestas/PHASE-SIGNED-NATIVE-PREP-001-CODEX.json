@@ -1,0 +1,153 @@
+{
+  "task_id": "PHASE-SIGNED-NATIVE-PREP-001-CODEX",
+  "timestamp_utc": "2026-09-30T19:19:01.188617+00:00",
+  "seconds": 0.058521200000541285,
+  "tests": 7,
+  "tests_successful": true,
+  "test_output": ".......\n----------------------------------------------------------------------\nRan 7 tests in 0.005s\n\nOK\n",
+  "code_sha256": {
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\tests\\test_phase_signed_native_probe_cpu.py": "080f7a1308121056ba4d6f943b3adb952565c523d6e4b094f18c585d045f6191",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\shaders\\exp005_signed_phase_probe.glsl": "2f9aa95ae4d15755765d0ba6cd38fdcd0fc313a3b248530feeb0478464806b29",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Docs\\EXP-005-SIGNED-NATIVE-PREP-V1.md": "acd87d8d0d692f4c7266cf571b77388b65f0662d0fc08a4d5567dbce1c93f3a8",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_signed_native_probe_v1.py": "7fc268d557d78e717e96a4dcc4bbe583863d2e5927ed51b85002e387975caa30",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_native_probe_v1.py": "a7cd48a5fcb7ce97f7b7261dfd38a4ec057c1cdae2cdb0d7762d5fda37f8b112",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\history_signed_phase_budget_cpu_v1.py": "ec860acc68ea032b27babad5d34c01fcd7920068601757773549dfbb73d19180",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_compensated_cpu_v1.py": "32c0ceb114e6cd0bee8886dcec142c0b68a89091b7b0481440a7cd2b05b6c577",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_circular_budget_cpu_v1.py": "829620a715a1d5ccc3c80225f47f19fd428be3f6d1669be8fdbbeacbd5975e29",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\shaders\\exp005_phase_compensated_probe.glsl": "d116b8c18d80dae32092aee453ecb0ff9523b8decf9fc5ef106e0ede9e23ed6c",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\coordinacion\\respuestas\\PHASE-SIGNED-001-CODEX.json": "bab7162e2404b27e437f7f198bdc5316c3b6e0138266c14f8e7405014c31982f"
+  },
+  "pilot_cases_exact_uint32": [
+    {
+      "id": 0,
+      "input_uint32": [
+        3894859413,
+        3188796939,
+        0,
+        1069547520
+      ],
+      "expected_status": 0
+    },
+    {
+      "id": 1,
+      "input_uint32": [
+        0,
+        3219128320,
+        0,
+        1072693248
+      ],
+      "expected_status": 0
+    },
+    {
+      "id": 2,
+      "input_uint32": [
+        0,
+        3230613632,
+        2825768408,
+        1030859357
+      ],
+      "expected_status": 0
+    },
+    {
+      "id": 3,
+      "input_uint32": [
+        3221227520,
+        3241051267,
+        0,
+        1053294592
+      ],
+      "expected_status": 0
+    },
+    {
+      "id": 4,
+      "input_uint32": [
+        0,
+        3221766144,
+        2576980378,
+        1069128089
+      ],
+      "expected_status": 0
+    },
+    {
+      "id": 5,
+      "input_uint32": [
+        0,
+        1074798592,
+        0,
+        1069547520
+      ],
+      "expected_status": 0
+    },
+    {
+      "id": 6,
+      "input_uint32": [
+        0,
+        0,
+        0,
+        1069547520
+      ],
+      "expected_status": 0
+    },
+    {
+      "id": 7,
+      "input_uint32": [
+        1,
+        3219128320,
+        0,
+        1072693248
+      ],
+      "expected_status": 0
+    },
+    {
+      "id": 8,
+      "input_uint32": [
+        0,
+        3274702848,
+        0,
+        1072693248
+      ],
+      "expected_status": 2
+    },
+    {
+      "id": 9,
+      "input_uint32": [
+        0,
+        3220176896,
+        0,
+        0
+      ],
+      "expected_status": 1
+    },
+    {
+      "id": 10,
+      "input_uint32": [
+        1,
+        2147483648,
+        0,
+        1072693248
+      ],
+      "expected_status": 1
+    },
+    {
+      "id": 11,
+      "input_uint32": [
+        0,
+        2146959360,
+        0,
+        1072693248
+      ],
+      "expected_status": 1
+    }
+  ],
+  "valid_cases": 8,
+  "abort_cases": 4,
+  "max_synthetic_unit_field_error": 8.742278101436793e-8,
+  "max_synthetic_point_bound": 8.742278094622793e-8,
+  "GPU_compilation_verified": false,
+  "GPU_dispatch_verified": false,
+  "Bpy_executed": false,
+  "operational_admission_granted": false,
+  "native_promotion_allowed": false,
+  "no_jev_aval": true,
+  "scope": "signed CPU exact-word ABI/decoder and GLSL text, not native execution"
+}
