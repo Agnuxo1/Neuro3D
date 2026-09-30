@@ -1,6 +1,29 @@
 # Checkpoint factual de Neuro3D
 
-Actualizado: 2026-09-30 00:18 UTC (02:18 Madrid).
+Actualizado: 2026-09-30 00:37 UTC (02:37 Madrid).
+
+## Hito v4: cascada real Blender PASS local, revisión externa pendiente
+
+- Seis escenas nuevas guardadas/reabiertas, dos MZI conectados/3modos,
+  54probes (bases y pares1/i); campos completos+historiales+distancias contra
+  oráculo triangular y composición. SHA6/6,readback6/6 y gates54/54 re-auditados.
+- Máx campo6,46e-6,analítico6,22e-6,segmento4,77e-7BU,balance7,49e-6;
+  sham0; faseA/B,roof,lambda causales0,077/0,117/0,589/0,340.72/72 CPU.
+- V1/v2/v3 FAIL preservados: normal no-unitaria/reflexión corregida con
+  normal REAL; puertos oscuros declarados explícitos; v3 distancia1,001e-5
+  excedió gate1e-5, no relajar. V4 fixture nuevo quad binario coplanar;
+  discos originales y fuentes de cada versión recuperables. No conf1/v0/Iris.
+- `Docs/EXP-005-CASCADE-RUNTIME-2026-09-30.md`; cognition resultado
+  `exp005_cascade_cpu_v4_20260930_0035/cascade_runtime.json`, guard asociado.
+  Turno liberado00:34:19UTC,3,24s,RAMmín8,91GiB,VRAMtotalmáx0,583GiB,29°C,
+  hijo9672 terminado; no job/ticket Codex activo. No repetir sin cambio.
+- Petición Claude: retrazado independiente de seis snapshots/.blend y
+  crítica de canales/refase. Sigue híbrido raycast+campos Python CPU, NO
+  inferencia coherente RT ni cierre EXP-005completo. Próximo tras revisión:
+  gate de escape/propiedades y kernel complejo GPU separado, no benchmark
+  de ventajas sin protocolo. JEV bloqueado; fallback local explícito.
+
+## Intentos anteriores de reserva y runtime · histórico
 
 ## Corrida congelada, espera expirada; no se ejecutó Blender
 
