@@ -1,0 +1,768 @@
+{
+  "id": "COHERENT-REDUCTION-001-CODEX",
+  "created_utc": "2026-09-30T21:04:56+00:00",
+  "scope": "CPU binary32 supplied-field reduction model with exact rational order-independent oracle; not scene or native execution",
+  "tests": 8,
+  "rc": 0,
+  "elapsed_s": 0.17596040001080837,
+  "stderr": "........\n----------------------------------------------------------------------\nRan 8 tests in 0.003s\n\nOK\n",
+  "threads": 1,
+  "child_timeout_s": 60,
+  "earlier_target_run": {
+    "tests": 7,
+    "rc": 0,
+    "elapsed_s": 0.18927309999708086,
+    "note": "Before adding a complex quadrature residual test; no production gate change"
+  },
+  "initial_evidence_capture_issue": {
+    "type": "output truncation/parser failure",
+    "numerical_failure": false,
+    "note": "Initial full diagnostic exceeded output cap; retained compact deterministic records instead"
+  },
+  "code_sha256": {
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\coherent_reduction_cpu_v1.py": "cfd71837b19fd39cbf321ad41319587cd497397d266cc221d9da0c02c4f7d785",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\tests\\test_coherent_reduction_cpu.py": "b6f3919eadc9d29cef8046943de871b8fa85a7a1c917fbd08e9cd874f9554f2d",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Docs\\EXP-005-COHERENT-REDUCTION-CPU-V1.md": "f5726ced773a0b9c86c852e1d47c598358ebc01b05de9ee4aa28797a857746ff"
+  },
+  "preserved_frozen_sha256": {
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\shaders\\exp005_signed_phase_probe.glsl": "2f9aa95ae4d15755765d0ba6cd38fdcd0fc313a3b248530feeb0478464806b29",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\shaders\\exp005_shared_frontier.glsl": "914bf2962ead3c6a7b721a8dc2aa6c1e796af4bde1892db1802c3ca93ebdfcd1",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\scalar_job_launcher_v1.py": "2f5211d63ac09fb026858c19641f591be4d8bbb6add5d90cf0d6155f25d79aa8"
+  },
+  "high_gain_synthetic_fixture": {
+    "values_reim": [
+      [
+        33554432,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        -33554432,
+        0
+      ]
+    ],
+    "normalized_physical_scene": false,
+    "orders": [
+      {
+        "order_ids": [
+          0,
+          1,
+          2
+        ],
+        "algorithm": "linear32",
+        "result": {
+          "accepted_represented_reduction_only": false,
+          "ports": {
+            "p": {
+              "groups": {
+                "g": {
+                  "supplied_path_count": 3,
+                  "reference_field_rational": [
+                    [
+                      1,
+                      1
+                    ],
+                    [
+                      0,
+                      1
+                    ]
+                  ],
+                  "modeled_field_reim": [
+                    0,
+                    0
+                  ],
+                  "field_error_L1_rational": [
+                    1,
+                    1
+                  ],
+                  "intensity_error_rational": [
+                    1,
+                    1
+                  ],
+                  "reference_intensity_rational": [
+                    1,
+                    1
+                  ],
+                  "field_budget_satisfied": false
+                }
+              },
+              "intensity_error_bound_rational": [
+                1,
+                1
+              ],
+              "intensity_budget_satisfied": false
+            }
+          }
+        }
+      },
+      {
+        "order_ids": [
+          0,
+          1,
+          2
+        ],
+        "algorithm": "neumaier32",
+        "result": {
+          "accepted_represented_reduction_only": true,
+          "ports": {
+            "p": {
+              "groups": {
+                "g": {
+                  "supplied_path_count": 3,
+                  "reference_field_rational": [
+                    [
+                      1,
+                      1
+                    ],
+                    [
+                      0,
+                      1
+                    ]
+                  ],
+                  "modeled_field_reim": [
+                    1,
+                    0
+                  ],
+                  "field_error_L1_rational": [
+                    0,
+                    1
+                  ],
+                  "intensity_error_rational": [
+                    0,
+                    1
+                  ],
+                  "reference_intensity_rational": [
+                    1,
+                    1
+                  ],
+                  "field_budget_satisfied": true
+                }
+              },
+              "intensity_error_bound_rational": [
+                0,
+                1
+              ],
+              "intensity_budget_satisfied": true
+            }
+          }
+        }
+      },
+      {
+        "order_ids": [
+          0,
+          2,
+          1
+        ],
+        "algorithm": "linear32",
+        "result": {
+          "accepted_represented_reduction_only": true,
+          "ports": {
+            "p": {
+              "groups": {
+                "g": {
+                  "supplied_path_count": 3,
+                  "reference_field_rational": [
+                    [
+                      1,
+                      1
+                    ],
+                    [
+                      0,
+                      1
+                    ]
+                  ],
+                  "modeled_field_reim": [
+                    1,
+                    0
+                  ],
+                  "field_error_L1_rational": [
+                    0,
+                    1
+                  ],
+                  "intensity_error_rational": [
+                    0,
+                    1
+                  ],
+                  "reference_intensity_rational": [
+                    1,
+                    1
+                  ],
+                  "field_budget_satisfied": true
+                }
+              },
+              "intensity_error_bound_rational": [
+                0,
+                1
+              ],
+              "intensity_budget_satisfied": true
+            }
+          }
+        }
+      },
+      {
+        "order_ids": [
+          0,
+          2,
+          1
+        ],
+        "algorithm": "neumaier32",
+        "result": {
+          "accepted_represented_reduction_only": true,
+          "ports": {
+            "p": {
+              "groups": {
+                "g": {
+                  "supplied_path_count": 3,
+                  "reference_field_rational": [
+                    [
+                      1,
+                      1
+                    ],
+                    [
+                      0,
+                      1
+                    ]
+                  ],
+                  "modeled_field_reim": [
+                    1,
+                    0
+                  ],
+                  "field_error_L1_rational": [
+                    0,
+                    1
+                  ],
+                  "intensity_error_rational": [
+                    0,
+                    1
+                  ],
+                  "reference_intensity_rational": [
+                    1,
+                    1
+                  ],
+                  "field_budget_satisfied": true
+                }
+              },
+              "intensity_error_bound_rational": [
+                0,
+                1
+              ],
+              "intensity_budget_satisfied": true
+            }
+          }
+        }
+      },
+      {
+        "order_ids": [
+          1,
+          0,
+          2
+        ],
+        "algorithm": "linear32",
+        "result": {
+          "accepted_represented_reduction_only": false,
+          "ports": {
+            "p": {
+              "groups": {
+                "g": {
+                  "supplied_path_count": 3,
+                  "reference_field_rational": [
+                    [
+                      1,
+                      1
+                    ],
+                    [
+                      0,
+                      1
+                    ]
+                  ],
+                  "modeled_field_reim": [
+                    0,
+                    0
+                  ],
+                  "field_error_L1_rational": [
+                    1,
+                    1
+                  ],
+                  "intensity_error_rational": [
+                    1,
+                    1
+                  ],
+                  "reference_intensity_rational": [
+                    1,
+                    1
+                  ],
+                  "field_budget_satisfied": false
+                }
+              },
+              "intensity_error_bound_rational": [
+                1,
+                1
+              ],
+              "intensity_budget_satisfied": false
+            }
+          }
+        }
+      },
+      {
+        "order_ids": [
+          1,
+          0,
+          2
+        ],
+        "algorithm": "neumaier32",
+        "result": {
+          "accepted_represented_reduction_only": true,
+          "ports": {
+            "p": {
+              "groups": {
+                "g": {
+                  "supplied_path_count": 3,
+                  "reference_field_rational": [
+                    [
+                      1,
+                      1
+                    ],
+                    [
+                      0,
+                      1
+                    ]
+                  ],
+                  "modeled_field_reim": [
+                    1,
+                    0
+                  ],
+                  "field_error_L1_rational": [
+                    0,
+                    1
+                  ],
+                  "intensity_error_rational": [
+                    0,
+                    1
+                  ],
+                  "reference_intensity_rational": [
+                    1,
+                    1
+                  ],
+                  "field_budget_satisfied": true
+                }
+              },
+              "intensity_error_bound_rational": [
+                0,
+                1
+              ],
+              "intensity_budget_satisfied": true
+            }
+          }
+        }
+      },
+      {
+        "order_ids": [
+          1,
+          2,
+          0
+        ],
+        "algorithm": "linear32",
+        "result": {
+          "accepted_represented_reduction_only": false,
+          "ports": {
+            "p": {
+              "groups": {
+                "g": {
+                  "supplied_path_count": 3,
+                  "reference_field_rational": [
+                    [
+                      1,
+                      1
+                    ],
+                    [
+                      0,
+                      1
+                    ]
+                  ],
+                  "modeled_field_reim": [
+                    0,
+                    0
+                  ],
+                  "field_error_L1_rational": [
+                    1,
+                    1
+                  ],
+                  "intensity_error_rational": [
+                    1,
+                    1
+                  ],
+                  "reference_intensity_rational": [
+                    1,
+                    1
+                  ],
+                  "field_budget_satisfied": false
+                }
+              },
+              "intensity_error_bound_rational": [
+                1,
+                1
+              ],
+              "intensity_budget_satisfied": false
+            }
+          }
+        }
+      },
+      {
+        "order_ids": [
+          1,
+          2,
+          0
+        ],
+        "algorithm": "neumaier32",
+        "result": {
+          "accepted_represented_reduction_only": true,
+          "ports": {
+            "p": {
+              "groups": {
+                "g": {
+                  "supplied_path_count": 3,
+                  "reference_field_rational": [
+                    [
+                      1,
+                      1
+                    ],
+                    [
+                      0,
+                      1
+                    ]
+                  ],
+                  "modeled_field_reim": [
+                    1,
+                    0
+                  ],
+                  "field_error_L1_rational": [
+                    0,
+                    1
+                  ],
+                  "intensity_error_rational": [
+                    0,
+                    1
+                  ],
+                  "reference_intensity_rational": [
+                    1,
+                    1
+                  ],
+                  "field_budget_satisfied": true
+                }
+              },
+              "intensity_error_bound_rational": [
+                0,
+                1
+              ],
+              "intensity_budget_satisfied": true
+            }
+          }
+        }
+      },
+      {
+        "order_ids": [
+          2,
+          0,
+          1
+        ],
+        "algorithm": "linear32",
+        "result": {
+          "accepted_represented_reduction_only": true,
+          "ports": {
+            "p": {
+              "groups": {
+                "g": {
+                  "supplied_path_count": 3,
+                  "reference_field_rational": [
+                    [
+                      1,
+                      1
+                    ],
+                    [
+                      0,
+                      1
+                    ]
+                  ],
+                  "modeled_field_reim": [
+                    1,
+                    0
+                  ],
+                  "field_error_L1_rational": [
+                    0,
+                    1
+                  ],
+                  "intensity_error_rational": [
+                    0,
+                    1
+                  ],
+                  "reference_intensity_rational": [
+                    1,
+                    1
+                  ],
+                  "field_budget_satisfied": true
+                }
+              },
+              "intensity_error_bound_rational": [
+                0,
+                1
+              ],
+              "intensity_budget_satisfied": true
+            }
+          }
+        }
+      },
+      {
+        "order_ids": [
+          2,
+          0,
+          1
+        ],
+        "algorithm": "neumaier32",
+        "result": {
+          "accepted_represented_reduction_only": true,
+          "ports": {
+            "p": {
+              "groups": {
+                "g": {
+                  "supplied_path_count": 3,
+                  "reference_field_rational": [
+                    [
+                      1,
+                      1
+                    ],
+                    [
+                      0,
+                      1
+                    ]
+                  ],
+                  "modeled_field_reim": [
+                    1,
+                    0
+                  ],
+                  "field_error_L1_rational": [
+                    0,
+                    1
+                  ],
+                  "intensity_error_rational": [
+                    0,
+                    1
+                  ],
+                  "reference_intensity_rational": [
+                    1,
+                    1
+                  ],
+                  "field_budget_satisfied": true
+                }
+              },
+              "intensity_error_bound_rational": [
+                0,
+                1
+              ],
+              "intensity_budget_satisfied": true
+            }
+          }
+        }
+      },
+      {
+        "order_ids": [
+          2,
+          1,
+          0
+        ],
+        "algorithm": "linear32",
+        "result": {
+          "accepted_represented_reduction_only": false,
+          "ports": {
+            "p": {
+              "groups": {
+                "g": {
+                  "supplied_path_count": 3,
+                  "reference_field_rational": [
+                    [
+                      1,
+                      1
+                    ],
+                    [
+                      0,
+                      1
+                    ]
+                  ],
+                  "modeled_field_reim": [
+                    0,
+                    0
+                  ],
+                  "field_error_L1_rational": [
+                    1,
+                    1
+                  ],
+                  "intensity_error_rational": [
+                    1,
+                    1
+                  ],
+                  "reference_intensity_rational": [
+                    1,
+                    1
+                  ],
+                  "field_budget_satisfied": false
+                }
+              },
+              "intensity_error_bound_rational": [
+                1,
+                1
+              ],
+              "intensity_budget_satisfied": false
+            }
+          }
+        }
+      },
+      {
+        "order_ids": [
+          2,
+          1,
+          0
+        ],
+        "algorithm": "neumaier32",
+        "result": {
+          "accepted_represented_reduction_only": true,
+          "ports": {
+            "p": {
+              "groups": {
+                "g": {
+                  "supplied_path_count": 3,
+                  "reference_field_rational": [
+                    [
+                      1,
+                      1
+                    ],
+                    [
+                      0,
+                      1
+                    ]
+                  ],
+                  "modeled_field_reim": [
+                    1,
+                    0
+                  ],
+                  "field_error_L1_rational": [
+                    0,
+                    1
+                  ],
+                  "intensity_error_rational": [
+                    0,
+                    1
+                  ],
+                  "reference_intensity_rational": [
+                    1,
+                    1
+                  ],
+                  "field_budget_satisfied": true
+                }
+              },
+              "intensity_error_bound_rational": [
+                0,
+                1
+              ],
+              "intensity_budget_satisfied": true
+            }
+          }
+        }
+      }
+    ],
+    "linear_failures_of_six": 4,
+    "neumaier_passes_of_six": 6
+  },
+  "normalized_control": {
+    "accepted_represented_reduction_only": true,
+    "ports": {
+      "p": {
+        "groups": {
+          "g": {
+            "supplied_path_count": 3,
+            "reference_field_rational": [
+              [
+                1,
+                33554432
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "modeled_field_reim": [
+              0,
+              0
+            ],
+            "field_error_L1_rational": [
+              1,
+              33554432
+            ],
+            "intensity_error_rational": [
+              1,
+              1125899906842624
+            ],
+            "reference_intensity_rational": [
+              1,
+              1125899906842624
+            ],
+            "field_budget_satisfied": true
+          }
+        },
+        "intensity_error_bound_rational": [
+          1,
+          1125899906842624
+        ],
+        "intensity_budget_satisfied": true
+      }
+    }
+  },
+  "normalized_interpretation": {
+    "reference_real": 2.9802322387695312e-8,
+    "modeled_real": 0,
+    "absolute_field_error": 2.9802322387695312e-8,
+    "relative_field_error": 1,
+    "absolute_gate_passed": true,
+    "relative_precision_certified": false
+  },
+  "quadrature_test": {
+    "reference_reim": [
+      1,
+      1
+    ],
+    "linear_error_L1": 2,
+    "linear_intensity_error": 2,
+    "neumaier_reim": [
+      1,
+      1
+    ],
+    "neumaier_error_L1": 0
+  },
+  "field_threshold_unchanged": 0.0001,
+  "intensity_threshold_unchanged": 0.0002,
+  "resource_snapshot": {
+    "ram_free_GiB": 3.5376243591308594,
+    "holder": null,
+    "tickets": [
+      "neuro3d:rtcap006-pilot-2",
+      "filament:FIL-011c ms_learned_cons_40k clip-fix"
+    ],
+    "blender_pids": [],
+    "queue_mutated": false
+  },
+  "GPU_executed": false,
+  "Bpy_executed": false,
+  "native_promotion_allowed": false,
+  "operational_gate_passed": false,
+  "geometry_or_scene_inference": false,
+  "no_jev_aval": true,
+  "excluded": [
+    "Input field/phase/geometry/coefficient errors",
+    "GPU/libm/FTZ/reassociation behavior",
+    "Native detection/intensity arithmetic",
+    "Physical coherence/mode overlap",
+    "Scene completeness and native precision"
+  ],
+  "next": "Compose with explicit preceding path/group errors; native reduction requires a separate preregistered contract and reserved runtime test, not supplied-field scene substitution."
+}
