@@ -1,0 +1,85 @@
+{
+  "task_id": "PHASE-NATIVE-PREP-001-CODEX",
+  "timestamp_utc": "2026-09-30T17:36:51.845494+00:00",
+  "tests": 6,
+  "test_output": "......\n----------------------------------------------------------------------\nRan 6 tests in 0.002s\n\nOK\n",
+  "seconds": 0.00652349999290891,
+  "code_sha256": {
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\tests\\test_phase_circular_budget_cpu.py": "6499030effb3c52c542a32aca3d3c8e98259b3143baa10cebe3170a38265ee05",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_circular_budget_cpu_v1.py": "829620a715a1d5ccc3c80225f47f19fd428be3f6d1669be8fdbbeacbd5975e29",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_compensated_cpu_v1.py": "32c0ceb114e6cd0bee8886dcec142c0b68a89091b7b0481440a7cd2b05b6c577",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\shaders\\exp005_shared_frontier.glsl": "914bf2962ead3c6a7b721a8dc2aa6c1e796af4bde1892db1802c3ca93ebdfcd1",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\tests\\test_phase_native_probe_cpu.py": "bd9cba149bd57be0fd68e5442e47b5675c1698fe0792d1d085701f0a0a8e42bb",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\shaders\\exp005_phase_compensated_probe.glsl": "d116b8c18d80dae32092aee453ecb0ff9523b8decf9fc5ef106e0ede9e23ed6c",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_native_probe_v1.py": "a7cd48a5fcb7ce97f7b7261dfd38a4ec057c1cdae2cdb0d7762d5fda37f8b112",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\coordinacion\\respuestas\\PHASE-CIRCULAR-001-CODEX.json": "697a5921e9361b8eb91bf74174a994be1ce23ead8bf0a4dbfb6340d65f98dc2b"
+  },
+  "valid_scalar_controls": [
+    [
+      0,
+      0.125
+    ],
+    [
+      4.03125,
+      0.125
+    ],
+    [
+      1000001.8750002384,
+      0.00000286102294921875
+    ],
+    [
+      1000.0625,
+      1.00416693877201e-12
+    ],
+    [
+      0.5,
+      1
+    ],
+    [
+      1.5,
+      1
+    ]
+  ],
+  "expected_statuses": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "synthetic_max_unit_field_error": 8.742278012618951e-8,
+  "GPU_compilation_verified": false,
+  "GPU_dispatch_verified": false,
+  "Bpy_executed": false,
+  "native_promotion_allowed": false,
+  "no_jev_aval": true,
+  "scope": "CPU exact-word ABI/decoder and shader text only, not native compilation/runtime or scene",
+  "pilot_contract": {
+    "version": "phase-native-scalar-v1",
+    "scope": "Only scalar length/lambda in exact UINT words; NOT scene/geometry inference",
+    "max_samples": 16,
+    "output_uints_per_sample": 28,
+    "field_gate": 0.0001,
+    "pilot_child_max_seconds": 90,
+    "resource_floor_RAM_after_budget_GiB": 4,
+    "declared_RAM_budget_GiB": 2,
+    "total_VRAM_limit_GiB": 18,
+    "temperature_limit_C": 80,
+    "new_deadline_required": true,
+    "exclusive_gpuq_required": true,
+    "guard_fail_closed_required": true,
+    "old_night_deadline_reuse_allowed": false,
+    "partial_trace_on_abort_allowed": false,
+    "total_preregistered_samples": 12,
+    "negative_samples": [{"name":"negative_length","input_uint32":[0,3220176896,0,1069547520],"expected_status":1},{"name":"zero_lambda","input_uint32":[0,1072693248,0,0],"expected_status":1},{"name":"nan_length","input_uint32":[0,2146959360,0,1069547520],"expected_status":1},{"name":"subnormal_length","input_uint32":[1,0,0,1069547520],"expected_status":1},{"name":"quotient_cap","input_uint32":[0,1127219200,0,1072693248],"expected_status":2},{"name":"long_general","input_uint32":[0,1093567616,2167269905,1030854553],"expected_status":2}],
+    "compiler_failure_fallback_allowed": false,
+    "RN_trace_relaxation_allowed": false,
+    "shader_hash_pin": "d116b8c18d80dae32092aee453ecb0ff9523b8decf9fc5ef106e0ede9e23ed6c"
+  },
+  "review_request": {
+    "parent": "PHASE-COMPENSATED-001-CODEX",
+    "owner": "Claude",
+    "request": "En MISMA critica opcional CPU, una objecion al ABI o a los puntos de redondeo GLSL si aparece; no duplicar backend RT, no nuevo barrido/reviewguard/carga. RT-CAP-006 mantiene prioridad."
+  }
+}
