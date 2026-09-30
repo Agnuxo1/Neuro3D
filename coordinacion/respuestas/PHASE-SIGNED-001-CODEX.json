@@ -1,0 +1,1527 @@
+{
+  "task_id": "PHASE-SIGNED-001-CODEX",
+  "timestamp_utc": "2026-09-30T19:01:28.169442+00:00",
+  "tests": 7,
+  "tests_successful": true,
+  "test_output": ".......\n----------------------------------------------------------------------\nRan 7 tests in 0.612s\n\nOK\n",
+  "seconds": 1.232327499994426,
+  "code_sha256": {
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\history_signed_phase_budget_cpu_v1.py": "ec860acc68ea032b27babad5d34c01fcd7920068601757773549dfbb73d19180",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_compensated_cpu_v1.py": "32c0ceb114e6cd0bee8886dcec142c0b68a89091b7b0481440a7cd2b05b6c577",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_circular_budget_cpu_v1.py": "829620a715a1d5ccc3c80225f47f19fd428be3f6d1669be8fdbbeacbd5975e29",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\history_compensated_phase_budget_cpu_v1.py": "da25873cc76f11990f216b0fcc3b81bc3fcc62ac9e9efd31fe6c507e2859cf7c",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\history_wavelength_field_budget_v1.py": "0f4263030059fe250839bce07a4f6643c52c5940dfaea1c15175f1481d1c8f2a",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\history_trace_cpu_v1.py": "92ca7ddb64d95afc3205ddcfb129a5a129a9b5255ff51daf9917c0cceb9c1346",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\history_fields_cpu_v1.py": "41d38c8c7f1bd56764728f50a3951ea4baa60fbe18ebadb316d497c553ec831c",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\history_lengths_cpu_v1.py": "af48ff659152b5055bb4b3091ccdfa5655d995a0fb7bf607c784f243ae912ce3",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\tests\\test_history_signed_phase_cpu.py": "752393f7a9e999b06a06130bea5328b8913468e3e98e0a58a83b86ad4b0bec43",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Docs\\EXP-005-SIGNED-PHASE-CPU-V1.md": "7604b858c163111765b3beb9ce5045f9bda0b73e402b2d32e6773ff902477dbc",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\tests\\exp005_history_mzi_audit.py": "a22345b36a056386ff713972f7be2fed27f56fc46da0cf3549640166d39bff27",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\coordinacion\\respuestas\\PHASE-COMPENSATED-CRITIQUE-CLAUDE.json": "eb138447fc5d402829b039e88285e545bd8c8554e233408e4d9e622afd3e866f",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\shaders\\exp005_phase_compensated_probe.glsl": "d116b8c18d80dae32092aee453ecb0ff9523b8decf9fc5ef106e0ede9e23ed6c",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\shaders\\exp005_shared_frontier.glsl": "914bf2962ead3c6a7b721a8dc2aa6c1e796af4bde1892db1802c3ca93ebdfcd1"
+  },
+  "scalars": [
+    {
+      "length_BU": -1e-9,
+      "lambda_BU": 0.125,
+      "trace": {
+        "effective_length_BU": -1e-9,
+        "phase_sign": -1,
+        "magnitude_trace": {
+          "angle_float32": 5.0265484219380596e-8,
+          "quotient_binary64": 8e-9,
+          "residual_binary64": 0,
+          "correction_binary64": 0,
+          "reduced_cycles_binary64": 8e-9,
+          "native_promotion_allowed": false,
+          "complete_precision_budget_certified": false
+        },
+        "angle_float32": -5.0265484219380596e-8,
+        "native_promotion_allowed": false
+      },
+      "ideal_phasor_error_upper": 1.761943905159819e-15,
+      "CPU_libm_diagnostic_error": 1.7619439054407836e-15,
+      "full_rational_budget_sha256": "ec14d554ad2215d093bb53854e92a39ccb9552b67139589a9a4c927c7851f647"
+    },
+    {
+      "length_BU": -0.5,
+      "lambda_BU": 0.125,
+      "trace": {
+        "effective_length_BU": -0.5,
+        "phase_sign": -1,
+        "magnitude_trace": {
+          "angle_float32": 0,
+          "quotient_binary64": 4,
+          "residual_binary64": 0,
+          "correction_binary64": 0,
+          "reduced_cycles_binary64": 0,
+          "native_promotion_allowed": false,
+          "complete_precision_budget_certified": false
+        },
+        "angle_float32": 0,
+        "native_promotion_allowed": false
+      },
+      "ideal_phasor_error_upper": 0,
+      "CPU_libm_diagnostic_error": 0,
+      "full_rational_budget_sha256": "cabed6dce81135c9775aff139fd051a429ee42f7ebd6bc08d696d37e9dede697"
+    },
+    {
+      "length_BU": -1000,
+      "lambda_BU": 0.125,
+      "trace": {
+        "effective_length_BU": -1000,
+        "phase_sign": -1,
+        "magnitude_trace": {
+          "angle_float32": 0,
+          "quotient_binary64": 8000,
+          "residual_binary64": 0,
+          "correction_binary64": 0,
+          "reduced_cycles_binary64": 0,
+          "native_promotion_allowed": false,
+          "complete_precision_budget_certified": false
+        },
+        "angle_float32": 0,
+        "native_promotion_allowed": false
+      },
+      "ideal_phasor_error_upper": 0,
+      "CPU_libm_diagnostic_error": 0,
+      "full_rational_budget_sha256": "d65ac779bc1b468af8f9f3a32a59c3ea2dedfe504643dbdd5136238de25782be"
+    },
+    {
+      "length_BU": -0.49999999999999994,
+      "lambda_BU": 1,
+      "trace": {
+        "effective_length_BU": -0.49999999999999994,
+        "phase_sign": -1,
+        "magnitude_trace": {
+          "angle_float32": -3.1415927410125732,
+          "quotient_binary64": 0.49999999999999994,
+          "residual_binary64": 0,
+          "correction_binary64": 0,
+          "reduced_cycles_binary64": -0.5,
+          "native_promotion_allowed": false,
+          "complete_precision_budget_certified": false
+        },
+        "angle_float32": 3.1415927410125732,
+        "native_promotion_allowed": false
+      },
+      "ideal_phasor_error_upper": 8.742278059744107e-8,
+      "CPU_libm_diagnostic_error": 8.742277943717093e-8,
+      "full_rational_budget_sha256": "abdb0f32404fec30bc3f628c8910e87383ce09c872e741bdcd8c5979d95b7a73"
+    },
+    {
+      "length_BU": -0.5,
+      "lambda_BU": 1,
+      "trace": {
+        "effective_length_BU": -0.5,
+        "phase_sign": -1,
+        "magnitude_trace": {
+          "angle_float32": -3.1415927410125732,
+          "quotient_binary64": 0.5,
+          "residual_binary64": 0,
+          "correction_binary64": 0,
+          "reduced_cycles_binary64": -0.5,
+          "native_promotion_allowed": false,
+          "complete_precision_budget_certified": false
+        },
+        "angle_float32": 3.1415927410125732,
+        "native_promotion_allowed": false
+      },
+      "ideal_phasor_error_upper": 8.742278024865422e-8,
+      "CPU_libm_diagnostic_error": 8.742277988126014e-8,
+      "full_rational_budget_sha256": "96a98c0e2e78b54de2b8de817694de2bbe6db4b94399447836de0a01c240a7a5"
+    },
+    {
+      "length_BU": -0.5000000000000001,
+      "lambda_BU": 1,
+      "trace": {
+        "effective_length_BU": -0.5000000000000001,
+        "phase_sign": -1,
+        "magnitude_trace": {
+          "angle_float32": -3.1415927410125732,
+          "quotient_binary64": 0.5000000000000001,
+          "residual_binary64": 0,
+          "correction_binary64": 0,
+          "reduced_cycles_binary64": -0.4999999999999999,
+          "native_promotion_allowed": false,
+          "complete_precision_budget_certified": false
+        },
+        "angle_float32": 3.1415927410125732,
+        "native_promotion_allowed": false
+      },
+      "ideal_phasor_error_upper": 8.742278094622793e-8,
+      "CPU_libm_diagnostic_error": 8.742278101436793e-8,
+      "full_rational_budget_sha256": "ae1c079a2dd5d84402db9ce293ce196e91afeee89af02a8a052fe58c8014b629"
+    },
+    {
+      "length_BU": -1000001.8750002384,
+      "lambda_BU": 0.00000286102294921875,
+      "trace": {
+        "effective_length_BU": -1000001.8750002384,
+        "phase_sign": -1,
+        "magnitude_trace": {
+          "angle_float32": 2.6179938316345215,
+          "quotient_binary64": 349525988693.4167,
+          "residual_binary64": -5.820766091346741e-11,
+          "correction_binary64": -0.000020345052083333332,
+          "reduced_cycles_binary64": 0.4166666666666667,
+          "native_promotion_allowed": false,
+          "complete_precision_budget_certified": false
+        },
+        "angle_float32": -2.6179938316345215,
+        "native_promotion_allowed": false
+      },
+      "ideal_phasor_error_upper": 4.635697311353511e-8,
+      "CPU_libm_diagnostic_error": 4.635697296189552e-8,
+      "full_rational_budget_sha256": "3e3f2223123471d57c13c3586a8501754f6c48ccc0f40c7ba3302f28ab4270c8"
+    },
+    {
+      "length_BU": 0,
+      "lambda_BU": 0.125,
+      "trace": {
+        "effective_length_BU": 0,
+        "phase_sign": 1,
+        "magnitude_trace": {
+          "angle_float32": 0,
+          "quotient_binary64": 0,
+          "residual_binary64": 0,
+          "correction_binary64": 0,
+          "reduced_cycles_binary64": 0,
+          "native_promotion_allowed": false,
+          "complete_precision_budget_certified": false
+        },
+        "angle_float32": 0,
+        "native_promotion_allowed": false
+      },
+      "ideal_phasor_error_upper": 0,
+      "CPU_libm_diagnostic_error": 0,
+      "full_rational_budget_sha256": "cf163a29ac3f9d8f9cbb33c383ef3e4e0ef879f671219a2cefb472bd72038784"
+    }
+  ],
+  "scenes": [
+    {
+      "label": "negative_single",
+      "snapshot": {
+        "schema": "exp005-readback-v2",
+        "lambda_BU": 0.1,
+        "objects": {
+          "B1": {
+            "kind": "bs",
+            "vertices_world_BU": [
+              [
+                -0.125,
+                -0.125,
+                -0.125
+              ],
+              [
+                0.125,
+                0.125,
+                -0.125
+              ],
+              [
+                0.125,
+                0.125,
+                0.125
+              ],
+              [
+                -0.125,
+                -0.125,
+                0.125
+              ]
+            ],
+            "faces": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                0,
+                2,
+                3
+              ]
+            ],
+            "power_transmittance": 0.5
+          },
+          "MA": {
+            "kind": "mirror",
+            "vertices_world_BU": [
+              [
+                0.875,
+                -0.125,
+                -0.125
+              ],
+              [
+                1.125,
+                0.125,
+                -0.125
+              ],
+              [
+                1.125,
+                0.125,
+                0.125
+              ],
+              [
+                0.875,
+                -0.125,
+                0.125
+              ]
+            ],
+            "faces": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                0,
+                2,
+                3
+              ]
+            ],
+            "phase_rad": 0
+          },
+          "MB": {
+            "kind": "mirror",
+            "vertices_world_BU": [
+              [
+                -0.125,
+                0.875,
+                -0.125
+              ],
+              [
+                0.125,
+                1.125,
+                -0.125
+              ],
+              [
+                0.125,
+                1.125,
+                0.125
+              ],
+              [
+                -0.125,
+                0.875,
+                0.125
+              ]
+            ],
+            "faces": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                0,
+                2,
+                3
+              ]
+            ],
+            "phase_rad": 0
+          },
+          "B2": {
+            "kind": "bs",
+            "vertices_world_BU": [
+              [
+                0.875,
+                0.875,
+                -0.125
+              ],
+              [
+                1.125,
+                1.125,
+                -0.125
+              ],
+              [
+                1.125,
+                1.125,
+                0.125
+              ],
+              [
+                0.875,
+                0.875,
+                0.125
+              ]
+            ],
+            "faces": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                0,
+                2,
+                3
+              ]
+            ],
+            "power_transmittance": 0.5
+          },
+          "Dx": {
+            "kind": "det",
+            "vertices_world_BU": [
+              [
+                2,
+                0.875,
+                -0.125
+              ],
+              [
+                2,
+                1.125,
+                -0.125
+              ],
+              [
+                2,
+                1.125,
+                0.125
+              ],
+              [
+                2,
+                0.875,
+                0.125
+              ]
+            ],
+            "faces": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                0,
+                2,
+                3
+              ]
+            ],
+            "mode_origin_BU": [
+              -5.03125,
+              1,
+              0
+            ],
+            "mode_direction": [
+              1,
+              0,
+              0
+            ]
+          },
+          "Dy": {
+            "kind": "det",
+            "vertices_world_BU": [
+              [
+                0.875,
+                2,
+                -0.125
+              ],
+              [
+                1.125,
+                2,
+                -0.125
+              ],
+              [
+                1.125,
+                2,
+                0.125
+              ],
+              [
+                0.875,
+                2,
+                0.125
+              ]
+            ],
+            "faces": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                0,
+                2,
+                3
+              ]
+            ],
+            "mode_origin_BU": [
+              1,
+              2,
+              0
+            ],
+            "mode_direction": [
+              0,
+              1,
+              0
+            ]
+          }
+        },
+        "undeclared_meshes": [],
+        "sources": [
+          {
+            "id": "s",
+            "position_BU": [
+              -1,
+              0,
+              0
+            ],
+            "direction": [
+              1,
+              0,
+              0
+            ],
+            "field_reim": [
+              1,
+              0
+            ]
+          }
+        ]
+      },
+      "records": 13,
+      "paths": 4,
+      "ports": {
+        "Dx": {
+          "intensity_error_upper": 6.953565083714239e-8,
+          "groups": {
+            "g": {
+              "path_count": 2,
+              "field_error_upper": 3.476782481417037e-8,
+              "intensity_error_upper": 6.953565083714239e-8
+            }
+          }
+        },
+        "Dy": {
+          "intensity_error_upper": 1.3951474189666687e-13,
+          "groups": {
+            "g": {
+              "path_count": 2,
+              "field_error_upper": 6.975737094833098e-14,
+              "intensity_error_upper": 1.3951474189666687e-13
+            }
+          }
+        }
+      },
+      "effective_lengths_BU": [
+        4,
+        -3.03125,
+        -3.03125,
+        4
+      ],
+      "observed_CPU_libm_field_errors": {
+        "Dx": {
+          "g": 3.476771921568924e-8
+        },
+        "Dy": {
+          "g": 0
+        }
+      },
+      "full_conditional_result_sha256": "e25d9569d189d5bc0f1277d6451d06ef7cfe76de71e54098b1fcfadc5e6cdeab",
+      "accepted_input_and_phase_arithmetic_only": true
+    },
+    {
+      "label": "negative_coherent",
+      "snapshot": {
+        "schema": "exp005-readback-v2",
+        "lambda_BU": 0.1,
+        "objects": {
+          "B1": {
+            "kind": "bs",
+            "vertices_world_BU": [
+              [
+                -0.125,
+                -0.125,
+                -0.125
+              ],
+              [
+                0.125,
+                0.125,
+                -0.125
+              ],
+              [
+                0.125,
+                0.125,
+                0.125
+              ],
+              [
+                -0.125,
+                -0.125,
+                0.125
+              ]
+            ],
+            "faces": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                0,
+                2,
+                3
+              ]
+            ],
+            "power_transmittance": 0.5
+          },
+          "MA": {
+            "kind": "mirror",
+            "vertices_world_BU": [
+              [
+                0.875,
+                -0.125,
+                -0.125
+              ],
+              [
+                1.125,
+                0.125,
+                -0.125
+              ],
+              [
+                1.125,
+                0.125,
+                0.125
+              ],
+              [
+                0.875,
+                -0.125,
+                0.125
+              ]
+            ],
+            "faces": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                0,
+                2,
+                3
+              ]
+            ],
+            "phase_rad": 0
+          },
+          "MB": {
+            "kind": "mirror",
+            "vertices_world_BU": [
+              [
+                -0.125,
+                0.875,
+                -0.125
+              ],
+              [
+                0.125,
+                1.125,
+                -0.125
+              ],
+              [
+                0.125,
+                1.125,
+                0.125
+              ],
+              [
+                -0.125,
+                0.875,
+                0.125
+              ]
+            ],
+            "faces": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                0,
+                2,
+                3
+              ]
+            ],
+            "phase_rad": 0
+          },
+          "B2": {
+            "kind": "bs",
+            "vertices_world_BU": [
+              [
+                0.875,
+                0.875,
+                -0.125
+              ],
+              [
+                1.125,
+                1.125,
+                -0.125
+              ],
+              [
+                1.125,
+                1.125,
+                0.125
+              ],
+              [
+                0.875,
+                0.875,
+                0.125
+              ]
+            ],
+            "faces": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                0,
+                2,
+                3
+              ]
+            ],
+            "power_transmittance": 0.5
+          },
+          "Dx": {
+            "kind": "det",
+            "vertices_world_BU": [
+              [
+                2,
+                0.875,
+                -0.125
+              ],
+              [
+                2,
+                1.125,
+                -0.125
+              ],
+              [
+                2,
+                1.125,
+                0.125
+              ],
+              [
+                2,
+                0.875,
+                0.125
+              ]
+            ],
+            "faces": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                0,
+                2,
+                3
+              ]
+            ],
+            "mode_origin_BU": [
+              -5.03125,
+              1,
+              0
+            ],
+            "mode_direction": [
+              1,
+              0,
+              0
+            ]
+          },
+          "Dy": {
+            "kind": "det",
+            "vertices_world_BU": [
+              [
+                0.875,
+                2,
+                -0.125
+              ],
+              [
+                1.125,
+                2,
+                -0.125
+              ],
+              [
+                1.125,
+                2,
+                0.125
+              ],
+              [
+                0.875,
+                2,
+                0.125
+              ]
+            ],
+            "faces": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                0,
+                2,
+                3
+              ]
+            ],
+            "mode_origin_BU": [
+              1,
+              2,
+              0
+            ],
+            "mode_direction": [
+              0,
+              1,
+              0
+            ]
+          }
+        },
+        "undeclared_meshes": [],
+        "sources": [
+          {
+            "id": "s",
+            "position_BU": [
+              -1,
+              0,
+              0
+            ],
+            "direction": [
+              1,
+              0,
+              0
+            ],
+            "field_reim": [
+              1,
+              0
+            ]
+          },
+          {
+            "id": "second",
+            "position_BU": [
+              -1,
+              0,
+              0
+            ],
+            "direction": [
+              1,
+              0,
+              0
+            ],
+            "field_reim": [
+              1,
+              0
+            ]
+          }
+        ]
+      },
+      "records": 26,
+      "paths": 8,
+      "ports": {
+        "Dx": {
+          "intensity_error_upper": 2.7814260334856956e-7,
+          "groups": {
+            "g": {
+              "path_count": 4,
+              "field_error_upper": 6.953564962834075e-8,
+              "intensity_error_upper": 2.7814260334856956e-7
+            }
+          }
+        },
+        "Dy": {
+          "intensity_error_upper": 5.580589675866675e-13,
+          "groups": {
+            "g": {
+              "path_count": 4,
+              "field_error_upper": 1.3951474189666197e-13,
+              "intensity_error_upper": 5.580589675866675e-13
+            }
+          }
+        }
+      },
+      "effective_lengths_BU": [
+        4,
+        -3.03125,
+        -3.03125,
+        4,
+        4,
+        -3.03125,
+        -3.03125,
+        4
+      ],
+      "observed_CPU_libm_field_errors": {
+        "Dx": {
+          "g": 6.953543843137848e-8
+        },
+        "Dy": {
+          "g": 0
+        }
+      },
+      "full_conditional_result_sha256": "eb23b7d7f64b6bb57b7afa483edd0dfcde20f4b8f7f6dae2a134f30d5eda4a90",
+      "accepted_input_and_phase_arithmetic_only": true
+    },
+    {
+      "label": "negative_independent",
+      "snapshot": {
+        "schema": "exp005-readback-v2",
+        "lambda_BU": 0.1,
+        "objects": {
+          "B1": {
+            "kind": "bs",
+            "vertices_world_BU": [
+              [
+                -0.125,
+                -0.125,
+                -0.125
+              ],
+              [
+                0.125,
+                0.125,
+                -0.125
+              ],
+              [
+                0.125,
+                0.125,
+                0.125
+              ],
+              [
+                -0.125,
+                -0.125,
+                0.125
+              ]
+            ],
+            "faces": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                0,
+                2,
+                3
+              ]
+            ],
+            "power_transmittance": 0.5
+          },
+          "MA": {
+            "kind": "mirror",
+            "vertices_world_BU": [
+              [
+                0.875,
+                -0.125,
+                -0.125
+              ],
+              [
+                1.125,
+                0.125,
+                -0.125
+              ],
+              [
+                1.125,
+                0.125,
+                0.125
+              ],
+              [
+                0.875,
+                -0.125,
+                0.125
+              ]
+            ],
+            "faces": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                0,
+                2,
+                3
+              ]
+            ],
+            "phase_rad": 0
+          },
+          "MB": {
+            "kind": "mirror",
+            "vertices_world_BU": [
+              [
+                -0.125,
+                0.875,
+                -0.125
+              ],
+              [
+                0.125,
+                1.125,
+                -0.125
+              ],
+              [
+                0.125,
+                1.125,
+                0.125
+              ],
+              [
+                -0.125,
+                0.875,
+                0.125
+              ]
+            ],
+            "faces": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                0,
+                2,
+                3
+              ]
+            ],
+            "phase_rad": 0
+          },
+          "B2": {
+            "kind": "bs",
+            "vertices_world_BU": [
+              [
+                0.875,
+                0.875,
+                -0.125
+              ],
+              [
+                1.125,
+                1.125,
+                -0.125
+              ],
+              [
+                1.125,
+                1.125,
+                0.125
+              ],
+              [
+                0.875,
+                0.875,
+                0.125
+              ]
+            ],
+            "faces": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                0,
+                2,
+                3
+              ]
+            ],
+            "power_transmittance": 0.5
+          },
+          "Dx": {
+            "kind": "det",
+            "vertices_world_BU": [
+              [
+                2,
+                0.875,
+                -0.125
+              ],
+              [
+                2,
+                1.125,
+                -0.125
+              ],
+              [
+                2,
+                1.125,
+                0.125
+              ],
+              [
+                2,
+                0.875,
+                0.125
+              ]
+            ],
+            "faces": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                0,
+                2,
+                3
+              ]
+            ],
+            "mode_origin_BU": [
+              -5.03125,
+              1,
+              0
+            ],
+            "mode_direction": [
+              1,
+              0,
+              0
+            ]
+          },
+          "Dy": {
+            "kind": "det",
+            "vertices_world_BU": [
+              [
+                0.875,
+                2,
+                -0.125
+              ],
+              [
+                1.125,
+                2,
+                -0.125
+              ],
+              [
+                1.125,
+                2,
+                0.125
+              ],
+              [
+                0.875,
+                2,
+                0.125
+              ]
+            ],
+            "faces": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                0,
+                2,
+                3
+              ]
+            ],
+            "mode_origin_BU": [
+              1,
+              2,
+              0
+            ],
+            "mode_direction": [
+              0,
+              1,
+              0
+            ]
+          }
+        },
+        "undeclared_meshes": [],
+        "sources": [
+          {
+            "id": "s",
+            "position_BU": [
+              -1,
+              0,
+              0
+            ],
+            "direction": [
+              1,
+              0,
+              0
+            ],
+            "field_reim": [
+              1,
+              0
+            ]
+          },
+          {
+            "id": "second",
+            "position_BU": [
+              -1,
+              0,
+              0
+            ],
+            "direction": [
+              1,
+              0,
+              0
+            ],
+            "field_reim": [
+              1,
+              0
+            ]
+          }
+        ]
+      },
+      "records": 26,
+      "paths": 8,
+      "ports": {
+        "Dx": {
+          "intensity_error_upper": 1.3907130167428478e-7,
+          "groups": {
+            "g": {
+              "path_count": 2,
+              "field_error_upper": 3.476782481417037e-8,
+              "intensity_error_upper": 6.953565083714239e-8
+            },
+            "h": {
+              "path_count": 2,
+              "field_error_upper": 3.476782481417037e-8,
+              "intensity_error_upper": 6.953565083714239e-8
+            }
+          }
+        },
+        "Dy": {
+          "intensity_error_upper": 2.7902948379333373e-13,
+          "groups": {
+            "g": {
+              "path_count": 2,
+              "field_error_upper": 6.975737094833098e-14,
+              "intensity_error_upper": 1.3951474189666687e-13
+            },
+            "h": {
+              "path_count": 2,
+              "field_error_upper": 6.975737094833098e-14,
+              "intensity_error_upper": 1.3951474189666687e-13
+            }
+          }
+        }
+      },
+      "effective_lengths_BU": [
+        4,
+        -3.03125,
+        -3.03125,
+        4,
+        4,
+        -3.03125,
+        -3.03125,
+        4
+      ],
+      "observed_CPU_libm_field_errors": {
+        "Dx": {
+          "g": 3.476771921568924e-8,
+          "h": 3.476771921568924e-8
+        },
+        "Dy": {
+          "g": 0,
+          "h": 0
+        }
+      },
+      "full_conditional_result_sha256": "31fd8e849e6fba84ff0ce7aea965345bb955a855cd2fca387b21ab079ad5e14c",
+      "accepted_input_and_phase_arithmetic_only": true
+    },
+    {
+      "label": "positive_control",
+      "snapshot": {
+        "schema": "exp005-readback-v2",
+        "lambda_BU": 0.1,
+        "objects": {
+          "B1": {
+            "kind": "bs",
+            "vertices_world_BU": [
+              [
+                -0.125,
+                -0.125,
+                -0.125
+              ],
+              [
+                0.125,
+                0.125,
+                -0.125
+              ],
+              [
+                0.125,
+                0.125,
+                0.125
+              ],
+              [
+                -0.125,
+                -0.125,
+                0.125
+              ]
+            ],
+            "faces": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                0,
+                2,
+                3
+              ]
+            ],
+            "power_transmittance": 0.5
+          },
+          "MA": {
+            "kind": "mirror",
+            "vertices_world_BU": [
+              [
+                0.875,
+                -0.125,
+                -0.125
+              ],
+              [
+                1.125,
+                0.125,
+                -0.125
+              ],
+              [
+                1.125,
+                0.125,
+                0.125
+              ],
+              [
+                0.875,
+                -0.125,
+                0.125
+              ]
+            ],
+            "faces": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                0,
+                2,
+                3
+              ]
+            ],
+            "phase_rad": 0
+          },
+          "MB": {
+            "kind": "mirror",
+            "vertices_world_BU": [
+              [
+                -0.125,
+                0.875,
+                -0.125
+              ],
+              [
+                0.125,
+                1.125,
+                -0.125
+              ],
+              [
+                0.125,
+                1.125,
+                0.125
+              ],
+              [
+                -0.125,
+                0.875,
+                0.125
+              ]
+            ],
+            "faces": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                0,
+                2,
+                3
+              ]
+            ],
+            "phase_rad": 0
+          },
+          "B2": {
+            "kind": "bs",
+            "vertices_world_BU": [
+              [
+                0.875,
+                0.875,
+                -0.125
+              ],
+              [
+                1.125,
+                1.125,
+                -0.125
+              ],
+              [
+                1.125,
+                1.125,
+                0.125
+              ],
+              [
+                0.875,
+                0.875,
+                0.125
+              ]
+            ],
+            "faces": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                0,
+                2,
+                3
+              ]
+            ],
+            "power_transmittance": 0.5
+          },
+          "Dx": {
+            "kind": "det",
+            "vertices_world_BU": [
+              [
+                2,
+                0.875,
+                -0.125
+              ],
+              [
+                2,
+                1.125,
+                -0.125
+              ],
+              [
+                2,
+                1.125,
+                0.125
+              ],
+              [
+                2,
+                0.875,
+                0.125
+              ]
+            ],
+            "faces": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                0,
+                2,
+                3
+              ]
+            ],
+            "mode_origin_BU": [
+              2,
+              1,
+              0
+            ],
+            "mode_direction": [
+              1,
+              0,
+              0
+            ]
+          },
+          "Dy": {
+            "kind": "det",
+            "vertices_world_BU": [
+              [
+                0.875,
+                2,
+                -0.125
+              ],
+              [
+                1.125,
+                2,
+                -0.125
+              ],
+              [
+                1.125,
+                2,
+                0.125
+              ],
+              [
+                0.875,
+                2,
+                0.125
+              ]
+            ],
+            "faces": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                0,
+                2,
+                3
+              ]
+            ],
+            "mode_origin_BU": [
+              1,
+              2,
+              0
+            ],
+            "mode_direction": [
+              0,
+              1,
+              0
+            ]
+          }
+        },
+        "undeclared_meshes": [],
+        "sources": [
+          {
+            "id": "s",
+            "position_BU": [
+              -1,
+              0,
+              0
+            ],
+            "direction": [
+              1,
+              0,
+              0
+            ],
+            "field_reim": [
+              1,
+              0
+            ]
+          }
+        ]
+      },
+      "records": 13,
+      "paths": 4,
+      "ports": {
+        "Dx": {
+          "intensity_error_upper": 1.3951474189666687e-13,
+          "groups": {
+            "g": {
+              "path_count": 2,
+              "field_error_upper": 6.975737094833098e-14,
+              "intensity_error_upper": 1.3951474189666687e-13
+            }
+          }
+        },
+        "Dy": {
+          "intensity_error_upper": 1.3951474189666687e-13,
+          "groups": {
+            "g": {
+              "path_count": 2,
+              "field_error_upper": 6.975737094833098e-14,
+              "intensity_error_upper": 1.3951474189666687e-13
+            }
+          }
+        }
+      },
+      "effective_lengths_BU": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "observed_CPU_libm_field_errors": {
+        "Dx": {
+          "g": 6.975736897201434e-14
+        },
+        "Dy": {
+          "g": 0
+        }
+      },
+      "full_conditional_result_sha256": "a8fbc2b0b48f16622f3fcc9c2a33f0b69b962793316c9676961ae2f28533474f",
+      "accepted_input_and_phase_arithmetic_only": true
+    }
+  ],
+  "field_threshold_unchanged": 0.0001,
+  "power_threshold_unchanged": 0.0002,
+  "CPU_libm_diagnostic_slack_only": 1e-13,
+  "native_promotion_allowed": false,
+  "GPU_executed": false,
+  "Bpy_executed": false,
+  "no_jev_aval": true,
+  "scope": "conditional signed CPU phase/reference capability; no native precision or speed claims",
+  "reporter_revision_note": "Initial 7 tests passed at19:00:10UTC/1.192509s, tool output truncated; second run only compacts rational reporting/hashes, no arithmetic/gate/test changes."
+}
