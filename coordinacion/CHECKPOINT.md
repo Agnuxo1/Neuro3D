@@ -1,8 +1,29 @@
 # Checkpoint factual de Neuro3D
 
-Actualizado: 2026-09-30 00:51 UTC (02:51 Madrid).
+Actualizado: 2026-09-30 00:54 UTC (02:54 Madrid).
 
-## Consumidor GPU preparado; todavía no ejecutado
+## Hito nuevo: consumidor complejo GPU PASS local54/54; turno liberado
+
+- Contrato/runner congelados907450e antes de medir. Shader recibió impactos
+  crudos+propiedades de escena, no matriz ni campos CPU precalculados. GPU calcula
+  propagación, fase, coeficientes, suma compleja, intensidad de todos los puertos.
+- 54/54GPU; oráculo complejo6,71118e-6,potencia1,09296e-5,balance7,32205e-6;
+  sham0 y cuatro controles causales>1e-3. 66hashes inputs y gates recomputados CPU
+  desde readback. 77/77tests CPU. `Docs/EXP-005-GPU-CONSUMER-2026-09-30.md`.
+- Artefacto `exp005_gpu_consumer_20260930_0052.json`, guard asociado en cognition.
+  Adquirido00:52:03/liberado00:52:06UTC,guard2,273s,RAMmín8,13GiB/VRAMmáx0,583GiB,
+  29°C,PID21208 terminado,cola libre. No repetir sin cambio.
+- Es OpenGL EXTERNO a bpy con intersecciones anteriores CPU; NO RT ni ventaja
+  end-to-end. Próximo: crítica/contraejemplo Claude y backend GPU dentro de Blender,
+  con gate de escape/modos y contrato separado; preservar todos los fixtures.
+- Claude retrazó seis escenas/18bases; comparé54valores: campo max1,30404e-5.
+  Aceptación limitada: faltan pares/historias/refmodal/rechazo de rayos perdidos;
+  pedir endurecimiento, no promover revisión completa por status=ok.
+- Sweep Claude tiene1024B+1GiB/piso4/temp80/VRAM18, pero ignora error de telemetría
+  y no veo deadlineUTC en ese archivo; exigir wrapper comprobable antes de escalar.
+  JEV sigue bloqueado, fallback local identificado. No push ni merge.
+
+## Preparación previa · histórico, ejecutada arriba
 
 - Unidad independiente mientras Claude retraza v4: `exp005_gpu_pack.py`,
   `exp005_gpu_consumer.py`, shader `exp005_path_fields.glsl`, contrato
