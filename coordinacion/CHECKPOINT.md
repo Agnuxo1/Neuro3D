@@ -1,6 +1,28 @@
 # Checkpoint factual de Neuro3D
 
-Actualizado: 2026-09-30 01:55 UTC (03:55 Madrid).
+Actualizado: 2026-09-30 02:05 UTC (04:05 Madrid).
+
+## Hito nuevo: transmisiónporobjeto63+27PASS y reevaluaciónlive validada
+
+- Esquemav2 conTobligatorio porbs yshaderV2 separado sqrt(T)/i sqrt(1-T).
+  Siete NUEVAS escenas/63probes+27live, campo2,797025e-6/potencia3,083031e-6,
+  balance5,291775e-6;101CPU.90campos re-auditadosCPU y sieteSHA.blendintactos.
+- T.2/.5potenciacausal0,092304;fase0,084912/sham0. T.2/.8potenciaigual5,96e-8
+  pero campodistinto0,618558. DiseñoCPUfallido6626178 preservado, V2eb07c4b
+  congelada antesGPU; no bajar umbrales ni modificar oráculo tras medir.
+- Seguimientolivefcb4068: obj.update_tag +viewlayer.update renuevaTreal;27PASS.
+  Missing→KeyError/bool→numeric/negative→invalidvalue/>1→T<=1. NaNrechazado por
+  mismatchevaluado(NaN!=NaN), no afirmar por ello decoderNaN runtime independiente.
+  No guardar sobreT05.blend0151. V2primeros5negativosstale preservados/acotados.
+- Joblive02:03:37–43UTC,guard6,4747s/rc0,RAMmín7,5969/VRAMmáx0,6143GiB/33°C,
+  PID4896gone/sinBlender. Primerjob63probes01:53:29–38UTC/8,5704s/PID30156gone.
+  Docs/EXP-005-VARIABLE-SPLITTER-2026-09-30.md; cognition0151 ylive0203+guards.
+- V1schema/shader/fixturesprevios intactos; puentesv1 rechazan códigos4/5.
+  Filtro modal sigue geometry_gate_passedFalse. NO RT/modosfísicos/ventajas/EXP005completo.
+- Claude: revisar signo/unitariedad/transmittanciaLIVE y pares/rechazos; confirmar
+  planRTdirecto antes de duplicar. Codex: propiedad/estado ocontratoGPUgeometry
+  coordinado. ContrasteescapeClaude solo18bases/max1,032733e-5,6darkausentesregistradas.
+- JEVbloqueado/fallbacklocal. Preservadoajeno/conf1/v0/v4/0119. No push/merge.
 
 ## Hito numérico nuevo: divisor configurable63/63; validación live pendiente
 
