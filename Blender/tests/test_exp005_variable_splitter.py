@@ -57,10 +57,29 @@ class VariableSplitterTests(unittest.TestCase):
             with self.assertRaises(ValueError): decoder(scene)
 
     def test_splitter_and_phase_causal_but_sham_is_equal(self):
-        a,b,c=[trace_scene(splitter_fixture(case))['powers'] for case in ('T02','T08','phase')]
+        a,b,c=[trace_scene(splitter_fixture(case))['powers'] for case in ('T02','T05','phase')]
         self.assertGreater(max(abs(a[p]-b[p]) for p in a),1e-3)
         self.assertGreater(max(abs(a[p]-c[p]) for p in a),1e-3)
         self.assertEqual(trace_scene(splitter_fixture('T05')),trace_scene(splitter_fixture('sham')))
+
+    def test_complementary_ratios_can_hide_field_changes_in_intensity(self):
+        a,b=[trace_scene(splitter_fixture(case)) for case in ('T02','T08')]
+        self.assertLess(max(abs(a['powers'][p]-b['powers'][p]) for p in a['powers']),1e-11)
+        self.assertGreater(max(abs(a['fields'][p]-b['fields'][p]) for p in a['fields']),1e-3)
+
+    def test_readback_requires_v2_property_and_matches_evaluated_object(self):
+        from test_exp005_scene_readback import Scene,ReadbackTests
+        from exp005_scene_readback import export_snapshot
+        scene=Scene(); scene['optical_contract']='exp005-readback-v2'
+        scene.objects['mirror']['kind']='bs'; scene.objects['mirror']['power_transmittance']=.2
+        graph=ReadbackTests().graph(scene)
+        result=export_snapshot(scene,depsgraph=graph)
+        self.assertEqual(result['objects']['mirror']['power_transmittance'],.2)
+        graph.objects[0]['power_transmittance']=.8
+        with self.assertRaisesRegex(ValueError,'transmittance mismatch'):
+            export_snapshot(scene,depsgraph=graph)
+        del scene.objects['mirror']['power_transmittance']
+        with self.assertRaises(KeyError): export_snapshot(scene)
 
 
 if __name__=='__main__': unittest.main()
