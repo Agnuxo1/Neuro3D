@@ -56,5 +56,27 @@ class ModeGateTests(unittest.TestCase):
         imports=[n.module for n in ast.walk(tree) if isinstance(n,ast.ImportFrom)]
         self.assertFalse(any(n and ('oracle' in n or 'gpu' in n or 'bpy' in n) for n in imports))
 
+    def test_native_entrypoints_validate_before_pack_and_dispatch(self):
+        import ast
+        from pathlib import Path
+        for name in ('exp005_blender_gpu.py','exp005_escape_runtime.py'):
+            tree=ast.parse(Path(__file__).with_name(name).read_text())
+            calls={ast.unparse(n.func):(n.lineno,n.col_offset) for n in ast.walk(tree) if isinstance(n,ast.Call)}
+            with self.subTest(name=name):
+                self.assertLess(calls['validate_native_modes'],calls['pack_paths'])
+                self.assertLess(calls['pack_paths'],calls['dispatch'])
+
+    def test_mode_bounds_and_explicit_reference_data(self):
+        scene=escape_fixture(); paths=minimal_paths(scene)
+        for label in ('paths_empty','paths_many','hits_many','source_unknown','offset_missing'):
+            changed=copy.deepcopy(paths)
+            if label=='paths_empty': changed=[]
+            if label=='paths_many': changed=changed*513
+            if label=='hits_many': changed[0]['hits']*=65
+            if label=='source_unknown': changed[0]['source_id']='missing'
+            if label=='offset_missing': del changed[0]['reference_offset_BU']
+            with self.subTest(case=label),self.assertRaises((ValueError,KeyError)):
+                validate_native_modes(scene,changed)
+
 
 if __name__=='__main__': unittest.main()

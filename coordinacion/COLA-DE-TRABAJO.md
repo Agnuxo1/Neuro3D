@@ -1,6 +1,6 @@
 # Cola única de trabajo de Neuro3D
 
-Estado al 2026-09-30 01:21 UTC. Antes de iniciar una tarea, comprobar aquí que
+Estado al 2026-09-30 01:38 UTC. Antes de iniciar una tarea, comprobar aquí que
 no haya otra ejecución del mismo trabajo.
 
 | ID | Prioridad | Estado | Responsable | Modelo o ruta | Esfuerzo | Recursos reservados | Dependencias | Entregable | Criterio de aceptación |
@@ -26,7 +26,7 @@ no haya otra ejecución del mismo trabajo.
 | EXP-004 | P0 | Conf1 PASS local híbrido; pendiente gate de cómputo en escena | Claude ejecutó; Codex auditó | Runner raycast Blender + oráculo independiente | Alto | gpuq libre tras readback CPU -t 1 | DEC-022; v0 FAIL | `Docs/EXP-004-CONF1-INDEPENDENT-AUDIT-2026-09-29.md` | Geometría y balance aceptados solo en simulación híbrida; preinscribir escena completa y mecanismo óptico/estado antes de reclamar que el modelo 3D realiza todo el cálculo. |
 
 | RENDER-001 | P1 | Demo fija PASS local; revisión independiente solicitada | Codex; Claude revisa | `Blender/render_network_demo/` | Medio | Reserva Codex liberada tras pruebas RTX3090/EEVEE | No depende de modificar conf1 o Iris | `.blend`, preview, fuente y verification.json | Cinco controles y barrido de 17 fases por EXR <=0,005; 12 drivers/grafos correctos. No es red entrenada ni transporte geométrico completo. |
-| EXP-005 | P0 | EscapeGPUnativo54/54PASS;86CPU;contrasteClaude de nativo18bases favorable; fallos/diseños rechazados preservados | Codex; Claude audita | `Blender/tests/exp005_*` | Alto | Turno Codex liberado01:19:46UTC; PID23004terminado | Retrazado/refutación escape, pares/historias/modes/propiedades y contrato RT distinto | Informe ESCAPE-GPU2026-09-30+cognition0119 | CamposGPU dentro deBlender, geometríaCPU; escape ideal acotado, NO RT ni física completa/ventajas/EXP005completo; no repetir sin cambio. |
+| EXP-005 | P0 | Gate modal8rechazos+9probesPASS;escape54/54previo;93CPU; fallos/diseños rechazados preservados | Codex; Claude audita | `Blender/tests/exp005_*` | Alto | Turno Codex liberado01:35:32UTC; PID31672terminado | Refutación modal/escape, pares/historias/propiedades y contrato RT coordinado | Informes MODE-PREFLIGHT/ESCAPE-GPU2026-09-30+cognition0135/0119 | CamposGPU dentro deBlender, geometríaCPU; filtro modal conservador/escape ideal, NO ortogonalidad física/RT/ventajas/EXP005completo; no repetir sin cambio. |
 
 Una propuesta de Claude no cambia el estado de la cola hasta que Codex la
 compruebe y registre la decisión.

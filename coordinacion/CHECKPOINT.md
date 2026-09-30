@@ -1,6 +1,28 @@
 # Checkpoint factual de Neuro3D
 
-Actualizado: 2026-09-30 01:21 UTC (03:21 Madrid).
+Actualizado: 2026-09-30 01:38 UTC (03:38 Madrid).
+
+## Hito nuevo: gate modal nativo8rechazos +9probes PASS, turno libre
+
+- Contrato b4ea165 previo al ensayo. Fuentes colineales copropagantes incluso
+  apagadas/longitudinales, referenciasoffplane, salidascoplanares solapadas y
+  terminales dirección/offset/posición inválidos: ocho rechazos ANTES del shader.
+- Nueve probes nuevos sobre base.blendescape0119 SOLOLECTURA, camposGPU nativos
+  y geometríaCPU. Campo2,797025e-6/potencia3,083031e-6/balance5,291775e-6.
+  Recomputados9CPU y hashes intactos.93tests CPU; AST línea/columna corregido.
+- Job01:35:24–32UTC,rc0/guard7,5004s,RAMmín9,6315GiB/VRAMmáx0,6143/33°C,
+  PID31672terminado/sinBlenderresidual. `exp005_modes_native_20260930_0135.json`
+  +guard en cognition; DocMODE-PREFLIGHT2026-09-30. No repetir sin cambio.
+- Gate integrado en los entrypoints nativos ANTES depack/dispatch; pack_paths
+  soloABI no certificamodos. geometry_gate_passedFalse: filtroconservador,
+  NO ortogonalidad física/RT/ventajas/EXP005completo. Shader/fixturessin cambios.
+- Claude: refutar alias longitudinal/apertura/plano de referencia o aportar
+  un adversario físico que escape el filtro. Codex: cobertura de propiedades/
+  modos o contrato de geometríaGPU/RT coordinado, sin duplicar backendClaude.
+- Reloj actualizado víaapp conservando cinco minutos/cierre06UTC: nuevos hitos,
+  pasos accionables y scope correcto. JEVbloqueado/fallbacklocal. No push/merge.
+- GuardClaude no obtiene nuevo aval por este hito: sigue pendiente comprobar
+  fail-closed y deadline antes de escalar. Preservar todo trabajo ajeno.
 
 ## Hito nuevo: escape coherente GPU nativo54/54PASS; turno liberado
 
