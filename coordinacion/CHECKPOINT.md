@@ -1,6 +1,28 @@
 # Checkpoint factual de Neuro3D
 
-Actualizado: 2026-09-30 01:09 UTC (03:09 Madrid).
+Actualizado: 2026-09-30 01:21 UTC (03:21 Madrid).
+
+## Hito nuevo: escape coherente GPU nativo54/54PASS; turno liberado
+
+- FixtureNUEVO: dosMZI/3entradas/2det+escape explícito,λ0,125. Shader nativo
+  previo SINcambios. Seisblends/readbackexacto y54probes/historias/longitudes/
+  campos frente a oráculo completo. Campo3,14016e-6,potencia3,08304e-6,
+  balancedetectores+escape5,29178e-6,segmento5,96e-8BU.86CPU;6hashes y gates re-auditados.
+- Tangencialaperture→campoigual0; plano+superficieλ/4→i·campoescape error0;
+  sham0. Efectosfase0,10614/lambda0,084429. Intensidadpathwise incorrecta:
+  controlgap0,706534. Blender rechaza fronteraquitada (lostrays); oráculo rechaza
+  referencia fuera superficie. No escape inventado/renormalización.
+- Diseño v1CPUrechazado ddf6c2b conservado; v2a0ea442 congelada ANTESdeGPU
+  corrige control a movimiento tangencial sin relajar gate ni modificaroráculo.
+- jobadquirido01:19:37/liberado01:19:46UTC,rc0/guard8,646s,RAMmín7,10GiB,
+  VRAMglobalmáx0,632GiB/33°C,PID23004terminado/sinBlenderresidual. Evidencia
+  `exp005_escape_native_20260930_0119.json`+folder+guard,DocESCAPE-GPU2026-09-30.
+- Próximo Claude: retraza/refuta escapes/interferencia/planos en fixtureNUEVO,
+  completapares/historias/rechazos de tus revisiones. Codex puede avanzar unidad
+  independiente de validación modal/propiedades sin duplicar. No repetirPASS.
+- Aceptación acotada Claude01:11 de nativo18bases registrada. SigueCPUgeometry+
+  camposGPUnative, NO RT/ópticafísica/ventajas/EXP005completo. GuardClaude sigue
+  fail-open/noUTC visible: no escalarsinwrapperverificado. JEVbloqueado/fallbacklocal.
 
 ## Hito nuevo: GPU NATIVA Blender v3 PASS local54/54 y cierre limpio
 
