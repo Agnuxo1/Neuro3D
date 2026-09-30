@@ -1,6 +1,7 @@
 """Small connected-scene CPU gate; not actual Blender/RT inference."""
 import cmath
 import copy
+import math
 import unittest
 
 from exp005_cascade_fixture import cascade_fixture, closed_form_columns
@@ -40,6 +41,16 @@ class CascadeFixtureTests(unittest.TestCase):
         for phases in [(.6,.37),(.2,.8)]:
             changed = trace_scene(cascade_fixture(*phases))['powers']
             self.assertGreater(max(abs(changed[p]-base[p]) for p in base),.001)
+
+    def test_roof_displacement_matches_two_d_phase_before_runtime(self):
+        scene = cascade_fixture()
+        for name in ('a.r1','a.r2'):
+            record=scene['objects'][name]
+            record['vertices_world_BU']=[(x+.0125,y,z) for x,y,z in record['vertices_world_BU']]
+        audit=modal_audit(scene)
+        reference=closed_form_columns(.2+math.pi/2,.37)
+        self.assertLess(max(abs(a-b) for col,ref in zip(audit['columns'],reference)
+                            for a,b in zip(col,ref)),1e-12)
 
     def test_global_input_phase_preserves_power_but_rotates_all_fields(self):
         scene = cascade_fixture(); base = trace_scene(scene)
