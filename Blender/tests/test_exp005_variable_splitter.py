@@ -81,5 +81,15 @@ class VariableSplitterTests(unittest.TestCase):
         del scene.objects['mirror']['power_transmittance']
         with self.assertRaises(KeyError): export_snapshot(scene)
 
+    def test_live_runner_refreshes_and_never_saves_input_fixture(self):
+        import ast
+        from pathlib import Path
+        import exp005_splitter_live
+        tree=ast.parse(Path(exp005_splitter_live.__file__).read_text())
+        calls=[ast.unparse(n.func) for n in ast.walk(tree) if isinstance(n,ast.Call)]
+        self.assertIn('obj.update_tag',calls)
+        self.assertIn('bpy.ops.wm.open_mainfile',calls)
+        self.assertFalse(any('save_as_mainfile' in c or c.startswith('bpy.ops.render.') for c in calls))
+
 
 if __name__=='__main__': unittest.main()
