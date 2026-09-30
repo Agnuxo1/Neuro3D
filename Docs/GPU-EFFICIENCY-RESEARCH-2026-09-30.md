@@ -142,6 +142,31 @@ posterior a malla estable, tarea/precisión/batch/presupuesto equivalentes.
 La optimización de juegos es reutilizable cuando preserva el contrato, no
 porque todos sus trucos sean válidos para simulación científica.
 
+## Riesgo específico RT: precisión de fase, no solo tasa de rayos
+
+La interfaz de triángulos del ejemplo oficial OptiX utiliza vérticesFLOAT3.
+Nuestra fase depende de la longitud. Una estimación local de primer orden es
+δφ≈2πδL/λ; al reducir campos, δI=2Re(conj(E)δE)+|δE|². Cerca de una
+cancelación, medir error absoluto además del relativo y de la energía.
+Por ejemplo δL=1e-5BU conλ=.125BU corresponde a~5.03e-4rad; que sea pequeño
+visualmente no garantiza el gate complejo1e-4. Es un cálculo ilustrativo,
+NO error medido de una consulta OptiX ni una cota del sistema completo.
+
+RT-001 debe incluir segmentos largos, λ pequeña, cancelación, bordes y dos
+impactos casi empatados. Dos alternativas a medir, aún NO implementadas:
+
+- Triángulos RT con candidato y refinamiento geométrico FP64 GPU. Refinar
+  solo el ganador no corrige un ganador equivocado: hace falta comprobar
+  candidatos/ambigüedad y casos de borde con un margen conservador.
+- BVH sobre AABB conservadores y narrow-phase FP64 GPU propio. Puede usar
+  aceleración de búsqueda espacial sin afirmar intersección triangular RT
+  nativa; medir el coste extra. Bounds deben contener la geometría exacta.
+
+Nada de nearest-hit CPU enviado como entrada al kernel. Si el margen/tie
+no puede verificarse, rechazar o elegir el fallback GPU exacto identificado,
+con su coste registrado. Revisar esta decisión con Claude antes de implementar
+un backend distinto del que tiene asignado.
+
 ## Coordinación y seguridad
 
 Codex: residencia/invalidation y pruebas. Claude: OptiX/RT y capacidad,
