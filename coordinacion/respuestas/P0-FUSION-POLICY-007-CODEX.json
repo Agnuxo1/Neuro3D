@@ -1,0 +1,39 @@
+{
+  "task_id": "P0-FUSION-POLICY-007-CODEX",
+  "code_sha256": {
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_harness_v3.py": "5d9f13b81b17354395113d825bf66da2f561bfaf08dbe12c2ab724ccada0f62e",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_checker.py": "f1f02626907d89d924f81fa91eb8ea3dfa8bc6c7bf12224e5c1d9fb4c3429bd5",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_checker_tests.py": "e7d9f3a6f86b74bc3666cca94773f682d0e682ff7aa74c9871da93d8e19e233c",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_checker_tests.json": "18ed53350ed277b3d04d828acad0eb09f31e3800596d555670e2048e7a347923",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_v3_cpu.json": "2ddca92de5c1608930396112f4d74167ea9a943cdc0657e07daf3bd9ba985b87",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_v3_cpu_verdict.json": "fc1a45770482ef0982105c1f9ef4528bedff8bcaee85d19f5f15141eeeb58b39",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_manifest.json": "3343fa298cef2286e6643026a7e8b23ac4a6db011b443ffdf8c9c625fa89fe5b",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\coordinacion\\respuestas\\P0-FUSION-POLICY-006-CLAUDE.json": "700c43aa38174af5d8ddbb7d070082268cbc7ee4c6a54508a5b88ea3df2a68b6",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\coordinacion\\respuestas\\P0-FUSION-POLICY-005-CODEX.json": "c050427e3d24b5c36bdfa1ef70f5e9a302faa491c44812aa1c4a8f72a7fd5f13",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\coordinacion\\tareas\\P0-FUSION-POLICY-006-CLAUDE.md": "fd0d5e10a70865221f6c92bd6b8a95391db2cb478997a791a4e404c766c2e6a5",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\exp005_peer_phaseB_policy_probe.py": "5c73b3c66355bf4c0135b86bd5e16b0798bef55fd422a7ad4b3941d988f7ab77"
+  },
+  "peer_ack_ID_and_SHA_verified": true,
+  "valid_control_failures": [],
+  "data_mutation": {
+    "original_effective_policy": {
+      "scene": 0,
+      "lambda": 0.1,
+      "quant": 3.978873577297384e-11,
+      "floor": 1.4210854715202004e-14
+    },
+    "changed_effective_policy": {
+      "scene": 0,
+      "lambda": 0.1,
+      "quant": 0.00003978873577297384,
+      "floor": 1.4210854715202004e-14
+    }
+  },
+  "changed_policy_checker_failures": [],
+  "changed_policy_still_accepted": true,
+  "existing_peer_CPU_result_not_refuted": true,
+  "native_promotion_allowed": false,
+  "scope": "CPU checker only, retained result-data tamper; no actual wrong runtime quantization or GPU run",
+  "pending": "bind scene-indexed effective lambda/quant/dquant/floor to manifest, not just policy list length",
+  "no_jev_aval": true
+}
