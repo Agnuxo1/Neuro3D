@@ -1,0 +1,44 @@
+{
+  "task_id": "PHASE-SCALAR-SUPERVISOR-001-CODEX",
+  "tests": 9,
+  "returncode": 0,
+  "seconds": 1.221480199994403,
+  "output": "timeout_observation={\"status\": \"stopped\", \"reasons\": [\"child_timeout\"], \"exit_code\": 15, \"elapsed_s\": 0.4109267000021646, \"cleanup_completed\": true}\n.........\n----------------------------------------------------------------------\nRan 9 tests in 1.034s\n\nOK\n",
+  "code_sha256": {
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\scalar_job_supervisor_v1.py": "60c174a00c4e407cbf4f409a6a539e415f217bb159554b0688c0575d71b71c30",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\tests\\test_scalar_job_supervisor_cpu.py": "c0386956409a1ff5a00788f8ad1e388bb5fbb3e87cf2506b596f2ba65a396e8f",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Docs\\EXP-005-SCALAR-SUPERVISOR-V1.md": "31ce9c547208b637de2da349618a2098f6db2cb2fb2f650e251dd870b31b6201",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\guarded_job.py": "958163c3bba7f16d619c9788893771eaf7fc6a17b1e295eae8cf84b15bfcd818",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\benchmarks\\capacity_audit\\phase_signed_native_capture_v2.py": "5f5207d3195e49dea9822304e3e922326871d08fb4fad7174919194b57d7fea9",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\coordinacion\\respuestas\\PHASE-SIGNED-NATIVE-CAPTURE-002-CODEX.json": "d41d777e20e6d164bd3ff91072f5a5252ea4bdf18850008be71acad56aede487"
+  },
+  "scope": "synthetic reservation/telemetry with real own lightweight CPU subprocesses only",
+  "GPU_executed": false,
+  "actual_gpuq_reservation_verified": false,
+  "NVIDIA_telemetry_executed": false,
+  "native_promotion_allowed": false,
+  "runtime_execution_authenticated": false,
+  "no_jev_aval": true,
+  "timestamp_utc": "2026-09-30 20:15:08 UTC",
+  "previous_unfrozen_iteration": {
+    "tests": 9,
+    "returncode": 0,
+    "seconds": 1.0699281999986852,
+    "note": "Initial CPU preparation passed; tightened fresh-deadline policy from 80s/5s margin to <=70s/20s to reserve bounded telemetry/cleanup time, before freezing. No failing gate changed to PASS."
+  },
+  "resource_snapshot": {
+    "ram_available_GiB": 3.817901611328125,
+    "holder_present": false,
+    "ticket_names": [
+      "neuro3d:rtcap006-pilot-2",
+      "filament:FIL-011c ms_learned_cons_40k clip-fix"
+    ],
+    "scope": "read-only before CPU tests, no GPU admission/acquisition/queue pruning"
+  },
+  "pending": [
+    "Pin scalar child command/manifest and private evidence path",
+    "Integrate supervisor envelope with capture V2/readback checker",
+    "Verify actual gpuq holder/process/telemetry inside one safe job when resources allow",
+    "No scene geometry/RT/native field promotion yet"
+  ]
+}
