@@ -1,6 +1,29 @@
 # Checkpoint factual de Neuro3D
 
-Actualizado: 2026-09-30 00:54 UTC (02:54 Madrid).
+Actualizado: 2026-09-30 01:09 UTC (03:09 Madrid).
+
+## Hito nuevo: GPU NATIVA Blender v3 PASS local54/54 y cierre limpio
+
+- Contrato/backend4418f6e antes de medir; kernels/umbrales no cambiados. Seis
+  .blend v4 reabiertos y readback evaluado exacto,54entradas/raycastsCPU nuevos,
+  datos por impacto a shader nativo GPUShaderCreateInfo/gpu.compute.dispatch.
+  GPU dentro de Blender calcula fase/coefficient/propagación/suma compleja/abs².
+  Sin matriz/campo precalculado ni contexto ModernGL externo durante inferencia.
+- 54/54 numérico: campo6,73885e-6,potencia1,09077e-5,balance7,37235e-6,sham0;
+  cuatroefectos>1e-3.81CPU/66hashes/gates re-auditados; fixturesv4 intactos.
+- V1/v2 FAILoperativo preservados: númerosPASS peroaccessviolation alquit en
+  startup--python; timeoutpropio110s. V2crashlog WM_event_add_ui_handler durante
+  wm_exit_schedule_delayed. Liberarshader insuficiente. V3f8c8000 fija contexto
+  con cierre programado en eventloop/windowoverride, rc0/sin procesos residuales.
+- jobv3adquirido01:07:46/liberado01:07:55UTC,guard8,655s,RAMmín8,68GiB,
+  VRAMglobalmáx0,631GiB/temp33°C,PID10724 terminado. Artefacto
+  `exp005_native_gpu_v3_20260930_0107.json`+guard/tempD en cognition.
+  `Docs/EXP-005-NATIVE-BLENDER-GPU-2026-09-30.md`. No repetir sin cambio.
+- Próximo: crítica Claude del shader/ABI, pares/rechazos/historias en su retrazado,
+  gate escape/modos y contrato de RT distinto. NO RT todavía: interseccionesCPU,
+  no ventaja end-to-end/capacidad ni cierre EXP-005completo. Turno liberado.
+- JEV bloqueado; fallbacklocal, no bypass. No tocar trabajoClaude/conf1/v0/Iris.
+  Sin push/merge. Revisar guardfail-open/deadlineClaude antes de escalar.
 
 ## Hito nuevo: consumidor complejo GPU PASS local54/54; turno liberado
 

@@ -1,6 +1,6 @@
 # Cola única de trabajo de Neuro3D
 
-Estado al 2026-09-30 00:54 UTC. Antes de iniciar una tarea, comprobar aquí que
+Estado al 2026-09-30 01:09 UTC. Antes de iniciar una tarea, comprobar aquí que
 no haya otra ejecución del mismo trabajo.
 
 | ID | Prioridad | Estado | Responsable | Modelo o ruta | Esfuerzo | Recursos reservados | Dependencias | Entregable | Criterio de aceptación |
@@ -26,7 +26,7 @@ no haya otra ejecución del mismo trabajo.
 | EXP-004 | P0 | Conf1 PASS local híbrido; pendiente gate de cómputo en escena | Claude ejecutó; Codex auditó | Runner raycast Blender + oráculo independiente | Alto | gpuq libre tras readback CPU -t 1 | DEC-022; v0 FAIL | `Docs/EXP-004-CONF1-INDEPENDENT-AUDIT-2026-09-29.md` | Geometría y balance aceptados solo en simulación híbrida; preinscribir escena completa y mecanismo óptico/estado antes de reclamar que el modelo 3D realiza todo el cálculo. |
 
 | RENDER-001 | P1 | Demo fija PASS local; revisión independiente solicitada | Codex; Claude revisa | `Blender/render_network_demo/` | Medio | Reserva Codex liberada tras pruebas RTX3090/EEVEE | No depende de modificar conf1 o Iris | `.blend`, preview, fuente y verification.json | Cinco controles y barrido de 17 fases por EXR <=0,005; 12 drivers/grafos correctos. No es red entrenada ni transporte geométrico completo. |
-| EXP-005 | P0 | Cascada v4 localPASS; consumidor OpenGL crudo54/54PASS;77/77CPU; retrazado Claude18bases favorable acotado | Codex; Claude audita | `Blender/tests/exp005_*` | Alto | Turno Codex liberado00:52:06UTC; PID21208 terminado | Crítica GPU, pares/rechazos Claude, escape/modos y backend dentro de Blender | Informes propios CASCADE-RUNTIME y GPU-CONSUMER 2026-09-30 | GPU ya suma campos pero contexto externo y geometría CPU: NO RT ni ventaja end-to-end/EXP-005completo; no repetir sin cambio. |
+| EXP-005 | P0 | GPU nativaBlender v3 54/54PASS con cierre limpio;81CPU;v1/v2 cierreFAIL preservados | Codex; Claude audita | `Blender/tests/exp005_*` | Alto | Turno Codex liberado01:07:55UTC; PID10724 terminado | Crítica GPU/ABI, pares/rechazos Claude, escape/modos y contrato RT independiente | Informe NATIVE-BLENDER-GPU2026-09-30 y artefactos cognition v3 | Campos dentro de BlenderGPU y geometríaCPU: NO RT ni ventaja end-to-end/EXP-005completo; no repetir sin cambio. |
 
 Una propuesta de Claude no cambia el estado de la cola hasta que Codex la
 compruebe y registre la decisión.
