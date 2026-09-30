@@ -30,7 +30,7 @@ def decode(batch,fields,stats,ledger):
         casts,paths,depth,flag=stats[i*4:i*4+4]
         if status!=flag or status!=int(status) or (status!=0 and status not in ERRORS):
             raise ValueError('inconsistent GPU status')
-        if any(v!=int(v) or v<0 for v in (casts,paths,depth)) or paths>128 or depth>32 or casts>12288:
+        if any(v!=int(v) or v<0 for v in (casts,paths,depth)) or paths>128 or depth>32 or casts>4096*len(batch.source_ids):
             raise ValueError('invalid GPU traversal statistics')
         if status:
             if (re,im,power)!=(0.,0.,0.): raise ValueError('invalid partial fields must be cleared')
@@ -59,11 +59,11 @@ def native_shader(gpu):
     return gpu.shader.create_from_info(info)
 
 
-def dispatch(gpu,shader,snapshot,*,max_steps=4096,max_depth=32):
+def dispatch(gpu,shader,snapshot,*,max_steps=4096,max_depth=32,mode_cap=3):
     from exp005_blender_gpu import texture_data,split_double,flatten
     from exp005_mode_gate import mode_geometry
     import time
-    limits(max_steps,max_depth); mode_geometry(snapshot); batch=pack_frontier(snapshot)
+    limits(max_steps,max_depth); mode_geometry(snapshot); batch=pack_frontier(snapshot,mode_cap=mode_cap)
     textures=[]
     for raw in (batch.geometry.triangles,batch.sources,batch.optics):
         height,hi,lo=texture_data(raw)

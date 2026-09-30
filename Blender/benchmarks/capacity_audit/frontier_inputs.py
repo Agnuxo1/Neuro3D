@@ -25,8 +25,10 @@ class FrontierInputs:
     wavelength_BU: float
 
 
-def pack_frontier(snapshot):
-    if not 1<=len(snapshot['sources'])<=3: raise ValueError('pilot requires one to three sources')
+def pack_frontier(snapshot,*,mode_cap=3):
+    if isinstance(mode_cap,bool) or not isinstance(mode_cap,int) or mode_cap not in (3,5):
+        raise ValueError('explicit pilot profile requires mode cap 3 or 5')
+    if not 1<=len(snapshot['sources'])<=mode_cap: raise ValueError('pilot source bound exceeded')
     wavelength=scalar(snapshot['lambda_BU'])
     if wavelength<=0: raise ValueError('positive scene wavelength required')
     sources=[]; ids=[]; queries=[]
@@ -43,7 +45,7 @@ def pack_frontier(snapshot):
     geometry=pack_geometry(snapshot,queries)
     if geometry.triangle_count>64: raise ValueError('pilot triangle bound exceeded')
     ports=tuple(n for n,o in snapshot['objects'].items() if o['kind'] in ('det','escape'))
-    if not 1<=len(ports)<=3: raise ValueError('pilot requires one to three terminal ports')
+    if not 1<=len(ports)<=mode_cap: raise ValueError('pilot terminal bound exceeded')
     optics=[]
     for name,obj in snapshot['objects'].items():
         kind=obj['kind']; code={'bs':0,'mirror':1,'det':2,'escape':3}[kind]

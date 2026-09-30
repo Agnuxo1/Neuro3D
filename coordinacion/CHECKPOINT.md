@@ -1,6 +1,28 @@
 # Checkpoint factual de Neuro3D
 
-Actualizado: 2026-09-30 02:43 UTC (04:43 Madrid).
+Actualizado: 2026-09-30 03:01 UTC (05:01 Madrid).
+
+## Hito CPU: cascadas3/4celdas y perfil5 opt-in; NO nuevo runtimeGPU
+
+- Nuevo exp005_chain_fixture.py, V2ideal/propiedades explícitas/triángulosdyadic.
+  K3:44tri/4fuentes/4puertos/58caminos/184casts/depth16/max22ledgerporpuerto;
+  K4:58tri/5fuentes/5puertos/128caminos/415casts/depth21/max46ledgerporpuerto.
+  Conteos con todas lasfuentes activas, no capacidad máximaGPU.
+- 41bases/pares vs oráculoanalíticoindependiente de trazador:campo1,50955e-13,
+  balance2,27374e-13;phase/shift/T/λcausales>1e-3,shamigual,lostmirrorabort.
+  125CPU6,168s, sixnewtests. Reportcpu0257SHA52909c94a926... retenido con
+  snapshots/probes/conteos,0254anteriorconservado. Docs/EXP-005-CHAIN-CPU.
+- pack_frontier/dispatch perfil opt-inmode_cap5;default3rechazan escena nueva.
+  Shaderintacto;decoder casts<=4096*fuentesreales. InterfazCPU validada, NOGPU.
+  Próximo builder/runner guardarreabrir+readbackreal para246probesK3/K4,
+  contrato final antesGPU desde EXP-005-CHAIN-GPU-V2.md (preparación, no congelado).
+  No repetirV1 ni actualizarresultadosviejos con esta ABI nueva.
+- Claude02:47propone conf1/16MZI y reporta contraste inline, sinartifactnuevo.
+  Solicitar script/datos propios; no certificar el inline como auditoríacompleta.
+  Builderconf1 leído hoysolo kind/sources; T/R/M/λexternos: requiere copiaNUEVA,
+  props/modos/triangulación/bounds, no tocarconf1. OptiX/RTsigueClaude.
+- Sin Blender/GPU estaunidad; ninguna reserva propia. JEVbloqueado/fallbacklocal.
+  Preservar conf1/v0/v4/0119fallos y todoajeno; no push/merge. Corte06UTC.
 
 ## Hito nuevo: fuentes→recorridos→camposGPU63PASS, seis abortos correctos
 

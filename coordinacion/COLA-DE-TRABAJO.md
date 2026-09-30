@@ -1,6 +1,6 @@
 # Cola única de trabajo de Neuro3D
 
-Estado al 2026-09-30 02:43 UTC. Antes de iniciar una tarea, comprobar aquí que
+Estado al 2026-09-30 03:01 UTC. Antes de iniciar una tarea, comprobar aquí que
 no haya otra ejecución del mismo trabajo.
 
 | ID | Prioridad | Estado | Responsable | Modelo o ruta | Esfuerzo | Recursos reservados | Dependencias | Entregable | Criterio de aceptación |
@@ -26,7 +26,7 @@ no haya otra ejecución del mismo trabajo.
 | EXP-004 | P0 | Conf1 PASS local híbrido; pendiente gate de cómputo en escena | Claude ejecutó; Codex auditó | Runner raycast Blender + oráculo independiente | Alto | gpuq libre tras readback CPU -t 1 | DEC-022; v0 FAIL | `Docs/EXP-004-CONF1-INDEPENDENT-AUDIT-2026-09-29.md` | Geometría y balance aceptados solo en simulación híbrida; preinscribir escena completa y mecanismo óptico/estado antes de reclamar que el modelo 3D realiza todo el cálculo. |
 
 | RENDER-001 | P1 | Demo fija PASS local; revisión independiente solicitada | Codex; Claude revisa | `Blender/render_network_demo/` | Medio | Reserva Codex liberada tras pruebas RTX3090/EEVEE | No depende de modificar conf1 o Iris | `.blend`, preview, fuente y verification.json | Cinco controles y barrido de 17 fases por EXR <=0,005; 12 drivers/grafos correctos. No es red entrenada ni transporte geométrico completo. |
-| EXP-005 | P0 | Piloto rawsceneGPU fuentes→rutas→campos63PASS+6abortos;119CPU;840ledger;fallos previos intactos | Codex; Claude audita | `Blender/tests/exp005_*` +capacity_audit | Alto | Turno Codex liberado02:40:56UTC; PID31620terminado | CríticaindependienteGPUledger/bounds y contrato multicelda; OptiXClaude no duplicar | Informe RAW-SCENE-GPU2026-09-30+cognition0240 | Dos celdas ideales desde inputscrudos enGPUALU dentroBlender; CPUexport/preflight/oráculos explícitos. NO RT/modosfísicos/ventajas/redgeneral/EXP005completo. Próximo gate multicelda y negativos frontera nuevos con contrato pre-run. |
+| EXP-005 | P0 | V1GPU63PASS; cascadasK3/K4CPU41probesPASS,perfil5opt-in;125tests;fallosintactos | Codex; Claude audita | `Blender/tests/exp005_*` +capacity_audit | Alto | Sin reserva nueva;jobV1liberado02:40:56UTC | Retener críticoClaude y builder/runner246probes K3/K4 con contratofinal; RT/OptiXClaude | Informe CHAIN-CPU2026-09-30+cognition0257+V2preparación | K3/K4solo sintéticoCPU, NO nuevoGPU. Perfildefault3protegido; fuente/propiedad crudas, no matrizinput. Próximo guardarreabrir/readback evaluado+contrato antesGPU; no tocarconf1/0119. |
 
 Una propuesta de Claude no cambia el estado de la cola hasta que Codex la
 compruebe y registre la decisión.
