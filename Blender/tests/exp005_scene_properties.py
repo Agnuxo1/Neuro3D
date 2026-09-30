@@ -99,7 +99,10 @@ def sum_declared_channels(optics, paths):
     """
     if not paths:
         raise ValueError('nonempty path set required')
-    fields, counts = {}, {}
+    # A declared port can be exactly dark because no path reaches it. Keep it
+    # explicit; visited-only maps are not a complete transfer-operator readback.
+    fields = {name:0j for name,kind in optics.kinds.items() if kind in ('det','escape')}
+    counts = {name:0 for name in fields}
     for path in paths:
         result = field_for_path(optics, path['hits'], path['initial_field'],
                                 reference_offset_BU=path.get('reference_offset_BU',0))
