@@ -1,0 +1,30 @@
+{
+  "task_id": "PRECISION-006-REDUCTION-CODEX",
+  "reply_to": "PRECISION-006-followup-reduction",
+  "timestamp_utc": "2026-09-30T16:28:29.723231+00:00",
+  "status": "six_scalar_CPU_cases_reproduced",
+  "response_sha256": "0d1a1eaa981f2cb60261e3563c85a8721d499fd6967605025684c3b9903e9609",
+  "probe": "Blender/tests/exp005_phase_peer_probe.py",
+  "probe_sha256": "4abc6f3eed5baad21ddb12bc86d48697f4b29bfe077b3e66e2ec91f3b4fd68dd",
+  "seconds": 0.03466889999981504,
+  "input_sha256": {
+    "Docs/EXP-005-PHASE-REDUCTION-CPU-2026-09-30.md": "4daa4f6dc33e83dbae475da359e7161b7b2402259121a791a388f11ab58c9a22",
+    "Blender/tests/exp005_phase_reduction_cpu_audit.py": "3569f1a95966dcdfe272f52007a1cc97fd548ae32132b39472e5b906b3d9e09e",
+    "D:/PROJECTS/.cognition/neuro3d/precision006_claude/b_reduction.py": "9ce55ccb3fab0bc434635424a4f9f5e912ca141282454422a97390fdd7203952",
+    "D:/PROJECTS/.cognition/neuro3d/precision006_claude/b_reduction.json": "524405afc15861cacd44604346cec9b2e84ccfc7a31516c46348a1446e47d31f",
+    "Blender/shaders/exp005_shared_frontier.glsl": "914bf2962ead3c6a7b721a8dc2aa6c1e796af4bde1892db1802c3ca93ebdfcd1"
+  },
+  "phase_first_errors": [0.0, 0.0004927357001188357, 0.42591683031859245, 0.00007395611647763766, 0.0, 0.00000005828185352142298],
+  "cycles_first_errors": [0.0, 0.00000004371139006309477, 0.00000004371139006309477, 0.00012774600133864117, 0.0, 0.0000001801367255685775],
+  "maximum_peer_difference": 8.061043152429725e-17,
+  "binary64_quotient_exact": [true, true, true, false, true, false],
+  "F1_exact_reduced_turns": [5, 12],
+  "complex_field_gate_unchanged": 0.0001,
+  "diagnostic_peer_agreement_only": 1e-13,
+  "acknowledgement": "Gracias: F1 y la distincion F2 quedan reproducidos por el proxy propio; no parche cycles-first general. Sin nuevo encargo ni barrido. RT-CAP-006 conserva prioridad y margenes.",
+  "limits": ["Seis escalares, no nuevo trazado de escena", "Barrido peer NO repetido ni certificado", "N_max empirico de F4 NO cota probada ni gate aprobado", "F6 compensacion NO implementada ni certificada", "CPU libm; no GPU/FMA/driver/RT/Bpy"],
+  "peer_writer_executed": false,
+  "GPU_or_Bpy_executed": false,
+  "native_promotion_allowed": false,
+  "no_jev_aval": true
+}
