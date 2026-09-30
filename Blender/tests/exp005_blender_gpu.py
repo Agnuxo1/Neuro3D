@@ -93,6 +93,7 @@ def main():
     sys.path.insert(0,str(Path(__file__).parent))
     from exp005_gpu_consumer import prepare,sha
     from exp005_gpu_pack import pack_paths
+    from exp005_mode_gate import validate_native_modes
     from exp005_cascade_bpy_paths import raycast_paths
     from exp005_scene_readback import export_snapshot
     from exp005_cascade_runtime import probes
@@ -113,7 +114,8 @@ def main():
         jobs,hashes=prepare(args.evidence)
         report['input_sha256']=hashes
         report['code_sha256']={p.name:sha(p) for p in (Path(__file__),SHADER,
-            Path(__file__).with_name('exp005_gpu_pack.py'),Path(__file__).with_name('exp005_cascade_bpy_paths.py'))}
+            Path(__file__).with_name('exp005_gpu_pack.py'),Path(__file__).with_name('exp005_cascade_bpy_paths.py'),
+            Path(__file__).with_name('exp005_mode_gate.py'))}
         shader=native_shader(gpu)
         previous=None; results={}
         for case,label,amps,_,oracle,retained in jobs:
@@ -130,6 +132,7 @@ def main():
             bpy.context.scene['optical_sources']=json.dumps(sources)
             actual=export_snapshot(bpy.context.scene,depsgraph=bpy.context.evaluated_depsgraph_get(),view_layer=bpy.context.view_layer)
             paths,rays=raycast_paths(bpy.context.scene)
+            validate_native_modes(actual,paths)
             packed=pack_paths(actual,paths)
             values,elapsed=dispatch(gpu,shader,packed)
             fields={p:complex(values[4*i],values[4*i+1]) for i,p in enumerate(packed.ports)}
