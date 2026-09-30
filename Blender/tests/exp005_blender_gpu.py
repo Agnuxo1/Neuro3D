@@ -51,7 +51,7 @@ def schedule_exit(bpy):
     bpy.app.timers.register(close,first_interval=.1)
 
 
-def native_shader(gpu):
+def native_shader(gpu,shader_path=SHADER):
     info=gpu.types.GPUShaderCreateInfo()
     for slot,name in enumerate(('paths_hi','paths_lo','hits_hi','hits_lo')):
         info.sampler(slot,'FLOAT_2D',name)
@@ -59,11 +59,14 @@ def native_shader(gpu):
     info.push_constant('INT','path_count'); info.push_constant('INT','port_count')
     info.push_constant('FLOAT','wavelength_hi'); info.push_constant('FLOAT','wavelength_lo')
     info.local_group_size(8,1,1)
-    info.compute_source(SHADER.read_text(encoding='utf-8'))
+    info.compute_source(shader_path.read_text(encoding='utf-8'))
     return gpu.shader.create_from_info(info)
 
 
-def dispatch(gpu,shader,packed):
+def dispatch(gpu,shader,packed,*,supports_variable_splitter=False):
+    allowed={0,1,2,3,4,5} if supports_variable_splitter else {0,1,2,3}
+    if any(code not in allowed for code in packed.hits[2::4]):
+        raise ValueError('unsupported hit code for selected native shader')
     textures=[]
     for values in (packed.paths,packed.hits):
         height,hi,lo=texture_data(values)

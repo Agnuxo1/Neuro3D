@@ -65,16 +65,20 @@ def pack_paths(snapshot, paths):
             name, event = hit['object_id'], hit['event']
             kind = optics.kinds[name]
             distance = finite_number(hit['distance_BU'], 'distance_BU', nonnegative=True)
-            phase = 0.0
+            phase,parameter = 0.0,0.0
             if kind == 'bs' and event in ('t', 'r'):
-                code = 1 if event == 't' else 2
+                if snapshot.get('schema')=='exp005-readback-v2':
+                    code = 4 if event=='t' else 5
+                    parameter=optics.transmittance[name]  # Raw property, NOT sqrt/field.
+                else:
+                    code = 1 if event == 't' else 2
             elif kind == 'mirror' and event == 'mirror':
                 code, phase = 3, optics.phases_rad[name]
             elif kind in ('det', 'escape') and event == ('detect' if kind == 'det' else 'escape') and index == len(hits)-1:
                 code = 0
             else:
                 raise ValueError('incompatible event or nonterminal readout')
-            events.extend((distance, phase, float(code), 0.0))
+            events.extend((distance, phase, float(code), parameter))
         terminal = hits[-1]['object_id']
         if terminal not in ports or hits[-1]['event'] not in ('detect', 'escape'):
             raise ValueError('explicit terminal required')

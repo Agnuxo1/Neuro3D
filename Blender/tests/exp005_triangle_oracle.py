@@ -50,7 +50,7 @@ def triangle_hit(origin,direction,triangle,epsilon):
 
 
 def geometry(snapshot):
-    if snapshot['schema'] != 'exp005-readback-v1': raise ValueError('unsupported readback schema')
+    if snapshot['schema'] not in ('exp005-readback-v1','exp005-readback-v2'): raise ValueError('unsupported readback schema')
     if snapshot['undeclared_meshes']:
         raise ValueError('unaccounted meshes: cannot assume non-interaction')
     wavelength = scalar(snapshot['lambda_BU'])
@@ -71,6 +71,14 @@ def geometry(snapshot):
             triangles.append(triangle)
         if not triangles: raise ValueError('nonempty triangular mesh required')
         obj = {'kind':kind,'triangles':triangles}
+        if kind=='bs':
+            if snapshot['schema']=='exp005-readback-v2':
+                tau=scalar(record['power_transmittance'])
+                if not 0<=tau<=1: raise ValueError('splitter transmittance must be between0and1')
+                obj['tau']=tau
+            else:
+                if 'power_transmittance' in record: raise ValueError('variable splitter requires readback-v2')
+                obj['tau']=.5
         if kind == 'mirror': obj['phase'] = scalar(record['phase_rad'])
         if kind in ('det','escape'):
             obj['reference'] = vec(record['mode_origin_BU'])
@@ -135,7 +143,7 @@ def trace_scene(snapshot, *, max_rays=4096, max_depth=64):
                 continue
             reflected = unit(sub(direction,scale(normal,2*dot(direction,normal))))
             branches = [('mirror',reflected,-cmath.exp(1j*obj['phase']))] if kind=='mirror' else [
-                ('t',direction,1/math.sqrt(2)),('r',reflected,1j/math.sqrt(2))]
+                ('t',direction,math.sqrt(obj['tau'])),('r',reflected,1j*math.sqrt(1-obj['tau']))]
             for event,ray,coefficient in branches:
                 stack.append((point,ray,amplitude*coefficient,length2,history+[
                     {'object_id':name,'event':event,'distance_BU':distance,'coefficient':coefficient}]))

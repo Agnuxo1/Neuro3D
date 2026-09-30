@@ -25,6 +25,7 @@ class SceneOptics:
     wavelength_BU: float
     kinds: object
     phases_rad: object
+    transmittance: object
 
 
 def decode_scene(snapshot):
@@ -33,7 +34,10 @@ def decode_scene(snapshot):
     objects = snapshot['objects']
     if not isinstance(objects, dict) or not objects:
         raise ValueError('nonempty object map required')
-    kinds, phases = {}, {}
+    schema = snapshot.get('schema', 'exp005-readback-v1')
+    if schema not in ('exp005-readback-v1','exp005-readback-v2'):
+        raise ValueError('unsupported optical readback schema')
+    kinds, phases, transmittance = {}, {}, {}
     for name, record in objects.items():
         if not isinstance(name, str) or not name:
             raise ValueError('object identifier required')
@@ -41,9 +45,19 @@ def decode_scene(snapshot):
         if kind not in ('mirror', 'bs', 'det', 'escape'):
             raise ValueError(f'unknown optical kind: {name}')
         kinds[name] = kind
+        if kind == 'bs':
+            if schema == 'exp005-readback-v2':
+                value=finite_number(record['power_transmittance'],f'{name}.power_transmittance',nonnegative=True)
+                if value>1: raise ValueError('power transmittance must be <=1')
+                transmittance[name]=value
+            else:
+                if 'power_transmittance' in record:
+                    raise ValueError('variable splitter requires explicit readback-v2')
+                transmittance[name]=.5  # V1 contract is explicitly ideal 50/50.
         if kind == 'mirror':
             phases[name] = finite_number(record['phase_rad'], f'{name}.phase_rad')
-    return SceneOptics(wavelength, MappingProxyType(kinds), MappingProxyType(phases))
+    return SceneOptics(wavelength, MappingProxyType(kinds), MappingProxyType(phases),
+                       MappingProxyType(transmittance))
 
 
 def field_for_path(optics, hits, initial_field=1+0j, *, reference_offset_BU=0):
@@ -66,7 +80,8 @@ def field_for_path(optics, hits, initial_field=1+0j, *, reference_offset_BU=0):
         kind = optics.kinds[name]  # unknown object fails, never silently ignored
         distance = finite_number(hit['distance_BU'], 'distance_BU', nonnegative=True)
         if kind == 'bs' and event in ('t', 'r'):
-            coefficient = (1 if event == 't' else 1j) / math.sqrt(2)
+            tau=optics.transmittance[name]
+            coefficient = math.sqrt(tau) if event=='t' else 1j*math.sqrt(1-tau)
         elif kind == 'mirror' and event == 'mirror':
             coefficient = -cmath.exp(1j*optics.phases_rad[name])
         elif kind == 'det' and event == 'detect' and index == len(hits)-1:
