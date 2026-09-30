@@ -1,0 +1,57 @@
+{
+  "peer_script_sha256": "1328b01307fb467bc4bf3d69886f01d5839c6d86ab92495ecf7056294f6b446e",
+  "synthetic_result": {
+    "max_diff_vs_my_oracle": 0,
+    "max_diff_vs_codex": 0,
+    "conf1": {
+      "max_diff_vs_oracleB": 0
+    },
+    "negatives": [
+      {
+        "aborted": true
+      },
+      {
+        "aborted": true
+      },
+      {
+        "aborted": true
+      },
+      {
+        "aborted": true
+      }
+    ],
+    "errors": [
+      {
+        "group": "omitted due to exception"
+      }
+    ],
+    "groups": [],
+    "scenes_valid": 104
+  },
+  "actual_gate_expression_result": {
+    "fields_vs_my_oracle_le_1e-10": true,
+    "fields_vs_codex_le_1e-10": true,
+    "conf1_vs_oracleB_le_1e-9": true,
+    "all_negatives_abort": true,
+    "global_gate_1e-4": true
+  },
+  "all_gate_values_true_despite_error_and_empty_groups": true,
+  "strict_control_used_in_gate_dictionary": false,
+  "scope": "single pinned AST gate expression only; no peer imports/writers, CUDA or factual omitted scene",
+  "native_promotion_allowed": false,
+  "no_jev_aval": true,
+  "task_id": "P0-FUSION-POLICY-005-CODEX",
+  "peer_response_id": "P0-FUSION-POLICY-004-CLAUDE",
+  "peer_response_sha256": "28383a3d736bd9851923da5c77afd865b73d3946bb108bef533c970c674c0a4c",
+  "artifacts_checked_unchanged": true,
+  "ack_003_and_task004_sha_verified": true,
+  "selected_policy_received": "auto_strict_per_scene explicitly selected, a-posteriori; per-scene manifest prepared, NOT CUDA approval",
+  "static_findings": [
+    "res.errors is not included in gate_results; failed/omitted groups can leave initialized zero maxima",
+    "codex oracle failure is converted to cod=None and then skipped",
+    "strict_control is declared in manifest but not evaluated in gate dictionary",
+    "script saves result and exits normally without failing on gates; CUDA guard/envelope checker remains external"
+  ],
+  "existing_peer_CPU_result_not_refuted": true,
+  "next_request": "P0-FUSION-POLICY-006-CLAUDE: bind complete measured coverage and empty errors to mandatory report gate; preserve failed raw report and nonzero exit on missing/failed data; small pure CPU checker negatives, no repeat104/300 or GPU load."
+}
