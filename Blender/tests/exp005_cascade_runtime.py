@@ -37,7 +37,8 @@ def main():
     from exp005_scene_readback import export_snapshot
     from exp005_triangle_oracle import trace_scene
     from exp005_scene_properties import decode_scene,sum_declared_channels
-    from exp005_runtime_smoke import raycast_paths,key,write_json
+    from exp005_runtime_smoke import key,write_json
+    from exp005_cascade_bpy_paths import raycast_paths
 
     parser=argparse.ArgumentParser(); parser.add_argument('--evidence',required=True)
     args=parser.parse_args(sys.argv[sys.argv.index('--')+1:])
@@ -50,7 +51,8 @@ def main():
                           'causal_min':CAUSAL_MIN},'cases':{}}
     result['dependencies_sha256']={name:hashlib.sha256((Path(__file__).parent/name).read_bytes()).hexdigest()
         for name in ('exp005_cascade_fixture.py','exp005_runtime_smoke.py','exp005_scene_readback.py',
-                     'exp005_triangle_oracle.py','exp005_scene_properties.py')}
+                     'exp005_triangle_oracle.py','exp005_scene_properties.py',
+                     'exp005_cascade_bpy_paths.py','exp005_reflection.py')}
     for case in CASES:
         phases=(.6,.37) if case=='phase_a' else (.2,.8) if case=='phase_b' else (.2,.37)
         fixture=cascade_fixture(*phases,wavelength=.101 if case=='lambda' else .1)
