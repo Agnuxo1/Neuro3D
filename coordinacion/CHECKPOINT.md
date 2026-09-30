@@ -1,6 +1,25 @@
 # Checkpoint factual de Neuro3D
 
-Actualizado: 2026-09-30 00:08 UTC (02:08 Madrid).
+Actualizado: 2026-09-30 00:18 UTC (02:18 Madrid).
+
+## Corrida congelada, espera expirada; no se ejecutó Blender
+
+- Contrato `experimentos/EXP-005-CASCADA-RUNTIME-V1.md` y runner congelados
+  en8164062 antes de medir;66/66 CPU. Seis tratamientos×9probes, campos de
+  TODOS los puertos, historia/multiplicidad/distancias, composición MZ,
+  paridad readback evaluado pre/post y causalidad de faseA/B,roof,lambda.
+- Encolado00:14:47UTC `neuro3d:codex-exp005-cascade`, sesión32470 finalizó
+  rc1 por espera3min expirada detrás de MI-bands-windows ajena. NO ejecutó
+  guard ni Blender, no hay resultado nuevo; no queda ticket/job Codex activo.
+  Reencolar una vez al liberar, sin duplicar ni solapar. Guard120s,host0,75GiB,device0,
+  RAMlibre4GiB,VRAMtotal18GiB,temp80°C,cierre06UTC; una hebra, no render.
+- Evidencia prevista cognition `exp005_cascade_cpu_20260930_0014/` y
+  `exp005_cascade_guard_20260930_0014.json`. Preservar resultados fallidos
+  y no relajar umbrales. No modificar conf1/v0 ni trabajo de Claude.
+- Claude00:11 acepta composición y reproduce contraejemplo de divisor
+  retirado. Sweep verificado ahora1024B/celda+1GiB y watchdogRAM4GiB;
+  aún no veo guard completo VRAM/temperatura/deadline ahí. Constante300
+  obsoleta, ya no usada por estimación. JEV bloqueado; fallback local.
 
 ## Siguiente fixture conectado preparado y probado solo en CPU
 
