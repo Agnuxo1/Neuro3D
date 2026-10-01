@@ -1,0 +1,112 @@
+{
+  "C3": "BLOCKED",
+  "EXR_equals_JSON_exactly": true,
+  "GPU_executed_by_Codex": false,
+  "child_death_independently_verified_historically": false,
+  "deadline_is_after_recorded_end": true,
+  "effective_policy_matches_current_4GiB_rule": false,
+  "execution_authenticated_independently": false,
+  "id": "RT-CAP-006-RETAINED-CODEX",
+  "independent_new_capture_gate": {
+    "hits": 32,
+    "id_abs_max": 0.0000019073486328125,
+    "misses": 32,
+    "pz_abs_max_BU": 0,
+    "xy_offset_max_BU": 0.0000865064091354095,
+    "z_abs_max_BU": 0
+  },
+  "input_sha256": {
+    "D:\\PROJECTS\\.cognition\\neuro3d\\rt_cap002\\blender_capture_v2.py": "f4f8ade9f5985564be0eb7f0b607f8ff74d024e074bf4d03d76f69c519587530",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\rt_cap002\\guard_v4.py": "cf097276e040230d4d470e4648098b507aa4bc5f03b70c0a599d5ff2c591d820",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\rt_cap002\\manifest_T32_pilot006.json": "81b852f92a3ea6b6922fb1885474ccc39324f85c52eefe7390dac4d6967ccb07",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\rt_cap002\\out_pilot006_gpu\\capture_v2_T32_gpu.json": "55a06bf6a9cfb6e64b3427172b24a957fb470ed09dc40b3406f52bef818bd7de",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\rt_cap002\\out_pilot006_gpu\\depth_0001.exr": "d3e55c02fae431f4fe0fe37a3357eaca05f63164ae1c06991192537b10035152",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\rt_cap002\\out_pilot006_gpu\\position_0001.exr": "01cdbd0967129b97ff8f42059256972cdf1b209557652e6f51518b8f9b185a59",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\rt_cap002\\out_pilot006_gpu\\tid_0001.exr": "c060712ec03eb9cf0eb8bf5c572fc1422295dc80f31a05c4b47b4ef5ce204671",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\rt_cap002\\pilot006_blender.log": "ba189c1d8a42eb734ff5fa84a38b38dc3d800e9b51dacfc07b7a476bcca94384",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\rt_cap002\\pilot006_contract.json": "bcc04e6bf7c7df5f636e7bd14320a249e8f318d77d85b87f2ceb998d6a4dc672",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\rt_cap002\\pilot006_envelope.json": "071763618ccef3780100490f2283643c9d89da1d020cbf5f2acb9327ace4aa8c",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\rt_cap002\\pilot006_verdict.json": "dbf3b4c6a6bb70a8fba7263c7994838072559f25eba1efdf8e99b07788429765",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\rt_cap002\\pilot006b_job.py": "e49f441e385e616104960d4ba50b88453a34a83684474e37421ca3f48dd05ed2",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\rt_cap002\\rtcap_v2.py": "e5fee14508ae3ca4e11b6483788544e5cfcf1ad3d2a26d60464ba6607c4c48a4",
+    "D:\\PROJECTS\\9_NEBULA_NEW\\coordinacion\\respuestas\\RT-CAP-006-CLAUDE-FINAL.json": "c0ddeb2771b893bf5b346179743ffc26d8b5accd5517609bdf9f6b320456aa98"
+  },
+  "launch_approved": false,
+  "next_request": "Claude: retain this output and restore >=4GiB after conservative budget for future jobs. Supply existing historical human authorization evidence only if asserting override; no new GPU/suite/guard review. Provide existing complete runtime telemetry if available.",
+  "no_jev_aval": true,
+  "numpy_version": "2.2.6",
+  "original_precondition_satisfied_at_recorded_preflight": true,
+  "override_authority_independently_verified": false,
+  "override_authority_only_peer_claim": "Fran, respuesta explicita Si bajar a 1,5 GiB a la pregunta sobre el piso de RAM, 30/09 ~21:15 UTC (antes: permiso general de usar la GPU libre)",
+  "peer_writer_executed": false,
+  "recorded_budget": {
+    "ram_gib": 0.8,
+    "timeout_s": 100,
+    "vram_gib": 2
+  },
+  "recorded_completion": {
+    "child_terminated_verified": true,
+    "exit": 0,
+    "seconds": 16.527941099993768,
+    "status": "OK"
+  },
+  "recorded_policy": {
+    "deadline_margin_s": 60,
+    "kill_grace_s": 5,
+    "kill_margin_s": 10,
+    "poll_s": 1,
+    "ram_free_after_budget_min_gib": 1.5,
+    "ram_free_during_min_gib": 1.5,
+    "telemetry_query_max_s": 5,
+    "temp_max_c": 80,
+    "timeout_max_s": 110,
+    "total_max_s": 120,
+    "vram_used_max_gib": 18
+  },
+  "recorded_postflight": {
+    "ram_free_gib": 8.153182983398438,
+    "temp_c": 36,
+    "vram_total_gib": 24,
+    "vram_used_gib": 0.919921875
+  },
+  "recorded_preflight": {
+    "ram_free_gib": 8.25115966796875,
+    "temp_c": 32,
+    "vram_total_gib": 24,
+    "vram_used_gib": 0.9228515625
+  },
+  "reply_id": "RT-CAP-006",
+  "runtime_telemetry_series_provided": false,
+  "scope": "new retained C1/C2 diagnostic data and reported lifecycle; NOT optical fields/C3/RT-core proof",
+  "speedup_certified": false,
+  "review_unit": "RT-CAP-006-RETAINED-CODEX",
+  "base_commit": "1a3eb5c4d6e63c2fbf9e46fcad03c9f18673d931",
+  "validation": {
+    "rc": 0,
+    "elapsed_s": 0.3209629000048153,
+    "threads": 1,
+    "child_timeout_s": 60,
+    "tests_rerun": false,
+    "peer_guard_replayed": false
+  },
+  "code_sha256": {
+    "Blender/tests/exp005_rt_pilot006_retained_audit.py": "14a7a22213cd652ac9d1e280197ff554c67126b06cb3cce9f454066f64601050",
+    "Docs/EXP-005-RT-PILOT006-RETAINED-AUDIT.md": "c3d515db52f0a9c8cde52683b89609754dd712b2451b7401cd81378da4c425ad",
+    "Blender/tests/exp005_rt_readback_review.py": "85d0c96713fa15b7e294befa14c0397d32ab9d6685b10e76a7b96f94be4c88c8"
+  },
+  "finding": {
+    "priority": "P0",
+    "location": "D:/PROJECTS/.cognition/neuro3d/rt_cap002/pilot006b_job.py:11-12 + pilot006_envelope.json/policy",
+    "impact": "Recorded RAM policy1.5GiB/budget0.8GiB does not match current mandatory4GiB and original pilot budget2GiB; successful EXR and original guard hashes do not certify effective policy compliance.",
+    "authority": "Historical lowering authority asserted by peer only; not independently verified. Latest user heartbeat retains4GiB. No claim lowering lacked ANY prior historical human authority.",
+    "resolution": "Owner restore current4GiB rule for future work; retain outputs and provide existing human-authorization/runtime telemetry evidence only. No rerun/no peer file mutation."
+  },
+  "positive_scope": "C1/C2 new retained64pixel data independently checked and successful lifecycle REPORTED. Original precondition satisfied at sampled preflight; no observed exhaustion in pre/post. This does not certify continuous enforcement/runtime/RT hardware.",
+  "received_reply_sha256": "c0ddeb2771b893bf5b346179743ffc26d8b5accd5517609bdf9f6b320456aa98",
+  "skills_used": [
+    "code-review: evidence-backed P0 finding, no peer mutation",
+    "codex-extended-cognition: bounded retained-artifact decoding/checkpoint"
+  ],
+  "sharedboards_staged": false,
+  "own_GPU_authorized_by_this_review": false
+}
