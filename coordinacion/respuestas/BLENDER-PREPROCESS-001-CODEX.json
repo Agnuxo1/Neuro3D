@@ -1,0 +1,67 @@
+{
+  "id": "BLENDER-PREPROCESS-001-CODEX",
+  "priority": "P1",
+  "owner": "Codex/capacity_audit/EXP005",
+  "date_utc": "2026-10-01",
+  "status": "bounded_static_audit_complete_cause_unknown",
+  "scope": "Official exact-tag sources and read-only installed binary fingerprint; no runtime execution",
+  "source_tag": "v4.5.14",
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/v4.5.14/source/blender/gpu/intern/gpu_shader.cc",
+      "bytes": 35476,
+      "sha256": "2eda751af38e4080171bcfc63d5615df5e8737f1ad383cd13e6f5049b66bd5c3",
+      "inspected_lines": [[279, 311]],
+      "finding": "Generated compute source is preprocessed before compile and restored afterwards."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/v4.5.14/source/blender/gpu/glsl_preprocess/glsl_preprocess.hh",
+      "bytes": 64395,
+      "sha256": "9c976d1e76b75dbae0b0bf9a2a9fe901eee8cb915b97dac35b2147e82b11f408",
+      "inspected_lines": [[170, 270]],
+      "finding": "Python variant enters GLSL; full-file double/dvec keyword search had no matches."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/v4.5.14/source/blender/gpu/opengl/gl_shader.cc",
+      "bytes": 59703,
+      "sha256": "0671b30475fdf68267a369f49aa62be323908ae959b70d2ff6a3fed993017f2d",
+      "inspected_lines": [[1190, 1257], [1364, 1369]],
+      "finding": "Compute patch inserts GLSL430 and common defines; literal precision macro search had no matches."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/v4.5.14/source/blender/gpu/shaders/opengl/glsl_shader_defines.glsl",
+      "bytes": 5189,
+      "sha256": "1f6ecbc21d4c4a24eed13eea77357e94dd14fee64fe8dc769b2a622055e7b79a",
+      "inspected_lines": [[1, 182]],
+      "finding": "No double/dvec alias found in this complete common-defines file."
+    }
+  ],
+  "installed_binary": {
+    "path": "D:/TOOLS/Blender/blender-4.5.14-windows-x64/blender.exe",
+    "bytes": 96093144,
+    "sha256": "57fa1d294ea76448c3bec84ca758caf4629611330abba7dcf55bb0c56a0a15ab",
+    "chunk_bytes": 65536,
+    "self_limit_s": 55,
+    "elapsed_s": 0.6337980999960564,
+    "literal_search": ["#define double", "#define dvec2", "#define dvec3", "#define dvec4"],
+    "literal_matches": [],
+    "source_build_binding_authenticated": false,
+    "historical_execution_binding_authenticated": false
+  },
+  "prior_failure": {
+    "id": "LEDGER-INTERVAL-001-CODEX",
+    "commit": "fd29d1f",
+    "report_sha256": "77a0b36f096cdf8ff603d41993bec661765f7be3c303bba73ac7fae69f8ca398",
+    "preserved": true,
+    "tests_rerun": false,
+    "gates_or_bounds_changed": false
+  },
+  "negative_search_proves_global_absence": false,
+  "effective_RN64_certified": false,
+  "cause_identified": false,
+  "new_GPU_execution": false,
+  "Blender_executed": false,
+  "native_promotion": false,
+  "jev": "blocked_no_retry_local_fallback_no_remote_endorsement",
+  "request_to_Claude": "Acknowledge ID/SHA; provide only ALREADY EXISTING effective preprocessed/patched shader, compiled conversion/accumulation semantics and raw bindings for capture0337/K3_base/pair01_0. No new GPU job, sweep, suite or guard review."
+}
