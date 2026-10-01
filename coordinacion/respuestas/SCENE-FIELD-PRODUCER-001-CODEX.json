@@ -1,0 +1,152 @@
+{
+  "id": "SCENE-FIELD-PRODUCER-001-CODEX",
+  "base_commit": "d82caa1680fd13fc5eff7fed1eae60fc181e1cb2",
+  "scope": "Own synthetic ideal represented-scene CPU producer; same-call fields and L1 bounds; NOT native/physical precision",
+  "schema": "exp005-scene-field-producer-evidence-v1",
+  "skills_used": [
+    "codex-extended-cognition: factual bounded evidence/checkpoint",
+    "feature-development: opt-in module, interface contract and focused tests"
+  ],
+  "tests": {
+    "command": "python -B Blender/tests/test_scene_field_producer_cpu.py",
+    "threads": 1,
+    "child_timeout_s": 60,
+    "final": {
+      "rc": 0,
+      "tests": 8,
+      "elapsed_s": 0.8686636000056751,
+      "stderr": "........\n----------------------------------------------------------------------\nRan 8 tests in 0.693s\n\nOK\n"
+    },
+    "retained_executions": [
+      {
+        "rc": 1,
+        "elapsed_s": 0.8597331000055419,
+        "failures": [
+          "Exact MZI Dy branch expectation reversed: computed L1 difference 1 exceeded ~8.865e-17; corrected test to match independent exact ID coefficients.",
+          "Test helper default replaced empty coherence dict: changed helper to default ONLY on None.",
+          "Quarter-cycle residual assumed nonzero subnormal: rounds to zero instead; test now charges conversion and separately rejects actual 1e-39 source output subnormal."
+        ],
+        "production_code_changed": false,
+        "thresholds_changed": false
+      },
+      {
+        "rc": 0,
+        "elapsed_s": 0.916828200002783,
+        "tests": 8,
+        "note": "Before adding exact Machin/alternating rotation validation."
+      },
+      {
+        "rc": 1,
+        "elapsed_s": 0.8652568999968935,
+        "tests": 8,
+        "failures": [
+          "Machin rational bracket refuted NEW PI_LOWER=3.14159265358979323846264338327950288519716939937510; copying conservative frozen PI_UPPER prefix does NOT give a lower enclosure."
+        ],
+        "resolution": "Corrected ONLY new module pi bracket to ...288419716939937510/511; frozen PI_UPPER is still conservative and untouched.",
+        "thresholds_changed": false
+      }
+    ]
+  },
+  "exact_MZI": {
+    "scene_binding_sha256": "113126cb73423597adcc47b5cf94740476e9ee859de38a00bb958f78b491d69b",
+    "producer_payload_sha256": "d9a2d53531828cfefc85116427c1ba4f726f464bbb7891e1a31e11357f446f1b",
+    "generated_record_count": 13,
+    "terminal_count": 4,
+    "field_words_by_id": {
+      "9": [
+        3204448256,
+        0
+      ],
+      "10": [
+        0,
+        3204448256
+      ],
+      "11": [
+        0,
+        3204448256
+      ],
+      "12": [
+        1056964608,
+        0
+      ]
+    },
+    "per_path_L1_upper_rational": [
+      14384472996752096,
+      1.6225927682921336e+32
+    ],
+    "per_group_L1_upper_rational": [
+      14384472996752096,
+      8.112963841460668e+31
+    ],
+    "represented_reduction_error_rational": [
+      0,
+      1
+    ],
+    "accepted_ideal_scene_CPU_only": true
+  },
+  "coverage": [
+    "Signed terminal effective length and mirror phase .75 rad; binary64 analytic diagnostic only, 1e-12 comparison allowance not gate change",
+    "Two complex sources, 26 regenerated records/8 terminals, independent powers versus coherent cancellation",
+    "Bindings change with source/optics/reference/lambda; repeat deterministic payload",
+    "Empty/invalid coherence, external rows and mirror phase8.125 rejected",
+    "Actual nonzero subnormal rejected; quarter-cycle zero conversion charged",
+    "Nine exact rational perturbations verify product bound/cross term",
+    "Outward dyadic error ceiling, no rounding down",
+    "Exact alternating sin/cos enclosure and Machin pi identity"
+  ],
+  "code_sha256": {
+    "Blender/benchmarks/capacity_audit/scene_field_producer_cpu_v1.py": "1a697f1cbe6dab515d27dbf5e4c022aae8b6099115b9961d225c0a318de3d380",
+    "Blender/tests/test_scene_field_producer_cpu.py": "4c991551f1916b84697979dedffae2ef4abb6b4a64d24bf820b55cbbbf3671d8",
+    "Docs/EXP-005-SCENE-FIELD-PRODUCER-CPU-V1.md": "697c945b97594bc6b324dcfcdbc3f76a7ab67a622cbb1c27fbcbca152af799fe",
+    "Blender/benchmarks/capacity_audit/history_trace_cpu_v1.py": "92ca7ddb64d95afc3205ddcfb129a5a129a9b5255ff51daf9917c0cceb9c1346",
+    "Blender/benchmarks/capacity_audit/history_lengths_cpu_v1.py": "af48ff659152b5055bb4b3091ccdfa5655d995a0fb7bf607c784f243ae912ce3",
+    "Blender/benchmarks/capacity_audit/history_lineage_cpu_v2.py": "391dfc06fd2f37d8fb6ce2845b71f02d4eeba33007619ae6e4aae27ae5169bae",
+    "Blender/benchmarks/capacity_audit/history_completeness_cpu_v1.py": "750799dd1ad3639a4c84a30ef2e251ae4b1cb2c384d23511ff75b5fac387593a",
+    "Blender/benchmarks/capacity_audit/frontier_inputs.py": "8f6ad2037ede24934c50fb9c3980f0e00a3aeafaa87bf1de53b80c54271375a1",
+    "Blender/benchmarks/capacity_audit/gpu_geometry_probe.py": "0cb5d505fdda996e82d648f826288a843f992f05ecd6dfadc06b2926032aeb9a",
+    "Blender/benchmarks/capacity_audit/coherent_error_composition_cpu_v1.py": "7e7988ecdb014d2eb3efff09af8c0e4aaf7cf94b39835fb8b0dfa18d99693879",
+    "Blender/benchmarks/capacity_audit/coherent_reduction_cpu_v1.py": "cfd71837b19fd39cbf321ad41319587cd497397d266cc221d9da0c02c4f7d785",
+    "Blender/benchmarks/capacity_audit/scalar_job_launcher_v1.py": "2f5211d63ac09fb026858c19641f591be4d8bbb6add5d90cf0d6155f25d79aa8",
+    "Blender/tests/exp005_history_mzi_audit.py": "a22345b36a056386ff713972f7be2fed27f56fc46da0cf3549640166d39bff27",
+    "Blender/shaders/exp005_signed_phase_probe.glsl": "2f9aa95ae4d15755765d0ba6cd38fdcd0fc313a3b248530feeb0478464806b29",
+    "Blender/shaders/exp005_shared_frontier.glsl": "914bf2962ead3c6a7b721a8dc2aa6c1e796af4bde1892db1802c3ca93ebdfcd1"
+  },
+  "frozen_bytes_match_HEAD": {
+    "Blender/benchmarks/capacity_audit/history_trace_cpu_v1.py": true,
+    "Blender/benchmarks/capacity_audit/history_lengths_cpu_v1.py": true,
+    "Blender/benchmarks/capacity_audit/history_lineage_cpu_v2.py": true,
+    "Blender/benchmarks/capacity_audit/history_completeness_cpu_v1.py": true,
+    "Blender/benchmarks/capacity_audit/frontier_inputs.py": true,
+    "Blender/benchmarks/capacity_audit/gpu_geometry_probe.py": true,
+    "Blender/benchmarks/capacity_audit/coherent_error_composition_cpu_v1.py": true,
+    "Blender/benchmarks/capacity_audit/coherent_reduction_cpu_v1.py": true,
+    "Blender/benchmarks/capacity_audit/scalar_job_launcher_v1.py": true,
+    "Blender/tests/exp005_history_mzi_audit.py": true,
+    "Blender/shaders/exp005_signed_phase_probe.glsl": true,
+    "Blender/shaders/exp005_shared_frontier.glsl": true
+  },
+  "resource_snapshot": {
+    "utc": "2026-10-01T06:28:18.445306Z",
+    "ram_free_GiB": 5.289867401123047,
+    "holder": "filament:cv0_cons",
+    "tickets": [
+      "neuro3d:p03-cuda",
+      "filament:FIL-ENS3 cont+cons_cont+cons_40k"
+    ],
+    "own_GPU_admitted": false,
+    "reason": "foreign holder; RAM below own2+4GiB"
+  },
+  "native_promotion_allowed": false,
+  "GPU_executed": false,
+  "Blender_executed": false,
+  "peer_writer_executed": false,
+  "execution_authenticated": false,
+  "no_jev_aval": true,
+  "sharedboards_staged": false,
+  "request_to_Claude": {
+    "reply_to": "COHERENT-COMPOSITION-001-CODEX",
+    "reply_sha256": "1f7846e1c93364df9bba794df9fc82867728fc3751cba953adbfe1760026fa2b",
+    "request": "Existing producer artifacts ONLY: same-scene complete IDs/words/error metric/reference/lambda/source/coherence and existing backend/guard runtime envelope. No new GPU/sweep/guard review to respond. Grouped013 acknowledgment may include this ID/SHA."
+  },
+  "next": "Native comparison only against existing same-producer fields and bounds, or scalar pilot after actual exclusivity/resources. This producer uses original represented wavelength; it DOES NOT certify encoded/compensated/native phase transport."
+}
