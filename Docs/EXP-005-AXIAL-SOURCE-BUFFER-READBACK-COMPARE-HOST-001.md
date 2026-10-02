@@ -1,0 +1,21 @@
+# EXP-005 — comparación HOST de bytes SOURCE, sin aval de ejecución
+
+ID AXIAL-SOURCE-BUFFER-READBACK-COMPARE-HOST-001; Codex capacity_audit/EXP005 P1.
+Base8e5e6a866278c55e3d38276d4e12a5390ade1684.
+Nuevo modelo axial-SOURCE-buffer-readback-compare-HOST-v1 / COMPARE_UNATTESTED_BYTES_ONLY.
+
+Consumidor stdlib sin imports de decoder/encoder/compiler/runner: verifica pins heredados, recibo HOST preparado, mapping SOURCE/contextos/ORIGINAL/rowSHA y referencia CPU integer retenida. Request explícita liga SHA de plan, módulo, buffer INPUT y referencia RETAINED_CPU_INTEGER_OUTPUT_NOT_GPU_EXECUTION. Campo ORIGINAL no sustituye decodedwords: encoding error anterior permanece y no se recalcula. Cambiar origen/intent a GPU, aportar supuesto certificado extra o tolerancia se RECHAZA; no inventa autenticación.
+
+Packet exclusivamente originUNATTESTED_BYTES_NOT_GPU_EVIDENCE +base64 canónico acotado172chars/128bytes. Ocho uvec4 LOW64/HIGH64/valid/reserved,16bytes/slot, little-endian. ALL ocho status==1/reserved==0 y palabras bitwise iguales a referencia CPU retenida antes ANY SOURCEemit. Status0 descarta palabras incluso si coinciden; estado desconocido/reserved/worderror/signo de cero/NaN-Infbits/truncado/trailing/reordenación real-imag ->rechazo atómico. No conversión FP, tolerancia, nuevas RN o cargos ficticios.
+
+Cuatro matches puntuales SOURCE se reagrupan por mapping exacto, sin suma/campo/reflexión/material/fase/budget. Dos fuentes two_sources siguen separadas. 17cases19SOURCE sin INPUT, dos guardboxes negativas intactas, grupo0/38FALSE/phasequotaNone. OUTPUT anterior plan128bytes/resultNone intacto. Lo recibido aquí son bytes de control, NO OUTPUTGPU existente.
+
+Límite decisivo explícito: copiar expectedwords CPU en un buffer sintético produce match sin GPU. Slots con mismo valor pueden intercambiarse sin cambiar bytes; este comparador NO prueba procedencia/orden hardware ni auténtica asociación SOURCE. Test positivo de copia y control de permutación indistinguible retienen ambas limitaciones, execution_authenticatedFalse. Cambios observables real-imag/palabras sí se rechazan. Un SHA de bytes o coincidencia bitwise NO avala dispatch/readback/semántica numérica compiled/guard ni el pipeline de escena.
+
+Pruebas NUEVAS sólo construyen bytes CONTROL desde expectedwords retenidas, nunca ejecutan decoder/shader/cargas previas. Fixture pins una vez en unitprocess; producción verifica todos por solicitud. Oráculo independiente verifica pins/128bytes/mapping/words/scopes/negativos/limitaciones sin imports producción. Preservar fallos sin cambiar umbrales.
+
+CPU1hilo/afinidad1/hijo60s, GPU/Blender/compiler/decoder0. JEV LOCALfallback bloqueado/no retry. Histórico0337CLOSED/deadline intacto; GPU futura requiere reserva Claudeexclusive/gpuq/procesos/RAMVRAMtemp/guardfailclosed/deadlineNUEVO/RAM>=4GiBtrasbudget/VRAM<=18GiB/temp<=80C/budget>=1024bytescell+márgenes/temporales/piloto120s. Bytes192 HOST no presupuestoGPU. Sin SDKDrJit/Kaggle/publicación/push/merge, frozen/foreign/fixtures/conf1/bounds/caps intactos. Sharedboards/checkpoint SINstage; sólo propios revisados versionados. CPU sintética no GPUALU/Bpyfloat32/RT/óptica; U/GEMM no inferencia escena. IO/hash/setup/upstream/pipeline costesUNMEASUREDno0, testtimes no rendimiento/ganador.
+
+Skills cognición extendida reutiliza artifacts sin numerics replay y conserva evidencia; featuredevelopment añade rechazo ALLbeforeemit y límite de no-autenticación. Petición Claude ACK ID+SHA y SOLO artifacts YA EXISTENTES backend/guard/INPUT/OUTPUT mismo ORIGINAL-decoder-ABI-gauges-trabajo/costes completos ID/path/SHA/bytes; no fillerGPU. Próximo runner/receipt de ejecución separado y verificable, bajo guard/autorización por job; este comparador no emite permiso ni certificado.
+
+Resultado suite NUEVA: cuatro tests PASS/31rechazos (9request+12bytes atómicos emissions0,7base64typed,3model); control positivo sintético128bytes/cuatro SOURCE y permutación de slots iguales NOdetectable retenida. CPU1hilo/afinidad1/hijo60s, elapsed0.48484069999540225s; stdout6975bytes SHA494e8a4bdc15c615a3c22f728b782474919c4c45c055d015ce0c541e46a51538 conservado lossless en recibo. Cero cargas GPU/Blender/decoder/compiler; no fallos nuevos ni cambios de umbral. Oráculo independiente y commit se registran en recibo/checkpoint, no se presuponen aquí.
