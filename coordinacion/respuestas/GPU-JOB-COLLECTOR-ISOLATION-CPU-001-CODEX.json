@@ -1,0 +1,93 @@
+{
+  "id": "GPU-JOB-COLLECTOR-ISOLATION-CPU-001",
+  "owner": "Codex",
+  "priority": "P1",
+  "base_commit": "eea5b682cdaa5265db79ffa6880be9eb288f2279",
+  "scope": "fixed OWN CPU control worker only; bounded communicate/own Popen cleanup; NOT live telemetry/GPU runtime guard",
+  "upstream": {
+    "id": "GPU-JOB-MONITOR-LIFECYCLE-CPU-001",
+    "sha256": "faef200a51db844c1a9c66c9d040777d156b2e2faa066603a19eb13a4aa57164"
+  },
+  "code_doc_sha256": {
+    "Blender/benchmarks/capacity_audit/guarded_job.py": "958163c3bba7f16d619c9788893771eaf7fc6a17b1e295eae8cf84b15bfcd818",
+    "coordinacion/respuestas/AXIAL-SOURCE-BUFFER-READBACK-COMPARE-HOST-001-CODEX.json": "5017aab6f97375a4c4b7af12302e60f41c7195fff653e6c34b54e2ce51791574",
+    "Blender/benchmarks/capacity_audit/gpu_job_resource_policy_HOST_v1.py": "6d7ffe0724f42c287ab2985e52b3c0aa1d4fd7d94323fa1695f141067bb09afa",
+    "Blender/tests/test_gpu_job_resource_policy_HOST.py": "6febba7725cd1ca13d40d59dc3fbbb197d7b4c0dc5ba7585fadd74e8c5391359",
+    "Blender/tests/verify_gpu_job_resource_policy_HOST.py": "4ed9454cc0831adf14a3f46779ff297425c90214d4445f09141770b384aeeade",
+    "Docs/EXP-005-GPU-JOB-RESOURCE-POLICY-HOST-001.md": "a20d5ad1cc2e051290ba1dd3c908faed2a48e27414dc3942cc50cfd5533d6b5d",
+    "coordinacion/respuestas/GPU-JOB-RESOURCE-POLICY-HOST-001-CODEX.json": "cca0a2387e1e7f9fc9155cff9226c42efdfe5af6fa6938d17bcf3fef21e1f62d",
+    "Blender/benchmarks/capacity_audit/gpu_job_monitor_lifecycle_CPU_v1.py": "266b5a8b08f82586b1de371dd39fa7b78cc643f34feab676774cae28d326a4fc",
+    "Blender/tests/test_gpu_job_monitor_lifecycle_CPU.py": "5a81b8573c2c6f98c675ca34565df47988d1cea03abc55e165c889ddec8fb6b6",
+    "Blender/tests/verify_gpu_job_monitor_lifecycle_CPU.py": "f271ef88ebbaf65f6c7045b3735c1fa8ddac32545f3b0016b6429fdce1e11f3c",
+    "Docs/EXP-005-GPU-JOB-MONITOR-LIFECYCLE-CPU-001.md": "e966bf03d83f7103a90868fe659436244e217be72bcbed458c2fbfac8ba66b1c",
+    "coordinacion/respuestas/GPU-JOB-MONITOR-LIFECYCLE-CPU-001-CODEX.json": "faef200a51db844c1a9c66c9d040777d156b2e2faa066603a19eb13a4aa57164",
+    "Blender/benchmarks/capacity_audit/gpu_job_collector_control_worker_CPU_v1.py": "08658fc20e46d63f6e7a22c612191a50f9979308eaa7b8e64b49e04ae3d3cc40",
+    "Blender/benchmarks/capacity_audit/gpu_job_collector_isolation_CPU_v1.py": "afaa0f402752daaa2665fe9a15d1ba36bd90780007e5868df62c32938119ede4",
+    "Blender/tests/test_gpu_job_collector_isolation_CPU.py": "ab4e4d3686f18b3bbd2d4dcc585630d5c5e4a8c4870a9a19602ebf069863c8b2",
+    "Blender/tests/verify_gpu_job_collector_isolation_CPU.py": "c9f6d67d5285cc503d127d236fbdd7c5fc8e9c156b152251e3b36fe8b18b4cbd",
+    "Docs/EXP-005-GPU-JOB-COLLECTOR-ISOLATION-CPU-001.md": "fc6deaced3a8b9ea6dbddf9323d9f9eed4ed4c209a3d11a70dd95e53556b2dde"
+  },
+  "python_sha256": "d932e5e2f324d57f392e8fd063dcf6d0185be8a664c57c6d24e7762ed02c28ca",
+  "worker_sha256": "08658fc20e46d63f6e7a22c612191a50f9979308eaa7b8e64b49e04ae3d3cc40",
+  "test_run": {
+    "rc": 0,
+    "timed_out": false,
+    "elapsed_seconds": 1.3816865000117105,
+    "threads": 1,
+    "affinity_mask": 1,
+    "hard_child_timeout_seconds": 60,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      "-c",
+      "import ctypes,runpy; k=ctypes.windll.kernel32; k.GetCurrentProcess.restype=ctypes.c_void_p; k.SetProcessAffinityMask.argtypes=[ctypes.c_void_p,ctypes.c_size_t]; assert k.SetProcessAffinityMask(k.GetCurrentProcess(),1); runpy.run_path('D:/PROJECTS/9_NEBULA_NEW/Blender/tests/test_gpu_job_collector_isolation_CPU.py',run_name='__main__')"
+    ],
+    "stdout_bytes": 14386,
+    "stdout_sha256": "c85c50aff3c337cf778e8dab443f001796aaffa7f6d3ccd4a33a2d47eef2a740",
+    "stdout_zlib_base64": "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",
+    "stderr": "test_faults_cleanup_only_own_child (__main__.Tests.test_faults_cleanup_only_own_child) ... ok\r\ntest_invalid_INPUT_and_identity_before_launch (__main__.Tests.test_invalid_INPUT_and_identity_before_launch) ... ok\r\ntest_monitor_integration_timeout_no_retry_spawn (__main__.Tests.test_monitor_integration_timeout_no_retry_spawn) ... ok\r\ntest_valid_fixed_child (__main__.Tests.test_valid_fixed_child) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 4 tests in 1.076s\r\n\r\nOK\r\n"
+  },
+  "new_unexpected_failures": [],
+  "expected_negative_process_results": "retained full stdout/stderr SHA/zlib in test_run; 2timeout/2packetinvalid/1cap/1exiterror",
+  "old_failures_preserved": true,
+  "actual_GPU_job_admission": false,
+  "GPU_executed": false,
+  "Blender_executed": false,
+  "live_telemetry_collected": false,
+  "queue_reservation_created": false,
+  "foreign_processes_touched": false,
+  "actual_own_CPU_children": 8,
+  "limits": [
+    "fixed bounded-output worker only; communicate NOT arbitrary adversarial stream safety",
+    "no live CPU/GPU resource telemetry collected",
+    "no GPU workload launch/termination, atomic reservation or TOCTOU proof",
+    "injected monitor clocks unchanged; no authenticated time origin",
+    "interpreter identity not atomic protection against local binary replacement",
+    "cleanup cannot guarantee against OS/hardware stalls"
+  ],
+  "jev": "LOCAL_FALLBACK_SECURITY_BLOCKED_NO_RETRY_NO_REMOTE_ENDORSEMENT",
+  "skills_influence": [
+    "codex-extended-cognition: retained upstream fixture and own-control diagnostics",
+    "feature-development: isolate fixed collector; explicit cleanup/failure states; no frozen changes"
+  ],
+  "historical_guard_deadline": "CLOSED_UNCHANGED",
+  "shared_boards": "LOCAL_UNSTAGED",
+  "oracle_precommit": {
+    "rc": 0,
+    "timed_out": false,
+    "elapsed_seconds": 0.11694680000073276,
+    "threads": 1,
+    "affinity_mask": 1,
+    "hard_child_timeout_seconds": 60,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      "-c",
+      "import ctypes,runpy; k=ctypes.windll.kernel32; k.GetCurrentProcess.restype=ctypes.c_void_p; k.SetProcessAffinityMask.argtypes=[ctypes.c_void_p,ctypes.c_size_t]; assert k.SetProcessAffinityMask(k.GetCurrentProcess(),1); runpy.run_path('D:/PROJECTS/9_NEBULA_NEW/Blender/tests/verify_gpu_job_collector_isolation_CPU.py',run_name='__main__')"
+    ],
+    "stdout_bytes": 246,
+    "stdout_sha256": "43b4240c7450454e427fcc41092b7c99d6d37c3ea2b90514b74aa772d842002a",
+    "stdout_zlib_base64": "eJwtjjFPAzEMhXek/gcrc6UCQ4tgQh1YK1XMUZTzcYFcHNlOryfEf68DbPb3np/ftxMN2sQ9gzu9ns9uC66m0veHg820FH88vfs4pTwwFuNP/1jTjNTUx4yhtGrKYz9mzKGVOHnGT4ya6C9sbxqj8uqlhuWX3Rt6s+wwzEnEjMbGkAWNS6SKvdSYrjiArEUn1BTBysBC/IUMVPL6AoUgpwuCYsa5P9h9tMDDLijN5mcU5EvoPaAy0eh+Nnc35oVTVQ==",
+    "stderr": ""
+  }
+}
