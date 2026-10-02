@@ -1,0 +1,87 @@
+{
+  "id": "PRECISION-AXIAL-SCENE-CANDIDATES-CPU-001",
+  "owner": "Codex",
+  "priority": "P0",
+  "base_commit": "b9caf76c33f07b3523b6f72e645eeaa13f6fc651",
+  "upstream": {
+    "id": "PRECISION-BRANCH-PRIMITIVE-STATE-CPU-001",
+    "sha256": "d44783d36ecd449cb1e7252a10fc1a8f10e7d5b095a76f1a64d9dee8df509b86"
+  },
+  "code_doc_sha256": {
+    "coordinacion/experimentos/EXP-005-PRIMITIVE-TIES-PREPARACION.md": "93009dd3327e6d62f177066bda81260d77f4b477f9abf472aa9606d593c2ca3b",
+    "coordinacion/respuestas/PRECISION-BRANCH-PRIMITIVE-STATE-CPU-001-CODEX.json": "d44783d36ecd449cb1e7252a10fc1a8f10e7d5b095a76f1a64d9dee8df509b86",
+    "Docs/EXP-005-PRIMITIVE-RETURN-CPU-2026-09-30.md": "e424862401661bc4e53644716e63a6d3b993a3482b1425d269f6ac0e49876e52",
+    "Docs/EXP-005-PRECISION-AXIAL-SCENE-CANDIDATES-CPU-001.md": "aa5b21458e01696b9ff1be8f4a5d6de46e85788eb5a1f9610bcb99f88fe94e6a",
+    "Docs/EXP-005-PRIMITIVE-TIES-CPU-2026-09-30.md": "e300d4ea12c6f2db95045e0686f9716d2d1d3043eebbe4a6a1e9efaf099dc467",
+    "coordinacion/respuestas/GPU-JOB-COLLECTION-CLOCK-CPU-001-CODEX.json": "b458568dfe45d6085b493597b83203147a0ebcab34516cf05ce91e4d752b99e2",
+    "Blender/tests/test_branch_primitive_state_CPU.py": "8367d10ea56139ed863ac6670a49061a1b82eddfa592a7d9c92465ac01dcf87c",
+    "Blender/benchmarks/capacity_audit/primitive_tie_guard_v1.py": "7b1ee814d38b2949b574083c8f644ec4e54ee02b2a751a4efa9dd581d721153a",
+    "Blender/benchmarks/capacity_audit/gpu_geometry_probe.py": "0cb5d505fdda996e82d648f826288a843f992f05ecd6dfadc06b2926032aeb9a",
+    "Blender/benchmarks/capacity_audit/axial_scene_candidates_exact_CPU_v1.py": "595b2d0ca0532dc19c3ccf3873bb727126287d27da05708adfd5948a6063f6a0",
+    "Blender/benchmarks/capacity_audit/branch_primitive_state_CPU_v1.py": "89344e5c19f40a5c3db86a62126b3f220a81e88f5fb054d2e348636f8ce936ed",
+    "Blender/tests/test_axial_scene_candidates_exact_CPU.py": "759409f53b218228c8bebb323d99a966cd86c7049a80b8e4a0573c8961239338",
+    "Blender/tests/verify_axial_scene_candidates_exact_CPU.py": "7e4bb3bcfbb5e26def5d550521dcbfdd5a3bbc16ee6706edf7e2dd5432ad11c6",
+    "coordinacion/experimentos/EXP-005-PRIMITIVE-RETURN-PREPARACION.md": "83e58a49bdd3910fb5fb8857332583b2c7d93406a657e850700270fbff83ba58",
+    "Blender/benchmarks/capacity_audit/history_lineage_cpu_v2.py": "391dfc06fd2f37d8fb6ce2845b71f02d4eeba33007619ae6e4aae27ae5169bae",
+    "Docs/EXP-005-PRECISION-BRANCH-PRIMITIVE-STATE-CPU-001.md": "95732d08dbb435c9aed20988fea9488f56a272ea59949a646f6afdb283160ca4",
+    "Blender/benchmarks/capacity_audit/frontier_inputs.py": "8f6ad2037ede24934c50fb9c3980f0e00a3aeafaa87bf1de53b80c54271375a1",
+    "Blender/benchmarks/capacity_audit/primitive_return_guard_v1.py": "06504fcbdae312814353c7694b27597c4342381f3a50c7c34296504390023e0a",
+    "Blender/tests/verify_branch_primitive_state_CPU.py": "1bfc4ba8f6e6c5f79ad11fbcbf2008c499896c20a54472ed444f55fc05fda456"
+  },
+  "test_run": {
+    "rc": 0,
+    "timed_out": false,
+    "elapsed_seconds": 1.4675765999709256,
+    "threads": 1,
+    "affinity_mask": 1,
+    "hard_child_timeout_seconds": 60,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      "-c",
+      "import ctypes,runpy; k=ctypes.windll.kernel32; k.GetCurrentProcess.restype=ctypes.c_void_p; k.SetProcessAffinityMask.argtypes=[ctypes.c_void_p,ctypes.c_size_t]; assert k.SetProcessAffinityMask(k.GetCurrentProcess(),1); runpy.run_path('D:/PROJECTS/9_NEBULA_NEW/Blender/tests/test_axial_scene_candidates_exact_CPU.py',run_name='__main__')"
+    ],
+    "stdout_bytes": 34977,
+    "stdout_sha256": "0a8ec0de6eb77a097d9b21a85a97131eee15a7d68a72f67c1c3afd84dfd3b63a",
+    "stdout_zlib_base64": "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",
+    "stderr": "test_CONTACT_miss_underflow_stop (__main__.Tests.test_CONTACT_miss_underflow_stop) ... ok\r\ntest_all_SOURCE_preflight_atomic (__main__.Tests.test_all_SOURCE_preflight_atomic) ... ok\r\ntest_exact_scene_TWO_SOURCE_and_defensive_copy (__main__.Tests.test_exact_scene_TWO_SOURCE_and_defensive_copy) ... ok\r\ntest_float64_cast_collision_STOP_before_ANY_branch (__main__.Tests.test_float64_cast_collision_STOP_before_ANY_branch) ... ok\r\ntest_positive_thin_gap_no_epsilon_and_object_ambiguity (__main__.Tests.test_positive_thin_gap_no_epsilon_and_object_ambiguity) ... ok\r\ntest_schema_domain_and_binding (__main__.Tests.test_schema_domain_and_binding) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 6 tests in 0.014s\r\n\r\nOK\r\n"
+  },
+  "precommit_verification": {
+    "rc": 0,
+    "timed_out": false,
+    "elapsed_seconds": 0.24807349999900907,
+    "threads": 1,
+    "affinity_mask": 1,
+    "hard_child_timeout_seconds": 60,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      "-c",
+      "import ctypes,runpy; k=ctypes.windll.kernel32; k.GetCurrentProcess.restype=ctypes.c_void_p; k.SetProcessAffinityMask.argtypes=[ctypes.c_void_p,ctypes.c_size_t]; assert k.SetProcessAffinityMask(k.GetCurrentProcess(),1); runpy.run_path('D:/PROJECTS/9_NEBULA_NEW/Blender/tests/verify_axial_scene_candidates_exact_CPU.py',run_name='__main__')"
+    ],
+    "stdout_bytes": 192,
+    "stdout_sha256": "484a9522ec7c44d6d5efcda0c727815b8c216285550d6de08d20327f3b328aa9",
+    "stdout_zlib_base64": "eJxFjbEKAjEMhnfBdwidXVwE3UTEseV6N5dQc1qo7dHm4ER8d1MdXMLP/yVfXupiBkcL+Znpqg4wYqy0AYWcH8E7q4fudHY3ZBLIZW7MY2Xnc4yhhpyc7bX5w7FQvbvqKVGVdruTbgrpm/eSq89Tc6lCk6xSkr9QkMWEEXAJMjuteziZAX4ayCk+Vbtl5LmZlDlaq97r1Qc0jD64",
+    "stderr": ""
+  },
+  "status": "PARTIAL_EXACT_AXIAL_ROOT_CPU_PASS_NATIVE_STOP",
+  "scope_flags": {
+    "GPU_executed": false,
+    "Blender_executed": false,
+    "old_fixture_replay": false,
+    "live_telemetry": false,
+    "native_promotion_allowed": false,
+    "full_field_certified": false,
+    "full_costs": "UNMEASURED_NOT_ZERO"
+  },
+  "limitations": [
+    "Fresh represented rational reduced scenes only, NOT authenticated Bpy/native/physical geometry.",
+    "Axial planes and exactly axis-unit source directions only; no general geometry/native hi-lo.",
+    "Root t rational equals represented root distance; no accumulated length/reference/phase guarantee.",
+    "Floating conversion gates preserve minimum-ID set and frozen tie band only; not distance error bound/native numerical proof.",
+    "No arbitrary optical defaults: materials, lambda, references, fields intentionally absent and NOT certified.",
+    "All SOURCE preflight before ANY branch; miss/contact/cast failure remains STOP.",
+    "Frozen fixtures/bounds/caps/runners/shaders/guards/historical CLOSED deadline untouched.",
+    "JEV security-blocked: LOCAL fallback, no retry or remote endorsement."
+  ]
+}
