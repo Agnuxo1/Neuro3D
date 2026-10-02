@@ -1,0 +1,82 @@
+{
+  "id": "PRECISION-BRANCH-PRIMITIVE-STATE-CPU-001",
+  "owner": "Codex",
+  "priority": "P0",
+  "base_commit": "e22bdca540e7013b7694ef4ea4ff10e18fa5ff5f",
+  "upstream_ack": {
+    "id": "GPU-JOB-COLLECTION-CLOCK-CPU-001",
+    "sha256": "b458568dfe45d6085b493597b83203147a0ebcab34516cf05ce91e4d752b99e2"
+  },
+  "code_doc_sha256": {
+    "Blender/benchmarks/capacity_audit/branch_primitive_state_CPU_v1.py": "89344e5c19f40a5c3db86a62126b3f220a81e88f5fb054d2e348636f8ce936ed",
+    "Blender/benchmarks/capacity_audit/gpu_geometry_probe.py": "0cb5d505fdda996e82d648f826288a843f992f05ecd6dfadc06b2926032aeb9a",
+    "Docs/EXP-005-PRIMITIVE-RETURN-CPU-2026-09-30.md": "e424862401661bc4e53644716e63a6d3b993a3482b1425d269f6ac0e49876e52",
+    "Blender/benchmarks/capacity_audit/primitive_tie_guard_v1.py": "7b1ee814d38b2949b574083c8f644ec4e54ee02b2a751a4efa9dd581d721153a",
+    "coordinacion/experimentos/EXP-005-PRIMITIVE-RETURN-PREPARACION.md": "83e58a49bdd3910fb5fb8857332583b2c7d93406a657e850700270fbff83ba58",
+    "Blender/tests/test_branch_primitive_state_CPU.py": "8367d10ea56139ed863ac6670a49061a1b82eddfa592a7d9c92465ac01dcf87c",
+    "Docs/EXP-005-PRECISION-BRANCH-PRIMITIVE-STATE-CPU-001.md": "95732d08dbb435c9aed20988fea9488f56a272ea59949a646f6afdb283160ca4",
+    "Blender/benchmarks/capacity_audit/frontier_inputs.py": "8f6ad2037ede24934c50fb9c3980f0e00a3aeafaa87bf1de53b80c54271375a1",
+    "coordinacion/experimentos/EXP-005-PRIMITIVE-TIES-PREPARACION.md": "93009dd3327e6d62f177066bda81260d77f4b477f9abf472aa9606d593c2ca3b",
+    "coordinacion/respuestas/GPU-JOB-COLLECTION-CLOCK-CPU-001-CODEX.json": "b458568dfe45d6085b493597b83203147a0ebcab34516cf05ce91e4d752b99e2",
+    "Blender/tests/verify_branch_primitive_state_CPU.py": "1bfc4ba8f6e6c5f79ad11fbcbf2008c499896c20a54472ed444f55fc05fda456",
+    "Docs/EXP-005-PRIMITIVE-TIES-CPU-2026-09-30.md": "e300d4ea12c6f2db95045e0686f9716d2d1d3043eebbe4a6a1e9efaf099dc467",
+    "Blender/benchmarks/capacity_audit/primitive_return_guard_v1.py": "06504fcbdae312814353c7694b27597c4342381f3a50c7c34296504390023e0a"
+  },
+  "test_run": {
+    "rc": 0,
+    "timed_out": false,
+    "elapsed_seconds": 0.5308765000081621,
+    "threads": 1,
+    "affinity_mask": 1,
+    "hard_child_timeout_seconds": 60,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      "-c",
+      "import ctypes,runpy; k=ctypes.windll.kernel32; k.GetCurrentProcess.restype=ctypes.c_void_p; k.SetProcessAffinityMask.argtypes=[ctypes.c_void_p,ctypes.c_size_t]; assert k.SetProcessAffinityMask(k.GetCurrentProcess(),1); runpy.run_path('D:/PROJECTS/9_NEBULA_NEW/Blender/tests/test_branch_primitive_state_CPU.py',run_name='__main__')"
+    ],
+    "stdout_bytes": 35175,
+    "stdout_sha256": "3cdec6dfdd47bab645047435f04933c532f60db39dc9b59ccc5133e78ad0060d",
+    "stdout_zlib_base64": "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",
+    "stderr": "test_atomic_invalid_departures_and_pending_gate (__main__.Tests.test_atomic_invalid_departures_and_pending_gate) ... ok\r\ntest_binding_changes_reject_before_policy (__main__.Tests.test_binding_changes_reject_before_policy) ... ok\r\ntest_external_mutation_and_consumed_parent_no_policy (__main__.Tests.test_external_mutation_and_consumed_parent_no_policy) ... ok\r\ntest_fork_siblings_and_sources_are_isolated (__main__.Tests.test_fork_siblings_and_sources_are_isolated) ... ok\r\ntest_miss_bad_schema_and_depth_cap_no_optical_truncation (__main__.Tests.test_miss_bad_schema_and_depth_cap_no_optical_truncation) ... ok\r\ntest_other_triangle_and_positive_tiny_root_not_excluded (__main__.Tests.test_other_triangle_and_positive_tiny_root_not_excluded) ... ok\r\ntest_previous_anywhere_in_band_abort_never_skip (__main__.Tests.test_previous_anywhere_in_band_abort_never_skip) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 7 tests in 0.038s\r\n\r\nOK\r\n"
+  },
+  "precommit_verification": {
+    "rc": 0,
+    "timed_out": false,
+    "elapsed_seconds": 0.15897109999787062,
+    "threads": 1,
+    "affinity_mask": 1,
+    "hard_child_timeout_seconds": 60,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      "-c",
+      "import ctypes,runpy; k=ctypes.windll.kernel32; k.GetCurrentProcess.restype=ctypes.c_void_p; k.SetProcessAffinityMask.argtypes=[ctypes.c_void_p,ctypes.c_size_t]; assert k.SetProcessAffinityMask(k.GetCurrentProcess(),1); runpy.run_path('D:/PROJECTS/9_NEBULA_NEW/Blender/tests/verify_branch_primitive_state_CPU.py',run_name='__main__')"
+    ],
+    "stdout_bytes": 199,
+    "stdout_sha256": "6c5bae0a3d33ae52ec21ba1f53eadd14dc3879c392acbba43bf5caa21652f6d9",
+    "stdout_zlib_base64": "eJxVjE0LwjAMhu+C/6H0LIgfJ28yxKPDsXOpbWSBmpQ22xzif7c9egl5nrx5P/ra9gbe4EYBr0/qaUOGjdLdrb83F/NIltxgMHOwgkwlIWmsASo8gYmJX1wvxobA819HRMoFd4eyJxCLBN5MCHO1+2Ox2XGEAjovJAMIOtW0vXKWPHorsM1Spooc0C2KKSy6fhU51g7dnrtOf9erH7pXQuE=",
+    "stderr": ""
+  },
+  "status": "CPU_SYNTHETIC_STATE_POLICY_PASS_NATIVE_STOP",
+  "scope_flags": {
+    "GPU_executed": false,
+    "Blender_executed": false,
+    "ray_trace_executed": false,
+    "live_telemetry": false,
+    "native_promotion_allowed": false,
+    "old_fixture_replay": false,
+    "foreign_writers_executed": false,
+    "full_costs": "UNMEASURED_NOT_ZERO"
+  },
+  "limitations": [
+    "Synthetic SHA label a*64 is not geometry or exporter authentication.",
+    "Provided candidate set may omit hits; t_min filtering and other-face self-intersection remain unresolved.",
+    "Fork is state only, not material/energy/length/reference/phase/field proof.",
+    "Maximum64 state generations STOP, not approved optical truncation nor silent bound increase.",
+    "No global branch-ID registry across trees, adversarial Python-state or thread-safety claim.",
+    "CPU synthetic is not Bpyfloat32/GPU ALU/RT/physical optics or scene inference.",
+    "Frozen fixtures/bounds/caps/runners/shaders/guards/historical CLOSED deadline unchanged.",
+    "JEV security-blocked; explicit LOCAL fallback, no retry or remote endorsement."
+  ]
+}
