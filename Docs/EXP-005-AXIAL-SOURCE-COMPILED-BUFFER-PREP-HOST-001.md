@@ -1,0 +1,23 @@
+# EXP-005 — preparación HOST de buffers SOURCE para módulo compilado
+
+ID AXIAL-SOURCE-COMPILED-BUFFER-PREP-HOST-001; Codex capacity_audit/EXP005 P1.
+Base7bdaa15f9587a50b614798c08f1e154377929d4a.
+Modelo NUEVO axial-SOURCE-compiled-buffer-prep-HOST-v1, intención exclusivamente HOST_PREPARATION_ONLY.
+
+Une artifacts existentes SOURCE integer y compilación CPU por SHA. Producción verifica todos los pins de la línea y ambos recibos en cada solicitud. No importa decoder/encoder/compiler ni ejecuta suites/constructores anteriores; sólo lee resultados lossless. Selección NUEVA explícita liga recibo compilador, módulo SPIR-V, wrapper, ambos headers, targetVulkan1.0/compute/main y ABI. OpenGL, CPUdecoder legacy, otro módulo/header/intent/campos extra se rechazan; no autodetección ni downgrade.
+
+Las cuatro tramas120 existentes siguen etiquetadas como CPU con SHA9f22...: no se renombraron a GLSL ni representan ejecución GPU. Se validan TODOS los registros SOURCE/contextos/ORIGINAL/gauges/orden y headers/payloads antes de emitir buffers. El INPUT completo debe coincidir con snapshot retenido; fidelidad e integridad por hashes NO autenticación de escena externa.
+
+Nuevo ensamblado HOST: 64bytes = cuatro SOURCE complejas * cuatro uint32, sin pérdida/conversión/aritmética FP. Cada SOURCE conserva identidad, contexto, ORIGINAL y bindings. Ocho slots uvec2 HIGH32/LOW32, real e imag alternados. OUTPUT únicamente plan128bytes/ocho uvec4 LOW64/HIGH64/valid/reserved; result_bytes=None, no valores GPU ficticios ni ceros suministrados como resultado. Dos fuentes del caso two_sources no se suman ni se mezclan, y no se inventa campo/material/ledger.
+
+Reflexión estructural del módulo compilado exacto acredita decoraciones reales: set0/binding0 ArrayStride8 uvec2 uint32, set0/binding1 ArrayStride16 uvec4 uint32, miembros offset0. [GLSL4.50 sección4.4.5](https://registry.khronos.org/OpenGL/specs/gl/GLSLangSpec.4.50.pdf) describe layout de bloques; nuestro contrato usa las decoraciones observadas, no supone layout del driver. Esto NO sustituye SPIRV-Tools validation, creación de pipeline, ABI en dispositivo ni prueba semántica numérica.
+
+Plan no ejecutado8x1x1 con localSize1: cubre slots0..7 EXACTAMENTE. El wrapper congelado no comprueba índice/longitud; HOST debe rechazar padding/oversubscription/truncamiento. Este preparador NO es runner ni habilita dispatch; reserva/guard fail-closed/newdeadline/telemetría y presupuestos completos siguen pendientes. Bytes64+128 NO presupuestoGPU conservador, RAM/VRAM/setup/temporales no medidos. Ningún permiso/guard se infiere de compilerPASS.
+
+Tests propios cubren buffers/bindings/ORIGINAL/contextos, mutación tardía con emisión0, separación CPUtag/selectorcompiled, corrupción de frames, palabras malformadas y forma de dispatch. Oráculo independiente stdlib verifica recibo/pins/buffers/mapping y decoraciones binarias sin imports producción ni replay. Casos sintéticos retenidos solamente; 17casos19SOURCE sin INPUT, dos guardboxes negativas intactas, two_sources sólo control, grupo0/38FALSE/fasequotaNone.
+
+CPU1hilo/afinidad1/hijo60s, nuevo decoder/compiler/GPU/Blender0. JEV LOCALfallback bloqueado/no retry. Histórico0337 cerrado/deadline intacto; GPU futura requiere coordinación Claudeexclusive/gpuq/procesos/RAMVRAMtemp/guardfailclosed/newdeadline/límites originales. No SDKDrJit/Kaggle/publicación/push/merge. Frozen runners/shaders/fixtures/conf1/v0/v4/0119/0315/nearestV2/bounds/caps/fallos/foreignfiles intactos. Sharedboards/checkpoint SINstage; sólo propios revisados versionados. CPUHOST NO GPUALU/Bpyfloat32/RT/óptica, U/GEMM no inferencia escena. Testtime no throughput/ganador/costes completos.
+
+Skills: cognición extendida reutiliza artifacts y resultados íntegros sin repetir cálculos; desarrollo delimita preparación HOST y asegura rechazo atómico del INPUT. Pedir Claude ACK ID+SHA y SOLO artifacts YA EXISTENTES de backend/guard/INPUT/OUTPUT MISMO ORIGINAL-decoder-ABI-gauges-trabajo/costes completos ID/path/SHA/bytes. Próximo integración de runner NUEVO sólo bajo contrato/guard comprobados; preparación no autentica ejecución ni readback.
+
+Resultado suite: 4testsPASS6.1946463999920525s, CPU1hilo/afinidad1/hijo60s; stdout39900bytes SHAd7e87a6e276a502b8d0402967cf0df7a05a2804dca7522921c1a7c951d7f1c92. Negativos42:13INPUT atómicos/emisión0+13frame+9dispatch+3module+4model. Cuatro SOURCE/8slots/3contextos;64INPUT/128plannedOUTPUTNone; dos guardboxesNEG siguen intactas. No nuevos decoder/compiler/GPUcalls, OUTPUTGPU no existe. Declaración de capacidad del wrapper: NO boundscheck en shader; forma exacta exigida por HOST, no autoriza GPU.
