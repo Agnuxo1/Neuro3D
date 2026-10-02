@@ -1,0 +1,83 @@
+{
+  "id": "GPU-JOB-MONITOR-LIFECYCLE-CPU-001",
+  "owner": "Codex",
+  "priority": "P1",
+  "base_commit": "88bfc6c17599c413ce9715be75efadb73cf56db0",
+  "scope": "single-thread CPU lifecycle component with injected clocks/collectors; NOT runtime GPU guard/launcher/authorization",
+  "upstream": {
+    "id": "GPU-JOB-RESOURCE-POLICY-HOST-001",
+    "sha256": "cca0a2387e1e7f9fc9155cff9226c42efdfe5af6fa6938d17bcf3fef21e1f62d"
+  },
+  "code_doc_sha256": {
+    "Blender/benchmarks/capacity_audit/guarded_job.py": "958163c3bba7f16d619c9788893771eaf7fc6a17b1e295eae8cf84b15bfcd818",
+    "coordinacion/respuestas/AXIAL-SOURCE-BUFFER-READBACK-COMPARE-HOST-001-CODEX.json": "5017aab6f97375a4c4b7af12302e60f41c7195fff653e6c34b54e2ce51791574",
+    "Blender/benchmarks/capacity_audit/gpu_job_resource_policy_HOST_v1.py": "6d7ffe0724f42c287ab2985e52b3c0aa1d4fd7d94323fa1695f141067bb09afa",
+    "Blender/tests/test_gpu_job_resource_policy_HOST.py": "6febba7725cd1ca13d40d59dc3fbbb197d7b4c0dc5ba7585fadd74e8c5391359",
+    "Blender/tests/verify_gpu_job_resource_policy_HOST.py": "4ed9454cc0831adf14a3f46779ff297425c90214d4445f09141770b384aeeade",
+    "Docs/EXP-005-GPU-JOB-RESOURCE-POLICY-HOST-001.md": "a20d5ad1cc2e051290ba1dd3c908faed2a48e27414dc3942cc50cfd5533d6b5d",
+    "coordinacion/respuestas/GPU-JOB-RESOURCE-POLICY-HOST-001-CODEX.json": "cca0a2387e1e7f9fc9155cff9226c42efdfe5af6fa6938d17bcf3fef21e1f62d",
+    "Blender/benchmarks/capacity_audit/gpu_job_monitor_lifecycle_CPU_v1.py": "266b5a8b08f82586b1de371dd39fa7b78cc643f34feab676774cae28d326a4fc",
+    "Blender/tests/test_gpu_job_monitor_lifecycle_CPU.py": "5a81b8573c2c6f98c675ca34565df47988d1cea03abc55e165c889ddec8fb6b6",
+    "Blender/tests/verify_gpu_job_monitor_lifecycle_CPU.py": "f271ef88ebbaf65f6c7045b3735c1fa8ddac32545f3b0016b6429fdce1e11f3c",
+    "Docs/EXP-005-GPU-JOB-MONITOR-LIFECYCLE-CPU-001.md": "e966bf03d83f7103a90868fe659436244e217be72bcbed458c2fbfac8ba66b1c"
+  },
+  "test_run": {
+    "rc": 0,
+    "timed_out": false,
+    "elapsed_seconds": 0.20806799997808412,
+    "threads": 1,
+    "affinity_mask": 1,
+    "hard_child_timeout_seconds": 60,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      "-c",
+      "import ctypes,runpy; k=ctypes.windll.kernel32; k.GetCurrentProcess.restype=ctypes.c_void_p; k.SetProcessAffinityMask.argtypes=[ctypes.c_void_p,ctypes.c_size_t]; assert k.SetProcessAffinityMask(k.GetCurrentProcess(),1); runpy.run_path('D:/PROJECTS/9_NEBULA_NEW/Blender/tests/test_gpu_job_monitor_lifecycle_CPU.py',run_name='__main__')"
+    ],
+    "stdout_bytes": 67455,
+    "stdout_sha256": "6c1c0ce21bc9af3fde5bf67c85d265f359ccf9b1a08c2085f56ec94254d2dcc8",
+    "stdout_zlib_base64": "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",
+    "stderr": "test_budget_plan_freeze_and_defensive_views (__main__.Tests.test_budget_plan_freeze_and_defensive_views) ... ok\r\ntest_elapsed_timeout_without_waiting (__main__.Tests.test_elapsed_timeout_without_waiting) ... ok\r\ntest_faults_are_terminal_before_retry_collector (__main__.Tests.test_faults_are_terminal_before_retry_collector) ... ok\r\ntest_initial_invalid_and_interrupt_latch (__main__.Tests.test_initial_invalid_and_interrupt_latch) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 4 tests in 0.053s\r\n\r\nOK\r\n"
+  },
+  "new_failures": [],
+  "prior_failures_preserved": true,
+  "actual_GPU_job_admission": false,
+  "GPU_executed": false,
+  "Blender_executed": false,
+  "live_telemetry_collected": false,
+  "child_workload_launched": false,
+  "queue_reservation_created": false,
+  "foreign_processes_affected": false,
+  "limits": [
+    "injected clocks and collectors not authenticated",
+    "no timeout isolation for blocking collector",
+    "no atomic reservation or TOCTOU verification",
+    "no owned-child identity/termination",
+    "single-thread only; mutable Python internals not attacker-proof"
+  ],
+  "jev": "LOCAL_FALLBACK_SECURITY_BLOCKED_NO_RETRY_NO_REMOTE_ENDORSEMENT",
+  "skills_influence": [
+    "codex-extended-cognition: retained policy artifacts; synthetic vs runtime distinction",
+    "feature-development: immutable plan snapshots; terminal STOP before callbacks; no frozen guard changes"
+  ],
+  "historical_guard_deadline": "CLOSED_UNCHANGED",
+  "shared_boards": "LOCAL_UNSTAGED",
+  "oracle_precommit": {
+    "rc": 0,
+    "timed_out": false,
+    "elapsed_seconds": 0.11669830000028014,
+    "threads": 1,
+    "affinity_mask": 1,
+    "hard_child_timeout_seconds": 60,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      "-c",
+      "import ctypes,runpy; k=ctypes.windll.kernel32; k.GetCurrentProcess.restype=ctypes.c_void_p; k.SetProcessAffinityMask.argtypes=[ctypes.c_void_p,ctypes.c_size_t]; assert k.SetProcessAffinityMask(k.GetCurrentProcess(),1); runpy.run_path('D:/PROJECTS/9_NEBULA_NEW/Blender/tests/verify_gpu_job_monitor_lifecycle_CPU.py',run_name='__main__')"
+    ],
+    "stdout_bytes": 238,
+    "stdout_sha256": "f4f8040b4faf35a09346829abc4eb791e09c88d86a630adc17a9a7d4b9a7da3d",
+    "stdout_zlib_base64": "eJwdjsFqwzAMhu+DvYPwuZBkYztsp9FDjw1kPY1ijKIyNbZVLGUwxt69dm7S96Ff/59TC7aqewM3fkyT24G7cW77MNRZjXH59dPncfQo2YrEzb1UZ5xIVlPfyNfw1O/gte/P1XBm4xB9kpmiL3QlNJYt9bnqw3jyYU6sWmFllxCV2jOUG7UmnNsFzbAfT4BRcNEOJcYKpeg7ZIEY1ozfnVFJnENL74JJYoRCSuVnQ4BUjC+Mwcj9Pz7cAceoUBM=",
+    "stderr": ""
+  }
+}
