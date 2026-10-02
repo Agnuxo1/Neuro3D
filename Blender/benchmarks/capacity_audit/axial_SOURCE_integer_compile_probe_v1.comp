@@ -1,0 +1,14 @@
+// COMPILE-ONLY probe. NO dispatch, scene authentication or runtime admission.
+// Concatenate #version 450, frozen signed512, frozen SOURCE header, then this file.
+// ABI of this NEW test wrapper: INPUT HIGH32/LOW32; OUTPUT LOW64/HIGH64/status/reserved.
+// Failure status=0, words zero INVALID. No CPU evidence substitutes for GPU results.
+layout(local_size_x=1,local_size_y=1,local_size_z=1) in;
+layout(std430,set=0,binding=0) readonly buffer ProbeInput { uvec2 source_limbs[]; };
+layout(std430,set=0,binding=1) writeonly buffer ProbeOutput { uvec4 result_words[]; };
+void main() {
+    uint i=gl_GlobalInvocationID.x;
+    uvec2 words;
+    bool valid=exp005_source_hilo_zeroaware_words_v1(source_limbs[i],words);
+    if(!valid) { result_words[i]=uvec4(0u); return; }
+    result_words[i]=uvec4(words,1u,0u);
+}
