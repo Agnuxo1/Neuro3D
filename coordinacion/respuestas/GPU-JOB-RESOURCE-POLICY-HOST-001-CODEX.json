@@ -1,0 +1,119 @@
+{
+  "id": "GPU-JOB-RESOURCE-POLICY-HOST-001",
+  "owner": "Codex",
+  "priority": "P1",
+  "base_commit": "d940221600dfd590264d3d542de5f6cd589387d5",
+  "scope": "pure HOST conservative resource arithmetic only; NO executable guard or runtime authorization",
+  "historical_guard_sha256": "958163c3bba7f16d619c9788893771eaf7fc6a17b1e295eae8cf84b15bfcd818",
+  "historical_guard_deadline": "2026-09-30T06:00:00Z_CLOSED_UNCHANGED",
+  "static_observation": "historical monitor violations invocation omits host_estimate/device_estimate; defaults zero. NOT executed or reopened",
+  "code_doc_sha256": {
+    "Blender/benchmarks/capacity_audit/guarded_job.py": "958163c3bba7f16d619c9788893771eaf7fc6a17b1e295eae8cf84b15bfcd818",
+    "coordinacion/respuestas/AXIAL-SOURCE-BUFFER-READBACK-COMPARE-HOST-001-CODEX.json": "5017aab6f97375a4c4b7af12302e60f41c7195fff653e6c34b54e2ce51791574",
+    "Blender/benchmarks/capacity_audit/gpu_job_resource_policy_HOST_v1.py": "6d7ffe0724f42c287ab2985e52b3c0aa1d4fd7d94323fa1695f141067bb09afa",
+    "Blender/tests/test_gpu_job_resource_policy_HOST.py": "6febba7725cd1ca13d40d59dc3fbbb197d7b4c0dc5ba7585fadd74e8c5391359",
+    "Blender/tests/verify_gpu_job_resource_policy_HOST.py": "4ed9454cc0831adf14a3f46779ff297425c90214d4445f09141770b384aeeade",
+    "Docs/EXP-005-GPU-JOB-RESOURCE-POLICY-HOST-001.md": "a20d5ad1cc2e051290ba1dd3c908faed2a48e27414dc3942cc50cfd5533d6b5d"
+  },
+  "test_run": {
+    "rc": 0,
+    "timed_out": false,
+    "elapsed_seconds": 0.17889650000142865,
+    "threads": 1,
+    "affinity_mask": 1,
+    "hard_child_timeout_seconds": 60,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      "-c",
+      "import ctypes,runpy; k=ctypes.windll.kernel32; k.GetCurrentProcess.restype=ctypes.c_void_p; k.SetProcessAffinityMask.argtypes=[ctypes.c_void_p,ctypes.c_size_t]; assert k.SetProcessAffinityMask(k.GetCurrentProcess(),1); runpy.run_path('D:/PROJECTS/9_NEBULA_NEW/Blender/tests/test_gpu_job_resource_policy_HOST.py',run_name='__main__')"
+    ],
+    "stdout_bytes": 56554,
+    "stdout_sha256": "b1ca76aabde42d7ae41e05eb9e7631fc1f5a8a268dc9135975d30a0b71a758bb",
+    "stdout_zlib_base64": "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",
+    "stderr": "test_baseline_does_not_authorize (__main__.Tests.test_baseline_does_not_authorize) ... ok\r\ntest_boundary_and_monitor_budget_not_dropped (__main__.Tests.test_boundary_and_monitor_budget_not_dropped) ... ok\r\ntest_closed_typed_INPUT (__main__.Tests.test_closed_typed_INPUT) ... ok\r\ntest_limits_and_bindings (__main__.Tests.test_limits_and_bindings) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 4 tests in 0.003s\r\n\r\nOK\r\n"
+  },
+  "new_failures": [
+    {
+      "kind": "independent_oracle_initial_count_assertion_FAIL",
+      "run": {
+        "rc": 1,
+        "timed_out": false,
+        "elapsed_seconds": 0.14182980000623502,
+        "threads": 1,
+        "affinity_mask": 1,
+        "hard_child_timeout_seconds": 60,
+        "command": [
+          "C:/Python313/python.exe",
+          "-B",
+          "-c",
+          "import ctypes,runpy; k=ctypes.windll.kernel32; k.GetCurrentProcess.restype=ctypes.c_void_p; k.SetProcessAffinityMask.argtypes=[ctypes.c_void_p,ctypes.c_size_t]; assert k.SetProcessAffinityMask(k.GetCurrentProcess(),1); runpy.run_path('D:/PROJECTS/9_NEBULA_NEW/Blender/tests/verify_gpu_job_resource_policy_HOST.py',run_name='__main__')"
+        ],
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_zlib_base64": "eJwDAAAAAAE=",
+        "stderr": "Traceback (most recent call last):\r\n  File \"<string>\", line 1, in <module>\r\n    import ctypes,runpy; k=ctypes.windll.kernel32; k.GetCurrentProcess.restype=ctypes.c_void_p; k.SetProcessAffinityMask.argtypes=[ctypes.c_void_p,ctypes.c_size_t]; assert k.SetProcessAffinityMask(k.GetCurrentProcess(),1); runpy.run_path('D:/PROJECTS/9_NEBULA_NEW/Blender/tests/verify_gpu_job_resource_policy_HOST.py',run_name='__main__')\r\n                                                                                                                                                                                                                               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"<frozen runpy>\", line 287, in run_path\r\n  File \"<frozen runpy>\", line 98, in _run_module_code\r\n  File \"<frozen runpy>\", line 88, in _run_code\r\n  File \"D:/PROJECTS/9_NEBULA_NEW/Blender/tests/verify_gpu_job_resource_policy_HOST.py\", line 25, in <module>\r\n    assert d[\"typed_missing_closed_rejections\"]==68\r\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nAssertionError\r\n"
+      },
+      "initial_sources": {
+        "Blender/benchmarks/capacity_audit/gpu_job_resource_policy_HOST_v1.py": {
+          "sha256": "6d7ffe0724f42c287ab2985e52b3c0aa1d4fd7d94323fa1695f141067bb09afa",
+          "bytes": 4924,
+          "source_zlib_base64": "eJzFWG1v2zYQ/u5fwWpf7NTOlLRLUycK4CZua8yxjcQp1hUGwUjnmItMqhTlxCvy33ekXixbStdhA2YEsXw8Pnc83j08ynGcSaKAyEh3uCAfx9dToiCWifKhE8mQ+2vCFNeLJWju75OR1IQRlQjNl0DuEqYCIhWJQC15HHMp9h3HaVyOL/pD4hHnLko6f8jbzg5kx9jprA6cxofBO9Q73Nt75TYuByN63h8O6bvP0/41ig/cw9eNq94lfT8cj69Q8HoP9RufjOi8NzEax1Yy7V9OjIReDobDwTkOHLv4aXwcXE/HV4Pz3pBe9HsXw8Gobya9eeu+eW00CPmJHLqHRx33beeVS9yjruviH7mZnp8QAStQBB41iACC/cZl7zd6PepNrj+Op7T3oU+Ni78YiBE85AH0pYhBrZjmKyBzXPZCQByTkC+5bhOB0QvhjmFQ00DsNybD3oj+2v9swL45GCvKA6ft3IMSEOKDD2EY4/ftWkNMMc7USFCwkLGmc/4IAbVjTrtBUqGGZSQVU+t8IBUvmbrjopAFsOI+bCPkwgoCQmdDOygRD6XGb5MOMtHUyDAREsRMtE9TTBaEXEAmeGqYINYsOWbLKCzNU2xJ2YrxkN2GsOthEm+tO/dbahYWqmYVoJjG/KZLHmK8UQghi8xco4DZ+ZUW9v2QJQEUvxE1UtLH3aOxz8RGDx79MIlxfynOz1H8Bfj3UILZCDIU3L1Chti2dOgcl0f9UBqPSjPMdrmPb+d0gbFTUi6LwafGu/F4uIne/+xMI4A54ULDHajmqtVtED4neh0B/iA8tgmPw4YizKNLTj2yMv+w4o9edQ5wAlGMx0A+sTCBvlJSNR0hhcAqsTV0KxNTfrkRJKevCVcQnOCIDH+eh5IZEysW4ua0GjiO+y3IKnXtQargOb9irXK/VuYhBIGjZweHx896hQml14VLmBE/p3VKeADIiHNecrDqTBra5qp9D+u43qeA+zZYMWiUvvCMZrfqSopEYtyIJStbtHYAg5EwDc0oZKIdC0z4hdTtvbaQD2l1tZcygNC4oIDFSFnel9nJbRLcgfZGuMwG0WptopB7mOrvRM4KX3iW7GuchMcIS47rnBqtuokKYjx4edIUPrVOsvhYrwtaLMTFOgr6MFBz9OMe958UEzp1LJrS1FM3t2psfLmfbSEUuJ2ixMpY3yWLWqp4MhEsqiP3f9dss+Juq2vTts7H5r/xJ8PdcSTfYmsuC9Ss2GpTZDV7a9Xs4Fa+bxwtQpjGILNRNv03FjKOqdpAxoNIk+ZGuT1FbPvUspWbpvQ+iyI8uZtORg5UKmp7FHFHB6PJzdSChTFkeZ6uPz1uZ57ndndxEnGPySoMzp+gJE1VW+XZO4f07HS7palAGi2a1h29hRBLwbQ825hZUsz2E5ykmi3Pcy6Hk1eHb46OnQogxv+WB0hGtNDJwCz9nqaQm8N6duo1Dw7djbVs/21gyJHrtqo+L3gY0BwibWPKRmp6rszsVl+AljGa2chOizCzSbNrWMCDzeRCeSvzihXsYnU2ZkrrfnlU3eBiZrxIdGC2Om12LD67A+Nwp0jhnX5lVg6zh9qnXrVhrJjUEAJ21thoxdi5gMmteWIalnxNG3ObxmV25lXWU0E2kcrGnf+SQrJyLlXyi8ybTKXelVsuAlN5zsv7LW9iqTSSe0EXdQZyppiqBCrgeUlnwNkWsDDM+fPMLa/9xxtk48f3Ps/2yrWdcqtVm9P5GYl1FHPT7xRwHImEiSBDibeT3VKPt8VYe0v22Nymm3Y9KRkAs17PznwZJ8s8VJVAbV8Ofjh2LWMijcL3jfyjO8gzcbW9Gt4U5hqUtymXutvDrGN8LXyrzKneLWYvUxnOydqjbxlp2+GuXV0WAhYEuIVS4A0kAnafq5ixcjLlVp5RT0ez24/xrzgf0vFCXoeZ3n/qppVX/JTWSYF0WlyxK9VldLDFRloqg+bkVAY9y2/lNbRqtQ6OP/B31GdRldpq4n5WGS3f7Wam/dyy/n312tqLFuuY+6iU5xUspVpXvau5Rs7Odt441BD7ZtKxe56vO7sQfHPSZrhre2e8+mrUxF1yzseji8F0MB7h6TkZI/Bn+n4wdXJay6ykp7OD5+ykzFNONly0BW0n269u+t12PkxuLJWzIHtd43TfMwRLR+AR/ATpOBeWoDcHFUv0wlx2fFbSRNPZaw8p6jVKWOltk5vTc4l6JRQBTFH7rmRz2cRjaFULM0+wDn2sLhO4m9Flv3d9c9W/oCM8bX/vX423QhP7MgLUS4RWSYw2MX3wwFPW45gg026/utm88yJShOsTDD/B81H4i/RdF14mGn8BseuTOA=="
+        },
+        "Blender/tests/test_gpu_job_resource_policy_HOST.py": {
+          "sha256": "6febba7725cd1ca13d40d59dc3fbbb197d7b4c0dc5ba7585fadd74e8c5391359",
+          "bytes": 5421,
+          "source_zlib_base64": "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"
+        },
+        "Blender/tests/verify_gpu_job_resource_policy_HOST.py": {
+          "sha256": "9f57108b6a1e81c91dc67009921f99c68c47adedb976e98ee2df4c8a3735daf1",
+          "bytes": 4816,
+          "source_zlib_base64": "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"
+        },
+        "Docs/EXP-005-GPU-JOB-RESOURCE-POLICY-HOST-001.md": {
+          "sha256": "d95153f88c1760b24088dc21843019c40741627a3c73e0d23fbb0fb374274d99",
+          "bytes": 4712,
+          "source_zlib_base64": "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"
+        }
+      },
+      "initial_pins": {
+        "Blender/benchmarks/capacity_audit/guarded_job.py": "958163c3bba7f16d619c9788893771eaf7fc6a17b1e295eae8cf84b15bfcd818",
+        "coordinacion/respuestas/AXIAL-SOURCE-BUFFER-READBACK-COMPARE-HOST-001-CODEX.json": "5017aab6f97375a4c4b7af12302e60f41c7195fff653e6c34b54e2ce51791574",
+        "Blender/benchmarks/capacity_audit/gpu_job_resource_policy_HOST_v1.py": "6d7ffe0724f42c287ab2985e52b3c0aa1d4fd7d94323fa1695f141067bb09afa",
+        "Blender/tests/test_gpu_job_resource_policy_HOST.py": "6febba7725cd1ca13d40d59dc3fbbb197d7b4c0dc5ba7585fadd74e8c5391359",
+        "Blender/tests/verify_gpu_job_resource_policy_HOST.py": "9f57108b6a1e81c91dc67009921f99c68c47adedb976e98ee2df4c8a3735daf1",
+        "Docs/EXP-005-GPU-JOB-RESOURCE-POLICY-HOST-001.md": "d95153f88c1760b24088dc21843019c40741627a3c73e0d23fbb0fb374274d99"
+      },
+      "diagnosis": "14 plan keys+16 snapshot keys+32 numeric-type controls+3 model controls+2 extra-key controls =67, not initial handwritten68. No safety threshold or production changes."
+    }
+  ],
+  "actual_GPU_job_admission": false,
+  "GPU_executed": false,
+  "live_telemetry_collected": false,
+  "queue_reservation_created": false,
+  "foreign_processes_affected": false,
+  "jev": "LOCAL_FALLBACK_SECURITY_BLOCKED_NO_RETRY_NO_REMOTE_ENDORSEMENT",
+  "skills_influence": [
+    "codex-extended-cognition: static observation distinct from execution; retained artifacts",
+    "feature-development: opt-in pure function; typed fail-closed INPUT; no changes to frozen guard"
+  ],
+  "shared_boards": "LOCAL_UNSTAGED",
+  "oracle_precommit": {
+    "rc": 0,
+    "timed_out": false,
+    "elapsed_seconds": 0.1295910999760963,
+    "threads": 1,
+    "affinity_mask": 1,
+    "hard_child_timeout_seconds": 60,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      "-c",
+      "import ctypes,runpy; k=ctypes.windll.kernel32; k.GetCurrentProcess.restype=ctypes.c_void_p; k.SetProcessAffinityMask.argtypes=[ctypes.c_void_p,ctypes.c_size_t]; assert k.SetProcessAffinityMask(k.GetCurrentProcess(),1); runpy.run_path('D:/PROJECTS/9_NEBULA_NEW/Blender/tests/verify_gpu_job_resource_policy_HOST.py',run_name='__main__')"
+    ],
+    "stdout_bytes": 197,
+    "stdout_sha256": "1f83654034d52a501fe1b49756154da3c268cdb5fae1126416320de756833ea7",
+    "stdout_zlib_base64": "eJwtjcEKwjAQRO+C/xByFgoKCnry5FUonkNItm2g2S27m0IR/91EvO28mdl5W1GvRezV2Oe97+3B2CVh0+d6FhQ/gAuEyjQ3ejpWrNsC0eUkknB0YSaB2BqX6j2eL+fjzyOscPCzQOUSaIE2IxvqBJqCqW8FePWaVjCek0658ZvhgpoymLF4jh3DP0XYTeAjE2VTcGFa6+xnv/sCQSlEKw==",
+    "stderr": ""
+  }
+}
