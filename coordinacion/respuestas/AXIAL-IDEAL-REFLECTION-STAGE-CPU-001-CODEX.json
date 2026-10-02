@@ -1,0 +1,125 @@
+{
+  "task_id": "AXIAL-IDEAL-REFLECTION-STAGE-CPU-001",
+  "owner": "Codex capacity_audit/EXP005",
+  "priority": "P1",
+  "base_commit": "32c1768347531bb209983e350cd1d702ae357e7f",
+  "model": "axial-retained-guarded-prefix-ideal-minus-one-reflection-CPU-v1",
+  "status": "CPU_IDEAL_REFLECTION_STAGE_VERIFIED_FULL_FIELD_STOP",
+  "inherited_pin_source": {
+    "path": "coordinacion/respuestas/AXIAL-GUARDED-SCENE-SOURCE-CPU-001-CODEX.json",
+    "sha256": "8f4ea4cc5d35cb3f56d800837ff553c438f4e635d7e482b2a197a45651e59da8"
+  },
+  "own_code_doc_sha256": {
+    "Blender/benchmarks/capacity_audit/axial_ideal_reflection_stage_CPU_v1.py": "3239816458f5365c271fb8812c4891863f17366bcc122fac5f7d65e6cd393ba0",
+    "Blender/tests/test_axial_ideal_reflection_stage_CPU.py": "c1e595f76dc276deea306d5ae7688d1d7fb568c58f4ba15711dfea81839f585a",
+    "Blender/tests/verify_axial_ideal_reflection_stage_CPU.py": "5d05b6ef4baf74a38ac009318ed554278409c72203c1d18c901dc05f57b26c56",
+    "Docs/EXP-005-AXIAL-IDEAL-REFLECTION-STAGE-CPU-001.md": "0d4c7dfc2bb8f91a3a2a391b14733bc2e6016bcd9a8478156115fac48aaf84a6"
+  },
+  "proof_scope": {
+    "GPU_executed": false,
+    "GPU_job_admission": false,
+    "accepted_full_field_pipeline": false,
+    "amplitude_budget_accepted": false,
+    "coherence_authenticated": false,
+    "complete_costs_measured": false,
+    "detector_evaluated": false,
+    "equal_work_comparison_admitted": false,
+    "execution_authenticated": false,
+    "field_sum_computed": false,
+    "field_values_computed": false,
+    "general_3D_geometry_proved": false,
+    "group_budget_accepted": false,
+    "group_copy_executed_new": false,
+    "mirror_phase_uncertainty_enclosed": false,
+    "native_argument_implemented": false,
+    "native_kernel_implemented": false,
+    "native_material_transport_implemented": false,
+    "native_power_implemented": false,
+    "native_reduction_implemented": false,
+    "native_signed_zero_graph_equivalence_proved": false,
+    "physical_detector_calibrated": false,
+    "physical_mirror_model_validated": false,
+    "physical_scene_uncertainty_certified": false,
+    "power_budget_accepted": false,
+    "power_executed_new": false,
+    "readout_budget_accepted": false,
+    "readout_executed_new": false,
+    "remaining_stages_error_proved": false,
+    "scene_argument_enclosed": false,
+    "source_amplitude_uncertainty_enclosed": false,
+    "uniform_group_error_proved": false,
+    "uniform_power_error_proved": false,
+    "uniform_source_error_proved": false,
+    "uniform_unit_error_to_ORIGINAL_proved": false,
+    "whole_scene_parameter_enclosure_proved": false
+  },
+  "test_run": {
+    "rc": 0,
+    "timed_out": false,
+    "elapsed_seconds": 4.1644668000226375,
+    "threads": 1,
+    "affinity_mask": 1,
+    "hard_child_timeout_seconds": 60,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      "-c",
+      "import ctypes,runpy; k=ctypes.windll.kernel32; k.GetCurrentProcess.restype=ctypes.c_void_p; k.SetProcessAffinityMask.argtypes=[ctypes.c_void_p,ctypes.c_size_t]; assert k.SetProcessAffinityMask(k.GetCurrentProcess(),1); runpy.run_path('Blender/tests/test_axial_ideal_reflection_stage_CPU.py',run_name='__main__')"
+    ],
+    "stdout_bytes": 91780,
+    "stdout_sha256": "726918d12b166ce4c5060e57f8c5db24e14d5f9dba922adcb04c02913d2be35d",
+    "stderr": "test_a_stage (__main__.ReflectionTests.test_a_stage) ... ok\r\ntest_b_zero_and_atomicity (__main__.ReflectionTests.test_b_zero_and_atomicity) ... ok\r\ntest_c_rejections (__main__.ReflectionTests.test_c_rejections) ... ok\r\ntest_d_no_missing_as_zero (__main__.ReflectionTests.test_d_no_missing_as_zero) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 4 tests in 3.725s\r\n\r\nOK\r\n",
+    "stdout_zlib_base64_chunks": [
+      "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"
+    ]
+  },
+  "evidence": {
+    "main_sources": 2,
+    "retained_sources_not_executed": 17,
+    "main_CPU_unary_negations": 4,
+    "probe_CPU_unary_negations": 4,
+    "control_CPU_unary_negations": 4,
+    "rejections": 24,
+    "atomic_material_rejection_before_probe_negations": 0,
+    "additional_reflection_rounding_error_L1": [
+      0,
+      1
+    ],
+    "new_coefficient_error_L1": [
+      0,
+      1
+    ],
+    "six_charges_preserved": true,
+    "source_amplitude_allocations_present": false,
+    "source_amplitude_budget_accepted": false,
+    "upstream_numeric_producers_reexecuted": 0,
+    "legacy_SOURCE_bit_FAILs": 8,
+    "legacy_SOURCE_zero_sign_mismatches": 12,
+    "reflection_coefficient_applied": "TRUE only for two CPU ideal -1 stage outputs, not native material/full pipeline",
+    "cost_scope": "retained upstream NOT reexecuted; its end-to-end costs NOT zero. Main/probe/controls separate; IO/pins/setup/rational/remaining UNMEASURED. Suite time NOT equal-work/speed/efficiency benchmark.",
+    "scope": "NEW CPU unary-negation ideal reflection on pinned RETAINED guarded-source prefixes; not fresh scene inference/native material ABI/general complex coefficient/Fresnel/physical/uniform/full field. No allocation extension accepted."
+  },
+  "independent_verification": {
+    "status": "PASS_PRECOMMIT",
+    "run": {"rc":0,"timed_out":false,"elapsed_seconds":0.2591524999879766,"threads":1,"affinity_mask":1,"hard_child_timeout_seconds":60,"command":["C:/Python313/python.exe","-B","-c","import ctypes,runpy; k=ctypes.windll.kernel32; k.GetCurrentProcess.restype=ctypes.c_void_p; k.SetProcessAffinityMask.argtypes=[ctypes.c_void_p,ctypes.c_size_t]; assert k.SetProcessAffinityMask(k.GetCurrentProcess(),1); runpy.run_path('Blender/tests/verify_axial_ideal_reflection_stage_CPU.py',run_name='__main__')"],"stdout_bytes":457,"stdout_sha256":"fd2d297027d7e1bc857c9c223e759535b70e4498ec3ed24036a2a6ee0be610e6","stdout_zlib_base64":"eJxtkD9PAzEMxXckvkPVGaq2l+vdsTGxMFSqmK2Qc+8C+afEgZaq3x2nPYkOjLZ/fu/Zp/nL9g3CeExaSQP7bEzQAY12CLK3mgj7+dNsL03Ch9l8+7zbcUkxl0qSt1qB8xBkJM37PlPIlP4Q3SO3I+4NKpaC5HNUWIA1T61OSbth6oI0xitJ2rsEIWLC+HVxn7QcfoOV2oHDYaLUiOrzwogCeAI8oMrX0KuGe0G74lbVxS947egmzbvPrk/wumLixOsOD1IRDOgtUjzyX2RCmI5eL8SyasSmq+pGdG1T4+OqZlEaORKn9eaatl20PBSiqjvRdEvRMrc5Mxjxg21L7qJWAic9OI7xg9H/d3AOiSJKCy5bjPzpEH2fFcbEfjeHLs/3d796KJzA","stderr":""},
+    "second_checker_failure_preserved": {"rc":1,"timed_out":false,"elapsed_seconds":0.2569684999762103,"threads":1,"affinity_mask":1,"hard_child_timeout_seconds":60,"command":["C:/Python313/python.exe","-B","-c","import ctypes,runpy; k=ctypes.windll.kernel32; k.GetCurrentProcess.restype=ctypes.c_void_p; k.SetProcessAffinityMask.argtypes=[ctypes.c_void_p,ctypes.c_size_t]; assert k.SetProcessAffinityMask(k.GetCurrentProcess(),1); runpy.run_path('Blender/tests/verify_axial_ideal_reflection_stage_CPU.py',run_name='__main__')"],"stdout_bytes":0,"stdout_sha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","stdout_zlib_base64":"eJwDAAAAAAE=","stderr":"Traceback (most recent call last):\r\n  File \"<string>\", line 1, in <module>\r\n    import ctypes,runpy; k=ctypes.windll.kernel32; k.GetCurrentProcess.restype=ctypes.c_void_p; k.SetProcessAffinityMask.argtypes=[ctypes.c_void_p,ctypes.c_size_t]; assert k.SetProcessAffinityMask(k.GetCurrentProcess(),1); runpy.run_path('Blender/tests/verify_axial_ideal_reflection_stage_CPU.py',run_name='__main__')\r\n                                                                                                                                                                                                                               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"<frozen runpy>\", line 287, in run_path\r\n  File \"<frozen runpy>\", line 98, in _run_module_code\r\n  File \"<frozen runpy>\", line 88, in _run_code\r\n  File \"Blender/tests/verify_axial_ideal_reflection_stage_CPU.py\", line 46, in <module>\r\n    packets=payload(read('coordinacion/respuestas/AXIAL-NATIVE-INGRESS-001-CODEX.json',pins['coordinacion/respuestas/AXIAL-NATIVE-INGRESS-001-CODEX.json']))['packets']\r\n            ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"Blender/tests/verify_axial_ideal_reflection_stage_CPU.py\", line 21, in payload\r\n    t=r['test_run'];assert t['rc']==0 and t['timed_out'] is False\r\n                                          ~^^^^^^^^^^^^^\r\nKeyError: 'timed_out'\r\n"},
+    "second_checker_failure_cause": "Historical ingress receipt lacks timed_out key. Check rc and hash always, check timeout key when present; no scientific threshold relaxation, no claim of legacy timeout metadata.",
+    "initial_checker_failure_preserved": {"rc":1,"timed_out":false,"elapsed_seconds":0.2021478999813553,"threads":1,"affinity_mask":1,"hard_child_timeout_seconds":60,"command":["C:/Python313/python.exe","-B","-c","import ctypes,runpy; k=ctypes.windll.kernel32; k.GetCurrentProcess.restype=ctypes.c_void_p; k.SetProcessAffinityMask.argtypes=[ctypes.c_void_p,ctypes.c_size_t]; assert k.SetProcessAffinityMask(k.GetCurrentProcess(),1); runpy.run_path('Blender/tests/verify_axial_ideal_reflection_stage_CPU.py',run_name='__main__')"],"stdout_bytes":0,"stdout_sha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","stdout_zlib_base64":"eJwDAAAAAAE=","stderr":"Traceback (most recent call last):\r\n  File \"<string>\", line 1, in <module>\r\n    import ctypes,runpy; k=ctypes.windll.kernel32; k.GetCurrentProcess.restype=ctypes.c_void_p; k.SetProcessAffinityMask.argtypes=[ctypes.c_void_p,ctypes.c_size_t]; assert k.SetProcessAffinityMask(k.GetCurrentProcess(),1); runpy.run_path('Blender/tests/verify_axial_ideal_reflection_stage_CPU.py',run_name='__main__')\r\n                                                                                                                                                                                                                               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"<frozen runpy>\", line 287, in run_path\r\n  File \"<frozen runpy>\", line 98, in _run_module_code\r\n  File \"<frozen runpy>\", line 88, in _run_code\r\n  File \"Blender/tests/verify_axial_ideal_reflection_stage_CPU.py\", line 41, in <module>\r\n    for p,h in pins.items():read(p,h)\r\n                            ~~~~^^^^^\r\n  File \"Blender/tests/verify_axial_ideal_reflection_stage_CPU.py\", line 15, in read\r\n    raw=(ROOT/p).read_bytes();assert sha(raw)==h,p;return json.loads(raw)\r\n                                                          ~~~~~~~~~~^^^^^\r\n  File \"C:\\Python313\\Lib\\json\\__init__.py\", line 346, in loads\r\n    return _default_decoder.decode(s)\r\n           ~~~~~~~~~~~~~~~~~~~~~~~^^^\r\n  File \"C:\\Python313\\Lib\\json\\decoder.py\", line 348, in decode\r\n    raise JSONDecodeError(\"Extra data\", s, end)\r\njson.decoder.JSONDecodeError: Extra data: line 1 column 3 (char 2)\r\n"},
+    "initial_checker_failure_cause": "Oracle tried JSON parsing for code/document pins. Hash-only pin loop fixed; production and suite unchanged; no tolerance or threshold changes.",
+    "method": "stdlib SHA INPUT/snapshot/gauges/material ORIGINAL word/integer sign/isometry/six-charge identity/missing budgets; no production imports or numerical upstream rerun"
+  },
+  "safety": {
+    "threads": 1,
+    "affinity_mask": 1,
+    "hard_child_timeout_seconds": 60,
+    "GPU_executed": false,
+    "Blender_executed": false,
+    "JEV": "LOCAL fallback, no remote endorsement or retry (security block)",
+    "historical_0337_window": "CLOSED deadline unchanged",
+    "boards": "LOCAL_UNSTAGED",
+    "frozen": "UNCHANGED fixtures conf1/v0/v4/0119/0315/nearestV2, runners/shaders/contracts/caps/FAIL",
+    "foreign_files_processes_tickets": "UNTOUCHED",
+    "SDK_DrJit_Kaggle_push_merge": "NONE"
+  }
+}
