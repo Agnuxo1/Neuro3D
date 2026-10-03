@@ -1,0 +1,86 @@
+#version 450
+#extension GL_ARB_gpu_shader_fp64 : require
+layout(local_size_x=1) in;
+layout(std430,set=0,binding=0) readonly buffer Input { uint words[]; } src;
+layout(std430,set=0,binding=1) writeonly buffer Output { uint words[]; } dst;
+const uint TAG=0x54504731u;
+dvec2 twoSum(double a,double b) {
+    precise double s=a+b;
+    precise double bb=s-a;
+    precise double ab=s-bb;
+    precise double db=b-bb;
+    precise double da=a-ab;
+    precise double e=da+db;
+    return dvec2(s,e);
+}
+dvec2 plusPair(dvec2 a,dvec2 b) {
+    precise dvec2 h=twoSum(a.x,b.x);
+    precise dvec2 l=twoSum(a.y,b.y);
+    precise double err=h.y+l.x;
+    precise dvec2 mid=twoSum(h.x,err);
+    precise double low=mid.y+l.y;
+    return twoSum(mid.x,low);
+}
+void main() {
+    if(any(notEqual(gl_GlobalInvocationID,uvec3(0)))) return;
+    if(src.words.length()!=24 || dst.words.length()!=16) return;
+    dst.words[0]=0u; dst.words[1]=0u; dst.words[2]=2u; dst.words[3]=0u;
+    if(src.words[0]!=TAG || src.words[1]!=10u || src.words[2]!=2u || src.words[3]!=1u) return;
+    if((src.words[5] & 0x7ff00000u)==0x7ff00000u) return;
+    if((src.words[7] & 0x7ff00000u)==0x7ff00000u) return;
+    if((src.words[9] & 0x7ff00000u)==0x7ff00000u) return;
+    if((src.words[11] & 0x7ff00000u)==0x7ff00000u) return;
+    if((src.words[13] & 0x7ff00000u)==0x7ff00000u) return;
+    if((src.words[15] & 0x7ff00000u)==0x7ff00000u) return;
+    if((src.words[17] & 0x7ff00000u)==0x7ff00000u) return;
+    if((src.words[19] & 0x7ff00000u)==0x7ff00000u) return;
+    if((src.words[21] & 0x7ff00000u)==0x7ff00000u) return;
+    if((src.words[23] & 0x7ff00000u)==0x7ff00000u) return;
+    precise double x0=packDouble2x32(uvec2(src.words[4],src.words[5]));
+    precise double x1=packDouble2x32(uvec2(src.words[6],src.words[7]));
+    precise double x2=packDouble2x32(uvec2(src.words[8],src.words[9]));
+    precise double x3=packDouble2x32(uvec2(src.words[10],src.words[11]));
+    precise double x4=packDouble2x32(uvec2(src.words[12],src.words[13]));
+    precise double x5=packDouble2x32(uvec2(src.words[14],src.words[15]));
+    precise double x6=packDouble2x32(uvec2(src.words[16],src.words[17]));
+    precise double x7=packDouble2x32(uvec2(src.words[18],src.words[19]));
+    precise double x8=packDouble2x32(uvec2(src.words[20],src.words[21]));
+    precise double x9=packDouble2x32(uvec2(src.words[22],src.words[23]));
+    if(isnan(x0) || isinf(x0) || abs(x0)>1099511627776.0) return;
+    if(isnan(x1) || isinf(x1) || abs(x1)>1099511627776.0) return;
+    if(isnan(x2) || isinf(x2) || abs(x2)>1099511627776.0) return;
+    if(isnan(x3) || isinf(x3) || abs(x3)>1099511627776.0) return;
+    if(isnan(x4) || isinf(x4) || abs(x4)>1099511627776.0) return;
+    if(isnan(x5) || isinf(x5) || abs(x5)>1099511627776.0) return;
+    if(isnan(x6) || isinf(x6) || abs(x6)>1099511627776.0) return;
+    if(isnan(x7) || isinf(x7) || abs(x7)>1099511627776.0) return;
+    if(isnan(x8) || isinf(x8) || abs(x8)>1099511627776.0) return;
+    if(isnan(x9) || isinf(x9) || abs(x9)>1099511627776.0) return;
+    precise dvec2 a=plusPair(dvec2(x0,x1),dvec2(x4,x5));
+    precise dvec2 t0=plusPair(a,dvec2(x8,x9));
+    precise dvec2 b=plusPair(dvec2(x2,x3),dvec2(x6,x7));
+    precise dvec2 t1=plusPair(b,dvec2(x8,x9));
+    precise double n0=-t1.x;
+    precise double n1=-t1.y;
+    precise dvec2 rel=plusPair(t0,dvec2(n0,n1));
+    if(isnan(t0.x) || isinf(t0.x) || abs(t0.x)>1099511627776.0) return;
+    if(isnan(t0.y) || isinf(t0.y) || abs(t0.y)>1099511627776.0) return;
+    if(isnan(t1.x) || isinf(t1.x) || abs(t1.x)>1099511627776.0) return;
+    if(isnan(t1.y) || isinf(t1.y) || abs(t1.y)>1099511627776.0) return;
+    if(isnan(rel.x) || isinf(rel.x) || abs(rel.x)>1099511627776.0) return;
+    if(isnan(rel.y) || isinf(rel.y) || abs(rel.y)>1099511627776.0) return;
+    uvec2 o0=unpackDouble2x32(t0.x);
+    dst.words[4]=o0.x; dst.words[5]=o0.y;
+    uvec2 o1=unpackDouble2x32(t0.y);
+    dst.words[6]=o1.x; dst.words[7]=o1.y;
+    uvec2 o2=unpackDouble2x32(t1.x);
+    dst.words[8]=o2.x; dst.words[9]=o2.y;
+    uvec2 o3=unpackDouble2x32(t1.y);
+    dst.words[10]=o3.x; dst.words[11]=o3.y;
+    uvec2 o4=unpackDouble2x32(rel.x);
+    dst.words[12]=o4.x; dst.words[13]=o4.y;
+    uvec2 o5=unpackDouble2x32(rel.y);
+    dst.words[14]=o5.x; dst.words[15]=o5.y;
+    dst.words[1]=6u; dst.words[2]=2u; dst.words[3]=1u;
+    dst.words[0]=TAG; // Logical last publication marker; NOT a device fence or atomic proof.
+}
