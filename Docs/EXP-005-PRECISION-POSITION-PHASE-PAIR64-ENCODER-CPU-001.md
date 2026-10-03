@@ -1,0 +1,21 @@
+# EXP005 — codificador de centro geométrico en dos palabras CPU binary64
+ID PRECISION-POSITION-PHASE-PAIR64-ENCODER-CPU-001. Owner Codex capacity_audit/EXP005.
+Base 9d113f2afcd4be80db49481ac75c964a772bb1b5. Padre LAMBDABUDGET001 SHA3018979f9ea16607babcffe69231f710fe0635670d170c458b4f2c7a27d57011/81588bytes, 204 pines.
+Opt-in precision-position-phase-pair64-encoder-CPU-v1; API audit(model,request).
+
+## Contrato de entrada/salida
+Selector cerrado ocho cadenas: record_id,parent_receipt_sha256,parent_record_sha256,parent_parameters_sha256,source_context_sha256,original_geometry_sha256,representation,intent. Solo91capturas retenidas; 78 STOP anteriores no se rescatan ni ejecutan conversión. Misma SOURCE/ORIGINAL/parámetros/end1-vértice3 antes de encode. No replay de productores, normas/raíces/shaders/backend ni lectura de una escena nueva.
+Salida pair_words_LE=[hiWord,loWord], dos palabras binarias64 LE separadas, cero canónico o normales; no suma escalar nativa hi+lo. API encode(center_turns,radius_turns) también usada por controles acotados. Racionales internos derivados/control hasta2048bits y magnitud<=1e6, radius>=0; dominio NUEVO interno, NO aumento de bounds128 de geometría/λ/cap del padre. Cap geométrico1/10000rad fijo intacto.
+
+## Implementación y prueba
+Ejecuta float(F(center)) en CPython CPU y registra bits; calcula residual=center-F.from_float(hi) EXACTO HOST; ejecuta float(F(residual)) y registra low bits. No conversión de suma de limbs a scalar. Reconstrucción hi+lo con fracciones exactas SOLOdebug/checkHOST, no ALU ni inferencia nativa. CPU_binary64_conversion_executed distingue estas conversiones observadas de CPU_native_executed=False: NO prueba de norma/ALU nativa, shaderGPU, Blender, trig, phaseTOTAL u óptica física.
+Centro no cero menor que2^-1022 =>STOP antes de convertir; residual no cero menor que2^-1022 =>STOP después deHIGH, sinLOW. Registro conversion_trace conserva cada input exacto/palabra/valor decodificado incluso cuando soloHIGH precede a STOP. NaN/Inf/subnormalword prohibidos.
+Valor representado v=F(hi)+F(lo); e=abs(v-center). Radio geométrico previo r se amplía a r+e; boundrad=8*(r+e) porque2π<8. Solo <=1e-4rad admite pair. No correlación, cancelación SOURCE, wrapping, gauge/material, referenciaóptica ni incertidumbre de escena autenticados. field/amplitude/powerNone y promotionSTOP siempre.
+
+## Evidencia
+103main:13pares CPU convertidos (26conversiones),90STOP (78padres+12selector/modelo). 10helpers:4PASS6STOP/11conversiones, público duplicado2conversiones y missing aparte. Control center=1+2^-60 y r=cap/8-2^-62: par exacto preserva2^-60, pero HIGH-only excede cap. Control center=1+2^-60+2^-120 y r=cap/8-2^-121: residual de par2^-120 medido agota cap; NO universal exactness ni elevarcap. Negativo, cero,1/3; subnormalcenter/residual, bool/radiusnegativo/overflowSTOP.
+Primera suite PASS retenida; mejora posterior SOLOde trazabilidad guardaHIGH parcial antes STOP y verifica len(trace)==conversioncount. Segunda suite verifica nueva traza; sin cambiar algoritmo de conversión/admisión/cap/umbrales, sin ocultar primerPASS ni fallos ancestrales.
+Oráculo independiente sin importar núcleo, float/Fconversion ni structdecode: INTEGER-RNE64 y reconstrucción IEEE64 entera cotejan todas las37 conversiones main/helper (incluida HIGHparcial); público aparte. Campos/capas/pines/contexto/radio/error/veredictos comprobados exactos. Las raíces/escena permanecen evidencia padre, no recálculo.
+Hijo CPU propio un hilo/afinidad1/timeout duro60s; captura<=2MiB intacta. Costes26main11helpers2publicconversiones; residuo/hash/I/O/validación/setup/upstream/end-to-end/memoria/energía NOmedidos, UNMEASURED_NOT_ZERO. No velocidad/eficiencia/motorwinnerclaim.
+JEV security-blocked, fallback LOCAL sin retry/avalremoto; noGPU/Blender/SDK/DrJit/Kaggle/push/merge. Frozenconf1/v0/v4/0119/0315/nearestV2/runners/shaders/contracts intactos, FAIL/UNRESOLVED/cap padres preservados. Soloown4 versionados; boards/checkpoint locales SINstage.
+Necesario siguiente: consumidor backend que mantenga amboslimbs y contabilice arithmeticerror, ingress/guardfailclosed/fence/readback y SOURCEphase/material/completitud/escena autenticada con contrato igualtrabajo/costes completos. Pedir a Claude SOLO artifacts YA existentes porID/path/SHA/bytes. Estos words CPU no autorizan ni certifican consumidorGPU.
