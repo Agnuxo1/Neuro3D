@@ -1,0 +1,38 @@
+#version 450
+// NEW pair64 ingress only. No float/double conversion, phase arithmetic, tracing, or optical field.
+layout(local_size_x=1, local_size_y=1, local_size_z=1) in;
+layout(std430, binding=0) readonly buffer IngressInput { uvec4 header; uvec4 pairWords[3]; } incoming;
+layout(std430, binding=1) readonly buffer ExpectedInput { uvec4 pairWords[3]; } expected;
+layout(std430, binding=2) buffer IngressOutput { uvec4 status; uvec4 pairWords[3]; } outgoing;
+const uint COMMIT_TAG=0x50363431u;
+bool finitePair(uvec4 p) {
+    return ((p.y >> 20u) & 0x7ffu) != 0x7ffu &&
+           ((p.w >> 20u) & 0x7ffu) != 0x7ffu;
+}
+void main() {
+    if (any(notEqual(gl_GlobalInvocationID, uvec3(0u)))) return;
+    outgoing.status=uvec4(0u,0u,0xffffffffu,0u);
+    outgoing.pairWords[0]=uvec4(0u);
+    outgoing.pairWords[1]=uvec4(0u);
+    outgoing.pairWords[2]=uvec4(0u);
+    if (any(notEqual(incoming.header,uvec4(COMMIT_TAG,1u,3u,16u)))) {
+        outgoing.status.z=0xfffffff0u; return;
+    }
+    uvec4 staged0=incoming.pairWords[0];
+    uvec4 staged1=incoming.pairWords[1];
+    uvec4 staged2=incoming.pairWords[2];
+    if (!finitePair(staged0) || any(notEqual(staged0,expected.pairWords[0]))) {
+        outgoing.status.z=0u; return;
+    }
+    if (!finitePair(staged1) || any(notEqual(staged1,expected.pairWords[1]))) {
+        outgoing.status.z=1u; return;
+    }
+    if (!finitePair(staged2) || any(notEqual(staged2,expected.pairWords[2]))) {
+        outgoing.status.z=2u; return;
+    }
+    outgoing.pairWords[0]=staged0;
+    outgoing.pairWords[1]=staged1;
+    outgoing.pairWords[2]=staged2;
+    memoryBarrierBuffer();
+    outgoing.status=uvec4(COMMIT_TAG,3u,0xffffffffu,1u);
+}
