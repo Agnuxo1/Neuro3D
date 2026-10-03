@@ -1,0 +1,17 @@
+# PRECISION-POSITION-PHASE-PAIR64-NORMALIZE-NATIVE-CPU-001
+
+Contrato opt-in CPU, API audit(model,request,raw_frame), sin promoción de GPU/fase total. Acuse ENCODER001: SHAe6e07a6c765db82382ea49d8165f9a1ee2fec16b33d8be4505f9a9621cd0d52f/117621bytes; basefee8a9e00072aca64579007e19ab53a18e4491ba.
+
+Lee 103+10 capturas existentes, conserva 96 STOP padres. Selector cerrado de ocho strings liga recibo/registro/parámetros/contextoSOURCE/ORIGINAL/modelo/intención; prueba los 16 bytes exactos antes de decode/arithmetic. Metadatos geométricos condicionales no constituyen autenticación de escena/incertidumbre/referencia óptica.
+
+Reutiliza exclusivamente two_sum puro congelado en oblique_pair64_difference_CPU_v1.py, seis operaciones nativas CPU RN64; NO producer/audit anterior. Salida dos palabras separadas. v=F(hi)+F(lo) es solamente reconstrucción HOST exacta para verificación. Se exige identidad observada por registro, no teorema universal de EFT. Error de normalización a=abs(vout-vin); presupuesto fijo 8*(radio+encoding_error+a)<=1e-4rad. No renormalización a escalar de fase, modulo, cancelación de SOURCE, aumento de caps/bounds ni inferencia reemplazada.
+
+Suite incluye 128 corrupciones de bit, cinco entradas wire inválidas, doce selectors/modelo y API pública/missing. Control padre sintético 1+2^-60 con radio ajustado: HIGH solo excede cap; LOW debe permanecer. Contracontrol inexacto 2^-120 y HIGH parcial subnormal STOP antes de decode, no rescatados. Primer fallo si ocurre se preserva, nunca se cambia admisión para hacerlo PASS.
+
+Oráculo independiente INTEGER-RNE64+IEEEdecode por nodo y topología exacta de seis nodos, sin importar core ni ejecutar encoder/productores previos. CPU1hilo/afinidad1/hijo60s. GPU/Blender/compilación/root0; JEVbloqueado/noRetry/fallbackLOCAL sin aval remoto. Coste observado parcial seis operaciones/registro admitido; HOST/hash/I/O/setup/upstream/end-to-end/memoria/energía UNMEASURED_NOT_ZERO, no velocidad/eficiencia/winner. CPU nativo no Bpyfloat32/GPUALU/RT/óptica física. RT16Mvs1M y cruce extrapolado no igualdad de trabajo/redRT.
+
+Frozen conf1/v0/v4/0119/0315/nearestV2/runners/shaders/contratos y FAIL históricos intactos. Sharedboards/checkpoint locales SINstage; solo own4 revisados se versionan. PedirClaude ACK por ID+SHA y artifacts YAexistentes decoder/backendTOTAL-error/guard failclosed/ingress-fence-readback/SOURCEphase-material-completitud/uncertainty-auth y contrato igual trabajo/salidas/costes completos ID/path/SHA/bytes. No cargas por relleno, sin ACK inventado.
+
+Resultado observado: suite rc0/0.32738039997639135s/raw720993bytes/SHA c6c4aa8046b5b1ad156f27b2aa24470d9878c31df50a1bc52f348bdf476661bd. 258main=17paresCPU+241STOP;113padres=17admitidos+96STOP;128mutaciones+5wire+12selector/modelo. 102nodos main/6APIpublicduplicados; ambos declarados aparte. Oráculo independiente rc0/0.4274153000442311s:212pins,102nodos+6public verificados, LOW2^-60 retenido/errornormalización0 observado SOLO en estos registros. Capturas existentes, no encoder/productor replay.
+
+Fallo inicial lector rc1/0.5375172999920323s conservado íntegro: independent_pre_final contiene dos registros JSON; cambio único a captura single-JSON independent_pre ya existente. Fuentes iniciales/captura fallo se retienen y el verificador comprueba reemplazo mecánico exacto; aritmética/admisión/cap/test intactos. Patch inicial de claim rechazado antes de escribir por título THINKTANK incorrecto, corrigió solo encabezado. No fallo numérico borrado ni umbral ajustado.
