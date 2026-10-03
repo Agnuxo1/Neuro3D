@@ -1,0 +1,23 @@
+# PRECISION-OBLIQUE-FINITE-INTERVAL-CPU64-001
+
+Codex capacity_audit/EXP005, base 1e50c2bc808319cef6ea22b5f2b7aa7f95bce878. Backend **CPU binary64 opt-in** nuevo, sin integración en runners/shaders ni GPU. Padre HOST001 coordinacion/respuestas/PRECISION-OBLIQUE-FINITE-INTERVAL-HOST-001-CODEX.json, SHA256 3bad55726d8cfb8110f068304dd472cb31115bfd080ce58ffff7f1188a2d275d,139020bytes. Sólo14 snapshots CPU sintéticos retenidos; no nuevas escenas físicas, barrido HOST96 ni productor padre. JEV fallbackLOCAL sin retry/avalremoto.
+
+## Contrato
+
+Request cerrado: backend=oblique-finite-interval-CPU64-v1, scene_query HOST original intacto y snapshot_sha256 de la misma escena. Validación pura del schema padre; NO llamada HOST.classify. ALL15 coordenadas/radios SOURCE0/origen, detector y3vértices preservados. Convertir30 extremos racionales a binary64 con redondeo hacia fuera; no colapsar nominal±radio a un nominal único. Cada operación CPU real tiene operandos en16hex LE, resultado RN, exacto racional de esos operandos, extremo ajustado y cargo nextafter. Verificar nearest-even contra ambos vecinos; si falta inclusión, precisión o dominio normal/zero: STOP fail-closed. Cero exacto permitido, no cero por underflow. Subnormal/overflow rechazados. No FMA, EPS, exención owner/object ni ray infinito. Dos ajustes outward de un mismo producto comparten UN resultado RN: coste nativo cobrado una vez pero pruebas lo/hi independientes.
+
+Mismo DAG padre: D,U,V,W,T,D-T; signoD estricto y cinco holguras. Una estrictamente negativa->disjunto condicional, todas estrictamente positivas->cruce interior condicional. t0/t1/borde/det0/solapamiento->STOP. Los intervalos CPU finales deben incluir COMPLETOS los intervalos racionales HOST retenidos; no adoptar intersección ni reducir radios/caps. Padre STOP NO se rescata. Autenticación/completitud/visibilidad/fase y física siguen sin certificar. No equivalencia con Bpyfloat32/GPU ALU/RT/óptica física ni inferencia desde escena/GEMM.
+
+## Evidencia y costes parciales
+
+14casos seleccionados antes del contraste:12familias reverse0/wind0/box1 y cruce+thin_cross reverse0/wind1/box1. Todos originales SHA/scene/query enlazados a captura HOST sellada (muestra seleccionada, NO barrido96).30casts+154operaciones CPU por caso (58add/sub y96productos);280registros de prueba, porque cada producto usa extremoslo/hi con RN compartido. Totalmain420casts/2156operaciones/3920registros; cargos nextafter incluidos (verificación vecinos+ajuste), signflips separados. La auditoría racional/parse/hash/transfers/escena/costes completos NO están medidos y NO son0; este resultado no compara velocidades ni eficiencia.
+
+Suite nueva PASS2.8515757999994094s, stdout987982bytes, SHA25670c543f15016e7ca36d969047623e335f2162c45d27bea0f78bfb2da1611ba58.1hijo/1hilo/afinidad1/timeout60s. Oráculo bit-a-bit racional independiente NO importa productor CPU/HOST: recorre ledger/DAG y prueba RNties-even/inclusión/selectores/cargos y pin padre.4inputSTOP (radiofaltante/SOURCE1/infinite/GPUalias);5helpers NO ligados a escena:±halfway PASS;underflow/subnormal/overflowSTOP con fallos y ledgers parciales conservados.8alteraciones rechazadas:omisiónerrores/palabras/shrinkbox/físico/rescateSTOP/cargos/snapshot/sharedRN.
+
+Después de capturar se reforzó sólo el oráculo: lookup de los14records contra padre original SHA, setexacto pins y exactos helpers. Mismo productor/ASTrun sin cambios, no repetir cálculo CPU ni adaptar umbrales. Primera lectura referencia Python skill tenía ruta equivocada y se corrigió a shared/platforms/python.md; no instalación. Capturas válidas<=2MiB, límite intacto; registrar cualquier FAIL sin esconderlo.
+
+Censo independiente verificado:4 CRUCE_INTERIOR,4 DISJUNTO y6 STOP_UNRESOLVED;4STOP_INPUT.3920pruebas main,2156operaciones nativas,420casts,8115nextafter(incluidos vecinos+ajustes), signflips separados.249pins heredados+3ownsource/doc=252pins finales. Oráculo PASS0.5733581999993476s/stdout362/SHA2568be140c2f08a4893be8f58f71d4c93f3c7fe495346b8b552244592c79562fd99. Contadores son parciales del núcleo; abs/guards/parse/bit I/O/auditoría racional/costes completos quedan UNKNOWN_NOT_ZERO.
+
+## Pendiente
+
+Sólo own4 revisados se versionarán en commit local; boards/checkpoint locales SINstage. Claude: ACK ID+SHA del recibo y artifacts YA existentes backend+guard fail-closed/igualtrabajo-salidas-costes completos y geometría con incertidumbre-autenticación-completitud por ID/path/SHA/bytes. No rellenar con cargas ni inventar ACK. GPU sigue sin usarse y requiere coordinación/reserva/telemetría/deadline propios. Skills cognición extendida y feature-development limitaron la selección y reutilizaron evidencia sellada.
