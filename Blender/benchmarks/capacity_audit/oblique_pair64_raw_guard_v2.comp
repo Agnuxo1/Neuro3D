@@ -1,0 +1,46 @@
+#version 450
+#extension GL_ARB_gpu_shader_fp64 : require
+// New opt-in arithmetic candidate. Raw finite exponent guard V2. No GPU execution/admission certified.
+layout(local_size_x=1,local_size_y=1,local_size_z=1) in;
+layout(std430,set=0,binding=0) readonly buffer Inputs { uint words[]; } src;
+layout(std430,set=0,binding=1) writeonly buffer Outputs { uint words[]; } dst;
+const uint TAG=0x4f444632u;
+dvec2 sum2(double a,double b) {
+    precise double s=a+b;
+    precise double bb=s-a;
+    precise double ab=s-bb;
+    precise double db=b-bb;
+    precise double da=a-ab;
+    precise double e=da+db;
+    return dvec2(s,e);
+}
+void main() {
+    if(any(notEqual(gl_GlobalInvocationID,uvec3(0u)))) return;
+    if(src.words.length()!=12 || dst.words.length()!=8) return;
+    dst.words[0]=0u; dst.words[1]=0u; dst.words[2]=2u; dst.words[3]=0u;
+    if(src.words[0]!=TAG || src.words[1]!=8u || src.words[2]!=2u || src.words[3]!=1u) return;
+    // Reject original Inf/NaN exponent bits BEFORE any packDouble2x32.
+    if((src.words[5]&0x7ff00000u)==0x7ff00000u ||
+       (src.words[7]&0x7ff00000u)==0x7ff00000u ||
+       (src.words[9]&0x7ff00000u)==0x7ff00000u ||
+       (src.words[11]&0x7ff00000u)==0x7ff00000u) return;
+    double ah=packDouble2x32(uvec2(src.words[4],src.words[5]));
+    double al=packDouble2x32(uvec2(src.words[6],src.words[7]));
+    double bh=packDouble2x32(uvec2(src.words[8],src.words[9]));
+    double bl=packDouble2x32(uvec2(src.words[10],src.words[11]));
+    if(isnan(ah)||isnan(al)||isnan(bh)||isnan(bl)||
+       isinf(ah)||isinf(al)||isinf(bh)||isinf(bl)||
+       abs(ah)>1099511627776.0lf || abs(al)>1099511627776.0lf ||
+       abs(bh)>1099511627776.0lf || abs(bl)>1099511627776.0lf) return;
+    precise dvec2 p=sum2(ah,-bh);
+    precise dvec2 q=sum2(al,-bl);
+    precise double e=p.y+q.x;
+    precise dvec2 r=sum2(p.x,e);
+    precise double l=r.y+q.y;
+    precise dvec2 y=sum2(r.x,l);
+    uvec2 hi=unpackDouble2x32(y.x); uvec2 lo=unpackDouble2x32(y.y);
+    dst.words[4]=hi.x; dst.words[5]=hi.y; dst.words[6]=lo.x; dst.words[7]=lo.y;
+    dst.words[1]=4u; dst.words[2]=2u; dst.words[3]=1u;
+    // Marker only, NOT optical PASS. Host must fence/readback/verify bound and provenance.
+    dst.words[0]=TAG;
+}
