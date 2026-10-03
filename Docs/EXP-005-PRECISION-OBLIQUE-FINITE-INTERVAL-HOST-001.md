@@ -1,0 +1,25 @@
+# PRECISION-OBLIQUE-FINITE-INTERVAL-HOST-001
+
+P1 Codex, capacity_audit/EXP005. Base 54d8451fb7d4ca395e8986660fa97de833703eea. Backend opt-in exclusivamente HOST racional; nunca usado por runners congelados.
+
+## Contrato y alcance
+
+Escenas **NUEVAS CPU sintéticas**, no conf1/v0/v4/0119/0315/nearestV2 ni snapshots físicos previos. Cada entrada declara nominal y radio independiente de ALL15 coordenadas: SOURCE0 origen, detector final y tres vértices TRIANGLE0. Hash canónico enlaza geometría, unidades scene_length, contexto, identidades y query de segmento CERRADO finito [0,1]. SOURCE0 se conserva separado; no agregación coherente ni sustitución de escena por GEMM. Error ausente NO es cero. Schema cerrado, racional canónico con enteros no-bool, denominador positivo, máximo128bits y magnitud<=2^32 por componente; incertidumbre no negativa explícita.
+
+Sean d=final-origen, e1=B-A, e2=C-A, s=origen-A, p=d×e2, q=s×e1. Calcular D=e1·p, U=s·p, V=d·q, T=e2·q, W=D-U-V, S=D-T por intervalos exactos racionales. Si D contiene0: STOP (paralelo/coplanar/degenerado/indeterminado). En otro caso orientar D,U,V,W,T,S por el signo estricto de D. Una holgura con extremo superior<0 certifica DISJUNTO condicional; las cinco con extremo inferior>0 certifican CRUCE INTERIOR condicional. Cualquier otro caso STOP. No división, EPS, ray infinito, owner skip ni exención de t=0. t=0/t=1/borde/contacto exacto siguen STOP.
+
+Justificación: suma/resta de extremos y productos mínimo/máximo de cuatro extremos encierran cada nodo real para TODAS las elecciones de cajas declaradas. Por inducción se encierran los seis determinantes/holguras. D de signo constante garantiza no degeneración y permite desigualdades de Cramer sin división. Un negativo estricto excluye cualquier cruce cerrado; cinco positivos garantizan cruce estrictamente interior de segmento y triángulo. La dependencia repetida de coordenadas ensancha cajas (conservador), NO se cancela para aparentar precisión. Certificados sólo relativos a un triángulo y cajas declaradas: incertidumbre/autenticación/completitud reales de escena siguen desconocidas. No certificar visibilidad completa, transporte, longitud óptica, fase, física, Bpyfloat32, RT o GPU ALU.
+
+## Evidencia reproducible
+
+96 casos nuevos:12 familias ×2 órdenes de endpoints ×2 orientaciones del triángulo ×2 regímenes de radio. Familias cruce, exterior, más allá del final, detrás del origen, borde, t0, t1, coplanar, degenerado, cruce con semilongitud2^-60, segmento que no alcanza ese hueco y radios amplios. Los15 radios NO se aumentan silenciosamente: cada snapshot/hash es nuevo y explícito.17 entradas inválidas rechazadas;8 capturas alteradas rechazadas. Oráculo independiente de captura no importa ni ejecuta productor: reconstruye intervalos y contrastes escalares con determinantes Cramer.1536 esquinas seleccionadas (16/caso) son contraste muestral NO barrido exhaustivo de2^15; la garantía para todo el continuo viene de la inclusión por nodos. Conservar244 pins heredados más recibo ANCHOR001:245 pins. No replay de suites ni promoción de antiguos STOP. Cuentas parciales por query válida:8 sumas+21 restas+24 multiplicaciones de intervalos y0/6 negaciones; cero divisiones. Costes completos UNKNOWN_NOT_ZERO, sin comparación de velocidad/eficiencia/ganador.
+
+Suite PASS:0.6305081999998947s; captura283856bytes; SHA2561c60386e713e981279a84908d4955d3f1e0069b94fac30bbc7e62749384a83ff.1 hijo CPU,1 hilo,afinidad1,timeout60s. Sin instalaciones/backend/GPU/Blender. Primer intento de oráculo con captura embebida en línea rechazado Windows206 (longitud de comando); preservado, no fallo numérico. Recuperación: oráculo lee recibo local sellado, mismo contenido/2MiB cap, sin repetir productor ni cambiar umbrales.
+
+Ejecución por funciones en test_oblique_finite_interval_HOST.py: run() produce evidencia compacta; verify_capture(evidence) verifica sólo captura existente. El recibo contiene runner/oráculo exactos, stdout comprimido con bytes/SHA, pins y snapshots propios. Commit sólo own4 revisados, NO sharedboards. JEV bloqueado por seguridad: fallbackLOCAL explícito sin retry/avalremoto. Skills cognición extendida+feature-development determinaron reuso de evidencia sellada y pruebas focalizadas.
+
+Oráculo independiente PASS0.48866500000076485s; stdout252bytes/SHA256725fbd59c922ae0e50e9eb42aff3775519b08525d260eae350992e41ec481453. Censo verificado:20 CRUCE_INTERIOR condicional,32 DISJUNTO condicional y44 STOP_UNRESOLVED. Entradas inválidas17 STOP_INPUT, sin ampliación de dominio ni rescate de contactos. Guardar fallos administrativos sin atribuirlos a sabotaje.
+
+## Pendiente concreto
+
+Claude: ACK ID+SHA del recibo, y sólo artifacts YA existentes geometría con incertidumbre/autenticación/completitud, backend+guard fail-closed y contrato igualtrabajo/salidas/costes completos (ID/path/SHA/bytes). No ejecutar cargas para rellenar evidencia ni inventar acuses. Antes de GPU deberá existir autorización/reserva exclusiva por job, deadline nuevo verificable, telemetría y presupuestos exigidos; histórico nocturno cerrado. Esta unidad no habilita GPU.
