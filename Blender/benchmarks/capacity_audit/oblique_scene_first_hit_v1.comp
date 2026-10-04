@@ -1,0 +1,95 @@
+#version 450
+#extension GL_ARB_gpu_shader_fp64 : require
+// Opt-in scene-first-hit CANDIDATE ONLY. No exact contact, phase or GPU admission.
+layout(local_size_x=1,local_size_y=1,local_size_z=1) in;
+layout(std430,set=0,binding=0) readonly buffer Inputs { uint words[]; } src;
+layout(std430,set=0,binding=1) writeonly buffer Outputs { uint words[]; } dst;
+// OUTPUT N3FH64V1: 8 header words + 2 SOURCE records of 10 words.
+double val(uint base,uint index) { return double(uintBitsToFloat(src.words[base+index])); }
+dvec3 vector3(uint base,uint index) { return dvec3(val(base,index),val(base,index+1u),val(base,index+2u)); }
+dvec3 cross3(dvec3 a,dvec3 b) {
+    precise double x=a.y*b.z-a.z*b.y;
+    precise double y=a.z*b.x-a.x*b.z;
+    precise double z=a.x*b.y-a.y*b.x;
+    return dvec3(x,y,z);
+}
+double dot3(dvec3 a,dvec3 b) {
+    precise double x=a.x*b.x; precise double y=a.y*b.y; precise double z=a.z*b.z;
+    precise double s=x+y; precise double r=s+z; return r;
+}
+bool finite64(double v) { return !(isnan(v)||isinf(v)); }
+void put64(uint index,double value) {
+    uvec2 w=unpackDouble2x32(value); dst.words[index]=w.x; dst.words[index+1u]=w.y;
+}
+void main() {
+    if(any(notEqual(gl_GlobalInvocationID,uvec3(0u)))) return;
+    if(dst.words.length()!=28) return; // HOST must reject wrong extents/freshly invalidate output.
+    for(uint i=0u;i<28u;i++) dst.words[i]=0u;
+    if(src.words.length()<10) return;
+    if(src.words[0]!=0x4744334eu || src.words[1]!=0x31563233u ||
+       src.words[2]!=1u || src.words[3]!=2u || src.words[9]!=0u) return;
+    uint n=src.words[4]; if(n==0u || n>64u) return;
+    uint count=17u+9u*n;
+    if(src.words[5]!=count || src.words[6]!=n || src.words.length()!=int(10u+n+count)) return;
+    uint root=src.words[7]; uint detector=src.words[8];
+    if(root==detector) return;
+    bool haveRoot=false; bool haveDetector=false;
+    for(uint i=0u;i<n;i++) {
+        uint id=src.words[10u+i]; if(id>=0x80000000u) return;
+        if(id==root) haveRoot=true; if(id==detector) haveDetector=true;
+        for(uint j=0u;j<i;j++) if(id==src.words[10u+j]) return;
+    }
+    if(!(haveRoot&&haveDetector)) return;
+    uint base=10u+n;
+    // Reject original nonfinite/subnormal/negative-zero BEFORE any float bit conversion.
+    for(uint i=0u;i<count;i++) {
+        uint w=src.words[base+i]; uint e=(w>>23u)&255u; uint f=w&0x7fffffu;
+        if(e==255u || (e==0u && f!=0u) || w==0x80000000u) return;
+    }
+    for(uint i=0u;i<count;i++) if(abs(val(base,i))>1000000.0lf) return;
+    if(val(base,15u+9u*n)<=0.0lf) return; // original declared wavelength, no phase computation
+    for(uint sid=0u;sid<2u;sid++) {
+        dvec3 origin=vector3(base,6u*sid);
+        dvec3 direction=vector3(base,6u*sid+3u);
+        if(all(equal(direction,dvec3(0.0lf)))) return;
+    }
+    for(uint sid=0u;sid<2u;sid++) {
+        dvec3 origin=vector3(base,6u*sid);
+        dvec3 direction=vector3(base,6u*sid+3u);
+        uint state=2u; uint chosen=0xffffffffu; uint ambiguity=0u;
+        double bestT=0.0lf; double bestU=0.0lf; double bestV=0.0lf;
+        for(uint i=0u;i<n;i++) {
+            dvec3 a=vector3(base,12u+9u*i);
+            dvec3 b=vector3(base,15u+9u*i);
+            dvec3 c=vector3(base,18u+9u*i);
+            precise dvec3 edge1=b-a; precise dvec3 edge2=c-a;
+            precise dvec3 p=cross3(direction,edge2);
+            precise double determinant=dot3(edge1,p);
+            if(!finite64(determinant) || determinant==0.0lf) { ambiguity=3u; continue; }
+            precise dvec3 s=origin-a;
+            precise dvec3 q=cross3(s,edge1);
+            precise double u=dot3(s,p)/determinant;
+            precise double v=dot3(direction,q)/determinant;
+            precise double t=dot3(edge2,q)/determinant;
+            precise double uv=u+v;
+            if(!finite64(u)||!finite64(v)||!finite64(t)||!finite64(uv)) { ambiguity=3u; continue; }
+            if(u<0.0lf || v<0.0lf || uv>1.0lf || t<0.0lf) continue;
+            // No epsilon/primitive ignore. All zero contacts/edges/ties are uncertified.
+            if(t==0.0lf) { ambiguity=4u; continue; }
+            if(u==0.0lf || v==0.0lf || uv==1.0lf) { if(ambiguity==0u) ambiguity=3u; continue; }
+            if(state==1u && t==bestT) { if(ambiguity==0u) ambiguity=5u; continue; }
+            if(state!=1u || t<bestT) {
+                state=1u; chosen=src.words[10u+i]; bestT=t; bestU=u; bestV=v;
+            }
+        }
+        if(ambiguity!=0u) state=ambiguity;
+        uint outBase=8u+10u*sid;
+        dst.words[outBase]=sid; dst.words[outBase+1u]=state;
+        dst.words[outBase+2u]=chosen; dst.words[outBase+3u]=n;
+        put64(outBase+4u,bestT); put64(outBase+6u,bestU); put64(outBase+8u,bestV);
+    }
+    dst.words[1]=0x31563436u; dst.words[2]=1u; dst.words[3]=2u;
+    dst.words[4]=10u; dst.words[5]=1u; // 1 means UNCERTIFIED candidate, never optical PASS
+    dst.words[6]=n; dst.words[7]=0u; // no precision/contact/visibility/phase certified
+    dst.words[0]=0x4846334eu; // logical publication only; NOT fence/atomic/runtime proof
+}
