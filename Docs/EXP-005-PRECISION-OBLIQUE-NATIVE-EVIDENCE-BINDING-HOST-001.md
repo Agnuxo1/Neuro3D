@@ -1,0 +1,23 @@
+# PRECISION-OBLIQUE-NATIVE-EVIDENCE-BINDING-HOST-001
+
+Contrato opt-in HOST **de contenido y bytes**, no backend nuevo, GPU ni prueba de precisión. El contrato axial cerrado permanece intacto; esta interfaz vincula las seis escenas oblicuas y sus doce entradas SOURCE del inventario e9130e8f3f6aa8d5673ab03f3d0f9338d0cec8d56437610f490c8ec23e97ac2a.
+
+## Interfaz y aceptación
+
+`load_plan()` lee el recibo padre sellado, comprueba sus 382 dependencias y capturas como datos y deriva seis targets (case/scene/query/input_buffer/S0S1). No ejecuta/importa productores anteriores. `inspect_bundle(manifest_raw, artifact_bytes)` es el punto público: sólo bytes explícitos proporcionados por el llamador, sin abrir rutas indicadas por manifest. Ausencia, deriva o excepción de validación produce STOP_EVIDENCE. El contrato es exacto por JSON canónico: bool/int/float no son intercambiables.
+
+Manifest schema oblique-native-byte-content-binding-HOST-v1 incluye plan exacto, job_id, origen declarado (synthetic_contract_fixture o retained_native_content), backend_kind GPU_ALU_digital, work_origin scene_traversal_not_U_GEMM_or_lookup, tabla exacta SHA256/bytes de 15 artefactos (input/output por seis casos, backend/guard/cost_ledger), seis descriptores output en orden, todas las banderas de autenticación/admisión FALSE y phase_error_bound null. Output por caso: case, scene/query/input_buffer hashes, source_ids S0/S1, ABI_id, SOURCE_stride_bytes entero positivo múltiplo4, output_sha256. Input raw debe coincidir con el SHA ORIGINAL; output tiene exactamente dos bloques SOURCE. **ABI_id/forma/hash no validan el significado de los resultados ni convierten expected lookup en ejecución auténtica**.
+
+Guard JSON vincula MISMO job/plan/backend/12 input-output hashes/cost ledger; status completed/rc entero0/reasons vacío, timestamps UTC explícitos start<=end<=deadline, piloto<=120s o hijo<=600s. Policy exacta RAM libre4GiB tras presupuesto/VRAMtotal18GiB/temp80C/1024bytes-celda+márgenes/reserva exclusiva/failclosed. Se comprueba el contenido registrado, NO runtime, frescura, exclusividad real, telemetría ni autorización. Reservas/deadlines/overrides históricos nunca admiten un job actual.
+
+Ledger vincula MISMO job/plan/input-output/backend: cold o warm, amortization_runs explícito (cold=1), total_wall_ns positivo, reloj single_monotonic_ns; exactamente 14 componentes en orden definidos en COMPONENTS. Medido requiere intervalo positivo; N/A requiere motivo no vacío y duración0. Intervalos dentro de wall, unión sin huecos cubre todo wall; solapes permitidos **sin sumar como coste total**. RAM/VRAM son máximos muestreados no picos globales; upload/readback bytes explícitos enteros; energía measured microjoules/método o unavailable/null/motivo, nunca desconocido=0. Esta estructura declara cobertura, no autentica medición/costes/hardware/eficiencia. Costes propios del checker/QA/hash/IO no se instrumentan en este hito.
+
+JSON: límite1MiB, duplicate/NaN/Infinity/exponentes infinitos rechazados, árbol depth64/nodes100000; raw agregado<=8MiB. Caps de esta API nuevos y explícitos, no modifican bounds/conf1/fixtures congelados ni son presupuesto de GPU. La memoria del caller que ya posee los bytes no queda certificada por la comprobación.
+
+## Límites
+
+Los contadores upload/readback deben cubrir al menos la suma de bytes raw input/output de los seis casos; transferencias no vacías no pueden declararse N/A. Es una cota de consistencia del contenido declarado, no medición hardware ni coste cero. Este control se añadió tras el primer pase PASS, preservado; no se relajó ningún umbral anterior.
+
+Hasta un bundle fabricado íntegramente consistente sólo obtiene CONTENT_MATCH_ONLY_NOT_NATIVE_PRECISION_OR_JOB_ADMISSION. Todas las banderas de GPU/native/contacto/physicalphase/runtimeequivalence/eficiencia/costauth/SOURCEmerge/freshjob/guardruntime son FALSE; phase_error_bound null. Origen y semántica de ABI no autenticados. No ray tracing, Bpy, simulación óptica, guard ejecución o inferencia desde escena verificados aquí. No igualar RT16Mvs1M/salidas distintas/extrapolaciones.
+
+Tests sintéticos prueban relaciones, re-sellan alteraciones semánticas antes de exigir STOP y mantienen fallos. Evidencia original sin bundle permanece STOP; RT006 histórico rechaza schema en esta API. No generar cargas para llenar campos. Pedir a Claude artifacts YAexistentes porID/path/SHA/bytes con binding original/ABI/SOURCE/ALLcoverage/gauge-material-reference/cota e igualtrabajo/costes completos. JEV bloqueado: fallback LOCAL sin reintentos. CPU1hilo/afinidad1/hijo60s/GPU0. Versionar sólo own4; sharedboards locales SINstage.
