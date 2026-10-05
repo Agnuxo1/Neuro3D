@@ -1,0 +1,13 @@
+# Inventario HOST no equivale a admisión GPU: controles negativos CPU
+
+ID GPU-POLICY-HOST-INVENTORY-NEG-CPU-001; Codex capacity_audit/EXP005. Base LOCAL 51cb54b3187caf56e61e350cfbd89d0df10dffe5.
+
+Nueva cobertura focalizada: 5 tests / 180 registros PASS en el módulo propio Blender/tests/test_gpu_policy_host_inventory_NEG_CPU_v1.py, SHA626a5046f1672d4ad849172a71ab53cb2ddcc6be88ec3f584140367cbe6e8b7a. Sólo llamadas a la política HOST pura congelada SHA6d7ffe0724f42c287ab2985e52b3c0aa1d4fd7d94323fa1695f141067bb09afa; sin modificarla ni ejecutar suites/productores antiguos.
+
+Los 136 negativos prueban TODOS los 17 campos enteros de plan/snapshot contra None, bool, float, NaN, infinito, negativo, overflow y N_A. Otros24 rechazan sustitutos no bool de los seis checks;15 retienen N_A de memoria porproceso WDDM sin convertirlos en cero. Inventario/observación completos no satisfacen el esquema cerrado; un timestamp declarado seis segundos viejo queda STOP. Una declaración sintética con todos los checks True puede dar CONDITIONAL_POLICY_FIT, pero los seis campos de autenticación/admisión/ejecución/guard/headroom siguen False. No se interpreta un booleano afirmado como una reserva real.
+
+Control500M: son CELDAS de esta política, no triángulos ni neuronas. 500000000*1024=512000000000bytes ANTES de temporales/márgenes. Con la RAM HISTÓRICA del recibo16:58UTC, la aritmética rechaza RAM, límite18GiB y VRAM física. Esto no impone una cota física universal a una representación comprimida diferente ni valida el coste de una red.
+
+Evidencia lossless en recibo coordinacion/respuestas/GPU-POLICY-HOST-INVENTORY-NEG-CPU-001-CODEX.json: stdout88171bytes SHAa641e9c10b57d1601a2b36511d167694b8480aef3e523d555ddc2a905301c59c comprimido zlib/base64; exit0, afinidad1, presupuestoCPU64MiB, RAMantes registrada, hijo timeout30s y deadline nuevo35s. Tiempo sólo QA CPU, no benchmark. La primera captura se truncó al retornarse y falló su decodificación JSON; salida truncada preservada en .cognition y un único rerun reparó la captura, SIN cambiar código/umbrales. No hubo FAIL numérico detectado; la primera salida incompleta no se presenta como evidencia completa.
+
+Feature-testing guió nuevos negativos de coerción/permisos y límites sin ampliar QA; codex-extended-cognition guió la captura comprimida verificable. No SDK/API clusters/GPU/Bpy/RT/cola/reserva/kill ajeno. GPUadmissionFALSE, capacidad nativa/ABI/longitud-fase sin certificar, costesUNKNOWN_NOT_ZERO. Fixtures/runners/shaders/contratos/bounds/fallos intactos; JEV bloqueado/fallbackLOCALsinaval/sinretry. Sharedboards SINstage; revisión/versionado local propios pendiente. Claude conserva RT/research, solicitud M01..M14 de artifacts existentes o faltantes sigue pendiente.
