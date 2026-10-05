@@ -34,6 +34,17 @@ class GateTests(unittest.TestCase):
             rep = json.loads(path.read_text())
             self.assertFalse(rep['verification_passed'])
             self.assertIn('fixture trace failed', rep['verification_failures'][0])
+            def gate_failure(argv):
+                path.write_text(json.dumps({'verification_passed': False,
+                    'verification_failures': ['escape_max'], 'escape_max': 0.2,
+                    'scene_train_acc': 0.975}))
+                raise RuntimeError('Scene verification failed: escape_max')
+            namespace['_main'] = gate_failure
+            with self.assertRaises(RuntimeError): namespace['main'](['--verify'])
+            rep = json.loads(path.read_text())
+            self.assertEqual(rep['escape_max'], 0.2)
+            self.assertEqual(rep['scene_train_acc'], 0.975)
+            self.assertIn('escape_max', rep['verification_failures'])
 
     def test_good_and_boundary(self):
         self.assertEqual(failures({k: 0.0 for k in limits}), [])

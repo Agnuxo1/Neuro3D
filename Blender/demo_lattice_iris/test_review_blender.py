@@ -58,6 +58,23 @@ results['portable_saved_rebuilt_scene'] = 'PASS'
 results['scene_reference_intervention'] = 'PASS'
 results['missing_embedded_asset_fails'] = 'PASS'
 
+# Interactive rebuild must preserve the user's scene even with conflicting collection names.
+bpy.ops.wm.read_factory_settings(use_empty=True)
+prior_scene = bpy.context.scene
+prior_collection = bpy.data.collections.new('Optics')
+prior_scene.collection.children.link(prior_collection)
+sentinel = bpy.data.objects.new('unsaved-user-object', None)
+prior_collection.objects.link(sentinel)
+prior_count = len(bpy.data.objects)
+demo.build_scene(np.array(state['theta']).reshape(demo.K,demo.K), state['ref'], reset=False)
+assert bpy.context.scene != prior_scene and prior_scene.use_fake_user
+assert sentinel in prior_collection.objects[:] and sentinel.name in bpy.data.objects
+assert len(prior_collection.objects) == 1
+assert len(demo.scene_collection('Optics').objects) > 1
+assert len(bpy.data.objects) > prior_count
+demo.classify(x[71])
+results['interactive_rebuild_preserves_user_scene'] = 'PASS'
+
 # Training bootstrap and post-training bundle refresh: cheap deterministic trainer fixture.
 saved_train, saved_build, saved_classify = demo.train, demo.build_scene, demo.classify
 try:

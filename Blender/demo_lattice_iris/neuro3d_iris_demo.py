@@ -3,7 +3,8 @@
 Everything runs inside Blender (bpy + the numpy bundled with Blender):
   * the network IS the scene: 16 Mach-Zehnder cells (beam splitters, mirrors, a movable roof
     delay line per cell) tiled on a lattice with 8 optical modes;
-  * training (numpy, inside Blender) only adjusts the physical roof-delay offsets d[i,j];
+  * training (numpy, inside Blender) adjusts roof-delay offsets d[i,j] and reference amplitude;
+    the training loss also optimizes a temperature that is not used by argmax inference;
   * inference traces the scene with ``scene.ray_cast`` from every source, sums the complex
     field of every ray path at each detector (coherent path sum) and the brightest of the
     three class detectors is the prediction. No weight matrix is read back from Python;
@@ -218,7 +219,7 @@ def disk(name, pos, normal, radius, kind, material):
     me = bpy.data.meshes.new(name); verts = [(0, 0, 0)] + [(radius * math.cos(a), radius * math.sin(a), 0)
                                                         for a in np.linspace(0, 2 * math.pi, 64, endpoint=False)]
     me.from_pydata(verts, [], [(0, k + 1, (k + 1) % 64 + 1) for k in range(64)]); me.update()
-    ob = bpy.data.objects.new(name, me); bpy.data.collections["Optics"].objects.link(ob)
+    ob = bpy.data.objects.new(name, me); scene_collection("Optics").objects.link(ob)
     ob.rotation_mode = "QUATERNION"; ob.rotation_quaternion = Vector((0, 0, 1)).rotation_difference(Vector(normal))
     ob.location = pos; ob["kind"] = kind; ob.data.materials.append(material)
     return ob
@@ -226,12 +227,17 @@ def disk(name, pos, normal, radius, kind, material):
 
 def text(name, body, loc, size, color, coll="Labels", emit=3.0, rot_z=0.0):
     cu = bpy.data.curves.new(name, "FONT"); cu.body = body; cu.size = size; cu.align_x = "CENTER"
-    ob = bpy.data.objects.new(name, cu); bpy.data.collections[coll].objects.link(ob)
+    ob = bpy.data.objects.new(name, cu); scene_collection(coll).objects.link(ob)
     ob.location = loc; ob.rotation_euler = (0, 0, rot_z); ob.data.materials.append(mat("txt_" + name, color, emit=emit))
     return ob
 
 
-def build_scene(theta, ref):
+def scene_collection(name):
+    mapping = json.loads(bpy.context.scene.get("neuro3d_collections", "{}"))
+    return bpy.context.scene.collection.children[mapping.get(name, name)]
+
+
+def build_scene(theta, ref, reset=None):
     bundled = bool(bpy.context.scene.get("neuro3d_bundle_version"))
     saved_texts = {}
     if bundled:
@@ -241,13 +247,24 @@ def build_scene(theta, ref):
             saved_texts["neuro3d.asset." + name] = read_asset(name)
         source = bpy.data.texts.get("neuro3d_iris_demo.py")
         if source is not None: saved_texts[source.name] = source.as_string()
-    bpy.ops.wm.read_factory_settings(use_empty=True)
+    if reset is None: reset = bpy.app.background
+    if reset:
+        bpy.ops.wm.read_factory_settings(use_empty=True)
+    else:
+        # Keep the user's scene and unsaved objects; interactive rebuild gets its own scene.
+        old_scene = bpy.context.scene
+        old_scene.use_fake_user = True
+        bpy.context.window.scene = bpy.data.scenes.new("Neuro3D Iris")
     sc = bpy.context.scene
     for name, content in saved_texts.items():
-        text_block = bpy.data.texts.new(name); text_block.from_string(content); text_block.use_fake_user = True
+        text_block = bpy.data.texts.get(name) or bpy.data.texts.new(name); text_block.from_string(content); text_block.use_fake_user = True
     if bundled: sc["neuro3d_bundle_version"] = 1
-    for c in ("Optics", "Beams", "Labels", "Stage"):
-        bpy.context.scene.collection.children.link(bpy.data.collections.new(c))
+    collection_names = {}
+    for c in ("Optics", "Beams", "Labels", "Stage", "Decor"):
+        collection = bpy.data.collections.new(c)
+        sc.collection.children.link(collection)
+        collection_names[c] = collection.name
+    sc["neuro3d_collections"] = json.dumps(collection_names)
     m_mirror = mat("mirror", (0.85, 0.88, 0.95), metallic=1.0, rough=0.08)
     m_bs = mat("beamsplitter", (0.55, 0.9, 1.0), rough=0.02, emit=0.6, alpha=0.55, transmission=0.6)
     d = theta * LAM / (4 * math.pi)
@@ -267,32 +284,31 @@ def build_scene(theta, ref):
         bpy.ops.mesh.primitive_uv_sphere_add(radius=0.12, location=p)
         o = bpy.context.active_object; o.name = f"src.{sid}"
         for c in o.users_collection: c.objects.unlink(o)
-        bpy.data.collections["Labels"].objects.link(o)          # emitters are not ray targets
+        scene_collection("Labels").objects.link(o)          # emitters are not ray targets
         o.data.materials.append(mat(f"src_{sid}", (1.0, 1.0, 1.0) if sid == REF else (0.4, 1.0, 0.6), emit=4.0))
     sc["sources"] = json.dumps(srcs); sc["ref"] = float(ref); sc["theta"] = json.dumps(theta.tolist())
-    bpy.context.scene.collection.children.link(bpy.data.collections.new("Decor"))
     m_plate_m = mat("plate_mirror", (0.8, 0.84, 0.92), metallic=1.0, rough=0.12)
     m_plate_b = mat("plate_bs", (0.3, 0.85, 1.0), rough=0.05, emit=1.2, alpha=0.8)
     m_post = mat("post", (0.05, 0.06, 0.08), metallic=0.8, rough=0.3)
-    for ob in list(bpy.data.collections["Optics"].objects):
+    for ob in list(scene_collection("Optics").objects):
         n = Vector(ob.rotation_quaternion @ Vector((0, 0, 1))); t = Vector((0, 0, 1)).cross(n).normalized()
         kind = ob["kind"]; w, h = (0.46, 0.34) if kind != "det" else (0.36, 0.5)
         bpy.ops.mesh.primitive_cube_add(size=1, location=ob.location)
         pl = bpy.context.active_object; pl.name = "plate." + ob.name
         for c in pl.users_collection: c.objects.unlink(pl)
-        bpy.data.collections["Decor"].objects.link(pl)
+        scene_collection("Decor").objects.link(pl)
         pl.rotation_mode = "QUATERNION"; pl.rotation_quaternion = Vector((1, 0, 0)).rotation_difference(t)
         pl.scale = (w, 0.035, h)
         pl.data.materials.append(bpy.data.materials[f"det_{ob.name[4:]}"] if kind == "det" else (m_plate_b if kind == "bs" else m_plate_m))
         bpy.ops.mesh.primitive_cylinder_add(vertices=24, radius=0.09, depth=0.3, location=ob.location - Vector((0, 0, 0.3)))
         po = bpy.context.active_object; po.name = "post." + ob.name
         for c in po.users_collection: c.objects.unlink(po)
-        bpy.data.collections["Decor"].objects.link(po); po.data.materials.append(m_post)
+        scene_collection("Decor").objects.link(po); po.data.materials.append(m_post)
     # stage
     bpy.ops.mesh.primitive_plane_add(size=60, location=(8, 9, -0.35)); pl = bpy.context.active_object; pl.name = "stage"
     for c in pl.users_collection: c.objects.unlink(pl)
-    bpy.data.collections["Stage"].objects.link(pl); pl.data.materials.append(mat("stage", (0.015, 0.018, 0.03), rough=0.25, metallic=0.4))
-    for ob in bpy.data.collections["Stage"].objects: ob["kind"] = "stage"
+    scene_collection("Stage").objects.link(pl); pl.data.materials.append(mat("stage", (0.015, 0.018, 0.03), rough=0.25, metallic=0.4))
+    for ob in scene_collection("Stage").objects: ob["kind"] = "stage"
     return sc
 
 
@@ -362,8 +378,8 @@ def classify(x_row):
 
 def show(seg, P, pred, truth=None, x_row=None, hidden=False):
     """Beams as emissive tubes; radius and brightness follow the coherent power on each segment."""
-    for ob in list(bpy.data.collections["Beams"].objects): bpy.data.objects.remove(ob, do_unlink=True)
-    for ob in list(bpy.data.collections["Labels"].objects):
+    for ob in list(scene_collection("Beams").objects): bpy.data.objects.remove(ob, do_unlink=True)
+    for ob in list(scene_collection("Labels").objects):
         if ob.name.startswith("hud."): bpy.data.objects.remove(ob, do_unlink=True)
     hot = Vector(PALETTE[SPECIES[pred]]); cold = Vector((0.10, 0.35, 1.0))
     for n, (key, f) in enumerate(seg.items()):
@@ -374,7 +390,7 @@ def show(seg, P, pred, truth=None, x_row=None, hidden=False):
         c = bpy.context.active_object; c.name = f"beam.{n}"
         c.rotation_mode = "QUATERNION"; c.rotation_quaternion = Vector((0, 0, 1)).rotation_difference(b - a)
         for cc in c.users_collection: cc.objects.unlink(c)
-        bpy.data.collections["Beams"].objects.link(c)
+        scene_collection("Beams").objects.link(c)
         q = min(1.0, math.sqrt(pw) * 1.6); col = cold.lerp(hot, q)
         if key[1] == "escape": col = Vector((1.0, 0.25, 0.1))
         c.data.materials.append(mat(f"beam_{n}", tuple(col), emit=1.5 + 22.0 * pw))
@@ -404,7 +420,7 @@ def show(seg, P, pred, truth=None, x_row=None, hidden=False):
             bpy.ops.mesh.primitive_cube_add(size=1, location=base + Vector((0, 0, 0.05 + 0.6 * val)))
             bar = bpy.context.active_object; bar.name = f"hud.bar.{sid}"; bar.scale = (0.14, 0.14, 1.2 * val + 0.02)
             for cc in bar.users_collection: cc.objects.unlink(bar)
-            bpy.data.collections["Labels"].objects.link(bar)
+            scene_collection("Labels").objects.link(bar)
             bar.data.materials.append(mat(f"bar_{sid}", (0.4, 1.0, 0.6) if sid != REF else (1, 1, 1), emit=2.5))
             text(f"hud.in.{sid}", f"{FEATURE_NAMES[sid]} {val:.2f}", base - 0.75 * EY, 0.24, (0.55, 0.9, 0.7), emit=1.4, rot_z=rz)
 
@@ -476,12 +492,12 @@ def _live_tick():
         sc["flower"] = int(sc.get("flower", -1) + 1) % len(y); n = sc["flower"]
         pred, P, _, seg, casts = classify(x[n])
         show(seg, P, pred, truth=int(y[n]), x_row=x[n], hidden=True); _dim_detectors()
-        for ob in bpy.data.collections["Labels"].objects:
+        for ob in scene_collection("Labels").objects:
             if ob.name.startswith(("hud.pred", "hud.det")): ob.hide_viewport = ob.hide_render = True
         LIVE.update(phase="propagate", front=0.0, P=P, pred=pred, casts=casts); return 0.05
     if LIVE["phase"] == "propagate":
         LIVE["front"] += LIGHT_SPEED; left = 0
-        for ob in bpy.data.collections["Beams"].objects:
+        for ob in scene_collection("Beams").objects:
             if ob.hide_viewport and ob["L0"] <= LIVE["front"]: ob.hide_viewport = ob.hide_render = False
             if ob.hide_viewport: left += 1
         if left == 0:
@@ -489,7 +505,7 @@ def _live_tick():
             for k, did in enumerate(CLASS_DET):
                 b = bpy.data.materials[f"det_{did}"].node_tree.nodes["Principled BSDF"]
                 b.inputs["Emission Strength"].default_value = 0.3 + (45.0 if k == pred else 6.0) * P[k] / tot
-            for ob in bpy.data.collections["Labels"].objects:
+            for ob in scene_collection("Labels").objects:
                 if ob.name.startswith(("hud.pred", "hud.det")): ob.hide_viewport = ob.hide_render = False
             LIVE["phase"] = "hold"; LIVE["hold"] = 0
         return 0.05
@@ -633,17 +649,24 @@ def _main(argv):
 def main(argv):
     """Invalidate an earlier report before work and persist failures before raising."""
     report_path = os.path.join(HERE, "scene_verification.json")
-    def record_failure(reason):
+    def record_failure(reason, preserve=False):
+        report = {}
+        if preserve:
+            with open(report_path, encoding="utf-8") as handle:
+                report = json.load(handle)
+        failures = [item for item in report.get("verification_failures", []) if item != "verification_incomplete"]
+        failures.append(reason)
+        report.update({"verification_passed": False, "verification_limits": VERIFY_LIMITS.copy(),
+                       "verification_failures": failures})
         with open(report_path, "w", encoding="utf-8") as handle:
-            json.dump({"verification_passed": False, "verification_limits": VERIFY_LIMITS.copy(),
-                       "verification_failures": [reason]}, handle, indent=1, allow_nan=False)
+            json.dump(report, handle, indent=1, allow_nan=False)
     if "--verify" in argv:
         record_failure("verification_incomplete")
     try:
         return _main(argv)
     except Exception as exc:
         if "--verify" in argv:
-            record_failure(type(exc).__name__ + ": " + str(exc))
+            record_failure(type(exc).__name__ + ": " + str(exc), preserve=True)
         raise
 
 
