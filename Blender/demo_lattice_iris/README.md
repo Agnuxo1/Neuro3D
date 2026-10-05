@@ -52,6 +52,18 @@ found next to the `.blend` or in its parent folder.
 
 Tested with Blender 4.5 LTS (EEVEE Next for the render, numpy bundled with Blender).
 
+`--verify` writes a report and exits with failure when any residual is missing,
+non-finite, negative, or above its explicit tolerance: power/model and complex
+field/model 1e-3; decoration and save/reopen 1e-8; escaped power 1e-8;
+power balance 2e-4. Reopened inference reads the actual scene reference amplitude.
+Temporary saves use unique directories and are removed even on failure.
+
+Newly exported `.blend` files embed the Python source, Iris CSV and trained state.
+Move the `.blend` anywhere, open its embedded `neuro3d_iris_demo.py` in the Text
+Editor and run it: the panel, live tracing and rebuild use the embedded assets.
+Missing embedded assets fail explicitly. Older exports must be regenerated for
+this portability behavior; simply opening a file does not automatically run code.
+
 ## What is and is not claimed
 
 * The scene **is** the network. Change a mirror and the prediction changes; the trained
