@@ -1,0 +1,237 @@
+{
+  "id": "MEGA-GEOMETRY-HOST-READINESS-READONLY-001",
+  "owner": "Codex capacity_audit/EXP005",
+  "base_commit": "1c41f4f9bc1b2c6e6937911f7186bd92f5bb0dee",
+  "status": "P1_READONLY_HOST_INVENTORY_DONE_NO_NATIVE_CAPABILITY_OR_GPU_ADMISSION",
+  "observation": {
+    "id": "MEGA-GEOMETRY-HOST-READINESS-READONLY-001",
+    "started_utc": "2026-10-05T16:58:37.989892+00:00",
+    "finished_utc": "2026-10-05T16:58:39.761870+00:00",
+    "queue_directory_exists": true,
+    "queue_holder": null,
+    "queue_tickets": [],
+    "queue_mutated": false,
+    "ram_available_bytes": 8318849024,
+    "ram_margin_above_4GiB_before_budget_bytes": 4023881728,
+    "gpu_query_exit_code": 0,
+    "gpu_devices": [
+      {
+        "index": "0",
+        "name": "NVIDIA GeForce RTX 3090",
+        "driver_version": "581.29",
+        "memory_used_MiB": "1936",
+        "memory_total_MiB": "24576",
+        "temperature_C": "29",
+        "utilization_percent": "0"
+      }
+    ],
+    "gpu_apps_query_exit_code": 0,
+    "gpu_apps": [
+      {
+        "pid": "32040",
+        "name": "[Insufficient Permissions]",
+        "used_gpu_memory_MiB": "[N/A]"
+      },
+      {
+        "pid": "15064",
+        "name": "WhatsApp.Root.exe",
+        "used_gpu_memory_MiB": "[N/A]"
+      },
+      {
+        "pid": "40492",
+        "name": "explorer.exe",
+        "used_gpu_memory_MiB": "[N/A]"
+      },
+      {
+        "pid": "16968",
+        "name": "SearchApp.exe",
+        "used_gpu_memory_MiB": "[N/A]"
+      },
+      {
+        "pid": "15252",
+        "name": "StartMenuExperienceHost.exe",
+        "used_gpu_memory_MiB": "[N/A]"
+      },
+      {
+        "pid": "31100",
+        "name": "msedgewebview2.exe",
+        "used_gpu_memory_MiB": "[N/A]"
+      },
+      {
+        "pid": "30360",
+        "name": "ShellExperienceHost.exe",
+        "used_gpu_memory_MiB": "[N/A]"
+      },
+      {
+        "pid": "18328",
+        "name": "PhoneExperienceHost.exe",
+        "used_gpu_memory_MiB": "[N/A]"
+      },
+      {
+        "pid": "6224",
+        "name": "TextInputHost.exe",
+        "used_gpu_memory_MiB": "[N/A]"
+      },
+      {
+        "pid": "33928",
+        "name": "chrome.exe",
+        "used_gpu_memory_MiB": "[N/A]"
+      },
+      {
+        "pid": "28340",
+        "name": "chrome.exe",
+        "used_gpu_memory_MiB": "[N/A]"
+      },
+      {
+        "pid": "1780",
+        "name": "msedgewebview2.exe",
+        "used_gpu_memory_MiB": "[N/A]"
+      },
+      {
+        "pid": "20748",
+        "name": "SearchApp.exe",
+        "used_gpu_memory_MiB": "[N/A]"
+      },
+      {
+        "pid": "28104",
+        "name": "ChatGPT.exe",
+        "used_gpu_memory_MiB": "[N/A]"
+      },
+      {
+        "pid": "42108",
+        "name": "codex-computer-use-swift.exe",
+        "used_gpu_memory_MiB": "[N/A]"
+      }
+    ],
+    "host_processes_in_scope": [
+      {
+        "pid": 7416,
+        "name": "python.exe",
+        "rss_bytes": 3182592
+      },
+      {
+        "pid": 9848,
+        "name": "python.exe",
+        "rss_bytes": 3198976
+      },
+      {
+        "pid": 17220,
+        "name": "pythonw.exe",
+        "rss_bytes": 18948096
+      },
+      {
+        "pid": 20100,
+        "name": "python.exe",
+        "rss_bytes": 13639680
+      },
+      {
+        "pid": 21140,
+        "name": "pythonw.exe",
+        "rss_bytes": 10563584
+      },
+      {
+        "pid": 22220,
+        "name": "python.exe",
+        "rss_bytes": 61988864
+      },
+      {
+        "pid": 22236,
+        "name": "python.exe",
+        "rss_bytes": 3190784
+      },
+      {
+        "pid": 24748,
+        "name": "python.exe",
+        "rss_bytes": 27914240
+      },
+      {
+        "pid": 24980,
+        "name": "pythonw.exe",
+        "rss_bytes": 4157440
+      },
+      {
+        "pid": 27344,
+        "name": "python.exe",
+        "rss_bytes": 21598208
+      },
+      {
+        "pid": 43412,
+        "name": "pythonw.exe",
+        "rss_bytes": 15060992
+      }
+    ],
+    "host_process_scan_errors": 0,
+    "sdk_roots_in_scope": [
+      {
+        "path": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA",
+        "exists": true
+      },
+      {
+        "path": "C:\\ProgramData\\NVIDIA Corporation",
+        "exists": true
+      },
+      {
+        "path": "C:\\Program Files\\NVIDIA Corporation",
+        "exists": true
+      },
+      {
+        "path": "C:\\VulkanSDK",
+        "exists": false
+      }
+    ],
+    "sdk_directories_in_scope": [
+      {
+        "directory": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.6",
+        "optix_header": false,
+        "optix_device_header": false,
+        "cuda_header": true,
+        "vulkan_header": false
+      },
+      {
+        "directory": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v13.0",
+        "optix_header": false,
+        "optix_device_header": false,
+        "cuda_header": true,
+        "vulkan_header": false
+      }
+    ],
+    "sdk_environment_paths_in_scope": {
+      "CUDA_PATH": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v13.0"
+    },
+    "GPU_workload_launched": false,
+    "native_cluster_capability_queried": false,
+    "native_cluster_capability": "UNKNOWN",
+    "SDK_installed": false,
+    "GPU_admission": false,
+    "scope": "CPU read-only telemetry and named SDK locations only, not SDK global inventory or reservation",
+    "JEV": "LOCAL_SECURITY_BLOCKED_NO_RETRY_NO_REMOTE_ENDORSEMENT"
+  },
+  "diagnostic_source": "import pathlib,json,hashlib,datetime,subprocess,psutil,ctypes,os,csv\nk=ctypes.WinDLL('kernel32',use_last_error=True)\nk.GetCurrentProcess.restype=ctypes.c_void_p\nk.SetProcessAffinityMask.argtypes=[ctypes.c_void_p,ctypes.c_size_t]\nassert k.SetProcessAffinityMask(k.GetCurrentProcess(),1)\nq=pathlib.Path('D:/PROJECTS/.cognition/gpu_queue')\ndef queue_info(p):\n b=p.read_bytes()\n d=json.loads(b)\n out={'file':str(p),'sha256':hashlib.sha256(b).hexdigest(),'name':d.get('name'),'pid':d.get('pid'),'child_pid':d.get('child_pid')}\n for key,clock in [('pid','ctime'),('child_pid','child_ctime')]:\n  pid=d.get(key); ctime=d.get(clock)\n  if type(pid) is not int or type(ctime) not in (int,float):\n   out[key+'_identity']='UNKNOWN'\n  else:\n   try: out[key+'_identity']='MATCH' if abs(psutil.Process(pid).create_time()-ctime)<2 else 'MISMATCH'\n   except (psutil.NoSuchProcess,psutil.AccessDenied): out[key+'_identity']='UNKNOWN_OR_NOT_RUNNING'\n return out\nstarted=datetime.datetime.now(datetime.timezone.utc).isoformat()\nholder=queue_info(q/'holder.json') if (q/'holder.json').is_file() else None\ntickets=[queue_info(p) for p in sorted((q/'tickets').glob('*.json'))]\ngpu=subprocess.run(['C:/Windows/System32/nvidia-smi.exe','--query-gpu=index,name,driver_version,memory.used,memory.total,temperature.gpu,utilization.gpu','--format=csv,noheader,nounits'],capture_output=True,text=True,timeout=5)\ngpu_rows=[]\nif gpu.returncode==0:\n for row in csv.reader(gpu.stdout.splitlines()):\n  if len(row)==7:\n   row=[v.strip() for v in row]\n   gpu_rows.append(dict(zip(['index','name','driver_version','memory_used_MiB','memory_total_MiB','temperature_C','utilization_percent'],row)))\napps=subprocess.run(['C:/Windows/System32/nvidia-smi.exe','--query-compute-apps=pid,process_name,used_gpu_memory','--format=csv,noheader,nounits'],capture_output=True,text=True,timeout=5)\ngpu_apps=[]\nif apps.returncode==0:\n for row in csv.reader(apps.stdout.splitlines()):\n  if len(row)==3: gpu_apps.append({'pid':row[0].strip(),'name':pathlib.Path(row[1].strip()).name,'used_gpu_memory_MiB':row[2].strip()})\nprocesses=[]\nscan_errors=0\nfor p in psutil.process_iter(['name','memory_info']):\n try:\n  n=p.info['name'] or ''\n  if n.lower().startswith(('python','blender','claude')):\n   processes.append({'pid':p.pid,'name':n,'rss_bytes':p.info['memory_info'].rss})\n except (psutil.AccessDenied,psutil.NoSuchProcess): scan_errors+=1\nroots=[\n pathlib.Path('C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA'),\n pathlib.Path('C:/ProgramData/NVIDIA Corporation'),\n pathlib.Path('C:/Program Files/NVIDIA Corporation'),\n pathlib.Path('C:/VulkanSDK')]\nsdk=[]\nroot_status=[]\nfor p in roots:\n try:\n  exists=p.is_dir()\n  root_status.append({'path':str(p),'exists':exists})\n  if exists:\n   for entry in p.iterdir():\n    if entry.is_dir() and ('optix' in entry.name.lower() or p.name in ('CUDA','VulkanSDK')):\n     sdk.append({'directory':str(entry),'optix_header':(entry/'include/optix.h').is_file(),'optix_device_header':(entry/'include/optix_device.h').is_file(),'cuda_header':(entry/'include/cuda.h').is_file(),'vulkan_header':(entry/'Include/vulkan/vulkan.h').is_file()})\n except PermissionError: root_status.append({'path':str(p),'access':'UNREADABLE'})\nenvpaths={n:os.environ.get(n) for n in ['CUDA_PATH','CUDAToolkit_ROOT','OPTIX_ROOT','OPTIX_ROOT_DIR','VULKAN_SDK'] if os.environ.get(n)}\nram=psutil.virtual_memory().available\nout={'id':'MEGA-GEOMETRY-HOST-READINESS-READONLY-001','started_utc':started,'finished_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'queue_directory_exists':q.is_dir(),'queue_holder':holder,'queue_tickets':tickets,'queue_mutated':False,'ram_available_bytes':ram,'ram_margin_above_4GiB_before_budget_bytes':ram-4*2**30,'gpu_query_exit_code':gpu.returncode,'gpu_devices':gpu_rows,'gpu_apps_query_exit_code':apps.returncode,'gpu_apps':gpu_apps,'host_processes_in_scope':processes,'host_process_scan_errors':scan_errors,'sdk_roots_in_scope':root_status,'sdk_directories_in_scope':sdk,'sdk_environment_paths_in_scope':envpaths,'GPU_workload_launched':False,'native_cluster_capability_queried':False,'native_cluster_capability':'UNKNOWN','SDK_installed':False,'GPU_admission':False,'scope':'CPU read-only telemetry and named SDK locations only, not SDK global inventory or reservation','JEV':'LOCAL_SECURITY_BLOCKED_NO_RETRY_NO_REMOTE_ENDORSEMENT'}\nprint(json.dumps(out,ensure_ascii=True))\n",
+  "diagnostic_capture": {
+    "exit_code": 0,
+    "tool_wall_time_seconds": 2.08438,
+    "scope": "CPU diagnostic duration; not ray tracing or inference performance",
+    "one_cpu_affinity_set_success": true,
+    "nvidia_smi_child_timeout_seconds": 5,
+    "outer_runtime_observed_under_60s": true,
+    "outer_runtime_guard_implemented": false
+  },
+  "interpretation": {
+    "observation_SDK_installed_false_means_no_install_performed_not_global_absence": true,
+    "queue_snapshot_not_reservation": true,
+    "temperature_and_utilization_single_sample_not_sustained_monitor": true,
+    "WDDM_per_process_memory_unknown": true,
+    "one_GPU_process_name_unavailable": true,
+    "SDK_locations_partial_not_global_absence": true,
+    "existing_CUDA_headers_not_proof_of_OptiX_9_cluster_API": true,
+    "no_native_extension_or_OptiX_device_query_executed": true,
+    "RAM_after_actual_job_budget": "UNKNOWN_NO_JOB_PLAN",
+    "full_costs": "UNKNOWN_NOT_ZERO",
+    "native_precision_and_phase": "STOP_NOT_CERTIFIED",
+    "GPU_job_admission": false,
+    "no_foreign_process_terminated": true,
+    "no_tickets_cancelled_or_queue_pruned": true
+  },
+  "request_to_Claude": "ACK ID+SHA and provide only existing native backend/ABI/cluster-capability/guard artifacts or precise gaps; previous M01..M14 request retained. No SDK installation, new sweep or workload requested.",
+  "next": "Resolve runtime capability from existing artifacts and an approved guarded opt-in path; retain all precision and admission requirements."
+}
