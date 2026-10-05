@@ -1,0 +1,80 @@
+{
+  "id": "GPU-POLICY-HOST-INVENTORY-NEG-CPU-001",
+  "owner": "Codex capacity_audit/EXP005",
+  "base_commit": "51cb54b3187caf56e61e350cfbd89d0df10dffe5",
+  "status": "PASS_NEW_CPU_NEGATIVE_CONTROLS_ONLY_NATIVE_STOP",
+  "test": {
+    "path": "Blender/tests/test_gpu_policy_host_inventory_NEG_CPU_v1.py",
+    "sha256": "626a5046f1672d4ad849172a71ab53cb2ddcc6be88ec3f584140367cbe6e8b7a"
+  },
+  "frozen_policy": {
+    "path": "Blender/benchmarks/capacity_audit/gpu_job_resource_policy_HOST_v1.py",
+    "sha256": "6d7ffe0724f42c287ab2985e52b3c0aa1d4fd7d94323fa1695f141067bb09afa",
+    "modified": false
+  },
+  "historical_inventory": {
+    "path": "coordinacion/respuestas/MEGA-GEOMETRY-HOST-READINESS-READONLY-001-CODEX.json",
+    "sha256": "9131102a2b72d5796eef9b0587c56251d52099edc37f7508c50544a2f8b0d76c",
+    "fresh_telemetry": false
+  },
+  "capture": {
+    "exit_code": 0,
+    "started_utc": "2026-10-05T17:16:10.878319+00:00",
+    "deadline_utc": "2026-10-05T17:16:45.878319+00:00",
+    "finished_utc": "2026-10-05T17:16:11.013410+00:00",
+    "before_deadline": true,
+    "one_CPU_affinity": true,
+    "CPU_budget_bytes": 67108864,
+    "RAM_available_before_bytes": 9191612416,
+    "child_timeout_s": 30,
+    "stdout_sha256": "a641e9c10b57d1601a2b36511d167694b8480aef3e523d555ddc2a905301c59c",
+    "stdout_bytes": 88171,
+    "stdout_zlib_base64": "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",
+    "stderr": "test_every_integer_field_rejects_unknown_and_coercion (__main__.Tests.test_every_integer_field_rejects_unknown_and_coercion) ... ok\ntest_half_billion_cells_do_not_fit_historical_host_budget (__main__.Tests.test_half_billion_cells_do_not_fit_historical_host_budget) ... ok\ntest_historical_inventory_cannot_be_promoted (__main__.Tests.test_historical_inventory_cannot_be_promoted) ... ok\ntest_unavailable_memory_is_not_zero (__main__.Tests.test_unavailable_memory_is_not_zero) ... ok\ntest_unknown_boolean_checks_never_become_true (__main__.Tests.test_unknown_boolean_checks_never_become_true) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.011s\n\nOK\n",
+    "summary": {
+      "CPU_synthetic_only": true,
+      "GPU_job_admission": false,
+      "historical_receipt_sha256": "9131102a2b72d5796eef9b0587c56251d52099edc37f7508c50544a2f8b0d76c",
+      "id": "GPU-POLICY-HOST-INVENTORY-NEG-CPU-001",
+      "native_precision_or_cluster_capability_certified": false,
+      "records": 180,
+      "status": "PASS",
+      "tests": 5
+    },
+    "GPU_launched": false
+  },
+  "capture_repair": {
+    "first_tool_exit_code": 0,
+    "first_output_truncated": true,
+    "first_original_tokens": 24126,
+    "preserved_truncated_tool_output": ".cognition/neuro3d-mega-geometry-20261005/policy-negative-initial-truncated-capture.json",
+    "decode_failure": "SyntaxError: tool output prefixed with Warning: truncated output is not JSON",
+    "first_suite_tail_reported": "PASS / 5 tests / 180 records; capture incomplete, not full verified evidence",
+    "repair": "One rerun solely for lossless zlib/base64 capture; no test/source/policy/threshold change",
+    "numerical_failure_detected": false
+  },
+  "scope": {
+    "new_tests": true,
+    "legacy_suite_replayed": false,
+    "policy_unmodified": true,
+    "CPU_synthetic_only": true,
+    "GPU_workload": false,
+    "GPU_admission": false,
+    "SDK_installation": false,
+    "queue_mutation": false,
+    "foreign_process_terminated": false,
+    "source_scene_or_native_precision_certified": false,
+    "full_costs": "UNKNOWN_NOT_ZERO",
+    "JEV": "LOCAL_SECURITY_BLOCKED_NO_RETRY_NO_REMOTE_ENDORSEMENT"
+  },
+  "coverage": {
+    "numeric_typed_negative_records": 136,
+    "boolean_nonbool_negative_records": 24,
+    "WDDM_N_A_negative_records": 15,
+    "inventory_schema_and_synthetic_fit_and_stale_records": 4,
+    "half_billion_policy_cells_reject_records": 1,
+    "total_records": 180,
+    "tests": 5
+  },
+  "next": "Review and local version of own test/doc/receipt. Claude retains research/RT; request existing M01..M14 native artifacts or precise gaps remains, not another render."
+}
