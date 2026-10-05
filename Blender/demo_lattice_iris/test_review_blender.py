@@ -57,4 +57,59 @@ with tempfile.TemporaryDirectory(prefix='.neuro3d-test-', dir=HERE) as tmp:
 results['portable_saved_rebuilt_scene'] = 'PASS'
 results['scene_reference_intervention'] = 'PASS'
 results['missing_embedded_asset_fails'] = 'PASS'
+
+# Interactive rebuild must preserve the user's scene even with conflicting collection names.
+bpy.ops.wm.read_factory_settings(use_empty=True)
+prior_scene = bpy.context.scene
+prior_collection = bpy.data.collections.new('Optics')
+prior_scene.collection.children.link(prior_collection)
+sentinel = bpy.data.objects.new('unsaved-user-object', None)
+prior_collection.objects.link(sentinel)
+prior_count = len(bpy.data.objects)
+demo.build_scene(np.array(state['theta']).reshape(demo.K,demo.K), state['ref'], reset=False)
+assert bpy.context.scene != prior_scene and prior_scene.use_fake_user
+assert sentinel in prior_collection.objects[:] and sentinel.name in bpy.data.objects
+assert len(prior_collection.objects) == 1
+assert len(demo.scene_collection('Optics').objects) > 1
+assert len(bpy.data.objects) > prior_count
+demo.classify(x[71])
+results['interactive_rebuild_preserves_user_scene'] = 'PASS'
+
+# Training bootstrap and post-training bundle refresh: cheap deterministic trainer fixture.
+saved_train, saved_build, saved_classify = demo.train, demo.build_scene, demo.classify
+try:
+    with tempfile.TemporaryDirectory(prefix='.neuro3d-train-test-', dir=HERE) as tmp:
+        demo.HERE = tmp
+        shutil.copy2(HERE / 'iris.csv', Path(tmp) / 'iris.csv')
+        bpy.ops.wm.read_factory_settings(use_empty=True)
+        x0, y0, scale = demo.load_iris()  # weights deliberately absent
+        raw, _ = demo.load_raw(); train_idx, _ = demo.split()
+        assert np.array_equal(scale[0], raw[train_idx].min(0))
+        assert np.array_equal(scale[1], raw[train_idx].max(0))
+        p = np.zeros(18); p[16] = 0.75
+        demo.train = lambda *args, **kwargs: p.copy()
+        built = []
+        demo.build_scene = lambda theta, ref: built.append((theta.copy(), ref))
+        demo.main(['--train'])
+        assert demo.load_state()['ref'] == 0.75 and built[-1][1] == 0.75
+        demo.embed_assets()
+        p[16] = 1.25; p[0] = 0.4
+        demo.main(['--train'])
+        assert demo.load_state()['ref'] == 1.25 and built[-1][1] == 1.25
+        assert demo.load_state()['theta'][0] == 0.4
+        # A stale successful report must be replaced when a new trace yields NaN.
+        report_path = Path(tmp) / 'scene_verification.json'
+        report_path.write_text('{"verification_passed":true}')
+        demo.classify = lambda row: (0, np.array([float('nan'), 0, 0]), {}, [], 0)
+        try: demo.main(['--verify'])
+        except RuntimeError as exc: assert 'Non-finite' in str(exc)
+        else: raise AssertionError('Non-finite trace passed')
+        failed = json.loads(report_path.read_text())
+        assert failed['verification_passed'] is False
+        assert 'Non-finite' in failed['verification_failures'][0]
+finally:
+    demo.HERE = str(HERE)
+    demo.train, demo.build_scene, demo.classify = saved_train, saved_build, saved_classify
+results['train_bootstrap_and_bundle_refresh'] = 'PASS (trainer fixture, no optimization run)'
+results['failed_trace_overwrites_stale_report'] = 'PASS'
 print('IRIS_REVIEW_CONTROLS', json.dumps(results), flush=True)
