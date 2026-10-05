@@ -17,7 +17,7 @@ Usage (headless):
   blender -b --factory-startup --python neuro3d_iris_demo.py -- --train --verify --render out_dir
 Usage (GUI): open Blender, Scripting tab, run this file -> "Neuro3D" tab in the 3D view sidebar.
 """
-import cmath, json, math, os, sys, time
+import cmath, json, math, os, sys, time, tempfile
 
 import bpy
 import numpy as np
@@ -125,8 +125,32 @@ def encode(x, ref):
     return a / np.sqrt((np.abs(a) ** 2).sum(1, keepdims=True))
 
 
+def read_asset(name):
+    """Prefer a saved scene's complete asset bundle; never hide a broken bundle with local files."""
+    if bpy.context.scene.get("neuro3d_bundle_version"):
+        text = bpy.data.texts.get("neuro3d.asset." + name)
+        if text is None:
+            raise RuntimeError("Portable scene is missing embedded asset: " + name)
+        return text.as_string()
+    with open(os.path.join(HERE, name), encoding="utf-8") as handle:
+        return handle.read()
+
+
+def load_state():
+    return json.loads(read_asset("trained_lattice.json"))
+
+
+def embed_assets():
+    assets = {name: read_asset(name) for name in ("iris.csv", "trained_lattice.json")}
+    for name, content in assets.items():
+        text = bpy.data.texts.get("neuro3d.asset." + name) or bpy.data.texts.new("neuro3d.asset." + name)
+        text.from_string(content)
+        text.use_fake_user = True
+    bpy.context.scene["neuro3d_bundle_version"] = 1
+
+
 def load_raw():
-    rows = [l.strip().split(",") for l in open(os.path.join(HERE, "iris.csv")).read().splitlines()[1:]]
+    rows = [l.strip().split(",") for l in read_asset("iris.csv").splitlines()[1:]]
     return np.array([[float(v) for v in r[:4]] for r in rows]), np.array([SPECIES.index(r[4]) for r in rows])
 
 
@@ -138,9 +162,9 @@ def load_iris(scaler=None):
     """Features scaled with a min/max fitted on the TRAIN rows only (persisted with the weights)."""
     x, y = load_raw()
     if scaler is None:
-        st_path = os.path.join(HERE, "trained_lattice.json")
-        if os.path.exists(st_path) and "scaler_lo" in json.load(open(st_path)):
-            st = json.load(open(st_path)); scaler = (np.array(st["scaler_lo"]), np.array(st["scaler_hi"]))
+        st = load_state()
+        if "scaler_lo" in st:
+            scaler = (np.array(st["scaler_lo"]), np.array(st["scaler_hi"]))
         else:
             tr, _ = split(); scaler = (x[tr].min(0), x[tr].max(0))
     lo, hi = scaler; return (x - lo) / (hi - lo), y, scaler
@@ -203,8 +227,20 @@ def text(name, body, loc, size, color, coll="Labels", emit=3.0, rot_z=0.0):
 
 
 def build_scene(theta, ref):
+    bundled = bool(bpy.context.scene.get("neuro3d_bundle_version"))
+    saved_texts = {}
+    if bundled:
+        # read_factory_settings clears texts as well as geometry. Preserve a portable
+        # file's assets and source so repeated interactive rebuilds remain portable.
+        for name in ("iris.csv", "trained_lattice.json"):
+            saved_texts["neuro3d.asset." + name] = read_asset(name)
+        source = bpy.data.texts.get("neuro3d_iris_demo.py")
+        if source is not None: saved_texts[source.name] = source.as_string()
     bpy.ops.wm.read_factory_settings(use_empty=True)
     sc = bpy.context.scene
+    for name, content in saved_texts.items():
+        text_block = bpy.data.texts.new(name); text_block.from_string(content); text_block.use_fake_user = True
+    if bundled: sc["neuro3d_bundle_version"] = 1
     for c in ("Optics", "Beams", "Labels", "Stage"):
         bpy.context.scene.collection.children.link(bpy.data.collections.new(c))
     m_mirror = mat("mirror", (0.85, 0.88, 0.95), metallic=1.0, rough=0.08)
@@ -255,7 +291,7 @@ def build_scene(theta, ref):
     return sc
 
 
-TRACE_INFO = {"escape": 0.0}   # incoherent escaped power of the last trace (0 when every ray reaches a detector)
+TRACE_INFO = {"escape": 0.0}   # coherent escaped power, summed over distinct terminal ray modes
 SEG_L = {}          # segment -> optical path length at its start (filled by trace, used by the live animation)
 
 
@@ -275,7 +311,7 @@ def trace(amps):
     Returns detector fields, per-segment coherent field (for rendering) and the number of casts."""
     sc = bpy.context.scene; prev = _set_excluded(True); bpy.context.view_layer.update()
     try:
-        dg = bpy.context.evaluated_depsgraph_get(); det, seg, casts = {}, {}, 0; SEG_L.clear(); TRACE_INFO["escape"] = 0.0
+        dg = bpy.context.evaluated_depsgraph_get(); det, seg, casts = {}, {}, 0; escaped = {}; SEG_L.clear(); TRACE_INFO["escape"] = 0.0
         for s in json.loads(sc["sources"]):
             a0 = amps.get(s["id"], 0)
             if a0 == 0: continue
@@ -290,7 +326,13 @@ def trace(amps):
                 seg[key] = seg.get(key, 0) + amp * cmath.exp(1j * KW * L)
                 SEG_L[key] = min(SEG_L.get(key, 1e9), L)
                 if not hit:
-                    TRACE_INFO["escape"] += abs(amp) ** 2; continue
+                    # Equivalent outgoing lines share a mode. Refer their phases to the
+                    # plane through the origin normal to d, rather than to each ray's last hit.
+                    direction = d.normalized(); along = o.dot(direction)
+                    transverse = o - direction * along
+                    mode = tuple(round(c, 4) for c in (*transverse, *direction))
+                    escaped[mode] = escaped.get(mode, 0j) + amp * cmath.exp(1j * KW * (L - along))
+                    continue
                 L2 = L + (loc - o).length; kind = ob["kind"]
                 if kind == "det":
                     det[ob.name[4:]] = det.get(ob.name[4:], 0) + amp * cmath.exp(1j * KW * L2); continue
@@ -299,6 +341,7 @@ def trace(amps):
                 else:
                     stack.append((loc, d.copy(), amp * T, L2, ob.name, depth + 1))
                     stack.append((loc, rd, amp * R, L2, ob.name, depth + 1))
+        TRACE_INFO["escape"] = sum(abs(field) ** 2 for field in escaped.values())
         return det, seg, casts
     finally:
         _set_excluded(False, prev)
@@ -406,7 +449,7 @@ class NEURO3D_OT_build(bpy.types.Operator):
     bl_idname = "neuro3d.build_trained"; bl_label = "Build trained lattice"
 
     def execute(self, context):
-        st = json.load(open(os.path.join(HERE, "trained_lattice.json")))
+        st = load_state()
         build_scene(np.array(st["theta"]).reshape(K, K), st["ref"]); setup_render(); return {"FINISHED"}
 
 
@@ -480,6 +523,26 @@ def register():
 
 
 # ----------------------------------------------------------------------------------------------
+VERIFY_LIMITS = {
+    "scene_vs_model_max_power_diff": 1e-3,
+    "outputs_complex_vs_model_max": 1e-3,
+    "decoration_invariance_max": 1e-8,
+    "save_reopen_max": 1e-8,
+    "escape_max": 1e-8,
+    "power_balance_max_err": 2e-4,
+}
+
+
+def verification_failures(report):
+    """Fail closed: missing, non-finite, negative or out-of-tolerance residuals fail."""
+    failures = []
+    for metric, limit in VERIFY_LIMITS.items():
+        value = report.get(metric)
+        if not isinstance(value, (int, float)) or not math.isfinite(value) or not 0 <= value <= limit:
+            failures.append(metric)
+    return failures
+
+
 def main(argv):
     x, y, _ = load_iris(); out_dir = None; state_path = os.path.join(HERE, "trained_lattice.json")
     if "--render" in argv: out_dir = os.path.join(HERE, argv[argv.index("--render") + 1]); os.makedirs(out_dir, exist_ok=True)
@@ -492,7 +555,7 @@ def main(argv):
                    "train_acc_model": loss_acc(p, x[tr], y[tr])[1], "test_acc_model": loss_acc(p, x[te], y[te])[1],
                    "seconds": time.time() - t0}, open(state_path, "w"), indent=1)
         print("TRAINED", json.load(open(state_path))["test_acc_model"], flush=True)
-    st = json.load(open(state_path)); theta = np.array(st["theta"]).reshape(K, K)
+    st = load_state(); theta = np.array(st["theta"]).reshape(K, K)
     build_scene(theta, st["ref"])
     if "--verify" in argv:
         # in-scene inference for every flower (ray tracing); compare with the numpy training model
@@ -501,6 +564,8 @@ def main(argv):
         for n in range(len(y)):
             pred, P, det, _, c = classify(x[n]); preds.append(pred); casts += c
             Pm = np.abs(encode(x[n][None], st["ref"]) @ U.T)[0] ** 2
+            if not np.isfinite(P).all() or not np.isfinite(Pm).all():
+                raise RuntimeError("Non-finite detector/model power")
             maxdiff = max(maxdiff, max(abs(P[k] - Pm[outs.index(cd)]) for k, cd in enumerate(CLASS_DET)))
         preds = np.array(preds)
         rep = {"scene_test_acc": float((preds[te] == y[te]).mean()), "scene_train_acc": float((preds[tr] == y[tr]).mean()),
@@ -509,24 +574,40 @@ def main(argv):
         # extended gate on the hold-out flowers: all 8 complex outputs + escape, decoration invariance, save/reopen
         ins, outs = modes(); probe = [int(n) for n in te]
         def outputs(n):
-            a = encode(x[n][None], st["ref"])[0]; det, _, _ = trace({sid: a[ins.index(sid)] for sid in INPUTS + [REF]})
-            return [det.get(o, 0j) for o in outs], TRACE_INFO["escape"]
+            # Use the actual saved scene property, just as the interactive classifier does.
+            ref = bpy.context.scene["ref"]
+            if not math.isfinite(ref): raise RuntimeError("Scene reference amplitude is not finite")
+            a = encode(x[n][None], ref)[0]; det, _, _ = trace({sid: a[ins.index(sid)] for sid in INPUTS + [REF]})
+            fields = [det.get(o, 0j) for o in outs]
+            if not np.isfinite(fields).all() or not math.isfinite(TRACE_INFO["escape"]):
+                raise RuntimeError("Non-finite scene output")
+            return fields, TRACE_INFO["escape"]
         before = {n: outputs(n) for n in probe}
         pred, P, _, seg, _ = classify(x[probe[0]]); show(seg, P, pred, truth=int(y[probe[0]]), x_row=x[probe[0]])   # add decoration
         after = {n: outputs(n) for n in probe}
-        blend = os.path.join(HERE, "renders", "verify_tmp.blend"); os.makedirs(os.path.dirname(blend), exist_ok=True)
-        bpy.ops.wm.save_as_mainfile(filepath=blend); bpy.ops.wm.open_mainfile(filepath=blend)
-        reopened = {n: outputs(n) for n in probe}
+        # Unique directory also contains Blender's backup files; cleanup runs on failure.
+        with tempfile.TemporaryDirectory(prefix=".neuro3d-verify-", dir=HERE) as tmp:
+            blend = os.path.join(tmp, "scene.blend")
+            bpy.ops.wm.save_as_mainfile(filepath=blend); bpy.ops.wm.open_mainfile(filepath=blend)
+            reopened = {n: outputs(n) for n in probe}
         U = model_U(theta * LAM / (4 * math.pi))
         model = {n: list(U @ encode(x[n][None], st["ref"])[0]) for n in probe}
+        if not all(np.isfinite(v).all() for v in model.values()):
+            raise RuntimeError("Non-finite reference model output")
         diff = lambda A, B: max(max(abs(a - b) for a, b in zip(A[n][0], B[n][0])) for n in probe)
         rep.update({"outputs_complex_vs_model_max": max(max(abs(a - b) for a, b in zip(before[n][0], model[n])) for n in probe),
                     "decoration_invariance_max": diff(before, after), "save_reopen_max": diff(before, reopened),
                     "escape_max": max(v[1] for v in before.values()),
                     "power_balance_max_err": max(abs(sum(abs(c) ** 2 for c in v[0]) + v[1] - 1) for v in before.values())})
-        os.remove(blend)
-        json.dump(rep, open(os.path.join(HERE, "scene_verification.json"), "w"), indent=1); print("VERIFY", rep, flush=True)
-        st2 = json.load(open(state_path)); theta = np.array(st2["theta"]).reshape(K, K); build_scene(theta, st2["ref"])
+        rep["verification_limits"] = VERIFY_LIMITS.copy()
+        rep["verification_failures"] = verification_failures(rep)
+        rep["verification_passed"] = not rep["verification_failures"]
+        with open(os.path.join(HERE, "scene_verification.json"), "w") as handle:
+            json.dump(rep, handle, indent=1, allow_nan=False)
+        print("VERIFY", rep, flush=True)
+        if not rep["verification_passed"]:
+            raise RuntimeError("Scene verification failed: " + ", ".join(rep["verification_failures"]))
+        st2 = load_state(); theta = np.array(st2["theta"]).reshape(K, K); build_scene(theta, st2["ref"])
     if out_dir:
         setup_render(); sc = bpy.context.scene
         picks = [int(te[np.where(y[te] == c)[0][0]]) for c in range(3)]
@@ -536,6 +617,7 @@ def main(argv):
             print("RENDERED", sc.render.filepath, flush=True)
         txt = bpy.data.texts.get("neuro3d_iris_demo.py") or bpy.data.texts.new("neuro3d_iris_demo.py")
         txt.from_string(open(os.path.join(HERE, "neuro3d_iris_demo.py"), encoding="utf-8").read())
+        embed_assets()
         bpy.ops.wm.save_as_mainfile(filepath=os.path.join(out_dir, "neuro3d_iris_lattice.blend"))
     print("NEURO3D_IRIS_DONE", flush=True)
 
