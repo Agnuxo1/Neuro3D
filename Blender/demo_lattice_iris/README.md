@@ -2,9 +2,10 @@
 
 ![setosa](renders/iris_setosa.jpg)
 
-A small optical neural network whose computation is carried by a Blender scene. The only
-trained parameters are the **positions of 16 mirror delay lines**, and every prediction is
-made by **ray tracing the scene**.
+A small optical neural network whose computation is carried by a Blender scene. Inference
+uses the **positions of 16 mirror delay lines** and a **trained reference-beam amplitude**
+stored in the scene. Predictions come from **ray tracing the scene**. Training also fits a
+loss temperature; argmax inference does not use that temperature.
 
 | | |
 |---|---|
@@ -42,13 +43,14 @@ The viewport opens in the camera view in rendered mode and the network **runs li
 flower is ray-traced through the scene at that moment (about 2 s), the beams light up in
 order of optical path length as the light propagates, and then the class detectors glow and
 the prediction appears. The same *Play / Pause*, *Previous / Next* and *Build trained lattice*
-controls are in **3D View › Sidebar (N) › Neuro3D**.
+controls are in **3D View › Sidebar (N) › Neuro3D**. Interactive **Build trained lattice**
+creates a separate scene and preserves the current scene and unsaved objects.
 
 Opening the `.blend` by itself does not run any code, because Blender does not auto-run scripts by
 default and this project does not ask you to enable that. The script is embedded as the text
 block `neuro3d_iris_demo.py`. To start the live demo from a fresh open, go to **Scripting ›
-Text › neuro3d_iris_demo.py › Run Script**, or use the command line above. The data files are
-found next to the `.blend` or in its parent folder.
+Text › neuro3d_iris_demo.py › Run Script**, or use the command line above. New exports include their data as embedded text blocks. Older exports require the data files
+next to the `.blend` or in its parent folder.
 
 Tested with Blender 4.5 LTS (EEVEE Next for the render, numpy bundled with Blender).
 
@@ -67,7 +69,7 @@ this portability behavior; simply opening a file does not automatically run code
 ## What is and is not claimed
 
 * The scene **is** the network. Change a mirror and the prediction changes; the trained
-  parameters exist only as object positions.
+  inference parameters are mirror positions and the scene reference amplitude.
 * Blender's ray tracer supplies which optic each ray hits and the path lengths. The wave
   interference (complex amplitudes) is summed in Blender's Python from those lengths:
   Blender does not simulate wave optics. This is a **simulation** of a free-space optical
@@ -79,5 +81,5 @@ this portability behavior; simply opening a file does not automatically run code
   for choosing restarts.
 
 Files: `neuro3d_iris_demo.py` (scene, training, ray-traced inference, render, panel),
-`trained_lattice.json` (trained mirror delays), `scene_verification.json` (ray-traced
+`trained_lattice.json` (trained mirror delays, reference amplitude and train-fit scaler), `scene_verification.json` (ray-traced
 accuracy and model agreement), `iris.csv` (Fisher's Iris data, public domain).
