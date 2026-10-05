@@ -162,7 +162,12 @@ def load_iris(scaler=None):
     """Features scaled with a min/max fitted on the TRAIN rows only (persisted with the weights)."""
     x, y = load_raw()
     if scaler is None:
-        st = load_state()
+        try:
+            st = load_state()
+        except FileNotFoundError:
+            if bpy.context.scene.get("neuro3d_bundle_version"):
+                raise
+            st = {}  # Bootstrap training from CSV when no saved weights exist.
         if "scaler_lo" in st:
             scaler = (np.array(st["scaler_lo"]), np.array(st["scaler_hi"]))
         else:
@@ -543,7 +548,7 @@ def verification_failures(report):
     return failures
 
 
-def main(argv):
+def _main(argv):
     x, y, _ = load_iris(); out_dir = None; state_path = os.path.join(HERE, "trained_lattice.json")
     if "--render" in argv: out_dir = os.path.join(HERE, argv[argv.index("--render") + 1]); os.makedirs(out_dir, exist_ok=True)
     tr, te = split()
@@ -555,6 +560,9 @@ def main(argv):
                    "train_acc_model": loss_acc(p, x[tr], y[tr])[1], "test_acc_model": loss_acc(p, x[te], y[te])[1],
                    "seconds": time.time() - t0}, open(state_path, "w"), indent=1)
         print("TRAINED", json.load(open(state_path))["test_acc_model"], flush=True)
+        if bpy.context.scene.get("neuro3d_bundle_version"):
+            # Retraining must replace the state used by subsequent scene operations.
+            bpy.data.texts["neuro3d.asset.trained_lattice.json"].from_string(open(state_path).read())
     st = load_state(); theta = np.array(st["theta"]).reshape(K, K)
     build_scene(theta, st["ref"])
     if "--verify" in argv:
@@ -620,6 +628,23 @@ def main(argv):
         embed_assets()
         bpy.ops.wm.save_as_mainfile(filepath=os.path.join(out_dir, "neuro3d_iris_lattice.blend"))
     print("NEURO3D_IRIS_DONE", flush=True)
+
+
+def main(argv):
+    """Invalidate an earlier report before work and persist failures before raising."""
+    report_path = os.path.join(HERE, "scene_verification.json")
+    def record_failure(reason):
+        with open(report_path, "w", encoding="utf-8") as handle:
+            json.dump({"verification_passed": False, "verification_limits": VERIFY_LIMITS.copy(),
+                       "verification_failures": [reason]}, handle, indent=1, allow_nan=False)
+    if "--verify" in argv:
+        record_failure("verification_incomplete")
+    try:
+        return _main(argv)
+    except Exception as exc:
+        if "--verify" in argv:
+            record_failure(type(exc).__name__ + ": " + str(exc))
+        raise
 
 
 if __name__ == "__main__":

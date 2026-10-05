@@ -57,4 +57,42 @@ with tempfile.TemporaryDirectory(prefix='.neuro3d-test-', dir=HERE) as tmp:
 results['portable_saved_rebuilt_scene'] = 'PASS'
 results['scene_reference_intervention'] = 'PASS'
 results['missing_embedded_asset_fails'] = 'PASS'
+
+# Training bootstrap and post-training bundle refresh: cheap deterministic trainer fixture.
+saved_train, saved_build, saved_classify = demo.train, demo.build_scene, demo.classify
+try:
+    with tempfile.TemporaryDirectory(prefix='.neuro3d-train-test-', dir=HERE) as tmp:
+        demo.HERE = tmp
+        shutil.copy2(HERE / 'iris.csv', Path(tmp) / 'iris.csv')
+        bpy.ops.wm.read_factory_settings(use_empty=True)
+        x0, y0, scale = demo.load_iris()  # weights deliberately absent
+        raw, _ = demo.load_raw(); train_idx, _ = demo.split()
+        assert np.array_equal(scale[0], raw[train_idx].min(0))
+        assert np.array_equal(scale[1], raw[train_idx].max(0))
+        p = np.zeros(18); p[16] = 0.75
+        demo.train = lambda *args, **kwargs: p.copy()
+        built = []
+        demo.build_scene = lambda theta, ref: built.append((theta.copy(), ref))
+        demo.main(['--train'])
+        assert demo.load_state()['ref'] == 0.75 and built[-1][1] == 0.75
+        demo.embed_assets()
+        p[16] = 1.25; p[0] = 0.4
+        demo.main(['--train'])
+        assert demo.load_state()['ref'] == 1.25 and built[-1][1] == 1.25
+        assert demo.load_state()['theta'][0] == 0.4
+        # A stale successful report must be replaced when a new trace yields NaN.
+        report_path = Path(tmp) / 'scene_verification.json'
+        report_path.write_text('{"verification_passed":true}')
+        demo.classify = lambda row: (0, np.array([float('nan'), 0, 0]), {}, [], 0)
+        try: demo.main(['--verify'])
+        except RuntimeError as exc: assert 'Non-finite' in str(exc)
+        else: raise AssertionError('Non-finite trace passed')
+        failed = json.loads(report_path.read_text())
+        assert failed['verification_passed'] is False
+        assert 'Non-finite' in failed['verification_failures'][0]
+finally:
+    demo.HERE = str(HERE)
+    demo.train, demo.build_scene, demo.classify = saved_train, saved_build, saved_classify
+results['train_bootstrap_and_bundle_refresh'] = 'PASS (trainer fixture, no optimization run)'
+results['failed_trace_overwrites_stale_report'] = 'PASS'
 print('IRIS_REVIEW_CONTROLS', json.dumps(results), flush=True)
