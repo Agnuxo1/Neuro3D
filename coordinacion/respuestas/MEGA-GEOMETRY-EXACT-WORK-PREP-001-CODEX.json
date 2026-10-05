@@ -1,0 +1,79 @@
+{
+  "id": "MEGA-GEOMETRY-EXACT-WORK-PREP-001",
+  "owner": "Codex capacity_audit/EXP005",
+  "observed_utc": "2026-10-05T16:45:59Z",
+  "base_commit": "7535f84151799b06e9d9cddbe3c1f1f3de7bde57",
+  "status": "P1_DOCUMENTARY_PREPARATION_VERIFIED_NATIVE_STOP",
+  "proposal": {
+    "path": "coordinacion/experimentos/EXP-005-MEGA-GEOMETRY-EXACT-WORK-PREPARACION.md",
+    "sha256": "e1f2ed9c0f7afcd90868113fbde47ce23d235ff47a9102fdd98ccbfda1d9d3ba",
+    "bytes": 6528,
+    "frozen_contract_replaced": false,
+    "approved_runtime_contract": false
+  },
+  "research_report": {
+    "path": "Docs/EXP-005-MEGA-GEOMETRY-RESEARCH-2026-10-05.md",
+    "sha256": "e486b0599faedabe776c3112a53a0f494008eefce880b5520ca8d0f92451f819",
+    "bytes": 15373,
+    "provenance": "Prior human-requested documentary investigation; not a new benchmark or web refresh"
+  },
+  "requirements": {
+    "M01_same_original_scene_input": "EXISTING_NATIVE_ARTIFACT_REQUIRED",
+    "M02_twelve_SOURCE_bindings": "EXISTING_NATIVE_ARTIFACT_REQUIRED",
+    "M03_point_direction_hilo_native_ABI": "EXISTING_NATIVE_ARTIFACT_REQUIRED",
+    "M04_previousprimitive_selfhit_ties_nearest": "EXISTING_NATIVE_ARTIFACT_REQUIRED",
+    "M05_all_primitive_visibility_thin_gaps": "EXISTING_NATIVE_ARTIFACT_REQUIRED",
+    "M06_geometry_compression_quantization_bound": "EXISTING_NATIVE_ARTIFACT_REQUIRED",
+    "M07_same_numeric_hit_outputs": "EXISTING_NATIVE_ARTIFACT_REQUIRED",
+    "M08_optical_length_reference_phase_bound": "EXISTING_NATIVE_ARTIFACT_REQUIRED",
+    "M09_complete_scene_neural_output": "EXISTING_NATIVE_ARTIFACT_REQUIRED",
+    "M10_distinct_count_units": "EXISTING_NATIVE_ARTIFACT_REQUIRED",
+    "M11_complete_cold_and_reused_costs": "EXISTING_NATIVE_ARTIFACT_REQUIRED",
+    "M12_complete_residency_and_peaks": "EXISTING_NATIVE_ARTIFACT_REQUIRED",
+    "M13_exclusive_job_guard_deadline": "EXISTING_NATIVE_ARTIFACT_REQUIRED",
+    "M14_committed_optin_equalwork_evidence": "EXISTING_NATIVE_ARTIFACT_REQUIRED"
+  },
+  "linked_receipts": {
+    "coordinacion/respuestas/PRECISION-ORIGINAL-SOURCE-POINT-HILO-CPU-001-CODEX.json": "e3d4a3e5f431b97fb83e121d4a9f06c9454e9f9849437721a7ed3e9b488fce07",
+    "coordinacion/respuestas/PRECISION-ORIGINAL-SOURCE-DIRECTION-ENDPOINTS-HILO-CPU-001-CODEX.json": "789c41b770050d1cdd25146e7efbcc9eb3216b17e3a730cc54f80012cb2a2a45",
+    "coordinacion/respuestas/GPU-GUARD-OWNED-TREE-CONTAINMENT-CPU-001-CODEX.json": "172576dd8a38cf8119f2a1a3d229b534a7e77fdbde2632e2ef967b10e2d6e9f4"
+  },
+  "integrity_observation": {
+    "manifest_source": "GPU-GUARD-OWNED-TREE-CONTAINMENT-CPU-001-CODEX.json:pinned_manifest_capture.stdout_zlib_base64",
+    "manifest_stdout_sha256": "8bbea409e55c13e53af86d05736d861bbd6cf6a83e6a9172fd07dd630c32f5ad",
+    "pins_checked_before_shared_board_update": 461,
+    "changed_pins": [],
+    "claude_response_files_in_scope": 35,
+    "claude_scope": "coordinacion/respuestas/*CLAUDE* files only; not global absence",
+    "index_empty_observed": true,
+    "head_unchanged_observed": true
+  },
+  "document_validation": {
+    "requirement_ids": ["M01", "M02", "M03", "M04", "M05", "M06", "M07", "M08", "M09", "M10", "M11", "M12", "M13", "M14"],
+    "linked_sha_checks": 3,
+    "retained_false_fields_checked": 10,
+    "native_original_transport_joins_retained": 0,
+    "execution_exit_code": 0,
+    "tool_wall_time_seconds": 0.4029871,
+    "wall_time_scope": "tool observation; not GPU latency, inference benchmark or complete validation cost",
+    "own_process_affinity_mask_requested": 1,
+    "scope": "New document links and retained receipt fields; no replay of old numeric suites"
+  },
+  "GPU_used": false,
+  "Bpy_used": false,
+  "RT_used": false,
+  "GPU_launch_allowed": false,
+  "native_precision_certified": false,
+  "phase_certified": false,
+  "full_costs": "UNKNOWN_NOT_ZERO",
+  "JEV": "SECURITY_BLOCKED_LOCAL_ANALYSIS_WITHOUT_REMOTE_ENDORSEMENT_NO_RETRY",
+  "foreign_writer_executions": 0,
+  "old_query_replays": 0,
+  "SDK_installations": 0,
+  "gpuq_mutations": 0,
+  "prior_failures_retained": true,
+  "shared_boards_stage_allowed": false,
+  "commit": null,
+  "claude_request": "ACK ID plus receipt SHA and provide only existing M01..M14 backend/ABI/guard/full-cost artifacts with ID/path/SHA/bytes, or precise missing items. No repeated sweep, installation or new peer implementation requested.",
+  "next_action": "Verify actual native evidence and scene-derived precision before selecting or implementing an optional backend; retain original contracts and fixtures."
+}
