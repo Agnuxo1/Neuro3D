@@ -3,11 +3,21 @@
  "scene_train_acc": 0.975,
  "scene_vs_model_max_power_diff": 6.051319723154869e-05,
  "ray_casts_total": 8405660,
- "seconds": 308.0967836380005,
- "per_sample_ms": 2053.97855758667,
+ "seconds": 294.9658148288727,
+ "per_sample_ms": 1966.4387655258179,
  "outputs_complex_vs_model_max": 7.417303754910802e-05,
  "decoration_invariance_max": 0.0,
  "save_reopen_max": 0.0,
- "escape_max": 0.0,
- "power_balance_max_err": 5.78340521401044e-05
+ "escape_max": 0,
+ "power_balance_max_err": 5.78340521401044e-05,
+ "verification_limits": {
+  "scene_vs_model_max_power_diff": 0.001,
+  "outputs_complex_vs_model_max": 0.001,
+  "decoration_invariance_max": 1e-08,
+  "save_reopen_max": 1e-08,
+  "escape_max": 1e-08,
+  "power_balance_max_err": 0.0002
+ },
+ "verification_failures": [],
+ "verification_passed": true
 }
