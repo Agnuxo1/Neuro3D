@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "rows": 150,
+  "previous_artifact_commit": "5b2e9c5475ddb60fb8d36c15bff270533980f926",
+  "corrected_source_commit": "7c037702486ae9ab153f605edab432b85c44ba0d",
+  "maximum_complex_field_change": 0.0,
+  "maximum_power_change": 0.0,
+  "prediction_changes": [],
+  "invariance_limit": 1e-08,
+  "previous_ray_casts": 8405660,
+  "current_ray_casts": 8405660
+}

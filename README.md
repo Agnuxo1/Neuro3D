@@ -134,7 +134,7 @@ credenciales— permanecen fuera del release mediante `.gitignore`.
 | Ruta | Estado y alcance |
 |---|---|
 | Oracle CPU y modelo determinista | Pruebas conservadas; 9 del modelo repetidas en la consolidación |
-| Iris híbrido | 117/120 entrenamiento y 29/30 prueba repetidos; blend port?til verificado sobre las 150 filas; [informe](Docs/IRIS_PORTABLE_VALIDATION_2026-10-06.md) |
+| Iris híbrido | 117/120 entrenamiento y 29/30 prueba; archivo portátil y reconstrucciones repetidas verificados; [informe](Docs/IRIS_REBUILD_VALIDATION_2026-10-06.md) |
 | Pilotos OpenGL nativos | Evidencia local K3/K4 y nearest V2; alcance geométrico acotado |
 | Precisión hi/lo | Verificación CPU; nueva integración nativa pendiente |
 | RT coherente completo | Pendiente; piloto geométrico parcial conservado |

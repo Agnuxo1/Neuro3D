@@ -1,5 +1,12 @@
 # Iris portable artifact validation - 2026-10-06
 
+## Historical scope
+This is the roadmap point-2 result for the artifact committed at
+5b2e9c5475ddb60fb8d36c15bff270533980f926. Its original manifest and all-row report
+are archived byte for byte. The current distributed artifact includes the later
+[point-3 reconstruction correction](IRIS_REBUILD_VALIDATION_2026-10-06.md).
+Paths inside the historical summary refer to their location at the point-2 commit.
+
 ## Result
 PASS: the regenerated Blender artifact was copied outside the repository and
 checked in a separate Blender 4.5.14 LTS process with automatic scripts disabled.
@@ -60,8 +67,8 @@ Use --threads 1 and --disable-autoexec. Each script receives its options after
 Blender's -- separator. A nonzero process exit or incomplete report is a failure.
 
 ## Evidence
-- [Portable manifest](../Blender/demo_lattice_iris/renders/portable_manifest.json)
-- [All 150 rows](../Blender/demo_lattice_iris/portable_verification.json)
+- [Portable manifest](validation/iris-portable-point02-2026-10-06/portable_manifest.json)
+- [All 150 rows](validation/iris-portable-point02-2026-10-06/portable_verification.json)
 - [Summary and negative controls](validation/iris-portable-2026-10-06.json)
 - [Exporter](../Blender/demo_lattice_iris/export_portable_blender.py)
 - [Independent process verifier](../Blender/demo_lattice_iris/verify_portable_blender.py)
