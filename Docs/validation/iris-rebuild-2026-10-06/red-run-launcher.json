@@ -1,0 +1,136 @@
+{
+  "command": [
+    "D:\\TOOLS\\Blender\\blender-4.5.14-windows-x64\\blender.exe",
+    "--background",
+    "--factory-startup",
+    "--disable-autoexec",
+    "--threads",
+    "1",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point03\\probe_rebuild_red.py",
+    "--"
+  ],
+  "status": "PROCESS_FAILED",
+  "ram_floor_bytes": 4294967296,
+  "cpu_process_budget_bytes": 2147483648,
+  "ram_available_before_bytes": 10134736896,
+  "timeout_seconds": 180.0,
+  "threads": 1,
+  "affinity_mask": 1,
+  "gpu_supervisor": false,
+  "telemetry": [
+    {
+      "seconds": 0.006560000008903444,
+      "ram_available_bytes": 10134609920,
+      "process_peak_working_set_bytes": 1716224,
+      "process_peak_commit_bytes": 15306752
+    },
+    {
+      "seconds": 1.0076253000297584,
+      "ram_available_bytes": 9946431488,
+      "process_peak_working_set_bytes": 166023168,
+      "process_peak_commit_bytes": 174276608
+    },
+    {
+      "seconds": 2.0083065000362694,
+      "ram_available_bytes": 9938284544,
+      "process_peak_working_set_bytes": 173318144,
+      "process_peak_commit_bytes": 191086592
+    },
+    {
+      "seconds": 3.0089809000492096,
+      "ram_available_bytes": 9936801792,
+      "process_peak_working_set_bytes": 178479104,
+      "process_peak_commit_bytes": 199491584
+    },
+    {
+      "seconds": 4.009695100015961,
+      "ram_available_bytes": 9920532480,
+      "process_peak_working_set_bytes": 181792768,
+      "process_peak_commit_bytes": 199491584
+    },
+    {
+      "seconds": 5.010275900014676,
+      "ram_available_bytes": 10184839168,
+      "process_peak_working_set_bytes": 183599104,
+      "process_peak_commit_bytes": 199491584
+    },
+    {
+      "seconds": 6.010913200036157,
+      "ram_available_bytes": 10187665408,
+      "process_peak_working_set_bytes": 183599104,
+      "process_peak_commit_bytes": 199491584
+    },
+    {
+      "seconds": 7.0115317000309005,
+      "ram_available_bytes": 10180939776,
+      "process_peak_working_set_bytes": 187478016,
+      "process_peak_commit_bytes": 199491584
+    },
+    {
+      "seconds": 8.012351800047327,
+      "ram_available_bytes": 10185666560,
+      "process_peak_working_set_bytes": 187478016,
+      "process_peak_commit_bytes": 199491584
+    },
+    {
+      "seconds": 9.013503900030628,
+      "ram_available_bytes": 10178695168,
+      "process_peak_working_set_bytes": 187478016,
+      "process_peak_commit_bytes": 199491584
+    },
+    {
+      "seconds": 10.014175200019963,
+      "ram_available_bytes": 10150260736,
+      "process_peak_working_set_bytes": 187478016,
+      "process_peak_commit_bytes": 199491584
+    },
+    {
+      "seconds": 11.014949500036892,
+      "ram_available_bytes": 10139095040,
+      "process_peak_working_set_bytes": 187764736,
+      "process_peak_commit_bytes": 199491584
+    },
+    {
+      "seconds": 12.015932900016196,
+      "ram_available_bytes": 10141642752,
+      "process_peak_working_set_bytes": 187764736,
+      "process_peak_commit_bytes": 199491584
+    },
+    {
+      "seconds": 13.016872700012755,
+      "ram_available_bytes": 10138931200,
+      "process_peak_working_set_bytes": 187764736,
+      "process_peak_commit_bytes": 199491584
+    },
+    {
+      "seconds": 14.017731800035108,
+      "ram_available_bytes": 10141126656,
+      "process_peak_working_set_bytes": 187764736,
+      "process_peak_commit_bytes": 199491584
+    },
+    {
+      "seconds": 15.018617600027937,
+      "ram_available_bytes": 10114486272,
+      "process_peak_working_set_bytes": 202031104,
+      "process_peak_commit_bytes": 214069248
+    },
+    {
+      "seconds": 16.01978810003493,
+      "ram_available_bytes": 10112577536,
+      "process_peak_working_set_bytes": 207433728,
+      "process_peak_commit_bytes": 226676736
+    },
+    {
+      "seconds": 17.020470100047532,
+      "ram_available_bytes": 10096873472,
+      "process_peak_working_set_bytes": 211341312,
+      "process_peak_commit_bytes": 226676736
+    }
+  ],
+  "pid": 33560,
+  "exit_code": 1,
+  "elapsed_seconds": 18.02132200001506
+}

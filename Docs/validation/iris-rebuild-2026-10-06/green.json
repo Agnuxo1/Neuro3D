@@ -1,0 +1,3391 @@
+{
+  "blender_version": "4.5.14 LTS",
+  "cases": [
+    {
+      "name": "baseline_numeric_and_nested_exclusions",
+      "status": "PASS",
+      "steps": [
+        {
+          "active_scene": "Scene",
+          "checks": [
+            {
+              "name": "builder_returned_active_scene",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 3.703125,
+          "name": "build_reset_true_baseline",
+          "reset_argument": true,
+          "status": "PASS",
+          "wall_seconds": 3.705396000004839
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "after": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2161146547552,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams": {
+                    "collection_pointer": 2161146549320,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor": {
+                    "collection_pointer": 2161146547080,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels": {
+                    "collection_pointer": 2161146549768,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Optics": {
+                    "collection_pointer": 2161146548872,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Stage": {
+                    "collection_pointer": 2161146550216,
+                    "exclude": false
+                  }
+                },
+                "before": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2161146547552,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams": {
+                    "collection_pointer": 2161146549320,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor": {
+                    "collection_pointer": 2161146547080,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels": {
+                    "collection_pointer": 2161146549768,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Optics": {
+                    "collection_pointer": 2161146548872,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Stage": {
+                    "collection_pointer": 2161146550216,
+                    "exclude": false
+                  }
+                }
+              },
+              "name": "exclude_flags_restored",
+              "passed": true
+            },
+            {
+              "details": {
+                "observed": [
+                  "C0",
+                  "C1",
+                  "C2",
+                  "C3",
+                  "R0",
+                  "R1",
+                  "R2",
+                  "R3"
+                ]
+              },
+              "name": "recognized_detector_ids",
+              "passed": true
+            },
+            {
+              "details": {
+                "total_detected_power": 0.9999421988273209
+              },
+              "name": "detectors_not_all_zero",
+              "passed": true
+            },
+            {
+              "name": "prediction_matches_model",
+              "passed": true
+            },
+            {
+              "name": "prediction_matches_returned_class_powers",
+              "passed": true
+            },
+            {
+              "name": "returned_class_powers_match_fields",
+              "passed": true
+            },
+            {
+              "name": "escape_nonnegative",
+              "passed": true
+            },
+            {
+              "name": "positive_ray_cast_count",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 6.149433015161594e-05,
+                "limit": 0.001
+              },
+              "name": "field_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 2.879860132209977e-05,
+                "limit": 0.001
+              },
+              "name": "power_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 5.780117267906171e-05,
+                "limit": 0.0002
+              },
+              "name": "balance_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 1e-08
+              },
+              "name": "escape_within_limit",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 2.171875,
+          "name": "baseline_0",
+          "sample": {
+            "classify_cpu_seconds": 2.171875,
+            "classify_wall_seconds": 2.1800282999756746,
+            "errors": {
+              "balance": 5.780117267906171e-05,
+              "escape": 0.0,
+              "field": 6.149433015161594e-05,
+              "power": 2.879860132209977e-05
+            },
+            "escape": 0.0,
+            "fields": {
+              "C0": [
+                0.0001101742482433176,
+                -0.0006778965333626175
+              ],
+              "C1": [
+                0.024928272117923082,
+                -0.5988716033131796
+              ],
+              "C2": [
+                -0.1665037455827171,
+                -0.2747132554241978
+              ],
+              "C3": [
+                0.004763078014204763,
+                0.14797979467222946
+              ],
+              "R0": [
+                0.45021277267650184,
+                0.2988516919244518
+              ],
+              "R1": [
+                0.2898289548093307,
+                -0.3318453918120967
+              ],
+              "R2": [
+                0.08206921088737842,
+                -0.1196918994091608
+              ],
+              "R3": [
+                -0.09104625337607303,
+                -0.009194923800085445
+              ]
+            },
+            "index": 0,
+            "powers": {
+              "C0": 4.7168207492103457e-07,
+              "C1": 0.35926861600568355,
+              "C2": 0.10319086999883471,
+              "C3": 0.02192070654340459,
+              "R0": 0.29200387444717096,
+              "R1": 0.19412218711279303,
+              "R2": 0.021061506159849662,
+              "R3": 0.00837396687750947
+            },
+            "prediction": 0,
+            "ray_casts": 56855,
+            "truth": 0
+          },
+          "status": "PASS",
+          "wall_seconds": 2.1803538000094704
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "after": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2161146547552,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams": {
+                    "collection_pointer": 2161146549320,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor": {
+                    "collection_pointer": 2161146547080,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels": {
+                    "collection_pointer": 2161146549768,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Optics": {
+                    "collection_pointer": 2161146548872,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Stage": {
+                    "collection_pointer": 2161146550216,
+                    "exclude": false
+                  }
+                },
+                "before": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2161146547552,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams": {
+                    "collection_pointer": 2161146549320,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor": {
+                    "collection_pointer": 2161146547080,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels": {
+                    "collection_pointer": 2161146549768,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Optics": {
+                    "collection_pointer": 2161146548872,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Stage": {
+                    "collection_pointer": 2161146550216,
+                    "exclude": false
+                  }
+                }
+              },
+              "name": "exclude_flags_restored",
+              "passed": true
+            },
+            {
+              "details": {
+                "observed": [
+                  "C0",
+                  "C1",
+                  "C2",
+                  "C3",
+                  "R0",
+                  "R1",
+                  "R2",
+                  "R3"
+                ]
+              },
+              "name": "recognized_detector_ids",
+              "passed": true
+            },
+            {
+              "details": {
+                "total_detected_power": 0.9999949606431727
+              },
+              "name": "detectors_not_all_zero",
+              "passed": true
+            },
+            {
+              "name": "prediction_matches_model",
+              "passed": true
+            },
+            {
+              "name": "prediction_matches_returned_class_powers",
+              "passed": true
+            },
+            {
+              "name": "returned_class_powers_match_fields",
+              "passed": true
+            },
+            {
+              "name": "escape_nonnegative",
+              "passed": true
+            },
+            {
+              "name": "positive_ray_cast_count",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 6.660998115115991e-05,
+                "limit": 0.001
+              },
+              "name": "field_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 3.555307192987245e-05,
+                "limit": 0.001
+              },
+              "name": "power_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 5.0393568272744105e-06,
+                "limit": 0.0002
+              },
+              "name": "balance_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 1e-08
+              },
+              "name": "escape_within_limit",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 2.21875,
+          "name": "baseline_71",
+          "sample": {
+            "classify_cpu_seconds": 2.21875,
+            "classify_wall_seconds": 2.21929189999355,
+            "errors": {
+              "balance": 5.0393568272744105e-06,
+              "escape": 0.0,
+              "field": 6.660998115115991e-05,
+              "power": 3.555307192987245e-05
+            },
+            "escape": 0.0,
+            "fields": {
+              "C0": [
+                8.360475883744528e-05,
+                -0.00042218331946097733
+              ],
+              "C1": [
+                0.015547531606024245,
+                -0.3278371891597116
+              ],
+              "C2": [
+                -0.08827241693271595,
+                -0.14218730567695212
+              ],
+              "C3": [
+                0.13844443343469848,
+                0.3916574061779666
+              ],
+              "R0": [
+                0.3711592001451412,
+                0.2560186281295562
+              ],
+              "R1": [
+                0.34434366542880207,
+                -0.4066386627860794
+              ],
+              "R2": [
+                -0.1720822248735557,
+                0.3826009617583872
+              ],
+              "R3": [
+                -0.14519228672677678,
+                -0.0859962362758874
+              ]
+            },
+            "index": 71,
+            "powers": {
+              "C0": 1.8522851093135698e-07,
+              "C1": 0.10771894833518085,
+              "C2": 0.02800924948681425,
+              "C3": 0.1725623849631074,
+              "R0": 0.203304689801721,
+              "R1": 0.28392756199339364,
+              "R2": 0.17599578805587585,
+              "R3": 0.028476152778568818
+            },
+            "prediction": 1,
+            "ray_casts": 56855,
+            "truth": 1
+          },
+          "status": "PASS",
+          "wall_seconds": 2.219526099972427
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "after": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2161146547552,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams": {
+                    "collection_pointer": 2161146549320,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor": {
+                    "collection_pointer": 2161146547080,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels": {
+                    "collection_pointer": 2161146549768,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Optics": {
+                    "collection_pointer": 2161146548872,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Stage": {
+                    "collection_pointer": 2161146550216,
+                    "exclude": false
+                  }
+                },
+                "before": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2161146547552,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams": {
+                    "collection_pointer": 2161146549320,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor": {
+                    "collection_pointer": 2161146547080,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels": {
+                    "collection_pointer": 2161146549768,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Optics": {
+                    "collection_pointer": 2161146548872,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Stage": {
+                    "collection_pointer": 2161146550216,
+                    "exclude": false
+                  }
+                }
+              },
+              "name": "exclude_flags_restored",
+              "passed": true
+            },
+            {
+              "details": {
+                "observed": [
+                  "C0",
+                  "C1",
+                  "C2",
+                  "C3",
+                  "R0",
+                  "R1",
+                  "R2",
+                  "R3"
+                ]
+              },
+              "name": "recognized_detector_ids",
+              "passed": true
+            },
+            {
+              "details": {
+                "total_detected_power": 0.9999969204958564
+              },
+              "name": "detectors_not_all_zero",
+              "passed": true
+            },
+            {
+              "name": "prediction_matches_model",
+              "passed": true
+            },
+            {
+              "name": "prediction_matches_returned_class_powers",
+              "passed": true
+            },
+            {
+              "name": "returned_class_powers_match_fields",
+              "passed": true
+            },
+            {
+              "name": "escape_nonnegative",
+              "passed": true
+            },
+            {
+              "name": "positive_ray_cast_count",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 6.672499395432176e-05,
+                "limit": 0.001
+              },
+              "name": "field_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 2.9867315669090955e-05,
+                "limit": 0.001
+              },
+              "name": "power_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 3.079504143577161e-06,
+                "limit": 0.0002
+              },
+              "name": "balance_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 1e-08
+              },
+              "name": "escape_within_limit",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 2.1875,
+          "name": "baseline_149",
+          "sample": {
+            "classify_cpu_seconds": 2.1875,
+            "classify_wall_seconds": 2.188537899986841,
+            "errors": {
+              "balance": 3.079504143577161e-06,
+              "escape": 0.0,
+              "field": 6.672499395432176e-05,
+              "power": 2.9867315669090955e-05
+            },
+            "escape": 0.0,
+            "fields": {
+              "C0": [
+                8.91432543193571e-05,
+                -0.00044917618581532333
+              ],
+              "C1": [
+                0.013503112457516911,
+                -0.3499645829616702
+              ],
+              "C2": [
+                -0.09876732821787779,
+                -0.14643203671574712
+              ],
+              "C3": [
+                0.1133136582133289,
+                0.36628344654100864
+              ],
+              "R0": [
+                0.31220861745705236,
+                0.20070741257358432
+              ],
+              "R1": [
+                0.30209688718146793,
+                -0.3836144019606504
+              ],
+              "R2": [
+                -0.19561028878578837,
+                0.4704506235711403
+              ],
+              "R3": [
+                -0.14922888573827497,
+                -0.2027353768340373
+              ]
+            },
+            "index": 149,
+            "powers": {
+              "C0": 2.0970576569424748e-07,
+              "C1": 0.12265754337357611,
+              "C2": 0.0311973265000199,
+              "C3": 0.14700354834764706,
+              "R0": 0.13775768627642707,
+              "R1": 0.23842253863636,
+              "R2": 0.2595871742973343,
+              "R3": 0.06337089335872625
+            },
+            "prediction": 2,
+            "ray_casts": 56855,
+            "truth": 2
+          },
+          "status": "PASS",
+          "wall_seconds": 2.1887798000243492
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "after": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2161146547552,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams": {
+                    "collection_pointer": 2161146549320,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor": {
+                    "collection_pointer": 2161146547080,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor/rebuild-nested-excluded": {
+                    "collection_pointer": 2161187094792,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Decor/rebuild-nested-visible": {
+                    "collection_pointer": 2161187105992,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels": {
+                    "collection_pointer": 2161146549768,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Optics": {
+                    "collection_pointer": 2161146548872,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Stage": {
+                    "collection_pointer": 2161146550216,
+                    "exclude": false
+                  }
+                },
+                "before": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2161146547552,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams": {
+                    "collection_pointer": 2161146549320,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor": {
+                    "collection_pointer": 2161146547080,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor/rebuild-nested-excluded": {
+                    "collection_pointer": 2161187094792,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Decor/rebuild-nested-visible": {
+                    "collection_pointer": 2161187105992,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels": {
+                    "collection_pointer": 2161146549768,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Optics": {
+                    "collection_pointer": 2161146548872,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Stage": {
+                    "collection_pointer": 2161146550216,
+                    "exclude": false
+                  }
+                }
+              },
+              "name": "exclude_flags_restored",
+              "passed": true
+            },
+            {
+              "details": {
+                "observed": [
+                  "C0",
+                  "C1",
+                  "C2",
+                  "C3",
+                  "R0",
+                  "R1",
+                  "R2",
+                  "R3"
+                ]
+              },
+              "name": "recognized_detector_ids",
+              "passed": true
+            },
+            {
+              "details": {
+                "total_detected_power": 0.9999421988273209
+              },
+              "name": "detectors_not_all_zero",
+              "passed": true
+            },
+            {
+              "name": "prediction_matches_model",
+              "passed": true
+            },
+            {
+              "name": "prediction_matches_returned_class_powers",
+              "passed": true
+            },
+            {
+              "name": "returned_class_powers_match_fields",
+              "passed": true
+            },
+            {
+              "name": "escape_nonnegative",
+              "passed": true
+            },
+            {
+              "name": "positive_ray_cast_count",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 6.149433015161594e-05,
+                "limit": 0.001
+              },
+              "name": "field_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 2.879860132209977e-05,
+                "limit": 0.001
+              },
+              "name": "power_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 5.780117267906171e-05,
+                "limit": 0.0002
+              },
+              "name": "balance_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 1e-08
+              },
+              "name": "escape_within_limit",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 2.171875,
+          "name": "excluded_optics_and_nested_decor_0",
+          "sample": {
+            "classify_cpu_seconds": 2.171875,
+            "classify_wall_seconds": 2.168716799991671,
+            "errors": {
+              "balance": 5.780117267906171e-05,
+              "escape": 0.0,
+              "field": 6.149433015161594e-05,
+              "power": 2.879860132209977e-05
+            },
+            "escape": 0.0,
+            "fields": {
+              "C0": [
+                0.0001101742482433176,
+                -0.0006778965333626175
+              ],
+              "C1": [
+                0.024928272117923082,
+                -0.5988716033131796
+              ],
+              "C2": [
+                -0.1665037455827171,
+                -0.2747132554241978
+              ],
+              "C3": [
+                0.004763078014204763,
+                0.14797979467222946
+              ],
+              "R0": [
+                0.45021277267650184,
+                0.2988516919244518
+              ],
+              "R1": [
+                0.2898289548093307,
+                -0.3318453918120967
+              ],
+              "R2": [
+                0.08206921088737842,
+                -0.1196918994091608
+              ],
+              "R3": [
+                -0.09104625337607303,
+                -0.009194923800085445
+              ]
+            },
+            "index": 0,
+            "powers": {
+              "C0": 4.7168207492103457e-07,
+              "C1": 0.35926861600568355,
+              "C2": 0.10319086999883471,
+              "C3": 0.02192070654340459,
+              "R0": 0.29200387444717096,
+              "R1": 0.19412218711279303,
+              "R2": 0.021061506159849662,
+              "R3": 0.00837396687750947
+            },
+            "prediction": 0,
+            "ray_casts": 56855,
+            "truth": 0
+          },
+          "status": "PASS",
+          "wall_seconds": 2.168944899982307
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 1e-08
+              },
+              "name": "same_geometry_field",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 1e-08
+              },
+              "name": "same_geometry_power",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 1e-08
+              },
+              "name": "same_geometry_escape",
+              "passed": true
+            },
+            {
+              "name": "same_geometry_prediction",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 0.0,
+          "name": "same_geometry_after_exclusion_0",
+          "status": "PASS",
+          "wall_seconds": 2.1499989088624716e-05
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "after": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2161146547552,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams": {
+                    "collection_pointer": 2161146549320,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor": {
+                    "collection_pointer": 2161146547080,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor/rebuild-nested-excluded": {
+                    "collection_pointer": 2161187094792,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Decor/rebuild-nested-visible": {
+                    "collection_pointer": 2161187105992,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels": {
+                    "collection_pointer": 2161146549768,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Optics": {
+                    "collection_pointer": 2161146548872,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Stage": {
+                    "collection_pointer": 2161146550216,
+                    "exclude": false
+                  }
+                },
+                "before": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2161146547552,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams": {
+                    "collection_pointer": 2161146549320,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor": {
+                    "collection_pointer": 2161146547080,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor/rebuild-nested-excluded": {
+                    "collection_pointer": 2161187094792,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Decor/rebuild-nested-visible": {
+                    "collection_pointer": 2161187105992,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels": {
+                    "collection_pointer": 2161146549768,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Optics": {
+                    "collection_pointer": 2161146548872,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Stage": {
+                    "collection_pointer": 2161146550216,
+                    "exclude": false
+                  }
+                }
+              },
+              "name": "exclude_flags_restored",
+              "passed": true
+            },
+            {
+              "details": {
+                "observed": [
+                  "C0",
+                  "C1",
+                  "C2",
+                  "C3",
+                  "R0",
+                  "R1",
+                  "R2",
+                  "R3"
+                ]
+              },
+              "name": "recognized_detector_ids",
+              "passed": true
+            },
+            {
+              "details": {
+                "total_detected_power": 0.9999949606431727
+              },
+              "name": "detectors_not_all_zero",
+              "passed": true
+            },
+            {
+              "name": "prediction_matches_model",
+              "passed": true
+            },
+            {
+              "name": "prediction_matches_returned_class_powers",
+              "passed": true
+            },
+            {
+              "name": "returned_class_powers_match_fields",
+              "passed": true
+            },
+            {
+              "name": "escape_nonnegative",
+              "passed": true
+            },
+            {
+              "name": "positive_ray_cast_count",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 6.660998115115991e-05,
+                "limit": 0.001
+              },
+              "name": "field_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 3.555307192987245e-05,
+                "limit": 0.001
+              },
+              "name": "power_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 5.0393568272744105e-06,
+                "limit": 0.0002
+              },
+              "name": "balance_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 1e-08
+              },
+              "name": "escape_within_limit",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 2.1875,
+          "name": "excluded_optics_and_nested_decor_71",
+          "sample": {
+            "classify_cpu_seconds": 2.1875,
+            "classify_wall_seconds": 2.189395900000818,
+            "errors": {
+              "balance": 5.0393568272744105e-06,
+              "escape": 0.0,
+              "field": 6.660998115115991e-05,
+              "power": 3.555307192987245e-05
+            },
+            "escape": 0.0,
+            "fields": {
+              "C0": [
+                8.360475883744528e-05,
+                -0.00042218331946097733
+              ],
+              "C1": [
+                0.015547531606024245,
+                -0.3278371891597116
+              ],
+              "C2": [
+                -0.08827241693271595,
+                -0.14218730567695212
+              ],
+              "C3": [
+                0.13844443343469848,
+                0.3916574061779666
+              ],
+              "R0": [
+                0.3711592001451412,
+                0.2560186281295562
+              ],
+              "R1": [
+                0.34434366542880207,
+                -0.4066386627860794
+              ],
+              "R2": [
+                -0.1720822248735557,
+                0.3826009617583872
+              ],
+              "R3": [
+                -0.14519228672677678,
+                -0.0859962362758874
+              ]
+            },
+            "index": 71,
+            "powers": {
+              "C0": 1.8522851093135698e-07,
+              "C1": 0.10771894833518085,
+              "C2": 0.02800924948681425,
+              "C3": 0.1725623849631074,
+              "R0": 0.203304689801721,
+              "R1": 0.28392756199339364,
+              "R2": 0.17599578805587585,
+              "R3": 0.028476152778568818
+            },
+            "prediction": 1,
+            "ray_casts": 56855,
+            "truth": 1
+          },
+          "status": "PASS",
+          "wall_seconds": 2.1896167999948375
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 1e-08
+              },
+              "name": "same_geometry_field",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 1e-08
+              },
+              "name": "same_geometry_power",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 1e-08
+              },
+              "name": "same_geometry_escape",
+              "passed": true
+            },
+            {
+              "name": "same_geometry_prediction",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 0.0,
+          "name": "same_geometry_after_exclusion_71",
+          "status": "PASS",
+          "wall_seconds": 3.3599964808672667e-05
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "after": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2161146547552,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams": {
+                    "collection_pointer": 2161146549320,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor": {
+                    "collection_pointer": 2161146547080,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor/rebuild-nested-excluded": {
+                    "collection_pointer": 2161187094792,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Decor/rebuild-nested-visible": {
+                    "collection_pointer": 2161187105992,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels": {
+                    "collection_pointer": 2161146549768,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Optics": {
+                    "collection_pointer": 2161146548872,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Stage": {
+                    "collection_pointer": 2161146550216,
+                    "exclude": false
+                  }
+                },
+                "before": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2161146547552,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams": {
+                    "collection_pointer": 2161146549320,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor": {
+                    "collection_pointer": 2161146547080,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor/rebuild-nested-excluded": {
+                    "collection_pointer": 2161187094792,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Decor/rebuild-nested-visible": {
+                    "collection_pointer": 2161187105992,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels": {
+                    "collection_pointer": 2161146549768,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Optics": {
+                    "collection_pointer": 2161146548872,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Stage": {
+                    "collection_pointer": 2161146550216,
+                    "exclude": false
+                  }
+                }
+              },
+              "name": "exclude_flags_restored",
+              "passed": true
+            },
+            {
+              "details": {
+                "observed": [
+                  "C0",
+                  "C1",
+                  "C2",
+                  "C3",
+                  "R0",
+                  "R1",
+                  "R2",
+                  "R3"
+                ]
+              },
+              "name": "recognized_detector_ids",
+              "passed": true
+            },
+            {
+              "details": {
+                "total_detected_power": 0.9999969204958564
+              },
+              "name": "detectors_not_all_zero",
+              "passed": true
+            },
+            {
+              "name": "prediction_matches_model",
+              "passed": true
+            },
+            {
+              "name": "prediction_matches_returned_class_powers",
+              "passed": true
+            },
+            {
+              "name": "returned_class_powers_match_fields",
+              "passed": true
+            },
+            {
+              "name": "escape_nonnegative",
+              "passed": true
+            },
+            {
+              "name": "positive_ray_cast_count",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 6.672499395432176e-05,
+                "limit": 0.001
+              },
+              "name": "field_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 2.9867315669090955e-05,
+                "limit": 0.001
+              },
+              "name": "power_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 3.079504143577161e-06,
+                "limit": 0.0002
+              },
+              "name": "balance_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 1e-08
+              },
+              "name": "escape_within_limit",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 2.234375,
+          "name": "excluded_optics_and_nested_decor_149",
+          "sample": {
+            "classify_cpu_seconds": 2.234375,
+            "classify_wall_seconds": 2.234146500006318,
+            "errors": {
+              "balance": 3.079504143577161e-06,
+              "escape": 0.0,
+              "field": 6.672499395432176e-05,
+              "power": 2.9867315669090955e-05
+            },
+            "escape": 0.0,
+            "fields": {
+              "C0": [
+                8.91432543193571e-05,
+                -0.00044917618581532333
+              ],
+              "C1": [
+                0.013503112457516911,
+                -0.3499645829616702
+              ],
+              "C2": [
+                -0.09876732821787779,
+                -0.14643203671574712
+              ],
+              "C3": [
+                0.1133136582133289,
+                0.36628344654100864
+              ],
+              "R0": [
+                0.31220861745705236,
+                0.20070741257358432
+              ],
+              "R1": [
+                0.30209688718146793,
+                -0.3836144019606504
+              ],
+              "R2": [
+                -0.19561028878578837,
+                0.4704506235711403
+              ],
+              "R3": [
+                -0.14922888573827497,
+                -0.2027353768340373
+              ]
+            },
+            "index": 149,
+            "powers": {
+              "C0": 2.0970576569424748e-07,
+              "C1": 0.12265754337357611,
+              "C2": 0.0311973265000199,
+              "C3": 0.14700354834764706,
+              "R0": 0.13775768627642707,
+              "R1": 0.23842253863636,
+              "R2": 0.2595871742973343,
+              "R3": 0.06337089335872625
+            },
+            "prediction": 2,
+            "ray_casts": 56855,
+            "truth": 2
+          },
+          "status": "PASS",
+          "wall_seconds": 2.23437429999467
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 1e-08
+              },
+              "name": "same_geometry_field",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 1e-08
+              },
+              "name": "same_geometry_power",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 1e-08
+              },
+              "name": "same_geometry_escape",
+              "passed": true
+            },
+            {
+              "name": "same_geometry_prediction",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 0.0,
+          "name": "same_geometry_after_exclusion_149",
+          "status": "PASS",
+          "wall_seconds": 2.139998832717538e-05
+        }
+      ]
+    },
+    {
+      "name": "existing_user_optics_and_materials",
+      "status": "PASS",
+      "steps": [
+        {
+          "active_scene": "Neuro3D Iris",
+          "checks": [
+            {
+              "name": "builder_returned_active_scene",
+              "passed": true
+            },
+            {
+              "name": "new_scene_created",
+              "passed": true
+            },
+            {
+              "name": "previous_scene_has_fake_user",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 3.71875,
+          "name": "build_reset_false_with_user_optics",
+          "reset_argument": false,
+          "status": "PASS",
+          "wall_seconds": 3.7134041999815963
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "0996983c8d98d44e15686f27e6355f3daf71c4e730e0dfed6a2128824a56c102",
+                "before_sha256": "0996983c8d98d44e15686f27e6355f3daf71c4e730e0dfed6a2128824a56c102",
+                "changed": [],
+                "changed_count": 0,
+                "materials_checked": 17,
+                "objects_checked": 1,
+                "scenes_checked": 1
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 0.0,
+          "name": "preservation_after_build",
+          "status": "PASS",
+          "wall_seconds": 0.003513899981044233
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "after": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2161146546184,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams.001": {
+                    "collection_pointer": 2161221480520,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor.001": {
+                    "collection_pointer": 2161221481864,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels.001": {
+                    "collection_pointer": 2161221472904,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Optics.001": {
+                    "collection_pointer": 2161221482760,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Stage.001": {
+                    "collection_pointer": 2161221479624,
+                    "exclude": false
+                  }
+                },
+                "before": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2161146546184,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams.001": {
+                    "collection_pointer": 2161221480520,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor.001": {
+                    "collection_pointer": 2161221481864,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels.001": {
+                    "collection_pointer": 2161221472904,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Optics.001": {
+                    "collection_pointer": 2161221482760,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Stage.001": {
+                    "collection_pointer": 2161221479624,
+                    "exclude": false
+                  }
+                }
+              },
+              "name": "exclude_flags_restored",
+              "passed": true
+            },
+            {
+              "details": {
+                "observed": [
+                  "C0",
+                  "C1",
+                  "C2",
+                  "C3",
+                  "R0",
+                  "R1",
+                  "R2",
+                  "R3"
+                ]
+              },
+              "name": "recognized_detector_ids",
+              "passed": true
+            },
+            {
+              "details": {
+                "total_detected_power": 0.9999949606431727
+              },
+              "name": "detectors_not_all_zero",
+              "passed": true
+            },
+            {
+              "name": "prediction_matches_model",
+              "passed": true
+            },
+            {
+              "name": "prediction_matches_returned_class_powers",
+              "passed": true
+            },
+            {
+              "name": "returned_class_powers_match_fields",
+              "passed": true
+            },
+            {
+              "name": "escape_nonnegative",
+              "passed": true
+            },
+            {
+              "name": "positive_ray_cast_count",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 6.660998115115991e-05,
+                "limit": 0.001
+              },
+              "name": "field_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 3.555307192987245e-05,
+                "limit": 0.001
+              },
+              "name": "power_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 5.0393568272744105e-06,
+                "limit": 0.0002
+              },
+              "name": "balance_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 1e-08
+              },
+              "name": "escape_within_limit",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 2.21875,
+          "name": "numeric_with_colliding_global_names",
+          "sample": {
+            "classify_cpu_seconds": 2.21875,
+            "classify_wall_seconds": 2.2095519000431523,
+            "errors": {
+              "balance": 5.0393568272744105e-06,
+              "escape": 0.0,
+              "field": 6.660998115115991e-05,
+              "power": 3.555307192987245e-05
+            },
+            "escape": 0.0,
+            "fields": {
+              "C0": [
+                8.360475883744528e-05,
+                -0.00042218331946097733
+              ],
+              "C1": [
+                0.015547531606024245,
+                -0.3278371891597116
+              ],
+              "C2": [
+                -0.08827241693271595,
+                -0.14218730567695212
+              ],
+              "C3": [
+                0.13844443343469848,
+                0.3916574061779666
+              ],
+              "R0": [
+                0.3711592001451412,
+                0.2560186281295562
+              ],
+              "R1": [
+                0.34434366542880207,
+                -0.4066386627860794
+              ],
+              "R2": [
+                -0.1720822248735557,
+                0.3826009617583872
+              ],
+              "R3": [
+                -0.14519228672677678,
+                -0.0859962362758874
+              ]
+            },
+            "index": 71,
+            "powers": {
+              "C0": 1.8522851093135698e-07,
+              "C1": 0.10771894833518085,
+              "C2": 0.02800924948681425,
+              "C3": 0.1725623849631074,
+              "R0": 0.203304689801721,
+              "R1": 0.28392756199339364,
+              "R2": 0.17599578805587585,
+              "R3": 0.028476152778568818
+            },
+            "prediction": 1,
+            "ray_casts": 56855,
+            "truth": 1
+          },
+          "status": "PASS",
+          "wall_seconds": 2.209777500014752
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "0996983c8d98d44e15686f27e6355f3daf71c4e730e0dfed6a2128824a56c102",
+                "before_sha256": "0996983c8d98d44e15686f27e6355f3daf71c4e730e0dfed6a2128824a56c102",
+                "changed": [],
+                "changed_count": 0,
+                "materials_checked": 17,
+                "objects_checked": 1,
+                "scenes_checked": 1
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 5.90625,
+          "name": "show_preserves_previous_scenes",
+          "status": "PASS",
+          "wall_seconds": 5.916745199996512
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "0996983c8d98d44e15686f27e6355f3daf71c4e730e0dfed6a2128824a56c102",
+                "before_sha256": "0996983c8d98d44e15686f27e6355f3daf71c4e730e0dfed6a2128824a56c102",
+                "changed": [],
+                "changed_count": 0,
+                "materials_checked": 17,
+                "objects_checked": 1,
+                "scenes_checked": 1
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 0.0,
+          "name": "preservation_after_show_even_on_error",
+          "status": "PASS",
+          "wall_seconds": 0.0033139000297524035
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "0996983c8d98d44e15686f27e6355f3daf71c4e730e0dfed6a2128824a56c102",
+                "before_sha256": "0996983c8d98d44e15686f27e6355f3daf71c4e730e0dfed6a2128824a56c102",
+                "changed": [],
+                "changed_count": 0,
+                "materials_checked": 17,
+                "objects_checked": 1,
+                "scenes_checked": 1
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 0.015625,
+          "name": "dim_detectors_preserves_previous_scenes",
+          "status": "PASS",
+          "wall_seconds": 0.004000799963250756
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "0996983c8d98d44e15686f27e6355f3daf71c4e730e0dfed6a2128824a56c102",
+                "before_sha256": "0996983c8d98d44e15686f27e6355f3daf71c4e730e0dfed6a2128824a56c102",
+                "changed": [],
+                "changed_count": 0,
+                "materials_checked": 17,
+                "objects_checked": 1,
+                "scenes_checked": 1
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 0.0,
+          "name": "preservation_after_dim_even_on_error",
+          "status": "PASS",
+          "wall_seconds": 0.0032462000381201506
+        },
+        {
+          "checks": [
+            {
+              "name": "propagate_branch_completed",
+              "passed": true
+            },
+            {
+              "name": "manual_tick_returned_next_interval",
+              "passed": true
+            },
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "0996983c8d98d44e15686f27e6355f3daf71c4e730e0dfed6a2128824a56c102",
+                "before_sha256": "0996983c8d98d44e15686f27e6355f3daf71c4e730e0dfed6a2128824a56c102",
+                "changed": [],
+                "changed_count": 0,
+                "materials_checked": 17,
+                "objects_checked": 1,
+                "scenes_checked": 1
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 6.390625,
+          "name": "manual_live_propagate_preserves_previous_scenes",
+          "status": "PASS",
+          "wall_seconds": 6.397631599975284
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "0996983c8d98d44e15686f27e6355f3daf71c4e730e0dfed6a2128824a56c102",
+                "before_sha256": "0996983c8d98d44e15686f27e6355f3daf71c4e730e0dfed6a2128824a56c102",
+                "changed": [],
+                "changed_count": 0,
+                "materials_checked": 17,
+                "objects_checked": 1,
+                "scenes_checked": 1
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 0.015625,
+          "name": "preservation_after_live_even_on_error",
+          "status": "PASS",
+          "wall_seconds": 0.003673999977763742
+        }
+      ]
+    },
+    {
+      "name": "two_repeated_non_destructive_rebuilds",
+      "status": "PASS",
+      "steps": [
+        {
+          "active_scene": "Scene",
+          "checks": [
+            {
+              "name": "builder_returned_active_scene",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 3.71875,
+          "name": "initial_build",
+          "reset_argument": true,
+          "status": "PASS",
+          "wall_seconds": 3.718529000005219
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "after": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2161146548448,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams": {
+                    "collection_pointer": 2161146547528,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor": {
+                    "collection_pointer": 2161146545288,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels": {
+                    "collection_pointer": 2161146550664,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Optics": {
+                    "collection_pointer": 2161146549320,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Stage": {
+                    "collection_pointer": 2161146544840,
+                    "exclude": false
+                  }
+                },
+                "before": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2161146548448,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams": {
+                    "collection_pointer": 2161146547528,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor": {
+                    "collection_pointer": 2161146545288,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels": {
+                    "collection_pointer": 2161146550664,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Optics": {
+                    "collection_pointer": 2161146549320,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Stage": {
+                    "collection_pointer": 2161146544840,
+                    "exclude": false
+                  }
+                }
+              },
+              "name": "exclude_flags_restored",
+              "passed": true
+            },
+            {
+              "details": {
+                "observed": [
+                  "C0",
+                  "C1",
+                  "C2",
+                  "C3",
+                  "R0",
+                  "R1",
+                  "R2",
+                  "R3"
+                ]
+              },
+              "name": "recognized_detector_ids",
+              "passed": true
+            },
+            {
+              "details": {
+                "total_detected_power": 0.9999949606431727
+              },
+              "name": "detectors_not_all_zero",
+              "passed": true
+            },
+            {
+              "name": "prediction_matches_model",
+              "passed": true
+            },
+            {
+              "name": "prediction_matches_returned_class_powers",
+              "passed": true
+            },
+            {
+              "name": "returned_class_powers_match_fields",
+              "passed": true
+            },
+            {
+              "name": "escape_nonnegative",
+              "passed": true
+            },
+            {
+              "name": "positive_ray_cast_count",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 6.660998115115991e-05,
+                "limit": 0.001
+              },
+              "name": "field_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 3.555307192987245e-05,
+                "limit": 0.001
+              },
+              "name": "power_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 5.0393568272744105e-06,
+                "limit": 0.0002
+              },
+              "name": "balance_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 1e-08
+              },
+              "name": "escape_within_limit",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 2.171875,
+          "name": "initial_numeric",
+          "sample": {
+            "classify_cpu_seconds": 2.171875,
+            "classify_wall_seconds": 2.17905699997209,
+            "errors": {
+              "balance": 5.0393568272744105e-06,
+              "escape": 0.0,
+              "field": 6.660998115115991e-05,
+              "power": 3.555307192987245e-05
+            },
+            "escape": 0.0,
+            "fields": {
+              "C0": [
+                8.360475883744528e-05,
+                -0.00042218331946097733
+              ],
+              "C1": [
+                0.015547531606024245,
+                -0.3278371891597116
+              ],
+              "C2": [
+                -0.08827241693271595,
+                -0.14218730567695212
+              ],
+              "C3": [
+                0.13844443343469848,
+                0.3916574061779666
+              ],
+              "R0": [
+                0.3711592001451412,
+                0.2560186281295562
+              ],
+              "R1": [
+                0.34434366542880207,
+                -0.4066386627860794
+              ],
+              "R2": [
+                -0.1720822248735557,
+                0.3826009617583872
+              ],
+              "R3": [
+                -0.14519228672677678,
+                -0.0859962362758874
+              ]
+            },
+            "index": 71,
+            "powers": {
+              "C0": 1.8522851093135698e-07,
+              "C1": 0.10771894833518085,
+              "C2": 0.02800924948681425,
+              "C3": 0.1725623849631074,
+              "R0": 0.203304689801721,
+              "R1": 0.28392756199339364,
+              "R2": 0.17599578805587585,
+              "R3": 0.028476152778568818
+            },
+            "prediction": 1,
+            "ray_casts": 56855,
+            "truth": 1
+          },
+          "status": "PASS",
+          "wall_seconds": 2.179282900004182
+        },
+        {
+          "checks": [],
+          "cpu_seconds": 6.125,
+          "name": "initial_show",
+          "status": "PASS",
+          "wall_seconds": 6.15698309999425
+        },
+        {
+          "active_scene": "Neuro3D Iris",
+          "checks": [
+            {
+              "name": "builder_returned_active_scene",
+              "passed": true
+            },
+            {
+              "name": "new_scene_created",
+              "passed": true
+            },
+            {
+              "name": "previous_scene_has_fake_user",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 3.859375,
+          "name": "rebuild_1",
+          "reset_argument": false,
+          "status": "PASS",
+          "wall_seconds": 3.8580637000268325
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "38ec4cc52c35787fbf404708aa8ee7150d88839542f876bcc3f21e6d14e4b46a",
+                "before_sha256": "38ec4cc52c35787fbf404708aa8ee7150d88839542f876bcc3f21e6d14e4b46a",
+                "changed": [],
+                "changed_count": 0,
+                "materials_checked": 161,
+                "objects_checked": 460,
+                "scenes_checked": 1
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 0.109375,
+          "name": "preserve_after_rebuild_1",
+          "status": "PASS",
+          "wall_seconds": 0.10942200000863522
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "after": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2161223078088,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams.001": {
+                    "collection_pointer": 2161223074504,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor.001": {
+                    "collection_pointer": 2161223082120,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels.001": {
+                    "collection_pointer": 2161223074952,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Optics.001": {
+                    "collection_pointer": 2161223076296,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Stage.001": {
+                    "collection_pointer": 2161223075400,
+                    "exclude": false
+                  }
+                },
+                "before": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2161223078088,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams.001": {
+                    "collection_pointer": 2161223074504,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor.001": {
+                    "collection_pointer": 2161223082120,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels.001": {
+                    "collection_pointer": 2161223074952,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Optics.001": {
+                    "collection_pointer": 2161223076296,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Stage.001": {
+                    "collection_pointer": 2161223075400,
+                    "exclude": false
+                  }
+                }
+              },
+              "name": "exclude_flags_restored",
+              "passed": true
+            },
+            {
+              "details": {
+                "observed": [
+                  "C0",
+                  "C1",
+                  "C2",
+                  "C3",
+                  "R0",
+                  "R1",
+                  "R2",
+                  "R3"
+                ]
+              },
+              "name": "recognized_detector_ids",
+              "passed": true
+            },
+            {
+              "details": {
+                "total_detected_power": 0.9999949606431727
+              },
+              "name": "detectors_not_all_zero",
+              "passed": true
+            },
+            {
+              "name": "prediction_matches_model",
+              "passed": true
+            },
+            {
+              "name": "prediction_matches_returned_class_powers",
+              "passed": true
+            },
+            {
+              "name": "returned_class_powers_match_fields",
+              "passed": true
+            },
+            {
+              "name": "escape_nonnegative",
+              "passed": true
+            },
+            {
+              "name": "positive_ray_cast_count",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 6.660998115115991e-05,
+                "limit": 0.001
+              },
+              "name": "field_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 3.555307192987245e-05,
+                "limit": 0.001
+              },
+              "name": "power_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 5.0393568272744105e-06,
+                "limit": 0.0002
+              },
+              "name": "balance_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 1e-08
+              },
+              "name": "escape_within_limit",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 2.1875,
+          "name": "numeric_after_rebuild_1",
+          "sample": {
+            "classify_cpu_seconds": 2.1875,
+            "classify_wall_seconds": 2.1874034999636933,
+            "errors": {
+              "balance": 5.0393568272744105e-06,
+              "escape": 0.0,
+              "field": 6.660998115115991e-05,
+              "power": 3.555307192987245e-05
+            },
+            "escape": 0.0,
+            "fields": {
+              "C0": [
+                8.360475883744528e-05,
+                -0.00042218331946097733
+              ],
+              "C1": [
+                0.015547531606024245,
+                -0.3278371891597116
+              ],
+              "C2": [
+                -0.08827241693271595,
+                -0.14218730567695212
+              ],
+              "C3": [
+                0.13844443343469848,
+                0.3916574061779666
+              ],
+              "R0": [
+                0.3711592001451412,
+                0.2560186281295562
+              ],
+              "R1": [
+                0.34434366542880207,
+                -0.4066386627860794
+              ],
+              "R2": [
+                -0.1720822248735557,
+                0.3826009617583872
+              ],
+              "R3": [
+                -0.14519228672677678,
+                -0.0859962362758874
+              ]
+            },
+            "index": 71,
+            "powers": {
+              "C0": 1.8522851093135698e-07,
+              "C1": 0.10771894833518085,
+              "C2": 0.02800924948681425,
+              "C3": 0.1725623849631074,
+              "R0": 0.203304689801721,
+              "R1": 0.28392756199339364,
+              "R2": 0.17599578805587585,
+              "R3": 0.028476152778568818
+            },
+            "prediction": 1,
+            "ray_casts": 56855,
+            "truth": 1
+          },
+          "status": "PASS",
+          "wall_seconds": 2.1876516999909654
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 1e-08
+              },
+              "name": "same_geometry_field",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 1e-08
+              },
+              "name": "same_geometry_power",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 1e-08
+              },
+              "name": "same_geometry_escape",
+              "passed": true
+            },
+            {
+              "name": "same_geometry_prediction",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 0.0,
+          "name": "same_geometry_rebuild_1",
+          "status": "PASS",
+          "wall_seconds": 1.98000343516469e-05
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "38ec4cc52c35787fbf404708aa8ee7150d88839542f876bcc3f21e6d14e4b46a",
+                "before_sha256": "38ec4cc52c35787fbf404708aa8ee7150d88839542f876bcc3f21e6d14e4b46a",
+                "changed": [],
+                "changed_count": 0,
+                "materials_checked": 161,
+                "objects_checked": 460,
+                "scenes_checked": 1
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 6.265625,
+          "name": "show_preserves_previous_scenes",
+          "status": "PASS",
+          "wall_seconds": 6.275035800004844
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "38ec4cc52c35787fbf404708aa8ee7150d88839542f876bcc3f21e6d14e4b46a",
+                "before_sha256": "38ec4cc52c35787fbf404708aa8ee7150d88839542f876bcc3f21e6d14e4b46a",
+                "changed": [],
+                "changed_count": 0,
+                "materials_checked": 161,
+                "objects_checked": 460,
+                "scenes_checked": 1
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 0.109375,
+          "name": "preservation_after_show_even_on_error",
+          "status": "PASS",
+          "wall_seconds": 0.1113236999954097
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "38ec4cc52c35787fbf404708aa8ee7150d88839542f876bcc3f21e6d14e4b46a",
+                "before_sha256": "38ec4cc52c35787fbf404708aa8ee7150d88839542f876bcc3f21e6d14e4b46a",
+                "changed": [],
+                "changed_count": 0,
+                "materials_checked": 161,
+                "objects_checked": 460,
+                "scenes_checked": 1
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 0.109375,
+          "name": "dim_detectors_preserves_previous_scenes",
+          "status": "PASS",
+          "wall_seconds": 0.11391879996517673
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "38ec4cc52c35787fbf404708aa8ee7150d88839542f876bcc3f21e6d14e4b46a",
+                "before_sha256": "38ec4cc52c35787fbf404708aa8ee7150d88839542f876bcc3f21e6d14e4b46a",
+                "changed": [],
+                "changed_count": 0,
+                "materials_checked": 161,
+                "objects_checked": 460,
+                "scenes_checked": 1
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 0.125,
+          "name": "preservation_after_dim_even_on_error",
+          "status": "PASS",
+          "wall_seconds": 0.11723360000178218
+        },
+        {
+          "checks": [
+            {
+              "name": "propagate_branch_completed",
+              "passed": true
+            },
+            {
+              "name": "manual_tick_returned_next_interval",
+              "passed": true
+            },
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "38ec4cc52c35787fbf404708aa8ee7150d88839542f876bcc3f21e6d14e4b46a",
+                "before_sha256": "38ec4cc52c35787fbf404708aa8ee7150d88839542f876bcc3f21e6d14e4b46a",
+                "changed": [],
+                "changed_count": 0,
+                "materials_checked": 161,
+                "objects_checked": 460,
+                "scenes_checked": 1
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 6.640625,
+          "name": "manual_live_propagate_preserves_previous_scenes",
+          "status": "PASS",
+          "wall_seconds": 6.649189200019464
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "38ec4cc52c35787fbf404708aa8ee7150d88839542f876bcc3f21e6d14e4b46a",
+                "before_sha256": "38ec4cc52c35787fbf404708aa8ee7150d88839542f876bcc3f21e6d14e4b46a",
+                "changed": [],
+                "changed_count": 0,
+                "materials_checked": 161,
+                "objects_checked": 460,
+                "scenes_checked": 1
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 0.125,
+          "name": "preservation_after_live_even_on_error",
+          "status": "PASS",
+          "wall_seconds": 0.11219099996378645
+        },
+        {
+          "active_scene": "Neuro3D Iris.001",
+          "checks": [
+            {
+              "name": "builder_returned_active_scene",
+              "passed": true
+            },
+            {
+              "name": "new_scene_created",
+              "passed": true
+            },
+            {
+              "name": "previous_scene_has_fake_user",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 4.140625,
+          "name": "rebuild_2",
+          "reset_argument": false,
+          "status": "PASS",
+          "wall_seconds": 4.151350900006946
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "f6c1f55089fb1d9fa1b6e1be10ff0c1db94ee67b327ff3455d29539bbd6a91e0",
+                "before_sha256": "f6c1f55089fb1d9fa1b6e1be10ff0c1db94ee67b327ff3455d29539bbd6a91e0",
+                "changed": [],
+                "changed_count": 0,
+                "materials_checked": 322,
+                "objects_checked": 920,
+                "scenes_checked": 2
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 0.296875,
+          "name": "preserve_after_rebuild_2",
+          "status": "PASS",
+          "wall_seconds": 0.29439260001527146
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "after": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2161265550792,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams.002": {
+                    "collection_pointer": 2161265544520,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor.002": {
+                    "collection_pointer": 2161311637640,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels.002": {
+                    "collection_pointer": 2161265545416,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Optics.002": {
+                    "collection_pointer": 2161265549896,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Stage.002": {
+                    "collection_pointer": 2161311638984,
+                    "exclude": false
+                  }
+                },
+                "before": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2161265550792,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams.002": {
+                    "collection_pointer": 2161265544520,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor.002": {
+                    "collection_pointer": 2161311637640,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels.002": {
+                    "collection_pointer": 2161265545416,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Optics.002": {
+                    "collection_pointer": 2161265549896,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Stage.002": {
+                    "collection_pointer": 2161311638984,
+                    "exclude": false
+                  }
+                }
+              },
+              "name": "exclude_flags_restored",
+              "passed": true
+            },
+            {
+              "details": {
+                "observed": [
+                  "C0",
+                  "C1",
+                  "C2",
+                  "C3",
+                  "R0",
+                  "R1",
+                  "R2",
+                  "R3"
+                ]
+              },
+              "name": "recognized_detector_ids",
+              "passed": true
+            },
+            {
+              "details": {
+                "total_detected_power": 0.9999949606431727
+              },
+              "name": "detectors_not_all_zero",
+              "passed": true
+            },
+            {
+              "name": "prediction_matches_model",
+              "passed": true
+            },
+            {
+              "name": "prediction_matches_returned_class_powers",
+              "passed": true
+            },
+            {
+              "name": "returned_class_powers_match_fields",
+              "passed": true
+            },
+            {
+              "name": "escape_nonnegative",
+              "passed": true
+            },
+            {
+              "name": "positive_ray_cast_count",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 6.660998115115991e-05,
+                "limit": 0.001
+              },
+              "name": "field_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 3.555307192987245e-05,
+                "limit": 0.001
+              },
+              "name": "power_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 5.0393568272744105e-06,
+                "limit": 0.0002
+              },
+              "name": "balance_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 1e-08
+              },
+              "name": "escape_within_limit",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 2.375,
+          "name": "numeric_after_rebuild_2",
+          "sample": {
+            "classify_cpu_seconds": 2.375,
+            "classify_wall_seconds": 2.390386200044304,
+            "errors": {
+              "balance": 5.0393568272744105e-06,
+              "escape": 0.0,
+              "field": 6.660998115115991e-05,
+              "power": 3.555307192987245e-05
+            },
+            "escape": 0.0,
+            "fields": {
+              "C0": [
+                8.360475883744528e-05,
+                -0.00042218331946097733
+              ],
+              "C1": [
+                0.015547531606024245,
+                -0.3278371891597116
+              ],
+              "C2": [
+                -0.08827241693271595,
+                -0.14218730567695212
+              ],
+              "C3": [
+                0.13844443343469848,
+                0.3916574061779666
+              ],
+              "R0": [
+                0.3711592001451412,
+                0.2560186281295562
+              ],
+              "R1": [
+                0.34434366542880207,
+                -0.4066386627860794
+              ],
+              "R2": [
+                -0.1720822248735557,
+                0.3826009617583872
+              ],
+              "R3": [
+                -0.14519228672677678,
+                -0.0859962362758874
+              ]
+            },
+            "index": 71,
+            "powers": {
+              "C0": 1.8522851093135698e-07,
+              "C1": 0.10771894833518085,
+              "C2": 0.02800924948681425,
+              "C3": 0.1725623849631074,
+              "R0": 0.203304689801721,
+              "R1": 0.28392756199339364,
+              "R2": 0.17599578805587585,
+              "R3": 0.028476152778568818
+            },
+            "prediction": 1,
+            "ray_casts": 56855,
+            "truth": 1
+          },
+          "status": "PASS",
+          "wall_seconds": 2.39065350004239
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 1e-08
+              },
+              "name": "same_geometry_field",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 1e-08
+              },
+              "name": "same_geometry_power",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 1e-08
+              },
+              "name": "same_geometry_escape",
+              "passed": true
+            },
+            {
+              "name": "same_geometry_prediction",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 0.0,
+          "name": "same_geometry_rebuild_2",
+          "status": "PASS",
+          "wall_seconds": 2.1099986042827368e-05
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "f6c1f55089fb1d9fa1b6e1be10ff0c1db94ee67b327ff3455d29539bbd6a91e0",
+                "before_sha256": "f6c1f55089fb1d9fa1b6e1be10ff0c1db94ee67b327ff3455d29539bbd6a91e0",
+                "changed": [],
+                "changed_count": 0,
+                "materials_checked": 322,
+                "objects_checked": 920,
+                "scenes_checked": 2
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 6.796875,
+          "name": "show_preserves_previous_scenes",
+          "status": "PASS",
+          "wall_seconds": 6.810764299996663
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "f6c1f55089fb1d9fa1b6e1be10ff0c1db94ee67b327ff3455d29539bbd6a91e0",
+                "before_sha256": "f6c1f55089fb1d9fa1b6e1be10ff0c1db94ee67b327ff3455d29539bbd6a91e0",
+                "changed": [],
+                "changed_count": 0,
+                "materials_checked": 322,
+                "objects_checked": 920,
+                "scenes_checked": 2
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 0.265625,
+          "name": "preservation_after_show_even_on_error",
+          "status": "PASS",
+          "wall_seconds": 0.2698184999753721
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "f6c1f55089fb1d9fa1b6e1be10ff0c1db94ee67b327ff3455d29539bbd6a91e0",
+                "before_sha256": "f6c1f55089fb1d9fa1b6e1be10ff0c1db94ee67b327ff3455d29539bbd6a91e0",
+                "changed": [],
+                "changed_count": 0,
+                "materials_checked": 322,
+                "objects_checked": 920,
+                "scenes_checked": 2
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 0.28125,
+          "name": "dim_detectors_preserves_previous_scenes",
+          "status": "PASS",
+          "wall_seconds": 0.280343999969773
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "f6c1f55089fb1d9fa1b6e1be10ff0c1db94ee67b327ff3455d29539bbd6a91e0",
+                "before_sha256": "f6c1f55089fb1d9fa1b6e1be10ff0c1db94ee67b327ff3455d29539bbd6a91e0",
+                "changed": [],
+                "changed_count": 0,
+                "materials_checked": 322,
+                "objects_checked": 920,
+                "scenes_checked": 2
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 0.28125,
+          "name": "preservation_after_dim_even_on_error",
+          "status": "PASS",
+          "wall_seconds": 0.2710279000457376
+        },
+        {
+          "checks": [
+            {
+              "name": "propagate_branch_completed",
+              "passed": true
+            },
+            {
+              "name": "manual_tick_returned_next_interval",
+              "passed": true
+            },
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "f6c1f55089fb1d9fa1b6e1be10ff0c1db94ee67b327ff3455d29539bbd6a91e0",
+                "before_sha256": "f6c1f55089fb1d9fa1b6e1be10ff0c1db94ee67b327ff3455d29539bbd6a91e0",
+                "changed": [],
+                "changed_count": 0,
+                "materials_checked": 322,
+                "objects_checked": 920,
+                "scenes_checked": 2
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 7.5,
+          "name": "manual_live_propagate_preserves_previous_scenes",
+          "status": "PASS",
+          "wall_seconds": 7.523624900029972
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "f6c1f55089fb1d9fa1b6e1be10ff0c1db94ee67b327ff3455d29539bbd6a91e0",
+                "before_sha256": "f6c1f55089fb1d9fa1b6e1be10ff0c1db94ee67b327ff3455d29539bbd6a91e0",
+                "changed": [],
+                "changed_count": 0,
+                "materials_checked": 322,
+                "objects_checked": 920,
+                "scenes_checked": 2
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 0.28125,
+          "name": "preservation_after_live_even_on_error",
+          "status": "PASS",
+          "wall_seconds": 0.2741725000087172
+        }
+      ]
+    },
+    {
+      "name": "legacy_empty_scene_without_optics",
+      "status": "PASS",
+      "steps": [
+        {
+          "checks": [
+            {
+              "name": "exclude_flags_restored",
+              "passed": true
+            },
+            {
+              "name": "empty_scene_detectors_empty",
+              "passed": true
+            },
+            {
+              "details": {
+                "expected": 4.0,
+                "observed": 4.0
+              },
+              "name": "escape_matches_coherent_reference",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 0.0,
+          "name": "coincident_constructive_escape",
+          "ray_casts": 2,
+          "status": "PASS",
+          "wall_seconds": 0.00025729998014867306
+        },
+        {
+          "checks": [
+            {
+              "name": "exclude_flags_restored",
+              "passed": true
+            },
+            {
+              "name": "empty_scene_detectors_empty",
+              "passed": true
+            },
+            {
+              "details": {
+                "expected": 0.0,
+                "observed": 0.0
+              },
+              "name": "escape_matches_coherent_reference",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 0.0,
+          "name": "coincident_destructive_escape",
+          "ray_casts": 2,
+          "status": "PASS",
+          "wall_seconds": 0.00010029994882643223
+        },
+        {
+          "checks": [
+            {
+              "name": "exclude_flags_restored",
+              "passed": true
+            },
+            {
+              "name": "empty_scene_detectors_empty",
+              "passed": true
+            },
+            {
+              "details": {
+                "expected": 2.0,
+                "observed": 2.0
+              },
+              "name": "escape_matches_coherent_reference",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 0.0,
+          "name": "orthogonal_escape_modes",
+          "ray_casts": 2,
+          "status": "PASS",
+          "wall_seconds": 8.610001532360911e-05
+        }
+      ]
+    },
+    {
+      "name": "trace_exception_restores_exclusions",
+      "status": "PASS",
+      "steps": [
+        {
+          "active_scene": "Scene",
+          "checks": [
+            {
+              "name": "builder_returned_active_scene",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 3.8125,
+          "name": "build_for_exception",
+          "reset_argument": true,
+          "status": "PASS",
+          "wall_seconds": 3.8138268999755383
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "after": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2161136694688,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams": {
+                    "collection_pointer": 2161136693768,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor": {
+                    "collection_pointer": 2161136695560,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor/rebuild-nested-excluded": {
+                    "collection_pointer": 2161369406280,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Decor/rebuild-nested-visible": {
+                    "collection_pointer": 2161369412104,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels": {
+                    "collection_pointer": 2161136688392,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Optics": {
+                    "collection_pointer": 2161136695112,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Stage": {
+                    "collection_pointer": 2161136696008,
+                    "exclude": false
+                  }
+                },
+                "before": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2161136694688,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams": {
+                    "collection_pointer": 2161136693768,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor": {
+                    "collection_pointer": 2161136695560,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor/rebuild-nested-excluded": {
+                    "collection_pointer": 2161369406280,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Decor/rebuild-nested-visible": {
+                    "collection_pointer": 2161369412104,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels": {
+                    "collection_pointer": 2161136688392,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Optics": {
+                    "collection_pointer": 2161136695112,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Stage": {
+                    "collection_pointer": 2161136696008,
+                    "exclude": false
+                  }
+                }
+              },
+              "name": "all_exclude_flags_restored_after_exception",
+              "passed": true
+            },
+            {
+              "name": "controlled_non_optical_hit_raised",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 0.015625,
+          "name": "trace_error_restores_optics_and_descendants",
+          "observed_exception": "non-optical hit controlled-non-optical-blocker",
+          "status": "PASS",
+          "wall_seconds": 0.03392770001664758
+        }
+      ]
+    },
+    {
+      "name": "rebuild_clears_stale_live_state",
+      "status": "PASS",
+      "steps": [
+        {
+          "active_scene": "Scene",
+          "checks": [
+            {
+              "name": "builder_returned_active_scene",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 3.71875,
+          "name": "initial_live_scene",
+          "reset_argument": true,
+          "status": "PASS",
+          "wall_seconds": 3.7130066999816336
+        },
+        {
+          "checks": [],
+          "cpu_seconds": 6.140625,
+          "name": "manual_first_live_tick",
+          "status": "PASS",
+          "wall_seconds": 6.140520100016147
+        },
+        {
+          "active_scene": "Neuro3D Iris",
+          "checks": [
+            {
+              "name": "builder_returned_active_scene",
+              "passed": true
+            },
+            {
+              "name": "new_scene_created",
+              "passed": true
+            },
+            {
+              "name": "previous_scene_has_fake_user",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 3.859375,
+          "name": "rebuild_with_stale_live_state",
+          "reset_argument": false,
+          "status": "PASS",
+          "wall_seconds": 3.867329200031236
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "eb7e497a8d60f65ae10a6cdda671614c5fce41b09298b177debfaa4ceac7a8c3",
+                "before_sha256": "eb7e497a8d60f65ae10a6cdda671614c5fce41b09298b177debfaa4ceac7a8c3",
+                "changed": [],
+                "changed_count": 0,
+                "materials_checked": 161,
+                "objects_checked": 460,
+                "scenes_checked": 1
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 0.109375,
+          "name": "previous_scene_preserved",
+          "status": "PASS",
+          "wall_seconds": 0.10799500002758577
+        },
+        {
+          "checks": [
+            {
+              "name": "live_stopped_by_rebuild",
+              "passed": true
+            },
+            {
+              "name": "stale_powers_cleared_by_rebuild",
+              "passed": true
+            },
+            {
+              "name": "stopped_tick_terminates",
+              "passed": true
+            },
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "97f4ca91bbb949a7703009788c97369f5ad46caf5f7c029312cb9618c43ac28c",
+                "before_sha256": "97f4ca91bbb949a7703009788c97369f5ad46caf5f7c029312cb9618c43ac28c",
+                "changed": [],
+                "changed_count": 0,
+                "materials_checked": 180,
+                "objects_checked": 778,
+                "scenes_checked": 2
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 0.28125,
+          "name": "new_scene_cannot_receive_stale_live_output",
+          "status": "PASS",
+          "wall_seconds": 0.28208919998724014
+        }
+      ]
+    },
+    {
+      "name": "live_stops_on_scene_switch",
+      "status": "PASS",
+      "steps": [
+        {
+          "active_scene": "Scene",
+          "checks": [
+            {
+              "name": "builder_returned_active_scene",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 3.734375,
+          "name": "initial_live_scene",
+          "reset_argument": true,
+          "status": "PASS",
+          "wall_seconds": 3.74060570000438
+        },
+        {
+          "checks": [
+            {
+              "name": "live_session_reached_propagate",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 6.09375,
+          "name": "bind_live_on_first_manual_trace_tick",
+          "status": "PASS",
+          "wall_seconds": 6.090350800019223
+        },
+        {
+          "checks": [
+            {
+              "name": "foreign_scene_tick_terminates",
+              "passed": true
+            },
+            {
+              "name": "foreign_scene_stops_live",
+              "passed": true
+            },
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "ffb77ce33b26bef677ce5280483b1b48c5d55a5ee92bdcb0e0cc131dc3c671d6",
+                "before_sha256": "ffb77ce33b26bef677ce5280483b1b48c5d55a5ee92bdcb0e0cc131dc3c671d6",
+                "changed": [],
+                "changed_count": 0,
+                "materials_checked": 178,
+                "objects_checked": 461,
+                "scenes_checked": 2
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 0.109375,
+          "name": "live_aborts_after_scene_switch",
+          "status": "PASS",
+          "wall_seconds": 0.10343670001020655
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "ffb77ce33b26bef677ce5280483b1b48c5d55a5ee92bdcb0e0cc131dc3c671d6",
+                "before_sha256": "ffb77ce33b26bef677ce5280483b1b48c5d55a5ee92bdcb0e0cc131dc3c671d6",
+                "changed": [],
+                "changed_count": 0,
+                "materials_checked": 178,
+                "objects_checked": 461,
+                "scenes_checked": 2
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 0.09375,
+          "name": "all_scenes_preserved_even_if_tick_raises",
+          "status": "PASS",
+          "wall_seconds": 0.10197090002475306
+        }
+      ]
+    }
+  ],
+  "finished_utc": "2026-10-06T21:57:27.950818+00:00",
+  "limits": {
+    "balance": 0.0002,
+    "escape": 1e-08,
+    "field": 0.001,
+    "power": 0.001,
+    "same_geometry": 1e-08
+  },
+  "pid": 20772,
+  "probe_indices": [
+    0,
+    71,
+    149
+  ],
+  "rendered": false,
+  "schema": "neuro3d-iris-rebuild-regression-v1",
+  "scope": "background reset=False API regressions, not GUI clicks",
+  "source_path": "D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\demo_lattice_iris\\neuro3d_iris_demo.py",
+  "source_sha256": "6b5b32434679ae4da9410afbeeeee2c25a614eaf4b2776892aa8fb907617592d",
+  "started_utc": "2026-10-06T21:55:29.165629+00:00",
+  "status": "PASS",
+  "timers_registered": false,
+  "total_cpu_seconds": 118.21875,
+  "total_wall_seconds": 118.78496159997303,
+  "trained": false,
+  "verification_passed": true
+}

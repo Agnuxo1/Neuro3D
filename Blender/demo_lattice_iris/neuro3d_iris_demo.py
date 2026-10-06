@@ -206,7 +206,15 @@ def train(x, y, steps=500, seed=0, restarts=4, log=print):
 # ----------------------------------------------------------------------------------------------
 # scene
 def mat(name, color, metallic=0.0, rough=0.3, emit=0.0, alpha=1.0, transmission=0.0):
-    m = bpy.data.materials.get(name) or bpy.data.materials.new(name); m.use_nodes = True
+    # Rebuilds share a blendfile namespace, but never mutable materials.
+    sc = bpy.context.scene
+    mapping = json.loads(sc.get("neuro3d_materials", "{}"))
+    m = bpy.data.materials.get((mapping[name], None)) if name in mapping else None
+    if m is None:
+        m = bpy.data.materials.new(name)
+        mapping[name] = m.name
+        sc["neuro3d_materials"] = json.dumps(mapping)
+    m.use_nodes = True
     b = m.node_tree.nodes.get("Principled BSDF")
     b.inputs["Base Color"].default_value = (*color, 1); b.inputs["Metallic"].default_value = metallic
     b.inputs["Roughness"].default_value = rough; b.inputs["Alpha"].default_value = alpha
@@ -232,12 +240,56 @@ def text(name, body, loc, size, color, coll="Labels", emit=3.0, rot_z=0.0):
     return ob
 
 
-def scene_collection(name):
+def scene_collection(name, required=True):
     mapping = json.loads(bpy.context.scene.get("neuro3d_collections", "{}"))
-    return bpy.context.scene.collection.children[mapping.get(name, name)]
+    collection = bpy.context.scene.collection.children.get(mapping.get(name, name))
+    if collection is None and (required or name in mapping):
+        raise RuntimeError("Scene is missing its declared collection: " + name)
+    return collection
+
+
+def _detector_id(ob):
+    """Use a persistent logical ID; accept unambiguous legacy names when it is absent."""
+    did = ob.get("neuro3d_detector_id")
+    if did is None and ob.name.startswith("det."):
+        did, separator, suffix = ob.name[4:].partition(".")
+        if separator and not suffix.isdigit():
+            did = None
+    if ob.get("kind") != "det" or did not in modes()[1]:
+        raise RuntimeError("Invalid optical detector identity: " + ob.name)
+    return did
+
+
+def _scene_detectors():
+    optics = scene_collection("Optics", required=False)
+    detectors = {}
+    for ob in optics.all_objects if optics is not None else ():
+        if ob.get("kind") != "det":
+            continue
+        did = _detector_id(ob)
+        if did in detectors:
+            raise RuntimeError("Duplicate optical detector identity: " + did)
+        detectors[did] = ob
+    return detectors
+
+
+def detector_material(did):
+    """Resolve the active detector's material, including old single-scene bundles."""
+    ob = _scene_detectors().get(did)
+    if ob is None or not ob.material_slots or ob.material_slots[0].material is None:
+        raise RuntimeError("Detector has no material in this scene: " + did)
+    material = ob.material_slots[0].material
+    # Legacy files can contain shared data. Refuse to mutate another scene silently.
+    for other in bpy.data.scenes:
+        if other == bpy.context.scene:
+            continue
+        if any(slot.material == material for obj in other.objects for slot in obj.material_slots):
+            raise RuntimeError("Detector material is shared with another scene; rebuild this lattice: " + did)
+    return material
 
 
 def build_scene(theta, ref, reset=None):
+    _stop_live()
     bundled = bool(bpy.context.scene.get("neuro3d_bundle_version"))
     saved_texts = {}
     if bundled:
@@ -259,6 +311,7 @@ def build_scene(theta, ref, reset=None):
     for name, content in saved_texts.items():
         text_block = bpy.data.texts.get(name) or bpy.data.texts.new(name); text_block.from_string(content); text_block.use_fake_user = True
     if bundled: sc["neuro3d_bundle_version"] = 1
+    sc["neuro3d_materials"] = "{}"
     collection_names = {}
     for c in ("Optics", "Beams", "Labels", "Stage", "Decor"):
         collection = bpy.data.collections.new(c)
@@ -277,7 +330,8 @@ def build_scene(theta, ref, reset=None):
     ins, outs = modes()
     for did in outs:
         p, n = detector_pose(did); col = PALETTE[SPECIES[CLASS_DET.index(did)]] if did in CLASS_DET else (0.5, 0.5, 0.6)
-        disk(f"det.{did}", p, n, DET_R, "det", mat(f"det_{did}", col, emit=0.2))
+        detector = disk(f"det.{did}", p, n, DET_R, "det", mat(f"det_{did}", col, emit=0.2))
+        detector["neuro3d_detector_id"] = did
     srcs = []
     for sid in INPUTS + [REF]:
         p, dvec = source_pose(sid); srcs.append({"id": sid, "p": p, "d": dvec})
@@ -299,7 +353,7 @@ def build_scene(theta, ref, reset=None):
         scene_collection("Decor").objects.link(pl)
         pl.rotation_mode = "QUATERNION"; pl.rotation_quaternion = Vector((1, 0, 0)).rotation_difference(t)
         pl.scale = (w, 0.035, h)
-        pl.data.materials.append(bpy.data.materials[f"det_{ob.name[4:]}"] if kind == "det" else (m_plate_b if kind == "bs" else m_plate_m))
+        pl.data.materials.append(ob.data.materials[0] if kind == "det" else (m_plate_b if kind == "bs" else m_plate_m))
         bpy.ops.mesh.primitive_cylinder_add(vertices=24, radius=0.09, depth=0.3, location=ob.location - Vector((0, 0, 0.3)))
         po = bpy.context.active_object; po.name = "post." + ob.name
         for c in po.users_collection: c.objects.unlink(po)
@@ -317,21 +371,32 @@ SEG_L = {}          # segment -> optical path length at its start (filled by tra
 
 
 def _set_excluded(flag, previous=None):
-    """flag=True: exclude every non-Optics collection and return the previous flags; flag=False: restore them."""
-    prev = {}
-    for lc in bpy.context.view_layer.layer_collection.children:
-        if lc.name == "Optics": continue
-        prev[lc.name] = lc.exclude
-        lc.exclude = True if flag else (previous or {}).get(lc.name, False)
-    return prev
+    """Temporarily expose this scene's optics, preserving every affected layer flag."""
+    if not flag:
+        # Parent setters propagate to children; restore descendants afterwards.
+        for layer, excluded in previous or ():
+            layer.exclude = excluded
+        return previous
+    optics = scene_collection("Optics", required=False)
+    def descendants(parent):
+        for layer in parent.children:
+            yield layer
+            yield from descendants(layer)
+    previous = [(layer, bool(layer.exclude))
+                for layer in descendants(bpy.context.view_layer.layer_collection)]
+    for layer in bpy.context.view_layer.layer_collection.children:
+        layer.exclude = layer.collection != optics
+    return previous
 
 
 def trace(amps):
     """Coherent path sum with scene.ray_cast. amps: {source_id: complex}. Only the Optics collection is
     visible to the rays (decor, beams and labels are excluded from the depsgraph while tracing).
     Returns detector fields, per-segment coherent field (for rendering) and the number of casts."""
-    sc = bpy.context.scene; prev = _set_excluded(True); bpy.context.view_layer.update()
+    sc = bpy.context.scene; prev = _set_excluded(True)
     try:
+        bpy.context.view_layer.update()
+        detectors = _scene_detectors()
         dg = bpy.context.evaluated_depsgraph_get(); det, seg, casts = {}, {}, 0; escaped = {}; SEG_L.clear(); TRACE_INFO["escape"] = 0.0
         for s in json.loads(sc["sources"]):
             a0 = amps.get(s["id"], 0)
@@ -356,7 +421,10 @@ def trace(amps):
                     continue
                 L2 = L + (loc - o).length; kind = ob["kind"]
                 if kind == "det":
-                    det[ob.name[4:]] = det.get(ob.name[4:], 0) + amp * cmath.exp(1j * KW * L2); continue
+                    did = _detector_id(ob)
+                    if detectors.get(did) != ob.original:
+                        raise RuntimeError("Hit detector does not belong to this scene: " + ob.name)
+                    det[did] = det.get(did, 0) + amp * cmath.exp(1j * KW * L2); continue
                 n = nrm.normalized(); rd = (d - 2 * d.dot(n) * n).normalized()
                 if kind == "mirror": stack.append((loc, rd, amp * MIR, L2, ob.name, depth + 1))
                 else:
@@ -366,6 +434,7 @@ def trace(amps):
         return det, seg, casts
     finally:
         _set_excluded(False, prev)
+        bpy.context.view_layer.update()
 
 
 def classify(x_row):
@@ -398,7 +467,7 @@ def show(seg, P, pred, truth=None, x_row=None, hidden=False):
         if hidden: c.hide_viewport = c.hide_render = True
     tot = sum(P) + 1e-12
     for k, did in enumerate(CLASS_DET):
-        b = bpy.data.materials[f"det_{did}"].node_tree.nodes["Principled BSDF"]
+        b = detector_material(did).node_tree.nodes["Principled BSDF"]
         b.inputs["Emission Strength"].default_value = 0.3 + (45.0 if k == pred else 6.0) * P[k] / tot
     rz = VIEW_A
     text("hud.title", "NEURO3D", world(0, 10.2), 1.05, (0.9, 0.97, 1.0), emit=3.0, rot_z=rz)
@@ -476,18 +545,33 @@ class NEURO3D_OT_build(bpy.types.Operator):
 
 # ----------------------------------------------------------------------------------------------
 # live mode (GUI): flowers are traced one after another; light is revealed as it propagates
-LIVE = {"on": False, "phase": "trace", "front": 0.0, "hold": 0, "P": None, "pred": 0}
+LIVE = {"on": False, "phase": "trace", "front": 0.0, "hold": 0, "P": None, "pred": 0, "scene_uid": None}
 LIGHT_SPEED = 1.2          # BU revealed per timer tick (visual only)
+
+
+def _stop_live(unregister=True):
+    LIVE.update(on=False, phase="trace", front=0.0, hold=0, P=None, pred=0, scene_uid=None)
+    if unregister and bpy.app.timers.is_registered(_live_tick):
+        bpy.app.timers.unregister(_live_tick)
 
 
 def _dim_detectors():
     for did in CLASS_DET:
-        bpy.data.materials[f"det_{did}"].node_tree.nodes["Principled BSDF"].inputs["Emission Strength"].default_value = 0.3
+        detector_material(did).node_tree.nodes["Principled BSDF"].inputs["Emission Strength"].default_value = 0.3
 
 
 def _live_tick():
     if not LIVE["on"]: return None
-    sc = bpy.context.scene; x, y, _ = load_iris()
+    sc = bpy.context.scene
+    if "sources" not in sc or "ref" not in sc:
+        _stop_live(unregister=False)
+        return None
+    if LIVE["phase"] == "trace" and LIVE.get("scene_uid") is None:
+        LIVE["scene_uid"] = sc.session_uid
+    if LIVE.get("scene_uid") != sc.session_uid:
+        _stop_live(unregister=False)
+        return None
+    x, y, _ = load_iris()
     if LIVE["phase"] == "trace":
         sc["flower"] = int(sc.get("flower", -1) + 1) % len(y); n = sc["flower"]
         pred, P, _, seg, casts = classify(x[n])
@@ -503,7 +587,7 @@ def _live_tick():
         if left == 0:
             P, pred = LIVE["P"], LIVE["pred"]; tot = sum(P) + 1e-12
             for k, did in enumerate(CLASS_DET):
-                b = bpy.data.materials[f"det_{did}"].node_tree.nodes["Principled BSDF"]
+                b = detector_material(did).node_tree.nodes["Principled BSDF"]
                 b.inputs["Emission Strength"].default_value = 0.3 + (45.0 if k == pred else 6.0) * P[k] / tot
             for ob in scene_collection("Labels").objects:
                 if ob.name.startswith(("hud.pred", "hud.det")): ob.hide_viewport = ob.hide_render = False
@@ -518,8 +602,13 @@ class NEURO3D_OT_live(bpy.types.Operator):
     bl_idname = "neuro3d.live"; bl_label = "Play / pause live network"
 
     def execute(self, context):
-        LIVE["on"] = not LIVE["on"]; LIVE["phase"] = "trace"
-        if LIVE["on"] and not bpy.app.timers.is_registered(_live_tick): bpy.app.timers.register(_live_tick, first_interval=0.1)
+        if LIVE["on"]:
+            _stop_live()
+        else:
+            LIVE.update(on=True, phase="trace", front=0.0, hold=0, P=None,
+                        pred=0, scene_uid=context.scene.session_uid)
+            if not bpy.app.timers.is_registered(_live_tick):
+                bpy.app.timers.register(_live_tick, first_interval=0.1)
         return {"FINISHED"}
 
 
@@ -686,4 +775,4 @@ if __name__ == "__main__":
                         except Exception: pass
             return None
         bpy.app.timers.register(_present, first_interval=1.0)
-        LIVE["on"] = True; bpy.app.timers.register(_live_tick, first_interval=2.0)   # start the live demo
+        LIVE.update(on=True, scene_uid=bpy.context.scene.session_uid); bpy.app.timers.register(_live_tick, first_interval=2.0)   # start the live demo

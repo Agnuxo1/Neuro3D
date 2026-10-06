@@ -1,0 +1,9 @@
+test_every_bad_metric_fails_independently (test_verification_cpu.GateTests.test_every_bad_metric_fails_independently) ... ok
+test_good_and_boundary (test_verification_cpu.GateTests.test_good_and_boundary) ... ok
+test_missing_metric_fails (test_verification_cpu.GateTests.test_missing_metric_fails) ... ok
+test_report_lifecycle (test_verification_cpu.GateTests.test_report_lifecycle) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.016s
+
+OK

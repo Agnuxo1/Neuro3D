@@ -1,0 +1,135 @@
+{
+  "cases": {
+    "broken_optics_mapping_rejected": {
+      "details": {
+        "missing_collection": "Neuro3D_contract_missing_optics",
+        "rejection": {
+          "exception_type": "RuntimeError",
+          "message": "Scene is missing its declared collection: Optics"
+        }
+      },
+      "seconds": 5.88123810000252,
+      "status": "passed"
+    },
+    "duplicate_detector_ids_rejected": {
+      "details": {
+        "duplicated_id": "R0",
+        "rejection": {
+          "exception_type": "RuntimeError",
+          "message": "Duplicate optical detector identity: R0"
+        },
+        "replaced_id": "R1"
+      },
+      "seconds": 5.892258199979551,
+      "status": "passed"
+    },
+    "foreign_scene_material_sharing_rejected": {
+      "details": {
+        "emission_after": {
+          "color": [
+            0.20000000298023224,
+            0.8500000238418579,
+            1.0,
+            1.0
+          ],
+          "strength": 0.20000000298023224
+        },
+        "emission_before": {
+          "color": [
+            0.20000000298023224,
+            0.8500000238418579,
+            1.0,
+            1.0
+          ],
+          "strength": 0.20000000298023224
+        },
+        "foreign_scene": "Neuro3D contract foreign scene",
+        "rejections": {
+          "detector_material": {
+            "exception_type": "RuntimeError",
+            "message": "Detector material is shared with another scene; rebuild this lattice: R0"
+          },
+          "dim": {
+            "exception_type": "RuntimeError",
+            "message": "Detector material is shared with another scene; rebuild this lattice: R0"
+          },
+          "show": {
+            "exception_type": "RuntimeError",
+            "message": "Detector material is shared with another scene; rebuild this lattice: R0"
+          }
+        },
+        "shared_material": "det_R0"
+      },
+      "seconds": 11.509478100051638,
+      "status": "passed"
+    },
+    "invalid_explicit_detector_id_rejected": {
+      "details": {
+        "invalid_explicit_id": "INVALID_CONTRACT_OUTPUT",
+        "legacy_name": "det.R0",
+        "rejection": {
+          "exception_type": "RuntimeError",
+          "message": "Invalid optical detector identity: det.R0"
+        }
+      },
+      "seconds": 5.964298099977896,
+      "status": "passed"
+    },
+    "legacy_detector_and_material_metadata": {
+      "details": {
+        "detector_ids_removed": 8,
+        "legacy_output_difference_max": 0.0,
+        "material_map_removed": true,
+        "metrics": {
+          "escape_max": 0.0,
+          "outputs_complex_vs_model_max": 6.660998115115991e-05,
+          "power_balance_max_err": 5.0393568272744105e-06,
+          "scene_vs_model_max_power_diff": 3.555307192987245e-05
+        },
+        "outputs_checked": [
+          "R0",
+          "R1",
+          "R2",
+          "R3",
+          "C0",
+          "C1",
+          "C2",
+          "C3"
+        ],
+        "prediction": 1,
+        "ray_casts": 56855,
+        "sample_index": 71,
+        "show_and_dim_completed": true
+      },
+      "seconds": 16.356780399975833,
+      "status": "passed"
+    }
+  },
+  "finished_at": "2026-10-06T21:58:43.975703+00:00",
+  "runtime": {
+    "background": true,
+    "blender_version": "4.5.14 LTS",
+    "gpu_kernels_run": false,
+    "render_run": false,
+    "training_run": false
+  },
+  "schema_version": 1,
+  "seconds": 45.74853159999475,
+  "source": "D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\demo_lattice_iris\\neuro3d_iris_demo.py",
+  "source_sha256": "6b5b32434679ae4da9410afbeeeee2c25a614eaf4b2776892aa8fb907617592d",
+  "started_at": "2026-10-06T21:57:58.227542+00:00",
+  "status": "passed",
+  "suite": "iris_rebuild_compatibility_contracts",
+  "test_sha256": "a7111c8f2f4e83e3ce7638670ca07e6a47e7dd825728fc36fb73b8f2514d90f5",
+  "trained_state_sha256": "4c8f17cf532312db446f2c6f8877d442ce349ca11cb559e14b5cd2a3913af8f5",
+  "verification_failures": [],
+  "verification_limits": {
+    "decoration_invariance_max": 1e-08,
+    "escape_max": 1e-08,
+    "outputs_complex_vs_model_max": 0.001,
+    "power_balance_max_err": 0.0002,
+    "save_reopen_max": 1e-08,
+    "scene_vs_model_max_power_diff": 0.001
+  },
+  "verification_passed": true
+}

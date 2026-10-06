@@ -1,0 +1,63 @@
+{
+  "schema": "neuro3d-iris-rebuild-source-validation-v1",
+  "source_validation_status": "PASS",
+  "portable_artifact_status": "PENDING_REFRESH",
+  "base_commit": "5b2e9c5475ddb60fb8d36c15bff270533980f926",
+  "source_sha256": "6b5b32434679ae4da9410afbeeeee2c25a614eaf4b2776892aa8fb907617592d",
+  "rebuild_test_sha256": "0ac447588490892b489856770cc944a0b633f3399a1ab0a18758fca5abb0d31f",
+  "contract_test_sha256": "a7111c8f2f4e83e3ce7638670ca07e6a47e7dd825728fc36fb73b8f2514d90f5",
+  "red_cases": {
+    "passed": 1,
+    "failed": 6
+  },
+  "green_cases": 7,
+  "green_assertions": 230,
+  "all_green_assertions_passed": true,
+  "contract_cases": 5,
+  "existing_blender_control_groups": {
+    "coherent_escape_controls": "PASS",
+    "portable_saved_rebuilt_scene": "PASS",
+    "scene_reference_intervention": "PASS",
+    "missing_embedded_asset_fails": "PASS",
+    "interactive_rebuild_preserves_user_scene": "PASS",
+    "train_bootstrap_and_bundle_refresh": "PASS (trainer fixture, no optimization run)",
+    "failed_trace_overwrites_stale_report": "PASS"
+  },
+  "existing_cpu_tests": 4,
+  "recorded_numeric_probes": 10,
+  "unique_probe_indices": [
+    0,
+    71,
+    149
+  ],
+  "metrics": {
+    "field": 6.672499395432176e-05,
+    "power": 3.555307192987245e-05,
+    "balance": 5.780117267906171e-05,
+    "escape": 0.0
+  },
+  "unchanged_geometry_field_max_diff": 0.0,
+  "limits": {
+    "balance": 0.0002,
+    "escape": 1e-08,
+    "field": 0.001,
+    "power": 0.001,
+    "same_geometry": 1e-08
+  },
+  "scope": "Background Blender reset=False, without GUI clicks, rendering, training, or native GPU kernels",
+  "evidence_sha256": {
+    "Docs/validation/iris-rebuild-2026-10-06/red-minimal.json": "dfc197e3df707aa4107c6d4669275a600b74266b7754778cbe3957170554a0cf",
+    "Docs/validation/iris-rebuild-2026-10-06/red-full.json": "bfa6dd0c3b2b293ce28fe7da8624c9071182ce5e38d0c813f21ceea1aa04bfe7",
+    "Docs/validation/iris-rebuild-2026-10-06/green.json": "cd23cffb467158f411e1dd0e09702a1fb30371b58163f5192a382f9919314146",
+    "Docs/validation/iris-rebuild-2026-10-06/contracts.json": "ddd5f8f56db80af6c907f6ab7e7e25cacfbb3387fc38d2e01d989343ba465c23",
+    "Docs/validation/iris-rebuild-2026-10-06/source-provenance.json": "6670b4768468c4c0b90674c37a96c18a77c503131ad14bebce1f6d8e10946af0",
+    "Docs/validation/iris-rebuild-2026-10-06/cpu-gates.json": "90ec4594f0d4157275c1de791c97389134138b42b69c8ca6b62fb0879e5c0abd",
+    "Docs/validation/iris-rebuild-2026-10-06/cpu-gates.log": "71da9bf56d8d86e8d656eefca433335740f1ebdb2cd93830fa054a7ccd421a8e",
+    "Docs/validation/iris-rebuild-2026-10-06/review-controls.log": "df695ccf604fbe90f0bc4fb2542438102fd32431069c7a8c748f286c89c5003e",
+    "Docs/validation/iris-rebuild-2026-10-06/red-run-launcher.json": "2a231f73dc04e76d2956c379e67a43d4f138cd1f045917eb094976cdf962f5d4",
+    "Docs/validation/iris-rebuild-2026-10-06/red-full-run-launcher.json": "ea972768db1ba743576c62632decf8b2a14737b2b35f1a0ac211376e6b2d01fa",
+    "Docs/validation/iris-rebuild-2026-10-06/green-run-launcher.json": "a85503161437a86b5613a254f9269d4ca1e539ac9673c2d1061de08e160bd24c",
+    "Docs/validation/iris-rebuild-2026-10-06/contracts-run-launcher.json": "03b9b2542e1a4f479580471e962274d0e182d18e2be86871643d731ce938bf8b",
+    "Docs/validation/iris-rebuild-2026-10-06/review-controls-run-launcher.json": "2befdb50fa78d50f603e6fd3672a21fcd602f63e1258ed690cbf9bc5018bf4c8"
+  }
+}
