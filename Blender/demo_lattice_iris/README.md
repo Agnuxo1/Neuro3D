@@ -45,6 +45,7 @@ order of optical path length as the light propagates, and then the class detecto
 the prediction appears. The same *Play / Pause*, *Previous / Next* and *Build trained lattice*
 controls are in **3D View â€º Sidebar (N) â€º Neuro3D**. Interactive **Build trained lattice**
 creates a separate scene and preserves the current scene and unsaved objects.
+It stops the current live session; press Play to start the new scene.
 
 Opening the `.blend` by itself does not run any code, because Blender does not auto-run scripts by
 default and this project does not ask you to enable that. The script is embedded as the text
@@ -72,7 +73,7 @@ The distributed blend now contains the current source, CSV and trained state.
 A separate Blender process verified all 150 flowers from a copy outside the
 repository, with external asset reads blocked: 117/120 training and 29/30 test.
 The [full report](portable_verification.json), [manifest](renders/portable_manifest.json)
-and [method and limits](../../Docs/IRIS_PORTABLE_VALIDATION_2026-10-06.md) retain the evidence.
+and [method and limits](../../Docs/IRIS_REBUILD_VALIDATION_2026-10-06.md) retain the evidence.
 
 To export without training or rendering, run from this directory:
 
@@ -92,7 +93,18 @@ model. It includes missing embedded CSV/weights controls. Additional rejection
 and stale-report controls are in test_portable_failure_blender.py, using the
 same --blend/--manifest options plus --output-dir. Check the process exit code
 and final verification_passed flag together; RUNNING/FAIL is not a successful run.
-Interactive rebuilding with name collisions is a separate pending check.
+Repeated reset=False rebuilds now pass seven background regression cases and
+230 assertions, including numeric parity, previous-scene preservation, exclusion
+restoration and live-session isolation. Five compatibility/rejection controls
+also pass. Materials belong to each new scene and detectors have stable logical
+IDs. Rebuilding stops live mode; press Play to start it in the new scene.
+These checks exercise the interactive branch through background API calls,
+without claiming a mouse-click or rendered GUI test.
+
+Reproduce with test_rebuild_blender.py and test_rebuild_contract_blender.py,
+each in a fresh Blender process and with -- --report <new-report>.json.
+The [earlier point-2 result](../../Docs/IRIS_PORTABLE_VALIDATION_2026-10-06.md)
+remains separately identified.
 
 ## What is and is not claimed
 

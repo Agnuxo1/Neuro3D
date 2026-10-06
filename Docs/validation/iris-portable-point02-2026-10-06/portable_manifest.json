@@ -1,13 +1,13 @@
 {
   "schema": "neuro3d-iris-portable-v1",
   "bundle_version": 1,
-  "source_commit": "7c037702486ae9ab153f605edab432b85c44ba0d",
+  "source_commit": "63dee34675f0b1de1e032b3b91a87ac09b2eced3",
   "blender_version": "4.5.14 LTS",
-  "blend_sha256": "5884c6fa4cc8cee22dd99e2f4aeaf8f0e44ae44dba85d4f2447868d3d4d58c22",
+  "blend_sha256": "7130f5e46b0fb9785f6b692478d3892d59671f15d010598130a1537d6e973f3b",
   "assets": {
     "neuro3d_iris_demo.py": {
       "text_name": "neuro3d_iris_demo.py",
-      "sha256": "6b5b32434679ae4da9410afbeeeee2c25a614eaf4b2776892aa8fb907617592d"
+      "sha256": "1893a2dbfbcb2738df46eb212e8dcbb021ac1ec73b838bef0696eb2a34ab5956"
     },
     "iris.csv": {
       "text_name": "neuro3d.asset.iris.csv",
@@ -70,7 +70,7 @@
   "export_decoration_invariance_max": 0.0,
   "export_decoration_limit": 1e-08,
   "export_ray_casts": 113710,
-  "export_seconds": 14.24815739999758,
+  "export_seconds": 16.806314799992833,
   "render_executed": false,
   "training_executed": false,
   "inference_route": "Blender scene.ray_cast and Python complex sums"

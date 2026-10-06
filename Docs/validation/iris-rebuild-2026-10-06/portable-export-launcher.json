@@ -1,0 +1,130 @@
+{
+  "command": [
+    "D:\\TOOLS\\Blender\\blender-4.5.14-windows-x64\\blender.exe",
+    "--background",
+    "--factory-startup",
+    "--disable-autoexec",
+    "--threads",
+    "1",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\demo_lattice_iris\\export_portable_blender.py",
+    "--",
+    "--output",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point03\\export\\neuro3d_iris_lattice.blend",
+    "--manifest",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point03\\export\\portable_manifest.json",
+    "--source-commit",
+    "7c037702486ae9ab153f605edab432b85c44ba0d"
+  ],
+  "status": "PASS",
+  "ram_floor_bytes": 4294967296,
+  "cpu_process_budget_bytes": 2147483648,
+  "ram_available_before_bytes": 10013884416,
+  "timeout_seconds": 180.0,
+  "threads": 1,
+  "affinity_mask": 1,
+  "gpu_supervisor": false,
+  "telemetry": [
+    {
+      "seconds": 0.005504600005224347,
+      "ram_available_bytes": 10014474240,
+      "process_peak_working_set_bytes": 1826816,
+      "process_peak_commit_bytes": 15306752
+    },
+    {
+      "seconds": 1.0064304000115953,
+      "ram_available_bytes": 9848455168,
+      "process_peak_working_set_bytes": 166154240,
+      "process_peak_commit_bytes": 174211072
+    },
+    {
+      "seconds": 2.007070699997712,
+      "ram_available_bytes": 9846648832,
+      "process_peak_working_set_bytes": 173780992,
+      "process_peak_commit_bytes": 195223552
+    },
+    {
+      "seconds": 3.0085357000352815,
+      "ram_available_bytes": 9835589632,
+      "process_peak_working_set_bytes": 179224576,
+      "process_peak_commit_bytes": 195223552
+    },
+    {
+      "seconds": 4.0095258000073954,
+      "ram_available_bytes": 9831280640,
+      "process_peak_working_set_bytes": 182939648,
+      "process_peak_commit_bytes": 195223552
+    },
+    {
+      "seconds": 5.0105186000000685,
+      "ram_available_bytes": 9876000768,
+      "process_peak_working_set_bytes": 185208832,
+      "process_peak_commit_bytes": 195223552
+    },
+    {
+      "seconds": 6.011130600003526,
+      "ram_available_bytes": 9876738048,
+      "process_peak_working_set_bytes": 185208832,
+      "process_peak_commit_bytes": 195223552
+    },
+    {
+      "seconds": 7.011703800002579,
+      "ram_available_bytes": 9865846784,
+      "process_peak_working_set_bytes": 190599168,
+      "process_peak_commit_bytes": 207831040
+    },
+    {
+      "seconds": 8.012592300015967,
+      "ram_available_bytes": 9820573696,
+      "process_peak_working_set_bytes": 197545984,
+      "process_peak_commit_bytes": 207831040
+    },
+    {
+      "seconds": 9.013303100015037,
+      "ram_available_bytes": 9822765056,
+      "process_peak_working_set_bytes": 204845056,
+      "process_peak_commit_bytes": 224641024
+    },
+    {
+      "seconds": 10.014140200044494,
+      "ram_available_bytes": 9812942848,
+      "process_peak_working_set_bytes": 211714048,
+      "process_peak_commit_bytes": 224641024
+    },
+    {
+      "seconds": 11.015109800035134,
+      "ram_available_bytes": 9806135296,
+      "process_peak_working_set_bytes": 217112576,
+      "process_peak_commit_bytes": 224641024
+    },
+    {
+      "seconds": 12.016116400016472,
+      "ram_available_bytes": 9802670080,
+      "process_peak_working_set_bytes": 221306880,
+      "process_peak_commit_bytes": 241451008
+    },
+    {
+      "seconds": 13.017568700015545,
+      "ram_available_bytes": 9792196608,
+      "process_peak_working_set_bytes": 231550976,
+      "process_peak_commit_bytes": 244604928
+    },
+    {
+      "seconds": 14.018967000010889,
+      "ram_available_bytes": 9770217472,
+      "process_peak_working_set_bytes": 231550976,
+      "process_peak_commit_bytes": 244604928
+    },
+    {
+      "seconds": 15.02016380004352,
+      "ram_available_bytes": 9782505472,
+      "process_peak_working_set_bytes": 241254400,
+      "process_peak_commit_bytes": 250515456
+    }
+  ],
+  "pid": 13740,
+  "exit_code": 0,
+  "elapsed_seconds": 16.0211677000043
+}

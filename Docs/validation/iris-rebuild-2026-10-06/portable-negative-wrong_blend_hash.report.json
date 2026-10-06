@@ -1,0 +1,33 @@
+{
+  "accuracy": {},
+  "classify_calls_attempted": 0,
+  "classify_calls_completed": 0,
+  "decoration_invariance_max": null,
+  "exception_traceback": "Traceback (most recent call last):\n  File \"D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\demo_lattice_iris\\verify_portable_blender.py\", line 553, in main\n    run_verification(args, report)\n  File \"D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\demo_lattice_iris\\verify_portable_blender.py\", line 371, in run_verification\n    require(actual_blend_hash == manifest[\"blend_sha256\"], \"Copied .blend hash mismatch\")\n  File \"D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\demo_lattice_iris\\verify_portable_blender.py\", line 51, in require\n    raise RuntimeError(message)\nRuntimeError: Copied .blend hash mismatch\n",
+  "external_asset_access_denied": [],
+  "finished_utc": "2026-10-06T22:06:17.662291+00:00",
+  "metric_status": {
+    "decoration_invariance_max": "NOT_MEASURED_BY_THIS_VERIFIER",
+    "save_reopen_max": "NOT_MEASURED"
+  },
+  "operations": {
+    "build": false,
+    "gpu_workload_requested": false,
+    "render": false,
+    "reset": false,
+    "save_blend": false,
+    "train": false
+  },
+  "process_cost_scope": "CPU/wall time of this verification process; not an energy benchmark",
+  "rows": [],
+  "save_reopen_max": null,
+  "schema": "neuro3d-iris-portable-v1-verification",
+  "started_utc": "2026-10-06T22:06:17.564291+00:00",
+  "status": "FAIL",
+  "total_cpu_seconds": 0.09375,
+  "total_wall_seconds": 0.09793139999965206,
+  "verification_failures": [
+    "RuntimeError: Copied .blend hash mismatch"
+  ],
+  "verification_passed": false
+}

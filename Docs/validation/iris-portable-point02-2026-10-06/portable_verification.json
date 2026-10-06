@@ -176,9 +176,9 @@
     },
     "neuro3d_iris_demo.py": {
       "manifest_match": true,
-      "sha256": "6b5b32434679ae4da9410afbeeeee2c25a614eaf4b2776892aa8fb907617592d",
+      "sha256": "1893a2dbfbcb2738df46eb212e8dcbb021ac1ec73b838bef0696eb2a34ab5956",
       "text_name": "neuro3d_iris_demo.py",
-      "utf8_bytes": 41013
+      "utf8_bytes": 37352
     },
     "trained_lattice.json": {
       "manifest_match": true,
@@ -188,15 +188,15 @@
     }
   },
   "background": true,
-  "blend": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point03\\independent\\neuro3d_iris_lattice.blend",
+  "blend": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point02\\independent\\neuro3d_iris_lattice.blend",
   "blend_manifest_hash_verified": true,
-  "blend_sha256": "5884c6fa4cc8cee22dd99e2f4aeaf8f0e44ae44dba85d4f2447868d3d4d58c22",
+  "blend_sha256": "7130f5e46b0fb9785f6b692478d3892d59671f15d010598130a1537d6e973f3b",
   "blender_version": "4.5.14 LTS",
   "classification_costs": {
-    "cpu_seconds": 331.265625,
+    "cpu_seconds": 306.203125,
     "scope": "classify calls only; no training, render or GPU-energy benchmark",
-    "wall_ms_per_completed_sample": 2209.4790439975136,
-    "wall_seconds": 331.42185659962706
+    "wall_ms_per_completed_sample": 2042.876285998306,
+    "wall_seconds": 306.4314428997459
   },
   "classify_calls_attempted": 150,
   "classify_calls_completed": 150,
@@ -218,9 +218,9 @@
     },
     "neuro3d_iris_demo.py": {
       "manifest_match": true,
-      "sha256": "6b5b32434679ae4da9410afbeeeee2c25a614eaf4b2776892aa8fb907617592d",
+      "sha256": "1893a2dbfbcb2738df46eb212e8dcbb021ac1ec73b838bef0696eb2a34ab5956",
       "text_name": "neuro3d_iris_demo.py",
-      "utf8_bytes": 41013
+      "utf8_bytes": 37352
     },
     "trained_lattice.json": {
       "manifest_match": true,
@@ -245,10 +245,10 @@
   },
   "external_asset_access_denied": [],
   "external_asset_guard_active_during_all_150_rows": true,
-  "finished_utc": "2026-10-06T22:06:15.564569+00:00",
+  "finished_utc": "2026-10-06T21:40:42.673699+00:00",
   "fresh_process_required_by_supervisor": true,
-  "isolated_here": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point03\\independent",
-  "manifest_sha256": "c9bf03fe23445da6121d1423206ef524c5b475b56325b830d51b38cd64d37871",
+  "isolated_here": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point02\\independent",
+  "manifest_sha256": "ddb061587d53c1b29e207567de475c99fd0dac23b3c6571805a1045d761cc2e8",
   "metric_status": {
     "decoration_invariance_max": "NOT_MEASURED_BY_THIS_VERIFIER",
     "escape_max": "MEASURED_150_ROWS",
@@ -309,15 +309,15 @@
     "panel": "NEURO3D_PT_panel",
     "panel_registered": true
   },
-  "pid": 48408,
+  "pid": 30640,
   "power_balance_max_err": 6.369019625607208e-05,
   "prediction_disagreements": [],
   "process_cost_scope": "CPU/wall time of this verification process; not an energy benchmark",
   "ray_casts_total": 8405660,
   "rows": [
     {
-      "classify_cpu_seconds": 2.265625,
-      "classify_wall_seconds": 2.2702266999986023,
+      "classify_cpu_seconds": 2.078125,
+      "classify_wall_seconds": 2.0857109000207856,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -364,7 +364,7 @@
           -0.5988774137430498
         ],
         "C2": [
-          -0.16649350265317706,
+          -0.16649350265317708,
           -0.274760228369199
         ],
         "C3": [
@@ -411,8 +411,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.28125,
-      "classify_wall_seconds": 2.270366800017655,
+      "classify_cpu_seconds": 2.171875,
+      "classify_wall_seconds": 2.164927300007548,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -506,8 +506,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.265625,
-      "classify_wall_seconds": 2.2766021999996156,
+      "classify_cpu_seconds": 2.046875,
+      "classify_wall_seconds": 2.053458000009414,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -554,7 +554,7 @@
           -0.5348857683398245
         ],
         "C2": [
-          -0.15070951952211628,
+          -0.1507095195221163,
           -0.24120900249178226
         ],
         "C3": [
@@ -601,8 +601,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.25,
-      "classify_wall_seconds": 2.2391203999868594,
+      "classify_cpu_seconds": 2.109375,
+      "classify_wall_seconds": 2.1027585999690928,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -696,8 +696,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.25,
-      "classify_wall_seconds": 2.250310300034471,
+      "classify_cpu_seconds": 2.09375,
+      "classify_wall_seconds": 2.1043656999827363,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -744,7 +744,7 @@
           -0.6211630595557831
         ],
         "C2": [
-          -0.17374707301349165,
+          -0.17374707301349168,
           -0.28412492168500525
         ],
         "C3": [
@@ -791,8 +791,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.296875,
-      "classify_wall_seconds": 2.313851800048724,
+      "classify_cpu_seconds": 2.078125,
+      "classify_wall_seconds": 2.079664499964565,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -886,8 +886,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.203125,
-      "classify_wall_seconds": 2.211447500041686,
+      "classify_cpu_seconds": 2.03125,
+      "classify_wall_seconds": 2.0409024999826215,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -981,8 +981,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.21875,
-      "classify_wall_seconds": 2.220690199988894,
+      "classify_cpu_seconds": 2.078125,
+      "classify_wall_seconds": 2.075846299994737,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -1029,7 +1029,7 @@
           -0.5816922634466206
         ],
         "C2": [
-          -0.1606185262300567,
+          -0.16061852623005674,
           -0.2658989370356446
         ],
         "C3": [
@@ -1076,8 +1076,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 1.4375,
-      "classify_wall_seconds": 1.427432399999816,
+      "classify_cpu_seconds": 1.265625,
+      "classify_wall_seconds": 1.2612343999790028,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -1124,7 +1124,7 @@
           -0.4429627061354512
         ],
         "C2": [
-          -0.12414651230974028,
+          -0.12414651230974029,
           -0.19514264941618573
         ],
         "C3": [
@@ -1171,8 +1171,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.015625,
-      "classify_wall_seconds": 2.0110438999836333,
+      "classify_cpu_seconds": 1.859375,
+      "classify_wall_seconds": 1.857960399996955,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -1219,7 +1219,7 @@
           -0.5066471675756588
         ],
         "C2": [
-          -0.1349300794549216,
+          -0.13493007945492164,
           -0.2321894374324245
         ],
         "C3": [
@@ -1266,8 +1266,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.229359499993734,
+      "classify_cpu_seconds": 2.09375,
+      "classify_wall_seconds": 2.09224919998087,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -1314,7 +1314,7 @@
           -0.6265931361545359
         ],
         "C2": [
-          -0.17259401931098609,
+          -0.1725940193109861,
           -0.29004307306420235
         ],
         "C3": [
@@ -1361,8 +1361,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.203125,
-      "classify_wall_seconds": 2.2149734999984503,
+      "classify_cpu_seconds": 2.125,
+      "classify_wall_seconds": 2.126238099997863,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -1409,7 +1409,7 @@
           -0.5869520366703638
         ],
         "C2": [
-          -0.16209835612550808,
+          -0.1620983561255081,
           -0.26639814115538024
         ],
         "C3": [
@@ -1456,8 +1456,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.03125,
-      "classify_wall_seconds": 2.0219190000207163,
+      "classify_cpu_seconds": 1.953125,
+      "classify_wall_seconds": 1.954249800008256,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -1551,8 +1551,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.015625,
-      "classify_wall_seconds": 2.0125331999734044,
+      "classify_cpu_seconds": 1.96875,
+      "classify_wall_seconds": 1.9629216000321321,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -1599,7 +1599,7 @@
           -0.4689833053976898
         ],
         "C2": [
-          -0.1328796265902674,
+          -0.13287962659026742,
           -0.20828664852845385
         ],
         "C3": [
@@ -1646,8 +1646,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.265625,
-      "classify_wall_seconds": 2.264466100023128,
+      "classify_cpu_seconds": 2.078125,
+      "classify_wall_seconds": 2.083629700005986,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -1741,8 +1741,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.296875,
-      "classify_wall_seconds": 2.308871299959719,
+      "classify_cpu_seconds": 2.109375,
+      "classify_wall_seconds": 2.1098516000201926,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -1836,8 +1836,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.2286398999858648,
+      "classify_cpu_seconds": 2.046875,
+      "classify_wall_seconds": 2.0508754000184126,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -1931,8 +1931,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.25,
-      "classify_wall_seconds": 2.2544612000347115,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.050776500022039,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -1979,7 +1979,7 @@
           -0.597777221804208
         ],
         "C2": [
-          -0.16929804739123458,
+          -0.1692980473912346,
           -0.27254093791946704
         ],
         "C3": [
@@ -2026,8 +2026,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.25,
-      "classify_wall_seconds": 2.2484584000194445,
+      "classify_cpu_seconds": 2.03125,
+      "classify_wall_seconds": 2.043331299966667,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -2121,8 +2121,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.239468699961435,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.051576700003352,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -2216,8 +2216,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.236134700011462,
+      "classify_cpu_seconds": 2.09375,
+      "classify_wall_seconds": 2.0983075000112876,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -2311,8 +2311,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.231513000035193,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.0718831999693066,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -2406,8 +2406,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 1.359375,
-      "classify_wall_seconds": 1.3831737999571487,
+      "classify_cpu_seconds": 1.25,
+      "classify_wall_seconds": 1.2484113000100479,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -2454,7 +2454,7 @@
           -0.6195457275100843
         ],
         "C2": [
-          -0.17992182495603007,
+          -0.1799218249560301,
           -0.2797538124252788
         ],
         "C3": [
@@ -2501,8 +2501,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.224167899985332,
+      "classify_cpu_seconds": 2.09375,
+      "classify_wall_seconds": 2.0993928000098094,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -2596,8 +2596,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.203125,
-      "classify_wall_seconds": 2.2280048000393435,
+      "classify_cpu_seconds": 2.09375,
+      "classify_wall_seconds": 2.085349500004668,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -2644,7 +2644,7 @@
           -0.588859401166687
         ],
         "C2": [
-          -0.15921989690626628,
+          -0.1592198969062663,
           -0.26729405930990563
         ],
         "C3": [
@@ -2691,8 +2691,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.21875,
-      "classify_wall_seconds": 2.206967399979476,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.059528000012506,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -2739,7 +2739,7 @@
           -0.4750025022799086
         ],
         "C2": [
-          -0.12711571132474725,
+          -0.12711571132474728,
           -0.21668956976211848
         ],
         "C3": [
@@ -2786,8 +2786,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.21875,
-      "classify_wall_seconds": 2.22031419997802,
+      "classify_cpu_seconds": 2.140625,
+      "classify_wall_seconds": 2.1665369999827817,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -2881,8 +2881,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.2313406000030227,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.0575355000328273,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -2929,7 +2929,7 @@
           -0.596822572113325
         ],
         "C2": [
-          -0.16427360295536328,
+          -0.1642736029553633,
           -0.27471941749161466
         ],
         "C3": [
@@ -2976,8 +2976,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.1875,
-      "classify_wall_seconds": 2.215354499989189,
+      "classify_cpu_seconds": 2.125,
+      "classify_wall_seconds": 2.116508800012525,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -3071,8 +3071,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.21875,
-      "classify_wall_seconds": 2.21479709999403,
+      "classify_cpu_seconds": 2.078125,
+      "classify_wall_seconds": 2.0838113000500016,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -3119,7 +3119,7 @@
           -0.5392302502500608
         ],
         "C2": [
-          -0.14822153683192252,
+          -0.14822153683192255,
           -0.24322292616391872
         ],
         "C3": [
@@ -3166,8 +3166,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.25,
-      "classify_wall_seconds": 2.2540310000185855,
+      "classify_cpu_seconds": 2.03125,
+      "classify_wall_seconds": 2.045368999999482,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -3261,8 +3261,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.25,
-      "classify_wall_seconds": 2.255671299993992,
+      "classify_cpu_seconds": 2.078125,
+      "classify_wall_seconds": 2.064111799991224,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -3309,7 +3309,7 @@
           -0.5639314919660917
         ],
         "C2": [
-          -0.15969385963621252,
+          -0.15969385963621255,
           -0.257993816088969
         ],
         "C3": [
@@ -3356,8 +3356,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.015625,
-      "classify_wall_seconds": 2.0128022999851964,
+      "classify_cpu_seconds": 1.84375,
+      "classify_wall_seconds": 1.8506189999752678,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -3451,8 +3451,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.2250953000038862,
+      "classify_cpu_seconds": 2.09375,
+      "classify_wall_seconds": 2.1013553999946453,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -3499,7 +3499,7 @@
           -0.6914545318997832
         ],
         "C2": [
-          -0.1933379085326372,
+          -0.19333790853263721,
           -0.3202822144286706
         ],
         "C3": [
@@ -3539,15 +3539,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 5.486364057535508e-05,
+        "outputs_complex_vs_model_max": 5.4863640575348014e-05,
         "power_balance_max_err": 5.8894117717533945e-05,
-        "scene_vs_model_max_power_diff": 2.856913584348142e-05
+        "scene_vs_model_max_power_diff": 2.856913584353693e-05
       },
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.203125,
-      "classify_wall_seconds": 2.2113608000217937,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.0591043999884278,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -3594,7 +3594,7 @@
           -0.506806775291773
         ],
         "C2": [
-          -0.13854403206491614,
+          -0.13854403206491617,
           -0.23029972506938245
         ],
         "C3": [
@@ -3641,8 +3641,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.25,
-      "classify_wall_seconds": 2.248216299980413,
+      "classify_cpu_seconds": 2.078125,
+      "classify_wall_seconds": 2.0679687000229023,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -3689,7 +3689,7 @@
           -0.5274832339297895
         ],
         "C2": [
-          -0.14797082435159437,
+          -0.1479708243515944,
           -0.24090098609068405
         ],
         "C3": [
@@ -3736,8 +3736,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.226953700010199,
+      "classify_cpu_seconds": 2.046875,
+      "classify_wall_seconds": 2.0588011000072584,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -3784,7 +3784,7 @@
           -0.5812324456770704
         ],
         "C2": [
-          -0.16047332980768564,
+          -0.16047332980768567,
           -0.27019582708690015
         ],
         "C3": [
@@ -3831,8 +3831,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.015625,
-      "classify_wall_seconds": 2.025769500003662,
+      "classify_cpu_seconds": 1.84375,
+      "classify_wall_seconds": 1.8442002999945544,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -3926,8 +3926,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 1.390625,
-      "classify_wall_seconds": 1.3790237000212073,
+      "classify_cpu_seconds": 1.25,
+      "classify_wall_seconds": 1.2472951000090688,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -4021,8 +4021,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.21875,
-      "classify_wall_seconds": 2.2244986000005156,
+      "classify_cpu_seconds": 2.046875,
+      "classify_wall_seconds": 2.0448444000212476,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -4116,8 +4116,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.2532617999822833,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.064684999990277,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -4211,8 +4211,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.21875,
-      "classify_wall_seconds": 2.21776949998457,
+      "classify_cpu_seconds": 2.078125,
+      "classify_wall_seconds": 2.0662217999924906,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -4259,7 +4259,7 @@
           -0.17513492945737422
         ],
         "C2": [
-          -0.050552336953953336,
+          -0.05055233695395335,
           -0.0698393664135022
         ],
         "C3": [
@@ -4306,8 +4306,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 1.390625,
-      "classify_wall_seconds": 1.3942045999574475,
+      "classify_cpu_seconds": 1.234375,
+      "classify_wall_seconds": 1.2430147000122815,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -4354,7 +4354,7 @@
           -0.5346851513167331
         ],
         "C2": [
-          -0.15257130188440796,
+          -0.15257130188440798,
           -0.23800713113698305
         ],
         "C3": [
@@ -4401,8 +4401,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.21875,
-      "classify_wall_seconds": 2.2197542000212707,
+      "classify_cpu_seconds": 2.078125,
+      "classify_wall_seconds": 2.0783057999797165,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -4449,7 +4449,7 @@
           -0.5925710351289111
         ],
         "C2": [
-          -0.17535216039037954,
+          -0.17535216039037957,
           -0.2642389554184311
         ],
         "C3": [
@@ -4496,8 +4496,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.25,
-      "classify_wall_seconds": 2.2426420000265352,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.0623074000468478,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -4591,8 +4591,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.203125,
-      "classify_wall_seconds": 2.2002334999851882,
+      "classify_cpu_seconds": 2.078125,
+      "classify_wall_seconds": 2.080515000037849,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -4639,7 +4639,7 @@
           -0.4749904362378584
         ],
         "C2": [
-          -0.13464741017684997,
+          -0.13464741017685,
           -0.21249107163789407
         ],
         "C3": [
@@ -4686,8 +4686,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.250960999983363,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.0533624999807216,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -4734,7 +4734,7 @@
           -0.6545255987547506
         ],
         "C2": [
-          -0.1813864262454573,
+          -0.18138642624545734,
           -0.300370175055503
         ],
         "C3": [
@@ -4781,8 +4781,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.21875,
-      "classify_wall_seconds": 2.2228080999921076,
+      "classify_cpu_seconds": 2.046875,
+      "classify_wall_seconds": 2.0536651000147685,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -4876,8 +4876,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.21875,
-      "classify_wall_seconds": 2.21624039998278,
+      "classify_cpu_seconds": 2.03125,
+      "classify_wall_seconds": 2.028197000036016,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -4924,7 +4924,7 @@
           -0.6306304474384511
         ],
         "C2": [
-          -0.17422538967039602,
+          -0.17422538967039605,
           -0.29107108113353786
         ],
         "C3": [
@@ -4971,8 +4971,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.28125,
-      "classify_wall_seconds": 2.277600799978245,
+      "classify_cpu_seconds": 2.109375,
+      "classify_wall_seconds": 2.147395099978894,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -5066,8 +5066,8 @@
       "truth": 0
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.2355202000471763,
+      "classify_cpu_seconds": 2.125,
+      "classify_wall_seconds": 2.125349899986759,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -5114,7 +5114,7 @@
           -0.38733782714025916
         ],
         "C2": [
-          -0.10030034311710492,
+          -0.10030034311710494,
           -0.1754120769122467
         ],
         "C3": [
@@ -5154,15 +5154,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 7.457863183944653e-05,
+        "outputs_complex_vs_model_max": 7.457863183944118e-05,
         "power_balance_max_err": 6.8775746456806175e-06,
         "scene_vs_model_max_power_diff": 3.222341502970294e-05
       },
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.25,
-      "classify_wall_seconds": 2.249172499985434,
+      "classify_cpu_seconds": 2.03125,
+      "classify_wall_seconds": 2.033430600014981,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -5256,8 +5256,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.237153700029012,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.062107300036587,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -5351,8 +5351,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.21875,
-      "classify_wall_seconds": 2.224074399971869,
+      "classify_cpu_seconds": 2.03125,
+      "classify_wall_seconds": 2.0352810999611393,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -5399,7 +5399,7 @@
           -0.18293991815261973
         ],
         "C2": [
-          -0.04834590651836283,
+          -0.04834590651836284,
           -0.06986284713799686
         ],
         "C3": [
@@ -5446,8 +5446,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.25,
-      "classify_wall_seconds": 2.252719399984926,
+      "classify_cpu_seconds": 2.03125,
+      "classify_wall_seconds": 2.044267299992498,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -5494,7 +5494,7 @@
           -0.30550298578432755
         ],
         "C2": [
-          -0.08046131969348082,
+          -0.08046131969348083,
           -0.13303370517382862
         ],
         "C3": [
@@ -5534,15 +5534,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 6.923913756723296e-05,
+        "outputs_complex_vs_model_max": 6.923913756722744e-05,
         "power_balance_max_err": 4.804405686620328e-07,
         "scene_vs_model_max_power_diff": 3.584227268221829e-05
       },
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.227495099999942,
+      "classify_cpu_seconds": 2.078125,
+      "classify_wall_seconds": 2.084152399969753,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -5636,8 +5636,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.21875,
-      "classify_wall_seconds": 2.2217947999597527,
+      "classify_cpu_seconds": 2.046875,
+      "classify_wall_seconds": 2.0402481999481097,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -5731,8 +5731,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.28125,
-      "classify_wall_seconds": 2.2781847000005655,
+      "classify_cpu_seconds": 2.09375,
+      "classify_wall_seconds": 2.089013699966017,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -5779,7 +5779,7 @@
           -0.23087231338953132
         ],
         "C2": [
-          -0.06359605793496426,
+          -0.06359605793496427,
           -0.08911270259388356
         ],
         "C3": [
@@ -5826,8 +5826,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.2332062000059523,
+      "classify_cpu_seconds": 2.078125,
+      "classify_wall_seconds": 2.082183199992869,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -5921,8 +5921,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.2270922999596223,
+      "classify_cpu_seconds": 2.078125,
+      "classify_wall_seconds": 2.075518600002397,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -5969,7 +5969,7 @@
           -0.31147658027099095
         ],
         "C2": [
-          -0.0911555208676771,
+          -0.09115552086767711,
           -0.12534192412739872
         ],
         "C3": [
@@ -6016,8 +6016,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.03125,
-      "classify_wall_seconds": 2.0452001999947242,
+      "classify_cpu_seconds": 1.90625,
+      "classify_wall_seconds": 1.894933600036893,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -6064,7 +6064,7 @@
           -0.07230634713550696
         ],
         "C2": [
-          -0.014437809955195656,
+          -0.014437809955195667,
           -0.01730703047478922
         ],
         "C3": [
@@ -6111,8 +6111,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.21875,
-      "classify_wall_seconds": 2.214086199994199,
+      "classify_cpu_seconds": 2.046875,
+      "classify_wall_seconds": 2.0577856000163592,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -6159,7 +6159,7 @@
           -0.37463880190753807
         ],
         "C2": [
-          -0.10619110974067762,
+          -0.10619110974067764,
           -0.16010412856114617
         ],
         "C3": [
@@ -6199,15 +6199,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 6.669020396485729e-05,
+        "outputs_complex_vs_model_max": 6.669020396485202e-05,
         "power_balance_max_err": 4.962094069305145e-06,
         "scene_vs_model_max_power_diff": 3.1273722247704416e-05
       },
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.21875,
-      "classify_wall_seconds": 2.220024000038393,
+      "classify_cpu_seconds": 2.03125,
+      "classify_wall_seconds": 2.044438899960369,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -6254,7 +6254,7 @@
           -0.15083258779682868
         ],
         "C2": [
-          -0.027969120392508436,
+          -0.027969120392508443,
           -0.06380839627323873
         ],
         "C3": [
@@ -6301,8 +6301,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.2358455000212416,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.066737299959641,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -6396,8 +6396,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.25,
-      "classify_wall_seconds": 2.2458913999726065,
+      "classify_cpu_seconds": 2.03125,
+      "classify_wall_seconds": 2.025918399973307,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -6491,8 +6491,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.2301667999709025,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.0542866000323556,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -6539,7 +6539,7 @@
           -0.377993881424031
         ],
         "C2": [
-          -0.10038292195678394,
+          -0.10038292195678396,
           -0.16902966075312012
         ],
         "C3": [
@@ -6579,15 +6579,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 7.253455764116009e-05,
+        "outputs_complex_vs_model_max": 7.253455764115464e-05,
         "power_balance_max_err": 5.063386537274006e-06,
         "scene_vs_model_max_power_diff": 3.30647258455774e-05
       },
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.21875,
-      "classify_wall_seconds": 2.2231933000148274,
+      "classify_cpu_seconds": 2.03125,
+      "classify_wall_seconds": 2.041153799975291,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -6681,8 +6681,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.231519099965226,
+      "classify_cpu_seconds": 2.046875,
+      "classify_wall_seconds": 2.0468599000014365,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -6776,8 +6776,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.28125,
-      "classify_wall_seconds": 2.288359500002116,
+      "classify_cpu_seconds": 2.03125,
+      "classify_wall_seconds": 2.032747899997048,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -6824,7 +6824,7 @@
           -0.14344931694409008
         ],
         "C2": [
-          -0.034802556675030995,
+          -0.034802556675031,
           -0.055874215635704494
         ],
         "C3": [
@@ -6871,8 +6871,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.265625,
-      "classify_wall_seconds": 2.254637799982447,
+      "classify_cpu_seconds": 2.109375,
+      "classify_wall_seconds": 2.106736899993848,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -6919,7 +6919,7 @@
           -0.25605771699321367
         ],
         "C2": [
-          -0.06433220498214619,
+          -0.0643322049821462,
           -0.10713143822616328
         ],
         "C3": [
@@ -6966,8 +6966,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.1875,
-      "classify_wall_seconds": 2.199507999990601,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.0617405000375584,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -7061,8 +7061,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.21875,
-      "classify_wall_seconds": 2.220766500046011,
+      "classify_cpu_seconds": 2.15625,
+      "classify_wall_seconds": 2.1563459999742918,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -7156,8 +7156,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.2221534000127576,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.059135099989362,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -7204,7 +7204,7 @@
           -0.22937626679354528
         ],
         "C2": [
-          -0.05644662802684599,
+          -0.056446628026845996,
           -0.09654817154383272
         ],
         "C3": [
@@ -7244,15 +7244,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 6.534952565862779e-05,
+        "outputs_complex_vs_model_max": 6.53495256586252e-05,
         "power_balance_max_err": 1.4618094488216826e-06,
         "scene_vs_model_max_power_diff": 3.792453968787246e-05
       },
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.21875,
-      "classify_wall_seconds": 2.2183192999800667,
+      "classify_cpu_seconds": 2.015625,
+      "classify_wall_seconds": 2.028911799949128,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -7346,8 +7346,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.28125,
-      "classify_wall_seconds": 2.285021699965,
+      "classify_cpu_seconds": 2.046875,
+      "classify_wall_seconds": 2.0435369000188075,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -7441,8 +7441,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.2430315000237897,
+      "classify_cpu_seconds": 2.046875,
+      "classify_wall_seconds": 2.0494917000178248,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -7536,8 +7536,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.21875,
-      "classify_wall_seconds": 2.2101304000243545,
+      "classify_cpu_seconds": 2.03125,
+      "classify_wall_seconds": 2.0398227000259794,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -7631,8 +7631,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.21875,
-      "classify_wall_seconds": 2.224391600000672,
+      "classify_cpu_seconds": 2.03125,
+      "classify_wall_seconds": 2.0318846000009216,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -7726,8 +7726,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.223080999974627,
+      "classify_cpu_seconds": 2.078125,
+      "classify_wall_seconds": 2.0789216000121087,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -7774,7 +7774,7 @@
           -0.34415880736960847
         ],
         "C2": [
-          -0.09435725373313067,
+          -0.09435725373313068,
           -0.14700246786404858
         ],
         "C3": [
@@ -7814,15 +7814,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 6.706171635699518e-05,
+        "outputs_complex_vs_model_max": 6.70617163569901e-05,
         "power_balance_max_err": 4.659208770796397e-06,
         "scene_vs_model_max_power_diff": 3.279914410292406e-05
       },
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.203125,
-      "classify_wall_seconds": 2.2056034000124782,
+      "classify_cpu_seconds": 2.109375,
+      "classify_wall_seconds": 2.105801599973347,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -7869,7 +7869,7 @@
           -0.29242793869931005
         ],
         "C2": [
-          -0.07540432165048182,
+          -0.07540432165048183,
           -0.12602202875698232
         ],
         "C3": [
@@ -7916,8 +7916,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.25,
-      "classify_wall_seconds": 2.247984700021334,
+      "classify_cpu_seconds": 2.171875,
+      "classify_wall_seconds": 2.185837499971967,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -7964,7 +7964,7 @@
           -0.22327262087887673
         ],
         "C2": [
-          -0.05611048760498372,
+          -0.05611048760498374,
           -0.0909245958071291
         ],
         "C3": [
@@ -8011,8 +8011,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.203125,
-      "classify_wall_seconds": 2.197059900034219,
+      "classify_cpu_seconds": 2.046875,
+      "classify_wall_seconds": 2.0574915000470355,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -8059,7 +8059,7 @@
           -0.2264476784346575
         ],
         "C2": [
-          -0.05487254975587822,
+          -0.05487254975587823,
           -0.09373599562818807
         ],
         "C3": [
@@ -8106,8 +8106,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.2332609000150114,
+      "classify_cpu_seconds": 2.09375,
+      "classify_wall_seconds": 2.0832434999756515,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -8154,7 +8154,7 @@
           -0.31164357809784166
         ],
         "C2": [
-          -0.08280093089323301,
+          -0.08280093089323302,
           -0.13334529339275442
         ],
         "C3": [
@@ -8194,15 +8194,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 6.342607181470204e-05,
+        "outputs_complex_vs_model_max": 6.342607181469715e-05,
         "power_balance_max_err": 8.411614263681422e-06,
         "scene_vs_model_max_power_diff": 3.571607985281e-05
       },
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.21875,
-      "classify_wall_seconds": 2.22877879999578,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.061852800019551,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -8296,8 +8296,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.2280382000026293,
+      "classify_cpu_seconds": 2.046875,
+      "classify_wall_seconds": 2.0498189000063576,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -8391,8 +8391,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.21875,
-      "classify_wall_seconds": 2.2192507999716327,
+      "classify_cpu_seconds": 2.046875,
+      "classify_wall_seconds": 2.051019600010477,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -8486,8 +8486,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.21875,
-      "classify_wall_seconds": 2.216080599988345,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.055185699951835,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -8581,8 +8581,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.25,
-      "classify_wall_seconds": 2.2524509000359103,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.063314699975308,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -8629,7 +8629,7 @@
           -0.17612471902181212
         ],
         "C2": [
-          -0.03960743758415233,
+          -0.03960743758415234,
           -0.07410078819796183
         ],
         "C3": [
@@ -8669,15 +8669,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 6.255424878462308e-05,
+        "outputs_complex_vs_model_max": 6.255424878462036e-05,
         "power_balance_max_err": 1.973767670193638e-06,
         "scene_vs_model_max_power_diff": 4.1627894497020534e-05
       },
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.296875,
-      "classify_wall_seconds": 2.2976824999786913,
+      "classify_cpu_seconds": 2.046875,
+      "classify_wall_seconds": 2.0500053000287153,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -8724,7 +8724,7 @@
           -0.39477603863122307
         ],
         "C2": [
-          -0.10908305540141258,
+          -0.1090830554014126,
           -0.16912366923263988
         ],
         "C3": [
@@ -8764,15 +8764,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 6.48903657637304e-05,
+        "outputs_complex_vs_model_max": 6.489036576372593e-05,
         "power_balance_max_err": 1.4041110828477699e-05,
         "scene_vs_model_max_power_diff": 2.9699418550355183e-05
       },
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.2361882000113837,
+      "classify_cpu_seconds": 2.046875,
+      "classify_wall_seconds": 2.0484026999911293,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -8819,7 +8819,7 @@
           -0.24940473644610803
         ],
         "C2": [
-          -0.06778085373580256,
+          -0.06778085373580257,
           -0.10059152332119045
         ],
         "C3": [
@@ -8866,8 +8866,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.21875,
-      "classify_wall_seconds": 2.224937300023157,
+      "classify_cpu_seconds": 2.03125,
+      "classify_wall_seconds": 2.03184459998738,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -8961,8 +8961,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.265625,
-      "classify_wall_seconds": 2.265860000043176,
+      "classify_cpu_seconds": 2.125,
+      "classify_wall_seconds": 2.1334786000079475,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -9009,7 +9009,7 @@
           -0.3710982132129221
         ],
         "C2": [
-          -0.09867092253011957,
+          -0.09867092253011958,
           -0.16148005533334986
         ],
         "C3": [
@@ -9049,15 +9049,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 6.907272906715726e-05,
+        "outputs_complex_vs_model_max": 6.907272906715252e-05,
         "power_balance_max_err": 1.0213991296748048e-05,
         "scene_vs_model_max_power_diff": 3.2041807925542454e-05
       },
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.21875,
-      "classify_wall_seconds": 2.219749399984721,
+      "classify_cpu_seconds": 2.140625,
+      "classify_wall_seconds": 2.127132800000254,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -9104,7 +9104,7 @@
           -0.28044559784044176
         ],
         "C2": [
-          -0.0727088643055825,
+          -0.07270886430558252,
           -0.1189856266163309
         ],
         "C3": [
@@ -9144,15 +9144,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 6.246496051277815e-05,
+        "outputs_complex_vs_model_max": 6.246496051277331e-05,
         "power_balance_max_err": 7.004727800463684e-06,
         "scene_vs_model_max_power_diff": 3.698922471884192e-05
       },
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.203125,
-      "classify_wall_seconds": 2.2069926999974996,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.0643449999624863,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -9199,7 +9199,7 @@
           -0.1912907585098389
         ],
         "C2": [
-          -0.051444557742641506,
+          -0.05144455774264151,
           -0.07184944595018804
         ],
         "C3": [
@@ -9246,8 +9246,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.21875,
-      "classify_wall_seconds": 2.211555199988652,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.058942899981048,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -9294,7 +9294,7 @@
           -0.30928421803686873
         ],
         "C2": [
-          -0.0830352329377645,
+          -0.08303523293776452,
           -0.12947638281083906
         ],
         "C3": [
@@ -9334,15 +9334,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 6.2116374167742e-05,
+        "outputs_complex_vs_model_max": 6.211637416773746e-05,
         "power_balance_max_err": 8.096733312035198e-06,
         "scene_vs_model_max_power_diff": 3.3764631643340426e-05
       },
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.21875,
-      "classify_wall_seconds": 2.2197659999947064,
+      "classify_cpu_seconds": 2.078125,
+      "classify_wall_seconds": 2.089898100006394,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -9436,8 +9436,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.229318699974101,
+      "classify_cpu_seconds": 2.078125,
+      "classify_wall_seconds": 2.0688881000387482,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -9484,7 +9484,7 @@
           -0.3644046466807545
         ],
         "C2": [
-          -0.09884490683038466,
+          -0.09884490683038467,
           -0.15594563359180202
         ],
         "C3": [
@@ -9524,15 +9524,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 6.505126116216199e-05,
+        "outputs_complex_vs_model_max": 6.505126116215745e-05,
         "power_balance_max_err": 1.1852934763467715e-05,
         "scene_vs_model_max_power_diff": 3.171068775381647e-05
       },
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.203125,
-      "classify_wall_seconds": 2.2080630999989808,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.073126200004481,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -9626,8 +9626,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.28125,
-      "classify_wall_seconds": 2.276021199999377,
+      "classify_cpu_seconds": 2.046875,
+      "classify_wall_seconds": 2.04383229999803,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -9674,7 +9674,7 @@
           -0.26250375027762207
         ],
         "C2": [
-          -0.07842365768195346,
+          -0.07842365768195347,
           -0.10407265757035726
         ],
         "C3": [
@@ -9721,8 +9721,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.21875,
-      "classify_wall_seconds": 2.221084200020414,
+      "classify_cpu_seconds": 2.109375,
+      "classify_wall_seconds": 2.1099435000214726,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -9816,8 +9816,8 @@
       "truth": 1
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.2429956999840215,
+      "classify_cpu_seconds": 2.03125,
+      "classify_wall_seconds": 2.0260081999585964,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -9911,8 +9911,8 @@
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.265625,
-      "classify_wall_seconds": 2.266875599976629,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.0598844999913126,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -9959,7 +9959,7 @@
           -0.27354752180630254
         ],
         "C2": [
-          -0.07899562089969066,
+          -0.07899562089969067,
           -0.10931775653181453
         ],
         "C3": [
@@ -9999,15 +9999,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 6.278830088334844e-05,
+        "outputs_complex_vs_model_max": 6.278830088334308e-05,
         "power_balance_max_err": 3.797022369855796e-06,
         "scene_vs_model_max_power_diff": 3.2057908668559065e-05
       },
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.21875,
-      "classify_wall_seconds": 2.219838399963919,
+      "classify_cpu_seconds": 2.046875,
+      "classify_wall_seconds": 2.0490956000285223,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -10101,8 +10101,8 @@
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.21875,
-      "classify_wall_seconds": 2.208894700044766,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.063762100005988,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -10149,7 +10149,7 @@
           -0.3154464991606063
         ],
         "C2": [
-          -0.08367357444782723,
+          -0.08367357444782725,
           -0.1337668644036693
         ],
         "C3": [
@@ -10189,15 +10189,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 6.887075063010389e-05,
+        "outputs_complex_vs_model_max": 6.887075063009895e-05,
         "power_balance_max_err": 1.928700086639701e-06,
         "scene_vs_model_max_power_diff": 3.201886114825858e-05
       },
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.25,
-      "classify_wall_seconds": 2.2471498999511823,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.0624424999696203,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -10291,8 +10291,8 @@
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.203125,
-      "classify_wall_seconds": 2.2158287999918684,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.0591785999713466,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -10386,8 +10386,8 @@
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.265625,
-      "classify_wall_seconds": 2.2545172999962233,
+      "classify_cpu_seconds": 2.046875,
+      "classify_wall_seconds": 2.047055899980478,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -10434,7 +10434,7 @@
           -0.2347337242714117
         ],
         "C2": [
-          -0.0722151217623787,
+          -0.07221512176237871,
           -0.08507184183478361
         ],
         "C3": [
@@ -10481,8 +10481,8 @@
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.240942999953404,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.058266000007279,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -10576,8 +10576,8 @@
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.21875,
-      "classify_wall_seconds": 2.2150677000172436,
+      "classify_cpu_seconds": 2.1875,
+      "classify_wall_seconds": 2.2124399000313133,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -10624,7 +10624,7 @@
           -0.21445920668621735
         ],
         "C2": [
-          -0.051534341978760265,
+          -0.05153434197876027,
           -0.08993367142211829
         ],
         "C3": [
@@ -10664,15 +10664,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 6.725763821073163e-05,
+        "outputs_complex_vs_model_max": 6.725763821072897e-05,
         "power_balance_max_err": 5.390199271815277e-06,
         "scene_vs_model_max_power_diff": 3.6401932642399215e-05
       },
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.229884599975776,
+      "classify_cpu_seconds": 2.078125,
+      "classify_wall_seconds": 2.065789800020866,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -10766,8 +10766,8 @@
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.25,
-      "classify_wall_seconds": 2.239810099999886,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.0741948999930173,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -10814,7 +10814,7 @@
           -0.3710147069882299
         ],
         "C2": [
-          -0.10690344170757261,
+          -0.10690344170757263,
           -0.15873779274383212
         ],
         "C3": [
@@ -10854,15 +10854,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 7.085230778657667e-05,
+        "outputs_complex_vs_model_max": 7.08523077865709e-05,
         "power_balance_max_err": 5.03798560980151e-06,
         "scene_vs_model_max_power_diff": 3.0049397985204562e-05
       },
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.265625,
-      "classify_wall_seconds": 2.2671801000251435,
+      "classify_cpu_seconds": 2.140625,
+      "classify_wall_seconds": 2.139018499990925,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -10909,7 +10909,7 @@
           -0.2644899301212276
         ],
         "C2": [
-          -0.07263306418423054,
+          -0.07263306418423056,
           -0.10969339331483734
         ],
         "C3": [
@@ -10949,15 +10949,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 6.699613311775512e-05,
+        "outputs_complex_vs_model_max": 6.699613311774947e-05,
         "power_balance_max_err": 7.379424229680964e-06,
         "scene_vs_model_max_power_diff": 3.4492993774420944e-05
       },
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.28125,
-      "classify_wall_seconds": 2.279919400054496,
+      "classify_cpu_seconds": 2.078125,
+      "classify_wall_seconds": 2.072916399978567,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -11004,7 +11004,7 @@
           -0.3155276849959974
         ],
         "C2": [
-          -0.08890982826127204,
+          -0.08890982826127206,
           -0.1343612228596798
         ],
         "C3": [
@@ -11044,15 +11044,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 7.083263078428967e-05,
+        "outputs_complex_vs_model_max": 7.083263078428375e-05,
         "power_balance_max_err": 9.961751337161928e-06,
         "scene_vs_model_max_power_diff": 3.226590089966397e-05
       },
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.2393904000055045,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.0704672999563627,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -11099,7 +11099,7 @@
           -0.21906794417697237
         ],
         "C2": [
-          -0.06650356758717907,
+          -0.06650356758717908,
           -0.0823145123266455
         ],
         "C3": [
@@ -11139,15 +11139,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 5.922712552272886e-05,
+        "outputs_complex_vs_model_max": 5.922712552272308e-05,
         "power_balance_max_err": 8.980699573113426e-06,
         "scene_vs_model_max_power_diff": 3.301389495546925e-05
       },
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.229464799980633,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.053198000008706,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -11241,8 +11241,8 @@
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.21875,
-      "classify_wall_seconds": 2.230887799989432,
+      "classify_cpu_seconds": 2.046875,
+      "classify_wall_seconds": 2.0493528000079095,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -11289,7 +11289,7 @@
           -0.3560817533143516
         ],
         "C2": [
-          -0.10715964671334333,
+          -0.10715964671334334,
           -0.1488425761429509
         ],
         "C3": [
@@ -11329,15 +11329,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 6.914168599387781e-05,
+        "outputs_complex_vs_model_max": 6.914168599387173e-05,
         "power_balance_max_err": 9.754756865376635e-06,
         "scene_vs_model_max_power_diff": 2.8972840343421957e-05
       },
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.21875,
-      "classify_wall_seconds": 2.2053509000106715,
+      "classify_cpu_seconds": 2.046875,
+      "classify_wall_seconds": 2.0526697000022978,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -11384,7 +11384,7 @@
           -0.3346402987534496
         ],
         "C2": [
-          -0.08939618238462439,
+          -0.0893961823846244,
           -0.14394755301226192
         ],
         "C3": [
@@ -11424,15 +11424,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 7.064202678315191e-05,
+        "outputs_complex_vs_model_max": 7.064202678314678e-05,
         "power_balance_max_err": 1.0832521405435003e-06,
         "scene_vs_model_max_power_diff": 3.1921097315118496e-05
       },
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.1875,
-      "classify_wall_seconds": 2.204816099954769,
+      "classify_cpu_seconds": 2.078125,
+      "classify_wall_seconds": 2.0678119999938644,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -11526,8 +11526,8 @@
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.21875,
-      "classify_wall_seconds": 2.227662199991755,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.062199000036344,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -11621,8 +11621,8 @@
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.265625,
-      "classify_wall_seconds": 2.2554090000339784,
+      "classify_cpu_seconds": 2.046875,
+      "classify_wall_seconds": 2.0497063000220805,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -11669,7 +11669,7 @@
           -0.1477315888267508
         ],
         "C2": [
-          -0.03276269957143898,
+          -0.032762699571438986,
           -0.05664983492153305
         ],
         "C3": [
@@ -11716,8 +11716,8 @@
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.2328032000223175,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.06059169996297,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -11811,8 +11811,8 @@
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.203125,
-      "classify_wall_seconds": 2.210680299962405,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.066250299976673,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -11859,7 +11859,7 @@
           -0.29684974403270664
         ],
         "C2": [
-          -0.09034796143579683,
+          -0.09034796143579685,
           -0.1175476441854177
         ],
         "C3": [
@@ -11899,15 +11899,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 6.143164862771018e-05,
+        "outputs_complex_vs_model_max": 6.143164862770461e-05,
         "power_balance_max_err": 4.0329196679955714e-06,
         "scene_vs_model_max_power_diff": 2.9836543858879905e-05
       },
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.2311630999902263,
+      "classify_cpu_seconds": 2.046875,
+      "classify_wall_seconds": 2.0517529000062495,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -11954,7 +11954,7 @@
           -0.256256324108924
         ],
         "C2": [
-          -0.06043918905372176,
+          -0.06043918905372177,
           -0.11357931525401792
         ],
         "C3": [
@@ -11994,15 +11994,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 7.31540870164355e-05,
+        "outputs_complex_vs_model_max": 7.315408701643277e-05,
         "power_balance_max_err": 6.01271586542218e-06,
         "scene_vs_model_max_power_diff": 3.382920394276456e-05
       },
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.25,
-      "classify_wall_seconds": 2.2586168000125326,
+      "classify_cpu_seconds": 2.046875,
+      "classify_wall_seconds": 2.0619253999902867,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -12049,7 +12049,7 @@
           -0.27117897397454754
         ],
         "C2": [
-          -0.07572461883043213,
+          -0.07572461883043215,
           -0.11270373422435633
         ],
         "C3": [
@@ -12089,15 +12089,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 6.643275958716236e-05,
+        "outputs_complex_vs_model_max": 6.643275958715662e-05,
         "power_balance_max_err": 7.430328641255812e-06,
         "scene_vs_model_max_power_diff": 3.5037694858908175e-05
       },
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.25,
-      "classify_wall_seconds": 2.2432686999673024,
+      "classify_cpu_seconds": 2.046875,
+      "classify_wall_seconds": 2.050082099973224,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -12191,8 +12191,8 @@
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.25,
-      "classify_wall_seconds": 2.242658599978313,
+      "classify_cpu_seconds": 2.09375,
+      "classify_wall_seconds": 2.1001232999842614,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -12239,7 +12239,7 @@
           -0.3550444491786082
         ],
         "C2": [
-          -0.09062035857173861,
+          -0.09062035857173863,
           -0.15798962233258193
         ],
         "C3": [
@@ -12279,15 +12279,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 7.497940148336801e-05,
+        "outputs_complex_vs_model_max": 7.497940148336287e-05,
         "power_balance_max_err": 2.6462198783328006e-06,
         "scene_vs_model_max_power_diff": 3.113605924823237e-05
       },
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.25,
-      "classify_wall_seconds": 2.278881999955047,
+      "classify_cpu_seconds": 2.09375,
+      "classify_wall_seconds": 2.0901021000463516,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -12381,8 +12381,8 @@
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.203125,
-      "classify_wall_seconds": 2.201376499957405,
+      "classify_cpu_seconds": 2.109375,
+      "classify_wall_seconds": 2.1119878999888897,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -12429,7 +12429,7 @@
           -0.3478344165910913
         ],
         "C2": [
-          -0.09888492099850445,
+          -0.09888492099850446,
           -0.1467776064929137
         ],
         "C3": [
@@ -12469,15 +12469,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 6.783147181761233e-05,
+        "outputs_complex_vs_model_max": 6.783147181760695e-05,
         "power_balance_max_err": 4.945056060190467e-07,
         "scene_vs_model_max_power_diff": 3.1076644329441905e-05
       },
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.25,
-      "classify_wall_seconds": 2.2525885000359267,
+      "classify_cpu_seconds": 2.203125,
+      "classify_wall_seconds": 2.2074531000107527,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -12571,8 +12571,8 @@
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.25,
-      "classify_wall_seconds": 2.2377978999866173,
+      "classify_cpu_seconds": 2.046875,
+      "classify_wall_seconds": 2.0470620000269264,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -12619,7 +12619,7 @@
           -0.3229351110673631
         ],
         "C2": [
-          -0.07820299681750224,
+          -0.07820299681750226,
           -0.1450469259312489
         ],
         "C3": [
@@ -12659,15 +12659,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 7.417303754911305e-05,
+        "outputs_complex_vs_model_max": 7.417303754910802e-05,
         "power_balance_max_err": 4.467667372387574e-06,
         "scene_vs_model_max_power_diff": 3.3302491708270265e-05
       },
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.28125,
-      "classify_wall_seconds": 2.273049799958244,
+      "classify_cpu_seconds": 2.125,
+      "classify_wall_seconds": 2.126840299984906,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -12761,8 +12761,8 @@
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.25,
-      "classify_wall_seconds": 2.2480403999798,
+      "classify_cpu_seconds": 2.046875,
+      "classify_wall_seconds": 2.055295899976045,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -12809,7 +12809,7 @@
           -0.4276280663648102
         ],
         "C2": [
-          -0.11245757264588077,
+          -0.11245757264588079,
           -0.19352212513127945
         ],
         "C3": [
@@ -12849,15 +12849,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 7.892081870451909e-05,
+        "outputs_complex_vs_model_max": 7.892081870451378e-05,
         "power_balance_max_err": 2.5020529104136102e-06,
         "scene_vs_model_max_power_diff": 2.6794323409157217e-05
       },
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.25,
-      "classify_wall_seconds": 2.252032100048382,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.0584911999758333,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -12904,7 +12904,7 @@
           -0.2749300725290771
         ],
         "C2": [
-          -0.07962630080053357,
+          -0.07962630080053358,
           -0.1121720191691317
         ],
         "C3": [
@@ -12944,15 +12944,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 6.686720444187434e-05,
+        "outputs_complex_vs_model_max": 6.686720444186846e-05,
         "power_balance_max_err": 1.0556365296343628e-05,
         "scene_vs_model_max_power_diff": 3.234563666659751e-05
       },
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.328125,
-      "classify_wall_seconds": 2.323464499961119,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.0761648999759927,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -13046,8 +13046,8 @@
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.28125,
-      "classify_wall_seconds": 2.2921450000139885,
+      "classify_cpu_seconds": 2.03125,
+      "classify_wall_seconds": 2.0399554999894463,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -13094,7 +13094,7 @@
           -0.25994292847955475
         ],
         "C2": [
-          -0.05859133054852363,
+          -0.05859133054852364,
           -0.11076969565494842
         ],
         "C3": [
@@ -13134,15 +13134,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 6.636405292222584e-05,
+        "outputs_complex_vs_model_max": 6.636405292222388e-05,
         "power_balance_max_err": 9.758970219486685e-06,
         "scene_vs_model_max_power_diff": 3.468498669922937e-05
       },
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.3125,
-      "classify_wall_seconds": 2.3393681999878027,
+      "classify_cpu_seconds": 2.046875,
+      "classify_wall_seconds": 2.0426497999578714,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -13236,8 +13236,8 @@
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.359375,
-      "classify_wall_seconds": 2.359825899999123,
+      "classify_cpu_seconds": 2.078125,
+      "classify_wall_seconds": 2.077133600017987,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -13284,7 +13284,7 @@
           -0.3888768336472929
         ],
         "C2": [
-          -0.11673983121116611,
+          -0.11673983121116613,
           -0.16304247640270575
         ],
         "C3": [
@@ -13324,15 +13324,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 6.951833707332717e-05,
+        "outputs_complex_vs_model_max": 6.951833707332134e-05,
         "power_balance_max_err": 5.229755292823768e-06,
         "scene_vs_model_max_power_diff": 2.651314783988501e-05
       },
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.25,
-      "classify_wall_seconds": 2.254401299986057,
+      "classify_cpu_seconds": 2.09375,
+      "classify_wall_seconds": 2.098473099991679,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -13426,8 +13426,8 @@
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.2257903999998234,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.051926599990111,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -13521,8 +13521,8 @@
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.242249799950514,
+      "classify_cpu_seconds": 2.09375,
+      "classify_wall_seconds": 2.0898945999797434,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -13569,7 +13569,7 @@
           -0.3345038403032271
         ],
         "C2": [
-          -0.09480007284576535,
+          -0.09480007284576536,
           -0.14373123957019512
         ],
         "C3": [
@@ -13609,15 +13609,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 7.188620358747284e-05,
+        "outputs_complex_vs_model_max": 7.188620358746684e-05,
         "power_balance_max_err": 1.039261926893964e-05,
         "scene_vs_model_max_power_diff": 3.173003845616251e-05
       },
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.2460596000310034,
+      "classify_cpu_seconds": 2.046875,
+      "classify_wall_seconds": 2.054813800030388,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -13711,8 +13711,8 @@
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.265625,
-      "classify_wall_seconds": 2.266463899984956,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.0741572999977507,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -13806,8 +13806,8 @@
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.25,
-      "classify_wall_seconds": 2.2475692000007257,
+      "classify_cpu_seconds": 2.03125,
+      "classify_wall_seconds": 2.0379165000049397,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -13854,7 +13854,7 @@
           -0.27354752180630254
         ],
         "C2": [
-          -0.07899562089969066,
+          -0.07899562089969067,
           -0.10931775653181453
         ],
         "C3": [
@@ -13894,15 +13894,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 6.278830088334844e-05,
+        "outputs_complex_vs_model_max": 6.278830088334308e-05,
         "power_balance_max_err": 3.797022369855796e-06,
         "scene_vs_model_max_power_diff": 3.2057908668559065e-05
       },
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.21875,
-      "classify_wall_seconds": 2.221976100001484,
+      "classify_cpu_seconds": 2.046875,
+      "classify_wall_seconds": 2.0396012000273913,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -13996,8 +13996,8 @@
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.25,
-      "classify_wall_seconds": 2.264444700034801,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.0577361999894492,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -14091,8 +14091,8 @@
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.234375,
-      "classify_wall_seconds": 2.2304009000072256,
+      "classify_cpu_seconds": 2.046875,
+      "classify_wall_seconds": 2.0527907999930903,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -14139,7 +14139,7 @@
           -0.3099988461301237
         ],
         "C2": [
-          -0.09337329243445176,
+          -0.09337329243445178,
           -0.1292993034135725
         ],
         "C3": [
@@ -14179,15 +14179,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 6.931025730467478e-05,
+        "outputs_complex_vs_model_max": 6.93102573046683e-05,
         "power_balance_max_err": 1.6825466250258714e-05,
         "scene_vs_model_max_power_diff": 3.178552782417965e-05
       },
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.265625,
-      "classify_wall_seconds": 2.269296799961012,
+      "classify_cpu_seconds": 2.0625,
+      "classify_wall_seconds": 2.0563451999914832,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -14234,7 +14234,7 @@
           -0.21669628311890957
         ],
         "C2": [
-          -0.061243379475364124,
+          -0.06124337947536413,
           -0.08662787700432419
         ],
         "C3": [
@@ -14274,15 +14274,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 6.40578516181584e-05,
+        "outputs_complex_vs_model_max": 6.405785161815538e-05,
         "power_balance_max_err": 1.2179955874103143e-05,
         "scene_vs_model_max_power_diff": 3.6369113233514216e-05
       },
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.3125,
-      "classify_wall_seconds": 2.301584200002253,
+      "classify_cpu_seconds": 2.078125,
+      "classify_wall_seconds": 2.085900900012348,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -14329,7 +14329,7 @@
           -0.3276903948802528
         ],
         "C2": [
-          -0.09354598130557881,
+          -0.09354598130557883,
           -0.13868484723803914
         ],
         "C3": [
@@ -14369,15 +14369,15 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 6.958115217499965e-05,
+        "outputs_complex_vs_model_max": 6.958115217499385e-05,
         "power_balance_max_err": 7.299562050366859e-06,
         "scene_vs_model_max_power_diff": 3.1912072474521436e-05
       },
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.25,
-      "classify_wall_seconds": 2.2515320999664254,
+      "classify_cpu_seconds": 2.046875,
+      "classify_wall_seconds": 2.051303700020071,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -14471,8 +14471,8 @@
       "truth": 2
     },
     {
-      "classify_cpu_seconds": 2.265625,
-      "classify_wall_seconds": 2.268062999995891,
+      "classify_cpu_seconds": 2.046875,
+      "classify_wall_seconds": 2.0537829999811947,
       "escape": 0.0,
       "fields": {
         "C0": [
@@ -14519,7 +14519,7 @@
           -0.34998166807599207
         ],
         "C2": [
-          -0.09874330072597991,
+          -0.09874330072597992,
           -0.14649428544626672
         ],
         "C3": [
@@ -14559,7 +14559,7 @@
       "ray_casts": 56855,
       "residuals": {
         "escape_max": 0.0,
-        "outputs_complex_vs_model_max": 6.672499395432676e-05,
+        "outputs_complex_vs_model_max": 6.672499395432176e-05,
         "power_balance_max_err": 3.079504143577161e-06,
         "scene_vs_model_max_power_diff": 2.9867315669090955e-05
       },
@@ -14571,11 +14571,11 @@
   "scene_train_acc": 0.975,
   "scene_vs_model_max_power_diff": 6.051319723154869e-05,
   "schema": "neuro3d-iris-portable-v1-verification",
-  "source_commit_declared_by_manifest": "7c037702486ae9ab153f605edab432b85c44ba0d",
-  "started_utc": "2026-10-06T22:00:42.866165+00:00",
+  "source_commit_declared_by_manifest": "63dee34675f0b1de1e032b3b91a87ac09b2eced3",
+  "started_utc": "2026-10-06T21:35:34.914223+00:00",
   "status": "PASS",
-  "total_cpu_seconds": 331.890625,
-  "total_wall_seconds": 332.69781759998295,
+  "total_cpu_seconds": 306.890625,
+  "total_wall_seconds": 307.7595053000259,
   "verification_failures": [],
   "verification_limits": {
     "decoration_invariance_max": 1e-08,

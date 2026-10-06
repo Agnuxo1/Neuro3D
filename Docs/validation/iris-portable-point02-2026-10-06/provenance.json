@@ -1,0 +1,10 @@
+{
+  "historical_point": 2,
+  "artifact_commit": "5b2e9c5475ddb60fb8d36c15bff270533980f926",
+  "blend_git_path": "Blender/demo_lattice_iris/renders/neuro3d_iris_lattice.blend",
+  "blend_sha256": "7130f5e46b0fb9785f6b692478d3892d59671f15d010598130a1537d6e973f3b",
+  "archived_receipt_sha256": {
+    "portable_manifest.json": "ddb061587d53c1b29e207567de475c99fd0dac23b3c6571805a1045d761cc2e8",
+    "portable_verification.json": "5555a08ebd02a371f43de63a5fdca7a3a802b151e7d6c23638bbc0bfa4b7b7cc"
+  }
+}
