@@ -1,0 +1,172 @@
+{
+  "command": [
+    "D:\\TOOLS\\Blender\\blender-4.5.14-windows-x64\\blender.exe",
+    "--background",
+    "--factory-startup",
+    "--disable-autoexec",
+    "--threads",
+    "1",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\demo_lattice_iris\\test_review_blender.py",
+    "--"
+  ],
+  "status": "PASS",
+  "ram_floor_bytes": 4294967296,
+  "cpu_process_budget_bytes": 2147483648,
+  "ram_available_before_bytes": 9998229504,
+  "timeout_seconds": 300.0,
+  "threads": 1,
+  "affinity_mask": 1,
+  "gpu_supervisor": false,
+  "telemetry": [
+    {
+      "seconds": 0.005051299987826496,
+      "ram_available_bytes": 9998000128,
+      "process_peak_working_set_bytes": 1712128,
+      "process_peak_commit_bytes": 15306752
+    },
+    {
+      "seconds": 1.0061347000300884,
+      "ram_available_bytes": 9815556096,
+      "process_peak_working_set_bytes": 166924288,
+      "process_peak_commit_bytes": 175099904
+    },
+    {
+      "seconds": 2.0071161999949254,
+      "ram_available_bytes": 9825247232,
+      "process_peak_working_set_bytes": 175005696,
+      "process_peak_commit_bytes": 196112384
+    },
+    {
+      "seconds": 3.007973600004334,
+      "ram_available_bytes": 9795313664,
+      "process_peak_working_set_bytes": 179781632,
+      "process_peak_commit_bytes": 196112384
+    },
+    {
+      "seconds": 4.00861940003233,
+      "ram_available_bytes": 9786052608,
+      "process_peak_working_set_bytes": 183558144,
+      "process_peak_commit_bytes": 204517376
+    },
+    {
+      "seconds": 5.00943889998598,
+      "ram_available_bytes": 9783398400,
+      "process_peak_working_set_bytes": 185987072,
+      "process_peak_commit_bytes": 204517376
+    },
+    {
+      "seconds": 6.010214800015092,
+      "ram_available_bytes": 9794404352,
+      "process_peak_working_set_bytes": 185995264,
+      "process_peak_commit_bytes": 204517376
+    },
+    {
+      "seconds": 7.011203600035515,
+      "ram_available_bytes": 9787285504,
+      "process_peak_working_set_bytes": 201490432,
+      "process_peak_commit_bytes": 230002688
+    },
+    {
+      "seconds": 8.012361000000965,
+      "ram_available_bytes": 9786847232,
+      "process_peak_working_set_bytes": 201490432,
+      "process_peak_commit_bytes": 230002688
+    },
+    {
+      "seconds": 9.01315270003397,
+      "ram_available_bytes": 9795174400,
+      "process_peak_working_set_bytes": 201490432,
+      "process_peak_commit_bytes": 230002688
+    },
+    {
+      "seconds": 10.014385499991477,
+      "ram_available_bytes": 9791782912,
+      "process_peak_working_set_bytes": 201490432,
+      "process_peak_commit_bytes": 230002688
+    },
+    {
+      "seconds": 11.015357900003437,
+      "ram_available_bytes": 9793069056,
+      "process_peak_working_set_bytes": 201490432,
+      "process_peak_commit_bytes": 230002688
+    },
+    {
+      "seconds": 12.016132300021127,
+      "ram_available_bytes": 9793433600,
+      "process_peak_working_set_bytes": 201490432,
+      "process_peak_commit_bytes": 230002688
+    },
+    {
+      "seconds": 13.01692780002486,
+      "ram_available_bytes": 9795182592,
+      "process_peak_working_set_bytes": 201490432,
+      "process_peak_commit_bytes": 230002688
+    },
+    {
+      "seconds": 14.018005000019912,
+      "ram_available_bytes": 9795624960,
+      "process_peak_working_set_bytes": 201490432,
+      "process_peak_commit_bytes": 230002688
+    },
+    {
+      "seconds": 15.018969000026118,
+      "ram_available_bytes": 9799147520,
+      "process_peak_working_set_bytes": 201490432,
+      "process_peak_commit_bytes": 230002688
+    },
+    {
+      "seconds": 16.019667399988975,
+      "ram_available_bytes": 9804156928,
+      "process_peak_working_set_bytes": 201490432,
+      "process_peak_commit_bytes": 230002688
+    },
+    {
+      "seconds": 17.020479800004978,
+      "ram_available_bytes": 9800077312,
+      "process_peak_working_set_bytes": 201490432,
+      "process_peak_commit_bytes": 230002688
+    },
+    {
+      "seconds": 18.02175299997907,
+      "ram_available_bytes": 9798705152,
+      "process_peak_working_set_bytes": 201490432,
+      "process_peak_commit_bytes": 230002688
+    },
+    {
+      "seconds": 19.022629600018263,
+      "ram_available_bytes": 9801297920,
+      "process_peak_working_set_bytes": 201490432,
+      "process_peak_commit_bytes": 230002688
+    },
+    {
+      "seconds": 20.023221499985084,
+      "ram_available_bytes": 9800298496,
+      "process_peak_working_set_bytes": 201490432,
+      "process_peak_commit_bytes": 230002688
+    },
+    {
+      "seconds": 21.024018800002523,
+      "ram_available_bytes": 9802915840,
+      "process_peak_working_set_bytes": 201490432,
+      "process_peak_commit_bytes": 230002688
+    },
+    {
+      "seconds": 22.02506950002862,
+      "ram_available_bytes": 9800953856,
+      "process_peak_working_set_bytes": 201490432,
+      "process_peak_commit_bytes": 230002688
+    },
+    {
+      "seconds": 23.02588359999936,
+      "ram_available_bytes": 9803542528,
+      "process_peak_working_set_bytes": 201490432,
+      "process_peak_commit_bytes": 230350848
+    }
+  ],
+  "pid": 18132,
+  "exit_code": 0,
+  "elapsed_seconds": 24.02667360001942
+}

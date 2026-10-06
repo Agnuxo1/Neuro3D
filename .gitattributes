@@ -49,3 +49,6 @@ coordinacion/respuestas/TRACE-ORACLE-CLAUDE.json -text !eol
 
 # Preserve the generated manifest hash recorded by the portable verifier.
 Blender/demo_lattice_iris/renders/portable_manifest.json -text !eol whitespace=cr-at-eol
+
+# Point-3 raw execution receipts retain their recorded byte hashes.
+Docs/validation/iris-rebuild-2026-10-06/** -text !eol whitespace=cr-at-eol
