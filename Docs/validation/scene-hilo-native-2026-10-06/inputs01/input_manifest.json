@@ -1,0 +1,36 @@
+{
+  "schema": "neuro3d.scene_hilo.native_job.v1",
+  "cases": [
+    {
+      "case_id": "k3_baseline",
+      "input_class": "real_reopened_baseline",
+      "blend_path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\inputs01\\K3_base.blend",
+      "blend_sha256": "9ae126a748a4440712847a63c9f46abd4ec121d721ec6535fc160b4f9dd141e1",
+      "packet_path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\inputs01\\k3_baseline.packet.json",
+      "packet_sha256": "5c1da53154bebdcc0fb2953777c06f19c5c20b3b9277ad7d8eecffa61c03806f"
+    },
+    {
+      "case_id": "k4_baseline",
+      "input_class": "real_reopened_baseline",
+      "blend_path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\inputs01\\K4_base.blend",
+      "blend_sha256": "000796d5e01ca8f6ae411b2e2ec2d52f628ef4dc3b6e0924da7cf8f0dc245d55",
+      "packet_path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\inputs01\\k4_baseline.packet.json",
+      "packet_sha256": "a284cfe711991327f234f122821b64e3ec77f6b8fda35bf18b53403b3ae9c55c"
+    },
+    {
+      "case_id": "controlled_numeric",
+      "input_class": "controlled_numeric_scene",
+      "blend_path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\inputs01\\controlled_numeric.blend",
+      "blend_sha256": "7b70f8eb4bbd4bc62082620ff6eeb21294370d672f7557aa66390f3795e23b9a",
+      "packet_path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\inputs01\\controlled_numeric.packet.json",
+      "packet_sha256": "04b4376bf96cafe8d22998480f42f3df26db757f4b13c3ff21274b93e25477cd"
+    }
+  ],
+  "limits": {
+    "max_sources": 5,
+    "max_triangles": 64,
+    "max_dispatches": 6
+  },
+  "expected_backend": "OPENGL",
+  "expected_renderer_contains": "RTX 3090"
+}

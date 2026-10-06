@@ -1,0 +1,8 @@
+{
+  "url": "https://raw.githubusercontent.com/blender/blender/62c1db4208e8/source/blender/python/gpu/gpu_py_shader_create_info.cc",
+  "retrieved_ref": "62c1db4208e8",
+  "filename": "gpu_py_shader_create_info.cc",
+  "bytes": 45020,
+  "sha256": "57a9800b3f6167c05b940b74542caee27640fad01cf2daa6a4dde8e89e7549a8",
+  "finding": "Image enum explicitly includes UINT_2D; GPUShaderCreateInfo.image parses the shared image enum. uniform_buf invokes public ShaderCreateInfo.uniform_buf(slot,type_name,name)."
+}

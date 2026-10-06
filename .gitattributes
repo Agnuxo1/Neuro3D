@@ -53,3 +53,4 @@ Blender/demo_lattice_iris/renders/portable_manifest.json -text !eol whitespace=c
 # Point-3 raw execution receipts retain their recorded byte hashes.
 Docs/validation/iris-rebuild-2026-10-06/** -text !eol whitespace=cr-at-eol
 Docs/validation/iris-portable-point02-2026-10-06/** -text !eol whitespace=cr-at-eol
+Docs/validation/scene-hilo-native-2026-10-06/** -text

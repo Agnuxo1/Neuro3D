@@ -1,0 +1,278 @@
+{
+  "schema": "neuro3d.scene_hilo.validation.v1",
+  "created_utc": "2026-10-06T22:48:15.788758+00:00",
+  "status": "CPU_PREPARED_NATIVE_BLOCKED",
+  "point": 4,
+  "source_commit": "b305043016427d796aff4eb649e090961db026ff",
+  "cpu_adapter_tests_passed": 16,
+  "guard_cpu_tests_passed": 17,
+  "packet_scalars_independently_checked": 847,
+  "wire_bytes": 39072,
+  "cpu_reference_components": 7026,
+  "cpu_mutation_rejections": 18,
+  "native_gpu_dispatches_in_this_pilot": 0,
+  "native_worker_launches": 0,
+  "queue_attempts": 3,
+  "independent_readback_auditor": "prepared, statically reviewed and AST checked; not executed",
+  "files": [
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/cpu_adapter_suite.json",
+      "bytes": 3697,
+      "sha256": "24bcc41ec9c0fca60414dca66c0525dbb2513edb096de5b5c2c67e5de8f7aad4"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/cpu_oracle_contract_v1.json",
+      "bytes": 6929,
+      "sha256": "9dd91ed8d24343b761bace631ce6bfe00df7d75b654938c785d95f2dfc0cdca4"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/cpu_oracle_contract_v1_program.py",
+      "bytes": 4953,
+      "sha256": "bc357f91edfc28d04ab4f02dcee358e72dd362237c9df58747545e43459f6334"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/cpu_oracle_contract_v1_program_provenance.json",
+      "bytes": 3746,
+      "sha256": "b0214c7c5cc29eb9e1fa9bfa491575df6d8f05e3b27851c95194c12150570d38"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/cpu_oracle_contract_v1_reporting_update.json",
+      "bytes": 7472,
+      "sha256": "53a197601a7260a891a21eb2ba756b0905a34766cf612c7ca471a0d74c687333"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/guard_cpu_tests01/receipt.json",
+      "bytes": 2141,
+      "sha256": "283fd9a766aad9fb7d1b962336f96f8e75717d32427a5fc7b5b6205590130ac9"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/guard_cpu_tests01/stdout.log",
+      "bytes": 4192,
+      "sha256": "ab93a4499f7172148f0291891909157e21a4ae92dafcbb65c3b2639621ddd9f9"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/guard_cpu_tests02/receipt.json",
+      "bytes": 2039,
+      "sha256": "c1b103bed35ffcf74803ddc5fdc6a37a6ab91cd80b1f79890e6b4b65f9af91fb"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/guard_cpu_tests02/stdout.log",
+      "bytes": 2736,
+      "sha256": "96cac2be0808bc7f406f3174923ea9de0b95fdfea5f8442e92542d048cc5b7e8"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/guard_describe_pins01.json",
+      "bytes": 1838,
+      "sha256": "bc36bf401f7a2f9fe8c622449803638dac761f74c08d18acf2cea8c666bd77aa"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/implementation_commit01.json",
+      "bytes": 1166,
+      "sha256": "6ed9d264726b9c8f39ac1a0521dcc2ad5196698ee1e8e5026359695651b26a61"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/independent_packet_audit_CPU_v1.json",
+      "bytes": 13263,
+      "sha256": "921eeba1fc2d750584f0598d72fdbc45fb4d8aeb65369128bbff912b0995e770"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/inputs01/controlled_numeric.blend",
+      "bytes": 383968,
+      "sha256": "7b70f8eb4bbd4bc62082620ff6eeb21294370d672f7557aa66390f3795e23b9a"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/inputs01/controlled_numeric.packet.json",
+      "bytes": 41340,
+      "sha256": "04b4376bf96cafe8d22998480f42f3df26db757f4b13c3ff21274b93e25477cd"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/inputs01/controlled_numeric.snapshot.json",
+      "bytes": 2264,
+      "sha256": "b475d619944ea62872a5532f4f02dd87d33a064dd22de8dcef552900c98a2651"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/inputs01/controlled_numeric.wire.bin",
+      "bytes": 2464,
+      "sha256": "4275efe687bf7dae911e444ab6562fe12d7d37335a3bb6e535bf4947d4ae27b0"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/inputs01/input_manifest.json",
+      "bytes": 1776,
+      "sha256": "81daaf472db2e021fc6686976ab18dd75eac52cd65565a0d011689f215bc5dc1"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/inputs01/K3_base.blend",
+      "bytes": 583988,
+      "sha256": "9ae126a748a4440712847a63c9f46abd4ec121d721ec6535fc160b4f9dd141e1"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/inputs01/k3_baseline.packet.json",
+      "bytes": 256021,
+      "sha256": "5c1da53154bebdcc0fb2953777c06f19c5c20b3b9277ad7d8eecffa61c03806f"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/inputs01/k3_baseline.snapshot.json",
+      "bytes": 13750,
+      "sha256": "4e7ff61c43b657f581deeaba54b24effb825c9d209f843c8e6902cc8b49604c3"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/inputs01/k3_baseline.wire.bin",
+      "bytes": 15904,
+      "sha256": "8da0e8bea709b44e2d0be9e4b28b3f282110de01da3469702e50690c0fe5bae5"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/inputs01/K4_base.blend",
+      "bytes": 542014,
+      "sha256": "000796d5e01ca8f6ae411b2e2ec2d52f628ef4dc3b6e0924da7cf8f0dc245d55"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/inputs01/k4_baseline.packet.json",
+      "bytes": 333252,
+      "sha256": "a284cfe711991327f234f122821b64e3ec77f6b8fda35bf18b53403b3ae9c55c"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/inputs01/k4_baseline.snapshot.json",
+      "bytes": 17968,
+      "sha256": "810d80d8cf61be03d26f8e5ca011cf4449e8ea29867a8d33ae5bb2bdf75beea4"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/inputs01/k4_baseline.wire.bin",
+      "bytes": 20704,
+      "sha256": "f9cdd1ca97f0c6455bf8e6049eafdcff01ccb234cfc0bc9c7798ba23938ab860"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/inputs01/prepare_report.json",
+      "bytes": 5309,
+      "sha256": "e552df4022f66869b084bde11c208ff566b2a25ba6fede5601c987bfb44c0726"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/native01/job.json",
+      "bytes": 7414,
+      "sha256": "5fa07be244c6eda4ce0ae323d3d3cbac27334b608086508a9f12635f8d6ae4f3"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/native01/launch.json",
+      "bytes": 1157,
+      "sha256": "aec76baf48fb0d37d7cad6a7bdde1a339912711df71444ea6bc992883b8e4e46"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/native01/queue.stderr.log",
+      "bytes": 80,
+      "sha256": "e97286bc5e4b386d9999f94ead9f4237baa9a690fcc176c07397b542ad4b5057"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/native01/queue.stdout.log",
+      "bytes": 155,
+      "sha256": "90e819e89aa87cc7eac33f1119a396e46be1278cd7a379ccf1ea9f0d5f8b75d4"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/native02/job.json",
+      "bytes": 7414,
+      "sha256": "603c115992d7f62978ee23fcd95aca05d4090e8a5efa28c94266eb46bf114991"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/native02/launch.json",
+      "bytes": 1292,
+      "sha256": "afbf5c91b0b888bf81ad982aaa8549b9e197c63646fbbcd19ab4bb39861be7e8"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/native02/queue.stderr.log",
+      "bytes": 79,
+      "sha256": "cbb151ddaac236d6f75953a27f3d13ae48f6bcc3ea0ad53c64cf3c137cf809e2"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/native02/queue.stdout.log",
+      "bytes": 155,
+      "sha256": "9b1d87e20ea0794b61188306a36e1ffffa1b7e6f83091376eb929fcfa53e6b18"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/native03/job.json",
+      "bytes": 7526,
+      "sha256": "34a42d1c73385a031df8cbaf9a0c3d42092dec39596f410ee6056eb009e3901d"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/native03/launch.json",
+      "bytes": 1423,
+      "sha256": "9e7a40984ddf5654d323600cc39b6946187802de1d92853149c4f21d87eaa67c"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/native03/queue.stderr.log",
+      "bytes": 79,
+      "sha256": "717393dbe898b9ba020799fbfb0da9e07e2d03424f67a9d697bbae1fef8b7a5e"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/native03/queue.stdout.log",
+      "bytes": 155,
+      "sha256": "57905f9804f8bbdfe4fbc98dd2557aa67e570664a66c288025552e860d89a170"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/observed_gpu_uuid01.json",
+      "bytes": 122,
+      "sha256": "9d34f027e86f5ee28616396966871067cbab2f784bbd1f1b857c263fd86dc067"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/post_native_readback_audit_CPU_v1.py",
+      "bytes": 24376,
+      "sha256": "65e26c3c2724b4e16f908de871328f65386d8fd9f3f2dd0e83383a2d8b3f3d37"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/post_native_readback_audit_CPU_v2.py",
+      "bytes": 30304,
+      "sha256": "20a2a604070b446c7845d480f8aabc2976b92138253d32a29a5a22191114f7a9"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/prepare01_launcher/launcher.json",
+      "bytes": 2048,
+      "sha256": "6c4eb1d56aacc5e2fbfc793d9459a6dd60cde0cba31b693f6917316604d113ec"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/prepare01_launcher/stdout.log",
+      "bytes": 508,
+      "sha256": "e1f0e22d08fd8282b8f697dc6548b33155c29d2ac28380fd346f983d3642911d"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/queue_blocked_status_2026-10-06.json",
+      "bytes": 3007,
+      "sha256": "a407759343c7e5b145bcaff66b829938d53c20007cd0c3915627d77bad5f7d9e"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/rejected-native-texture-draft/finding.json",
+      "bytes": 1315,
+      "sha256": "f59f7b5708198b5d779475ab0804c0a1a01f36e884fb7e45078a03a7d452c8df"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/rejected-native-texture-draft/scene_hilo_gpu_v1.py",
+      "bytes": 15017,
+      "sha256": "916899f4c3dc09e3b5f7aea17bafd26999b947436529c808b1e5aaa4af820e8b"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/rejected-native-texture-draft/scene_hilo_native_runtime_v1.py",
+      "bytes": 21526,
+      "sha256": "0bae5f3cf05e99cbc5370cbaa3249540408fafedcbe0f6b87cc6eea85a9a4b30"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/rejected-native-texture-draft/scene_hilo_transport_v1.glsl",
+      "bytes": 8891,
+      "sha256": "b842054a809be4bfe7e59e5944d70f6f72e5ac2d9dee9bfca52a7655d9642afe"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/research/blender_62c1db4208e8_integer_transport.json",
+      "bytes": 1246,
+      "sha256": "98a650438aa54ab8d68be61610c40dbef72a1e87d71affe5749644a298956d79"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/research/blender_62c1db4208e8_shader_info.json",
+      "bytes": 508,
+      "sha256": "7f19c2caa2b36b04f8412acf57e756ac9d501dfd8e309609023b438bca7b16f4"
+    },
+    {
+      "path": "Docs/validation/scene-hilo-native-2026-10-06/research/blender_62c1db4208e8_sources.json",
+      "bytes": 1557,
+      "sha256": "abf701080436b1264287e619ced05574104852c47515e1c8554c7836357675a1"
+    }
+  ],
+  "file_count": 51,
+  "total_bytes": 2412248,
+  "scope": "No native numerical result, GPU compilation claim, phase proof, full tracer integration, external replication or physical claim.",
+  "prior_checkpoints_immutable": true
+}

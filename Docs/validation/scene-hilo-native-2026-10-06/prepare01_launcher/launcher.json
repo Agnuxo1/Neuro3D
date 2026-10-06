@@ -1,0 +1,68 @@
+{
+  "command": [
+    "D:\\TOOLS\\Blender\\blender-4.5.14-windows-x64\\blender.exe",
+    "--background",
+    "--factory-startup",
+    "--disable-autoexec",
+    "--threads",
+    "1",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\tests\\scene_hilo_prepare_inputs_v1.py",
+    "--",
+    "--frozen-evidence",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\exp005_chain_native_20260930_0315",
+    "--out",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\inputs01"
+  ],
+  "status": "PASS",
+  "ram_floor_bytes": 4294967296,
+  "cpu_process_budget_bytes": 2147483648,
+  "ram_available_before_bytes": 10371178496,
+  "timeout_seconds": 120.0,
+  "threads": 1,
+  "affinity_mask": 1,
+  "gpu_supervisor": false,
+  "telemetry": [
+    {
+      "seconds": 0.011979200004134327,
+      "ram_available_bytes": 10366095360,
+      "process_peak_working_set_bytes": 1568768,
+      "process_peak_commit_bytes": 15269888
+    },
+    {
+      "seconds": 1.013057000003755,
+      "ram_available_bytes": 10388713472,
+      "process_peak_working_set_bytes": 1568768,
+      "process_peak_commit_bytes": 15269888
+    },
+    {
+      "seconds": 2.013740800030064,
+      "ram_available_bytes": 10343100416,
+      "process_peak_working_set_bytes": 1568768,
+      "process_peak_commit_bytes": 15269888
+    },
+    {
+      "seconds": 3.0150310000171885,
+      "ram_available_bytes": 10388307968,
+      "process_peak_working_set_bytes": 1568768,
+      "process_peak_commit_bytes": 15269888
+    },
+    {
+      "seconds": 4.016407200018875,
+      "ram_available_bytes": 10250760192,
+      "process_peak_working_set_bytes": 135221248,
+      "process_peak_commit_bytes": 150618112
+    },
+    {
+      "seconds": 5.017172200023197,
+      "ram_available_bytes": 10245660672,
+      "process_peak_working_set_bytes": 151105536,
+      "process_peak_commit_bytes": 174149632
+    }
+  ],
+  "pid": 45944,
+  "exit_code": 0,
+  "elapsed_seconds": 6.018112800025847
+}

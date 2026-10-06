@@ -1,0 +1,25 @@
+{
+  "retrieved_at_utc": "2026-10-06T22:29:33.290720+00:00",
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/62c1db4208e8/source/blender/python/gpu/gpu_py_texture.cc",
+      "retrieved_ref": "62c1db4208e8",
+      "filename": "gpu_py_texture.cc",
+      "bytes": 23419,
+      "sha256": "2291243286b6b386e3aaad7984a1aa9b5a91c52e1516aeb8fae7a1d97532cf81"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/62c1db4208e8/source/blender/python/gpu/gpu_py_uniformbuffer.cc",
+      "retrieved_ref": "62c1db4208e8",
+      "filename": "gpu_py_uniformbuffer.cc",
+      "bytes": 6574,
+      "sha256": "933575ea46765869a9f119c8b69b2dd89d7429aa9a4693d281f53fa1c4dad2b7"
+    }
+  ],
+  "findings": [
+    "GPUUniformBuf uses PyObject_GetBuffer(PyBUF_SIMPLE) and passes bytes directly to GPU_uniformbuf_create_ex; length must be a multiple of 16.",
+    "GPUTexture constructor rejects data buffers except FLOAT.",
+    "GPUTexture.read selects GPU_DATA_UINT explicitly for GPU_R32UI; GPU_RGBA32UI falls through to FLOAT.",
+    "GPUTexture.clear UINT uses PyLong conversion to a 32-bit int union; positive poison 0x5A5A5A5A avoids signed overflow, with one component for R32UI."
+  ]
+}

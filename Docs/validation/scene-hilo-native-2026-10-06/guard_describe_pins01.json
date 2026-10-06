@@ -1,0 +1,17 @@
+{
+  "c:\\python313\\lib\\site-packages\\psutil\\__init__.py": "7538e99b4bf449ad5133381926d82752fe81713c5d3f0c401802ca8bb42e2b45",
+  "c:\\python313\\lib\\site-packages\\psutil\\_common.py": "c4ffbe20aa863ce9cc6a017880811a004eca7524ba43050d6490dc000cd08fb4",
+  "c:\\python313\\lib\\site-packages\\psutil\\_compat.py": "68cd9df5240457f46d930bdfa7e353bf25d808e454351ced94fb5e34af7291cb",
+  "c:\\python313\\lib\\site-packages\\psutil\\_psutil_windows.pyd": "dd0ccdeeca681645025ca0f562ea45b5b17a1ebfcf1688cd0647a950a2992e2f",
+  "c:\\python313\\lib\\site-packages\\psutil\\_pswindows.py": "5313532b9bb767e31e0583f04070a3ab1331205f5e5f8f4362ed0ff44ece296b",
+  "c:\\python313\\python.exe": "d932e5e2f324d57f392e8fd063dcf6d0185be8a664c57c6d24e7762ed02c28ca",
+  "c:\\python313\\python313.dll": "41ec4fc4e5bc8b207258590238f7f050b13fdfee84c4a7b1ecff6e945d031a10",
+  "c:\\python313\\vcruntime140.dll": "052ad6a20d375957e82aa6a3c441ea548d89be0981516ca7eb306e063d5027f4",
+  "c:\\python313\\vcruntime140_1.dll": "6a99bc0128e0c7d6cbbf615fcc26909565e17d4ca3451b97f8987f9c6acbc6c8",
+  "c:\\windows\\system32\\kernel32.dll": "4636f65d449b1353100578c6cb139933cf2b134f5e246119d18968873a058bed",
+  "c:\\windows\\system32\\nvidia-smi.exe": "f874229e4df6313f39b4af658add6d2b74682f2a44b5957aa6104d19a8593ec6",
+  "c:\\windows\\system32\\nvml.dll": "4b6dea5255f5077f2cedf111e6d4737093b842b5b6bb79b8ab6a23ae713b1136",
+  "d:\\projects\\.cognition\\gpu_queue\\gpuq.py": "6d687c7c3bb09c0aad8b9762377817aa4b489e57a1efdc4d397aaf2656d20c5d",
+  "d:\\projects\\neuro3d-integration-20261006\\blender\\benchmarks\\capacity_audit\\scene_hilo_gpu_guard_v1.py": "2675a764230ec2bf9e554dde24acb81bd12a9bb0d156b7978129087c6c6de546",
+  "d:\\tools\\blender\\blender-4.5.14-windows-x64\\blender.exe": "57fa1d294ea76448c3bec84ca758caf4629611330abba7dcf55bb0c56a0a15ab"
+}
