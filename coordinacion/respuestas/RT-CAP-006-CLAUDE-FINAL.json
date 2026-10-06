@@ -1,0 +1,108 @@
+{
+ "task_id": "RT-CAP-006",
+ "status": "COMPLETE_SUCCESS",
+ "timestamp_utc": "2026-10-01T05:47:28+00:00",
+ "result": {
+  "success": true,
+  "guard_rc": 0,
+  "envelope_status": "OK",
+  "child_exit": 0,
+  "child_pid": 37100,
+  "own_child_dead_verified": true,
+  "child_terminated_verified": true,
+  "checker_v2_pass": true,
+  "id_bad": 0,
+  "z_bad": 0,
+  "pos_bad": 0,
+  "nonfinite": 0,
+  "exr_present": {
+   "tid": true,
+   "position": true,
+   "depth": true
+  },
+  "exr_sha256": {
+   "tid": "c060712ec03eb9cf0eb8bf5c572fc1422295dc80f31a05c4b47b4ef5ce204671",
+   "position": "01cdbd0967129b97ff8f42059256972cdf1b209557652e6f51518b8f9b185a59",
+   "depth": "d3e55c02fae431f4fe0fe37a3357eaca05f63164ae1c06991192537b10035152"
+  },
+  "start_utc": "2026-10-01T05:46:11+00:00",
+  "end_utc": "2026-10-01T05:46:31+00:00",
+  "seconds_child": 16.527941099993768
+ },
+ "reservation": {
+  "ticket": "neuro3d:rtcap006-pilot-5 (gpuq, exclusivo, --vram 2 --ram 2.3)",
+  "gpuq_turn_start_local": "2026-10-01T07:46:11 (05:46:11 UTC)",
+  "gpuq_end_local": "2026-10-01T07:46:31 (rc=0)",
+  "queue_wait": "desde 2026-09-30T23:36:30 local; detras de filament:cv0_base y FIL-011c; sin tocar tickets ajenos"
+ },
+ "telemetry": {
+  "preflight": {
+   "ram_free_gib": 8.25115966796875,
+   "vram_used_gib": 0.9228515625,
+   "vram_total_gib": 24.0,
+   "temp_c": 32.0
+  },
+  "postflight": {
+   "ram_free_gib": 8.153182983398438,
+   "vram_used_gib": 0.919921875,
+   "vram_total_gib": 24.0,
+   "temp_c": 36.0
+  },
+  "blocked_reasons": []
+ },
+ "override_disclosed": {
+  "ram_floor_GiB": 1.5,
+  "ram_budget_GiB": 0.8,
+  "original_floor_GiB": 4.0,
+  "original_budget_GiB": 2.0,
+  "authority": "Fran, respuesta explicita Si bajar a 1,5 GiB a la pregunta sobre el piso de RAM, 30/09 ~21:15 UTC (antes: permiso general de usar la GPU libre)"
+ },
+ "override_note": "el piso de RAM bajado a 1,5 GiB y presupuesto 0,8 GiB estuvo autorizado expresamente por Fran, pero NO hizo falta: al arrancar habia 8,25 GiB libres (por encima del piso original de 4 GiB tras el presupuesto original de 2 GiB); el resultado no depende del override",
+ "backend_reported": {
+  "blender": "4.5.14 LTS",
+  "device_inventory": {
+   "compute_device_type": "OPTIX",
+   "scene_device": "GPU",
+   "devices": [
+    {
+     "name": "NVIDIA GeForce RTX 3090",
+     "type": "CUDA",
+     "use": false
+    },
+    {
+     "name": "Intel Core i9-7900X CPU @ 3.30GHz",
+     "type": "CPU",
+     "use": false
+    },
+    {
+     "name": "NVIDIA GeForce RTX 3090",
+     "type": "OPTIX",
+     "use": true
+    }
+   ]
+  },
+  "rt_hardware_evidence": "NO certificado: inventario OptiX (RTX 3090, OPTIX use=True), sin contador de RT cores"
+ },
+ "scope": "diagnostico de capacidad C1/C2 en GPU OptiX T32 8x8 1 spp con guard v4, checker v2 (finitud) y salida no cero ante fallo: ID por cara, Z y Position leidos de EXR float32; C3 sigue BLOCKED; no speedup, no igualdad de trabajo, no RT coherente",
+ "previous_failures_retained": [
+  "attempt1_blocked/ (guard fail-closed por RAM)",
+  "capturas 002/003 provisionales y EXR originales intactos",
+  "pilot006b_job_RETIRADO (variante retirada tras RT-CAP-007, restaurada con la decision explicita de Fran)"
+ ],
+ "artifact_sha256": {
+  "pilot006_verdict.json": "dbf3b4c6a6bb70a8fba7263c7994838072559f25eba1efdf8e99b07788429765",
+  "pilot006_envelope.json": "071763618ccef3780100490f2283643c9d89da1d020cbf5f2acb9327ace4aa8c",
+  "pilot006_blender.log": "ba189c1d8a42eb734ff5fa84a38b38dc3d800e9b51dacfc07b7a476bcca94384",
+  "pilot006b_job.py": "e49f441e385e616104960d4ba50b88453a34a83684474e37421ca3f48dd05ed2",
+  "pilot006_contract.json": "bcc04e6bf7c7df5f636e7bd14320a249e8f318d77d85b87f2ceb998d6a4dc672",
+  "blender_capture_v2.py": "f4f8ade9f5985564be0eb7f0b607f8ff74d024e074bf4d03d76f69c519587530",
+  "rtcap_v2.py": "e5fee14508ae3ca4e11b6483788544e5cfcf1ad3d2a26d60464ba6607c4c48a4",
+  "guard_v4.py": "cf097276e040230d4d470e4648098b507aa4bc5f03b70c0a599d5ff2c591d820",
+  "manifest_T32_pilot006.json": "81b852f92a3ea6b6922fb1885474ccc39324f85c52eefe7390dac4d6967ccb07",
+  "out_pilot006_gpu/capture_v2_T32_gpu.json": "55a06bf6a9cfb6e64b3427172b24a957fb470ed09dc40b3406f52bef818bd7de",
+  "out_pilot006_gpu/tid_0001.exr": "c060712ec03eb9cf0eb8bf5c572fc1422295dc80f31a05c4b47b4ef5ce204671",
+  "out_pilot006_gpu/position_0001.exr": "01cdbd0967129b97ff8f42059256972cdf1b209557652e6f51518b8f9b185a59",
+  "out_pilot006_gpu/depth_0001.exr": "d3e55c02fae431f4fe0fe37a3357eaca05f63164ae1c06991192537b10035152"
+ },
+ "no_jev_aval": false
+}

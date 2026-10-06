@@ -1,0 +1,34 @@
+{
+ "task_id": "RT-CAP-005",
+ "status": "variant_v4_delivered_CPU_tests_only_NO_blender_no_gpu",
+ "timestamp_utc": "2026-09-30T12:07:32+00:00",
+ "input_sha256": {
+  "coordinacion/tareas/RT-CAP-005-CLAUDE.md": "6ea6175332c1a9fb0dd713255eec9a49fb60fc581bce1d024e05faf76659684b"
+ },
+ "ack": "Acuse RT-CAP-005. Defecto correcto: en v3 el return dentro del try se evaluaba antes del finally y los errores de open/json.dump se capturaban solo con print; un hijo OK con envelope imposible de escribir devolvia 0 sin envelope. Tambien recibido el acuse de HISTORY (V2 propia de Codex); la critica de arista/vertice V2 queda para DESPUES de contrastar 005.",
+ "new_artifacts_sha256": {
+  "guard_v4.py": "cf097276e040230d4d470e4648098b507aa4bc5f03b70c0a599d5ff2c591d820",
+  "test_v4.py": "108cb8ced78c131ba9593a19bad9fede033d6119688a094b3fffcd9ca8e71343",
+  "test_v4_inherited.py": "955d1501eb96049623a793b6c3347a26137b3dffe2ca7c66b72512fb170dcc6b"
+ },
+ "preserved_sha256": {
+  "guard_v2.py": "1786cf75803e22bf11306f6b468851f7705f2c3cdee5bc84e4e8304c1276f8b0",
+  "guard_v3.py": "82e9ea1b33c7a48d90bb83faa109eb2af30cf441e08a6cdd8651655a94d1a743",
+  "test_v2.py": "b67eeb77b8ebf0c9d5e2401016fc0df6b542926745f7a7957702f1b9150d1154",
+  "test_v3.py": "c26b22541ab818fa0179e5bb2f389cf332adb785eef593819d20a7b4df572fe9",
+  "blender_capture_v2.py": "f4f8ade9f5985564be0eb7f0b607f8ff74d024e074bf4d03d76f69c519587530",
+  "rtcap_v2.py": "e5fee14508ae3ca4e11b6483788544e5cfcf1ad3d2a26d60464ba6607c4c48a4"
+ },
+ "changes": [
+  "run() = finalizacion UNICA: primero termina el nucleo (_run_core, con su cleanup del hijo propio) y solo despues se escribe y VERIFICA el envelope; el codigo de retorno se decide aqui, ya sin returns pendientes antes del cierre",
+  "sonda previa: la ruta del envelope debe ser escribible (directorio existente y no directorio) o BLOQUEA antes de lanzar el hijo (exit 3)",
+  "escritura atomica (tmp + fsync + os.replace) y RELECTURA con comprobacion de estado; si falla: status CLOSE_FAILED (o el estado previo si ya era fallo), exit != 0 (7), mensaje en stderr y envelope de reserva en el directorio temporal (rtcap_envelope_fallback_<pid>.json)",
+  "sin cambios en el bucle/monotonico/cleanup de v3"
+ ],
+ "tests": "test_v4.py 8 tests PASS (6,1 s): control valido con envelope presente y sin .tmp; directorio inexistente y ruta que es directorio bloquean antes de lanzar (marcador no creado); directorio del envelope borrado DESPUES de un hijo exitoso = exit 7 sin envelope y sin OK; fallo del escritor simulado = exit 7 con envelope de reserva CLOSE_FAILED; relectura truncada detectada = 7; hijo fallido conserva su codigo 4 y envelope; hijo con exit 2 y envelope imposible sigue != 0. test_v4_inherited.py: los 12 tests de v3 pasan contra guard_v4 (11,7 s). Los 23 de v2 siguen PASS. Todo con -W error::ResourceWarning.",
+ "not_done": [
+  "sin Blender ni GPU; C3 sigue BLOCKED; no hay fallo de disco real, solo directorio borrado/escritor simulado"
+ ],
+ "next": "tras vuestro contraste y preflight+gpuq nuevos, UN piloto acotado (propuesta: T32, CPU-device y luego GPU, con guard_v4, manifest y deadline nuevos); sin autorizacion automatica.",
+ "no_jev_aval": true
+}

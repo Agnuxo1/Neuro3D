@@ -1,0 +1,236 @@
+{
+ "task_id": "RT-CAP-002",
+ "status": "C1_C2_DEMOSTRADOS_T2_T32_CPU_Y_GPU_diagnostico_de_capacidad",
+ "timestamp_utc": "2026-09-30T10:57:04+00:00",
+ "input_sha256": {
+  "coordinacion/tareas/RT-CAP-002-CLAUDE.md": "59271290789e10a6d8d32e4342f6471781cfdb5d631c3b6fb5023750ee30ecea"
+ },
+ "artifacts": {
+  "rtcap.py": "D:/PROJECTS/.cognition/neuro3d/rt_cap002/rtcap.py",
+  "test_rtcap.py": "D:/PROJECTS/.cognition/neuro3d/rt_cap002/test_rtcap.py",
+  "blender_capture.py": "D:/PROJECTS/.cognition/neuro3d/rt_cap002/blender_capture.py",
+  "guard.py": "D:/PROJECTS/.cognition/neuro3d/rt_cap002/guard.py",
+  "manifest_T2.json": "D:/PROJECTS/.cognition/neuro3d/rt_cap002/manifest_T2.json",
+  "manifest_T32.json": "D:/PROJECTS/.cognition/neuro3d/rt_cap002/manifest_T32.json",
+  "guard_selftest.json": "D:/PROJECTS/.cognition/neuro3d/rt_cap002/guard_selftest.json",
+  "guard_block_test.json": "D:/PROJECTS/.cognition/neuro3d/rt_cap002/guard_block_test.json"
+ },
+ "artifact_sha256": {
+  "rtcap.py": "86479f750963e2201f3283808eab25535192274ad27769c899e246bf25c26145",
+  "test_rtcap.py": "d1039895bc80e29a9dd2531353d3ed0bb9e641ce49c6510a983cd99e2fcf9562",
+  "blender_capture.py": "39e4bf1792ef53c43687e26f236e6959a9fd3750232710a6577da1a85efbb6e3",
+  "guard.py": "b0245f0b274d91e4f302adb8dfde3bab01f36cad00f9a74c05776795a0c1bcf6",
+  "manifest_T2.json": "5bdff7c492686ef8d0aef9fe16f36a74cb4a6216fcfb9d8fe50405fdf3ef09b6",
+  "manifest_T32.json": "722751c0793a376c3be8fd58bea37132a12ea1c0879d671128cd74bfe2271a56"
+ },
+ "commands": [
+  "cd D:/PROJECTS/.cognition/neuro3d/rt_cap002",
+  "python -B -m unittest -v test_rtcap",
+  "python guard.py --ram-gib 1.5 --vram-gib 1 --timeout 120 --envelope guard_selftest.json -- python -c \"print(1)\"",
+  "python guard.py --ram-gib 99 ... (bloqueo esperado)"
+ ],
+ "tests": "5 tests PASS (0,19 s, CPU): bits float32 exactos, referencia racional (Fraction) igual al manifiesto y margenes, IDs 0..31 unicos y 32 miss, checker acepta captura perfecta y rechaza ID intercambiado, t fuera de umbral, miss con ID e impacto fuera del triangulo, hash de manifiesto cambia con permutacion",
+ "contract_frozen": {
+  "grid": "8x8, fila 0 abajo, 1 spp, denoiser off, filtro BOX 0,01 px, camara ortografica (0.5,0.5,2) mirando -z, ortho_scale 1",
+  "fixtures": "T2 (IDs 0,1) y T32 (IDs 0..31) en pixeles (r+c) par; el resto miss explicito",
+  "geometry": "triangulos casi equilateros, circunradio 0,06 BU, plano z=(k+1)/32 perpendicular a la camara; vertices float32 exactos (bits hex) en el manifiesto; margen centro-borde >= 0,24 px (verificado racionalmente: min 0,0299+ BU) frente a jitter <= 0,005 px",
+  "passes": "ID = atributo de vertice tid=id+1 -> AOV (0 = miss); Position y Z (Depth) por File Output del compositor a EXR float32 sin compresion, Non-Color; se guardan los EXR completos con SHA, layout, dtype y valores",
+  "thresholds": "ID exacto (|aov-(id+1)|<=1e-4, miss <=> 0); |Z-(2-z_k)|<=1e-6 BU; |Pz-z_k|<=1e-6 BU; P.xy dentro de 0,03 BU del centro (diagnostico: NO prueba rayo previo); valores Position/Z en miss solo se registran",
+  "not_used": "ObjectIndex, imagen de cobertura o color de shader como t o ID",
+  "C3": "BLOCKED: Cycles no expone rayos previos; el diseno no depende de centros de pixel (margen y planos perpendiculares); no se producen rayos post hoc para el bruta"
+ },
+ "guard": {
+  "policy": "RAM libre tras presupuesto >= 4 GiB, VRAM usada+presupuesto <= 18 GiB, temp <= 80 C, timeout <= 120 s, telemetria rota bloquea; envelope con exit/estado/preflight/postflight",
+  "evidence": [
+   "guard_selftest.json (OK)",
+   "guard_block_test.json (BLOCKED por RAM, comando no ejecutado)"
+  ],
+  "note": "guard propio; no modifico guarded_job/resource_policy de Codex ni los he revisado a fondo"
+ },
+ "plan": [
+  "1) Codex contrasta contrato/codigo (no bloqueante para diagnostico CPU-device).",
+  "2) captura con dispositivo CPU de Cycles (sin GPU) T2 y T32 via guard para probar C1/C2: python guard.py ... -- blender -b ... blender_capture.py -- manifest OUT cpu",
+  "3) solo con C1/C2 demostrados en CPU y visto vuestro contraste: captura GPU por gpuq exclusivo con el mismo guard"
+ ],
+ "limitations": [
+  "nada ejecutado en Blender todavia: C1 (AOV desde atributo de vertice) y C2 (File Output EXR y su lectura) son hipotesis de diseno",
+  "sin equivalencia, igualdad de trabajo ni velocidad",
+  "P.xy no es rayo previo"
+ ],
+ "no_jev_aval": true,
+ "timestamp_utc_results": "2026-09-30T11:09:49+00:00",
+ "code_change_after_contract": "blender_capture.py: unico cambio tras publicar el contrato = os.path.abspath(OUT). El primer intento CPU T2 fallo porque File Output no escribio con ruta relativa (FileNotFoundError); fallo retenido en esta nota, salidas borradas y repetido.",
+ "results": {
+  "T2_cpu": {
+   "pass": true,
+   "max_abs_id_dev": 0,
+   "max_abs_z_err_BU": 0,
+   "max_abs_position_z_err_BU": 0,
+   "max_P_xy_offset_from_pixel_centre_BU": 8.648533314435455e-05,
+   "max_P_xy_offset_px": 0.0006918826651548364,
+   "n_hit": 2,
+   "n_miss_observed": 62,
+   "miss_z": 10000000000.0,
+   "miss_position": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "files_sha256": {
+    "tid": "f428d83edfc8b7d7f1c179ff6174ce80b7079568332150ec4d7d3e5dc355e396",
+    "position": "fa703f846ea97b03dde73d7954bd6ffc247c6be57a7d39d764bdeba1d5e7d340",
+    "depth": "68a8a7325a5d1b8b2a6c59bd9126bc14609eec8e6978fa987f10860c2b9fcca1"
+   },
+   "capture_json_sha256": "710515c41e30d8dc460ccb92f44f2469ee20eca7e46e68709bf13bd4f44ae9fc",
+   "envelope": {
+    "status": "OK",
+    "exit": 0,
+    "seconds": 1.0364749431610107,
+    "preflight": {
+     "ram_free_gib": 6.198631286621094,
+     "vram_used_gib": 0.7548828125,
+     "vram_total_gib": 24.0,
+     "temp_c": 29.0
+    },
+    "postflight": {
+     "ram_free_gib": 6.224296569824219,
+     "vram_used_gib": 0.7548828125,
+     "vram_total_gib": 24.0,
+     "temp_c": 29.0
+    },
+    "blocked_reasons": []
+   },
+   "blender": "4.5.14 LTS"
+  },
+  "T32_cpu": {
+   "pass": true,
+   "max_abs_id_dev": 1.9073486328125e-06,
+   "max_abs_z_err_BU": 0,
+   "max_abs_position_z_err_BU": 0,
+   "max_P_xy_offset_from_pixel_centre_BU": 8.648533314435455e-05,
+   "max_P_xy_offset_px": 0.0006918826651548364,
+   "n_hit": 32,
+   "n_miss_observed": 32,
+   "miss_z": 10000000000.0,
+   "miss_position": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "files_sha256": {
+    "tid": "61ae53ac1171a5b49bc15d981d663bdfebe1eeeb1019be6230ad9a4c0dc127c7",
+    "position": "09b08c3fcd803e0bdcaa6e0aa65685efc3d85d2764a8a67e56f158d7c75ea890",
+    "depth": "dccf075885c7b9a8a0aaaedc47134c8433b988fdcf6f6b695f314b77630711b3"
+   },
+   "capture_json_sha256": "7a20b3b9372b68a080345f88b63c79ee0f0907aa707e08b3e81a02448080f797",
+   "envelope": {
+    "status": "OK",
+    "exit": 0,
+    "seconds": 1.0095188617706299,
+    "preflight": {
+     "ram_free_gib": 6.2199554443359375,
+     "vram_used_gib": 0.7548828125,
+     "vram_total_gib": 24.0,
+     "temp_c": 29.0
+    },
+    "postflight": {
+     "ram_free_gib": 6.250946044921875,
+     "vram_used_gib": 0.7548828125,
+     "vram_total_gib": 24.0,
+     "temp_c": 29.0
+    },
+    "blocked_reasons": []
+   },
+   "blender": "4.5.14 LTS"
+  },
+  "T2_gpu": {
+   "pass": true,
+   "max_abs_id_dev": 0,
+   "max_abs_z_err_BU": 0,
+   "max_abs_position_z_err_BU": 0,
+   "max_P_xy_offset_from_pixel_centre_BU": 8.648533314435455e-05,
+   "max_P_xy_offset_px": 0.0006918826651548364,
+   "n_hit": 2,
+   "n_miss_observed": 62,
+   "miss_z": 10000000000.0,
+   "miss_position": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "files_sha256": {
+    "tid": "4b769bfefaff018c1aace526c3f03353fc1a914b1655c20f01f29beb85f063ce",
+    "position": "08a2cb21940c7946d18690adf36c456e629e2d38bb4156eed7ae93b6eb3105e1",
+    "depth": "178d1c42910c9a14b6dbeb26e7ddd216948b01bf01472a78005a52ed82e3dc84"
+   },
+   "capture_json_sha256": "9e065c32f59d59d14f75f23ae2edecdbcd95e0e6d58b361d4d491e9c25af30db",
+   "envelope": {
+    "status": "OK",
+    "exit": 0,
+    "seconds": 2.0235300064086914,
+    "preflight": {
+     "ram_free_gib": 6.374317169189453,
+     "vram_used_gib": 0.7548828125,
+     "vram_total_gib": 24.0,
+     "temp_c": 29.0
+    },
+    "postflight": {
+     "ram_free_gib": 6.38092041015625,
+     "vram_used_gib": 0.7548828125,
+     "vram_total_gib": 24.0,
+     "temp_c": 33.0
+    },
+    "blocked_reasons": []
+   },
+   "blender": "4.5.14 LTS"
+  },
+  "T32_gpu": {
+   "pass": true,
+   "max_abs_id_dev": 1.9073486328125e-06,
+   "max_abs_z_err_BU": 0,
+   "max_abs_position_z_err_BU": 0,
+   "max_P_xy_offset_from_pixel_centre_BU": 8.65064091354095e-05,
+   "max_P_xy_offset_px": 0.000692051273083276,
+   "n_hit": 32,
+   "n_miss_observed": 32,
+   "miss_z": 10000000000.0,
+   "miss_position": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "files_sha256": {
+    "tid": "b108afeedc4937d2cf5f9e1554628e5c1cc89b267ba055c6716a2ee0bbfa639d",
+    "position": "ac083beb4e76d62ef7e24e9183a7f093b21861cbfa5d98852db8294536d4da1e",
+    "depth": "a4706a03346c5d6d6c48a5f63eb523dd4d6b267cbd4d12940474684817bbe599"
+   },
+   "capture_json_sha256": "6c52b79d1ca2092b977751b530d10345d8910854b29f615805ab99c26fc0a809",
+   "envelope": {
+    "status": "OK",
+    "exit": 0,
+    "seconds": 1.5639424324035645,
+    "preflight": {
+     "ram_free_gib": 6.383033752441406,
+     "vram_used_gib": 0.7548828125,
+     "vram_total_gib": 24.0,
+     "temp_c": 29.0
+    },
+    "postflight": {
+     "ram_free_gib": 6.422473907470703,
+     "vram_used_gib": 0.7548828125,
+     "vram_total_gib": 24.0,
+     "temp_c": 31.0
+    },
+    "blocked_reasons": []
+   },
+   "blender": "4.5.14 LTS"
+  }
+ },
+ "reading": [
+  "C1: ID por cara por AOV desde atributo de vertice (id+1) recuperado exacto en T2 y T32, CPU y GPU (desviacion max 1.91e-06), miss explicito = 0 en todos los pixeles miss.",
+  "C2: Position y Z leidos desde EXR float32 lineal por File Output + images.load Non-Color: error de Z 0 y de Position.z 0.0e+00 BU (umbral 1e-6).",
+  "Miss: Z=1e10 y Position=(0,0,0) (registrados, sin umbral).",
+  "P.xy del hit queda a 6.92e-04 px del centro (max), coherente con jitter minimo pero NO prueba rayo previo; C3 sigue BLOCKED.",
+  "Alcance: capacidad de readback con planos perpendiculares y 64 pixeles; sin nearest-hit entre capas, rasancia ni bordes; sin equivalencia con bruta ni velocidad. Los envelopes guardan RAM/VRAM/temperatura antes y despues."
+ ]
+}

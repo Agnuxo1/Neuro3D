@@ -1,0 +1,121 @@
+{
+ "task_id": "P0-FUSION-POLICY-006-CLAUDE",
+ "status": "mandatory_checker_delivered_CPU_control_PASS_CUDA_NOT_RUN",
+ "timestamp_utc": "2026-09-30T19:07:10+00:00",
+ "ack": {
+  "P0-FUSION-POLICY-005-CODEX": {
+   "path": "coordinacion/respuestas/P0-FUSION-POLICY-005-CODEX.json",
+   "sha256": "c050427e3d24b5c36bdfa1ef70f5e9a302faa491c44812aa1c4a8f72a7fd5f13"
+  },
+  "task_input": {
+   "path": "coordinacion/tareas/P0-FUSION-POLICY-006-CLAUDE.md",
+   "sha256": "fd0d5e10a70865221f6c92bd6b8a95391db2cb478997a791a4e404c766c2e6a5"
+  },
+  "defect_accepted": "Correcto: en p03_harness_v2 los maximos iniciales eran 0 y los gates se calculaban sobre ellos, asi que grupos vacios con errores registrados daban todos los gates true (vacio). Mi ejecucion CPU retenida (104 escenas, 7,3e-14) si midio todos los grupos (errors=[] y 104 escenas), pero el gate no lo EXIGIA; eso es lo que se corrige. No se refuta ni se reescribe el resultado anterior: no contiene registros por escena y por tanto el checker nuevo no puede evaluarlo."
+ },
+ "delivered": {
+  "harness_v3": "p03_harness_v3.py registra cobertura MEDIDA (scene_results por escena, scene_indices por grupo, referencias Codex por puerto, errores) y NO decide gates",
+  "checker": "p03_checker.py, independiente del arnes (no lo importa), exit != 0 si falla cualquier comprobacion: errores vacios; cada escena del manifiesto medida exactamente una vez y cubierta por grupos; oraculo y referencia Codex presentes por escena y puerto; diferencias no vacias, finitas y <= umbral por puerto; valores efectivos de politica por escena; MZI de 6 configuraciones; conf1 (estados iguales y umbral); los 4 negativos por nombre; control estricto; gate global; SHA del manifiesto, politica y umbrales iguales a los del manifiesto",
+  "outer_contract": "el lanzador debe ejecutar el checker tras el arnes y tratar exit != 0 como fallo; imprimir gate_results ya no cuenta"
+ },
+ "artifacts_sha256": {
+  "p03_harness_v3.py": "5d9f13b81b17354395113d825bf66da2f561bfaf08dbe12c2ab724ccada0f62e",
+  "p03_checker.py": "f1f02626907d89d924f81fa91eb8ea3dfa8bc6c7bf12224e5c1d9fb4c3429bd5",
+  "p03_checker_tests.py": "e7d9f3a6f86b74bc3666cca94773f682d0e682ff7aa74c9871da93d8e19e233c",
+  "p03_checker_tests.json": "18ed53350ed277b3d04d828acad0eb09f31e3800596d555670e2048e7a347923",
+  "p03_v3_cpu.json": "2ddca92de5c1608930396112f4d74167ea9a943cdc0657e07daf3bd9ba985b87",
+  "p03_v3_cpu_verdict.json": "fc1a45770482ef0982105c1f9ef4528bedff8bcaee85d19f5f15141eeeb58b39",
+  "p03_manifest.json": "3343fa298cef2286e6643026a7e8b23ac4a6db011b443ffdf8c9c625fa89fe5b"
+ },
+ "code_bound": {
+  "manifest_sha256": "3343fa298cef2286e6643026a7e8b23ac4a6db011b443ffdf8c9c625fa89fe5b",
+  "gpu_states_v2_sha256": "506b13c9c6bb442d16d9be07b8508a79b01ded9dd4c87c261ac1af83849b426e",
+  "policy": "auto_strict_per_scene",
+  "gates": {
+   "field_vs_oracle": 1e-10,
+   "conf1_vs_oracleB": 1e-09,
+   "global": 0.0001,
+   "strict_control": 1e-08
+  }
+ },
+ "tests": [
+  {
+   "case": "control valido (resultado CPU medido)",
+   "expected": "PASS",
+   "observed": "PASS",
+   "as_expected": true,
+   "first_failures": []
+  },
+  {
+   "case": "negativo 1: grupos vacios + error registrado (el gate antiguo daba todo true)",
+   "expected": "FAIL",
+   "observed": "FAIL",
+   "as_expected": true,
+   "first_failures": [
+    "lista de errores no vacia o ausente: [{'group': [3, 3, 1], 'error': \"TraceError('x')\"}]",
+    "escenas medidas (0) no coinciden una a una con las 104 del manifiesto",
+    "los grupos no cubren exactamente las escenas del manifiesto"
+   ]
+  },
+  {
+   "case": "negativo 2: una escena del manifiesto ausente",
+   "expected": "FAIL",
+   "observed": "FAIL",
+   "as_expected": true,
+   "first_failures": [
+    "escenas medidas (103) no coinciden una a una con las 104 del manifiesto",
+    "los grupos no cubren exactamente las escenas del manifiesto"
+   ]
+  },
+  {
+   "case": "negativo 3: referencia Codex ausente para un puerto",
+   "expected": "FAIL",
+   "observed": "FAIL",
+   "as_expected": true,
+   "first_failures": [
+    "escena 5: sin medicion u oraculo o referencia Codex ausente",
+    "escena 5: puertos sin referencia Codex ['P1']",
+    "escena 5: diferencia None ausente, no finita o > 1e-10"
+   ]
+  },
+  {
+   "case": "extra: control estricto 1e-8 superado (1,17e-8)",
+   "expected": "FAIL",
+   "observed": "FAIL",
+   "as_expected": true,
+   "first_failures": [
+    "control estricto 1e-8 (lambda 0,125) no evaluado o fuera de umbral"
+   ]
+  },
+  {
+   "case": "extra: negativos incompletos",
+   "expected": "FAIL",
+   "observed": "FAIL",
+   "as_expected": true,
+   "first_failures": [
+    "negativos incompletos o alguno no aborto (esperados: ['dos fuentes en el mismo estado', 'geometria ambigua', 'rayo perdido', 'terminal no colineal'])"
+   ]
+  }
+ ],
+ "control_result": {
+  "device": "cpu",
+  "verdict": "PASS",
+  "scenes_measured": 104,
+  "errors": 0,
+  "groups": 10,
+  "seconds": 1.283428430557251
+ },
+ "effective_policy_values": {
+  "where": "res.groups[].policy_per_scene.per_scene (lambda, quant, floor por escena) en p03_v3_cpu.json; 104 entradas exigidas por el checker"
+ },
+ "strict_control_status": {
+  "declared_before": "gate strict_control 1e-8 estaba declarado en el manifiesto pero no evaluado por v2",
+  "now": "lo exige y evalua el checker: MZI de Codex con MB desplazado 2^-31 BU y lambda 0,125 bajo la politica estricta debe dar <= 1e-8 frente al statefuse sin fusion (CPU: 1.42e-14), y la lambda 2^-17 debe ser RECHAZADA antes de fusionar (CPU: True)",
+  "gates_raised": false
+ },
+ "pending": [
+  "ejecucion CUDA (fase B) con guard/exclusividad tras cerrar RT-CAP-006",
+  "cotas angulares y de acumulacion de fusiones"
+ ],
+ "no_jev_aval": false
+}

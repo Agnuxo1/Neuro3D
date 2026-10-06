@@ -9,6 +9,12 @@
 ![Unreal Engine](https://img.shields.io/badge/Unreal%20Engine-5.6%20plugin%20preparado-6e4c9b)
 ![Licencia](https://img.shields.io/badge/licencia-MIT-2ea44f)
 
+## Estado consolidado
+
+La integración del 6 de octubre reúne los avances locales del motor y las
+correcciones públicas de Iris. Consulta el [estado técnico y sus límites](Docs/PROJECT_STATUS_2026-10-06.md)
+y el [recibo de consolidación](Docs/validation/consolidation-2026-10-06.json).
+
 ## Qué es
 
 Neuro3D explora una red neuronal digital donde posición, orientación y respuesta
@@ -125,16 +131,19 @@ credenciales— permanecen fuera del release mediante `.gitignore`.
 
 ## Estado de verificación
 
-| Compuerta | Estado |
+| Ruta | Estado y alcance |
 |---|---|
-| Oracle CPU y checksums | Validado |
-| Pruebas CPU y estáticas Blender | 28/28; incluye 10 del prototipo MZ, sin prueba Blender del MZ |
-| Circuito guardado/reabierto en Blender | Verificado en 4.5.14 LTS, background CPU |
-| Panel interactivo del addon | Pendiente de comprobación visual |
-| Contrato estático addon/shader | Verificado sin Blender |
-| Shader GPU Blender | No ejecutado por decisión de seguridad |
-| Paridad CPU/GPU Blender | Pendiente de autorización y GPU libre |
-| Compilación Unreal 5.6 | Pendiente de instalar/restaurar UE |
+| Oracle CPU y modelo determinista | Pruebas conservadas; 9 del modelo repetidas en la consolidación |
+| Iris híbrido | Informe conservado: 117/120 entrenamiento y 29/30 prueba; 4 gates CPU repetidos; blend pendiente de regenerar |
+| Pilotos OpenGL nativos | Evidencia local K3/K4 y nearest V2; alcance geométrico acotado |
+| Precisión hi/lo | Verificación CPU; nueva integración nativa pendiente |
+| RT coherente completo | Pendiente; piloto geométrico parcial conservado |
+| Unreal 5.6 | Compilación y paridad reales pendientes |
+| Hardware fotónico | Sin medición física establecida |
+
+Los informes y los límites de reproducción están enlazados en el
+[estado consolidado](Docs/PROJECT_STATUS_2026-10-06.md). Conservar un informe previo
+no significa haber repetido su experimento durante esta integración.
 
 ## Investigación y continuidad
 
