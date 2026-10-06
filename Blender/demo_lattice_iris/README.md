@@ -1,4 +1,4 @@
-# Neuro3D · optical lattice classifier (Iris), living in a Blender scene
+# Neuro3D Â· optical lattice classifier (Iris), living in a Blender scene
 
 ![setosa](renders/iris_setosa.jpg)
 
@@ -9,14 +9,14 @@ loss temperature; argmax inference does not use that temperature.
 
 | | |
 |---|---|
-| Network | 16 Mach–Zehnder cells (beam splitters, mirrors, one movable roof delay per cell) tiled on a 4 × 4 lattice, giving 8 optical modes |
+| Network | 16 Machâ€“Zehnder cells (beam splitters, mirrors, one movable roof delay per cell) tiled on a 4 Ã— 4 lattice, giving 8 optical modes |
 | Task | Iris flowers (3 species), 4 features encoded as light amplitudes, plus one constant reference beam (an optical bias) |
 | Decision | no trained read-out layer: the brightest of three class detectors wins (the detector intensities `abs(field)^2` and the argmax are computed in Blender's Python) |
 | Training | inside Blender, numpy + Adam on 18 parameters (16 mirror delays, reference amplitude, temperature), about 36 s |
-| Inference | `scene.ray_cast` from every source, splitting the ray tree at every beam splitter, then a coherent sum of `amp·e^{ikL}` at each detector |
+| Inference | `scene.ray_cast` from every source, splitting the ray tree at every beam splitter, then a coherent sum of `ampÂ·e^{ikL}` at each detector |
 | Hold-out accuracy (30 flowers) | **96.7 %** (train 97.5 %), measured by ray tracing the scene; the min/max scaling is fitted on the 120 training flowers only and stored with the weights |
-| Scene vs. training model | all 8 complex outputs within 7.4e-5; power balance within 5.8e-5; no escaped light; identical after adding the decoration and after save/reopen (difference 0) |
-| Cost | ≈ 56 000 ray casts and ≈ 2 s per flower on one CPU thread |
+| Scene vs. training model | all 8 complex outputs within 8.6e-5 across all 150 flowers; power balance within 6.4e-5; no escaped light; sample 71 complex fields unchanged after decoration and cold reopen |
+| Cost | â‰ˆ 56 000 ray casts and â‰ˆ 2 s per flower on one CPU thread |
 
 <p>
 <img src="renders/iris_versicolor.jpg" width="49%"> <img src="renders/iris_virginica.jpg" width="49%">
@@ -43,13 +43,13 @@ The viewport opens in the camera view in rendered mode and the network **runs li
 flower is ray-traced through the scene at that moment (about 2 s), the beams light up in
 order of optical path length as the light propagates, and then the class detectors glow and
 the prediction appears. The same *Play / Pause*, *Previous / Next* and *Build trained lattice*
-controls are in **3D View › Sidebar (N) › Neuro3D**. Interactive **Build trained lattice**
+controls are in **3D View â€º Sidebar (N) â€º Neuro3D**. Interactive **Build trained lattice**
 creates a separate scene and preserves the current scene and unsaved objects.
 
 Opening the `.blend` by itself does not run any code, because Blender does not auto-run scripts by
 default and this project does not ask you to enable that. The script is embedded as the text
-block `neuro3d_iris_demo.py`. To start the live demo from a fresh open, go to **Scripting ›
-Text › neuro3d_iris_demo.py › Run Script**, or use the command line above. New exports include their data as embedded text blocks. Older exports require the data files
+block `neuro3d_iris_demo.py`. To start the live demo from a fresh open, go to **Scripting â€º
+Text â€º neuro3d_iris_demo.py â€º Run Script**, or use the command line above. New exports include their data as embedded text blocks. Older exports require the data files
 next to the `.blend` or in its parent folder.
 
 Tested with Blender 4.5 LTS (EEVEE Next for the render, numpy bundled with Blender).
@@ -65,6 +65,34 @@ Move the `.blend` anywhere, open its embedded `neuro3d_iris_demo.py` in the Text
 Editor and run it: the panel, live tracing and rebuild use the embedded assets.
 Missing embedded assets fail explicitly. Older exports must be regenerated for
 this portability behavior; simply opening a file does not automatically run code.
+
+## Regenerated portable artifact (2026-10-06)
+
+The distributed blend now contains the current source, CSV and trained state.
+A separate Blender process verified all 150 flowers from a copy outside the
+repository, with external asset reads blocked: 117/120 training and 29/30 test.
+The [full report](portable_verification.json), [manifest](renders/portable_manifest.json)
+and [method and limits](../../Docs/IRIS_PORTABLE_VALIDATION_2026-10-06.md) retain the evidence.
+
+To export without training or rendering, run from this directory:
+
+~~~bash
+blender -b --factory-startup -t 1 --disable-autoexec --python-exit-code 1 --python export_portable_blender.py -- --output renders/neuro3d_iris_lattice.blend --manifest renders/portable_manifest.json
+~~~
+
+Copy only the blend and manifest outside the repository. Then run a fresh process:
+
+~~~bash
+blender -b --factory-startup -t 1 --disable-autoexec --python-exit-code 1 --python verify_portable_blender.py -- --blend /absolute/copied/scene.blend --manifest /absolute/copied/portable_manifest.json --report /absolute/copied/verification.json
+~~~
+
+The verifier executes the hash-checked embedded source, checks the panel's RNA
+registration and compares eight complex fields and powers against the analytical
+model. It includes missing embedded CSV/weights controls. Additional rejection
+and stale-report controls are in test_portable_failure_blender.py, using the
+same --blend/--manifest options plus --output-dir. Check the process exit code
+and final verification_passed flag together; RUNNING/FAIL is not a successful run.
+Interactive rebuilding with name collisions is a separate pending check.
 
 ## What is and is not claimed
 
