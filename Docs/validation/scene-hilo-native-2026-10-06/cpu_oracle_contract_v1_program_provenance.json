@@ -1,0 +1,56 @@
+{
+  "schema": "neuro3d.scene_hilo.cpu_oracle_program_provenance.v1",
+  "status": "RETAINED_FROM_PRIOR_TOOL_PAYLOAD",
+  "program_path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\cpu_oracle_contract_v1_program.py",
+  "program_sha256": "bc357f91edfc28d04ab4f02dcee358e72dd362237c9df58747545e43459f6334",
+  "program_utf8_bytes": 4953,
+  "program_content_origin": "Verbatim Python -c payload from the retained conversation tool call that ran as remote PID 2696. No test was reconstructed from the results, and no test was re-executed while retaining this file.",
+  "original_execution": {
+    "device_id": "d2b1e92c-cf7b-4823-b321-65424f03c807",
+    "python_path": "C:\\Python313\\python.exe",
+    "reported_process_id": 2696,
+    "receipt_path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\cpu_oracle_contract_v1.json",
+    "receipt_sha256": "9dd91ed8d24343b761bace631ce6bfe00df7d75b654938c785d95f2dfc0cdca4",
+    "receipt_created_at_utc": "2026-10-06T22:31:09.785065+00:00",
+    "source_sha256": {
+      "Blender\\shaders\\scene_hilo_transport_v1.glsl": "cd9eead03d96aca64ef5e6c5bce8b71a97f0f994a0656ceb9363a3894e634d31",
+      "Blender\\benchmarks\\capacity_audit\\scene_hilo_gpu_v1.py": "539179dfdd72f8cdd6c3f171526dbbf70c81bc9b7a568691c12c0071246bee7a",
+      "Blender\\tests\\scene_hilo_native_runtime_v1.py": "b940ed9877c3b622e6fa1df8cd94f7e625e4c8fbe8e7f2bcd662619ae4dbc137",
+      "Blender\\benchmarks\\capacity_audit\\scene_hilo_transport_v1.py": "4bd86b411208c8a676c8a2c97926ce001ac781568913d5312906c591e02ca5ad",
+      "Blender\\benchmarks\\capacity_audit\\oblique_exact_scalar_hilo32_CPU_v1.py": "775e48b3507aa5b86bd96818f50e208e92d72e03b99d8862f816247418867a97"
+    }
+  },
+  "current_repo_commit": "b305043016427d796aff4eb649e090961db026ff",
+  "reporting_only_update_receipt": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\cpu_oracle_contract_v1_reporting_update.json",
+  "reporting_only_update_sha256": "53a197601a7260a891a21eb2ba756b0905a34766cf612c7ca471a0d74c687333",
+  "source_repo_files_modified": false,
+  "tests_reexecuted": false,
+  "native_gpu_executed": false,
+  "replay_note": "The exact original program has a fixed receipt path and refuses an existing file. It is deliberately preserved unchanged. Any future repetition requires an isolated reproduction of its paths or a separately retained, reviewed copy changing only the output receipt destination; do not delete or overwrite the original evidence.",
+  "worker_hashed_local_closure": [
+    "Blender/tests/scene_hilo_native_runtime_v1.py",
+    "Blender/benchmarks/capacity_audit/scene_hilo_gpu_v1.py",
+    "Blender/shaders/scene_hilo_transport_v1.glsl",
+    "Blender/benchmarks/capacity_audit/scene_hilo_transport_v1.py",
+    "Blender/benchmarks/capacity_audit/oblique_exact_scalar_hilo32_CPU_v1.py",
+    "Blender/tests/exp005_scene_readback.py",
+    "Blender/tests/exp005_scene_properties.py",
+    "Blender/tests/exp005_blender_gpu.py"
+  ],
+  "local_transitive_imports": {
+    "transport_module": [
+      "Blender/benchmarks/capacity_audit/oblique_exact_scalar_hilo32_CPU_v1.py"
+    ],
+    "scene_readback_module": [
+      "Blender/tests/exp005_scene_properties.py"
+    ],
+    "blender_gpu_module_executed_entry": "schedule_exit only; imports local to its unused main() are not executed by this worker",
+    "other_executed_local_modules": []
+  },
+  "absent_namespace_initializers": [
+    "Blender/__init__.py",
+    "Blender/benchmarks/__init__.py",
+    "Blender/benchmarks/capacity_audit/__init__.py"
+  ],
+  "external_runtime_dependencies": "bpy and gpu from pinned Blender; Python standard library; Windows opengl32.dll and active NVIDIA driver. These are outside the local repository module closure."
+}

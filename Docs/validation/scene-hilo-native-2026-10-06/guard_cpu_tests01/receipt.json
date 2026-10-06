@@ -1,0 +1,77 @@
+{
+  "scope": "CPU-only new guard tests; no Blender/GPU/queue invocation",
+  "command": [
+    "C:\\Python313\\python.exe",
+    "-I",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "Blender/tests",
+    "-p",
+    "test_scene_hilo_gpu_guard_v1.py",
+    "-v"
+  ],
+  "pins": {
+    "D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\benchmarks\\capacity_audit\\scene_hilo_gpu_guard_v1.py": "bb9de0344423b2395d9179b61563650f7a11eeab194c7020b405882d90613133",
+    "D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\tests\\test_scene_hilo_gpu_guard_v1.py": "2814b56910675e414d584e0474787a5a835ae49cd9ebb6e3d214d79228c8277f"
+  },
+  "ram_before_bytes": 8933715968,
+  "budget_bytes": 402653184,
+  "timeout_seconds": 45,
+  "status": "FAIL",
+  "samples": [
+    {
+      "elapsed": 0.01821190002374351,
+      "ram_free_bytes": 8948723712,
+      "root_rss_bytes": 8028160
+    },
+    {
+      "elapsed": 0.1312480000196956,
+      "ram_free_bytes": 9956745216,
+      "root_rss_bytes": 19046400
+    },
+    {
+      "elapsed": 0.24157740001101047,
+      "ram_free_bytes": 10463006720,
+      "root_rss_bytes": 29773824
+    },
+    {
+      "elapsed": 0.3538422000128776,
+      "ram_free_bytes": 10459615232,
+      "root_rss_bytes": 28962816
+    },
+    {
+      "elapsed": 0.46448860003147274,
+      "ram_free_bytes": 10455945216,
+      "root_rss_bytes": 28991488
+    },
+    {
+      "elapsed": 0.5746384999947622,
+      "ram_free_bytes": 10459475968,
+      "root_rss_bytes": 28995584
+    },
+    {
+      "elapsed": 0.6877713000285439,
+      "ram_free_bytes": 10459447296,
+      "root_rss_bytes": 37511168
+    },
+    {
+      "elapsed": 0.8084021999966353,
+      "ram_free_bytes": 10452553728,
+      "root_rss_bytes": 30072832
+    },
+    {
+      "elapsed": 0.9275933000026271,
+      "ram_free_bytes": 10480275456,
+      "root_rss_bytes": 0
+    }
+  ],
+  "pid": 42008,
+  "created": 1791325740.9857328,
+  "exit_code": 1,
+  "elapsed_seconds": 0.9277127000386827,
+  "pins_unchanged": true,
+  "stdout_sha256": "ab93a4499f7172148f0291891909157e21a4ae92dafcbb65c3b2639621ddd9f9"
+}

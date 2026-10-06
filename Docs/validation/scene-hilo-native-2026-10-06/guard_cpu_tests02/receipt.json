@@ -1,0 +1,73 @@
+{
+  "scope": "CPU guard controls only; no GPU/Blender/nvidia-smi or queue mutation",
+  "command": [
+    "C:\\Python313\\python.exe",
+    "-I",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "Blender/tests",
+    "-p",
+    "test_scene_hilo_gpu_guard_v1.py",
+    "-v"
+  ],
+  "pins": {
+    "D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\benchmarks\\capacity_audit\\scene_hilo_gpu_guard_v1.py": "2675a764230ec2bf9e554dde24acb81bd12a9bb0d156b7978129087c6c6de546",
+    "D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\tests\\test_scene_hilo_gpu_guard_v1.py": "85efefc25b34018c78f4d722547ba1662f16b17c2cfd9235f955109fb1f9ef52"
+  },
+  "ram_before_bytes": 8986206208,
+  "budget_bytes": 402653184,
+  "timeout_seconds": 45,
+  "status": "PASS",
+  "samples": [
+    {
+      "elapsed": 0.007752500008791685,
+      "host_available": 8985776128,
+      "root_rss": 7974912
+    },
+    {
+      "elapsed": 0.11875429999781772,
+      "host_available": 8977485824,
+      "root_rss": 18448384
+    },
+    {
+      "elapsed": 0.22974899999098852,
+      "host_available": 8963440640,
+      "root_rss": 28520448
+    },
+    {
+      "elapsed": 0.3407319000107236,
+      "host_available": 8963829760,
+      "root_rss": 28794880
+    },
+    {
+      "elapsed": 0.4517278000130318,
+      "host_available": 8967819264,
+      "root_rss": 28721152
+    },
+    {
+      "elapsed": 0.5647301000426523,
+      "host_available": 8963321856,
+      "root_rss": 37728256
+    },
+    {
+      "elapsed": 0.6757295000134036,
+      "host_available": 8965980160,
+      "root_rss": 29700096
+    },
+    {
+      "elapsed": 0.7863391000428237,
+      "host_available": 8970776576,
+      "root_rss": 29712384
+    }
+  ],
+  "start_utc": "2026-10-06T22:33:37.497262+00:00",
+  "pid": 22696,
+  "create_time": 1791326017.4982715,
+  "exit_code": 0,
+  "elapsed_seconds": 0.9114326999988407,
+  "pins_unchanged": true,
+  "stdout_sha256": "96cac2be0808bc7f406f3174923ea9de0b95fdfea5f8442e92542d048cc5b7e8"
+}

@@ -1,0 +1,50 @@
+test_dependency_change_rejected_at_exit (test_scene_hilo_gpu_guard_v1.PureControls.test_dependency_change_rejected_at_exit) ... ok
+test_late_rc0_and_expired_deadline_are_rejected (test_scene_hilo_gpu_guard_v1.PureControls.test_late_rc0_and_expired_deadline_are_rejected) ... ok
+test_lease_loss_closes_own_job (test_scene_hilo_gpu_guard_v1.PureControls.test_lease_loss_closes_own_job) ... ok
+test_lease_parent_child_binding_and_loss (test_scene_hilo_gpu_guard_v1.PureControls.test_lease_parent_child_binding_and_loss) ... ok
+test_manifest_deadline_budgets_and_closed_schema (test_scene_hilo_gpu_guard_v1.PureControls.test_manifest_deadline_budgets_and_closed_schema) ... ok
+test_nonzero_exit_cleanup (test_scene_hilo_gpu_guard_v1.PureControls.test_nonzero_exit_cleanup) ... ok
+test_policy_boundaries_and_invalid_types (test_scene_hilo_gpu_guard_v1.PureControls.test_policy_boundaries_and_invalid_types) ... ok
+test_single_gpu_telemetry_parsing_rejects_unknown_and_multiple (test_scene_hilo_gpu_guard_v1.PureControls.test_single_gpu_telemetry_parsing_rejects_unknown_and_multiple) ... ok
+test_stale_receipt_and_raw_output_are_not_reused (test_scene_hilo_gpu_guard_v1.PureControls.test_stale_receipt_and_raw_output_are_not_reused) ... ok
+test_success_is_labelled_cpu_only (test_scene_hilo_gpu_guard_v1.PureControls.test_success_is_labelled_cpu_only) ... ok
+test_telemetry_failure_after_rc0_is_not_success (test_scene_hilo_gpu_guard_v1.PureControls.test_telemetry_failure_after_rc0_is_not_success) ... ok
+test_telemetry_failure_during_work_closes_job (test_scene_hilo_gpu_guard_v1.PureControls.test_telemetry_failure_during_work_closes_job) ... ok
+test_unconfirmed_cleanup_never_passes (test_scene_hilo_gpu_guard_v1.PureControls.test_unconfirmed_cleanup_never_passes) ... ok
+test_worker_evidence_hash_and_binding (test_scene_hilo_gpu_guard_v1.PureControls.test_worker_evidence_hash_and_binding) ... ok
+test_interrupt_before_resume_does_not_run_the_child (test_scene_hilo_gpu_guard_v1.RealOwnedProcessControls.test_interrupt_before_resume_does_not_run_the_child) ... ok
+test_orphan_descendant_is_contained_after_root_exit (test_scene_hilo_gpu_guard_v1.RealOwnedProcessControls.test_orphan_descendant_is_contained_after_root_exit) ... ERROR
+test_suspended_assignment_stdio_and_rc7 (test_scene_hilo_gpu_guard_v1.RealOwnedProcessControls.test_suspended_assignment_stdio_and_rc7) ... ok
+
+======================================================================
+ERROR: test_orphan_descendant_is_contained_after_root_exit (test_scene_hilo_gpu_guard_v1.RealOwnedProcessControls.test_orphan_descendant_is_contained_after_root_exit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Python313\Lib\shutil.py", line 625, in _rmtree_unsafe
+    os.unlink(fullname)
+    ~~~~~~~~~^^^^^^^^^^
+PermissionError: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\WINDOW~1\\AppData\\Local\\Temp\\neuro3d-hilo-job-CPU-il1s8k_u\\process-001.log'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python313\Lib\tempfile.py", line 955, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\tempfile.py", line 935, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\shutil.py", line 790, in rmtree
+    return _rmtree_unsafe(path, onexc)
+  File "C:\Python313\Lib\shutil.py", line 629, in _rmtree_unsafe
+    onexc(os.unlink, fullname, err)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\tempfile.py", line 910, in onexc
+    _os.unlink(path)
+    ~~~~~~~~~~^^^^^^
+PermissionError: [WinError 32] El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: 'C:\\Users\\WINDOW~1\\AppData\\Local\\Temp\\neuro3d-hilo-job-CPU-il1s8k_u\\process-001.log'
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.620s
+
+FAILED (errors=1)

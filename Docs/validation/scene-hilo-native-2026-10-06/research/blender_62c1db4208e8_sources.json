@@ -1,0 +1,35 @@
+{
+  "retrieved_at_utc": "2026-10-06T22:21:49.600749+00:00",
+  "source": "Blender official repository, exact build commit prefix",
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/62c1db4208e8/source/blender/python/gpu/gpu_py_compute.cc",
+      "retrieved_ref": "62c1db4208e8",
+      "filename": "gpu_py_compute.cc",
+      "bytes": 4793,
+      "sha256": "038f0983ef282f7c750146e99b19f2df58ddd949225f4a43dc88a854f1837c7a"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/62c1db4208e8/source/blender/gpu/intern/gpu_compute.cc",
+      "retrieved_ref": "62c1db4208e8",
+      "filename": "gpu_compute.cc",
+      "bytes": 1118,
+      "sha256": "559aedb5517b0f308c3e31915e6a4b4a43f19be669036bad6db2653a655a03a1"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/62c1db4208e8/source/blender/gpu/intern/gpu_texture.cc",
+      "retrieved_ref": "62c1db4208e8",
+      "filename": "gpu_texture.cc",
+      "bytes": 30528,
+      "sha256": "2ff95ccf53781be38d6866e5be2d1006b080e74c23c4b0a1a79c9d74eef6f4f8"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/62c1db4208e8/source/blender/gpu/opengl/gl_texture.cc",
+      "retrieved_ref": "62c1db4208e8",
+      "filename": "gl_texture.cc",
+      "bytes": 26835,
+      "sha256": "14b80a7fcc7a3cb69b225972b65c27557a85d91b8043f8d3a81f66a8d4e1fc9f"
+    }
+  ],
+  "finding": "Compute dispatch adds TEXTURE_FETCH|SHADER_IMAGE_ACCESS; texture read path has no TEXTURE_UPDATE barrier."
+}
