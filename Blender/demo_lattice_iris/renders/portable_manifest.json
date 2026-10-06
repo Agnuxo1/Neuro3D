@@ -1,0 +1,77 @@
+{
+  "schema": "neuro3d-iris-portable-v1",
+  "bundle_version": 1,
+  "source_commit": "63dee34675f0b1de1e032b3b91a87ac09b2eced3",
+  "blender_version": "4.5.14 LTS",
+  "blend_sha256": "7130f5e46b0fb9785f6b692478d3892d59671f15d010598130a1537d6e973f3b",
+  "assets": {
+    "neuro3d_iris_demo.py": {
+      "text_name": "neuro3d_iris_demo.py",
+      "sha256": "1893a2dbfbcb2738df46eb212e8dcbb021ac1ec73b838bef0696eb2a34ab5956"
+    },
+    "iris.csv": {
+      "text_name": "neuro3d.asset.iris.csv",
+      "sha256": "9cc1c345c71bcc9b486b74cbf6063fa66f4bb5e0f603a4b3c3471ec2e5e8e355"
+    },
+    "trained_lattice.json": {
+      "text_name": "neuro3d.asset.trained_lattice.json",
+      "sha256": "938e4f0a1fa5466f29829d856b17a47316378c6b65e1b99033c6f68347262fce"
+    }
+  },
+  "export_sample": {
+    "index": 71,
+    "prediction": 1,
+    "fields": {
+      "R0": [
+        0.3711592001451412,
+        0.2560186281295562
+      ],
+      "R1": [
+        0.34434366542880207,
+        -0.4066386627860794
+      ],
+      "R2": [
+        -0.1720822248735557,
+        0.3826009617583872
+      ],
+      "R3": [
+        -0.14519228672677678,
+        -0.0859962362758874
+      ],
+      "C0": [
+        8.360475883744528e-05,
+        -0.00042218331946097733
+      ],
+      "C1": [
+        0.015547531606024245,
+        -0.3278371891597116
+      ],
+      "C2": [
+        -0.08827241693271595,
+        -0.14218730567695212
+      ],
+      "C3": [
+        0.13844443343469848,
+        0.3916574061779666
+      ]
+    },
+    "powers": {
+      "R0": 0.203304689801721,
+      "R1": 0.28392756199339364,
+      "R2": 0.17599578805587585,
+      "R3": 0.028476152778568808,
+      "C0": 1.8522851093135703e-07,
+      "C1": 0.10771894833518085,
+      "C2": 0.02800924948681426,
+      "C3": 0.1725623849631074
+    },
+    "escape": 0
+  },
+  "export_decoration_invariance_max": 0.0,
+  "export_decoration_limit": 1e-08,
+  "export_ray_casts": 113710,
+  "export_seconds": 16.806314799992833,
+  "render_executed": false,
+  "training_executed": false,
+  "inference_route": "Blender scene.ray_cast and Python complex sums"
+}

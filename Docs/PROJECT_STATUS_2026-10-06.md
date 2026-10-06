@@ -15,7 +15,7 @@ See [the consolidation receipt](validation/consolidation-2026-10-06.json).
 | Route | Evidence retained | Current limit |
 |---|---|---|
 | CPU oracle and graph model | Deterministic model and contract tests | Reference calculation; no physical hardware |
-| Iris lattice | 16 MZI, 8 modes; stored report 117/120 train and 29/30 hold-out; scene raycasts and Python complex accumulation | Analytical training; hybrid CPU inference; shipped blend requires regeneration |
+| Iris lattice | 16 MZI, 8 modes; stored report 117/120 train and 29/30 hold-out; scene raycasts and Python complex accumulation | Analytical training; hybrid CPU inference; portable blend cold-verified on 2026-10-06; interactive name collisions still open |
 | Native OpenGL GPU geometry | Bounded K3/K4 pilots and nearest V2 comparisons | Native ALU pilot; no trained whole Iris network or proof of RT-core use |
 | Precision research | Rational references and CPU hi/lo checks | Latest precision protocol has zero verified native joins |
 | RT pilot006 | Retained bounded geometric readbacks and audit | Coherent end-to-end propagation incomplete |
@@ -23,9 +23,9 @@ See [the consolidation receipt](validation/consolidation-2026-10-06.json).
 | GPU supervision | Windows owned-process containment tests | Complete admission/telemetry/native integration open |
 | Physical photonic device | No measurement established by this consolidation | Simulation does not supply physical evidence |
 
-This table describes retained evidence, not newly rerun experiments. Current
-consolidation checks are identified in the receipt: Iris CPU gates, graph model
-tests and the preserved CPU query-packet test.
+The consolidation receipt identifies the original CPU checks. The subsequent
+[portable Iris validation](IRIS_PORTABLE_VALIDATION_2026-10-06.md) reran all 150
+scene classifications in a fresh process. Other route evidence remains historical.
 
 ## Source documents
 
@@ -39,8 +39,8 @@ tests and the preserved CPU query-packet test.
 
 ## Known reproduction boundaries
 
-1. Rebuild the distributed Iris blend with current embedded source/data/state;
-   verify away from the repository.
+1. CLOSED: the distributed Iris blend was regenerated and verified away from
+   the repository on all 150 rows. See [the report](IRIS_PORTABLE_VALIDATION_2026-10-06.md).
 2. Check numerical behavior after interactive rebuilding creates suffixed names.
    The preservation-only test is insufficient.
 3. The old CPU workflow omits the Iris tests.
