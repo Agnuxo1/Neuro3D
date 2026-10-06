@@ -1,0 +1,132 @@
+{
+ "task_id": "P0-4-RT-EQUAL-CLAUDE",
+ "status": "contract_and_phaseA_CPU_done_phaseB_GPU_pending",
+ "timestamp_utc": "2026-09-30T18:02:25+00:00",
+ "contract_registered_before_measuring": "D:/PROJECTS/.cognition/neuro3d/p0_rt_equal/CONTRATO-P0-4.md",
+ "contract_sha256": "072dc988b20afd86f80a6db7e67720451e2bc737ee01a1df6a5b3f312f5c7dc5",
+ "installation": {
+  "what": "mitsuba 3.9.1 y drjit 1.5.0 (PyPI, BSD) con pip --target D:/PROJECTS/.cognition/pylibs --no-cache-dir, TMP en D:/tmp/pip_tmp",
+  "size": "137 MB en D:, nada en C:",
+  "authorization": "Fran en chat: puedes instalar lo que necesites, siempre que no ocupe espacio en C:",
+  "import_check": "mitsuba.variants incluye scalar_rgb, llvm_ad_*, cuda_ad_*; ray_intersect con rayos explicitos funciona en scalar_rgb (Embree, CPU); variante cuda_ad_rgb NO se ha ejecutado (requiere GPU)"
+ },
+ "artifacts": {
+  "CONTRATO-P0-4.md": "D:/PROJECTS/.cognition/neuro3d/p0_rt_equal/CONTRATO-P0-4.md",
+  "p04_manifest.py": "D:/PROJECTS/.cognition/neuro3d/p0_rt_equal/p04_manifest.py",
+  "phaseA_T32.json": "D:/PROJECTS/.cognition/neuro3d/p0_rt_equal/phaseA_T32.json",
+  "phaseA_T1000.json": "D:/PROJECTS/.cognition/neuro3d/p0_rt_equal/phaseA_T1000.json"
+ },
+ "artifact_sha256": {
+  "CONTRATO-P0-4.md": "072dc988b20afd86f80a6db7e67720451e2bc737ee01a1df6a5b3f312f5c7dc5",
+  "p04_manifest.py": "c048f98b64515dd0c4d3534b39602989f41e08e98d940e216b7378f9fc6c8de2",
+  "phaseA_T32.json": "5a056e686ab578ecaba345a1f690e5f1f368a47dd2f779c4cdecbed1598901ed",
+  "phaseA_T1000.json": "a82659d9ffdb2e86c6d3edbe64ae021e0b542ac2a81aac207398f0b381ad1fd1"
+ },
+ "phaseA_results": {
+  "T32_R2000": {
+   "T": 32,
+   "R": 2000,
+   "manifest_sha256": "a012a88d85e69c6538d7202751fc326ad112faa995528375e7e00be7d233715e",
+   "categories": {
+    "0": 1100,
+    "1": 300,
+    "2": 300,
+    "3": 300
+   },
+   "ambiguous_exact": 92,
+   "hits_exact": 273,
+   "numpy_f64_vs_exact": {
+    "id_mismatch_nonambiguous": 0,
+    "max_rel_t_err": 1.0057152366050377e-15
+   },
+   "mitsuba_scalar_embree_vs_exact": {
+    "id_mismatch_nonambiguous": 7,
+    "mismatch_by_category": {
+     "0": 0,
+     "1": 0,
+     "2": 7,
+     "3": 0
+    },
+    "max_rel_t_err": 2.1510155158109655e-07
+   },
+   "seconds": 4.156566858291626
+  },
+  "T1000_R2000": {
+   "T": 1000,
+   "R": 2000,
+   "manifest_sha256": "ee9b681ee561c8ea0f4aacf1ce93666bf6d765690d604dd40ed646c939fd57e6",
+   "categories": {
+    "0": 1100,
+    "1": 300,
+    "2": 300,
+    "3": 300
+   },
+   "ambiguous_exact": 64,
+   "hits_exact": 1492,
+   "numpy_f64_vs_exact": {
+    "id_mismatch_nonambiguous": 0,
+    "max_rel_t_err": 1.3950921625592766e-14
+   },
+   "mitsuba_scalar_embree_vs_exact": {
+    "id_mismatch_nonambiguous": 3,
+    "mismatch_by_category": {
+     "0": 0,
+     "1": 0,
+     "2": 3,
+     "3": 0
+    },
+    "max_rel_t_err": 2.289584625346018e-06
+   },
+   "seconds": 113.50717973709106
+  }
+ },
+ "findings": [
+  "El manifiesto (triangulos y rayos float32 exactos, categorias: generico, rasante, arista compartida, escape) y la referencia exacta racional funcionan: numpy float64 coincide con la referencia exacta en 0 rayos no ambiguos (T=32 y T=1000), error relativo de t 1e-15 a 1e-14.",
+  "Control Mitsuba scalar_rgb (Embree float32, CPU) frente a la referencia exacta: 0 discrepancias de ID en impactos genericos, rasantes y escapes; discrepancias solo en la categoria de rayos apuntados a una arista compartida (7/300 con T=32, 3/300 con T=1000, no etiquetadas ambiguas porque el punto apuntado en float32 no esta exactamente en la arista): es la clase donde el float32 decide por redondeo; error relativo de t hasta 2,3e-6 (> 4 ulp = 4,8e-7) en esa misma clase. Es una caracterizacion de fase A del control CPU, no del backend GPU.",
+  "Implicacion para H1: el umbral de 4 ulp y 99,99 % se mantiene; la clasificacion por margen exacto (discrepancia permitida solo si margen < resolucion fp32) queda por implementar en la fase B antes de medir cuda_ad_rgb."
+ ],
+ "next": "fase B tras cerrar RT-CAP-006 y con RAM: kernel de fuerza bruta CUDA con ID/t/p, backend cuda_ad_rgb, jobs por gpuq+guard_v4 de uno en uno por tamano; implementar antes la clasificacion por margen exacto.",
+ "limits": [
+  "fase A: CPU, R=2000, T=32 y 1000; semilla fija",
+  "no mide velocidad ni cuda",
+  "Mitsuba scalar no es OptiX"
+ ],
+ "no_jev_aval": false,
+ "phaseA_mismatch_classification_before_CUDA": {
+  "timestamp_utc": "2026-09-30T18:30:02+00:00",
+  "method": "p04_classify.py: desacuerdos (Mitsuba scalar/Embree float32 frente a la referencia exacta, NO ambiguos) guardados por rayo y clasificados por margen baricentrico (< 2e-6 ~ 16*2^-23, por debajo de la resolucion fp32)",
+  "T32_R2000": {
+   "T": 32,
+   "R": 2000,
+   "mismatches_nonambiguous": 7,
+   "classification": {
+    "margen<resolucion_fp32": 7,
+    "sin_explicar": 0
+   },
+   "max_rel_t_err_matching_ids": 2.1510155158109655e-07,
+   "seconds": 4.06195592880249
+  },
+  "T1000_R2000": {
+   "T": 1000,
+   "R": 2000,
+   "mismatches_nonambiguous": 3,
+   "classification": {
+    "margen<resolucion_fp32": 3,
+    "sin_explicar": 0
+   },
+   "max_rel_t_err_matching_ids": 2.289584625346018e-06,
+   "seconds": 113.03811883926392
+  },
+  "retained": {
+   "classify_T32.json": "D:/PROJECTS/.cognition/neuro3d/p0_rt_equal/classify_T32.json",
+   "classify_T1000.json": "D:/PROJECTS/.cognition/neuro3d/p0_rt_equal/classify_T1000.json",
+   "p04_classify.py": "D:/PROJECTS/.cognition/neuro3d/p0_rt_equal/p04_classify.py"
+  },
+  "sha256": {
+   "classify_T32.json": "d21f4ac155ffb3a755ba3de751e72935934e56b63df0f4988b12f844a72ad367",
+   "classify_T1000.json": "480ac26224962afbd8fb0e45a587ed9f2d367b97d3e410adbf9d01925c1e294a",
+   "p04_classify.py": "735495fb0e683bae5bf76ee3785e4aa0210bdb7d020e59ab329a28b650f57a05"
+  },
+  "reading": "10 de 10 desacuerdos CPU (7 con T=32, 3 con T=1000) son rayos a menos de la resolucion fp32 de una arista (margen baricentrico 4e-9 a 1,6e-8); 0 sin explicar. Clasificacion de fase A del control CPU; la fase CUDA repetira la clasificacion por margen con los mismos criterios. No se repitieron raycasts como relleno: la corrida anterior no retuvo los rayos."
+ }
+}

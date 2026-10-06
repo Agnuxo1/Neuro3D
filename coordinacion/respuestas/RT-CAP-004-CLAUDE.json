@@ -1,0 +1,39 @@
+{
+ "task_id": "RT-CAP-004",
+ "status": "variant_v3_delivered_CPU_tests_only_NO_blender_no_gpu",
+ "timestamp_utc": "2026-09-30T11:36:41+00:00",
+ "input_sha256": {
+  "coordinacion/tareas/RT-CAP-004-CLAUDE.md": "4ad7bc25b1783dc8e5b5d777e516350e6b78c0ec7fefca8438c04173a8d438c9"
+ },
+ "ack": "Acuse RT-CAP-004. Los dos casos son correctos: (1) en v2 la consulta nvidia-smi (hasta 10 s) y el sleep de 1 s podian sacar al hijo del bucle sin revisar elapsed/deadline, y un hijo que acababa tarde salia OK; (2) un error o KeyboardInterrupt tras Popen no limpiaba el hijo. No repito ni borro capturas 002/003 ni EXR; siguen provisionales.",
+ "new_artifacts_sha256": {
+  "guard_v3.py": "82e9ea1b33c7a48d90bb83faa109eb2af30cf441e08a6cdd8651655a94d1a743",
+  "test_v3.py": "c26b22541ab818fa0179e5bb2f389cf332adb785eef593819d20a7b4df572fe9"
+ },
+ "preserved_sha256": {
+  "guard_v2.py": "1786cf75803e22bf11306f6b468851f7705f2c3cdee5bc84e4e8304c1276f8b0",
+  "test_v2.py": "b67eeb77b8ebf0c9d5e2401016fc0df6b542926745f7a7957702f1b9150d1154",
+  "guard.py": "b0245f0b274d91e4f302adb8dfde3bab01f36cad00f9a74c05776795a0c1bcf6",
+  "blender_capture.py": "39e4bf1792ef53c43687e26f236e6959a9fd3750232710a6577da1a85efbb6e3",
+  "blender_capture_002_pinned.py": "4db3326fbf96d47429b23f23213e39a47121ce87f31968007a81c6edf0b3b8c1",
+  "blender_capture_v2.py": "f4f8ade9f5985564be0eb7f0b607f8ff74d024e074bf4d03d76f69c519587530",
+  "rtcap_v2.py": "e5fee14508ae3ca4e11b6483788544e5cfcf1ad3d2a26d60464ba6607c4c48a4",
+  "rtcap.py": "86479f750963e2201f3283808eab25535192274ad27769c899e246bf25c26145"
+ },
+ "changes": [
+  "reloj MONOTONICO: timeout y deadline (UTC convertido una vez a instante monotonico), sin llamadas UTC en el bucle",
+  "consulta de telemetria en hilo con join acotado por min(5 s, restante); si no vuelve = fallo de telemetria = WATCHDOG y terminacion del hijo propio",
+  "espera del poll acotada al restante",
+  "hijo que termina TARDE (tras timeout/deadline) o cuyo ultimo chequeo vence = TIMEOUT/TIMEOUT_LATE, nunca OK",
+  "margen de terminacion explicito: timeout <= 110 s + 10 s de margen = 120 s; terminacion propia acotada a 8 s (3 terminate + 3 taskkill de su PID + 2 kill) con verificacion",
+  "cleanup garantizado: proc inicializado antes; error o KeyboardInterrupt tras Popen => se termina SOLO el hijo propio, se verifica, se escribe el envelope; INTERRUPTED exit 130, ERROR exit 8; now_fn roto no rompe cleanup ni el estado OK del hijo (end_utc \"unavailable\")",
+  "post_telemetry_fn inyectable (por defecto la misma funcion) para probar el cierre"
+ ],
+ "tests": "12 tests CPU PASS en ~11 s, dos ejecuciones consecutivas OK sin flakiness, con -W error::ResourceWarning: OK, cap de timeout+margen, consulta lenta acotada, hijo que acaba tarde dentro de consulta lenta no OK, hijo que acaba tras el timeout es TIMEOUT y muere dentro del margen, salto del reloj monotonico nunca OK, error tras spawn limpia hijo propio (PID muerto verificado por tasklist), KeyboardInterrupt tras spawn limpia (130), now_fn roto, proceso ajeno nunca tocado (sigue vivo), postflight NaN y con excepcion = CLOSE_FAILED, deadline vencido bloquea sin lanzar. Los 23 tests de v2 siguen PASS.",
+ "not_done": [
+  "ninguna captura Blender ni GPU",
+  "no se ha revisado que el runner Blender v2 lea el guard v3 (mismo comando, cambia solo el guard); C3 sigue BLOCKED; sin speedup ni red RT"
+ ],
+ "next": "tras vuestra revision y nuevo preflight, UN piloto pequeno con manifest y deadline nuevos (propuesta: T32 CPU-device con guard_v3 y luego el mismo en GPU por gpuq), no repetir las cuatro capturas sin cambio.",
+ "no_jev_aval": true
+}

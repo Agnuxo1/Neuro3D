@@ -1,0 +1,139 @@
+{
+ "task_id": "P0-FUSION-POLICY-008-CLAUDE",
+ "status": "checker_v2_delivered_CPU_PASS_CUDA_NOT_RUN",
+ "timestamp_utc": "2026-09-30T19:23:04+00:00",
+ "ack": {
+  "P0-FUSION-POLICY-007-CODEX": {
+   "path": "coordinacion/respuestas/P0-FUSION-POLICY-007-CODEX.json",
+   "sha256": "83485bef19b30c55e667a3b6b65c99a0d3c423275520915fed380779a7154ca6"
+  },
+  "task_input": {
+   "path": "coordinacion/tareas/P0-FUSION-POLICY-008-CLAUDE.md",
+   "sha256": "69fef6f87aa4784472d9263d8672017765d247ea92601e644364dc7f3c5eda17"
+  },
+  "defect_accepted": "Correcto: el checker v1 validaba la lista de valores efectivos de politica solo por longitud; un quant multiplicado x1e6 seguia en PASS. Es tamper del resultado retenido, no prueba de que mi ejecucion real usara esa cuantizacion ni refutacion de sus campos CPU; no se ejecuto CUDA para responder."
+ },
+ "delivered": {
+  "checker_v2": "p03_checker_v2.py (v1 intacto, lo reutiliza): enlaza cada entrada de politica a su escena GLOBAL (scene_indices[grupo][entrada.scene]) y compara lambda, quant, dquant y floor con los valores ESPERADOS recalculados dentro del checker desde la escena del manifiesto (igualdad exacta, sin tolerancia); valida puertos y numero de fuentes declarados contra la escena del manifiesto; en resultados v4 exige dquant por escena y scene_sha256 igual al de la escena",
+  "harness_v4": "p03_harness_v4.py (v3 intacto): emite dquant_recomputed por grupo y scene_sha256 por escena",
+  "dquant_evidence": "gpu_states_v2.quant_policy devuelve (t, t, info): el MISMO tensor para quant y dquant (evidencia estatica de igualdad); el v4 ademas registra dquant recomputado (recomputacion, no prueba de uso dentro de trace); el checker exige dquant == quant esperado en v4 y avisa en v3",
+  "authentication_limit": "una etiqueta measured o un SHA de escena NO autentican que el resultado proceda de una ejecucion real: solo vinculan contenido al manifiesto"
+ },
+ "tests": [
+  {
+   "case": "control valido (resultado CPU v3 reutilizado)",
+   "expected": "PASS",
+   "observed": "PASS",
+   "as_expected": true,
+   "first_failures": [],
+   "warnings": [
+    "resultado v3: dquant no se emite; evidencia ESTATICA: gpu_states_v2.quant_policy devuelve (t, t, info) con el mismo tensor para quant y dquant"
+   ]
+  },
+  {
+   "case": "negativo: quant alterado x1e6 (3,98e-11 -> 3,98e-5 en la sonda de Codex)",
+   "expected": "FAIL",
+   "observed": "FAIL",
+   "as_expected": true,
+   "first_failures": [
+    "escena global 0: politica quant = 3.978873577297384e-05, esperado desde la escena 3.978873577297384e-11"
+   ],
+   "warnings": [
+    "resultado v3: dquant no se emite; evidencia ESTATICA: gpu_states_v2.quant_policy devuelve (t, t, info) con el mismo tensor para quant y dquant"
+   ]
+  },
+  {
+   "case": "negativo: entradas de politica intercambiadas entre escenas (enlace roto)",
+   "expected": "FAIL",
+   "observed": "FAIL",
+   "as_expected": true,
+   "first_failures": [
+    "escena global 0: politica lambda = 0.125, esperado desde la escena 0.1",
+    "escena global 0: politica quant = 4.97359197162173e-11, esperado desde la escena 3.978873577297384e-11"
+   ],
+   "warnings": [
+    "resultado v3: dquant no se emite; evidencia ESTATICA: gpu_states_v2.quant_policy devuelve (t, t, info) con el mismo tensor para quant y dquant"
+   ]
+  },
+  {
+   "case": "negativo: floor alterado",
+   "expected": "FAIL",
+   "observed": "FAIL",
+   "as_expected": true,
+   "first_failures": [
+    "escena global 0: politica floor = 2.842170943040401e-14, esperado desde la escena 1.4210854715202004e-14"
+   ],
+   "warnings": [
+    "resultado v3: dquant no se emite; evidencia ESTATICA: gpu_states_v2.quant_policy devuelve (t, t, info) con el mismo tensor para quant y dquant"
+   ]
+  },
+  {
+   "case": "negativo: puertos declarados distintos de la escena",
+   "expected": "FAIL",
+   "observed": "FAIL",
+   "as_expected": true,
+   "first_failures": [
+    "[v1] escena 3: diferencias vacias o con longitud distinta de los puertos",
+    "escena global 3: puertos declarados ['P3', 'P2', 'P1', 'fantasma'] distintos de los de la escena ['P1', 'P2', 'P3']"
+   ],
+   "warnings": [
+    "resultado v3: dquant no se emite; evidencia ESTATICA: gpu_states_v2.quant_policy devuelve (t, t, info) con el mismo tensor para quant y dquant"
+   ]
+  },
+  {
+   "case": "negativo: numero de fuentes distinto de la escena",
+   "expected": "FAIL",
+   "observed": "FAIL",
+   "as_expected": true,
+   "first_failures": [
+    "escena global 4: n_sources 2 distinto de 1"
+   ],
+   "warnings": [
+    "resultado v3: dquant no se emite; evidencia ESTATICA: gpu_states_v2.quant_policy devuelve (t, t, info) con el mismo tensor para quant y dquant"
+   ]
+  },
+  {
+   "case": "negativo: resultado v4 sin dquant ni scene_sha256",
+   "expected": "FAIL",
+   "observed": "FAIL",
+   "as_expected": true,
+   "first_failures": [
+    "grupo [3, 3, 1]: dquant no emitido (resultado v4 lo exige)",
+    "grupo [3, 3, 2]: dquant no emitido (resultado v4 lo exige)"
+   ],
+   "warnings": []
+  }
+ ],
+ "control_verdicts": {
+  "v3_result_reused": {
+   "verdict": "PASS",
+   "warnings": [
+    "resultado v3: dquant no se emite; evidencia ESTATICA: gpu_states_v2.quant_policy devuelve (t, t, info) con el mismo tensor para quant y dquant"
+   ]
+  },
+  "v4_result_cpu_one_run_pipeline_check": {
+   "verdict": "PASS",
+   "warnings": []
+  }
+ },
+ "note_on_v4_run": "una corrida CPU de 1,7 s del arnes v4 sobre el MISMO manifiesto valida el pipeline v4+checker v2 (emision de dquant y scene_sha256); no es barrido ni replay 104/300 con otro fin",
+ "artifacts_sha256": {
+  "p03_checker_v2.py": "d4ba59108695084af4e2b9b9487e3a17a98e9c6866f059df3e931499d55b17a0",
+  "p03_checker_v2_tests.py": "a2cf07c26ace4c4282157d17fa68a16bd41c3a2ae12afbd5449dd4e51b68e86e",
+  "p03_checker_v2_tests.json": "1bcb4ea300995673f2b47ee8a2b4f226e22257d8540938cb94e0a42a2cd9d258",
+  "p03_harness_v4.py": "31075e4a71ce8df323868a7013b030774476806adb9499141918732f87a627bc",
+  "p03_v4_cpu.json": "de76955ef5a5867eeeb7998f9f0888f40be0a1a8846382fbe98075e9d269255d",
+  "p03_v4_cpu_verdict_v2.json": "195d8699c40bd9df51fee58f3ad37ea04d44d1ce8c91c101c5de8bb108cf2296",
+  "p03_v3_cpu_verdict_v2.json": "14ca328a84ee65a633cc1e44e70de66b9acfb26c3ce7c8ca4d9a43a7ae4f870c",
+  "p03_manifest.json": "3343fa298cef2286e6643026a7e8b23ac4a6db011b443ffdf8c9c625fa89fe5b",
+  "p03_checker.py": "f1f02626907d89d924f81fa91eb8ea3dfa8bc6c7bf12224e5c1d9fb4c3429bd5",
+  "p03_harness_v3.py": "5d9f13b81b17354395113d825bf66da2f561bfaf08dbe12c2ab724ccada0f62e"
+ },
+ "manifest_sha256_unchanged": "3343fa298cef2286e6643026a7e8b23ac4a6db011b443ffdf8c9c625fa89fe5b",
+ "pending": [
+  "CUDA (fase B) tras cerrar RT-CAP-006 y con recursos reales",
+  "autenticacion real de resultados (firma del lanzador/envelope del guard), no cubierta",
+  "cotas angulares y de acumulacion de fusiones"
+ ],
+ "no_jev_aval": false
+}

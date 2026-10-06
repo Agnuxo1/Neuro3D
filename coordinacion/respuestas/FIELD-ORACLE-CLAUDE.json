@@ -1,0 +1,38 @@
+{
+ "task_id": "FIELD-ORACLE-CLAUDE-001",
+ "status": "complete_no_discrepancy_in_tested_class",
+ "timestamp_utc": "2026-09-30T15:16:29+00:00",
+ "why": "Codex me pidio avanzar CPU propia independiente (tablon 15:13). Extiendo mi oraculo independiente a la capa de CAMPOS: ideal_fields (history_fields_cpu_v1) frente a un calculo propio desde mi arbol my_trace.",
+ "method": "field_check.py: amplitud = campo de fuente x (-e^{i phi} en espejo, sqrt(tau) en t, i sqrt(1-tau) en r); longitud = suma de distancias euclideas entre origenes + desplazamiento de referencia d^.(referencia - origen del terminal); fase e^{2 pi i (L+offset)/lambda}; suma por puerto y grupo de coherencia (coherente: un grupo; incoherente: un grupo por fuente). No usa reconstruct_lengths ni ideal_fields.",
+ "results": {
+  "compared": 216,
+  "max_field_diff": 5.806381506273889e-14,
+  "over_tol": 0,
+  "reject_both": 396,
+  "mine_rejects": 0,
+  "codex_rejects": 0,
+  "path_count_mismatch": 0,
+  "seconds": 3.2725515365600586
+ },
+ "reading": "216 comparaciones (MZI: 6 configuraciones de fase y referencia x 2 modos de coherencia; mas escenas aleatorias diadicas con fases de espejo 0/0,7/2,1, tau 0,5/0,25/0,8, campos de fuente complejos, lambda 0,125/0,1/0,07): diferencia maxima de campo complejo por puerto y grupo 5,8e-14, cero por encima de 1e-10, cero discrepancias de numero de caminos; 396 casos rechazados por ambos (terminal no colineal hacia adelante o rayo perdido), ninguno rechazado solo por un lado.",
+ "artifacts": {
+  "field_check.py": "D:/PROJECTS/.cognition/neuro3d/trace_oracle_claude/field_check.py",
+  "field_result.json": "D:/PROJECTS/.cognition/neuro3d/trace_oracle_claude/field_result.json"
+ },
+ "artifact_sha256": {
+  "field_check.py": "6a67b672f28e8a442eeb3e795a08def564f3f3ffcdf79eb14523a3a19e50c558",
+  "field_result.json": "871a0bf915c099dfcf4db9910bc1053e4bdb429b748214b99c4f5869eeb247c2"
+ },
+ "input_sha256": {
+  "Blender/benchmarks/capacity_audit/history_fields_cpu_v1.py": "41d38c8c7f1bd56764728f50a3951ea4baa60fbe18ebadb316d497c553ec831c",
+  "Blender/benchmarks/capacity_audit/history_lengths_cpu_v1.py": "af48ff659152b5055bb4b3091ccdfa5655d995a0fb7bf607c784f243ae912ce3",
+  "Blender/benchmarks/capacity_audit/history_trace_cpu_v1.py": "92ca7ddb64d95afc3205ddcfb129a5a129a9b5255ff51daf9917c0cceb9c1346"
+ },
+ "limits": [
+  "clase acotada como en el oraculo de trazado (axial/diagonal en losa, coordenadas diadicas)",
+  "misma especificacion de coeficientes y de referencia: independencia de implementacion, no de convencion fisica",
+  "tolerancia 1e-10 sobre float64, no certifica fase nativa ni error de redondeo GPU",
+  "sin GPU/Blender/RT"
+ ],
+ "no_jev_aval": true
+}

@@ -1,0 +1,141 @@
+{
+ "task_id": "PRECISION-COMPLETE-001",
+ "status": "complete_NO_REFUTATION_FOUND_in_small_scope",
+ "timestamp_utc": "2026-09-30T13:12:26+00:00",
+ "scope": "CPU exacto, solo lectura (sys.dont_write_bytecode), un hilo, 0,1 s; 12 sondas sobre validate_complete_tree con el fixture MZI de Codex y variantes; sin GPU/Blender; sin JEV",
+ "input_sha256_verified_equal_to_task_pins": {
+  "Blender/benchmarks/capacity_audit/history_completeness_cpu_v1.py": "750799dd1ad3639a4c84a30ef2e251ae4b1cb2c384d23511ff75b5fac387593a",
+  "Blender/benchmarks/capacity_audit/history_fields_cpu_v1.py": "41d38c8c7f1bd56764728f50a3951ea4baa60fbe18ebadb316d497c553ec831c",
+  "Blender/tests/exp005_history_mzi_audit.py": "a22345b36a056386ff713972f7be2fed27f56fc46da0cf3549640166d39bff27",
+  "Blender/benchmarks/capacity_audit/history_lineage_cpu_v2.py": "391dfc06fd2f37d8fb6ce2845b71f02d4eeba33007619ae6e4aae27ae5169bae",
+  "coordinacion/tareas/PRECISION-COMPLETE-001-CLAUDE.md": "5e776ccadf467baa6bcd8b392264c76e4f3e4aca620d7f133c91d76ed90a7114",
+  "exp005_history_mzi_cpu_20260930_1308.json": "f261130eff38946c1b626c30c3e483bb3f93e9f3e67a4f294b5d15efaa4c12cf"
+ },
+ "commands": [
+  "cd D:/PROJECTS/.cognition/neuro3d/complete001_claude",
+  "python probes.py"
+ ],
+ "artifacts": {
+  "probes.py": "D:/PROJECTS/.cognition/neuro3d/complete001_claude/probes.py",
+  "probes.json": "D:/PROJECTS/.cognition/neuro3d/complete001_claude/probes.json"
+ },
+ "artifact_sha256": {
+  "probes.py": "2bfd53aa541a39b8538c8357d6292491c7872799993653d48fb53ba9b3884e2e",
+  "probes.json": "4de563dcbbc15db0af57217dcdf2b7b94af6fad5cb9d42c5cff1f69cab186f47"
+ },
+ "results": [
+  {
+   "verdict": "ACEPTADO",
+   "terminal_ids": [
+    9,
+    10,
+    11,
+    12
+   ],
+   "records": 13,
+   "label": "CONTROL: MZI original (13 registros, 4 terminales)",
+   "expected": "ACEPTADO"
+  },
+  {
+   "verdict": "RECHAZADO",
+   "reason": "ValueError: explicit complete geometry readback required",
+   "label": "P1 undeclared_meshes no vacio",
+   "expected": "debe RECHAZAR"
+  },
+  {
+   "verdict": "RECHAZADO",
+   "reason": "ValueError: claimed primitive is not the independently selected nearest",
+   "label": "P2 espejo nuevo en el camino (arbol no actualizado)",
+   "expected": "debe RECHAZAR"
+  },
+  {
+   "verdict": "RECHAZADO",
+   "reason": "ValueError: nonempty triangles required",
+   "label": "P3 detector fantasma sin caras",
+   "expected": "diseno: puede aceptar (no exige alcanzar todos los terminales)"
+  },
+  {
+   "verdict": "RECHAZADO",
+   "reason": "ValueError: claimed primitive is not the independently selected nearest",
+   "label": "P4 cara duplicada en B1",
+   "expected": "diseno: mismos t, mismo dueno"
+  },
+  {
+   "verdict": "ACEPTADO",
+   "terminal_ids": [
+    9,
+    10,
+    11,
+    12,
+    22,
+    23,
+    24,
+    25
+   ],
+   "records": 26,
+   "label": "P5 dos fuentes identicas, dos arboles",
+   "expected": "ACEPTA si ambos arboles son completos"
+  },
+  {
+   "verdict": "RECHAZADO",
+   "reason": "ValueError: incomplete tree at record 4: required ['r', 't'], observed []",
+   "label": "P6 podar el subarbol 4 (hijos 7,8 y sus terminales)",
+   "expected": "debe RECHAZAR (registro 4 incompleto)"
+  },
+  {
+   "verdict": "RECHAZADO",
+   "reason": "ValueError: incomplete tree at record 0: required ['r', 't'], observed ['t']",
+   "label": "P7 podar la rama r del primer divisor completa (2,4,7,8,11,12)",
+   "expected": "debe RECHAZAR (registro 0 requiere t y r)"
+  },
+  {
+   "verdict": "RECHAZADO",
+   "reason": "ValueError: source contact has no established departure",
+   "label": "S3 fuente exactamente sobre B1",
+   "expected": "debe RECHAZAR (contacto de fuente sin partida establecida)"
+  },
+  {
+   "verdict": "RECHAZADO",
+   "reason": "ValueError: degenerate triangle",
+   "label": "S5 objeto lejano con triangulo DEGENERADO (colineal), nunca tocado",
+   "expected": "valido: el arbol no lo toca (si RECHAZA = falso rechazo secundario)"
+  },
+  {
+   "verdict": "ACEPTADO",
+   "terminal_ids": [
+    9,
+    10,
+    11,
+    12
+   ],
+   "records": 13,
+   "label": "S6 divisores con T=0.0 (ambas ramas exigidas)",
+   "expected": "ACEPTA (poda de campo cero no autorizada)"
+  },
+  {
+   "verdict": "ACEPTADO",
+   "terminal_ids": [
+    9,
+    10,
+    11,
+    12
+   ],
+   "records": 13,
+   "label": "S6 divisores con T=1.0 (ambas ramas exigidas)",
+   "expected": "ACEPTA (poda de campo cero no autorizada)"
+  }
+ ],
+ "finding": "NO he encontrado ninguna rama ni terminal omitido que validate_complete_tree acepte indebidamente. Todas las podas de subarboles (un padre con sus hijos, o toda la rama r del primer divisor) se rechazan por \"incomplete tree\"; una malla no declarada, un espejo nuevo sin actualizar el arbol, una cara duplicada, una fuente sobre B1 y un triangulo degenerado se rechazan en pack_frontier o en V2 (fail-closed). Aceptaciones: el control MZI original, dos fuentes identicas con dos arboles independientes completos, y divisores con T=0 y T=1 (ambas ramas exigidas, sin poda de campo cero, como el contrato).",
+ "reasoning_not_a_proof": [
+  "todo nodo no terminal exige exactamente el conjunto de eventos del rol del objeto que alcanza su rayo (independientemente seleccionado por nearest), y toda hoja es terminal; un arbol finito acepta solo si cada hoja es un terminal",
+  "un ciclo (cavidad) no puede ser completo; profundidad > 32 y > 64 registros se rechazan (fail-closed)",
+  "la exencion de contacto cero no puede ocultar una rama: solo omite triangulos coplanares del mismo propietario de la primitiva de partida"
+ ],
+ "limits": [
+  "NO es una prueba exhaustiva ni general: 12 sondas sobre un fixture axial de dos brazos; sin barrido",
+  "el gate no exige que todos los terminales declarados sean alcanzados (diseno); un detector fantasma sin caras se rechaza por triangulos vacios",
+  "no cubre float32/Blender, modos terminales, fase, solape fisico ni genealogia GPU (excluidos por vuestro contrato)",
+  "conjunto de sondas no incluye escenas con fuentes en posiciones coplanares raras ni multiples divisores anidados"
+ ],
+ "no_jev_aval": true
+}

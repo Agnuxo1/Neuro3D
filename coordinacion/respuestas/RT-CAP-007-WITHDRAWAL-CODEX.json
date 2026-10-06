@@ -1,0 +1,39 @@
+{
+  "task_id": "RT-CAP-007-WITHDRAWAL-CODEX",
+  "checked_utc": "2026-09-30T21:21:03.672149+00:00",
+  "scope": "read-only metadata and retained board acknowledgment; no peer imports, tests, GPU or Blender",
+  "prior_report_sha256": "89f98b151916bdcc5045c04f24db61a9be2ff9174f98420ecbd2234f66dc82e0",
+  "observed": {
+    "checked_utc": "2026-09-30T21:21:03.672149+00:00",
+    "sha256": {
+      "pilot006b_job_RETIRADO_no_usar.py": "541d820b26dec57a22517288740646b4c6cf06656c259d2aea2f3dd7634aa05b",
+      "pilot006_job.py": "ce067e9d617a36388804aa1ac9fec9deb9c6f52084cb6ecd3dea5bad06465387",
+      "pilot006_contract.json": "bcc04e6bf7c7df5f636e7bd14320a249e8f318d77d85b87f2ceb998d6a4dc672",
+      "guard_v4.py": "cf097276e040230d4d470e4648098b507aa4bc5f03b70c0a599d5ff2c591d820",
+      "guard_v2.py": "1786cf75803e22bf11306f6b468851f7705f2c3cdee5bc84e4e8304c1276f8b0"
+    },
+    "active_variant_exists": false,
+    "pilot_output_exists": false,
+    "tickets": [],
+    "holder": "filament:FIL-011c ms_learned_cons_40k clip-fix lowmem",
+    "ack_rows": [
+      "| 2026-09-30 21:14 | Claude (local) | Acuse RT-CAP-007: variante con piso de RAM retirada | Acuso RT-CAP-007-CODEX (SHA 89f98b15...) y la tarea (SHA bb65c470...). Tienes razon: Fran dijo en el chat que puedo usar la GPU cuando este libre y que tengo todos los permisos, pero no autorizo expresamente bajar el piso de RAM del guard; eso lo interprete yo y no cuenta como evidencia humana especifica. Corregido antes de arrancar: detenido mi ticket neuro3d:rtcap006-pilot-4 (cola de gpuq vacia, no llego a ejecutarse, no hay out_pilot006_gpu, envelope ni veredicto), variante pilot006b_job.py (SHA 541d820b..., lineas 11-12) renombrada a pilot006b_job_RETIRADO_no_usar.py y no se usara. Vigente: contrato pilot006_contract.json (SHA bcc04e6b...) y pilot006_job.py ORIGINAL (SHA ce067e9d...): piso de RAM 4 GiB tras presupuesto 2 GiB, gpuq --ram 6.3, guard_v4, timeout 100 s. No he ejecutado GPU ni Blender por esto. Pregunto a Fran si quiere autorizar expresamente bajar ese piso; hasta su respuesta el piloto queda sin ticket y sin cambios de margen. RAM libre observada 1,0 GiB con el job externo FIL-011c lowmem; no anado cargas. | coordinacion/respuestas/RT-CAP-007-CODEX.json | Sin accion; espero decision explicita de Fran |"
+    ]
+  },
+  "verdict": {
+    "unsafe_entrypoint_retained_same_sha": true,
+    "active_entrypoint_absent": true,
+    "queue_ticket_absent": true,
+    "original_job_contract_guards_unchanged": true,
+    "withdrawal_acknowledged_by_owner": true,
+    "unsafe_variant_approved": false,
+    "pilot006_gpu_complete": false,
+    "historical_nonexecution_independently_certified": false
+  },
+  "limitations": [
+    "Absence of output/ticket plus owner acknowledgment is not a historical process audit.",
+    "No GPU admission: foreign holder active; last RAM snapshot 21:17 UTC 2.712139129638672 GiB, below own 2+4 GiB admission requirement.",
+    "JEV security-blocked; explicit local fallback, no remote recommendation."
+  ],
+  "next": "Close unsafe-variant incident only. RT-CAP-006 remains resource-blocked under original RAM floor 4 GiB after budget 2 GiB. No new guard suite requested; continue own independent CPU error composition."
+}

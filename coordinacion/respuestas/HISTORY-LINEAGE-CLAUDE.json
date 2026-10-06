@@ -1,0 +1,81 @@
+{
+ "task_id": "HISTORY-LINEAGE-CLAUDE-001",
+ "status": "complete",
+ "timestamp_utc": "2026-09-30T11:56:48+00:00",
+ "scope": "CPU exacto, solo lectura de history_lineage_cpu_v1 (sys.dont_write_bytecode, sin __pycache__ nuevo en vuestro arbol); sin GPU/Blender; sin barrido; sin JEV",
+ "input_sha256": {
+  "Blender/benchmarks/capacity_audit/history_lineage_cpu_v1.py": "3d9e8595f1ace152ae7156d9fa5c7b8ab044c40669bf5ae482bee5b9b499470e",
+  "Blender/tests/exp005_history_lineage_audit.py": "90bd17a469d8f206bcc3fc7de8aed9a00a771c01a781e4e54d0dc26746f328c6",
+  "Docs/EXP-005-HISTORY-LINEAGE-CPU-2026-09-30.md": "a3b566a7480f280579e272e9b1beabb9e4fe886318861dc204c29f17027758f4"
+ },
+ "commands": [
+  "cd D:/PROJECTS/.cognition/neuro3d/history_claude",
+  "python a_false_reject.py"
+ ],
+ "artifacts": {
+  "a_false_reject.py": "D:/PROJECTS/.cognition/neuro3d/history_claude/a_false_reject.py",
+  "a_false_reject.json": "D:/PROJECTS/.cognition/neuro3d/history_claude/a_false_reject.json"
+ },
+ "artifact_sha256": {
+  "a_false_reject.py": "c26f56f8d63c51f35b8738c7a07e5ef47406f03bba15615ae12c13c7346f92b0",
+  "a_false_reject.json": "9acd37b274dbe8aafaf0f5bf3df5c6deee2e0ee05b2cae5767248f55a0fac4a2"
+ },
+ "finding": {
+  "type": "PARTIDA/HISTORIA VALIDA RECHAZADA (falso rechazo)",
+  "where": "history_lineage_cpu_v1.intersection: si det==0 y dot(n, o-a)==0 lanza \"coplanar ray outside this CPU contract\" ANTES de comprobar si el rayo llega a tocar el triangulo",
+  "fixture": "fuente s en (0,0,0) dir +x; detector D en el plano x=2 (alcanzado a t=2); escape F lejano en el plano y=0, x in [5,6], z in [1,2]: el plano de F CONTIENE la recta del rayo pero el triangulo nunca se toca (el rayo esta en z=0, F en z in [1,2]); el oraculo de triangulos independiente acepta y da D=1+0j, F=0; history_lineage_v1 RECHAZA la historia valida de dos registros (source, detect).",
+  "control": "mismo escenario con F desplazado a y=0,5 (no contiene la recta): history_lineage_v1 ACEPTA y coincide con el oraculo.",
+  "results": [
+   {
+    "label": "CONTROL positivo: plano lejano desplazado a y=0.5 (no contiene la recta del rayo)",
+    "far_plane_y": 0.5,
+    "history_lineage_v1": "ACEPTADO",
+    "triangle_oracle": {
+     "terminals": {
+      "D": [
+       1.0,
+       -3.91886975727153e-15
+      ],
+      "F": [
+       0.0,
+       0.0
+      ]
+     },
+     "rays": 1,
+     "path_terminal": "D"
+    }
+   },
+   {
+    "label": "REFUTACION: plano lejano en y=0 (contiene la recta del rayo, nunca lo toca)",
+    "far_plane_y": 0.0,
+    "history_lineage_v1": "RECHAZADO",
+    "reason": "coplanar ray outside this CPU contract",
+    "triangle_oracle": {
+     "terminals": {
+      "D": [
+       1.0,
+       -3.91886975727153e-15
+      ],
+      "F": [
+       0.0,
+       0.0
+      ]
+     },
+     "rays": 1,
+     "path_terminal": "D"
+    }
+   }
+  ],
+  "why_it_matters": "las escenas de red tienen muchos planos axiales y rayos axiales: un plano de otro objeto que contenga la recta del rayo sin ser tocado es geometria legitima; el rechazo es conservador (no acepta nada falso) pero bloquea historias validas y tapara casos reales del lote conf1/K3/K4 si se integra tal cual.",
+  "proposed_contract_change_not_implemented": "en el caso coplanar, decidir en el plano si el segmento t>=0 del rayo interseca el triangulo cerrado (test 2D racional contra sus tres aristas y contencion del origen): si NO lo interseca -> sin impacto (return None); si lo interseca -> mantener el rechazo actual (coplanar dentro del contrato). Anadir este fixture como negativo-falso-rechazo y el control como positivo."
+ },
+ "not_found": [
+  "no he encontrado una falsa genealogia ni una exencion de cero falsamente aceptada: la exencion exige mismo propietario, normales paralelas y coplanaridad con la primitiva previa, y el origen ya esta verificado exacto sobre ella",
+  "el hueco de la reflexion float64 no exacta (direcciones irracionales) es diseno declarado (sin snapping), no lo cuento como fallo"
+ ],
+ "limitations": [
+  "un fixture axial sintetico; no prueba frecuencia en escenas reales",
+  "no toco vuestros archivos"
+ ],
+ "no_jev_aval": true
+}

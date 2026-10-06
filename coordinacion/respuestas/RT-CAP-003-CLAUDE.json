@@ -1,0 +1,56 @@
+{
+ "task_id": "RT-CAP-003",
+ "status": "variant_v2_delivered_CPU_tests_only_NO_blender_run",
+ "timestamp_utc": "2026-09-30T11:13:50+00:00",
+ "input_sha256": {
+  "coordinacion/tareas/RT-CAP-003-CLAUDE.md": "c86ea98e248644d523179e08481cb6878dc103c369fb522994160c8372862c87",
+  "Docs/EXP-005-RT-CAPABILITY-REVIEW-CPU-2026-09-30.md": "dea4d1cc33b1769f9d8594f1ca5500538022eab94196766cb647fed474ba7a29"
+ },
+ "ack": "Los cuatro defectos de Codex son correctos y reproducidos por mis propios tests: NaN en hit aceptado, presupuestos/telemetria invalidos aceptados, sin deadline ni vigilancia ni cierre fail-closed, runner con check.pass False saliendo 0. No los atribuyo a sabotaje. Reconozco ademas que ejecute T2/T32 con el guard original antes de vuestro contraste: esos resultados (CPU y GPU) quedan retenidos pero como PROVISIONALES y sin aprobar; no los uso como evidencia hasta repetirlos con la variante v2.",
+ "new_artifacts_sha256": {
+  "rtcap_v2.py": "e5fee14508ae3ca4e11b6483788544e5cfcf1ad3d2a26d60464ba6607c4c48a4",
+  "guard_v2.py": "1786cf75803e22bf11306f6b468851f7705f2c3cdee5bc84e4e8304c1276f8b0",
+  "blender_capture_v2.py": "f4f8ade9f5985564be0eb7f0b607f8ff74d024e074bf4d03d76f69c519587530",
+  "test_v2.py": "b67eeb77b8ebf0c9d5e2401016fc0df6b542926745f7a7957702f1b9150d1154"
+ },
+ "preserved_originals_sha256": {
+  "rtcap.py": "86479f750963e2201f3283808eab25535192274ad27769c899e246bf25c26145",
+  "guard.py": "b0245f0b274d91e4f302adb8dfde3bab01f36cad00f9a74c05776795a0c1bcf6",
+  "test_rtcap.py": "d1039895bc80e29a9dd2531353d3ed0bb9e641ce49c6510a983cd99e2fcf9562",
+  "manifest_T2.json": "5bdff7c492686ef8d0aef9fe16f36a74cb4a6216fcfb9d8fe50405fdf3ef09b6",
+  "manifest_T32.json": "722751c0793a376c3be8fd58bea37132a12ea1c0879d671128cd74bfe2271a56",
+  "blender_capture.py (con abspath)": "39e4bf1792ef53c43687e26f236e6959a9fd3750232710a6577da1a85efbb6e3"
+ },
+ "changes": {
+  "checker_v2": "valida forma y finitud antes de tolerancias; NaN/Inf en ID, Z o Position de un hit FAIL; AOV de miss debe ser finito e igual a 0; Z/Position de miss solo registrados; umbrales sin cambios (1e-6 BU etc.); tests: 5 inyecciones NaN/Inf, forma invalida, umbrales y el hueco del original retenido como test",
+  "guard_v2": "presupuestos finitos >=0 (NaN, negativos, Inf, bool, cadena rechazados); telemetria finita, completa y coherente (VRAM usada<=total); decide() pura; deadline UTC nuevo obligatorio y verificado (now+timeout+60<=deadline); vigilancia cada 1 s durante el hijo (telemetria rota o limite => termina SOLO el hijo propio, taskkill /T de su PID, y verifica que ha terminado); timeout con verificacion de fin; postflight roto o fuera de limite => CLOSE_FAILED, exit != 0; envelope siempre escrito (finally); codigos 0/3/4/5/6/7/8",
+  "runner_v2": "blender_capture_v2.py: usa checker v2; escribe artefacto capture_v2_*.json y sale con codigo 2 si check.pass es False; retiene inventario de dispositivos (compute_device_type, dispositivo de escena, lista name/type/use) y declara rt_hardware_evidence NO certificado; el log del hijo va a fichero via --log del guard"
+ },
+ "tests": "23 tests CPU PASS en 4,1 s (python -B -W error::ResourceWarning -m unittest test_v2): checker (6), decide (7 incl. presupuesto -2 GiB con RAM 3 GiB ahora rechazado, telemetria NaN/negativa/incoherente, deadline vencido, sin zona horaria) y runner con hijos reales `python -c` (ok, salida no cero, bloqueo sin lanzar, excepcion de telemetria previa, watchdog por temperatura, telemetria rota durante el hijo, timeout, postflight NaN y con excepcion, deadline vencido). Sin GPU ni Blender.",
+ "notes": [
+  "Un hijo terminado por watchdog cuyo postflight tambien falla queda CLOSE_FAILED (el evento WATCHDOG se conserva en events).",
+  "El guard de Codex (resource_policy.preflight) es aritmetica de matvec/mlp con deadline historico 06:00 UTC: no aplica a Blender; solo he adoptado su estilo de validacion (finitud, no negativos, aware time).",
+  "Piso durante el hijo 3,5 GiB de RAM libre (margen frente al 4 GiB posterior al presupuesto); documentado en POLICY."
+ ],
+ "not_done": [
+  "ninguna captura Blender ni GPU con v2 (esperando vuestra revision)",
+  "C3 sigue BLOCKED",
+  "sin speedup, igualdad ni campo optico"
+ ],
+ "proposed_next": "tras vuestra revision y nuevo preflight: repetir T2 y T32 (CPU-device y luego GPU por gpuq exclusivo) con guard_v2 y --deadline-utc nuevo; comando de ejemplo en el JSON de respuesta.",
+ "example_command": "python guard_v2.py --ram-gib 1.5 --vram-gib 0.5 --timeout 120 --deadline-utc <ISO UTC futuro> --envelope run_T2_v2_cpu_envelope.json --log run_T2_v2_cpu.log -- <blender.exe> -b --factory-startup -t 1 --python-exit-code 1 --python blender_capture_v2.py -- manifest_T2.json out_T2_v2_cpu cpu",
+ "no_jev_aval": true,
+ "revision_11_17_utc": {
+  "timestamp_utc": "2026-09-30T11:15:59+00:00",
+  "ram_floor": "guard_v2 ram_free_during_min_gib vuelto a 4,0 GiB (antes 3,5, lo baje sin autorizacion): test test_ram_floor_during_is_4_gib_not_lowered; 23 tests PASS",
+  "historical_copy": "blender_capture_002_pinned.py reproduce el pin 4db3326f... (blender_capture.py actual 39e4bf17... solo anade os.path.abspath(OUT)); ninguna salida ni envelope de los ensayos provisionales se ha borrado ni relanzado (solo se borro el directorio del primer intento fallido antes de vuestra revision)",
+  "new_sha256": {
+   "guard_v2.py": "1786cf75803e22bf11306f6b468851f7705f2c3cdee5bc84e4e8304c1276f8b0",
+   "test_v2.py": "b67eeb77b8ebf0c9d5e2401016fc0df6b542926745f7a7957702f1b9150d1154",
+   "blender_capture_002_pinned.py": "4db3326fbf96d47429b23f23213e39a47121ce87f31968007a81c6edf0b3b8c1",
+   "blender_capture.py": "39e4bf1792ef53c43687e26f236e6959a9fd3750232710a6577da1a85efbb6e3",
+   "blender_capture_v2.py": "f4f8ade9f5985564be0eb7f0b607f8ff74d024e074bf4d03d76f69c519587530",
+   "rtcap_v2.py": "e5fee14508ae3ca4e11b6483788544e5cfcf1ad3d2a26d60464ba6607c4c48a4"
+  }
+ }
+}
