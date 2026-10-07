@@ -1,0 +1,150 @@
+{
+  "id": "PRECISION-FIRST-LEG-FROZEN-SHADER-STATIC-AUDIT-HOST-001",
+  "owner": "Codex",
+  "priority": "P1",
+  "status": "PASS_STATIC_SOURCE_AUDIT_NATIVE_STOP",
+  "parent_commit": "cd5e2dea735f06ee862d68c498f1baac4794c1c1",
+  "code_doc_sha256": {
+    "Blender/benchmarks/capacity_audit/first_leg_frozen_shader_static_audit_HOST_v1.py": "5fc453a7d1516de1d41773aabcb0304685142e16f63a22578374a5759525611a",
+    "Blender/tests/test_first_leg_frozen_shader_static_audit_HOST_v1.py": "62b660c2b8b22f268ff2c55303c623cf7c21229fc4b3569dff347bcdd84fe8b1",
+    "Docs/EXP-005-FIRST-LEG-FROZEN-SHADER-STATIC-AUDIT-HOST-001.md": "866fb77c1ef213c0bc806e9dc9f884b6b338f7f3f8e5d6adf167664e449f7d48"
+  },
+  "source_pins": {
+    "Blender/shaders/exp005_shared_frontier.glsl": {
+      "sha256": "914bf2962ead3c6a7b721a8dc2aa6c1e796af4bde1892db1802c3ca93ebdfcd1",
+      "bytes": 4930
+    },
+    "Blender/benchmarks/capacity_audit/shared_frontier_gpu.py": {
+      "sha256": "f38a93ae116be66284062297a31aa4dac37c40f7d9eefcf77fc4c146aca23c6b",
+      "bytes": 3819
+    },
+    "Blender/benchmarks/capacity_audit/original_SOURCE_first_leg_RN64_graph_HOST_v1.py": {
+      "sha256": "d4e1de31d00cc4767725ccad0120ac59875e788c24d6ec0911dc4350857f38d6",
+      "bytes": 10445
+    }
+  },
+  "test_run": {
+    "rc": 0,
+    "timed_out": false,
+    "before_deadline": true,
+    "started_utc": "2026-10-07T10:11:48.847566+00:00",
+    "ended_utc": "2026-10-07T10:11:49.035735+00:00",
+    "deadline_utc": "2026-10-07T10:12:23.847566+00:00",
+    "elapsed_QA_seconds": 0.188169,
+    "timeout_seconds": 30,
+    "affinity_mask": 1,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "RAM_available_before_bytes": 7481585664,
+    "RAM_budget_bytes": 134217728,
+    "RAM_reserve_after_budget_bytes": 7347367936,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      "Blender/tests/test_first_leg_frozen_shader_static_audit_HOST_v1.py"
+    ],
+    "stdout_bytes": 4559,
+    "stdout_sha256": "e62801e8401dc1371d6ad1f7bfd02af3926c1e33108c3defa8f3f8ac77a7e986",
+    "stdout_zlib_base64": "eNrVV21v2zYQ/j5g/8Hwl9iNXyRZlu1m/uAkSuM1tQ1Z7pYVBUGRlK1VFlWKSusG+e87kk5qpdlLhmHYUCCV6PNzd889vDvf1gUjXNCi/rL27rb+IckoPNUX09nMP0fLcBJOz9BkdT4N660a2BZlKsHgtn6a71BZMGUd47Rg8Omrxerx0Y/+WwV3NT+bXKGlf7YKpuE1OoX31wA/m6PAD4NrBR2Ej78blUkqkwxlXGxxmnxhSPAyo0m2RjijiPBtnqRMoJR/YgJOlaPV7PVs/tMMkEN0Ng8C/yxEwQxNlsvVG/9c+WE3CWUZYSaJlGWUiW4EJ5stFh+KLsE5JoncIVzSRHa5SNZJhlO0nK+CMx/FiSgkStkaYD0XrQXON+hyvgzRjd3JdxoVAxgXitHbO5XHTjL1Yluu24f3YoOdvqeipS6zKevZ1LIIcQfeYOD0CcHUsh0Lk/5oOOizwXBIHJd6jFgj26bE7fWtYX8Q94bUqyv4P88BHApGUSx4JhMgbJ2XT4Sq4gIclGO50e+EU8VSfXk5OfeD8QLOGwgISBlCzU4OmJks3jnvu0fmm8VR94h9zi2rjx557KzTIj1S7KdJpjAHd4YH5a/gpSAMRYkubcVzksW8k3IC9K+h9jkqQAUNuwX/mic1/alSQSnZHqVhYu0IhimS7LNsAClc4Y6PShm3h0fN5kEYPe/usEC9oT2q1AdIxqMeZrbtRczznKFreY4zGuCejbFLMekNiGvFAzpiLCbxYBATl9iuhwl2esSLKvXZk9T9A4q+KUmU4ALBpZNcsAozEZwdj0+nk+XJYT6Ocgjucp5ksvIFesNIr6bPxwLvOvxY/aUvaFJI8MgOYfqeggFLCJcRmfAMRCHwlsFBFZSXUcpqckw5MO20Pja7lMlDKEdDAQNruUGYkHJbpliyp1CMkQ7OPB4/GZuWjrmVwGESP5Wmoo3RsbE6pi8e82T3FUi+ASsUpxzLnlNB0Wc1nK1TNtbPDW3bDierF/DOhXnvwvux1ek3mxVw6053ypgJ1WdQLvivhsWnsmZxrD68YeP7pIFKXZrWA0Rbl63ixPOME1mKDFR0z1TFQ8awko5G4y2DeW/Y4pEKqmV6awtvo2Rd8rKoOOlrORUsBcvfUUASN+QPSoxtu2Ox9iiNm7XbmjoYyxPjYwyxN3DnU/PEOBtnJw/uxrrXn9TuDiUz0l5NV6CJeII7yIF8eGe9Hwd4B9Cfd19aD0OiEan3ZkspwVF+WxH4blkdK41bViU/11WePuEbthcoZXsPVUE5tThhKR0LLkG7VBOKW0oMD9XrNkw9Gwdom6R5/O1pyptVvXiDShNyRz2r0oRGthvFzshzoKdBU8GDaODYeEiJg7FHbDYYeTh2I8rs4cihkT20HNIj0LdYRGNC7bqGhz7zhWVoH8Se3X2rr5v7giAvJEWidf+13ic1owAwABWkZYH0dap9vc0H+lOeyjSF4VzI4vFA/sUP5spizTggix1iNzgtsSqvslVpb3Y5lxsmE9Xz98HqGavLXkYIagsBfSxB2uYZUwoP5n94hV1GKSbdmWUBYis+Cqm8JmaxgZVgupzOZ+2LabAM21f+q/ZFMP/Fn7XN7Gibnaetd562muxty7IVQIZVpdHU9/393FebhFRz9gYWENDI4fayt96vDTCB4C4WiAnBBYpUaOh0BeYZsPXV+ut28SeGpncdGglMD6w4up8Cen1CQGeKoI8/lPJJIUhRqtB5SlXXoiWB8SxYnuLdfX2MXziXj/OFL2z5/qbWl+F8oSgrCM/Z4T5p2Aj9n0M0n11d7/e0N4vplVoHgfi3PnoVTBaXaB6gGexswVRtjheT6dUq8DUk22IgnSD2sUxAP7rHAgsZzw5PYDqwzxj61r3YVBTK2yKYvwVfp9cmiofVdr+NmK2yokmQtiwLk5Zeh/dZLCbhJTqfXlz4wRKBht6gy+vFPLz0Qx2zPztfzKezEHIM3pik9FW83SuRbOCiQSX0xX/5nC0BYrrf02f+K02aWc5xYejPk0xNBVPcZ0EfxJdx+Z+N7Wnunr0B/81gn+3nD1n9P0T9XL6f+6vpH0/puQH8zQr9n/PcJkWhfktvYdP5C/dWNcYU9gFUCREGijwEhZ9cAqMI1jOI/B8DrYwyPZAI2zJ9IFEBawoy/eNf6j5q/4EwthyGzb8awvvKNFpMlksFDVLVu5Zz9/13vwEVbgQv",
+    "stderr_utf8": "",
+    "GPU_used": false,
+    "summary": {
+      "status": "PASS",
+      "tests": 2,
+      "records": 11,
+      "kinds": {
+        "NEGATIVE": 10,
+        "PINNED_STATIC_AUDIT": 1
+      }
+    }
+  },
+  "independent_verification": {
+    "rc": 0,
+    "timed_out": false,
+    "before_deadline": true,
+    "started_utc": "2026-10-07T10:13:38.410034+00:00",
+    "ended_utc": "2026-10-07T10:13:38.786255+00:00",
+    "deadline_utc": "2026-10-07T10:14:13.410034+00:00",
+    "elapsed_QA_seconds": 0.376221,
+    "timeout_seconds": 30,
+    "affinity_mask": 1,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "RAM_available_before_bytes": 7646932992,
+    "RAM_budget_bytes": 134217728,
+    "RAM_reserve_after_budget_bytes": 7512715264,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      ".cognition/neuro3d-mega-geometry-20261005/first_leg_frozen_shader_static_oracle.py"
+    ],
+    "stdout_bytes": 304,
+    "stdout_sha256": "05b379869cc89451681681bd3ba5f97fe225cff33be869c228ce129f7a1e746f",
+    "stdout_zlib_base64": "eNptjjFrQzEMhPdC/0Pw3KGhoUO3TOn4aOgshC23Aj/5RZYfJaX/vXLSJdBJcHf67r7DYXqH3iiFl03G0uhhE2KdFy6UQNB4JTi87adXiKTGmW+S9IXRoLAQoMTPqs3N7ZM7WeuZBBaWIe2et65xIiwgVejUecVCEgkWresNU/pMytGTGbl0/SfiVBD6uK6LVUxruTQ/Xk3x7a12jTTUMUe7iwqYEhtXcfiFUQ38/G2dUThTM38x7aOnGVofiDDtj8fwc3/3C57/ar4=",
+    "stderr_utf8": "",
+    "GPU_used": false,
+    "summary": {
+      "GPU_used": false,
+      "compiled_native_GRAPH_certified": false,
+      "exact_line_anchors": 13,
+      "frozen_pins": 461,
+      "ideal_nonequivalence_proved": false,
+      "numerical_failure_proved": false,
+      "pin_negative_controls": 10,
+      "pinned_sources": 3,
+      "runner_additional_pin_not_in_frozen_manifest": true,
+      "status": "PASS"
+    }
+  },
+  "independent_verification_code": "import ast,base64,hashlib,json,zlib\nfrom pathlib import Path\nroot=Path.cwd()\ndef sha(b):return hashlib.sha256(b).hexdigest()\nr=json.loads((root/'coordinacion/respuestas/PRECISION-FIRST-LEG-FROZEN-SHADER-STATIC-AUDIT-HOST-001-CODEX.json').read_bytes())\nfor p,h in r['code_doc_sha256'].items():\n b=(root/p).read_bytes();assert sha(b)==h\n if p.endswith('.py'):ast.parse(b)\nc=r['test_run'];b=zlib.decompress(base64.b64decode(c['stdout_zlib_base64'],validate=True))\nassert c['rc']==0 and c['before_deadline'] and not c['timed_out']\nassert sha(b)==c['stdout_sha256'] and len(b)==c['stdout_bytes']\nd=json.loads(b);assert d['status']=='PASS' and d['tests']==2 and len(d['records'])==11\nout=d['records'][0]['result'];assert d['records'][0]['kind']=='PINNED_STATIC_AUDIT'\nassert out['status']=='STATIC_SOURCE_PATH_DIFFERS_FROM_HYPOTHETICAL_ENDPOINT_NORM_GRAPH'\ncount=0\nfor p,record in out['evidence'].items():\n b=(root/p).read_bytes();assert sha(b)==record['sha256']==r['source_pins'][p]['sha256']\n assert len(b)==record['bytes']==r['source_pins'][p]['bytes']\n lines=b.decode('utf-8').splitlines()\n for role,a in record['anchors'].items():\n  assert lines[a['line']-1].strip()==a['code']\n  assert sum(s.strip()==a['code']for s in lines)==1;count+=1\ns=(root/'Blender/shaders/exp005_shared_frontier.glsl').read_text(encoding='utf-8')\nnearest=s.split('void nearest(',1)[1].split('void main()',1)[0]\nmain=s.split('void main()',1)[1]\nassert 'dvec3 biased=origin+d*BIAS;'in nearest and 'double t=dot(e2,q)/det;'in nearest\nassert 'best=t;'in nearest and 'best+=BIAS;'in nearest\nassert 'nearest(ray.o,ray.d,distance,object,normal,ambiguous);'in main\nassert 'double length=ray.length+distance;'in main\nassert 'length(point-ray.o)'not in s and 'sqrt(dot(point-ray.o'not in s\nassert 'double effective=length+dot(ray.d,reference-point);'in main\nassert 'float angle=float(phase-TAU*floor(phase/TAU+0.5));'in s\ntree=ast.parse((root/'Blender/benchmarks/capacity_audit/original_SOURCE_first_leg_RN64_graph_HOST_v1.py').read_bytes())\ngraph=[n.value.value for n in tree.body if isinstance(n,ast.Assign)and isinstance(n.value,ast.Constant)and any(isinstance(t,ast.Name)and t.id=='GRAPH'for t in n.targets)]\nassert graph==['sub_xyz; square_xyz; add_xy; add_z; correctly_rounded_sqrt']\nassert out['hypothetical_length_graph']==graph[0]\nassert out['semantic_equivalence_or_nonequivalence_in_exact_geometry']=='NOT_PROVED_BY_TEXT_AUDIT'\nassert out['scope']=='PINNED_SOURCE_TEXT_ONLY_NOT_COMPILED_NATIVE_GRAPH_OR_NUMERICAL_FAILURE'\nfor k in ['native_IEEE_graph_identity_verified','phase_certified','GPU_used','Bpy_used','RT_used']:assert out[k]is False\nfor k in ['native_first_leg_error_bound_BU','native_SOURCE_ingress_error_bound_BU','native_phase_error_bound_rad']:assert out[k]is None\nassert out['promotion']=='STOP' and out['full_costs']=='UNKNOWN_NOT_ZERO'\nassert out['shader_compilations']==out['geometry_evaluations']==out['old_producer_replays']==0\nassert len([x for x in d['records']if x['kind']=='NEGATIVE'])==10 and count==13\nmanifest=json.loads((root/'coordinacion/respuestas/GPU-GUARD-OWNED-TREE-CONTAINMENT-CPU-001-CODEX.json').read_bytes())['pinned_manifest_capture']\nb=zlib.decompress(base64.b64decode(manifest['stdout_zlib_base64']));assert sha(b)==manifest['stdout_sha256']\npins=json.loads(b)['pins'];assert len(pins)==461 and all(sha((root/p).read_bytes())==h for p,h in pins.items())\nassert pins['Blender/shaders/exp005_shared_frontier.glsl']==r['source_pins']['Blender/shaders/exp005_shared_frontier.glsl']['sha256']\nassert 'Blender/benchmarks/capacity_audit/shared_frontier_gpu.py' not in pins\n# Runner is separately pinned above, not retroactively added to the frozen 461.\nprint(json.dumps(dict(status='PASS',pinned_sources=3,exact_line_anchors=13,pin_negative_controls=10,frozen_pins=461,runner_additional_pin_not_in_frozen_manifest=True,compiled_native_GRAPH_certified=False,numerical_failure_proved=False,ideal_nonequivalence_proved=False,GPU_used=False),sort_keys=True))\n",
+  "initial_oracle_FAILURE_preserved": {
+    "rc": 1,
+    "timed_out": false,
+    "before_deadline": true,
+    "started_utc": "2026-10-07T10:12:47.147870+00:00",
+    "ended_utc": "2026-10-07T10:12:47.599768+00:00",
+    "deadline_utc": "2026-10-07T10:13:22.147870+00:00",
+    "elapsed_QA_seconds": 0.451898,
+    "timeout_seconds": 30,
+    "affinity_mask": 1,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "RAM_available_before_bytes": 7592673280,
+    "RAM_budget_bytes": 134217728,
+    "RAM_reserve_after_budget_bytes": 7458455552,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      ".cognition/neuro3d-mega-geometry-20261005/first_leg_frozen_shader_static_oracle.py"
+    ],
+    "stdout_bytes": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_zlib_base64": "eNoDAAAAAAE=",
+    "stderr_utf8": "Traceback (most recent call last):\r\n  File \"D:\\PROJECTS\\9_NEBULA_NEW\\.cognition\\neuro3d-mega-geometry-20261005\\first_leg_frozen_shader_static_oracle.py\", line 48, in <module>\r\n    assert pins['Blender/benchmarks/capacity_audit/shared_frontier_gpu.py']==r['source_pins']['Blender/benchmarks/capacity_audit/shared_frontier_gpu.py']['sha256']\r\n           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nKeyError: 'Blender/benchmarks/capacity_audit/shared_frontier_gpu.py'\r\n",
+    "GPU_used": false
+  },
+  "initial_oracle_FAILURE_code": "import ast,base64,hashlib,json,zlib\nfrom pathlib import Path\nroot=Path.cwd()\ndef sha(b):return hashlib.sha256(b).hexdigest()\nr=json.loads((root/'coordinacion/respuestas/PRECISION-FIRST-LEG-FROZEN-SHADER-STATIC-AUDIT-HOST-001-CODEX.json').read_bytes())\nfor p,h in r['code_doc_sha256'].items():\n b=(root/p).read_bytes();assert sha(b)==h\n if p.endswith('.py'):ast.parse(b)\nc=r['test_run'];b=zlib.decompress(base64.b64decode(c['stdout_zlib_base64'],validate=True))\nassert c['rc']==0 and c['before_deadline'] and not c['timed_out']\nassert sha(b)==c['stdout_sha256'] and len(b)==c['stdout_bytes']\nd=json.loads(b);assert d['status']=='PASS' and d['tests']==2 and len(d['records'])==11\nout=d['records'][0]['result'];assert d['records'][0]['kind']=='PINNED_STATIC_AUDIT'\nassert out['status']=='STATIC_SOURCE_PATH_DIFFERS_FROM_HYPOTHETICAL_ENDPOINT_NORM_GRAPH'\ncount=0\nfor p,record in out['evidence'].items():\n b=(root/p).read_bytes();assert sha(b)==record['sha256']==r['source_pins'][p]['sha256']\n assert len(b)==record['bytes']==r['source_pins'][p]['bytes']\n lines=b.decode('utf-8').splitlines()\n for role,a in record['anchors'].items():\n  assert lines[a['line']-1].strip()==a['code']\n  assert sum(s.strip()==a['code']for s in lines)==1;count+=1\ns=(root/'Blender/shaders/exp005_shared_frontier.glsl').read_text(encoding='utf-8')\nnearest=s.split('void nearest(',1)[1].split('void main()',1)[0]\nmain=s.split('void main()',1)[1]\nassert 'dvec3 biased=origin+d*BIAS;'in nearest and 'double t=dot(e2,q)/det;'in nearest\nassert 'best=t;'in nearest and 'best+=BIAS;'in nearest\nassert 'nearest(ray.o,ray.d,distance,object,normal,ambiguous);'in main\nassert 'double length=ray.length+distance;'in main\nassert 'length(point-ray.o)'not in s and 'sqrt(dot(point-ray.o'not in s\nassert 'double effective=length+dot(ray.d,reference-point);'in main\nassert 'float angle=float(phase-TAU*floor(phase/TAU+0.5));'in s\ntree=ast.parse((root/'Blender/benchmarks/capacity_audit/original_SOURCE_first_leg_RN64_graph_HOST_v1.py').read_bytes())\ngraph=[n.value.value for n in tree.body if isinstance(n,ast.Assign)and isinstance(n.value,ast.Constant)and any(isinstance(t,ast.Name)and t.id=='GRAPH'for t in n.targets)]\nassert graph==['sub_xyz; square_xyz; add_xy; add_z; correctly_rounded_sqrt']\nassert out['hypothetical_length_graph']==graph[0]\nassert out['semantic_equivalence_or_nonequivalence_in_exact_geometry']=='NOT_PROVED_BY_TEXT_AUDIT'\nassert out['scope']=='PINNED_SOURCE_TEXT_ONLY_NOT_COMPILED_NATIVE_GRAPH_OR_NUMERICAL_FAILURE'\nfor k in ['native_IEEE_graph_identity_verified','phase_certified','GPU_used','Bpy_used','RT_used']:assert out[k]is False\nfor k in ['native_first_leg_error_bound_BU','native_SOURCE_ingress_error_bound_BU','native_phase_error_bound_rad']:assert out[k]is None\nassert out['promotion']=='STOP' and out['full_costs']=='UNKNOWN_NOT_ZERO'\nassert out['shader_compilations']==out['geometry_evaluations']==out['old_producer_replays']==0\nassert len([x for x in d['records']if x['kind']=='NEGATIVE'])==10 and count==13\nmanifest=json.loads((root/'coordinacion/respuestas/GPU-GUARD-OWNED-TREE-CONTAINMENT-CPU-001-CODEX.json').read_bytes())['pinned_manifest_capture']\nb=zlib.decompress(base64.b64decode(manifest['stdout_zlib_base64']));assert sha(b)==manifest['stdout_sha256']\npins=json.loads(b)['pins'];assert len(pins)==461 and all(sha((root/p).read_bytes())==h for p,h in pins.items())\nassert pins['Blender/shaders/exp005_shared_frontier.glsl']==r['source_pins']['Blender/shaders/exp005_shared_frontier.glsl']['sha256']\nassert pins['Blender/benchmarks/capacity_audit/shared_frontier_gpu.py']==r['source_pins']['Blender/benchmarks/capacity_audit/shared_frontier_gpu.py']['sha256']\nprint(json.dumps(dict(status='PASS',pinned_sources=3,exact_line_anchors=13,pin_negative_controls=10,frozen_pins=461,compiled_native_GRAPH_certified=False,numerical_failure_proved=False,ideal_nonequivalence_proved=False,GPU_used=False),sort_keys=True))\n",
+  "oracle_repair_scope": "Incorrect assumption that the runner was among frozen 461 pins. Shader is included; runner separately pinned by this audit. Original failed code/capture preserved. No bounds, thresholds or manifests changed.",
+  "claims": {
+    "compiled_native_graph_verified": false,
+    "native_numerical_failure_proved": false,
+    "ideal_mathematical_nonequivalence_proved": false,
+    "model_error_budget_transfer_allowed": false,
+    "old_producer_replays": 0,
+    "GPU_used": false,
+    "JEV": "LOCAL_SECURITY_BLOCKED_NO_RETRY"
+  },
+  "next": "Request only existing Claude artifact for actual scene/SOURCE first-leg backend graph and ingress, not an endpoint-norm model transplanted onto frozen parameter-plus-BIAS source path."
+}
