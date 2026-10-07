@@ -1,0 +1,115 @@
+{
+  "schema": "neuro3d-point04-closure-v1",
+  "point": 4,
+  "status": "PASS_NATIVE_GPU_HILO_TRANSPORT",
+  "date_utc": "2026-10-07T09:21:52.138966+00:00",
+  "implementation_commit": "b305043016427d796aff4eb649e090961db026ff",
+  "execution_head": "6da66a6024832388e76c0f7bc3bb56ccdf9326bb",
+  "device": {
+    "vendor": "NVIDIA Corporation",
+    "renderer": "NVIDIA GeForce RTX 3090/PCIe/SSE2",
+    "backend": "OPENGL"
+  },
+  "native": {
+    "dispatches": 6,
+    "readbacks": 6,
+    "readback_bytes": 305152,
+    "readback_sha256": "f0116e1d3a99d3d1441bfc6c066688491bf3e6ca013c8726fbc0b5e4ee5a5c5c",
+    "rows": 2342,
+    "components": 7026,
+    "cleanup_confirmed": true,
+    "guard_elapsed_seconds": 18.51876230002381
+  },
+  "cases": [
+    {
+      "case_id": "k3_baseline",
+      "input_nonzero_lows": 0,
+      "ablation_changed_components": 0,
+      "modes": [
+        {
+          "mode": 0,
+          "rows": 444,
+          "components": 1332,
+          "nonzero_output_lows": 0,
+          "naive_loss_components": 0
+        },
+        {
+          "mode": 1,
+          "rows": 444,
+          "components": 1332,
+          "nonzero_output_lows": 0,
+          "naive_loss_components": 0
+        }
+      ]
+    },
+    {
+      "case_id": "k4_baseline",
+      "input_nonzero_lows": 0,
+      "ablation_changed_components": 0,
+      "modes": [
+        {
+          "mode": 0,
+          "rows": 701,
+          "components": 2103,
+          "nonzero_output_lows": 0,
+          "naive_loss_components": 0
+        },
+        {
+          "mode": 1,
+          "rows": 701,
+          "components": 2103,
+          "nonzero_output_lows": 0,
+          "naive_loss_components": 0
+        }
+      ]
+    },
+    {
+      "case_id": "controlled_numeric",
+      "input_nonzero_lows": 6,
+      "ablation_changed_components": 10,
+      "modes": [
+        {
+          "mode": 0,
+          "rows": 26,
+          "components": 78,
+          "nonzero_output_lows": 9,
+          "naive_loss_components": 9
+        },
+        {
+          "mode": 1,
+          "rows": 26,
+          "components": 78,
+          "nonzero_output_lows": 9,
+          "naive_loss_components": 9
+        }
+      ]
+    }
+  ],
+  "controlled_low_limb_witness": {
+    "input_nonzero_lows": 6,
+    "ablation_changed_components": 10,
+    "mode0_nonzero_output_lows": 9,
+    "mode0_naive_loss_components": 9,
+    "one_minus_2pow_minus60_witnesses": 4,
+    "four_term_direction_width_witnesses": 1
+  },
+  "scope": {
+    "certified": "Exact empirical transport and compensated geometric differences for the preregistered finite K3/K4/control workload on this RTX 3090/OpenGL implementation.",
+    "not_certified": [
+      "full ray/triangle first-hit robustness",
+      "phase bound",
+      "full optical propagation",
+      "Iris native GPU",
+      "hardware RT/BVH",
+      "speed or energy advantage",
+      "physical uncertainty"
+    ]
+  },
+  "artifacts": {
+    "job.json": "0fc71078764fb579d67e9689a71a55af973368ff41635c320801523e00f86af7",
+    "launch.json": "63d767bf13f46fd1fc75174bd9239c49aff93d9f2d4716b5fb3faed929cb11b9",
+    "worker.json": "9b5017af874bd1b15dbb73518d7a3c5b9ea89d28e9153aa82f55f434b3a604d3",
+    "guard.json": "ad3ee32decad465564e5ac25c4422af445bd228cdcc8fb67885e6aba68bc5552",
+    "independent_audit_v2.json": "66bb4b1c590ef3d360d5dd7c425395c2a473b79760ace11295458b7994ee45ac"
+  }
+}

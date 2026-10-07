@@ -104,3 +104,19 @@ Las condiciones de TwoSum dependen de las hipótesis aritméticas del artículo.
 - Tras **240.603 s** se agot? --max-wait 4; no existe guard.json ni worker.json: el supervisor, Blender y el shader **no se ejecutaron**.
 - La revisi?n contra Blender 4.5 y Khronos confirma que la v?a propuesta usa recursos documentados (GPUUniformBuf, imagen R32UI/UINT, std140/uvec4, barrera y fence) y que el shader marca como precise la aritm?tica compensada cr?tica. La especificaci?n GLSL no basta para certificar universalmente el resultado num?rico de las operaciones internas, de modo que la lectura nativa sigue siendo obligatoria.
 - Estado se mantiene **CPU_PREPARED_NATIVE_BLOCKED**. No se inicia el punto 5.
+
+## Cierre nativo 2026-10-07
+
+El punto 4 queda **PASS_NATIVE_GPU_HILO_TRANSPORT** tras native05.
+
+- GPU real: NVIDIA GeForce RTX 3090/PCIe/SSE2; backend OPENGL.
+- Seis dispatches y seis readbacks completos; 305,152 bytes le?dos.
+- Auditor independiente CPU v2: PASS sobre 2,342 filas y 7,026 componentes.
+- Hash com?n del readback: f0116e1d3a99d3d1441bfc6c066688491bf3e6ca013c8726fbc0b5e4ee5a5c5c.
+- K3 y K4 tienen cero partes bajas de entrada y la ablaci?n zero_low es un sham (0 componentes cambiados).
+- El control num?rico tiene 6 partes bajas de entrada; eliminarlas cambia 10 componentes.
+- En el modo completo aparecen 9 partes bajas de salida no nulas y 9 componentes donde el binary64 colapsado pierde informaci?n.
+- Se conservan testigos exactos para 1 - 2^-60 y para una anchura de direcci?n de cuatro t?rminos.
+- Guard: admisi?n GPU PASS, worker rc0, dependencias sin cambios y cleanup confirmado con cero procesos propios activos.
+
+Este PASS cierra ?nicamente el transporte hi/lo y las diferencias geom?tricas finitas preregistradas. No certifica todav?a first-hit, autoimpactos, empates, fase, propagaci?n ?ptica completa ni ventaja de rendimiento; esos l?mites pasan al punto 5 y siguientes.
