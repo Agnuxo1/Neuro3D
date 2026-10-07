@@ -1,0 +1,194 @@
+{
+  "id": "PRECISION-EXISTING-P03-COST-SCOPE-HOST-001",
+  "owner": "Codex capacity_audit/EXP005",
+  "parent_commit": "a07fd8c9caf71a4d5ebfbaadd0265e6848cf8ed3",
+  "scope": "RECORDED_TIMERS_AND_SOURCE_BOUNDARIES_ONLY",
+  "pins": {
+    "Blender/tests/test_existing_p03_cost_scope_HOST_v1.py": {
+      "sha256": "bcfc6c986eaa878b23e011075a0e4b41e51215e5f94f111c8270e753171e404a",
+      "bytes": 5523
+    },
+    "Docs/EXP-005-EXISTING-P03-COST-SCOPE-HOST-001.md": {
+      "sha256": "dd3d394577ba7ef634e3fc1ab7913b0619c1196726e9ee2af2f21736b984df6e",
+      "bytes": 3587
+    },
+    "coordinacion/respuestas/PRECISION-EXISTING-P03-BACKEND-SCOPE-HOST-001-CODEX.json": {
+      "sha256": "71bc2991dc808dac8a28cb191c0b5e7b14d4d420da46ee3a1d598373e1e84b2c",
+      "bytes": 30194
+    },
+    "Blender/tests/test_existing_p03_backend_scope_HOST_v1.py": {
+      "sha256": "a78fc4e556f4230e259f1f50633b2570a2aa634db84f715fbb0701d21d7e2886",
+      "bytes": 6401
+    },
+    "Docs/EXP-005-EXISTING-P03-BACKEND-SCOPE-HOST-001.md": {
+      "sha256": "eaa8585440dad6f025b59e4199d7e70f35649b609bdb3be3a6f738ee0ca12c74",
+      "bytes": 3829
+    },
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_cuda_job.py": {
+      "sha256": "e7eeffd8e6147ec50f1cd61028dcb6b5fd90877a4ce9b88ede6ddb27ba547099",
+      "bytes": 3735
+    },
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_cuda_result.json": {
+      "sha256": "ed222ba40e6aaa8ca809353e101a2ff70dab847dd2aa4d0c613fb15bc8c44bba",
+      "bytes": 72738
+    },
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_cuda_checker_verdict.json": {
+      "sha256": "3af3628d36b65304996abbcc06d4760a939724d7207847573f1c8edfb2161dd3",
+      "bytes": 564
+    },
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_cuda_envelope.json": {
+      "sha256": "374a6ac74240963dacc9c1eeef7e1927b8a73740778f934202617a89794a4ff9",
+      "bytes": 1124
+    },
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_cuda_harness.log": {
+      "sha256": "c65cbebc955f370b74db726a2203e0e04caa622cd14a05f658f1a9fbfe28f4c7",
+      "bytes": 146
+    },
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_cuda_job_verdict.json": {
+      "sha256": "01474b62d6fbc0340c65f6bec8f9809f7b70f25be244fd5c774d8c157fac5fc2",
+      "bytes": 1392
+    },
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_harness_v4.py": {
+      "sha256": "31075e4a71ce8df323868a7013b030774476806adb9499141918732f87a627bc",
+      "bytes": 9557
+    },
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_checker_v2.py": {
+      "sha256": "d4ba59108695084af4e2b9b9487e3a17a98e9c6866f059df3e931499d55b17a0",
+      "bytes": 5485
+    },
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_manifest.json": {
+      "sha256": "3343fa298cef2286e6643026a7e8b23ac4a6db011b443ffdf8c9c625fa89fe5b",
+      "bytes": 152882
+    },
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\CONTRATO-P0-3.md": {
+      "sha256": "ebaf059828776cd30ca67731deab247288a19bd23320ac072135c4ed681e159a",
+      "bytes": 3011
+    },
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\attempt1_cuda_blocked\\p03_cuda_envelope.json": {
+      "sha256": "6c3ff467ed6eb22cafc12766d5611b2831f7f9895de63a7237c4a8e085e2506d",
+      "bytes": 919
+    },
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\attempt1_cuda_blocked\\p03_cuda_job_verdict.json": {
+      "sha256": "c19c2a18c5d1cf0ef063416e1c9cc0674c04fbecc2d4687e68b684ef71b06eae",
+      "bytes": 758
+    },
+    "coordinacion\\respuestas\\P0-3-SCENE-STATES-CUDA-CLAUDE.json": {
+      "sha256": "b31215b524528b0acb3a6d40614733c0137e751208cd2a59fdc4d98c8f171ac3",
+      "bytes": 6781
+    },
+    "D:/PROJECTS/.cognition/neuro3d/nebulatrace/gpu_states_v2.py": {
+      "sha256": "506b13c9c6bb442d16d9be07b8508a79b01ded9dd4c87c261ac1af83849b426e",
+      "bytes": 14143
+    },
+    "coordinacion/respuestas/PRECISION-OBLIQUE-COMMON-DETECTOR-LENGTH-CPU-001-CODEX.json": {
+      "sha256": "139cb34a315f476fa026bb346086a3a59d7c22241932ca3f4c291a501f4ca47e",
+      "bytes": 26731
+    }
+  },
+  "qa_runner": "import base64,ctypes,datetime,hashlib,json,os,psutil,subprocess,zlib\nfrom pathlib import Path\nk=ctypes.windll.kernel32\nk.GetCurrentProcess.restype=ctypes.c_void_p\nk.SetProcessAffinityMask.argtypes=[ctypes.c_void_p,ctypes.c_size_t]\nassert k.SetProcessAffinityMask(k.GetCurrentProcess(),1)\nbudget=128*1024**2\nram=psutil.virtual_memory().available\nassert ram-budget>=4*1024**3\nstart=datetime.datetime.now(datetime.timezone.utc)\ndeadline=start+datetime.timedelta(seconds=35)\ncmd=['C:/Python313/python.exe','-B','Blender/tests/test_existing_p03_cost_scope_HOST_v1.py']\nenv=dict(os.environ)\nfor v in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS'):env[v]='1'\np=subprocess.run(cmd,capture_output=True,timeout=30,env=env)\nend=datetime.datetime.now(datetime.timezone.utc)\nout=dict(rc=p.returncode,timed_out=False,before_deadline=end<deadline,started_utc=start.isoformat(),ended_utc=end.isoformat(),deadline_utc=deadline.isoformat(),elapsed_QA_seconds=(end-start).total_seconds(),timeout_seconds=30,affinity_mask=1,thread_environment={v:env[v]for v in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS')},RAM_available_before_bytes=ram,RAM_budget_bytes=budget,RAM_reserve_after_budget_bytes=ram-budget,command=cmd,stdout_bytes=len(p.stdout),stdout_sha256=hashlib.sha256(p.stdout).hexdigest(),stdout_zlib_base64=base64.b64encode(zlib.compress(p.stdout,9)).decode(),stderr_utf8=p.stderr.decode('utf-8','replace'),GPU_used=False)\nif p.returncode==0:\n d=json.loads(p.stdout);out['summary']=dict(status=d['status'],tests=d['tests'],records=len(d['records']),kinds={key:sum(r['kind']==key for r in d['records'])for key in sorted(set(r['kind']for r in d['records']))})\nprint(json.dumps(out,ensure_ascii=True))\n",
+  "test_run": {
+    "rc": 0,
+    "timed_out": false,
+    "before_deadline": true,
+    "started_utc": "2026-10-07T10:44:59.707523+00:00",
+    "ended_utc": "2026-10-07T10:44:59.876333+00:00",
+    "deadline_utc": "2026-10-07T10:45:34.707523+00:00",
+    "elapsed_QA_seconds": 0.16881,
+    "timeout_seconds": 30,
+    "affinity_mask": 1,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "RAM_available_before_bytes": 7543898112,
+    "RAM_budget_bytes": 134217728,
+    "RAM_reserve_after_budget_bytes": 7409680384,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      "Blender/tests/test_existing_p03_cost_scope_HOST_v1.py"
+    ],
+    "stdout_bytes": 2837,
+    "stdout_sha256": "920813cc64dc0f93d22fd0e13c242f25ffc51acd914b48a3e5214d2843095e8e",
+    "stdout_zlib_base64": "eNrFVt+P4jYQfq/U/2HF8wnFSZwf+8ZBbheVC6sQVJ2q1cgEA+kGO7WT296d9n/v2JAl7UJfWrEIRYkzM/7mm4m/+THQDWtaPbi9GTyMFovBh5tBw3VjFjy8V7yQam2efvsxeCrF2hiO54scJkk+ms4gnecwTSG/ny4gSxbLWW5C7EutS7GFRtZQ8a+8gkLuaym4sJEJsaEbVgq+hq2SbQ2NYgUH3a6acs8VGm1YpTnayWbHFfqLRslKAxdb9IJ1q1hTSoGGoq0qtOOCq+03+F22Fden5eedrDjUZc0r42dwMMVWlbnVzcmug7znTGj4zpXsMLx8uDnlnpm002QCd9l8+QBJeodPMFlmo3w6T03uesdqbghD/vBPHs0a0igsjQNnSL3Q9wIHf8RzaeRZp0Jap0GejcYJfFqmYxPP0vtxlI/vYZ7h6mwG96MsTbBQ/w2V+waV44QkIF4cx1EcUZ/6/nVxhRfY8v3Apa6LuOKA0ii4LqrgAiqH+C5yZWoYRpQGUXxdXP5FXJ4fIRqsYuTHbkzfg65zzUVdYmsYB6Ebk2vjov9CFwk88y16UeT6cfQeTX+GL5eQ0AkNXxFePf89uutsGR3XJbaOTki9a59d9DIuEvimv0JK/NjzvP+1vzosMMqm+f3nJJ+OYZ7Ovgys6lg5OmiYbvfQA0aGThBRbC8DzJ5eeN4bpx1TgmsNB3VFCew5ucMw9ijWPAiJT0LXsyfetmVqjdqHUoo5/W0TMgyp6xFiy+JE/fj7UrT6ErbQpY4XuLhN4DpBGAYhPe108Ozi9PyiYUyjkBBMBQ8YJwwOrYmyjfptBBlqJb9yDXhRO87WPSU/Y4VyvMenopLFE0gj8+jGtrznpXjNWQOa7euDsDu4WHO1kWrPRNFJeqntMPBWsRfzZYbVz6efkww+zpfpBMuY2Ennj5aJBmpZlcU3WHGMyLv5optCGtUaECvWFLvO5DCqFKyqTgZLWMtnUUm2BibWcNx0U/JqrYFtGhxhrNvJQ3HdVpgXVyWryu92mjladrz/AwQGEHpjhyHDxcGhaVS5ao+j0GCZ/pLOf8VOXXxJx8fh7FOSZcnE5GtptsPcsW9vDY8YrhW4ba9zbs3OQ3N5bYnb12Z904WPL4/9ry1LxvNsgt+NpXwBo3TS8XGi//UDMoyWWwH8T150aXSlF/wZ7h6WZ99xLF4Fz1I9QcFVUyLV/V7b4FRnJ7yzb2tMptTHPtzLfuiXn3/6CxO+YGs=",
+    "stderr_utf8": "...\r\n----------------------------------------------------------------------\r\nRan 3 tests in 0.018s\r\n\r\nOK\r\n",
+    "GPU_used": false,
+    "summary": {
+      "status": "PASS",
+      "tests": 3,
+      "records": 13,
+      "kinds": {
+        "COST_DETAIL_NOT_IN_THIS_RESULT": 1,
+        "RETAINED_DURATION_ARITHMETIC_ONLY": 1,
+        "RETAINED_GROUP_ENGINE_DURATION": 10,
+        "SOURCE_TIMER_BOUNDARIES": 1
+      }
+    }
+  },
+  "foreign_execution": false,
+  "new_GPU_execution": false,
+  "physics_replays": 0,
+  "new_benchmark_samples": 0,
+  "equal_work_certified": false,
+  "full_cost_certified": false,
+  "energy_joules": null,
+  "precision_promotion": false,
+  "unknown_costs_are_zero": false,
+  "JEV": "LOCAL_SECURITY_BLOCK_NO_RETRY_NO_REMOTE_ENDORSEMENT",
+  "oracle_code": "import base64,hashlib,json,zlib\nfrom fractions import Fraction as F\nfrom pathlib import Path\nr=json.loads(Path('coordinacion/respuestas/PRECISION-EXISTING-P03-COST-SCOPE-HOST-001-CODEX.json').read_bytes())\nfor p,pin in r['pins'].items():\n b=Path(p).read_bytes();assert hashlib.sha256(b).hexdigest()==pin['sha256'] and len(b)==pin['bytes'],p\nraw=zlib.decompress(base64.b64decode(r['test_run']['stdout_zlib_base64']))\nassert hashlib.sha256(raw).hexdigest()==r['test_run']['stdout_sha256']\nqa=json.loads(raw);assert qa['status']=='PASS' and qa['tests']==3 and len(qa['records'])==13\nbase=Path('D:/PROJECTS/.cognition/neuro3d/p0_scene_gpu')\nresult=json.loads((base/'p03_cuda_result.json').read_bytes(),parse_float=F)\nenv=json.loads((base/'p03_cuda_envelope.json').read_bytes(),parse_float=F)\nrows=[x for x in qa['records'] if x['kind']=='RETAINED_GROUP_ENGINE_DURATION'];assert len(rows)==10\nfor row,g in zip(rows,result['groups'],strict=True):\n assert row['shape']==g['shape'] and F(row['seconds'])==g['seconds_total']\na=[x for x in qa['records'] if x['kind']=='RETAINED_DURATION_ARITHMETIC_ONLY'][0]\ntotal=sum((g['seconds_total'] for g in result['groups']),F(0))\nassert F(a['engine_group_sum_seconds'])==total\nassert F(a['harness_recorded_seconds'])==result['seconds']\nassert F(a['guard_envelope_seconds'])==env['seconds']\nassert F(a['harness_minus_group_sum_seconds'])==result['seconds']-total\nassert F(a['guard_minus_harness_seconds'])==env['seconds']-result['seconds']\nassert not a['subtraction_proves_overhead'] and not a['performance_comparison']\ncode=Path('D:/PROJECTS/.cognition/neuro3d/nebulatrace/gpu_states_v2.py').read_text()\ntrace=code[code.index('def trace('):]\nassert trace.index('quant_policy(B, policy, quant, dquant)')<trace.index('t0 = time.perf_counter()')\nh=(base/'p03_harness_v4.py').read_text()\nassert h.index('Bt = gs.Batch(snaps, DEV)')<h.index('r = gs.trace(Bt, policy=POLICY)')<h.index(\"U = r['U'].cpu().numpy()\")<h.index('f = complex(U[i, pi] @ amp)')\nassert h.index(\"res['seconds'] = time.time() - t0\")<h.index(\"json.dump(res, open(OUT, 'w')\")\nassert all('seconds_trace' not in g for g in result['groups'])\nassert all('seconds_total' not in result[k] for k in ('mzi','conf1','strict_control'))\nassert not r['full_cost_certified'] and r['energy_joules'] is None and not r['precision_promotion']\nm=json.loads(Path('coordinacion/respuestas/GPU-GUARD-OWNED-TREE-CONTAINMENT-CPU-001-CODEX.json').read_bytes())['pinned_manifest_capture']\nb=zlib.decompress(base64.b64decode(m['stdout_zlib_base64']));assert hashlib.sha256(b).hexdigest()==m['stdout_sha256']\npins=json.loads(b)['pins'];assert len(pins)==461\nfor p,sha in pins.items():assert hashlib.sha256(Path(p).read_bytes()).hexdigest()==sha,p\nprint(json.dumps(dict(status='PASS',archive_and_own_pins=20,retained_group_durations=10,exact_decimal_reconciliations=5,source_timer_boundaries=True,frozen_pins=461,full_cost_certified=False,energy_joules=None,durations=a)))\n",
+  "oracle_runner": "import base64,ctypes,datetime,hashlib,json,os,psutil,subprocess,zlib\nfrom pathlib import Path\nk=ctypes.windll.kernel32\nk.GetCurrentProcess.restype=ctypes.c_void_p\nk.SetProcessAffinityMask.argtypes=[ctypes.c_void_p,ctypes.c_size_t]\nassert k.SetProcessAffinityMask(k.GetCurrentProcess(),1)\nbudget=128*1024**2\nram=psutil.virtual_memory().available\nassert ram-budget>=4*1024**3\nstart=datetime.datetime.now(datetime.timezone.utc)\ndeadline=start+datetime.timedelta(seconds=35)\ncmd=['C:/Python313/python.exe','-B','.cognition/neuro3d-mega-geometry-20261005/existing_p03_cost_scope_oracle.py']\nenv=dict(os.environ)\nfor v in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS'):env[v]='1'\np=subprocess.run(cmd,capture_output=True,timeout=30,env=env)\nend=datetime.datetime.now(datetime.timezone.utc)\nout=dict(rc=p.returncode,timed_out=False,before_deadline=end<deadline,started_utc=start.isoformat(),ended_utc=end.isoformat(),deadline_utc=deadline.isoformat(),elapsed_QA_seconds=(end-start).total_seconds(),timeout_seconds=30,affinity_mask=1,thread_environment={v:env[v]for v in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS')},RAM_available_before_bytes=ram,RAM_budget_bytes=budget,RAM_reserve_after_budget_bytes=ram-budget,command=cmd,stdout_bytes=len(p.stdout),stdout_sha256=hashlib.sha256(p.stdout).hexdigest(),stdout_zlib_base64=base64.b64encode(zlib.compress(p.stdout,9)).decode(),stderr_utf8=p.stderr.decode('utf-8','replace'),GPU_used=False)\nif p.returncode==0:out['summary']=json.loads(p.stdout)\nprint(json.dumps(out,ensure_ascii=True))",
+  "oracle_run": {
+    "rc": 0,
+    "timed_out": false,
+    "before_deadline": true,
+    "started_utc": "2026-10-07T10:46:01.285713+00:00",
+    "ended_utc": "2026-10-07T10:46:01.539567+00:00",
+    "deadline_utc": "2026-10-07T10:46:36.285713+00:00",
+    "elapsed_QA_seconds": 0.253854,
+    "timeout_seconds": 30,
+    "affinity_mask": 1,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "RAM_available_before_bytes": 7482773504,
+    "RAM_budget_bytes": 134217728,
+    "RAM_reserve_after_budget_bytes": 7348555776,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      ".cognition/neuro3d-mega-geometry-20261005/existing_p03_cost_scope_oracle.py"
+    ],
+    "stdout_bytes": 690,
+    "stdout_sha256": "a25202042e1c9e302fd15de45bfc181d2ff10b0c139750998d7f4cf147f47e84",
+    "stdout_zlib_base64": "eNp1kk1v2zAMhu8D9h8Kn4fAsmPJ2i1YAyzAlg5pdtiJUGXG0WpLBiVlH0X/+yR37TxguwiQXj58SYoPhQ8qRF+8vSo+bW5vizdXhSJ9NhcEZTtw3yxMxma9KpNGGJSx2EFPLk7QRVLBuFlnWcfvSgfoUJtRDUCondVmMC9BTYrxLpJGCGZEgjsXbafIYFYDRUwBJ3I/8cV3zVl+i8MA2vkAGimYk8EuaSc1+EygRep/wFcXhzmRTdHpeVneQ3FvbGaKw/a42e2313D9+bA57m72sDnsju8/bo+7d3Cz//ClmDP2qc/fbfo4gs+9dPOg2KrkbcPrUkopJG+atq6aDJ0VWfR+7pu6NKUFVK2ErBspay7Ymomq5pnoo6IO0F5wcBP+ZcJWoqlqxlhykWW7zD8aG/3/ahNVU9a8Sja8KrkQXDR/nJ7I5zwLrl3JphWMpVbatSwFX2fIx7tA6UfTDGEid0EP6aAzquX0/xGl3Timmx6cvgdH6Z4w1eOCIpxQBfBqnJ4+Le/PhHRyNCqbFiTlmNJmeGefqcfH169+AcY+5B8=",
+    "stderr_utf8": "",
+    "GPU_used": false,
+    "summary": {
+      "status": "PASS",
+      "archive_and_own_pins": 20,
+      "retained_group_durations": 10,
+      "exact_decimal_reconciliations": 5,
+      "source_timer_boundaries": true,
+      "frozen_pins": 461,
+      "full_cost_certified": false,
+      "energy_joules": null,
+      "durations": {
+        "kind": "RETAINED_DURATION_ARITHMETIC_ONLY",
+        "engine_group_sum_seconds": "1.0685630999796558325",
+        "harness_recorded_seconds": "2.7935993671417236",
+        "guard_envelope_seconds": "11.7523111999908",
+        "harness_minus_group_sum_seconds": "1.7250362671620677675",
+        "guard_minus_harness_seconds": "8.9587118328490764",
+        "subtraction_proves_overhead": false,
+        "subtraction_proves_common_clock_or_coverage": false,
+        "repeat_samples": 0,
+        "performance_comparison": false
+      }
+    }
+  }
+}
