@@ -1,0 +1,173 @@
+{
+  "id": "PRECISION-ORIGINAL-SOURCE-NORMALIZATION-CPU64-001",
+  "owner": "Codex",
+  "parent_commit": "fe439f00099a318decad053ce43db7bce05f5346",
+  "scope": "ACTUAL_CPU64_SOURCE_INGRESS_WORDS_FROM_ORIGINAL_SCENE_ONLY_NOT_GPU_OR_FIELD",
+  "pins": {
+    "Blender/benchmarks/capacity_audit/original_SOURCE_normalization_CPU64_v1.py": {
+      "sha256": "770864fbc962efd292649a51fb3cf94439b1685c484b8a00b4cba3adfff21c96",
+      "bytes": 5196
+    },
+    "Blender/tests/test_original_SOURCE_normalization_CPU64_v1.py": {
+      "sha256": "8cb463f63213d29e8dc7921667d33048907846aeb7bfd4819682c4af82d33dc2",
+      "bytes": 5219
+    },
+    "Docs/EXP-005-ORIGINAL-SOURCE-NORMALIZATION-CPU64-001.md": {
+      "sha256": "156b2f0cd7290b1bf0a5139aaa89f5dd20225eab376c65d088eb69c4e1c2de4c",
+      "bytes": 3528
+    },
+    "coordinacion/respuestas/PRECISION-OBLIQUE-COMMON-DETECTOR-LENGTH-CPU-001-CODEX.json": {
+      "sha256": "139cb34a315f476fa026bb346086a3a59d7c22241932ca3f4c291a501f4ca47e",
+      "bytes": 26731
+    },
+    "coordinacion/respuestas/PRECISION-TERMINAL-PARAMETER-REFERENCE-IDENTITY-HOST-001-CODEX.json": {
+      "sha256": "20e14db6efae75989f023891cc7decb79002142cc5a9fe9ccd31d0df50221124",
+      "bytes": 15795
+    },
+    "coordinacion/respuestas/GPU-GUARD-OWNED-TREE-CONTAINMENT-CPU-001-CODEX.json": {
+      "sha256": "172576dd8a38cf8119f2a1a3d229b534a7e77fdbde2632e2ef967b10e2d6e9f4",
+      "bytes": 128597
+    }
+  },
+  "qa_runner": "import base64,ctypes,datetime,hashlib,json,os,psutil,subprocess,zlib\nfrom pathlib import Path\nk=ctypes.windll.kernel32\nk.GetCurrentProcess.restype=ctypes.c_void_p\nk.SetProcessAffinityMask.argtypes=[ctypes.c_void_p,ctypes.c_size_t]\nassert k.SetProcessAffinityMask(k.GetCurrentProcess(),1)\nbudget=128*1024**2\nram=psutil.virtual_memory().available\nassert ram-budget>=4*1024**3\nstart=datetime.datetime.now(datetime.timezone.utc)\ndeadline=start+datetime.timedelta(seconds=35)\ncmd=['C:/Python313/python.exe','-B','Blender/tests/test_original_SOURCE_normalization_CPU64_v1.py']\nenv=dict(os.environ)\nfor v in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS'):env[v]='1'\np=subprocess.run(cmd,capture_output=True,timeout=30,env=env)\nend=datetime.datetime.now(datetime.timezone.utc)\nout=dict(rc=p.returncode,timed_out=False,before_deadline=end<deadline,started_utc=start.isoformat(),ended_utc=end.isoformat(),deadline_utc=deadline.isoformat(),elapsed_QA_seconds=(end-start).total_seconds(),timeout_seconds=30,affinity_mask=1,thread_environment={v:env[v]for v in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS')},RAM_available_before_bytes=ram,RAM_budget_bytes=budget,RAM_reserve_after_budget_bytes=ram-budget,command=cmd,stdout_bytes=len(p.stdout),stdout_sha256=hashlib.sha256(p.stdout).hexdigest(),stdout_zlib_base64=base64.b64encode(zlib.compress(p.stdout,9)).decode(),stderr_utf8=p.stderr.decode('utf-8','replace'),GPU_used=False)\nif p.returncode==0:\n d=json.loads(p.stdout);out['summary']=dict(status=d['status'],tests=d['tests'],records=len(d['records']),kinds={key:sum(r['kind']==key for r in d['records'])for key in sorted(set(r['kind']for r in d['records']))})\nprint(json.dumps(out,ensure_ascii=True))\n",
+  "test_run": {
+    "rc": 0,
+    "timed_out": false,
+    "before_deadline": true,
+    "started_utc": "2026-10-07T11:09:31.090080+00:00",
+    "ended_utc": "2026-10-07T11:09:31.263860+00:00",
+    "deadline_utc": "2026-10-07T11:10:06.090080+00:00",
+    "elapsed_QA_seconds": 0.17378,
+    "timeout_seconds": 30,
+    "affinity_mask": 1,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "RAM_available_before_bytes": 6349578240,
+    "RAM_budget_bytes": 134217728,
+    "RAM_reserve_after_budget_bytes": 6215360512,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      "Blender/tests/test_original_SOURCE_normalization_CPU64_v1.py"
+    ],
+    "stdout_bytes": 14939,
+    "stdout_sha256": "742d11cd11193f82cf3f74d17706770bcae562ee36c4d7c8a005bd57d9c570b0",
+    "stdout_zlib_base64": "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",
+    "stderr_utf8": "...\r\n----------------------------------------------------------------------\r\nRan 3 tests in 0.005s\r\n\r\nOK\r\n",
+    "GPU_used": false,
+    "summary": {
+      "status": "PASS",
+      "tests": 3,
+      "records": 20,
+      "kinds": {
+        "ATOMIC_INPUT_STOP": 5,
+        "CASE_SCOPE": 4,
+        "CONTENT_OR_CHANNEL_STOP": 3,
+        "CPU64_SOURCE_WORD_CAPTURE": 8
+      }
+    }
+  },
+  "review_initial_source": "\"\"\"Opt-in actual CPython CPU64 SOURCE ingress observation, NOT GPU evidence.\"\"\"\nfrom fractions import Fraction as F\nimport hashlib\nimport json\nimport math\nimport struct\nimport sys\n\nMODEL = \"original-SOURCE-normalization-CPU64-v1\"\nGRAPH = \"cast_exact_inputs;mul_xx;mul_yy;mul_zz;add_xy;add_z;math.sqrt;div_xyz\"\n\n\ndef need(ok, reason):\n    if not ok:\n        raise ValueError(reason)\n\n\ndef digest(value):\n    return hashlib.sha256(json.dumps(value, sort_keys=True, separators=(\",\", \":\"),\n                                    allow_nan=False).encode()).hexdigest()\n\n\ndef rational(value):\n    need(type(value) is list and len(value) == 2\n         and all(type(x) is int for x in value), \"typed rational\")\n    n, d = value\n    need(d > 0 and max(abs(n).bit_length(), d.bit_length()) <= 128, \"bounded rational\")\n    q = F(n, d)\n    need([q.numerator, q.denominator] == value and abs(q) <= 10**6, \"canonical rational\")\n    return q\n\n\ndef exact_float(value):\n    q = rational(value)\n    v = float(q)\n    need(math.isfinite(v) and F.from_float(v) == q, \"STOP_INPUT_CAST_LOSS\")\n    return v\n\n\ndef word(value):\n    return struct.pack(\">d\", value).hex()\n\n\ndef observe(scene, query, scene_sha256, query_sha256):\n    \"\"\"Atomic: every SOURCE checked before any record is returned.\n    Original scene/query are inputs, never computed hit/length/phase substitutes.\n    Signed unit defect is exact arithmetic on CPU-emitted words, NOT angular\n    error vs ideal normalized direction or total optical phase.\n    \"\"\"\n    out = dict(model=MODEL, status=\"STOP\", reason=None, records=[], graph=GRAPH,\n               scope=\"ACTUAL_CPU64_SOURCE_INGRESS_ONLY\", GPU_used=False,\n               Bpy_used=False, RT_used=False, SOURCE_merged=False,\n               native_GPU_precision_certified=False, ideal_direction_error_bound=None,\n               native_phase_bound_rad=None, original_pointwise_budget_certified=False,\n               current_GPU_admission=False, full_costs=\"UNKNOWN_NOT_ZERO\")\n    try:\n        need(sys.implementation.name == \"cpython\" and sys.float_info.radix == 2\n             and sys.float_info.mant_dig == 53 and sys.float_info.max_exp == 1024,\n             \"CPython binary64 runtime required\")\n        need(type(scene) is dict and set(scene) == {\"schema\", \"units\", \"sources\", \"triangles\"}\n             and scene[\"schema\"] == \"precision-oblique-declared-scene-v1\"\n             and scene[\"units\"] == \"BU\", \"declared original scene schema\")\n        need(digest(scene) == scene_sha256 and digest(query) == query_sha256,\n             \"scene/query content pin mismatch\")\n        need(query[\"original_scene_sha256\"] == scene_sha256, \"query original scene link\")\n        need(type(scene[\"sources\"]) is list and len(scene[\"sources\"]) == 2\n             and [s[\"id\"] for s in scene[\"sources\"]] == query[\"source_ids\"] == [\"S0\", \"S1\"],\n             \"ordered separate original SOURCE channels\")\n        rows = []\n        for s in scene[\"sources\"]:\n            need(type(s) is dict and set(s) == {\"id\", \"position_BU\", \"direction\"}, \"closed SOURCE\")\n            need(type(s[\"position_BU\"]) is list and len(s[\"position_BU\"]) == 3\n                 and type(s[\"direction\"]) is list and len(s[\"direction\"]) == 3, \"SOURCE vector3\")\n            p = [exact_float(v) for v in s[\"position_BU\"]]\n            d = [exact_float(v) for v in s[\"direction\"]]\n            xx, yy, zz = d[0]*d[0], d[1]*d[1], d[2]*d[2]\n            xy = xx+yy\n            squared = xy+zz\n            norm = math.sqrt(squared)\n            need(math.isfinite(norm) and norm > 0, \"nonzero finite SOURCE norm\")\n            unit = [v/norm for v in d]\n            need(all(math.isfinite(v) for v in unit), \"finite normalized SOURCE\")\n            defect = F(1) - sum((F.from_float(v)**2 for v in unit), F(0))\n            rows.append(dict(source_id=s[\"id\"], scene_sha256=scene_sha256,\n                             query_sha256=query_sha256, position_words_hex=[word(v) for v in p],\n                             direction_input_words_hex=[word(v) for v in d],\n                             scalar_graph_words_hex={k:word(v) for k,v in\n                                 ((\"xx\",xx),(\"yy\",yy),(\"zz\",zz),(\"xy\",xy),\n                                  (\"squared\",squared),(\"sqrt\",norm))},\n                             normalized_direction_words_hex=[word(v) for v in unit],\n                             one_minus_exact_word_norm_squared=[str(defect.numerator),str(defect.denominator)],\n                             SOURCE_position_input_loss_BU=[\"0\",\"1\"]))\n        out.update(status=\"CPU64_SOURCE_WORDS_OBSERVED_ONLY\", records=rows,\n                   runtime=dict(implementation=sys.implementation.name,\n                                python_version=sys.version.split()[0],byteorder=sys.byteorder,\n                                float_mant_dig=sys.float_info.mant_dig),\n                   root_calls=len(rows))\n    except (ValueError, KeyError, TypeError, IndexError, OverflowError) as ex:\n        out[\"reason\"] = str(ex)\n    return out\n",
+  "review_initial_capture": {
+    "rc": 0,
+    "timed_out": false,
+    "before_deadline": true,
+    "started_utc": "2026-10-07T11:08:47.392583+00:00",
+    "ended_utc": "2026-10-07T11:08:47.568337+00:00",
+    "deadline_utc": "2026-10-07T11:09:22.392583+00:00",
+    "elapsed_QA_seconds": 0.175754,
+    "timeout_seconds": 30,
+    "affinity_mask": 1,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "RAM_available_before_bytes": 6933635072,
+    "RAM_budget_bytes": 134217728,
+    "RAM_reserve_after_budget_bytes": 6799417344,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      "Blender/tests/test_original_SOURCE_normalization_CPU64_v1.py"
+    ],
+    "stdout_bytes": 14787,
+    "stdout_sha256": "37968e39e26c0322f5fd094c048649f73041d3eed28322fac1c41bf5107f7c30",
+    "stdout_zlib_base64": "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",
+    "stderr_utf8": "...\r\n----------------------------------------------------------------------\r\nRan 3 tests in 0.006s\r\n\r\nOK\r\n",
+    "GPU_used": false,
+    "summary": {
+      "status": "PASS",
+      "tests": 3,
+      "records": 20,
+      "kinds": {
+        "ATOMIC_INPUT_STOP": 5,
+        "CASE_SCOPE": 4,
+        "CONTENT_OR_CHANNEL_STOP": 3,
+        "CPU64_SOURCE_WORD_CAPTURE": 8
+      }
+    }
+  },
+  "review_action": "Prevalidate BOTH original sources before any arithmetic/root; initial capture refers to initial source, not final graph. No mathematical threshold changed.",
+  "final_QA_source_sqrt_calls": 8,
+  "all_development_steps_total_costs": "NOT_A_PERFORMANCE_BENCHMARK_UNKNOWN_FULL_COSTS",
+  "foreign_code_executed": false,
+  "GPU_used": false,
+  "new_trace_calls": 0,
+  "native_phase_bound_rad": null,
+  "ideal_direction_error_bound": null,
+  "pointwise_promotion": false,
+  "full_costs": "UNKNOWN_NOT_ZERO",
+  "JEV": "LOCAL_SECURITY_BLOCK_NO_RETRY_OR_ENDORSEMENT",
+  "oracle_runner": "import base64,ctypes,datetime,hashlib,json,os,psutil,subprocess,zlib\nfrom pathlib import Path\nk=ctypes.windll.kernel32\nk.GetCurrentProcess.restype=ctypes.c_void_p\nk.SetProcessAffinityMask.argtypes=[ctypes.c_void_p,ctypes.c_size_t]\nassert k.SetProcessAffinityMask(k.GetCurrentProcess(),1)\nbudget=128*1024**2\nram=psutil.virtual_memory().available\nassert ram-budget>=4*1024**3\nstart=datetime.datetime.now(datetime.timezone.utc)\ndeadline=start+datetime.timedelta(seconds=35)\ncmd=['C:/Python313/python.exe','-B','.cognition/neuro3d-mega-geometry-20261005/original-SOURCE-normalization-oracle.py']\nenv=dict(os.environ)\nfor v in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS'):env[v]='1'\np=subprocess.run(cmd,capture_output=True,timeout=30,env=env)\nend=datetime.datetime.now(datetime.timezone.utc)\nout=dict(rc=p.returncode,timed_out=False,before_deadline=end<deadline,started_utc=start.isoformat(),ended_utc=end.isoformat(),deadline_utc=deadline.isoformat(),elapsed_QA_seconds=(end-start).total_seconds(),timeout_seconds=30,affinity_mask=1,thread_environment={v:env[v]for v in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS')},RAM_available_before_bytes=ram,RAM_budget_bytes=budget,RAM_reserve_after_budget_bytes=ram-budget,command=cmd,stdout_bytes=len(p.stdout),stdout_sha256=hashlib.sha256(p.stdout).hexdigest(),stdout_zlib_base64=base64.b64encode(zlib.compress(p.stdout,9)).decode(),stderr_utf8=p.stderr.decode('utf-8','replace'),GPU_used=False)\nif p.returncode==0:out['summary']=json.loads(p.stdout)\nprint(json.dumps(out,ensure_ascii=True))",
+  "oracle_run": {
+    "rc": 0,
+    "timed_out": false,
+    "before_deadline": true,
+    "started_utc": "2026-10-07T11:11:35.212516+00:00",
+    "ended_utc": "2026-10-07T11:11:35.480409+00:00",
+    "deadline_utc": "2026-10-07T11:12:10.212516+00:00",
+    "elapsed_QA_seconds": 0.267893,
+    "timeout_seconds": 30,
+    "affinity_mask": 1,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "RAM_available_before_bytes": 6849134592,
+    "RAM_budget_bytes": 134217728,
+    "RAM_reserve_after_budget_bytes": 6714916864,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      ".cognition/neuro3d-mega-geometry-20261005/original-SOURCE-normalization-oracle.py"
+    ],
+    "stdout_bytes": 296,
+    "stdout_sha256": "2888bc2c28d2e562344c7391160cd0d9d70948a91f6ec04ebd7d238061e68649",
+    "stdout_zlib_base64": "eNpVjsFqwzAMhu+DvkPxuTA7kVNnt516LZSdyjAmkVuDZ2ey064Ze/fZsLLtqO//9UmfLGWT58Se1mz/fDiwzZpdI42a4rVCVWb8MEPWIYYFKeoRLQ65ZkcG0EsBWyUEKMnbx0a2suWi4RxkB1Ip3vR9C7wDwbeyYa/F5sI0Zz25UBVdAZbiguFOoBOFBTyZ7C6oJ0Lr3elc75efYr4/ld4p68F4nzTh5M0Nx5LwuhvpzXi3FEEMf0NrfMJa+FGfTUI9IGVn3b/Cbv+i5/SLvlYP32BZXiA=",
+    "stderr_utf8": "",
+    "GPU_used": false,
+    "summary": {
+      "status": "PASS",
+      "word_rows": 8,
+      "exact_nonzero_defects": [
+        "449514781148503/2535301200456458802993406410752"
+      ],
+      "input_pins": 6,
+      "frozen_pins": 461,
+      "negative_preflight_no_roots": 8,
+      "sqrt_calls_replayed": 0,
+      "normalization_replayed": false,
+      "native_phase_certified": false,
+      "GPU_used": false
+    }
+  },
+  "oracle_code": "\"\"\"Read emitted CPU words by integer IEEE decoding; no normalization replay.\"\"\"\nimport base64,hashlib,json,zlib\nfrom fractions import Fraction as F\nfrom pathlib import Path\nr=json.loads(Path(\"coordinacion/respuestas/PRECISION-ORIGINAL-SOURCE-NORMALIZATION-CPU64-001-CODEX.json\").read_bytes())\nfor path,pin in r[\"pins\"].items():\n raw=Path(path).read_bytes()\n assert hashlib.sha256(raw).hexdigest()==pin[\"sha256\"] and len(raw)==pin[\"bytes\"],path\ndef payload(c):\n raw=zlib.decompress(base64.b64decode(c[\"stdout_zlib_base64\"]))\n assert hashlib.sha256(raw).hexdigest()==c[\"stdout_sha256\"] and len(raw)==c[\"stdout_bytes\"]\n assert c[\"rc\"]==0 and not c[\"timed_out\"]\n return json.loads(raw)\ndef digest(x):return hashlib.sha256(json.dumps(x,sort_keys=True,separators=(\",\",\":\")).encode()).hexdigest()\ndef decode(w):\n assert len(w)==16 and all(c in \"0123456789abcdef\" for c in w)\n b=int(w,16); sign=-1 if b>>63 else 1; e=(b>>52)&2047; f=b&((1<<52)-1)\n assert e!=2047\n if e==0: return sign*F(f)*F(2)**(-1074)\n return sign*F((1<<52)+f)*F(2)**(e-1023-52)\nqa=payload(r[\"test_run\"])\nassert qa[\"status\"]==\"PASS\" and qa[\"tests\"]==3 and len(qa[\"records\"])==20\nlit=json.loads(Path(\"coordinacion/respuestas/PRECISION-OBLIQUE-COMMON-DETECTOR-LENGTH-CPU-001-CODEX.json\").read_bytes())\ninputs=payload(lit[\"test_run\"])[\"data\"][\"inputs\"]\nrows=[x for x in qa[\"records\"] if x[\"kind\"]==\"CPU64_SOURCE_WORD_CAPTURE\"]\nassert len(rows)==8\ndefects=set()\nfor case in (\"oblique\",\"direction_scaled\",\"shared_ref1000\",\"tiny_gap_2m60\"):\n item=inputs[case]\n records=[x for x in rows if x[\"case\"]==case]\n assert [x[\"source_id\"] for x in records]==[\"S0\",\"S1\"]\n assert digest(item[\"scene\"])==item[\"request\"][\"original_scene_sha256\"]\n for row,s in zip(records,item[\"scene\"][\"sources\"],strict=True):\n  assert row[\"scene_sha256\"]==digest(item[\"scene\"]) and row[\"query_sha256\"]==digest(item[\"request\"])\n  p=list(map(decode,row[\"position_words_hex\"]));d=list(map(decode,row[\"direction_input_words_hex\"]))\n  assert p==[F(*v) for v in s[\"position_BU\"]] and d==[F(*v) for v in s[\"direction\"]]\n  graph={k:decode(v) for k,v in row[\"scalar_graph_words_hex\"].items()}\n  assert graph[\"xx\"]==d[0]**2 and graph[\"yy\"]==d[1]**2 and graph[\"zz\"]==d[2]**2\n  assert graph[\"xy\"]==graph[\"xx\"]+graph[\"yy\"] and graph[\"squared\"]==graph[\"xy\"]+graph[\"zz\"]\n  assert graph[\"sqrt\"]>0 and graph[\"sqrt\"]**2!=graph[\"squared\"]\n  unit=list(map(decode,row[\"normalized_direction_words_hex\"]))\n  assert unit[0]==unit[1]>0 and unit[2]==0\n  delta=F(1)-sum(u*u for u in unit)\n  assert delta!=0 and F(*map(int,row[\"one_minus_exact_word_norm_squared\"]))==delta\n  defects.add(str(delta))\n  assert row[\"SOURCE_position_input_loss_BU\"]==[\"0\",\"1\"]\nscopes=[x for x in qa[\"records\"] if x[\"kind\"]==\"CASE_SCOPE\"]\nassert len(scopes)==4 and sum(x[\"root_calls\"] for x in scopes)==8\nfor x in scopes:\n assert not x[\"GPU_used\"] and not x[\"native_GPU_precision_certified\"] and x[\"native_phase_bound_rad\"] is None\n assert not x[\"original_pointwise_budget_certified\"] and not x[\"current_GPU_admission\"]\n assert x[\"ideal_direction_error_bound\"] is None and x[\"runtime\"][\"implementation\"]==\"cpython\"\nstops=[x for x in qa[\"records\"] if x[\"kind\"].endswith(\"STOP\")]\nassert len(stops)==8\nassert all(x[\"status\"]==\"STOP\" and x[\"records\"]==[] and x[\"root_calls\"]==0 for x in stops)\nmanifest=payload(json.loads(Path(\"coordinacion/respuestas/GPU-GUARD-OWNED-TREE-CONTAINMENT-CPU-001-CODEX.json\").read_bytes())[\"pinned_manifest_capture\"])\nassert len(manifest[\"pins\"])==461\nfor path,h in manifest[\"pins\"].items(): assert hashlib.sha256(Path(path).read_bytes()).hexdigest()==h,path\nprint(json.dumps(dict(status=\"PASS\",word_rows=8,exact_nonzero_defects=sorted(defects),\n input_pins=len(r[\"pins\"]),frozen_pins=461,negative_preflight_no_roots=8,\n sqrt_calls_replayed=0,normalization_replayed=False,native_phase_certified=False,GPU_used=False)))\n"
+}
