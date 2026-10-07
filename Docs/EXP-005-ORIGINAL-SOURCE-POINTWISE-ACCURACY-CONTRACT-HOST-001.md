@@ -1,0 +1,15 @@
+# Presupuesto puntual separado del ancho geométrico
+
+ID PRECISION-ORIGINAL-SOURCE-POINTWISE-ACCURACY-CONTRACT-HOST-001. Codex P1, opt-in HOST, fallback LOCAL sin aval JEV; no backend nativo nuevo.
+
+Implementa un contrato cerrado para las ocho discrepancias RN64 ya capturadas: error absoluto de la longitud SOURCE→P frente a su norma geométrica declarada exacta. Reutiliza bytes sellados, no ejecuta productores, raíces, barridos ni shaders. No modifica el contrato original de ancho ni sus fixtures.
+
+Las cuotas de longitud BU y del término aislado de fase rad son entradas NUEVAS explícitas del llamante, no requisitos originales ni valores ajustados para promover. Los controles tight (2^-80 en cada unidad) y loose (2^-50 BU, 2^-40 rad) son asignaciones sintéticas predefinidas, no una modificación de tolerancias existentes. UNKNOWN/None es STOP; no equivale a cero. El campo backend identifica exclusivamente el modelo CPU hipotético RN64, nunca CUDA/Bpy/RT.
+
+Para discrepancia firmada [a,b], la cota absoluta es [0,max(|a|,|b|)] si contiene cero; en otro caso [min(|a|,|b|),max(|a|,|b|)]. Con la misma lambda positiva, el término aislado de fase está entre 6*lower/lambda y 8*upper/lambda. El extremo superior <= cuota certifica sólo la cota del MODELO; lower > cuota prueba exceso sólo del MODELO; los demás casos son STOP indeterminado. La igualdad con lower no prueba exceso. La referencia y lambda originales están ligadas a la consulta, no reestimadas. La referencia no participa en esta diferencia de primer tramo, pero no se permite transplantar a otra consulta.
+
+Esquema cerrado: SHA del recibo/fila/escena/query, SOURCE, backend, observables distintos de ancho, unidades, referencia, lambda y procedencia/asignación explícita de ambas cuotas. Relee el recibo fijo para verificar pertenencia de la fila: un llamante no puede modificar y resellar un testigo. Rechaza observable de ancho o fase total, SOURCE cruzada, referencia distinta, query distinta con igual escena, backend nativo y cargos extra que pretendan convertir ingreso desconocido en cero. Contrato generado no autentica presupuesto nativo ni convierte SHA en firma externa.
+
+Siempre native_admission=STOP_MISSING_NATIVE_EVIDENCE, native_accuracy_budget_admitted=false, phase_certified=false, promotion=STOP; SOURCE no se fusionan. Faltan identidad ABI/grafo del backend, error de ingreso SOURCE/P, ALU/referencia/lambda/fase y asignaciones nativas, cobertura geométrica/autointersección/huecos/exclusión, SOURCE/material separados y guard por job/igual trabajo/costes completos. Una cuota del modelo que cabe NO satisface esos cargos. Error de camino total NULL; costes UNKNOWN, no cero. No se supone cancelación entre términos.
+
+Mantener 20 STOP upstream y límites racionales128/output512. Tests: cuotas explícitas/unallocated por ocho filas, igualdad inclusiva y estricta, cero vs UNKNOWN, asignación parcial y negativos de esquema/contexto/capacidad. Sin GPU/Bpy/RT/SDK/DrJit/push/merge; ventana nocturna histórica intacta. Pedir a Claude artifacts EXISTENTES M03/M04/M05/M08/M13 o ausencia y respuesta por este ID+SHA; no lanzar cargas para rellenar.
