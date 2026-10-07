@@ -1,0 +1,249 @@
+{
+  "id": "PRECISION-EXISTING-P03-BACKEND-SCOPE-HOST-001",
+  "owner": "Codex capacity_audit/EXP005",
+  "parent_commit": "f915e4c423d64cd5c58355f3f7d58c493eeb5db9",
+  "scope": "READ_ONLY_EXISTING_ARCHIVE_AND_SOURCE_NOT_REEXECUTION",
+  "pins": {
+    "Blender/tests/test_existing_p03_backend_scope_HOST_v1.py": {
+      "sha256": "a78fc4e556f4230e259f1f50633b2570a2aa634db84f715fbb0701d21d7e2886",
+      "bytes": 6401
+    },
+    "Docs/EXP-005-EXISTING-P03-BACKEND-SCOPE-HOST-001.md": {
+      "sha256": "eaa8585440dad6f025b59e4199d7e70f35649b609bdb3be3a6f738ee0ca12c74",
+      "bytes": 3829
+    },
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_cuda_job.py": {
+      "sha256": "e7eeffd8e6147ec50f1cd61028dcb6b5fd90877a4ce9b88ede6ddb27ba547099",
+      "bytes": 3735
+    },
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_cuda_result.json": {
+      "sha256": "ed222ba40e6aaa8ca809353e101a2ff70dab847dd2aa4d0c613fb15bc8c44bba",
+      "bytes": 72738
+    },
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_cuda_checker_verdict.json": {
+      "sha256": "3af3628d36b65304996abbcc06d4760a939724d7207847573f1c8edfb2161dd3",
+      "bytes": 564
+    },
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_cuda_envelope.json": {
+      "sha256": "374a6ac74240963dacc9c1eeef7e1927b8a73740778f934202617a89794a4ff9",
+      "bytes": 1124
+    },
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_cuda_harness.log": {
+      "sha256": "c65cbebc955f370b74db726a2203e0e04caa622cd14a05f658f1a9fbfe28f4c7",
+      "bytes": 146
+    },
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_cuda_job_verdict.json": {
+      "sha256": "01474b62d6fbc0340c65f6bec8f9809f7b70f25be244fd5c774d8c157fac5fc2",
+      "bytes": 1392
+    },
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_harness_v4.py": {
+      "sha256": "31075e4a71ce8df323868a7013b030774476806adb9499141918732f87a627bc",
+      "bytes": 9557
+    },
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_checker_v2.py": {
+      "sha256": "d4ba59108695084af4e2b9b9487e3a17a98e9c6866f059df3e931499d55b17a0",
+      "bytes": 5485
+    },
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\p03_manifest.json": {
+      "sha256": "3343fa298cef2286e6643026a7e8b23ac4a6db011b443ffdf8c9c625fa89fe5b",
+      "bytes": 152882
+    },
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\CONTRATO-P0-3.md": {
+      "sha256": "ebaf059828776cd30ca67731deab247288a19bd23320ac072135c4ed681e159a",
+      "bytes": 3011
+    },
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\attempt1_cuda_blocked\\p03_cuda_envelope.json": {
+      "sha256": "6c3ff467ed6eb22cafc12766d5611b2831f7f9895de63a7237c4a8e085e2506d",
+      "bytes": 919
+    },
+    "D:\\PROJECTS\\.cognition\\neuro3d\\p0_scene_gpu\\attempt1_cuda_blocked\\p03_cuda_job_verdict.json": {
+      "sha256": "c19c2a18c5d1cf0ef063416e1c9cc0674c04fbecc2d4687e68b684ef71b06eae",
+      "bytes": 758
+    },
+    "coordinacion\\respuestas\\P0-3-SCENE-STATES-CUDA-CLAUDE.json": {
+      "sha256": "b31215b524528b0acb3a6d40614733c0137e751208cd2a59fdc4d98c8f171ac3",
+      "bytes": 6781
+    },
+    "D:/PROJECTS/.cognition/neuro3d/nebulatrace/gpu_states_v2.py": {
+      "sha256": "506b13c9c6bb442d16d9be07b8508a79b01ded9dd4c87c261ac1af83849b426e",
+      "bytes": 14143
+    },
+    "coordinacion/respuestas/PRECISION-OBLIQUE-COMMON-DETECTOR-LENGTH-CPU-001-CODEX.json": {
+      "sha256": "139cb34a315f476fa026bb346086a3a59d7c22241932ca3f4c291a501f4ca47e",
+      "bytes": 26731
+    }
+  },
+  "qa_runner": "import base64,ctypes,datetime,hashlib,json,os,psutil,subprocess,zlib\nfrom pathlib import Path\nk=ctypes.windll.kernel32\nk.GetCurrentProcess.restype=ctypes.c_void_p\nk.SetProcessAffinityMask.argtypes=[ctypes.c_void_p,ctypes.c_size_t]\nassert k.SetProcessAffinityMask(k.GetCurrentProcess(),1)\nbudget=128*1024**2\nram=psutil.virtual_memory().available\nassert ram-budget>=4*1024**3\nstart=datetime.datetime.now(datetime.timezone.utc)\ndeadline=start+datetime.timedelta(seconds=35)\ncmd=['C:/Python313/python.exe','-B','Blender/tests/test_existing_p03_backend_scope_HOST_v1.py']\nenv=dict(os.environ)\nfor v in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS'):env[v]='1'\np=subprocess.run(cmd,capture_output=True,timeout=30,env=env)\nend=datetime.datetime.now(datetime.timezone.utc)\nout=dict(rc=p.returncode,timed_out=False,before_deadline=end<deadline,started_utc=start.isoformat(),ended_utc=end.isoformat(),deadline_utc=deadline.isoformat(),elapsed_QA_seconds=(end-start).total_seconds(),timeout_seconds=30,affinity_mask=1,thread_environment={v:env[v]for v in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS')},RAM_available_before_bytes=ram,RAM_budget_bytes=budget,RAM_reserve_after_budget_bytes=ram-budget,command=cmd,stdout_bytes=len(p.stdout),stdout_sha256=hashlib.sha256(p.stdout).hexdigest(),stdout_zlib_base64=base64.b64encode(zlib.compress(p.stdout,9)).decode(),stderr_utf8=p.stderr.decode('utf-8','replace'),GPU_used=False)\nif p.returncode==0:\n d=json.loads(p.stdout);out['summary']=dict(status=d['status'],tests=d['tests'],records=len(d['records']),kinds={key:sum(r['kind']==key for r in d['records'])for key in sorted(set(r['kind']for r in d['records']))})\nprint(json.dumps(out,ensure_ascii=True))\n",
+  "test_run": {
+    "rc": 0,
+    "timed_out": false,
+    "before_deadline": true,
+    "started_utc": "2026-10-07T10:35:27.769052+00:00",
+    "ended_utc": "2026-10-07T10:35:27.936871+00:00",
+    "deadline_utc": "2026-10-07T10:36:02.769052+00:00",
+    "elapsed_QA_seconds": 0.167819,
+    "timeout_seconds": 30,
+    "affinity_mask": 1,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "RAM_available_before_bytes": 8233566208,
+    "RAM_budget_bytes": 134217728,
+    "RAM_reserve_after_budget_bytes": 8099348480,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      "Blender/tests/test_existing_p03_backend_scope_HOST_v1.py"
+    ],
+    "stdout_bytes": 3731,
+    "stdout_sha256": "c9d814d4153ef8c4015621cac5078d0ae6192437ee86807f0af420ae8b1221cb",
+    "stdout_zlib_base64": "eNrtV1tv2zYUfh+w/yD4yV1dj7pLAfag2Gwi1JY9S07buQZBkZTNRJZUXdIFRf/7Du2ktbGi2Iak2IC92BR5Dnm+j4fn8rHXtLTtmt6Z1psHcdwbaL1WNK2aMGFcC1bWXH2tPvZuZMGVIH4TxkkYXZBgMboMrzAZzaIERwkZXQZhpLagdSszylpSyUIp6wZMNkwUgqSwiSw2+1lkwfRWNm1ZS0ZzwsWtZILkNBW5Ooh1nPZORdhWsBtRk1tRc8naY7tPNqI8l3Ba1zIlYiDDeaGjF0hPdHRmOmfIHnqeZRnuc4TOEFLqrKtrUbTkukwJ5TvZNLIsQDmjeSNOty/h9FpyQaJZQh70aNduYb29A5227pSK+F2wroVt9osgBNrt0a6fBtoXVqMZwW+CUULGeDQJFnhMZueT8NclJudhNAa690bSRijhMs3l+06oqVy2ogajDvQ2W2rYjhIRmScM3fK9zPNQlnnI1F1hWMh0nNS1KfKQp9vIN5FuuH7GKdIRKFiGLQzTdw3W2wNQl3jYmcsNOAbZ0ZZtj2gBK+q7h1s9mm/EjirAZCPKnWhBRrzv5C3NRcHEAa9yGDx6BUjVOJzOJyEe9/45KVyCu+7pbuCWBP8WO8yxBU25bfpZ6jluZjiWx7JMR0zXU8SYaVA3o55vmykHET8VDvOpZfvIcV3Xcv977AD2WnBSCwB58Pj/PeeBm1YWd2RDK2LsnG9SkzKhC8tiHhI+MxHzde54meEyhgxGvdT2LOEiJxWWbemeb1qCZ9z1DGpbKTK5/6+gJp4tFyNM4iS4wMogSAGbvfblLE7I/eo4XOBREs4i2GcxDSbhb4H6UvIphRBc8CNabICsm8xnTppCVOW6w+HFIDf1bORR10+RzgX3OQfmXGY4OmU6zTzTs/zUMpz7OFYoI2yk8kfBIJbuvbZmfNUMtOu19ovGtZ+1ohqCJM03w6Ksd33+bH+P5a6S8OLJpqbVViUHmUnBvxpnv40+WYRBdDHBBI8vQGh5niyC0XcBbjknwLE+pFUFp/WvVtlKX6+1F5oaofX6kSG/Dq5wtJye4wVJLnEED+YqBOnlfDILxk8O2/BP71vk2fAG7hpyLdsOaUNaUTRl3V8Z2k8avJPtsJLgBrmWlTX8ykLL6a5ZPxol9+gjDDEDyJkHi2CKE+BmPlnGEDuC+Mkpcd0TSlKIENpzTR090Mrr1dlAQ+uBVlwPtLxsWpiD2qIe0uKurz97bB5ifDFVpd38MojxkyPXbfMEerX97AlVmdO6fxiXhWhILm9Ev3020G5uDsF01bA1+Ej76BzA7U/DKJh8NxJOn8QRvlUr1wpjv1UjcIoyyx7/yg/rUMxHEZ48vbvr/mnke9dbvoP/5bAWcF4l+uD284EWxX8b6XE+exniyRg6lel8Fof7vBa8VM96SRY4GJ8Ho1d7LsquPmTSCpkEKibwtIbcWsPqTi0XUL7fCpJ1eU7g1JyTXZe3ssrvPp+/VmLiA7mYL8nn+v8ohUPYEnJTEFZC/3AQ+GL9lyOgk9ioNPdgfgWlrVQdCWFCNVfyq0qHroBUW6hrSFp2cGU1VYIFWPwXepyqLnflvcG9OJnNIfmTaZBAmwftHhRPi7dktiARlALQ9s1nYZS8DmMoqZaQLZM9gays9vwpVsksmrwlf2oXg2j8AEvVKAuM3+DRcp9kP/34wx+2aX/E",
+    "stderr_utf8": "...\r\n----------------------------------------------------------------------\r\nRan 3 tests in 0.020s\r\n\r\nOK\r\n",
+    "GPU_used": false,
+    "summary": {
+      "status": "PASS",
+      "tests": 3,
+      "records": 13,
+      "kinds": {
+        "EXISTING_ARCHIVE_CONTENT_CHAIN": 1,
+        "HOST_SOURCE_FIELD_COMPOSITION_AFTER_U_READBACK": 1,
+        "NO_EXACT_DECLARED_OBLIQUE_BINDING": 4,
+        "SOURCE_STAGE": 7
+      }
+    }
+  },
+  "initial_failures": [
+    {
+      "source_snapshot": {
+        "sha256": "bc57c8bfddd451a3f0df8317ea09ee69ba18a2037677b9c43fcfd13cf66d4f37",
+        "bytes": 6390,
+        "bytes_zlib_base64": "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"
+      },
+      "capture": {
+        "rc": 1,
+        "timed_out": false,
+        "before_deadline": true,
+        "started_utc": "2026-10-07T10:34:52.862331+00:00",
+        "ended_utc": "2026-10-07T10:34:53.066194+00:00",
+        "deadline_utc": "2026-10-07T10:35:27.862331+00:00",
+        "elapsed_QA_seconds": 0.203863,
+        "timeout_seconds": 30,
+        "affinity_mask": 1,
+        "thread_environment": {
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "MKL_NUM_THREADS": "1",
+          "NUMEXPR_NUM_THREADS": "1"
+        },
+        "RAM_available_before_bytes": 8558972928,
+        "RAM_budget_bytes": 134217728,
+        "RAM_reserve_after_budget_bytes": 8424755200,
+        "command": [
+          "C:/Python313/python.exe",
+          "-B",
+          "Blender/tests/test_existing_p03_backend_scope_HOST_v1.py"
+        ],
+        "stdout_bytes": 3106,
+        "stdout_sha256": "4405199c8dce9a786cadb7c61bda69bc091528426cb76f591846b67268fd6857",
+        "stdout_zlib_base64": "eNrdVtuO2zYQfS/QfxD85G1cV/dLgD5obe5aiCy5umySOgZBUZSttSwplLzNIsi/d2h7E/ulQIrdAO2LTZGHnDlnhpz5POh60u+7wWtpcON6/mAkDXrW9WJCgzFntOG5+Fp+HmzLOhfAIMTonTtJ8BRNfDdCUxxe+94fKcLXXjD1gltxCiUdE+Amq8qPeyamqrJnnFS4o6xmuNsQ1TAFhBU2UxXdsQvblovCljXFYqoua6aZWQaRbdlWDNnRZEW1nCInsiLDBl01mKo5lkrF2ewTof3p5LxcAwW8Iz3dwPkFqToGEPCCP+IMSJT1+my+YztS9yXFa9bsWA8Y9nFfPpCK1ZQd+SZ4MkOTN8BUjL35wvfQdPBlJP1LUfIShO3LpgaPwU7+T+pQ02Akyw3NKTLbtArV1G1aFIpMFSWTKdVUYhXEdgwtywHiZMykDtENRzYty9Kt/546wJ2zHHMGJGX5f585cZhGE4TjxL1FwiG4kevD7lkYJ/i0OvUiNEm8MIBzornre3+64kvgM0K3rM7PZDFkM1M06lAzy3RdzRUzh7SQrcw2ZJtYTiYrOcudPNepbVHVVAhVSGFrtu5kumqeLmstnDBkGJOabhp+CA2n+bIbSfcr6Xcpl36T6nYMSFKtx3XDd8P86hDIZteWkNZ4zUm7wQ+Ml0XJ8iflvoN9EnlucOsjjKa3AEqvk8id/BDiunlBHClj0rZgbXi3LJbKaiX9KomRvFo9M+W37h0K0vk1inAyQwHcmDsP0OnCD93pi9NWnct4s6oYbyHWfcPpZkw63LO6a/hwqUq/SHBPNuO2hDSopKLh8FvWUkV23erZJDmxDxA8GiDOwo3cOUpAm4WfxvB4uPGLS2JZF5Jk8EJIryRheiQ198vXI0lejaT6fiRVTdfDXL9hfEzqx6Fy9dw6xOh2jgLQYebG6MWZK4Z2Qb3dfM2EtqkIHx7HTc06XJVbNuyvRtJ2e3xMlx1dQY70z64BRH/uBa7/w0S4vBJn/JZ9uRIch70YQVI0RfH8IT+uT2ZuECD/5dNdcS5fvg+D9AP8p2POwF7LhpD2i5EUxN/N9Lye3XjIn+JJOF+EsXeoa+6NuNYpjpA7vXYnbw5aNHt+rKStrGFoCyDTOvygj9tHsVyTvnxguNhXFQarVY53+6ov2+rxq/2VgLG/8O0ixewTo3vRdZ2VcHi2WLmuMW1ydgJ88/6biYaXa1HmntxvoX8rO9HAUcb7C8pnm46tL2430NjgrNlDyDgRwBo8FuLtOWd1j++bDJN8V3bdpXMtb3bNyeFBnIQLKP547iaTGXRMGLqn6D0OIxxAK3CH8CL0guStF0NPlUK1TA4C0qY96CdUxWHgv4c+zIsTsd+N4BzY5wbTJ1qiR4kQeocm6aHIfvn5p78Byza1Pw==",
+        "stderr_utf8": "EE.\r\n======================================================================\r\nERROR: test_existing_content_chain (__main__.ExistingBackendTests.test_existing_content_chain)\r\n----------------------------------------------------------------------\r\nTraceback (most recent call last):\r\n  File \"D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\tests\\test_existing_p03_backend_scope_HOST_v1.py\", line 40, in test_existing_content_chain\r\n    self.assertEqual(result['code_sha256'][str(BACKEND)], BACKEND_SHA)\r\n                     ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^\r\nKeyError: 'D:\\\\PROJECTS\\\\.cognition\\\\neuro3d\\\\nebulatrace\\\\gpu_states_v2.py'\r\n\r\n======================================================================\r\nERROR: test_no_original_oblique_query_binding (__main__.ExistingBackendTests.test_no_original_oblique_query_binding)\r\n----------------------------------------------------------------------\r\nTraceback (most recent call last):\r\n  File \"D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\tests\\test_existing_p03_backend_scope_HOST_v1.py\", line 95, in test_no_original_oblique_query_binding\r\n    item = inputs[case]\r\n           ~~~~~~^^^^^^\r\nKeyError: 'tiny_gap'\r\n\r\n----------------------------------------------------------------------\r\nRan 3 tests in 0.058s\r\n\r\nFAILED (errors=2)\r\n",
+        "GPU_used": false
+      },
+      "cause": "Windows str(Path) changed slash form of exact recorded code_sha key; nonexistent literal tiny_gap key"
+    },
+    {
+      "source_snapshot": {
+        "sha256": "94b4f23fb6fe6f4487d231e050db8420a3c09768de91cfc507d84c32f9e500cc",
+        "bytes": 6397,
+        "bytes_zlib_base64": "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"
+      },
+      "capture": {
+        "rc": 1,
+        "timed_out": false,
+        "before_deadline": true,
+        "started_utc": "2026-10-07T10:35:12.390492+00:00",
+        "ended_utc": "2026-10-07T10:35:12.559169+00:00",
+        "deadline_utc": "2026-10-07T10:35:47.390492+00:00",
+        "elapsed_QA_seconds": 0.168677,
+        "timeout_seconds": 30,
+        "affinity_mask": 1,
+        "thread_environment": {
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "MKL_NUM_THREADS": "1",
+          "NUMEXPR_NUM_THREADS": "1"
+        },
+        "RAM_available_before_bytes": 8239280128,
+        "RAM_budget_bytes": 134217728,
+        "RAM_reserve_after_budget_bytes": 8105062400,
+        "command": [
+          "C:/Python313/python.exe",
+          "-B",
+          "Blender/tests/test_existing_p03_backend_scope_HOST_v1.py"
+        ],
+        "stdout_bytes": 3448,
+        "stdout_sha256": "4bb23923f0d787ec9442f47fd36ae42f47d5be5010000372a7a422fd5ad716ae",
+        "stdout_zlib_base64": "eNrdV21v2zYQ/j5g/0HwJ3d1PerFegmwD4rNJkJt2ZPktJ1rEBRJ2UxkSZXkdEHR/76jnLT2VhTbkBTYvtgUecfj89zx7vix17S03Te9M6330g+mvYHWa0XTqgkTxrVgZc3V1+pj70YWXAniN0GcBOEF8aPxZXCFyXgeJjhMyPjSD0K1Ba1bmVHWkkoWSlk3YLJhohAkhU1kselmkQXTW9m0ZS0ZzQkXt5IJktNU5MoQ23PaOxVhW8FuRE1uRc0la5XUwo/j3p83ojyXYG3fMiViIMN+oaMXSE90dGbaZ2g0dF3LMpznCJ0hpNTZvq5F0ZLrMiWU72TTyLIA5YzmjTjdvgTrteSChPOEPOjRfbuF9fYOdNp6r1TE74LtW9imWwQh0G6Pdv000L6wGs4JfuOPEzLB46kf4QmZn0+DX5eYnAfhBOjuDkkboYTLNJfv90JN5bIVNRzqQG+zpcbIViIic4WhW56buS7KMheZuiMMC5m2nTojilzk6iPkmUg3HC/jFOkIFCxjJAzTcwzW6wAoJx525nIDgUF2tGXbI1rgFPXdg1eP5huxowow2YhyJ1qQEe/38pbmomDigFcFDB6/AqRqHMwW0wBPev+eFC4hXDu6G/CS4N9ih9kjQVM+Mr0sdW0nM2zLZVmmI6brKWLMNKiTUdcbmSkHES8VNvOoNfKQ7TiO5fz32AHsteCkFgDyEPH/68iJ58tojEmc+BdYHQjy3KbTvpzHCblfnQQRHifBPIR9opk/DX7z1ZeSTynkmYIf0TJCdqqbzGN2mkLq4LrNISyQk7oj5FLHS5HOBfc4t5jrMMPWKdNp5pqu5aWWYd9f1kIdYoRUkiwYJIzONTXjq2agXa+1XzSu/awV1RAkab4ZFmW96/NnnSPLXSUhrMmmptVWZUCZScG/mky+jT6JAj+8mGKCJxcgtDxPIn/8XYBb9glwrA9pVYG1/tUqW+nrtfZCUyO0Xj8y5Nf+FQ6Xs3MckeQSh3BjrgKQXi6mc3/y5LAN79TfIs+GN+BrKChsO6QNaUXRlHV/ZWg/aXBPtsNKQhjkWlbW8CsLLae7Zv1olNyjDzEkDSBn4Uf+DCfAzWK6jCF5+PGTU+I4J5SkkCG055oyPdDK69XZQEPrgVZcD7S8bFqYgwJaD2lx19efPTYPMb6Yqf5lcenH+MmR6yPzBHq1/RwJVZnTun8Yl4VoSC5vRL99NtBubg7JdNWwNcRI++gcgPdnQehPvxsJp1fiCN+qlWuFsd+qEQRFmWWP7/LDOnSsYYinTx/uunea+d71lu/gfzmsBdirRB/CfjHQwvgfIz2uZy8DPJ1AOz5bzOOgq2v+S3WtlyTC/uTcH7/quCj39aGSVsgk0BZApDXk1hpWd2q5gB71VpBsn+cErOac7PZ5K6v87rP9tRITH8jFYkk+N7lHJRzSlpCbgrASmuSDwJfTfzEB7fJGlbmH41fQv0nVdhMm1AtCflXp0PqSaguNDUnLPbispkqwgBP/jUa+qstdeX/gXpzMF1D8ycxP4C0DbxronqK3ZB6REFoBeNss5kGYvA5i6KmWUC2TjkBWVh1/ilUyD6dvyV/eRH44eYClepQI4zd4vOyK7Kcff/gDt20mvA==",
+        "stderr_utf8": ".E.\r\n======================================================================\r\nERROR: test_no_original_oblique_query_binding (__main__.ExistingBackendTests.test_no_original_oblique_query_binding)\r\n----------------------------------------------------------------------\r\nTraceback (most recent call last):\r\n  File \"D:\\PROJECTS\\9_NEBULA_NEW\\Blender\\tests\\test_existing_p03_backend_scope_HOST_v1.py\", line 95, in test_no_original_oblique_query_binding\r\n    item = inputs[case]\r\n           ~~~~~~^^^^^^\r\nKeyError: 'tiny_gap1'\r\n\r\n----------------------------------------------------------------------\r\nRan 3 tests in 0.021s\r\n\r\nFAILED (errors=1)\r\n",
+        "GPU_used": false
+      },
+      "cause": "Fixture key guess tiny_gap1 wrong; actual retained key tiny_gap_2m60 read from receipt; verifier-only correction no scope/caps changed"
+    }
+  ],
+  "new_GPU_execution": false,
+  "foreign_code_executed": false,
+  "historical_pass_preserved": true,
+  "current_job_admission": false,
+  "scene_query_equivalence": false,
+  "compiled_backend_graph_verified": false,
+  "native_oblique_error_budget": null,
+  "native_oblique_phase_bound_rad": null,
+  "full_costs": "UNKNOWN_NOT_ZERO_HOST_PREPARATION_AND_COMPOSITION_REQUIRED",
+  "JEV": "LOCAL_SECURITY_BLOCK_NO_RETRY_NO_REMOTE_ENDORSEMENT",
+  "oracle_code": "import base64,hashlib,json,zlib\nfrom pathlib import Path\nr=json.loads(Path('coordinacion/respuestas/PRECISION-EXISTING-P03-BACKEND-SCOPE-HOST-001-CODEX.json').read_bytes())\n# Document pin is refreshed before this verifier is run.\nfor path,pin in r['pins'].items():\n b=Path(path).read_bytes();assert hashlib.sha256(b).hexdigest()==pin['sha256'] and len(b)==pin['bytes'],path\nraw=zlib.decompress(base64.b64decode(r['test_run']['stdout_zlib_base64']));assert hashlib.sha256(raw).hexdigest()==r['test_run']['stdout_sha256']\nqa=json.loads(raw);assert qa['status']=='PASS' and qa['tests']==3 and len(qa['records'])==13\nbase=Path('D:/PROJECTS/.cognition/neuro3d/p0_scene_gpu')\nresult=json.loads((base/'p03_cuda_result.json').read_bytes())\nmanifest=json.loads((base/'p03_manifest.json').read_bytes())\ndeclared=set()\nfor scene,row in zip(manifest['scenes'],result['scene_results'],strict=True):\n sha=hashlib.sha256(json.dumps(scene,sort_keys=True).encode()).hexdigest();assert row['scene_sha256']==sha;declared.add(sha)\nassert len(result['scene_results'])==104\nbackend=Path('D:/PROJECTS/.cognition/neuro3d/nebulatrace/gpu_states_v2.py').read_bytes()\nassert result['code_sha256']['D:/PROJECTS/.cognition/neuro3d/nebulatrace/gpu_states_v2.py']==hashlib.sha256(backend).hexdigest()\nfor row in qa['records']:\n if row['kind']=='SOURCE_STAGE':assert row['anchor'] in backend.decode().splitlines()[row['line']-1]\n if row['kind']=='NO_EXACT_DECLARED_OBLIQUE_BINDING':assert row['literal_scene_sha256'] not in declared and not row['query_binding']\nassert sum(x['kind']=='SOURCE_STAGE' for x in qa['records'])==7\nverdict=json.loads((base/'p03_cuda_checker_verdict.json').read_bytes())\nassert verdict['result_sha256']==hashlib.sha256((base/'p03_cuda_result.json').read_bytes()).hexdigest()\nassert verdict['manifest_sha256']==hashlib.sha256((base/'p03_manifest.json').read_bytes()).hexdigest()\nassert verdict['verdict']=='PASS' and not verdict['failures'] and not verdict['warnings']\nenv=json.loads((base/'p03_cuda_envelope.json').read_bytes())\nassert env['status']=='OK' and env['exit']==0 and env['policy']['ram_free_after_budget_min_gib']==1.5\nfor failed in r['initial_failures']:\n snap=failed['source_snapshot'];b=zlib.decompress(base64.b64decode(snap['bytes_zlib_base64']))\n assert len(b)==snap['bytes'] and hashlib.sha256(b).hexdigest()==snap['sha256']\n assert failed['capture']['rc']==1\nassert not r['current_job_admission'] and not r['foreign_code_executed'] and r['native_oblique_phase_bound_rad'] is None\nm=json.loads(Path('coordinacion/respuestas/GPU-GUARD-OWNED-TREE-CONTAINMENT-CPU-001-CODEX.json').read_bytes())['pinned_manifest_capture']\nb=zlib.decompress(base64.b64decode(m['stdout_zlib_base64']));assert hashlib.sha256(b).hexdigest()==m['stdout_sha256']\npins=json.loads(b)['pins'];assert len(pins)==461\nfor path,sha in pins.items():assert hashlib.sha256(Path(path).read_bytes()).hexdigest()==sha,path\nprint(json.dumps(dict(status='PASS',archive_and_own_pins=17,scene_bindings=104,backend_source_anchors=7,nonmatching_literal_bindings=4,frozen_pins=461,historical_PASS_preserved=True,current_admission=False,foreign_execution=False)))\n",
+  "oracle_runner": "import base64,ctypes,datetime,hashlib,json,os,psutil,subprocess,zlib\nfrom pathlib import Path\nk=ctypes.windll.kernel32\nk.GetCurrentProcess.restype=ctypes.c_void_p\nk.SetProcessAffinityMask.argtypes=[ctypes.c_void_p,ctypes.c_size_t]\nassert k.SetProcessAffinityMask(k.GetCurrentProcess(),1)\nbudget=128*1024**2\nram=psutil.virtual_memory().available\nassert ram-budget>=4*1024**3\nstart=datetime.datetime.now(datetime.timezone.utc)\ndeadline=start+datetime.timedelta(seconds=35)\ncmd=['C:/Python313/python.exe','-B','.cognition/neuro3d-mega-geometry-20261005/existing_p03_backend_scope_oracle.py']\nenv=dict(os.environ)\nfor v in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS'):env[v]='1'\np=subprocess.run(cmd,capture_output=True,timeout=30,env=env)\nend=datetime.datetime.now(datetime.timezone.utc)\nout=dict(rc=p.returncode,timed_out=False,before_deadline=end<deadline,started_utc=start.isoformat(),ended_utc=end.isoformat(),deadline_utc=deadline.isoformat(),elapsed_QA_seconds=(end-start).total_seconds(),timeout_seconds=30,affinity_mask=1,thread_environment={v:env[v]for v in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS')},RAM_available_before_bytes=ram,RAM_budget_bytes=budget,RAM_reserve_after_budget_bytes=ram-budget,command=cmd,stdout_bytes=len(p.stdout),stdout_sha256=hashlib.sha256(p.stdout).hexdigest(),stdout_zlib_base64=base64.b64encode(zlib.compress(p.stdout,9)).decode(),stderr_utf8=p.stderr.decode('utf-8','replace'),GPU_used=False)\nif p.returncode==0:out['summary']=json.loads(p.stdout)\nprint(json.dumps(out,ensure_ascii=True))",
+  "oracle_run": {
+    "rc": 0,
+    "timed_out": false,
+    "before_deadline": true,
+    "started_utc": "2026-10-07T10:36:49.305399+00:00",
+    "ended_utc": "2026-10-07T10:36:49.556825+00:00",
+    "deadline_utc": "2026-10-07T10:37:24.305399+00:00",
+    "elapsed_QA_seconds": 0.251426,
+    "timeout_seconds": 30,
+    "affinity_mask": 1,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "RAM_available_before_bytes": 7656030208,
+    "RAM_budget_bytes": 134217728,
+    "RAM_reserve_after_budget_bytes": 7521812480,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      ".cognition/neuro3d-mega-geometry-20261005/existing_p03_backend_scope_oracle.py"
+    ],
+    "stdout_bytes": 246,
+    "stdout_sha256": "cac886e5eb99a1c476eba52d3790bb2941fe4f5c208fe1a05d1af88aebbe32c1",
+    "stdout_zlib_base64": "eNpNjkEKwjAQRfeCdyhZu7BQFNx5A6EHCGkybQfbSZlJqije3YkL6fa/9//M20hyKYu5VOZ2bVtzqIxjP+IK1lGw8UF2QSq8PisTDwS2QwpIwy89Nhp3zt9BdYmZfWn6MXLBpUORZpd0kwY7YQJ203ah9HuOL/hfak61ZiNKioxe7fKZXRgEeIWgRuIMqvjMDJSsCzOKYCRFvZuksD4y4EAWnuBz2rDPfvcFJsxUbw==",
+    "stderr_utf8": "",
+    "GPU_used": false,
+    "summary": {
+      "status": "PASS",
+      "archive_and_own_pins": 17,
+      "scene_bindings": 104,
+      "backend_source_anchors": 7,
+      "nonmatching_literal_bindings": 4,
+      "frozen_pins": 461,
+      "historical_PASS_preserved": true,
+      "current_admission": false,
+      "foreign_execution": false
+    }
+  }
+}
