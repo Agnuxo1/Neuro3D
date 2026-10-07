@@ -95,3 +95,12 @@ Un PASS demostraría este transporte y estas operaciones finitas en las escenas,
 - Ogita, Rump y Oishi, *Accurate Sum and Dot Product*, SIAM J. Sci. Comput. 26(6), 1955–1988, DOI 10.1137/030601818: https://ogilab.w.waseda.jp/ogita/math/doc/2005_OgRuOi.pdf
 
 Las condiciones de TwoSum dependen de las hipótesis aritméticas del artículo. La especificación GLSL y una ejecución en una GPU concreta no establecen por sí mismas que esas hipótesis se cumplan universalmente. Por eso la conclusión prevista se limita a exactitud empírica de los resultados comprobados.
+
+## Continuaci?n 2026-10-07
+
+- Revalidaci?n CPU sobre el HEAD previo: **30/30 PASS** en las suites de transporte y supervisor.
+- native04 us? un UUID, manifiesto, informe y plazo nuevos; sus 42 pins fueron comprobados antes de encolarlo.
+- La RAM libre hab?a recuperado margen suficiente para el presupuesto conservador y la RTX 3090 estaba fr?a, pero gpuq mantuvo el lease leg?timo villa:legitimate-replay-v15.
+- Tras **240.603 s** se agot? --max-wait 4; no existe guard.json ni worker.json: el supervisor, Blender y el shader **no se ejecutaron**.
+- La revisi?n contra Blender 4.5 y Khronos confirma que la v?a propuesta usa recursos documentados (GPUUniformBuf, imagen R32UI/UINT, std140/uvec4, barrera y fence) y que el shader marca como precise la aritm?tica compensada cr?tica. La especificaci?n GLSL no basta para certificar universalmente el resultado num?rico de las operaciones internas, de modo que la lectura nativa sigue siendo obligatoria.
+- Estado se mantiene **CPU_PREPARED_NATIVE_BLOCKED**. No se inicia el punto 5.

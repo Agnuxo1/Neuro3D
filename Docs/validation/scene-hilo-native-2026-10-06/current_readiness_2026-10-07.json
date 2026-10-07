@@ -1,0 +1,32 @@
+{
+  "schema": "scene-hilo-current-readiness-v1",
+  "date_utc": "2026-10-07T07:28:05.954382+00:00",
+  "point": 4,
+  "status": "CPU_PREPARED_NATIVE_BLOCKED",
+  "head_before_record": "c3034c09fa929893d0260f8e88953220db13c033",
+  "cpu_revalidation": {
+    "tests_passed": 30,
+    "exit_code": 0,
+    "log": "cpu_revalidation_2026-10-07.log",
+    "log_sha256": "78d1129a24ece3e3faa9a6d5cdfee4ec3b04311884f5793c3dcd7511ce5f15c3"
+  },
+  "native04": {
+    "job_id": "bd76871c-2218-458f-b911-72767bddf303",
+    "job_sha256": "5ee8333618b0f10070e5b54ca09ac2af499b8ccfa713e1f58ca64f4213f5993a",
+    "queue_exit_code": 1,
+    "queue_elapsed_seconds": 240.60346030001529,
+    "guard_receipt_exists": false,
+    "worker_report_exists": false,
+    "workload_started": false,
+    "reason": "gpuq max-wait expired while legitimate villa:legitimate-replay-v15 lease remained live"
+  },
+  "primary_source_audit": {
+    "blender_gpu_api": "https://docs.blender.org/api/4.5/gpu.types.html",
+    "glsl_460": "https://registry.khronos.org/OpenGL/specs/gl/GLSLangSpec.4.60.html",
+    "memory_barrier": "https://wikis.khronos.org/opengl/GLAPI/glMemoryBarrier",
+    "two_sum": "https://ogilab.w.waseda.jp/ogita/math/doc/2005_OgRuOi.pdf",
+    "finding": "GPUUniformBuf accepts buffer-interface data; R32UI/UINT images are documented; std140 uvec4 is layout-defined; critical floating expressions are precise; pack/unpack double preserves bits for finite values. GLSL does not universally guarantee all internal FP operations exactly as IEEE 754, therefore empirical native readback remains required."
+  },
+  "next_condition": "Fresh queue lease, >=6 GiB free host RAM at admission, fresh UUID/job/report/deadline, unchanged pinned implementation; then six GPU readbacks and independent v2 audit.",
+  "point5_started": false
+}
