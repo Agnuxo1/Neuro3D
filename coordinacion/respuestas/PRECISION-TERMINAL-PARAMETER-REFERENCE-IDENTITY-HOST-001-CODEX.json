@@ -1,0 +1,147 @@
+{
+  "id": "PRECISION-TERMINAL-PARAMETER-REFERENCE-IDENTITY-HOST-001",
+  "owner": "Codex capacity_audit/EXP005",
+  "base_commit": "88e74b14f6d7db4ffa7c4df002b11b4240ad01a5",
+  "scope": "EXACT_HOST_ALGEBRA_SYNTHETIC_ONLY_NOT_SCENE_OR_NATIVE_EXECUTION",
+  "pins": {
+    "Blender/tests/test_terminal_parameter_reference_identity_HOST_v1.py": {
+      "sha256": "d792b261cbd4c70281284e37cc3ae6ee59d156e0aea2425013312adea63be3bf",
+      "bytes": 5136
+    },
+    "Docs/EXP-005-TERMINAL-PARAMETER-REFERENCE-IDENTITY-HOST-001.md": {
+      "sha256": "226c47803108e0a9eaf43cff5daba2b36cf11a51dab02d1858c16d74208ede72",
+      "bytes": 3262
+    }
+  },
+  "shader": {
+    "path": "Blender/shaders/exp005_shared_frontier.glsl",
+    "sha256": "914bf2962ead3c6a7b721a8dc2aa6c1e796af4bde1892db1802c3ca93ebdfcd1"
+  },
+  "qa_runner": "import base64,ctypes,datetime,hashlib,json,os,psutil,subprocess,zlib\nfrom pathlib import Path\nk=ctypes.windll.kernel32\nk.GetCurrentProcess.restype=ctypes.c_void_p\nk.SetProcessAffinityMask.argtypes=[ctypes.c_void_p,ctypes.c_size_t]\nassert k.SetProcessAffinityMask(k.GetCurrentProcess(),1)\nbudget=128*1024**2\nram=psutil.virtual_memory().available\nassert ram-budget>=4*1024**3\nstart=datetime.datetime.now(datetime.timezone.utc)\ndeadline=start+datetime.timedelta(seconds=35)\ncmd=['C:/Python313/python.exe','-B','Blender/tests/test_terminal_parameter_reference_identity_HOST_v1.py']\nenv=dict(os.environ)\nfor v in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS'):env[v]='1'\np=subprocess.run(cmd,capture_output=True,timeout=30,env=env)\nend=datetime.datetime.now(datetime.timezone.utc)\nout=dict(rc=p.returncode,timed_out=False,before_deadline=end<deadline,started_utc=start.isoformat(),ended_utc=end.isoformat(),deadline_utc=deadline.isoformat(),elapsed_QA_seconds=(end-start).total_seconds(),timeout_seconds=30,affinity_mask=1,thread_environment={v:env[v]for v in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS')},RAM_available_before_bytes=ram,RAM_budget_bytes=budget,RAM_reserve_after_budget_bytes=ram-budget,command=cmd,stdout_bytes=len(p.stdout),stdout_sha256=hashlib.sha256(p.stdout).hexdigest(),stdout_zlib_base64=base64.b64encode(zlib.compress(p.stdout,9)).decode(),stderr_utf8=p.stderr.decode('utf-8','replace'),GPU_used=False)\nif p.returncode==0:\n d=json.loads(p.stdout);out['summary']=dict(status=d['status'],tests=d['tests'],records=len(d['records']),kinds={key:sum(r['kind']==key for r in d['records'])for key in sorted(set(r['kind']for r in d['records']))})\nprint(json.dumps(out,ensure_ascii=True))\n",
+  "test_run": {
+    "rc": 0,
+    "timed_out": false,
+    "before_deadline": true,
+    "started_utc": "2026-10-07T10:25:25.514028+00:00",
+    "ended_utc": "2026-10-07T10:25:25.686744+00:00",
+    "deadline_utc": "2026-10-07T10:26:00.514028+00:00",
+    "elapsed_QA_seconds": 0.172716,
+    "timeout_seconds": 30,
+    "affinity_mask": 1,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "RAM_available_before_bytes": 8299311104,
+    "RAM_budget_bytes": 134217728,
+    "RAM_reserve_after_budget_bytes": 8165093376,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      "Blender/tests/test_terminal_parameter_reference_identity_HOST_v1.py"
+    ],
+    "stdout_bytes": 3936,
+    "stdout_sha256": "d8ab634d0b580c87f2a7181829745a8fc00cbc699d88912a3ad1e9049fe6cda0",
+    "stdout_zlib_base64": "eNrtV0tv2zgQvi+w/yHQudnyMXz15qRCKiC1DcsutlsUBC3RsbCKFEhy2kXR/75DOXaaxk7jbYK99GJT5HAe3zczJL9Ebee6VRu9OorGgzSNXhxFnW+7MCFw3PisbvLw9eFL9HdR5UEwfT+cvomnyak9SQapHQ8mg7fxNJ7Y0fD8fdBw5Rp36Tvf2JNZ2BrxMAvRR/x1nwtX2gtfo0BTZLb01UW3vCPIoo9fXxztshf/OTid2uR1PJwm095UhYaCzKoqOtvrDrPtRh8NX7o3nBcYTFfUVVi4WaFh5UNEdozDFr9YhC3XfquOCi6BEU0EKMYkE4Lr3mdcYYZRQUASqUEaJXurc9f6sqi2GjQh4huf/HXhgk+bZfagMleW9SdXZVttQu0VfzIEieIKqGawBekXlI+Bsum9eXQ+9t6KNXDwzfhBEDkIRZVhIJWgikhBueBrTUpiCEowTjgwDlqTnSAybrTpq5PsgVEcBCMzdK/5p8Txx1n5C9D7gFZ11WPaXqIdm/sQ/SPzEwThwhjJEHgCpq+W7+bkgS1AUCMEtgAAoihQTgD5lEaAQNARRc4AejsoyJiRWmiBkTMlGQ6CQY4YMkLM7gZBNWFCCiWIFgg0Rdx6ZnCeAhoQxICmRsNuoo4p8gJK6NCfqCFcmgOcud9gAAwXGLChVHOCOx6r7Rlo/nH5PCffVOAAA5SoC4AB0VIrwJzWnP6PfLNANp4qCnnHLqAJxwyUkoetP8P8rV7chAoJljAPIEopnj0HGvfpP9yI6AHHOCNCaspBaW6wZIgyBx3jypiHjvFjCoCqKAKIKIpQjQf1z++2m3WGPc05vxfjw+5Mjwb7mDKO6GKdKKIBBJX4xzHPFQb2pJgHO4B5akIqYlkp0MZQBtSYw9Dfp4g9cNfbw8PtOyONh2kyTd7d0JH7snMbixsAf0rJscFqxVgZ3k2BmHVCM8KQUaxGPAkQeuyA2F/wbBCUaUnoPcdHs8lpbMfJcP0k6pZh9gTfO7lvXrZLh3/tS//5Cq+xFj8bn9tFU1dd4Zs/Lsp2feFZOmxpYaOhMF9gl2De5TyTTs0Vo07nGXNOZtQrI90C5rmn2rB8HnphxjNnuJ/niyyn0R5AZsNkaoej4V/xZGQncZq8ng3Og+lrV678na6xm6zAe5vVV31FrGvlzSid2sH5WXwyGdhbU5vnYeX6pN5WhK3q5nJzTL06qlZleSs1OJ/ZxrdFvsJn47xeVfnap7tSV0vMcOubpm5uhBqX35dCg0UbLGa+6YpF4YPMwpWtDxQ19WV9U6FROh2N7dskTZPhmR0OME9iG78LTeA07onJPJZT469K9094HhOcOxvP7Kq91fn199/+BcJM8k0=",
+    "stderr_utf8": ".....\r\n----------------------------------------------------------------------\r\nRan 5 tests in 0.002s\r\n\r\nOK\r\n",
+    "GPU_used": false,
+    "summary": {
+      "status": "PASS",
+      "tests": 5,
+      "records": 13,
+      "kinds": {
+        "SOURCE_PIN": 1,
+        "SYNTHETIC_BIAS_PARAMETER_ONLY": 1,
+        "SYNTHETIC_EXACT_IDENTITY": 8,
+        "SYNTHETIC_PARAMETER_SENSITIVITY": 2,
+        "SYNTHETIC_UNIT_NONZERO_RESIDUAL": 1
+      }
+    }
+  },
+  "native_direction_norm_defect": null,
+  "native_ALU_residual_bound_BU": null,
+  "native_phase_error_bound_rad": null,
+  "native_precision_certified": false,
+  "promotion": "STOP_MISSING_NATIVE_EVIDENCE",
+  "costs": "UNKNOWN_NOT_ZERO",
+  "JEV": "LOCAL_SECURITY_BLOCK_NO_RETRY_NO_REMOTE_ENDORSEMENT",
+  "oracle_runner": "import base64,ctypes,datetime,hashlib,json,os,psutil,subprocess,zlib\nfrom pathlib import Path\nk=ctypes.windll.kernel32\nk.GetCurrentProcess.restype=ctypes.c_void_p\nk.SetProcessAffinityMask.argtypes=[ctypes.c_void_p,ctypes.c_size_t]\nassert k.SetProcessAffinityMask(k.GetCurrentProcess(),1)\nbudget=128*1024**2\nram=psutil.virtual_memory().available\nassert ram-budget>=4*1024**3\nstart=datetime.datetime.now(datetime.timezone.utc)\ndeadline=start+datetime.timedelta(seconds=35)\ncmd=['C:/Python313/python.exe','-B','.cognition/neuro3d-mega-geometry-20261005/terminal_parameter_reference_oracle.py']\nenv=dict(os.environ)\nfor v in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS'):env[v]='1'\np=subprocess.run(cmd,capture_output=True,timeout=30,env=env)\nend=datetime.datetime.now(datetime.timezone.utc)\nout=dict(rc=p.returncode,timed_out=False,before_deadline=end<deadline,started_utc=start.isoformat(),ended_utc=end.isoformat(),deadline_utc=deadline.isoformat(),elapsed_QA_seconds=(end-start).total_seconds(),timeout_seconds=30,affinity_mask=1,thread_environment={v:env[v]for v in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS')},RAM_available_before_bytes=ram,RAM_budget_bytes=budget,RAM_reserve_after_budget_bytes=ram-budget,command=cmd,stdout_bytes=len(p.stdout),stdout_sha256=hashlib.sha256(p.stdout).hexdigest(),stdout_zlib_base64=base64.b64encode(zlib.compress(p.stdout,9)).decode(),stderr_utf8=p.stderr.decode('utf-8','replace'),GPU_used=False)\nif p.returncode==0:out['summary']=json.loads(p.stdout)\nprint(json.dumps(out,ensure_ascii=True))",
+  "oracle_code": "import base64,hashlib,json,zlib\nfrom fractions import Fraction as F\nfrom pathlib import Path\nr=json.loads(Path('coordinacion/respuestas/PRECISION-TERMINAL-PARAMETER-REFERENCE-IDENTITY-HOST-001-CODEX.json').read_bytes())\nfor path,pin in r['pins'].items():\n b=Path(path).read_bytes();assert len(b)==pin['bytes'] and hashlib.sha256(b).hexdigest()==pin['sha256']\nassert hashlib.sha256(Path(r['shader']['path']).read_bytes()).hexdigest()==r['shader']['sha256']\nraw=zlib.decompress(base64.b64decode(r['test_run']['stdout_zlib_base64']))\nassert hashlib.sha256(raw).hexdigest()==r['test_run']['stdout_sha256']\nq=json.loads(raw);assert q['status']=='PASS' and q['tests']==5 and len(q['records'])==13\ndef rat(pair):return F(int(pair[0]),int(pair[1]))\ncount=0\nfor row in q['records']:\n if row['kind']=='SYNTHETIC_EXACT_IDENTITY':\n  dx,dy,dz=map(rat,row['direction']);s=rat(row['s_BU'])\n  # Expanded scalar polynomial, independently of vector test functions.\n  baseline=F(7,8)+dx*F(3999,4)-dy*F(5,4)-dz\n  deviation=s*(1-dx*dx-dy*dy-dz*dz)+F(3,2**57)-dx*F(1,2**60)+dy*F(1,2**59)-dz*F(1,2**58)\n  bound=abs(s)*abs(1-dx*dx-dy*dy-dz*dz)+F(7,2**57)+abs(dx)*F(1,2**60)+abs(dy)*F(1,2**59)+abs(dz)*F(1,2**58)\n  assert rat(row['baseline_BU'])==baseline and rat(row['deviation_BU'])==deviation\n  assert rat(row['effective_BU'])==baseline+deviation and rat(row['allowance_BU'])==bound\n  assert abs(deviation)<=bound;count+=1\nassert count==8\nsens=[rat(x['delta_BU']) for x in q['records'] if x['kind']=='SYNTHETIC_PARAMETER_SENSITIVITY']\nassert sens==[0,-F(1,2**51)-F(1,2**104)]\nu=[x for x in q['records'] if x['kind']=='SYNTHETIC_UNIT_NONZERO_RESIDUAL'][0]\nassert rat(u['value_BU'])==F(1,2**60)\nb=[x for x in q['records'] if x['kind']=='SYNTHETIC_BIAS_PARAMETER_ONLY'][0]\nassert rat(b['parameter_BU'])==F(3,4) and rat(b['axial_geometric_length_BU'])==F(3,2)\nassert not q['native_precision_certified'] and q['native_direction_norm_defect'] is None and q['native_ALU_residual_bound_BU'] is None and q['native_phase_error_bound_rad'] is None and q['scene_replays']==0\nm=json.loads(Path('coordinacion/respuestas/GPU-GUARD-OWNED-TREE-CONTAINMENT-CPU-001-CODEX.json').read_bytes())['pinned_manifest_capture']\nraw=zlib.decompress(base64.b64decode(m['stdout_zlib_base64']));assert hashlib.sha256(raw).hexdigest()==m['stdout_sha256']\npins=json.loads(raw)['pins'];assert len(pins)==461\nfor path,sha in pins.items():assert hashlib.sha256(Path(path).read_bytes()).hexdigest()==sha,path\nprint(json.dumps(dict(status='PASS',independent_scalar_identities=8,sensitivity_controls=2,residual_controls=1,bias_controls=1,frozen_pins=461,production_imports=0,scene_replays=0,GPU_used=False)))\n",
+  "oracle_run": {
+    "rc": 0,
+    "timed_out": false,
+    "before_deadline": true,
+    "started_utc": "2026-10-07T10:26:22.434627+00:00",
+    "ended_utc": "2026-10-07T10:26:22.794317+00:00",
+    "deadline_utc": "2026-10-07T10:26:57.434627+00:00",
+    "elapsed_QA_seconds": 0.35969,
+    "timeout_seconds": 30,
+    "affinity_mask": 1,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "RAM_available_before_bytes": 7971954688,
+    "RAM_budget_bytes": 134217728,
+    "RAM_reserve_after_budget_bytes": 7837736960,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      ".cognition/neuro3d-mega-geometry-20261005/terminal_parameter_reference_oracle.py"
+    ],
+    "stdout_bytes": 211,
+    "stdout_sha256": "045855a6fe0147c30c6a43fa1482dd5dbb591e23e540ce2a4cc758c1bb10103f",
+    "stdout_zlib_base64": "eNpdjTELAjEMRnfB/3B0dlARETcnV+FwDrXNQaCmpUmFU/zvNoMgLoH33gd5OVGvTdxxcJfTOLrV4IgjFuyHFST45CuQASmhDQ99I8jS+UE6Q8isNSdL254qCsXm06/fdH8jL/9uqvmJDIXYzG5vrtQcW1DKDHQvuaqltf0MyAgVS/Lz150vV2iCsePkk+B7ufgA+JVG6Q==",
+    "stderr_utf8": "",
+    "GPU_used": false,
+    "summary": {
+      "status": "PASS",
+      "independent_scalar_identities": 8,
+      "sensitivity_controls": 2,
+      "residual_controls": 1,
+      "bias_controls": 1,
+      "frozen_pins": 461,
+      "production_imports": 0,
+      "scene_replays": 0,
+      "GPU_used": false
+    }
+  },
+  "initial_oracle_failure": {
+    "code": "import base64,hashlib,json,zlib\nfrom fractions import Fraction as F\nfrom pathlib import Path\nr=json.loads(Path('coordinacion/respuestas/PRECISION-TERMINAL-PARAMETER-REFERENCE-IDENTITY-HOST-001-CODEX.json').read_bytes())\nfor path,pin in r['pins'].items():\n b=Path(path).read_bytes();assert len(b)==pin['bytes'] and hashlib.sha256(b).hexdigest()==pin['sha256']\nassert hashlib.sha256(Path(r['shader']['path']).read_bytes()).hexdigest()==r['shader']['sha256']\nraw=zlib.decompress(base64.b64decode(r['test_run']['stdout_zlib_base64']))\nassert hashlib.sha256(raw).hexdigest()==r['test_run']['stdout_sha256']\nq=json.loads(raw);assert q['status']=='PASS' and q['tests']==5 and len(q['records'])==13\ndef rat(pair):return F(int(pair[0]),int(pair[1]))\ncount=0\nfor row in q['records']:\n if row['kind']=='SYNTHETIC_EXACT_IDENTITY':\n  dx,dy,dz=map(rat,row['direction']);s=rat(row['s_BU'])\n  # Expanded scalar polynomial, independently of vector test functions.\n  baseline=F(7,8)+dx*F(3999,4)-dy*F(5,4)-dz\n  deviation=s*(1-dx*dx-dy*dy-dz*dz)+F(5,2**57)-dx*F(1,2**60)+dy*F(1,2**59)-dz*F(1,2**58)\n  bound=abs(s)*abs(1-dx*dx-dy*dy-dz*dz)+F(7,2**57)+abs(dx)*F(1,2**60)+abs(dy)*F(1,2**59)+abs(dz)*F(1,2**58)\n  assert rat(row['baseline_BU'])==baseline and rat(row['deviation_BU'])==deviation\n  assert rat(row['effective_BU'])==baseline+deviation and rat(row['allowance_BU'])==bound\n  assert abs(deviation)<=bound;count+=1\nassert count==8\nsens=[rat(x['delta_BU']) for x in q['records'] if x['kind']=='SYNTHETIC_PARAMETER_SENSITIVITY']\nassert sens==[0,-F(1,2**51)-F(1,2**104)]\nu=[x for x in q['records'] if x['kind']=='SYNTHETIC_UNIT_NONZERO_RESIDUAL'][0]\nassert rat(u['value_BU'])==F(1,2**60)\nb=[x for x in q['records'] if x['kind']=='SYNTHETIC_BIAS_PARAMETER_ONLY'][0]\nassert rat(b['parameter_BU'])==F(3,4) and rat(b['axial_geometric_length_BU'])==F(3,2)\nassert not q['native_precision_certified'] and q['native_direction_norm_defect'] is None and q['native_ALU_residual_bound_BU'] is None and q['native_phase_error_bound_rad'] is None and q['scene_replays']==0\nm=json.loads(Path('coordinacion/respuestas/GPU-GUARD-OWNED-TREE-CONTAINMENT-CPU-001-CODEX.json').read_bytes())['pinned_manifest_capture']\nraw=zlib.decompress(base64.b64decode(m['stdout_zlib_base64']));assert hashlib.sha256(raw).hexdigest()==m['stdout_sha256']\npins=json.loads(raw)['pins'];assert len(pins)==461\nfor path,sha in pins.items():assert hashlib.sha256(Path(path).read_bytes()).hexdigest()==sha,path\nprint(json.dumps(dict(status='PASS',independent_scalar_identities=8,sensitivity_controls=2,residual_controls=1,bias_controls=1,frozen_pins=461,production_imports=0,scene_replays=0,GPU_used=False)))\n",
+    "capture": {
+      "rc": 1,
+      "timed_out": false,
+      "before_deadline": true,
+      "started_utc": "2026-10-07T10:26:09.509529+00:00",
+      "ended_utc": "2026-10-07T10:26:09.642486+00:00",
+      "deadline_utc": "2026-10-07T10:26:44.509529+00:00",
+      "elapsed_QA_seconds": 0.132957,
+      "timeout_seconds": 30,
+      "affinity_mask": 1,
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1"
+      },
+      "RAM_available_before_bytes": 8162287616,
+      "RAM_budget_bytes": 134217728,
+      "RAM_reserve_after_budget_bytes": 8028069888,
+      "command": [
+        "C:/Python313/python.exe",
+        "-B",
+        ".cognition/neuro3d-mega-geometry-20261005/terminal_parameter_reference_oracle.py"
+      ],
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_zlib_base64": "eNoDAAAAAAE=",
+      "stderr_utf8": "Traceback (most recent call last):\r\n  File \"D:\\PROJECTS\\9_NEBULA_NEW\\.cognition\\neuro3d-mega-geometry-20261005\\terminal_parameter_reference_oracle.py\", line 20, in <module>\r\n    assert rat(row['baseline_BU'])==baseline and rat(row['deviation_BU'])==deviation\r\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nAssertionError\r\n",
+      "GPU_used": false
+    },
+    "cause": "Independent scalar verifier incorrectly summed 1-2+4 as 5 instead of 3; corrected verifier only, tests/doc/thresholds unchanged"
+  }
+}
