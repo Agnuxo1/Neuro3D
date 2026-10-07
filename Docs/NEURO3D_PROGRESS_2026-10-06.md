@@ -92,3 +92,8 @@ No se ha detenido ningún proceso ajeno ni se ha avanzado al punto 5. El estado 
 La preparación de software, una simulación verificada, la ejecución de una GPU y un experimento físico son hitos diferentes. Las revisiones internas realizadas aquí tampoco equivalen a reproducción científica externa. Cada conclusión queda limitada por el dispositivo, los datos, la versión y el método que la respaldan.
 
 La próxima acción de esta secuencia es cerrar el experimento del punto 4. Sólo entonces corresponde iniciar el punto 5, respetando el orden solicitado.
+
+
+## 2026-10-07 ? punto 4 cerrado
+
+native05 ejecut? 6/6 dispatch/readbacks en RTX 3090 y el auditor v2 valid? 7026 componentes. Estado: **PASS_NATIVE_GPU_HILO_TRANSPORT**. Punto 5 puede comenzar.
