@@ -1,0 +1,18 @@
+{
+  "schema": "neuro3d.robust_first_hit.preparation.v1",
+  "status": "PASS_CPU_PREPARATION",
+  "manifest": "Docs/validation/robust-first-hit-2026-10-07/inputs01/input_manifest.json",
+  "manifest_sha256": "1ba451212cc136442ea34a1ec9a7cefd44fdf366211f28813590f21b732ba800",
+  "cases": 13,
+  "queries": 20,
+  "real_queries": 9,
+  "synthetic_queries": 11,
+  "thin_gap_powers": [
+    53,
+    54,
+    60
+  ],
+  "fixed_bias": false,
+  "epsilon_tie_band": false,
+  "source_module_sha256": "dc1f3c03240f3335734eef87dd911898b1b52f3c08124bac583d7f5f24ff25de"
+}
