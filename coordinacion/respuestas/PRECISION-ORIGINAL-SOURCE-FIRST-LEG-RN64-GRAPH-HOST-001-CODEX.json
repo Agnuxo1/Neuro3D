@@ -1,0 +1,232 @@
+{
+  "id": "PRECISION-ORIGINAL-SOURCE-FIRST-LEG-RN64-GRAPH-HOST-001",
+  "owner": "Codex",
+  "priority": "P1",
+  "model": "original-SOURCE-first-leg-RN64-graph-HOST-v1",
+  "status": "PASS_HOST_CONDITIONAL_NATIVE_STOP",
+  "scope": "CPU_SINGLE_THREAD_MODELED_GRAPH_NOT_NATIVE_BACKEND",
+  "code_doc_sha256": {
+    "Blender/benchmarks/capacity_audit/original_SOURCE_first_leg_RN64_graph_HOST_v1.py": "d4e1de31d00cc4767725ccad0120ac59875e788c24d6ec0911dc4350857f38d6",
+    "Blender/tests/test_original_SOURCE_first_leg_RN64_graph_HOST_v1.py": "cf1b0a735b6cbfc5c869379347cca0299cff890233db8d0fff546c3b20039c42",
+    "Docs/EXP-005-ORIGINAL-SOURCE-FIRST-LEG-RN64-GRAPH-HOST-001.md": "38382da2aaf463aaf7fb77e89b1e2db2813850b2b2f54ad81392daff4c21102a"
+  },
+  "pure_dependencies_sha256": {
+    "Blender/benchmarks/capacity_audit/oblique_trace_endpoint_length_enclosure_HOST_v1.py": "8f3b77dba20a755754f1c0da4bc9b779d35056a02240b6602d0c7d1d34d330e8",
+    "Blender/benchmarks/capacity_audit/oblique_next_triangle_interval_CPU_v1.py": "94173ba4dfd8534a4c3556cc8666e3efc2dba175c475d12a7332c10b441af776",
+    "Blender/benchmarks/capacity_audit/original_SOURCE_detector_connection_residual_HOST_v1.py": "478e81069c41dbe3b817e7bc010864a6f9af5b03a346e510de062ab9e074480e"
+  },
+  "parent_receipts_sha256": {
+    "PRECISION-ORIGINAL-SOURCE-CANDIDATE-PATH-CYCLES-HOST-001-CODEX.json": "53b739dcaaf08e2bbce9ca81ce7a24b98bc53074357720a4bc9aaaf317aae1fe",
+    "PRECISION-OBLIQUE-COMMON-DETECTOR-LENGTH-CPU-001-CODEX.json": "139cb34a315f476fa026bb346086a3a59d7c22241932ca3f4c291a501f4ca47e"
+  },
+  "frozen_manifest": {
+    "path": "coordinacion/respuestas/GPU-GUARD-OWNED-TREE-CONTAINMENT-CPU-001-CODEX.json",
+    "sha256": "172576dd8a38cf8119f2a1a3d229b534a7e77fdbde2632e2ef967b10e2d6e9f4",
+    "pins_verified": 461
+  },
+  "files": {
+    "Blender/benchmarks/capacity_audit/original_SOURCE_first_leg_RN64_graph_HOST_v1.py": {
+      "bytes": 10445
+    },
+    "Blender/tests/test_original_SOURCE_first_leg_RN64_graph_HOST_v1.py": {
+      "bytes": 7666
+    },
+    "Docs/EXP-005-ORIGINAL-SOURCE-FIRST-LEG-RN64-GRAPH-HOST-001.md": {
+      "bytes": 4208
+    }
+  },
+  "test_run": {
+    "rc": 0,
+    "timed_out": false,
+    "before_deadline": true,
+    "started_utc": "2026-10-07T09:24:23.689077+00:00",
+    "ended_utc": "2026-10-07T09:24:24.552504+00:00",
+    "deadline_utc": "2026-10-07T09:24:58.689077+00:00",
+    "elapsed_QA_seconds": 0.863427,
+    "timeout_seconds": 30,
+    "affinity_mask": 1,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "RAM_available_before_bytes": 6276435968,
+    "RAM_budget_bytes": 134217728,
+    "RAM_reserve_after_budget_bytes": 6142218240,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      "Blender/tests/test_original_SOURCE_first_leg_RN64_graph_HOST_v1.py"
+    ],
+    "stdout_bytes": 117500,
+    "stdout_sha256": "8d92e2e6937c6f94fd2546ee25dc55ea5be455d20fd4cf19ac38b4b0d71161b5",
+    "stdout_zlib_base64": "eNrtnWtTG0nW599vxH4HB6/bu3nynvu8Ymy1h33c2At0z8x2dCjyamsfQIwk3O2Z6O++/yxJIIFsCRDm4nQ4QJSqsvJyLr+Tp7Ly3zujHIejNN75Xy9+/ffOfw1OEz7t/Lj3997r/puD3fd/7b876B8evXu/88MLnDs+P57ghH/v/OXsc/98nOvZxR+PM7599f7n/pmP/5Un/YByBqcf+uOPnitdS/QuhMQoBZuEpSB5FMknznwomZXsZdA6FclM4CkLslqJFEh65Yp0Qah6+ze4wbE/P40f+/74ePj70t3rl1cq9L97v9Rbv333avdt/7D36ueDvaN/9P+Cv/8Trdt/1z/oHR38o5Z8cHT12sN3Px+86vUHp2fnaM7wj/44Ds9yLe5179Xb3QMU8Mvu2597hyjnqL+/e7T3S6+/t//moHd42O8dHKDX/vLz6ze9o53Lwk7y6MPSTXxK/T8+4yaTPPrkj3EFr+Pwq/vhhf3thxfT37/VE2tz/WnMl9V4tXtw1Dvc293HXY96B6hM/9W7/aOD3cOjxSqhjrPq4P/7v+4e9hbq5U/OjgeT81QLPD0/Pq6HxuPzk7PJYHjaicTOwb6W/ckgj/uTYT9/yqf1x+gz6uGP/aiPyox8PbsWdzrs//jTbh+/RhnlDOPg4qsPI5/O0cLz05RHBY2pByF4kL7J8ef+aFi/SFVu/Ogz7jj+52jS1TBO6mWzDvSnqf8e3TUepNxPOaIGixdhmPK4XvXXd+iEk2HKx11XnKIan3I/VNlECcNR/2J0P0Ckx2gSCkTv7tS+jrjLIPlJ7sfP8RgNH+WzYx+XBi76s8l5vfesoNHw9wVZ1yx6llwuMkDcrfFeF2kyJF3pUIJ3KnPNY2Ixl2RVCKSECFJrwbOxzO4s3uFadY5zmfSrEvjTqTRNRudLdfqQhyd5MhrEfhmMxhNccPph8hHD3smWlUxIUlpqTsZx5ixu6YxjBod/eIFD3JLmiiTXUgijnFBSOMWE0FUmJWdkmLFcELNOM+mEY9I6JbTB9cJpkswSV4YEJ22N08aQMwqff/ttdT1Hw+EEg5H/ibEedMIGGRuUQdc83l0z7oQ+DarAQKY6+cPXnRShg+oxyAnE7Oxj/9N4oexL1Zl2ADG0TGoGA4Oar28wyh9Pxp3NO82/d7r6IY+mVY55NEE1I0ZnPKtpPaeTPDTwqo7Uc9yfOCnlCZoBOUTdT2cNmpW1JGZpUEoeVcm8sBHj+Tj+Kn54IeuAdL/rhxVH2A8vqH7ofne9j8KGVdPOPqJLIfj++By1X7wp6nCcLg3CXIY+9H2M5yMfP/fDefoAI99V5NpZM2WrdmdVk8po+C8YkbPRMJ3H2o9VuT7XnmH1W5TWn3f4zs/7/7n/7m/7nQ7/397Bu535GWce8vxpMB6EAeTl88obdaJQSxmfBxjZf/3HizHEa5Snn6eWd/obf163RHMDBMMAuZrABJ5ALF/PlemKt5i6iUsLIELKQSmbnFZW5E6yWFKOcaskwSCwoJUnEj5X98YcpyizMtEKpp3rvN3M0+U/4vH5uErIdZ83q8zVgfHpZDBZHtQTDPJogJZ04345bp2o1hoPR4MPsKPHL6cW7WU3oC8xoC+rB3jZ9ebLaldffqKd+YXop1kVFlxYJ53SGG2sNVWTpODQMwmFUs5pboSB0ehsCRfW1u87A0Fa/fCCQw+Nc5aEtorLqcW4cq/fB+nCnNHKgndmQnjVzI9G0LlQR3hJeFefPZ74yfkX5XB2zaXcryl8apmqm5lUiV2wb/Mhmp04a+T0/FWCPTtvpsALd4WLvXbbM4j1YPwl+3KaoRCo/8fBZOX3w+M0NXTLWnqGq07rwZgHZ5Pxpdz/e+f9Qe/V3uHeu/2X7/7ydu///Nx7+erdTz/hz9e9o96ro3cHL9/29t8c/fUlYPElY4SvX/f+/j/+3xiYgJ4m4WIQ0gtS8Ji6eMZ1wAHNrPYCMJhM5JxLcoJHL4qM3JFXjPDJw8XWkVmowsHem7393bdzmX61u/967/XuUe/l+91ahX+8ets7nAr19aooEYxwKXpfmM08hJhd9JZiNp7L4GyISjAjhTIGGCtDdB7niqrdmUreqYZ+OkgztZyM/OkY9ny01MfTU1b1/tnHz2P4lmM4kMkgjlefA4swuhx1DPenwfB8DEqqzDp3FTRzA93vzjGsPCJnR+TUVVwUdjYawKBUcRrUe1P33dKhTipGw5Nhx3vovXnE8M/zDhYvDCMMII+cBViHTJTxkUWjSdhsdVQqkgpOMuV5SIllZ2QUxessIWrQ81C6KMSnQaWiDbi5E94Po0GqwITu87ik8jZMalpkp+68al1Hiz69k+j8Bxh00YEdD6FxU/zolAPfrWEqOD0/dfJh0Hk2p6vx7m43HaI7QtnOrDqwLsMTWHGgRa3V5Ren5yeVQbrDuAvABzcjKy0jDkSTinMCxDFrtXXOGCnhkcg5Br0wGqSnCcQka4GdE61dN+/tnfOzs4uG3IkO/5yPxLTENhIPOhLjmE9z359PPlafFa9Q4vTbS8WOWmUfEqC6BKtNQe/YWAqxSBRYjIJ7U3y9fUg4xYWsYTAlkAi3NdJUxR4Pz0dA3SuWa8EqXbdTqy3XrKDONO0csoWyr+DP7Oh0DmShNdxEjGhEHwoXtA8UBXiukEveimhijvAAlABtUqJnmdFwDEGZkLgWkvvujiDIRRnur5S92Sgu8f3UmNVRJT0zZ/jQtXXVseuQf4kur97B5R3BGe6+7f8E//a297r/494BwuO3vTf9LrifzfLsv+1mQhAzIa48zl9kgvPTae13MESdyI0niPZPptFpf/Wd3/Te/dQ7Oth71a+Otz91vBe3vCgC+lFDq8syqhfp/7x/0Dt89/YX1Hz37dv++4O9n/bq1Mbhzp8Q0zZndW3O6vo00/Vpnq9PYAhuGQKYiJ8wQV7AazuYo8ItWq1cVj4HzT3gS0epdEiyGK5s1ED3YjntrA3ZNw2p2QYhNbtJSP1MotvvL+C8VUi3cXjWoq5nF3VtO6RaHwXRt4yCHgzPHpiqrsDB+8Ojg97uT9UzXnJNBwGb0cyX8KUrHYUuYsyP7w7+tnvwuoOYRw0uiYHiPReeM12q/iToiwyKFQ2FIsQtTEpLUqqiQnHwB1pHYI6BnCHUcd9Vso1mkwbUkm1PMdlmyHrmWOA28hScESUqDr8F8c4sJQUbFhDBZzgzxPGKmxJC0cXCqmpNit1rsg0cDeYCgll4tSlpOaGV0w6HN0i2IURnSjsOh6dBdkI6hOmWOyuVMk8h2QZo0JxZVLi29+v1fcS5tk2mIVqureXaHiTXRgpmRAPJLQn4dLE616ZhQSoWIFCH+hmcRTBOMDZWMQcYgIpukGy7fk3LtrW4r2Xbvsds2zVw/kbZtjVQtT7Hc0cqu1GOBzbYECMjlLBaW8S0wkKIrZNccPylNQiJGBdKIeqVuqafFNX51uUUD61I8dyJDreQbGsDsa2BeBS5tk0eKFuXa6ObzwrZGJJ3kkrRWmnta14hGp659lqRktkEVzJaQTJxVsiFwDQPMWWcFIvbSq6N5nk1usyrrTrWcm1tymq7uTYYIxfhg6MzwuvAHQAH+hsVj9HkUO2jNsznZBKD7YDwk0qAowgdt1G5lmtrubaWa2sxV8u1Pd9c20NRVcu1bfCQEGx8UaYklw1FTcWWWBOdxYTEbEA/Q4mzBu7rnKHRpjilg/c8a1lS5m1hW8u1PZVcGwuE+DjDfBYYTDitQFaK4gL3xXlSGTE6F8xzk3zWDAogIkvGRR44k8a0hW1fyrUNw/EAnqutZ2vr2R5jjs2ADEyhFIJLUGRJWWlus0PkqoUvGiGPdZZyjVKFhdfzYB4SVBAIqSBDW8/W1rO1aK9l2J5dhq2ANwRg3kFbJSvRBMMyAflLslyBI7Iy2RtOIsE8WidEilHCkCL2C2w6Q9fWs7X1bG0kHtl6tlxgJEk6W6xlpVgGQ5g5OlPrYJRnaBEp5gSaaVxJnlG1qpKrzIUzPD6u9WwwRk4YDHsoxIu3PGotcgxFZIR0yTrjKXllTYL11zZbmYKXjBTh+8JcW8/2LNazPc2pqrvn2KSumRfYOi8TOQm4gbf0DpbEC5eL01Enw7SWJhEna5PSMRr4cs2T4knufClSb6m17abWnn+c2VJrLdh6Lqm1bQQ/D0ZlDwxTLbW2nlcyQIS8DUUWImaUNqKmNZM1cM68wF1nKHYSkDhtY2TMFMkdE4w7Dz9ObRlbS609ldRa9hzCnZXiWcaSC+wpQtzCdH0wzmsVYUCVjXAfXmWptBNJaqk8wdpKKXJbxnYPqbW2eq1l1lpmra1ea7m1Fu613Nrzyq211Wtt9VobiAdYvXZPmbUHWr2WozIQAClYzqKwFKI1OFQDNJ5jSIUn7R3MPeyUJkCcjMxYa9HWnM30kci2eu2pZ9ae6EzVFjJrXFTTwLMrVkF5QfBZV6E3RWVm0UwwV8mcBaa8S05krRDvhMwiI69zy6y1zFrLrLVQq2XWnl1m7aFgqmXW1vNKERjjxAOkCB486SI05ywpQv/jG+GlK4gDUt2kSnNyUvMgdA1coqBIoS1aa5m1p5JZ8wqmjINrcnIZkGqMstbnGuDCbCDQxSEpJDGZweVcOS6Eg2dh2QddjGiL1r6UWUMf1ytHuRBjrK1da2vXHuX7ITWCHWgBBVyebJS87scYtVRS6sK06db+S0lARgrAm5wQmwbFopSKYlu71tautaCv5deeX36NW669oczrCz+oiBpRCsQARmaEBCpwFzkhDow5a+e5wIECQxBlik7DRrS1a23tWhuJtnbtnteulWxlVsJbm12hlHXCwMikBeIzaVWJPHJYscKS8rKkEGu7cCyZUhJl09auPYcM2xOdsdrCXmyGW+UTqDp5y1SMjogV2A7ypiRjjCflPDMmJe4dSYLpyMFaqACMTBE7awL2lmjb8tshn3242RJtLeZ6Lom2bcRAT3AJ21aYqiXa1mOL0oIFDZxPhC60PPks69tB4cWtogBskTkFFYuo7xTWLtU3gkJEpNc5FN+WsLVE25NJtEUuYDEjInGvCT5Bu4Co1iYbcn0FbWIgoPoUkgf9BEeFG2uEp8C9SAak3paw3V+ira1ka3m2lmdrK9lapq1FfS3T9rwybW0lW1vJ1gairWS748PXXNgcivA+ihgNN0wpVpTktqRiVFY6YvCTdcXwJLNEE70PhOEC4gRVqK1kew55tic6YXX3PJsmE1Sw3jhRApOQeg2jB9mWniXBRSxQX2VZNtkVzjJ4h0lffMiV7xW1PFvLs7U8W4u4Wp7tuebZHoqpWp5tPbYQlagy8L9ICq4ojehFmOKVzTGpklMdcUiBg6aDaDKGwfoYSi4Yex3E97agjZgWwkLSNeAFRk47C8ZhUmlpYfcANBq2cP5w22Ynt4zdk8vYMR0Rh3MfyZo6mkFlliTiZvifum0meYcPKRUnhAylCJxNQrLoEqkY7zVjZ7i1dV7CuQ1Whv3KuTEGf5m6cEXWJX6MGasMM5qpOg9gubRS3j0XNxmcfu5/8Gd9fqJvlYp74svcNJG2GqEh9F5Y49jFzMSKby5mL25+VUvjPUwaj2DrkwZhqghkImldsIj8ra/UpKs6IdYyBBeqlS7cJm1kClGbKHPy00eDnnQa7x7tztdzemvNQsvvtWiz5feW8nukuOOI4+oicisRKV5MFK/45mI2+VZXfYM8oSMTRPeUpffMRWVlkDqLUjjDf16MiSUoABrHSDGbVCgqR2ddsrDNyqxdkXdf2P+NMo5Lpnl9WutGlnx1EmuzPrj/JWUbD9xSPmxj57SFJGQbm3scm5tNfcGoU5YyWgbjLhCsUdK2cBMjg39BkGdlNkyHLJUk6wTArSRjuVcyMJHcV9b/reZ4+grH3/6qLa8jpGIdYljBChNcRoa+1z4ZD59cojDaEcY36potYFaWpBRnMUJMlEO/BL6tdYQc0ma0rJKilK2vPtEa7sYRdxrjrVSXm57Z4A1Pnq9HvLeyW761TVxuN98auEoxBiazQ5gZbCFjihVe2AzjRw4imUGous6IJ6EsmeiUNlQQafoc/M7X52RaunW76dbnPy3Q0q0tAH4u6dZtBJIPxpwPjHgt3brJTsIlRatJMR485RSSCyxlljXLsr5mUaLvIQOI7ohHCqloTaIYFUzMNrDvbVnj5vMu1NKtzzbdKoXkMcVUTAZFwRgB82EOTQmy7uMHn6hAubloqAtP1tdHWIrkUpRMQUt+vwskJcI+xsRmaQ8c4PDPvGVb73ex47eab2nZ1pZtfZBs6/2ZnZZsbbFmS7a2ZOvDJFvvEfq/1fLORcu8wRrCmxjy7Sf0tris8Hb5vE1d0zbWe7aRua+ReRSJ1m/5mOU9LCQNyjurkgilRMkknC1GnYlInCOkVYlFVgrx7CwxeADjtAohQULhhZmcTg5tYyHp5slQulky9D7LbonWNmW53UQraTSzKGZVkBnHtKf6ylzveQrZFOF8YgYaGwHHSjntg8cpvk5FSc81b4nWlmhtidYW/LZE6zNNtD4U4rVE6wav4wjM6QhulzHJuk1vcayYokWIHEoS63sqoocipVDQzc4pIUvxQTqVtDBPl1pSKVoWm7KHZNc8WIDRQhMLM7zUnaN5osCyCDyGJHxWyahCjmLdZNq4tGJj6f85PJ90GcJx/nACVWv8ch/84myp73O1gupbUjBkPMHM26yiFLEINA52yyLwj5mJgKgoMqMogHAQ98fpc32NXxq/NH65A79sPAkelMrCWiJudAxcBVdDQ8u1ssyhGcw7H4snnYQ1JWetEjlWn6+qr3CO4ub8IqRxAZGoC1IJYYODESdtcOOCXxlFF9QoxaRLDcptYTEFMvURCASwSm7lQTENLmPd9jASw6wN2igdXKwQKniHpmZtEfezxPCRQmESLKUyqhmCZtF/c375ae/wcG//Tf/t3lHvAG75oPdj76C3D/vzt91felOd6p7z6f39qAHNYwQaprPLKntXn3lPIBTJvHZO6gIx5CrDRyZCmK9IBsGzZro60JItlDFCFhvQNKBpQNOApk3INKB5BkDTJmSe2oRMtAEOj2mXBaTN8lRygECnbKyMAlKmGMvwlDmhvVF5LdFwKoGEIc5E45fGL41fGr98n/zCG780fnkM/GJTssmR1B5dKQqDHpFTmiWRJHEwilYUk+GizlEYZhL8gYVrSBECGHJ6uvsos1R0lpIzblKM3DivLa8po1CffPG5yNoJEf+LzCA6TwawA4Spbx3wLaHU+KXxS+OXllB6/vxyiwdiuqdEQ4DblNLgljkZoItXXNaK2PoWe62CoFwbXt81wFJWvpRonXA28ZZQakBz04RSCk6LVLfm0QWGzWbpVGSyWg2ZsiTIvmZa5fo8jOM8Sxs5LJyCogRQdgOaBjQNaBrQtIRSA5pnADRtQuaJ8YtiPpoiLItEaIuLhaHF1npDovggINM8M6W0SakEQ1wWmLFsWPaZW2kavzR+afzS+KUllBq/NH55MH6RMWodpEnoSVVC0MEUm7yBuqKfI0SMML5e6vpSZ/Q3c774kqOV3tanaJ4uv1DK1gcP+8BKiAWUwkpxqu7o6JIUhUddCpkYFFOh8BJVqRseyCAKcE5/cV11o5hvQTHGJ5j4WMU2Aqg9xgQuQMDyZ66yBGMagrlywmgpMnlKshjtVeBSusBKo5hGMY1ivlVaiSe4DR7RdcQDNxytE9oBMZSEEaais0Pj6sYIUmXEiNZJKWxkIqHbLbvFOutUQEg1BgeXkM3CAwpgzoUXgIromXbGCM7IO0SsWeoEjDCy1Ne7OmZK2MpjMfCWJmgbQW5SEtOx7tSpmI0EDwKUUwwYY7zy5JLmPiqtTBQ1fE6R8WJbWqlhzQ2xBvBSH2Y2sXCE8txaQ4w5V0KuGyMJDk1EfJADnKMLPmbohWApWluScC6WhjUNaxrWNKxpyaWGNc8Ga9rkzFN7OCZzynUa06HBIVCon0SwKnPNSXljnLOipCKFzz7V92FCt1h9Z5I0wVOjmEYxjWIaxbQUU6OYRjEPTDEw9kkJa1WglEx9g7cNzNQ0ndccDr14HblHx7NERUG/JU7DiBdIYPRGP1mK8SSZczJIp2MyIqI9NpONhnlTcoHqlMSVVDxaRyQoROZFhvhnpYuKuVFMo5hGMY1iWorpO6GYWzwoI1kmlQ0abHUw2Uo4T22KqQ/lCJcBMhFjH5TTIVnBksxGyVRg1XKKhquWYmpYc0OsQQNSjooDXmDepOY2uFh9oJR1jsYE7jKETXPnoVcJbjGST04F4030qqWYGtY0rGlY01JMDWueD9a0yZknRjEukUJrg5VFgFyU5NpqHMmQfJldysXzYqRLhfFoZYCMK8U0IwX9i441imkU0yimUUxLMTWKaRSzEcVMO/JfeTSshc2ZZkozdcbn4N3b9TTzALAx9T11i9dxhCOuxb3uvXq7e4ACfoFn7B12Pm1/tza2v7f/Bt1w2O8dHADR/vLz6ze9biLri+SSUv+Pz9e3oF7eSnQ14vjx+PzkbM4Fv+50m4hOBnncnwz7+RM8M35UTbxCEZ1/GfZ//Gm3j18Y0vF4GAcXX8ErpHNUBeY+jwo6ecowIwj45PgzbHX9IlWa9KPPuGPd7rWe4uOkXjZrad1Y+z3a1cFQyvG42+z14iL0J4gHV1XLOOWdrhtnLiVUYkUJ8DtXXeAnFHga885vHYKBaFPdYrYT6PHUh8SlHt6cvvgG9OVuQl9pUEoe1dou7XI73eT26givP1JbjMKGtfdnnhklnl+xhc8E+To2qaWMzwM05F//8WK6YfD081Rtpr/x53XpnAslhAUyOYFanEA8Xs/J54qqP24WnMvjrAoLtmK1qbhy/u+DhJ/Tk2fn3g4vr5x9af9XDfRNkXTKolW3J1UkYLi+wKRPgV27W88kZDLyp2OYgdEVNLsPaHu/tBX57SzMSqRD1w2qsd3AUXX98WE0SHAgte4el1QHB9VKXSMmo/M8P2+61f2CHe4Mdf4DvuTyTPggjOFsd/p62dzarNpWfFrisrTPLoVsDU+geNOt7Wn1jvdseeP6eRGLe9J3x/6cN2H6zVNtwhquvr6//e2EavPnte66d/wt6/eN9mlfRGEhVSPh9STM1Wy0ph8aCz9DFhazIRYXKipnR2Rj4cbCm7Pw3FaoxsKNhRex5XYW5oYsvMJVfRsaFk6TZJa4MiQ4aWucNoacUfi8EWeqW3AmKe24UVIIK7U2jBxzyjpphFIWf5HWTDJeE21WE5FmzGpuOZfsCqLOO26JUdV2MPt5982z43c3u7e7qA3p2aHph0dE8Kf5Q2c5G8Y3jG8Y/+uvL+de9uWlm30597MvG8o3lG8o31D+SUxrN5RvKP/YUf52MW1D+VUoPxhNgcgfN5jfAObnxrGh/DNFeZor6qXuXjvSML5h/FqMJ+U419yRJUFSVl8F/22dc0xbiW9kFSEttGPw4oYrOHeDs6RiQjmnuRGGSafXhQC04pIWEXwfEcHtjNVNI4KrPm+L8cCF/VoBvVAXJpWS5KRThnPjrDBSC2u0VHIj6NUMlxnmjDQgVOGgjEaQE2BU88PXqfrGsAwOlpwJaRjUWGhS3GhDyljAsyQlBLeCo0WGGHjZccug+bi141dYeQUqf7UrwNEohFvSXBEMC3jdKCfA7Q52QehN4482Ft9oLJ5d6uJ2Zughop2QIZP9CwPWQp71IU8dQg39EJZJ2QEM46aTf82Z40Ii8OdQbsWhUdw5YSx0AgqmBCNh9FwM7lRGC7WeaajFtdF1fSmcAxyBk4zAr4YJztSC7Kw5qy0iaGHaXRcR0DrPvT4M+/r1LSb7fmKyb2vVbhjPPRqH/o3iyC0sN7hLU1eHKBqxEDEyOMtqbZlBACEQoDjJMf5Ga8QpmhgXuBP+aYloRhG3iyg+Mzt3Hczl6OYbBJNtQLY9IM8yonwMNurxLqKJ0KtUFQKxxfAEprNfF6e3gHZ9QCvZwr953vjqsRZwPsOAky+NOV8a7RZAtgDyVgHk14SqPbrXgsIpzywJCd3C8twwyNvYyX2bh/tIWam04Ipxq7jVRpE1zBrHmDYXOrM+KlhSthvlhEDPzErgoCQlcU/BlBJSkDK6Mh/TWgHxJQPvkzHGKk0AR1Urvtxti7C/opeX4H2hund/CLD14a1CnZfLuvfyNsr37QKfTfX28QYmM05I+Qw0CV4CX4yG43F9/2Z7B9bN3oFFLRJ5rguG1iXIW/jRwo+b5q9ogxxVCzm+l5Djlibmlm/BovYWrBs24auz+ps0j27RvG1mOVZkKp75q7Xo0cN35wC7V92fwInBP0Eq2lNuGz7l1sVay4/Smy88j9+A/LtY9iO6iQxu599c/N34vPH5hsuAbmZY2kKfBvMbL/S5qXm6xYNiNxDdb0P+zxeb7/hU1ZWOqStSXF1daLiqiw/Xd8yaAtY+3bqyQ69KyhcSC5Zrp5Rgoi4nIoV/rG6s6JRwVmkj66sFHOOONL4yGv1PTgouGJEU2kpDWnIn6Mr6nQ0k98poOMYMOYcmm7qLNdp95Qj/npbwWIbuxQgwJy05K+dnXDv+iEKgmWsbf/RnF49GscUQaL/3posdptGPn+1Ig8ESOwvFvL9zCasqQneuCG2nIvzOFeHbqYi4c0XEdioiNyhmHi8hGDobDrpdmv55PqjG5svV21q5qyqt1hc+HCFwXFD6r1T1jqWtqqBeX+Tk81n1YvO3kHy5encqa1XlzPoCQUbD047hwix22aCiWyt3VaXtPVXa3mel3T1V2t1npWkDo3/tMdyvme67lreyknRPXbu9gi8o5ghYv77QeWw6ix9XlnTI71ROxw4n64sY+5MMRuqfgsxPMizeeLGULlYf1JnAOJisLyz/MT1zOqO11KzcEfEl7W3Q8dc3+Zztcrqz9JD46aSC4E2KPh6gnZczh9PpkFW1Xdx6bvsVvlHp07On2++tlJtplZf259t6lW9W+oZVXtp6cOtVvlnpc8m4uGq8ssKr9lG8h5rf6jYbNeEr80lbb8dd7nWxL2G3DSGKGAPJlplx1qLlbMjWG3HD4jev99T49IeljOts7hkM6H3U/5a32bwdM/M7u89sXuC+jPwN77KxvV+ceLivum9Y+rzOozzP6PzuP+XZdPJ8An9W2OLd5pXqptquT6Jt3qqugMEpojSPugyWzcjyWdemu+7zLouTb/dyn4sJwxuWPo9sv1L0dJJzG+XOxaNKV/4DwDXonj/doOzj4bgmX5avX1KGSoRT3z2cfERXdB787u5+4XHZs8Hp+vLOzpefsT2b6+zFZe/6u2/3dg9bjr+9ib9tqNU21Gp5+/YW/paKbxtqtbfwt7fwtw21HsVb+Jfu9X738HDnz9+uH6vF5qnvV3/+9//2/wHlf/MP",
+    "stderr_utf8": "",
+    "GPU_used": false,
+    "summary": {
+      "status": "PASS",
+      "tests": 5,
+      "records": 93,
+      "kinds": {
+        "FIXED_GRAPH_OR_STOP": 28,
+        "GRAPH_CONTROL": 8,
+        "NEGATIVE": 56,
+        "NO_ALIAS": 1
+      }
+    }
+  },
+  "test_runner_code": "import base64,ctypes,datetime,hashlib,json,os,psutil,subprocess,zlib\nfrom pathlib import Path\nk=ctypes.windll.kernel32\nk.GetCurrentProcess.restype=ctypes.c_void_p\nk.SetProcessAffinityMask.argtypes=[ctypes.c_void_p,ctypes.c_size_t]\nassert k.SetProcessAffinityMask(k.GetCurrentProcess(),1)\nbudget=128*1024**2\nram=psutil.virtual_memory().available\nassert ram-budget>=4*1024**3\nstart=datetime.datetime.now(datetime.timezone.utc)\ndeadline=start+datetime.timedelta(seconds=35)\ncmd=['C:/Python313/python.exe','-B','Blender/tests/test_original_SOURCE_first_leg_RN64_graph_HOST_v1.py']\nenv=dict(os.environ)\nfor v in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS'):env[v]='1'\np=subprocess.run(cmd,capture_output=True,timeout=30,env=env)\nend=datetime.datetime.now(datetime.timezone.utc)\nout=dict(rc=p.returncode,timed_out=False,before_deadline=end<deadline,started_utc=start.isoformat(),ended_utc=end.isoformat(),deadline_utc=deadline.isoformat(),elapsed_QA_seconds=(end-start).total_seconds(),timeout_seconds=30,affinity_mask=1,thread_environment={v:env[v]for v in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS')},RAM_available_before_bytes=ram,RAM_budget_bytes=budget,RAM_reserve_after_budget_bytes=ram-budget,command=cmd,stdout_bytes=len(p.stdout),stdout_sha256=hashlib.sha256(p.stdout).hexdigest(),stdout_zlib_base64=base64.b64encode(zlib.compress(p.stdout,9)).decode(),stderr_utf8=p.stderr.decode('utf-8','replace'),GPU_used=False)\nif p.returncode==0:\n d=json.loads(p.stdout);out['summary']=dict(status=d['status'],tests=d['tests'],records=len(d['records']),kinds={key:sum(r['kind']==key for r in d['records'])for key in sorted(set(r['kind']for r in d['records']))})\nprint(json.dumps(out,ensure_ascii=True))\n",
+  "independent_verification": {
+  "rc": 0,
+  "timed_out": false,
+  "before_deadline": true,
+  "started_utc": "2026-10-07T09:27:23.117758+00:00",
+  "ended_utc": "2026-10-07T09:27:23.404143+00:00",
+  "deadline_utc": "2026-10-07T09:27:58.117758+00:00",
+  "elapsed_QA_seconds": 0.286385,
+  "timeout_seconds": 30,
+  "affinity_mask": 1,
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "RAM_available_before_bytes": 7805399040,
+  "RAM_budget_bytes": 134217728,
+  "RAM_reserve_after_budget_bytes": 7671181312,
+  "command": [
+    "C:/Python313/python.exe",
+    "-B",
+    ".cognition/neuro3d-mega-geometry-20261005/first_leg_RN64_graph_oracle.py"
+  ],
+  "stdout_bytes": 974,
+  "stdout_sha256": "73c2c5583172dcdcfac5c3092b153b456e35f347f66fe7c62a76ecb03bffaaf7",
+  "stdout_zlib_base64": "eNqlU8Fq3DAQvRf6D8HnQiXLlq3e2hJ6KNjLOkuhpQyKPbsRaCVXkpNNQv69o3RpSEohJDcx896bh+bNbfFltYEl4lR8ONlqG/HdSTH0m/XnUxi9S3hIcG7cZNwuEqJsqT3qOS0BJ/B2guB9ghFDMlsz6oQRLjHQm9rOQ8DZ6msicklEPOgxwboj5eAwwA0GD9HsF6uT8S4P4IpwW3MgOo2fTK5rC9paf6XdSPKfNjDhaPZUNeRvRzoxhaO/22IyAcfMgjhqi9P7gVH9R8EZr8pKMlkLJVRBUxpVli2XZU0NWQnR1ErUlVA1E0IWPwnxrxb/o1VWxGOtaisuspRQkles5WXdcFFy2TZKNg1XTU3veyl/bs2vBV/j5q/Ei03EC53XFnDLGWOv8fJU6cWWknHXsNMzlHv54Oh5Jp5w+bO5dzljwd+gg9m4h8SSQCV5bi7WUv5iypkqNt3Xrv/WQdefwffTdZ8nOErsJcJMATExJ+R4Ao/uyOEV7IKeLx6N4M2x9f/TIZSoCBUwaePoo5eZMo56D8NZv8p3yPISkk7LvcPVx2Eo7t6++Q0mUBT4",
+  "stderr_utf8": "",
+  "GPU_used": false,
+  "summary": {
+    "GPU_used": false,
+    "SOURCE_context_bindings": 28,
+    "captured_old_root_certificates_verified_no_replay": 16,
+    "exact_RN_corner_zero_simulations": 19,
+    "fixed_conditional_allowances_BU_decimal_integer_strings": {
+      "direction_scaled/S0": [
+        "10142460653939",
+        "79228162514264337593543950336"
+      ],
+      "direction_scaled/S1": [
+        "1241620898413",
+        "39614081257132168796771975168"
+      ],
+      "oblique/S0": [
+        "10142460653939",
+        "79228162514264337593543950336"
+      ],
+      "oblique/S1": [
+        "1241620898413",
+        "39614081257132168796771975168"
+      ],
+      "shared_ref1000/S0": [
+        "10142460653939",
+        "79228162514264337593543950336"
+      ],
+      "shared_ref1000/S1": [
+        "1241620898413",
+        "39614081257132168796771975168"
+      ],
+      "tiny_gap_2m60/S0": [
+        "1",
+        "79228162514264337593543950336"
+      ],
+      "tiny_gap_2m60/S1": [
+        "1",
+        "79228162514264337593543950336"
+      ]
+    },
+    "frozen_pins_verified": 461,
+    "full_costs": "UNKNOWN_NOT_ZERO",
+    "native_precision_certified": false,
+    "new_graphs_verified": 17,
+    "new_root_certificates_verified": 34,
+    "retained_upstream_STOP": 20,
+    "status": "PASS"
+  },
+  "oracle_code": "\"\"\"Independent captured-graph verifier: no project-helper or test imports.\"\"\"\nimport base64,copy,hashlib,itertools,json,math,struct,zlib\nfrom fractions import Fraction as F\nfrom pathlib import Path\n\nID=\"PRECISION-ORIGINAL-SOURCE-FIRST-LEG-RN64-GRAPH-HOST-001\"\nR=Path(\"coordinacion/respuestas\")/(ID+\"-CODEX.json\")\nreceipt=json.loads(R.read_bytes())\ndef sha(b):return hashlib.sha256(b).hexdigest()\ndef digest(v):return sha(json.dumps(v,sort_keys=True,separators=(\",\",\":\"),allow_nan=False).encode())\ndef cap(c):\n assert c[\"rc\"]==0 and c.get(\"timed_out\",False)is False\n b=zlib.decompress(base64.b64decode(c[\"stdout_zlib_base64\"],validate=True))\n assert len(b)==c[\"stdout_bytes\"] and sha(b)==c[\"stdout_sha256\"]\n return json.loads(b)\ndata=cap(receipt[\"test_run\"])\nassert receipt[\"test_run\"][\"before_deadline\"]is True\nassert data[\"status\"]==\"PASS\" and data[\"tests\"]==5 and len(data[\"records\"])==93\nfor p,h in {**receipt[\"code_doc_sha256\"],**receipt[\"pure_dependencies_sha256\"]}.items():\n assert sha(Path(p).read_bytes())==h\nparents={}\nfor name,h in receipt[\"parent_receipts_sha256\"].items():\n b=(Path(\"coordinacion/respuestas\")/name).read_bytes();assert sha(b)==h\n parents[name]=cap(json.loads(b)[\"test_run\"])\ncycle=parents[next(n for n in parents if \"CANDIDATE-PATH-CYCLES\" in n)]\noldrows={digest(r[\"result\"]):r[\"result\"]for r in cycle[\"records\"]if r[\"kind\"]==\"FIXED_PATH_OR_STOP\"}\ngeom=parents[next(n for n in parents if \"COMMON-DETECTOR-LENGTH\" in n)][\"data\"][\"inputs\"]\nassert len(oldrows)==28\nmanifest=receipt[\"frozen_manifest\"]\nb=Path(manifest[\"path\"]).read_bytes();assert sha(b)==manifest[\"sha256\"]\nc=json.loads(b)[\"pinned_manifest_capture\"]\nraw=zlib.decompress(base64.b64decode(c[\"stdout_zlib_base64\"]));assert sha(raw)==c[\"stdout_sha256\"]\npins=json.loads(raw)[\"pins\"];assert len(pins)==461\nassert all(sha(Path(p).read_bytes())==h for p,h in pins.items())\n\ndef pp(q):return [q.numerator,q.denominator]\ndef iv(v):return tuple(F(*p)for p in v)\ndef direct(q,upper):\n # float conversion is only an initial candidate: exact rational comparisons\n # against adjacent binary64 lattice values certify directed rounding.\n v=float(q);f=F.from_float(v)\n if (upper and f<q)or(not upper and f>q):\n  v=math.nextafter(v,math.inf if upper else -math.inf);f=F.from_float(v)\n adjacent=F.from_float(math.nextafter(v,-math.inf if upper else math.inf))\n assert (adjacent<q<=f)if upper and f!=q else ((f<=q<adjacent)if not upper and f!=q else f==q)\n return f\ndef out(lo,hi):return (direct(lo,False),direct(hi,True))\ndef even(q):return struct.unpack(\"<Q\",struct.pack(\"<d\",float(q)))[0]&1==0\ndef rn(q):\n lo,hi=out(q,q)\n if lo==hi:return lo\n return lo if q-lo<hi-q or(q-lo==hi-q and even(lo))else hi\ndef sqrt_rn(q):\n assert q>=0\n if not q:return F(0)\n e=q.numerator.bit_length()-q.denominator.bit_length()\n if q<F(2)**e:e-=1\n step=F(2)**max(e//2-52,-1074)\n scaled=q/(step*step)\n k=math.isqrt(scaled.numerator//scaled.denominator)\n lo=k*step;hi=lo if lo*lo==q else (k+1)*step\n assert lo*lo<=q<=hi*hi\n if lo==hi:return lo\n midpoint=(lo+hi)/2\n return lo if q<midpoint*midpoint or(q==midpoint*midpoint and even(lo))else hi\ndef cert(v):\n q=F(*v[\"squared\"]);k=v[\"floor_scaled_root\"];n=q.numerator<<192;d=q.denominator\n assert type(k)is int and k>=0 and v[\"fraction_bits\"]==96\n assert v[\"scaled_numerator\"]==n and v[\"scaled_denominator\"]==d\n assert k*k*d<=n<(k+1)*(k+1)*d\n exact=k*k*d==n\n assert v[\"exact\"]is exact\n assert v[\"lower_BU\"]==pp(F(k,2**96))and v[\"upper_BU\"]==pp(F(k+int(not exact),2**96))\n return q\nnewroots=oldroots=graphs=samples=stops=bindings=0\nfixed_bounds={}\nfor r in data[\"records\"]:\n if \"result\"not in r:continue\n g=r[\"result\"]\n assert g[\"promotion\"]==\"STOP\"and g[\"SOURCE_merged\"]is False\n assert g[\"native_SOURCE_ingress_error_bound_BU\"]is None\n assert g[\"native_first_leg_error_bound_BU\"]is None and g[\"native_phase_error_bound_rad\"]is None\n for k in (\"GPU_used\",\"Bpy_used\",\"RT_used\",\"native_precision_certified\",\"first_leg_native_ALU_certified\",\"phase_certified\",\"scene_authenticated\",\"GPU_launch_allowed\"):\n  assert g[k]is False\n if r[\"kind\"]==\"FIXED_GRAPH_OR_STOP\":\n  row=oldrows[g[\"captured_SOURCE_row_sha256\"]];bindings+=1\n  assert row[\"case\"]==g[\"case\"] and row[\"source_id\"]==g[\"source_id\"]\n  assert digest(row)==g[\"captured_SOURCE_row_sha256\"]\n  for k in (\"scene_sha256\",\"query_sha256\",\"input_sha256\",\"source_record_sha256\",\"CPU_packet_binding_sha256\",\"primitive_id\",\"previous_primitive_id\"):\n   assert row[k]==g[k]\n  assert g[\"upstream_ledger_status\"]==row[\"upstream_ledger_status\"]==\"STOP_UNRESOLVED_ALL_PRIMITIVES\"\n  if row[\"cycles_interval\"]is None:\n   stops+=1;assert g[\"status\"]==\"STOP_UPSTREAM_NO_FIRST_LEG_GRAPH\"and g[\"costs\"][\"new_integer_root_certificates\"]==0\n   continue\n  assert g[\"source_box_BU\"]==row[\"source_origin_box_BU\"] and g[\"previous_P_box_BU\"]==row[\"previous_point_box_BU\"]\n  lit=geom[g[\"case\"]];s=next(s for s in lit[\"scene\"][\"sources\"]if s[\"id\"]==g[\"source_id\"])\n  assert g[\"source_box_BU\"]==[[v,v]for v in s[\"position_BU\"]]\n  assert digest(lit[\"scene\"])==g[\"scene_sha256\"] and digest(lit[\"request\"])==g[\"query_sha256\"]\n  seg=row[\"new_first_segment\"]\n  for c in (seg[\"root_lower_certificate\"],seg[\"root_upper_certificate\"]):cert(c);oldroots+=1\n  geo=iv(seg[\"length_BU\"]);length=iv(g[\"modeled_length_interval_BU\"])\n  assert g[\"captured_geometric_first_length_BU\"]==seg[\"length_BU\"]\n  assert F(*g[\"conditional_graph_vs_geometric_allowance_BU\"])==max(abs(length[0]-geo[1]),abs(length[1]-geo[0]))\n  fixed_bounds[g[\"case\"]+\"/\"+g[\"source_id\"]]=[str(v)for v in g[\"conditional_graph_vs_geometric_allowance_BU\"]]\n graphs+=1\n a=[iv(v)for v in g[\"source_box_BU\"]];b=[iv(v)for v in g[\"previous_P_box_BU\"]]\n ds=[out(y[0]-x[1],y[1]-x[0])for x,y in zip(a,b)]\n assert [list(v)for v in ds]==[list(iv(v))for v in g[\"difference_intervals_BU\"]]\n ss=[out(F(0)if l<=0<=h else min(l*l,h*h),max(l*l,h*h))for l,h in ds]\n assert ss==[iv(v)for v in g[\"squared_intervals_BU2\"]]\n xy=out(ss[0][0]+ss[1][0],ss[0][1]+ss[1][1]);q=out(xy[0]+ss[2][0],xy[1]+ss[2][1])\n assert xy==iv(g[\"add_xy_interval_BU2\"])and q==iv(g[\"radicand_interval_BU2\"])\n low,high=g[\"root_lower_certificate\"],g[\"root_upper_certificate\"]\n assert cert(low)==q[0]and cert(high)==q[1];newroots+=2\n length=iv(g[\"modeled_length_interval_BU\"])\n assert length==out(F(*low[\"lower_BU\"]),F(*high[\"upper_BU\"]))\n assert F(*g[\"modeled_length_width_BU\"])==length[1]-length[0]\n assert g[\"costs\"]==dict(new_integer_root_certificates=2,new_modeled_scalar_operations=9)\n assert g[\"candidate_cycles_replaced\"]is False and g[\"phase_budget_transferred\"]is False\n # Independent exact RN ties-even simulations of corners plus zero where present.\n axes=[sorted(set((l,h)+( (F(0),)if l<=0<=h else () )))for l,h in a+b]\n for pt in itertools.product(*axes):\n  d=[rn(y-x)for x,y in zip(pt[:3],pt[3:])]\n  squares=[rn(v*v)for v in d]\n  xys=rn(squares[0]+squares[1]);rad=rn(xys+squares[2]);root=sqrt_rn(rad)\n  assert all(l<=v<=h for(l,h),v in zip(ds,d))\n  assert all(l<=v<=h for(l,h),v in zip(ss,squares))\n  assert xy[0]<=xys<=xy[1]and q[0]<=rad<=q[1]and length[0]<=root<=length[1]\n  samples+=1\nassert (graphs,newroots,oldroots,stops,bindings)==(17,34,16,20,28)\nprint(json.dumps(dict(status=\"PASS\",new_graphs_verified=graphs,new_root_certificates_verified=newroots,\n captured_old_root_certificates_verified_no_replay=oldroots,exact_RN_corner_zero_simulations=samples,\n retained_upstream_STOP=stops,SOURCE_context_bindings=bindings,frozen_pins_verified=461,\n fixed_conditional_allowances_BU_decimal_integer_strings=fixed_bounds,\n native_precision_certified=False,GPU_used=False,full_costs=\"UNKNOWN_NOT_ZERO\"),sort_keys=True))\n",
+  "oracle_runner_code": "import base64,ctypes,datetime,hashlib,json,os,psutil,subprocess,zlib\nfrom pathlib import Path\nk=ctypes.windll.kernel32\nk.GetCurrentProcess.restype=ctypes.c_void_p\nk.SetProcessAffinityMask.argtypes=[ctypes.c_void_p,ctypes.c_size_t]\nassert k.SetProcessAffinityMask(k.GetCurrentProcess(),1)\nbudget=128*1024**2\nram=psutil.virtual_memory().available\nassert ram-budget>=4*1024**3\nstart=datetime.datetime.now(datetime.timezone.utc)\ndeadline=start+datetime.timedelta(seconds=35)\ncmd=['C:/Python313/python.exe','-B','.cognition/neuro3d-mega-geometry-20261005/first_leg_RN64_graph_oracle.py']\nenv=dict(os.environ)\nfor v in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS'):env[v]='1'\np=subprocess.run(cmd,capture_output=True,timeout=30,env=env)\nend=datetime.datetime.now(datetime.timezone.utc)\nout=dict(rc=p.returncode,timed_out=False,before_deadline=end<deadline,started_utc=start.isoformat(),ended_utc=end.isoformat(),deadline_utc=deadline.isoformat(),elapsed_QA_seconds=(end-start).total_seconds(),timeout_seconds=30,affinity_mask=1,thread_environment={v:env[v]for v in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS')},RAM_available_before_bytes=ram,RAM_budget_bytes=budget,RAM_reserve_after_budget_bytes=ram-budget,command=cmd,stdout_bytes=len(p.stdout),stdout_sha256=hashlib.sha256(p.stdout).hexdigest(),stdout_zlib_base64=base64.b64encode(zlib.compress(p.stdout,9)).decode(),stderr_utf8=p.stderr.decode('utf-8','replace'),GPU_used=False)\nif p.returncode==0:\n out['summary']=json.loads(p.stdout)\nprint(json.dumps(out,ensure_ascii=True))\n",
+  "preserved_failed_attempt": {
+    "rc": 1,
+    "timed_out": false,
+    "before_deadline": true,
+    "started_utc": "2026-10-07T09:26:53.242966+00:00",
+    "ended_utc": "2026-10-07T09:26:53.396224+00:00",
+    "deadline_utc": "2026-10-07T09:27:28.242966+00:00",
+    "elapsed_QA_seconds": 0.153258,
+    "timeout_seconds": 30,
+    "affinity_mask": 1,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "RAM_available_before_bytes": 7731322880,
+    "RAM_budget_bytes": 134217728,
+    "RAM_reserve_after_budget_bytes": 7597105152,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      ".cognition/neuro3d-mega-geometry-20261005/first_leg_RN64_graph_oracle.py"
+    ],
+    "stdout_bytes": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_zlib_base64": "eNoDAAAAAAE=",
+    "stderr_utf8": "Traceback (most recent call last):\r\n  File \"D:\\PROJECTS\\9_NEBULA_NEW\\.cognition\\neuro3d-mega-geometry-20261005\\first_leg_RN64_graph_oracle.py\", line 28, in <module>\r\n    assert len(oldrows)==28\r\n           ^^^^^^^^^^^^^^^^\r\nAssertionError\r\n",
+    "GPU_used": false,
+    "oracle_code": "\"\"\"Independent captured-graph verifier: no project-helper or test imports.\"\"\"\nimport base64,copy,hashlib,itertools,json,math,struct,zlib\nfrom fractions import Fraction as F\nfrom pathlib import Path\n\nID=\"PRECISION-ORIGINAL-SOURCE-FIRST-LEG-RN64-GRAPH-HOST-001\"\nR=Path(\"coordinacion/respuestas\")/(ID+\"-CODEX.json\")\nreceipt=json.loads(R.read_bytes())\ndef sha(b):return hashlib.sha256(b).hexdigest()\ndef digest(v):return sha(json.dumps(v,sort_keys=True,separators=(\",\",\":\"),allow_nan=False).encode())\ndef cap(c):\n assert c[\"rc\"]==0 and c.get(\"timed_out\",False)is False\n b=zlib.decompress(base64.b64decode(c[\"stdout_zlib_base64\"],validate=True))\n assert len(b)==c[\"stdout_bytes\"] and sha(b)==c[\"stdout_sha256\"]\n return json.loads(b)\ndata=cap(receipt[\"test_run\"])\nassert receipt[\"test_run\"][\"before_deadline\"]is True\nassert data[\"status\"]==\"PASS\" and data[\"tests\"]==5 and len(data[\"records\"])==93\nfor p,h in {**receipt[\"code_doc_sha256\"],**receipt[\"pure_dependencies_sha256\"]}.items():\n assert sha(Path(p).read_bytes())==h\nparents={}\nfor name,h in receipt[\"parent_receipts_sha256\"].items():\n b=(Path(\"coordinacion/respuestas\")/name).read_bytes();assert sha(b)==h\n parents[name]=cap(json.loads(b)[\"test_run\"])\ncycle=parents[next(n for n in parents if \"CANDIDATE-PATH-CYCLES\" in n)]\noldrows={(r[\"result\"][\"case\"],r[\"result\"][\"source_id\"]):r[\"result\"]for r in cycle[\"records\"]if r[\"kind\"]==\"FIXED_PATH_OR_STOP\"}\ngeom=parents[next(n for n in parents if \"COMMON-DETECTOR-LENGTH\" in n)][\"data\"][\"inputs\"]\nassert len(oldrows)==28\nmanifest=receipt[\"frozen_manifest\"]\nb=Path(manifest[\"path\"]).read_bytes();assert sha(b)==manifest[\"sha256\"]\nc=json.loads(b)[\"pinned_manifest_capture\"]\nraw=zlib.decompress(base64.b64decode(c[\"stdout_zlib_base64\"]));assert sha(raw)==c[\"stdout_sha256\"]\npins=json.loads(raw)[\"pins\"];assert len(pins)==461\nassert all(sha(Path(p).read_bytes())==h for p,h in pins.items())\n\ndef pp(q):return [q.numerator,q.denominator]\ndef iv(v):return tuple(F(*p)for p in v)\ndef direct(q,upper):\n # float conversion is only an initial candidate: exact rational comparisons\n # against adjacent binary64 lattice values certify directed rounding.\n v=float(q);f=F.from_float(v)\n if (upper and f<q)or(not upper and f>q):\n  v=math.nextafter(v,math.inf if upper else -math.inf);f=F.from_float(v)\n adjacent=F.from_float(math.nextafter(v,-math.inf if upper else math.inf))\n assert (adjacent<q<=f)if upper and f!=q else ((f<=q<adjacent)if not upper and f!=q else f==q)\n return f\ndef out(lo,hi):return (direct(lo,False),direct(hi,True))\ndef even(q):return struct.unpack(\"<Q\",struct.pack(\"<d\",float(q)))[0]&1==0\ndef rn(q):\n lo,hi=out(q,q)\n if lo==hi:return lo\n return lo if q-lo<hi-q or(q-lo==hi-q and even(lo))else hi\ndef sqrt_rn(q):\n assert q>=0\n if not q:return F(0)\n e=q.numerator.bit_length()-q.denominator.bit_length()\n if q<F(2)**e:e-=1\n step=F(2)**max(e//2-52,-1074)\n scaled=q/(step*step)\n k=math.isqrt(scaled.numerator//scaled.denominator)\n lo=k*step;hi=lo if lo*lo==q else (k+1)*step\n assert lo*lo<=q<=hi*hi\n if lo==hi:return lo\n midpoint=(lo+hi)/2\n return lo if q<midpoint*midpoint or(q==midpoint*midpoint and even(lo))else hi\ndef cert(v):\n q=F(*v[\"squared\"]);k=v[\"floor_scaled_root\"];n=q.numerator<<192;d=q.denominator\n assert type(k)is int and k>=0 and v[\"fraction_bits\"]==96\n assert v[\"scaled_numerator\"]==n and v[\"scaled_denominator\"]==d\n assert k*k*d<=n<(k+1)*(k+1)*d\n exact=k*k*d==n\n assert v[\"exact\"]is exact\n assert v[\"lower_BU\"]==pp(F(k,2**96))and v[\"upper_BU\"]==pp(F(k+int(not exact),2**96))\n return q\nnewroots=oldroots=graphs=samples=stops=bindings=0\nfixed_bounds={}\nfor r in data[\"records\"]:\n if \"result\"not in r:continue\n g=r[\"result\"]\n assert g[\"promotion\"]==\"STOP\"and g[\"SOURCE_merged\"]is False\n assert g[\"native_SOURCE_ingress_error_bound_BU\"]is None\n assert g[\"native_first_leg_error_bound_BU\"]is None and g[\"native_phase_error_bound_rad\"]is None\n for k in (\"GPU_used\",\"Bpy_used\",\"RT_used\",\"native_precision_certified\",\"first_leg_native_ALU_certified\",\"phase_certified\",\"scene_authenticated\",\"GPU_launch_allowed\"):\n  assert g[k]is False\n if r[\"kind\"]==\"FIXED_GRAPH_OR_STOP\":\n  row=oldrows[g[\"case\"],g[\"source_id\"]];bindings+=1\n  assert digest(row)==g[\"captured_SOURCE_row_sha256\"]\n  for k in (\"scene_sha256\",\"query_sha256\",\"input_sha256\",\"source_record_sha256\",\"CPU_packet_binding_sha256\",\"primitive_id\",\"previous_primitive_id\"):\n   assert row[k]==g[k]\n  assert g[\"upstream_ledger_status\"]==row[\"upstream_ledger_status\"]==\"STOP_UNRESOLVED_ALL_PRIMITIVES\"\n  if row[\"cycles_interval\"]is None:\n   stops+=1;assert g[\"status\"]==\"STOP_UPSTREAM_NO_FIRST_LEG_GRAPH\"and g[\"costs\"][\"new_integer_root_certificates\"]==0\n   continue\n  assert g[\"source_box_BU\"]==row[\"source_origin_box_BU\"] and g[\"previous_P_box_BU\"]==row[\"previous_point_box_BU\"]\n  lit=geom[g[\"case\"]];s=next(s for s in lit[\"scene\"][\"sources\"]if s[\"id\"]==g[\"source_id\"])\n  assert g[\"source_box_BU\"]==[[v,v]for v in s[\"position_BU\"]]\n  assert digest(lit[\"scene\"])==g[\"scene_sha256\"] and digest(lit[\"request\"])==g[\"query_sha256\"]\n  seg=row[\"new_first_segment\"]\n  for c in (seg[\"root_lower_certificate\"],seg[\"root_upper_certificate\"]):cert(c);oldroots+=1\n  geo=iv(seg[\"length_BU\"]);length=iv(g[\"modeled_length_interval_BU\"])\n  assert g[\"captured_geometric_first_length_BU\"]==seg[\"length_BU\"]\n  assert F(*g[\"conditional_graph_vs_geometric_allowance_BU\"])==max(abs(length[0]-geo[1]),abs(length[1]-geo[0]))\n  fixed_bounds[g[\"case\"]+\"/\"+g[\"source_id\"]]=[str(v)for v in g[\"conditional_graph_vs_geometric_allowance_BU\"]]\n graphs+=1\n a=[iv(v)for v in g[\"source_box_BU\"]];b=[iv(v)for v in g[\"previous_P_box_BU\"]]\n ds=[out(y[0]-x[1],y[1]-x[0])for x,y in zip(a,b)]\n assert [list(v)for v in ds]==[list(iv(v))for v in g[\"difference_intervals_BU\"]]\n ss=[out(F(0)if l<=0<=h else min(l*l,h*h),max(l*l,h*h))for l,h in ds]\n assert ss==[iv(v)for v in g[\"squared_intervals_BU2\"]]\n xy=out(ss[0][0]+ss[1][0],ss[0][1]+ss[1][1]);q=out(xy[0]+ss[2][0],xy[1]+ss[2][1])\n assert xy==iv(g[\"add_xy_interval_BU2\"])and q==iv(g[\"radicand_interval_BU2\"])\n low,high=g[\"root_lower_certificate\"],g[\"root_upper_certificate\"]\n assert cert(low)==q[0]and cert(high)==q[1];newroots+=2\n length=iv(g[\"modeled_length_interval_BU\"])\n assert length==out(F(*low[\"lower_BU\"]),F(*high[\"upper_BU\"]))\n assert F(*g[\"modeled_length_width_BU\"])==length[1]-length[0]\n assert g[\"costs\"]==dict(new_integer_root_certificates=2,new_modeled_scalar_operations=9)\n assert g[\"candidate_cycles_replaced\"]is False and g[\"phase_budget_transferred\"]is False\n # Independent exact RN ties-even simulations of corners plus zero where present.\n axes=[sorted(set((l,h)+( (F(0),)if l<=0<=h else () )))for l,h in a+b]\n for pt in itertools.product(*axes):\n  d=[rn(y-x)for x,y in zip(pt[:3],pt[3:])]\n  squares=[rn(v*v)for v in d]\n  xys=rn(squares[0]+squares[1]);rad=rn(xys+squares[2]);root=sqrt_rn(rad)\n  assert all(l<=v<=h for(l,h),v in zip(ds,d))\n  assert all(l<=v<=h for(l,h),v in zip(ss,squares))\n  assert xy[0]<=xys<=xy[1]and q[0]<=rad<=q[1]and length[0]<=root<=length[1]\n  samples+=1\nassert (graphs,newroots,oldroots,stops,bindings)==(17,34,16,20,28)\nprint(json.dumps(dict(status=\"PASS\",new_graphs_verified=graphs,new_root_certificates_verified=newroots,\n captured_old_root_certificates_verified_no_replay=oldroots,exact_RN_corner_zero_simulations=samples,\n retained_upstream_STOP=stops,SOURCE_context_bindings=bindings,frozen_pins_verified=461,\n fixed_conditional_allowances_BU_decimal_integer_strings=fixed_bounds,\n native_precision_certified=False,GPU_used=False,full_costs=\"UNKNOWN_NOT_ZERO\"),sort_keys=True))\n",
+    "cause": "Independent oracle keyed multiple primitive/path rows by case/SOURCE and collapsed 28 rows; corrected key to full sealed captured-row SHA, not thresholds or production arithmetic.",
+    "core_or_threshold_changes": false
+  }
+},
+  "review": {
+    "by": "Codex direct local review",
+    "subagents_used": 0,
+    "thresholds_changed": false,
+    "frozen_producers_executed": false,
+    "old_root_replays": 0,
+    "JEV": "LOCAL_SECURITY_BLOCKED_NO_RETRY"
+  },
+  "summary": {
+    "fixed_SOURCE_records": 28,
+    "new_fixed_graphs": 8,
+    "retained_upstream_STOP": 20,
+    "tests": 5,
+    "records": 93,
+    "negative_controls": 56,
+    "graph_controls": 8,
+    "new_graphs_including_no_alias": 17,
+    "new_root_certificates": 34,
+    "captured_old_roots_verified_no_replay": 16,
+    "native_SOURCE_ingress_error_bound_BU": null,
+    "native_first_leg_error_bound_BU": null,
+    "native_phase_error_bound_rad": null,
+    "native_precision_certified": false,
+    "GPU_used": false,
+    "full_costs": "UNKNOWN_NOT_ZERO",
+    "no_phase_budget_transfer": true,
+    "candidate_cycles_unchanged": true
+  },
+  "peer_request": {
+    "ID": "PRECISION-ORIGINAL-SOURCE-FIRST-LEG-RN64-GRAPH-HOST-001",
+    "owner": "Claude",
+    "existing_only": [
+      "M03",
+      "M04",
+      "M05",
+      "M08",
+      "M13"
+    ],
+    "request": "Responder por ID con rutas y SHA existentes o ausencia: ABI/grafo nativo SOURCE y primer tramo RN64/sqrt/FMA, guard fail-closed con deadline por trabajo, contrato igual trabajo y costes completos; sin nuevas cargas de relleno."
+  }
+}
