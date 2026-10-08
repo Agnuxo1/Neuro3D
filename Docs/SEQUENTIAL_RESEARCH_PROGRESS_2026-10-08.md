@@ -5,7 +5,7 @@ El propietario confirmó el 2026-10-08 el orden siguiente. Se conservan los cier
 | Nuevo punto | Trabajo | Punto(s) original(es) | Estado |
 |---|---|---|---|
 | 0 | Aportación falsable | 11 | CERRADO como formulación; hipótesis/no novedad todavía sin confirmar |
-| 1 | Revisión sistemática y novedad | 12 | ABIERTO |
+| 1 | Revisión sistemática y novedad | 12 | ABIERTO; búsqueda194registros/175únicos y extracción30entradas publicadas, novedad no demostrada |
 | 2 | Trazador coherente en Blender | 7 | ABIERTO |
 | 3 | Captura y geometría real | 7, 10 | ABIERTO |
 | 4 | Pruebas adversas RT | 2, 3, 7 | ABIERTO para backend RT |
@@ -26,3 +26,5 @@ El propietario confirmó el 2026-10-08 el orden siguiente. Se conservan los cier
 | 19 | Réplica externa, artículo e impacto | 24, 25, 26 | ABIERTO |
 
 Punto 0: [pregunta, hipótesis, comparadores y refutación](CONTRIBUTION_AND_FALSIFICATION_2026-10-08.md). Definir una hipótesis no demuestra que sea verdadera o nueva. No hay nuevos ensayos confirmatorios en este cierre; el registro externo/IPFS sigue ausente.
+
+Punto1: [revisión crítica y límites de cobertura](LITERATURE_AND_NOVELTY_AUDIT_2026-10-08.md). Los componentes tienen antecedentes; el certificado conjunto es candidato sin demostración de originalidad. Quedan106antecedentes potencialmente relacionados sin extracción completa. No se declara revisión exhaustiva ni cierre positivo de novedad.

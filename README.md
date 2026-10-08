@@ -27,6 +27,22 @@ Un certificado falso verificado refutaría la hipótesis; rechazar todos los cas
 no demostraría utilidad. La novedad y la ejecución RT completa permanecen pendientes.
 El esquema muestra el método propuesto, no un resultado experimental.
 
+![Antecedentes inspeccionados](Docs/assets/literature-evidence-map-2026-10-08.png)
+
+La [revisión de antecedentes](Docs/LITERATURE_AND_NOVELTY_AUDIT_2026-10-08.md)
+ha registrado 194 resultados brutos, 175 únicos y una extracción de 30 fuentes.
+Los ingredientes tienen antecedentes; la novedad de un certificado conjunto aún
+no está demostrada. La figura marca con `?` lo no establecido en los pasajes
+inspeccionados, sin afirmar ausencia en la literatura. Quedan candidatos por revisar.
+
+![Control analítico de pérdida de información](Docs/assets/quantization-phase-witness-2026-10-08.gif)
+
+Un [testigo CPU exacto](Docs/QUANTIZATION_INFORMATION_LOSS_WITNESS_2026-10-08.md)
+muestra cómo dos geometrías originales pueden tener los mismos bytes float32 y
+distinta interferencia. El GIF es una ilustración analítica, no una ejecución
+Blender/GPU ni medición física. No se reivindica como principio nuevo; distingue
+error de representación y corrección del modelo representado.
+
 Los cierres anteriores incluyen 20 consultas first-hit GPU, referencia multicamino
 CPU exacta/certificada y el circuito Iris completo en GPU con 450 acuerdos con
 la referencia independiente. Los 450 acuerdos no son 450 clasificaciones correctas;

@@ -56,6 +56,8 @@ La hipótesis de eficiencia será separada y se preregistrará en el punto de co
 
 Contrato legible por máquina: [contribution_contract_v1.json](research/contribution_contract_v1.json). Es un registro local versionado de formulación. **Registro externo/IPFS: no obtenido.** No se presenta como preregistración externa. La literatura y el diseño confirmatorio siguen pendientes; no se han recogido nuevos datos confirmatorios para H1 en este cierre.
 
+El recibo `point00_completion.json` fija las preimágenes del cierre en el commit `daf5b2e`; el archivo de progreso es un documento vivo y sus versiones posteriores no sustituyen aquella preimagen. La versión histórica se recupera desde ese commit para comprobar su hash.
+
 ![Pregunta, contraste y salida certificada](assets/certified-coherent-research-question.svg)
 
 El esquema representa el método propuesto y las comprobaciones requeridas, no una ejecución RT ya completada. El consejo JEV de este cierre tuvo exit 0, status connected y provenance jev; recomendó una formulación falsable con utilidad y conservar como pendientes experimento y novedad.
