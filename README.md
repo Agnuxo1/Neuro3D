@@ -48,6 +48,14 @@ deriva fronteras de decisión cuadráticas para la red congelada, con 81 testigo
 racionales exactos de una identidad conocida. No acredita nuevos datos de test
 ni profundidad no lineal. Sirve para definir el baseline de cálculo equivalente.
 
+![Cotas racionales de readbacks históricos](Docs/assets/iris-retrospective-certificate-2026-10-08.png)
+
+El [análisis retrospectivo con intervalos racionales](Docs/IRIS_RETROSPECTIVE_RATIONAL_CERTIFICATE_2026-10-08.md)
+acota el error de los campos archivados de Iris en ≤1.282e-13 y certifica 450 decisiones
+frente al modelo canónico. El control antiguo conserva esas decisiones pero viola
+la precisión de campo: coincidir en clases no basta. Este análisis CPU reutiliza
+datos GPU históricos; no es un nuevo ensayo ni certifica recorrido de triángulos.
+
 Los cierres anteriores incluyen 20 consultas first-hit GPU, referencia multicamino
 CPU exacta/certificada y el circuito Iris completo en GPU con 450 acuerdos con
 la referencia independiente. Los 450 acuerdos no son 450 clasificaciones correctas;

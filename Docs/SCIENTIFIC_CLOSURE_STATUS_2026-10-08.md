@@ -37,6 +37,8 @@ Punto 1: [corrección y recibo](FIRST_HIT_ADMISSION_FIX_2026-10-08.md). Publicac
 
 Punto 6: [resultados, alcance y recibos](IRIS_NATIVE_CIRCUIT_RESULTS_2026-10-08.md). GPU nativa evalúa scaler/normalización, 16 celdas, ocho modos, fases/conexiones, campos/potencias/logits/argmax de la red congelada. Primer ensayo numérico fallido conservado; segundo PASS sin cambiar umbrales. El test histórico 29/30 no acredita generalización nueva ni el coste completo del punto 16.
 
+Análisis retrospectivo posterior: [cotas racionales de los readbacks](IRIS_RETROSPECTIVE_RATIONAL_CERTIFICATE_2026-10-08.md) para el modelo algebraico canónico; campo ≤1.282e-13 y 450 decisiones certificadas en `native02`. El control `native01` también conserva las decisiones, pero una cota inferior prueba el incumplimiento de precisión. No es nueva ejecución GPU ni certificado de captura/recorrido de triángulos, y no cierra la novedad.
+
 Punto 7: [preparación Unreal histórica preservada](UNREAL_RT_READINESS_2026-10-08.md) y [nuevos ensayos RT en Blender](BLENDER_SCIENTIFIC_ROADMAP_2026-10-08.md). El propietario retiró expresamente Unreal del alcance; la consulta sobre ubicación del motor ya no es necesaria. Se preservan recibos y fuentes; el transporte RT coherente sigue abierto.
 
 Regla de ejecución: no elevar un resultado CPU a GPU, una simulación a medición física ni una publicación propia a reproducción independiente. Conservar intentos negativos y criterios preregistrados. Si un punto no satisface sus criterios, permanece abierto. El propietario ha solicitado ahora [una nueva secuencia](SEQUENTIAL_RESEARCH_PROGRESS_2026-10-08.md): formulación, antecedentes y después trazador Blender; esa instrucción sustituye el orden anterior.
