@@ -1,0 +1,25 @@
+{
+  "schema": "neuro3d-complete-multipath-validation-v1",
+  "time_utc": "2026-10-08T08:33:15.800342+00:00",
+  "status": "PASS",
+  "tests": 17,
+  "failure_count": 0,
+  "error_count": 0,
+  "test_output": "test_all_k3_k4_analytic_inputs (test_robust_multipath_v1.CompletePaths.test_all_k3_k4_analytic_inputs) ... ok\ntest_all_k3_k4_treatments (test_robust_multipath_v1.CompletePaths.test_all_k3_k4_treatments) ... ok\ntest_both_splitter_branches_and_exact_zeros (test_robust_multipath_v1.CompletePaths.test_both_splitter_branches_and_exact_zeros) ... ok\ntest_oblique_exact_reflection (test_robust_multipath_v1.CompletePaths.test_oblique_exact_reflection) ... ok\ntest_return_to_same_primitive_and_loop_is_incomplete (test_robust_multipath_v1.CompletePaths.test_return_to_same_primitive_and_loop_is_incomplete) ... ok\ntest_tiny_positive_gap_is_retained (test_robust_multipath_v1.CompletePaths.test_tiny_positive_gap_is_retained) ... ok\ntest_actual_coplanar_overlap (test_robust_multipath_v1.ExplicitUnresolved.test_actual_coplanar_overlap) ... ok\ntest_cast_bound_preserves_pending (test_robust_multipath_v1.ExplicitUnresolved.test_cast_bound_preserves_pending) ... ok\ntest_degenerate_and_zero_direction_rejected (test_robust_multipath_v1.ExplicitUnresolved.test_degenerate_and_zero_direction_rejected) ... ok\ntest_finite_coplanar_ray_not_in_remote_triangle (test_robust_multipath_v1.ExplicitUnresolved.test_finite_coplanar_ray_not_in_remote_triangle) ... ok\ntest_independent_contact (test_robust_multipath_v1.ExplicitUnresolved.test_independent_contact) ... ok\ntest_internal_seam_and_departure (test_robust_multipath_v1.ExplicitUnresolved.test_internal_seam_and_departure) ... ok\ntest_lost_ray (test_robust_multipath_v1.ExplicitUnresolved.test_lost_ray) ... ok\ntest_mode_mismatch (test_robust_multipath_v1.ExplicitUnresolved.test_mode_mismatch) ... ok\ntest_nonplanar_crease_is_unresolved (test_robust_multipath_v1.ExplicitUnresolved.test_nonplanar_crease_is_unresolved) ... ok\ntest_outer_boundary (test_robust_multipath_v1.ExplicitUnresolved.test_outer_boundary) ... ok\ntest_tie_different_objects (test_robust_multipath_v1.ExplicitUnresolved.test_tie_different_objects) ... ok\n\n----------------------------------------------------------------------\nRan 17 tests in 17.241s\n\nOK\n",
+  "scope": "CPU exact represented geometry, approximate scalar phase/fields; no full GPU/physical claim",
+  "analytic_probes": 41,
+  "max_field_error": 1.1320881853012132e-13,
+  "max_balance_error": 1.3944401189291966e-13,
+  "source_sha256": {
+    "Blender/tests/run_robust_multipath_validation_v1.py": "fa53aac27bf1ebe09e3222532db8f14f169fc18a75d401b9e211b2e0d7904730",
+    "Blender/tests/test_robust_multipath_v1.py": "7c88058d583285b79f810eb153af93ffe29dfc8a0287c0a73d3731578941b7bb",
+    "Blender/benchmarks/capacity_audit/robust_multipath_v1.py": "f4225b2f3f08fa675e72cba79460c815c5e91282fed9cdafbd8460d3fc16dce2",
+    "Blender/tests/exp005_chain_fixture.py": "42d871b0007dff877049ae8c72481fbcc92aa5a04056cbc6f4f1f8663fb867c3",
+    "Blender/tests/exp005_cascade_fixture.py": "c1954527ff4d3ec67a65c43547da10dbf7923d7225cdbe4ce705ced1d0099d2e",
+    "Blender/tests/exp005_escape_fixture.py": "35bf16ccf35d2db54aa0c65137f4bde43a4ddd6800f3a8d004a172f9f4283649",
+    "Docs/MULTIPATH_EXACT_PREREGISTRATION_2026-10-08.md": "4fbaf7fdf9b2d8a87f5598ba808501db8116867a7f97a0d408efab7fa539d4a5"
+  },
+  "evidence_sha256": {
+    "exact_paths.json": "063b0e886d113c1b3ee97412411fcd09bf854cdc7a8dc898ff423b021e62f5a2"
+  }
+}

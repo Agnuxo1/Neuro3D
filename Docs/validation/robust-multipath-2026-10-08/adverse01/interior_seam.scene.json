@@ -1,0 +1,101 @@
+{
+  "schema": "exp005-readback-v2",
+  "lambda_BU": 0.125,
+  "objects": {
+    "quad": {
+      "kind": "bs",
+      "vertices_world_BU": [
+        [
+          1,
+          -1,
+          -1
+        ],
+        [
+          1,
+          1,
+          -1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          -1,
+          1
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      "power_transmittance": 1
+    },
+    "out": {
+      "kind": "det",
+      "vertices_world_BU": [
+        [
+          2,
+          -4,
+          -4
+        ],
+        [
+          2,
+          4,
+          -4
+        ],
+        [
+          2,
+          0,
+          5
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "mode_origin_BU": [
+        2,
+        0,
+        0
+      ],
+      "mode_direction": [
+        1,
+        0,
+        0
+      ]
+    }
+  },
+  "undeclared_meshes": [],
+  "sources": [
+    {
+      "id": "input",
+      "position_BU": [
+        0,
+        0,
+        0
+      ],
+      "direction": [
+        1,
+        0,
+        0
+      ],
+      "field_reim": [
+        1,
+        0
+      ]
+    }
+  ]
+}
