@@ -11,6 +11,14 @@
 
 ## Estado consolidado
 
+**Prioridad reafirmada:** OpticNeuroBlender será nuestro sistema propio de red
+neuronal óptica funcional dentro de Blender. Las técnicas de
+[BlenderPhotonics y Blender Optics Simulator](Docs/OPTIC_NEURO_BLENDER_COMPONENT_SELECTION_2026-10-08.md)
+se seleccionan para mejorar sus mallas, física, propagación y coste de cálculo.
+La reutilización debe conservar las entradas, la coherencia, los parámetros
+entrenables y los detectores de Neuro3D. Las mejoras de velocidad, precisión y
+eficiencia deberán demostrarse con comparaciones equivalentes.
+
 **Objetivo concretado por el propietario:** desarrollar
 [Blender-Lab](Docs/BLENDER_LAB_RESEARCH_INSTRUMENT_2026-10-08.md), un laboratorio
 abierto y accesible para investigar física óptica, con Neuro3D como demostrador
