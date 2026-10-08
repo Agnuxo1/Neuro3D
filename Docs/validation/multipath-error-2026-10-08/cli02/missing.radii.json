@@ -1,0 +1,41 @@
+{
+  "vertex_radius": null,
+  "object_translation": {
+    "out": [
+      0,
+      0,
+      0
+    ]
+  },
+  "source_position": {
+    "numerator": 0,
+    "denominator": 1
+  },
+  "source_direction": {
+    "input": [
+      0,
+      0,
+      0
+    ]
+  },
+  "source_field": {
+    "numerator": 0,
+    "denominator": 1
+  },
+  "wavelength": {
+    "numerator": 0,
+    "denominator": 1
+  },
+  "mirror_phase": {
+    "numerator": 0,
+    "denominator": 1
+  },
+  "transmittance": {
+    "numerator": 0,
+    "denominator": 1
+  },
+  "reference": {
+    "numerator": 0,
+    "denominator": 1
+  }
+}

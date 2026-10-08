@@ -7,7 +7,7 @@ Fecha de inicio: 2026-10-08. Cada cierre requiere evidencia verificable y public
 | 1 | Entrada first-hit: `pinned packet` | CERRADO; commit 2522b4b; 21 pruebas CPU PASS; entradas originales intactas |
 | 2 | 20 consultas first-hit GPU | CERRADO; native18 20/20, supervisor PASS y auditor independiente PASS |
 | 3 | Contactos, huecos, empates, bordes y retornos en multicamino | CERRADO en referencia CPU de óptica escalar; 17 pruebas, 41 estímulos analíticos y 8 ejecuciones JSON; GPU completa en punto 6 |
-| 4 | Presupuesto completo geometría → intensidad | ABIERTO |
+| 4 | Presupuesto completo geometría → intensidad | CERRADO en modelo CPU escalar y cajas certificables; 14 pruebas/41 certificados/9 ejecuciones JSON; GPU completa pendiente6 y física UNKNOWN_NOT_ZERO |
 | 5 | Justificación de fusión/reducción/descarte | ABIERTO |
 | 6 | Red entrenada completa en GPU nativa | ABIERTO |
 | 7 | RT coherente y Unreal compilado/readback | ABIERTO; decidir continuidad con evidencia |
