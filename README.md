@@ -44,6 +44,11 @@ el [plan completo](Docs/BLENDER_SCIENTIFIC_ROADMAP_2026-10-08.md) y la
 
 ## Pregunta científica y progreso verificable
 
+El [ejecutor y auditor del piloto](Docs/CAPTURED_PILOT_SUPERVISOR_2026-10-08.md)
+están preparados con fuentes/inputs fijados, límites de recursos y negativa por
+registro ausente. Pasan 66 controles conjuntos de software. El piloto permanece
+**sin ejecutar**, pendiente de registro externo o excepción humana GitHub explícita.
+
 El [contrato coherente ejecutable](Docs/OPTIC_NEURO_BLENDER_COHERENT_CONTRACT_2026-10-08.md)
 fija unidades, portadora/referencia común, fases, parámetros y potencia modal.
 Pasan 50 controles CPU y la admisión dentro de Blender del `.blend` Iris real:

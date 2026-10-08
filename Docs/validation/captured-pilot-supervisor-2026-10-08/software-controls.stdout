@@ -1,0 +1,2 @@
+{"status": "NOT_EXECUTED", "worker_started": false, "result_collected": false, "primary_metric": null, "registration_requirement": null, "reason": "registration unresolved: no worker may start"}
+{"status": "SOFTWARE_PREFLIGHT_ONLY", "worker_started": false, "result_collected": false, "primary_metric": null, "registration_requirement": "PENDING_HUMAN_OR_EXTERNAL_REGISTRATION", "reason": null}
