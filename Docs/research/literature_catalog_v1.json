@@ -607,10 +607,10 @@
     "arxiv": null,
     "method": "coherent_Huygens_ray_simulation",
     "task": "Grating diffraction/ptychography and phase retrieval",
-    "reported_result": "Primary identity and abstract; full-text retrieval unavailable in this pass, numerical details not extracted.",
-    "baseline": "Fresnel/Fraunhofer wavefront propagation",
-    "evidence_location": "Publisher DOI metadata and institutional record/abstract; full-text access failed",
-    "implication_for_neuro3d": "Abstract directly overlaps coherent ray-based diffraction; do not infer absence of guarantees from an unavailable full text.",
+    "reported_result": "Eq6 coherent phase-sensitive detector sum; PDFp5 reports observed zero cancellation/no systematic precision errors for tested distances, an empirical result.",
+    "baseline": "Fresnel/Fraunhofer wavefront propagation and measured ptychography",
+    "evidence_location": "Publisher PDF retrieved through verified web extraction after direct HTTP failures:PDFpp3-5,eq6-7 and numerical cancellation discussion",
+    "implication_for_neuro3d": "Direct prior art for ray-phase summation and numerical cancellation tests. Inspected precision evidence is empirical, not a joint deterministic native interval certificate.",
     "features_inspected": {
       "3D_photonic_integration": null,
       "coherence_or_complex_transport": 1,
@@ -620,9 +620,10 @@
       "physical_experiment": null
     },
     "feature_null_semantics": "not established in inspected passages, not evidence of absence",
-    "access": "ABSTRACT_ONLY_FULLTEXT_UNAVAILABLE",
-    "retrieved_sha256": null,
-    "retrieved_pages": null
+    "access": "PRIMARY_PDF_METHOD_PASSAGES_READ_VIA_WEB",
+    "retrieved_sha256": "3aa4d8ca4c4563ae6b977ea7606bd1a0275574500ac645411e5a4a180634057f",
+    "retrieved_pages": 12,
+    "retrieved_content_kind": "verified_web_text_extraction_not_original_pdf_bytes"
   },
   {
     "id": "pbrt4",

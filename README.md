@@ -43,6 +43,11 @@ distinta interferencia. El GIF es una ilustración analítica, no una ejecución
 Blender/GPU ni medición física. No se reivindica como principio nuevo; distingue
 error de representación y corrección del modelo representado.
 
+El [análisis algebraico de Iris](Docs/IRIS_LINEAR_FIELD_QUADRATIC_DECISION_2026-10-08.md)
+deriva fronteras de decisión cuadráticas para la red congelada, con 81 testigos
+racionales exactos de una identidad conocida. No acredita nuevos datos de test
+ni profundidad no lineal. Sirve para definir el baseline de cálculo equivalente.
+
 Los cierres anteriores incluyen 20 consultas first-hit GPU, referencia multicamino
 CPU exacta/certificada y el circuito Iris completo en GPU con 450 acuerdos con
 la referencia independiente. Los 450 acuerdos no son 450 clasificaciones correctas;
