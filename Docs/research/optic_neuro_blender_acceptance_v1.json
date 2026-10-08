@@ -1,0 +1,21 @@
+{
+  "schema": "optic_neuro_blender.acceptance.v1",
+  "date": "2026-10-08",
+  "scope": "Own trainable coherent optical neural simulator in Blender; fabrication optional",
+  "historical_sequence_preserved": "Docs/SEQUENTIAL_RESEARCH_PROGRESS_2026-10-08.md",
+  "research_question": "Can Blender-Lab construct and execute coherent optical neural networks from the actual Blender scene with quantitatively valid, reproducible results, useful error certificates and explicit rejection beyond its model?",
+  "priorities": [
+    {"id": 1, "name": "Falsifiable contribution and novelty", "status": "OPEN", "achieved": "Operational identity/completeness/field/readout gates; directed review concludes NOVELTY_NOT_ESTABLISHED", "acceptance": "Implemented joint certificate and nonvacuous frozen family; primary comparison and justified originality or explicit replication contribution", "remaining": "End-to-end evidence and pending literature extraction"},
+    {"id": 2, "name": "Units, coherence, phases, parameters, detectors", "status": "OPEN", "acceptance": "Versioned contract enforced at actual scene ingress; analytic controls and roundtrip; normalized power separated from calibrated watts", "remaining": "Executable contract and actual solver consumption"},
+    {"id": 3, "name": "Frozen pilot and captured-scene traversal", "status": "WAITING_REGISTRATION_DECISION", "acceptance": "Valid external registration or explicit human GitHub exception, then execute unchanged archived protocol and independent categorical audit", "proposal_id": "957514f2-a233-421f-aa04-50cccd063d97", "protocol_sha256": "5d0cf372f2f66f043c2a219ba6a60f0182ced8a60039348d486ec163be736226", "result_collected": false},
+    {"id": 4, "name": "Coherent propagation and error", "status": "OPEN", "acceptance": "All relevant branches covered; adverse controls; capture/representation/geometry/phase/sum/readout budgets complete; invalid margins stay unknown"},
+    {"id": 5, "name": "Own inference and training from geometry", "status": "OPEN", "acceptance": "Forward and gradients originate from captured geometry; held-fixed readout; training-only preprocessing and updates; saved scene changes reproduce inference"},
+    {"id": 6, "name": "Capacity, stability, physical fidelity", "status": "OPEN", "acceptance": "State restricted function family; compare analytic and independent wave references over declared regime; physical-model error quantified or unknown"},
+    {"id": 7, "name": "Generalization and equivalent baselines", "status": "OPEN", "acceptance": "Prospectively fixed held-out evaluation, no test-fitted preprocessing, matched algebraic and scientific baselines; uncertainty and failures reported"},
+    {"id": 8, "name": "Optimizations, NVIDIA, AMD, complete cost", "status": "OPEN", "acceptance": "Equivalent outputs and precision, actual vendor execution receipts, complete preparation/transfer/compute/readout/training cost and resource/ablation evidence", "amd_execution_verified": false},
+    {"id": 9, "name": "Recovery, Blender interface, clean reproduction", "status": "OPEN", "acceptance": "Install/edit/run/cancel/save/reopen/export; guarded failure recovery; clean-environment documented reproduction"},
+    {"id": 10, "name": "External reproduction and scientific article", "status": "OPEN", "acceptance": "Release evidence and reproducible article; independently executed external reproduction explicitly distinguished from local checks"}
+  ],
+  "claim_policy": {"novelty_demonstrated": false, "new_confirmatory_data_collected": false, "full_project_complete": false, "physical_device_claim": false},
+  "registration": {"preregId": null, "ipfsCid": null, "external_registration_obtained": false, "human_exception_received": false}
+}
