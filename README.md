@@ -57,6 +57,13 @@ BlenderPhotonics, Blender Optics Simulator, OptiCore y simulación científica S
 en Blender. Las nuevas fuentes se registran por separado del mapa histórico de 30;
 son comparadores pertinentes, sin afirmar que sus capacidades hayan sido reproducidas aquí.
 
+Se ha incorporado un [módulo de captura e interoperabilidad](Docs/BLENDER_LAB_REUSE_AND_CAPTURE_2026-10-08.md)
+para registrar mallas evaluadas, unidades, propiedades ópticas y las direcciones de
+entradas, parámetros y detectores de Neuro3D. Conserva los valores representados
+sin añadir redondeo decimal y ofrece un adaptador opcional para Blender Optics
+Simulator. La captura tiene controles de software; la integración con el cálculo
+neuronal óptico completo continúa pendiente.
+
 ![Control analítico de pérdida de información](Docs/assets/quantization-phase-witness-2026-10-08.gif)
 
 Un [testigo CPU exacto](Docs/QUANTIZATION_INFORMATION_LOSS_WITNESS_2026-10-08.md)

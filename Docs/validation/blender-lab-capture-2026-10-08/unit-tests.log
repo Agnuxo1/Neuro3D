@@ -1,0 +1,16 @@
+test_bos_diagnostic_explicit_external_not_certificate (Blender.tests.test_blender_lab_capture_v1.CaptureContractTests.test_bos_diagnostic_explicit_external_not_certificate) ... ok
+test_bos_error_or_schema_change_rejected (Blender.tests.test_blender_lab_capture_v1.CaptureContractTests.test_bos_error_or_schema_change_rejected) ... ok
+test_canonical_hash_order_independent (Blender.tests.test_blender_lab_capture_v1.CaptureContractTests.test_canonical_hash_order_independent) ... ok
+test_float_roundtrip_and_signed_zero (Blender.tests.test_blender_lab_capture_v1.CaptureContractTests.test_float_roundtrip_and_signed_zero) ... ok
+test_integrity_tampering_and_fresh_output (Blender.tests.test_blender_lab_capture_v1.CaptureContractTests.test_integrity_tampering_and_fresh_output) ... ok
+test_missing_excluded_and_duplicate_bindings_rejected (Blender.tests.test_blender_lab_capture_v1.CaptureContractTests.test_missing_excluded_and_duplicate_bindings_rejected) ... ok
+test_nonfinite_and_bool_rejected (Blender.tests.test_blender_lab_capture_v1.CaptureContractTests.test_nonfinite_and_bool_rejected) ... ok
+test_optics_and_matrix_parameter_bindings (Blender.tests.test_blender_lab_capture_v1.CaptureContractTests.test_optics_and_matrix_parameter_bindings) ... ok
+test_parameter_bounds_units_and_namespace_rejected (Blender.tests.test_blender_lab_capture_v1.CaptureContractTests.test_parameter_bounds_units_and_namespace_rejected) ... ok
+test_parameter_reads_scene_value (Blender.tests.test_blender_lab_capture_v1.CaptureContractTests.test_parameter_reads_scene_value) ... ok
+test_property_tree_preserves_float_type (Blender.tests.test_blender_lab_capture_v1.CaptureContractTests.test_property_tree_preserves_float_type) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.007s
+
+OK

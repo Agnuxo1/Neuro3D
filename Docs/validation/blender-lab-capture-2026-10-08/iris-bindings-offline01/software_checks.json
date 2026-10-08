@@ -1,0 +1,16 @@
+{
+  "schema": "neuro3d.blender_lab.iris_binding_software_receipt.v1",
+  "status": "PASS",
+  "resolution_mode": "AFTER_CAPTURE_FROM_SNAPSHOT",
+  "source_capture_sha256": "84003eb3a489074a5123245c01c2d1421eaa889a21e20a1d73cafb9c63535db4",
+  "contract_sha256": "85d7b5dd77589b5c1b11b19b1de082be4fb8e4cb7ddceafa50f35cdd4767b515",
+  "state_sha256": "8624d661252f143653f5b32c744cb7e6b23f71119253d7ad64510bbf1aa1a943",
+  "inputs": 5,
+  "geometric_coordinate_bindings": 32,
+  "detectors": 3,
+  "new_blender_execution": false,
+  "optical_forward_executed": false,
+  "training_executed": false,
+  "gpu_executed": false,
+  "scope": "32 coordinate addresses are not 32 independent learned optical degrees of freedom; two roof mirrors belong to each of 16 coupled delays."
+}
