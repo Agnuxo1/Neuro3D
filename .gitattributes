@@ -65,5 +65,6 @@ Docs/validation/path-operation-proofs-2026-10-08/** -text !eol whitespace=cr-at-
 Docs/validation/iris-native-circuit-2026-10-08/** -text !eol whitespace=cr-at-eol
 Docs/validation/unreal-readiness-2026-10-08/** -text !eol whitespace=cr-at-eol
 Docs/validation/quantization-witness-2026-10-08/** -text !eol whitespace=cr-at-eol
+Docs/validation/quadratic-readout-2026-10-08/** -text !eol whitespace=cr-at-eol
 # Immutable legacy preimages retain their original blank-line spaces.
 Docs/validation/unreal-readiness-2026-10-08/*/source/Source/OptiXRayTracing.cu -text !eol -whitespace

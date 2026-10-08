@@ -1,0 +1,21 @@
+{
+  "schema": "neuro3d.quadratic_readout_identity_witness.v1",
+  "status": "PASS_EXACT_CPU_ALGEBRA",
+  "rational_input_witnesses": 81,
+  "complex_affine_forms": 3,
+  "real_features": 4,
+  "positive_gain_controls": 4,
+  "form_matrix_ranks": [
+    2,
+    2,
+    2
+  ],
+  "identity": "|a.x+b|^2 = x^T(uu^T+vv^T)x + 2(br.u+bi.v).x + br^2+bi^2",
+  "common_positive_gain_and_normalization_preserve_argmax_set": true,
+  "finite_witnesses_are_not_the_general_proof": true,
+  "principle_claimed_new": false,
+  "Iris_new_training_or_test": false,
+  "GPU_executed": false,
+  "H1_confirmatory_experiment": false,
+  "source_sha256": "e3be77e4e9c0c276fd251cf7d15c86866e9e4d74fe39f0d103261f4a1cacd332"
+}
