@@ -35,9 +35,9 @@ MAX_JSON = 16 * 1024 * 1024
 MAX_DISPATCHES = 32
 OUTPUT_WORDS = 64
 POISON = gpu_base.POISON
-SHADER = ROOT / "Blender/shaders/robust_first_hit_shared_exact_v1.glsl"
-SIGNED512 = ROOT / "Blender/shaders/robust_first_hit_shared_arithmetic_v1.glsl"
-COMPILE_OPTIONS = "#pragma optimize(on)\n#pragma optionNV(unroll none)\n"
+SHADER = ROOT / "Blender/shaders/robust_first_hit_exact_v1.glsl"
+SIGNED512 = ROOT / "Blender/shaders/robust_first_hit_register_arithmetic_v1.glsl"
+COMPILE_OPTIONS = "#pragma optimize(off)\n#pragma optionNV(unroll none)\n#pragma optionNV(inline 0)\n"
 DEPARTURE = {None: 0, "mirror": 1, "t": 2, "r": 3}
 
 SCOPE = {
@@ -279,19 +279,6 @@ uniform int input_word_count,source_index,previous_primitive,departure_event,dis
 
 
 def compile_shader(gpu, report):
-    report["compile_options"] = COMPILE_OPTIONS.splitlines()
-    report["shader_api"] = "RAW_OPENGL_CORE_IN_BLENDER_WGL"
-    report["blender_shader_create_info_attempted"] = False
-    report["blender_shader_create_info_passed"] = None
-    diagnostic = raw_compile_diagnostic(retain_program=True)
-    handle = diagnostic.pop("retained_program", None)
-    report["compile_diagnostic"] = diagnostic
-    require(handle is not None and diagnostic.get("program_linked") is True,
-            "native raw OpenGL program failed to link")
-    return RawProgram(handle)
-
-
-def compile_blender_shader(gpu, report):
     sync = gpu_base.OpenGLReadbackSync()
     sync.uniform_buffer_limit()
     info = gpu.types.GPUShaderCreateInfo()

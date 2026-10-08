@@ -1,0 +1,297 @@
+[
+  {
+    "attempt": "native01",
+    "guard_status": "FAIL",
+    "failure": {
+      "reason": "Queue lease did not become bound within two seconds",
+      "type": "Rejected"
+    },
+    "worker_status": null,
+    "dispatches": null,
+    "readbacks": null,
+    "files_sha256": {
+      "guard.json": "1aa2536a366d9e16d49c0af322751ed0da01e28dd8e96b6b0ef0e84b1999f14e",
+      "job.json": "4be8aa5b7156f39072fa3df601f028afface837de6c6bd7674d0eeef3089c508",
+      "launch.json": "4125f73e0886bc10c3e565a273310f9075ffea2577ed1b12b07b6a7315665d25"
+    }
+  },
+  {
+    "attempt": "native02",
+    "guard_status": "FAIL",
+    "failure": {
+      "reason": "RAM floor after reserved budget",
+      "type": "Rejected"
+    },
+    "worker_status": null,
+    "dispatches": null,
+    "readbacks": null,
+    "files_sha256": {
+      "guard.json": "124597a0db05a9ab805ba5dbab36cd4286e46195313868aff743294f3811b892",
+      "job.json": "8631ec13f78406604622c588751e0f705a1c191ef3cb5aed44826c5734fc3d6b",
+      "launch.json": "7d8bf496aa5649d232752c2efff28b19f6c23a407825ecf345ece10ec3b7688e"
+    }
+  },
+  {
+    "attempt": "native03",
+    "guard_status": null,
+    "failure": null,
+    "worker_status": null,
+    "dispatches": null,
+    "readbacks": null,
+    "files_sha256": {
+      "job.json": "a473a5191f21f9d4792f8bc5bfb04d529177c7d8000ec31160717a74379a9020"
+    }
+  },
+  {
+    "attempt": "native04",
+    "guard_status": "FAIL",
+    "failure": {
+      "reason": "Worker process returned a nonzero exit code",
+      "type": "Rejected"
+    },
+    "worker_status": "FAIL",
+    "dispatches": 0,
+    "readbacks": 0,
+    "files_sha256": {
+      "guard.json": "e43a5985a9774e05154eac5c0a52a6bd006c6ff5b7a47f92e87367f07b6fdf88",
+      "worker.json": "2d2307a66c6f032b253b311a0fb6209796144870d0cffc6e52cbda2639fb3415",
+      "job.json": "9fb03ca9c13a75ce7a03588318281cdf37f7c4139f60bd02a1ace770fd90f100",
+      "launch.json": "b1ea9ce84053e73ade02e2d77f98484962dff79db0d679b428ae14980655d9b1"
+    }
+  },
+  {
+    "attempt": "native05",
+    "guard_status": "FAIL",
+    "failure": {
+      "reason": "Worker process returned a nonzero exit code",
+      "type": "Rejected"
+    },
+    "worker_status": "FAIL",
+    "dispatches": 0,
+    "readbacks": 0,
+    "files_sha256": {
+      "guard.json": "8ece6f989ec7cd673b5950e8151a4f300f17193241b1b956f74a7ea5c40857bf",
+      "worker.json": "5b9162298dde34c7a0932cc245d43dc3782dcc08cb135be73272823aac5532e2",
+      "job.json": "010f9d059c1caeee30b15e0f318e1a40eef0fcab4fa0a711cb69f71eb5ee8d71",
+      "launch.json": "8369f8197963e144903a880f83953c64eda5f62e9c86ad340cf0cc45bf26388a"
+    }
+  },
+  {
+    "attempt": "native06",
+    "guard_status": "FAIL",
+    "failure": {
+      "reason": "Worker process returned a nonzero exit code",
+      "type": "Rejected"
+    },
+    "worker_status": "FAIL",
+    "dispatches": 0,
+    "readbacks": 0,
+    "files_sha256": {
+      "guard.json": "1d372ae3abce3be7a797cd3822281c4929fbfd33a16aa4d887f173cdef255401",
+      "worker.json": "6c7e94929382db89ae60c8fd6a1a9a176e2cc0414ec8d83460a65847bde3c2c9",
+      "job.json": "dfff8ad2abd19381124996599f132d22a540f18deb570aa894c8255347e1493e",
+      "launch.json": "26ecae2c4d69247480ee67c6033f5b9a27d12df75da9a43537adacb26c061bac"
+    }
+  },
+  {
+    "attempt": "native07",
+    "guard_status": "FAIL",
+    "failure": {
+      "reason": "Worker process returned a nonzero exit code",
+      "type": "Rejected"
+    },
+    "worker_status": "FAIL",
+    "dispatches": 0,
+    "readbacks": 0,
+    "files_sha256": {
+      "guard.json": "6b10fd9f9e971277814fa411ac6b877c805779556973a3a4fb7d2886d40f2971",
+      "worker.json": "93a1d8bd9fc8d668a51b8b21b5e1b4aad5074e61b90a730894667042b8da892d",
+      "job.json": "f96333315b17e714dedca96e36ee880c225d304108a88986f22de214778605b3",
+      "launch.json": "62aa81d9323b28383fd3b3cf42a052e7e9a7a72543ab5a84a383bb06bb75dbc0"
+    }
+  },
+  {
+    "attempt": "native08",
+    "guard_status": "FAIL",
+    "failure": {
+      "reason": "Worker process returned a nonzero exit code",
+      "type": "Rejected"
+    },
+    "worker_status": "FAIL",
+    "dispatches": 0,
+    "readbacks": 0,
+    "files_sha256": {
+      "guard.json": "92b0ca6d37bec179826479d7d35f78a93baacc3fe2a00b831a35c83dd58576c6",
+      "worker.json": "bef9448e5235196347416b84a8fadc5ef2592e20b89fbe81e47599c0b845a0d2",
+      "job.json": "d4f97d99db690f833d998bb7efda5e5e15fa5ac7cf367431001d5a962279575a",
+      "launch.json": "371f2b6a0ca92648d5f0887a85e3aff26b1d505c728fffa213f593c1d14c147a"
+    }
+  },
+  {
+    "attempt": "native09",
+    "guard_status": "FAIL",
+    "failure": {
+      "reason": "Worker process returned a nonzero exit code",
+      "type": "Rejected"
+    },
+    "worker_status": "FAIL",
+    "dispatches": 0,
+    "readbacks": 0,
+    "files_sha256": {
+      "guard.json": "40b42dd18ae0878b83345a914c99297df14b98381e970a6f8a0475a1d0229472",
+      "worker.json": "e17a2da28ffd12b7cd7ce2e72f197402b2aedcf2fd530dff2a00ee729ba803ca",
+      "job.json": "baf008db64be6b807027c4d31e973696d7bc044f1a379502a5389478e1c4e437",
+      "launch.json": "2859f135ea83c876e2f835d1b21650addd77bd5f54b79db71095163e95d7afea"
+    }
+  },
+  {
+    "attempt": "native10",
+    "guard_status": "FAIL",
+    "failure": {
+      "reason": "Worker process returned a nonzero exit code",
+      "type": "Rejected"
+    },
+    "worker_status": "FAIL",
+    "dispatches": 1,
+    "readbacks": 1,
+    "files_sha256": {
+      "guard.json": "decfeb9d63c881bd52c10494c98fde9c565d26301b38d1a8d015e1abb7609361",
+      "worker.json": "a48f983cdec59185973b1d73ab3190e01f497ff622e527c8a6e6f2467f4c0f33",
+      "job.json": "821abc4866a9c0e33d1691c526286fcde1d47730a5164e61f4ffd434e8016dca",
+      "launch.json": "b39f4e79106abc8f9ceff5b97870febfa79b6a75d60711bda93501f01e393b03"
+    }
+  },
+  {
+    "attempt": "native11",
+    "guard_status": "FAIL",
+    "failure": {
+      "reason": "Worker process returned a nonzero exit code",
+      "type": "Rejected"
+    },
+    "worker_status": "FAIL",
+    "dispatches": 1,
+    "readbacks": 1,
+    "files_sha256": {
+      "guard.json": "1433bb945020f544fe92e7fbac943381e289d451607cea57f0f844572ce237b9",
+      "worker.json": "ef85b0bf4dec987417191b77b2d138e07a7ee3f3324f5495b3154b9bdac1b8a0",
+      "job.json": "9c360bfc51c600e284150a010c9d83f1ff557bdaa846a1f8512a526830c669c9",
+      "launch.json": "72a420d8e29542939e360958dcee28a5a0a5e76e4faa25e2a89246737925eb18"
+    }
+  },
+  {
+    "attempt": "native12",
+    "guard_status": "FAIL",
+    "failure": {
+      "reason": "Worker process returned a nonzero exit code",
+      "type": "Rejected"
+    },
+    "worker_status": "FAIL",
+    "dispatches": 1,
+    "readbacks": 1,
+    "files_sha256": {
+      "guard.json": "048cd167a5f91070d4d6bea2d71c70291dd9f4892f7dc2c95c28b42b6bad6cfe",
+      "worker.json": "0987e179cb6a876b5cac7c9ed0201ec3023e5fa6c379cfdc19067d5780fe9dee",
+      "job.json": "033d4a537e6ceebb94593d794f34299d84b330ca7fadce6362e2fad08a976fec",
+      "launch.json": "831f72c7d592911188ff7d6e32f24370485811926f8a85b68f17413366362360"
+    }
+  },
+  {
+    "attempt": "native13",
+    "guard_status": "FAIL",
+    "failure": {
+      "reason": "Worker process returned a nonzero exit code",
+      "type": "Rejected"
+    },
+    "worker_status": "FAIL",
+    "dispatches": 1,
+    "readbacks": 1,
+    "files_sha256": {
+      "guard.json": "cd20f3c8fc2559c4f639b56232dd5b4f8715028e6815b1f45b7fe826d20c1479",
+      "worker.json": "97f3988e7765cc5843725175a438b175379a21af0ff2bcefa76968adfb5976e9",
+      "job.json": "ae29b3f1036865d46f2595ad75e24c562e9fa50ffc585b2f966421edb640a88c",
+      "launch.json": "6d4bf5ac28cd4ae9c446b6fe7dcac7e2a96bf8be9d79a8e8ee33493ca4a8f443"
+    }
+  },
+  {
+    "attempt": "native14",
+    "guard_status": "FAIL",
+    "failure": {
+      "reason": "Telemetry process failed or late",
+      "type": "Rejected"
+    },
+    "worker_status": null,
+    "dispatches": null,
+    "readbacks": null,
+    "files_sha256": {
+      "guard.json": "992114c3aa72c3345535cef263d224cbcdccf3f6f23accd437ae4e997a8cfa5e",
+      "job.json": "e8aace3be832c9557fde9f116440f36f0940e7ee898641c1b510f3173f286506",
+      "launch.json": "818d24e589669f244cef6ff3ab6b2d0a03d4d7ef251b0221d2ffd40f6df09db6"
+    }
+  },
+  {
+    "attempt": "native15",
+    "guard_status": "FAIL",
+    "failure": {
+      "reason": "Worker process returned a nonzero exit code",
+      "type": "Rejected"
+    },
+    "worker_status": "FAIL",
+    "dispatches": 1,
+    "readbacks": 1,
+    "files_sha256": {
+      "guard.json": "738510d5f0ce0afeaabc14a211e0ffb5b775a0f10ba322a9693157895f137658",
+      "worker.json": "5467dcfcfb2cd7215850d6176adf81f940f757cdc40582a12f9e433ff1682fa8",
+      "job.json": "3fd0eb319c2d25b2fbc2a9ee03cb179c95ab30e831bc68834453e9a7f07b8758",
+      "launch.json": "276a0643b0d652b2a39548f0029b44690259c810da819ea7ece39c923b19a71c"
+    }
+  },
+  {
+    "attempt": "native16",
+    "guard_status": "FAIL",
+    "failure": {
+      "reason": "Worker process returned a nonzero exit code",
+      "type": "Rejected"
+    },
+    "worker_status": "FAIL",
+    "dispatches": 0,
+    "readbacks": 0,
+    "files_sha256": {
+      "guard.json": "e3696bd622510fadcaeb2135be6be5c90baea00ee77c7ff9c355d17b8e9090ab",
+      "worker.json": "7002e42070bb07946b69e83a7b4c56d570d69756f587954cfc59a17ee38a7082",
+      "job.json": "1ad998f1d04bbf7fb3c2efe1e704d7d16e3d48d41b1ef46ec620e49b0a6711a9",
+      "launch.json": "adfd9b36d9bc0581d158f66976f795fe28f41efd5fdb70930324f59529c3cfbb"
+    }
+  },
+  {
+    "attempt": "native17",
+    "guard_status": "FAIL",
+    "failure": {
+      "reason": "Worker process returned a nonzero exit code",
+      "type": "Rejected"
+    },
+    "worker_status": "FAIL",
+    "dispatches": 0,
+    "readbacks": 0,
+    "files_sha256": {
+      "guard.json": "b93a0ec018719093f739926d44c4cfaeea20c3b1be6142d1f6846e7005d31a79",
+      "worker.json": "5b5a52a66de0aa5fc14184c7b4f989900568c26dc59e4754a48188b0871f62ba",
+      "job.json": "dea819c6ca62b93fe4afd7608a87fb4705e637dd1c0b16b0fbf2be857cc10958",
+      "launch.json": "0f86f986f4d3d9f3d93bfa038803a66e8f9dec80e4bb7c68d0b50977dd562d62"
+    }
+  },
+  {
+    "attempt": "native18",
+    "guard_status": "PASS",
+    "failure": null,
+    "worker_status": "PASS",
+    "dispatches": 20,
+    "readbacks": 20,
+    "files_sha256": {
+      "guard.json": "a192218bdfe6cb52fafa78bd73f0ffed5d0188676a44a0bd810602d9bc1aed27",
+      "worker.json": "dc22fec1191bbd818e640ebb26a5f8d5e6fcf7c9bd9430eae1338521995071f4",
+      "job.json": "2e7853f5e182510edcff514e48a6b59319a737267d968e62a3133b07f7ca3e3f",
+      "launch.json": "f80ec9f61da49d9ad82a5ccb31725c7a8dfb72316b76461e87bd37b3bad9dec7",
+      "independent_audit.json": "0ff2161190f0899cd8f078ddfb1f7c8a55e15d78234f1ecd9801a5d30421dfb5"
+    }
+  }
+]

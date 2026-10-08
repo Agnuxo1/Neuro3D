@@ -35,8 +35,8 @@ MAX_JSON = 16 * 1024 * 1024
 MAX_DISPATCHES = 32
 OUTPUT_WORDS = 64
 POISON = gpu_base.POISON
-SHADER = ROOT / "Blender/shaders/robust_first_hit_shared_exact_v1.glsl"
-SIGNED512 = ROOT / "Blender/shaders/robust_first_hit_shared_arithmetic_v1.glsl"
+SHADER = ROOT / "Blender/shaders/robust_first_hit_exact_v1.glsl"
+SIGNED512 = ROOT / "Blender/shaders/robust_first_hit_register_arithmetic_v1.glsl"
 COMPILE_OPTIONS = "#pragma optimize(on)\n#pragma optionNV(unroll none)\n"
 DEPARTURE = {None: 0, "mirror": 1, "t": 2, "r": 3}
 
