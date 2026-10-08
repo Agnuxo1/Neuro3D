@@ -1,0 +1,31 @@
+{
+  "schema": "neuro3d.first_hit.admission_fix.cpu.v1",
+  "status": "PASS",
+  "gpu_executed": false,
+  "manifest_sha256": "1ba451212cc136442ea34a1ec9a7cefd44fdf366211f28813590f21b732ba800",
+  "cases": 13,
+  "queries_after": 20,
+  "original_worker_sha256": "505de7df99f7a1d390afb542b908c4a2222cc7ba7a4d38142da7eed8a6610e5d",
+  "fixed_worker_sha256": "bf11a5e5a527064c9621a91858a1d3197b14f5752b2f9baed444c3b7c48645eb",
+  "before": {
+    "accepted": false,
+    "error": "ValueError: pinned packet"
+  },
+  "tests_exit_code": 0,
+  "test_output": "test_admission_does_not_depend_on_process_working_directory (Blender.tests.test_robust_first_hit_native_inputs_v1.FrozenInputAdmissionTests.test_admission_does_not_depend_on_process_working_directory) ... ok\ntest_changed_packet_hash_is_rejected (Blender.tests.test_robust_first_hit_native_inputs_v1.FrozenInputAdmissionTests.test_changed_packet_hash_is_rejected) ... ok\ntest_legacy_absolute_paths_keep_the_same_contract (Blender.tests.test_robust_first_hit_native_inputs_v1.FrozenInputAdmissionTests.test_legacy_absolute_paths_keep_the_same_contract) ... ok\ntest_missing_packet_is_rejected (Blender.tests.test_robust_first_hit_native_inputs_v1.FrozenInputAdmissionTests.test_missing_packet_is_rejected) ... ok\ntest_original_frozen_manifest_admits_all_twenty_queries (Blender.tests.test_robust_first_hit_native_inputs_v1.FrozenInputAdmissionTests.test_original_frozen_manifest_admits_all_twenty_queries) ... ok\ntest_coplanar_ray_is_fail_closed (Blender.tests.test_robust_first_hit_exact_v1.ExactFirstHitTests.test_coplanar_ray_is_fail_closed) ... ok\ntest_degenerate_triangle_rejects_geometry (Blender.tests.test_robust_first_hit_exact_v1.ExactFirstHitTests.test_degenerate_triangle_rejects_geometry) ... ok\ntest_extreme_declared_coordinate_control_does_not_overflow (Blender.tests.test_robust_first_hit_exact_v1.ExactFirstHitTests.test_extreme_declared_coordinate_control_does_not_overflow) ... ok\ntest_near_parallel_direction_uses_exact_ratio (Blender.tests.test_robust_first_hit_exact_v1.ExactFirstHitTests.test_near_parallel_direction_uses_exact_ratio) ... ok\ntest_previous_contact_is_excluded_only_at_exact_zero (Blender.tests.test_robust_first_hit_exact_v1.ExactFirstHitTests.test_previous_contact_is_excluded_only_at_exact_zero) ... ok\ntest_previous_primitive_is_not_globally_ignored_on_later_return (Blender.tests.test_robust_first_hit_exact_v1.ExactFirstHitTests.test_previous_primitive_is_not_globally_ignored_on_later_return) ... ok\ntest_real_k3_k4_internal_triangulation_ties_resolve_to_surface (Blender.tests.test_robust_first_hit_exact_v1.ExactFirstHitTests.test_real_k3_k4_internal_triangulation_ties_resolve_to_surface) ... ok\ntest_true_coincident_geometry_is_reported_not_arbitrarily_selected (Blender.tests.test_robust_first_hit_exact_v1.ExactFirstHitTests.test_true_coincident_geometry_is_reported_not_arbitrarily_selected) ... ok\ntest_ultrathin_gaps_never_collapse_to_false_tie (Blender.tests.test_robust_first_hit_exact_v1.ExactFirstHitTests.test_ultrathin_gaps_never_collapse_to_false_tie) ... ok\ntest_unique_outer_edge_hit_is_fail_closed_boundary (Blender.tests.test_robust_first_hit_exact_v1.ExactFirstHitTests.test_unique_outer_edge_hit_is_fail_closed_boundary) ... ok\ntest_wire_mutation_is_rejected_before_geometry (Blender.tests.test_robust_first_hit_exact_v1.ExactFirstHitTests.test_wire_mutation_is_rejected_before_geometry) ... ok\ntest_wrong_departure_contract_is_rejected (Blender.tests.test_robust_first_hit_exact_v1.ExactFirstHitTests.test_wrong_departure_contract_is_rejected) ... ok\ntest_complete_ordered_worker_is_accepted (Blender.tests.test_robust_first_hit_gpu_guard_v1.WorkerGateTests.test_complete_ordered_worker_is_accepted) ... ok\ntest_malformed_hex_is_rejected (Blender.tests.test_robust_first_hit_gpu_guard_v1.WorkerGateTests.test_malformed_hex_is_rejected) ... ok\ntest_missing_readback_is_rejected (Blender.tests.test_robust_first_hit_gpu_guard_v1.WorkerGateTests.test_missing_readback_is_rejected) ... ok\ntest_reordered_readback_is_rejected (Blender.tests.test_robust_first_hit_gpu_guard_v1.WorkerGateTests.test_reordered_readback_is_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 21 tests in 0.131s\n\nOK\n",
+  "packet_sha256": {
+    "k3_real": "5c1da53154bebdcc0fb2953777c06f19c5c20b3b9277ad7d8eecffa61c03806f",
+    "k4_real": "a284cfe711991327f234f122821b64e3ec77f6b8fda35bf18b53403b3ae9c55c",
+    "thin_gap_2m53": "23e73deda7611f15fc5eed21e07f2a35b71f12ffe8bf244db4fc84f09f606459",
+    "thin_gap_2m54": "c5bf3b959ccf1c4795574c53d6e5175b450e593757e8b866656c6098970e52ac",
+    "thin_gap_2m60": "55662a2394511779fa0347a5834890955f28e950deae4987cea9a1ec80cee6a0",
+    "true_coincident_objects": "75052ed93ec98936721f58a699fdf18ad45a1acf82d8d38faebd44374a0c724f",
+    "previous_exact_contact_then_2m60_gap": "4fc9f92527067cf12d9dc58c078f40550192bfa033d7026ea4e49db32678ce93",
+    "legitimate_later_return_same_primitive": "2caf1074556accac31e24ecc1cf9bff09d3035c61202a28ec6c710e968f503b8",
+    "outer_boundary": "8ca96a26a5677c476bdb3b54ad85c4f7e666104b221263efdd57c6b1a3a943a8",
+    "coplanar": "a7d21d1fe92c5919b4ecbc8b199e17f100c6a40b355a11da7afa46b3c2c97035",
+    "degenerate": "86f3ed7c3ae13b40c790642cb5150ff133258fbe48c34d57f5654c6e29493df8",
+    "near_parallel_2m100": "ab6d78052a0ee2f2a81c2bec1327355849c85c6e1b24fd6f89e7ad0c25d2fc7c",
+    "extreme_coordinate": "d802827410e0199608f26c06ef2fd978e06e20219667b43dec92a88a31c9c586"
+  }
+}

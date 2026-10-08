@@ -164,6 +164,19 @@ def expected_query(row):
     return row
 
 
+def pinned_packet_path(case):
+    """Resolve frozen portable paths relative to this checkout, never the CWD."""
+    value = case["packet_path"]
+    require(type(value) is str and value and "\0" not in value, "pinned packet path")
+    path = Path(value)
+    if not path.is_absolute():
+        path = ROOT / path
+    path = path.resolve()
+    require(path.is_file() and path.suffix == ".json" and
+            sha(path) == case["packet_sha256"], "pinned packet")
+    return path
+
+
 def validate_job(job):
     require(type(job) is dict and set(job) == {
         "schema", "expected_backend", "expected_renderer_contains", "limits", "cases"},
@@ -179,9 +192,7 @@ def validate_job(job):
             "case_id", "input_class", "packet_path", "packet_sha256", "queries"}, "closed case schema")
         require(type(case["case_id"]) is str and case["case_id"], "case ID")
         ids.append(case["case_id"])
-        path = Path(case["packet_path"])
-        require(path.is_absolute() and path.is_file() and path.suffix == ".json" and
-                sha(path) == case["packet_sha256"], "pinned packet")
+        pinned_packet_path(case)
         require(type(case["queries"]) is list and case["queries"], "queries required")
         for query in case["queries"]:
             expected_query(query)
@@ -328,7 +339,7 @@ def main():
         shader = compile_shader(gpu)
         seen_nonces = set()
         for case in job["cases"]:
-            packet_path = Path(case["packet_path"]).resolve()
+            packet_path = pinned_packet_path(case)
             packet = read_json(packet_path)
             require(packet.get("schema") == transport.SCHEMA and
                     sha(packet_path) == case["packet_sha256"], "packet identity")
