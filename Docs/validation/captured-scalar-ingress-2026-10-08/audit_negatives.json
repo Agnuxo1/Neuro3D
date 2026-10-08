@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "case": "coordinate",
+      "exit_code": 1,
+      "rejected": true
+    },
+    {
+      "case": "certification_claim",
+      "exit_code": 1,
+      "rejected": true
+    }
+  ],
+  "optical_forward_executed": false
+}

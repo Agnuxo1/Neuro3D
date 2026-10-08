@@ -5,7 +5,6 @@ Fields are estimates; exact symbolic path definitions support error certificatio
 Historical EXP-005 engines remain unchanged. This is not Maxwell/physical optics.
 """
 from fractions import Fraction as F
-from functools import cmp_to_key
 import cmath
 import math
 
@@ -92,58 +91,6 @@ def internal_seam(rows, point):
     return False
 
 
-def surface_union_interior(rows, point):
-    """Exact local union test, including complete fans at shared mesh vertices.
-
-    Active triangle half-planes define tangent cones at point. Their boundary
-    lines partition directions into exact angular cells. The finite union has
-    an open neighborhood iff these cones cover every cell. Inactive inequalities
-    have positive slack, hence one common positive neighborhood radius exists.
-    Caller must already require one object and parallel coplanar hit normals.
-    """
-    normal = rows[0]['normal']
-    drop = next(i for i, value in enumerate(normal) if value)
-    keep = [i for i in range(3) if i != drop]
-    cones, rays = [], []
-    for row in rows:
-        constraints = []
-        vertices, n = row['vertices'], row['normal']
-        for i, vertex in enumerate(vertices):
-            edge = sub(vertices[(i+1) % 3], vertex)
-            slack = dot(cross(edge, sub(point, vertex)), n)
-            if slack < 0: return False
-            if slack == 0:
-                constraints.append((edge, n))
-                ray = (edge[keep[0]], edge[keep[1]])
-                if ray == (0, 0): return False
-                rays.extend((ray, tuple(-v for v in ray)))
-        if not constraints: return True
-        cones.append(constraints)
-    def half(ray): return 0 if ray[1] > 0 or (ray[1] == 0 and ray[0] > 0) else 1
-    def orient(a, b): return a[0]*b[1]-a[1]*b[0]
-    def compare(a, b):
-        ha, hb = half(a), half(b)
-        if ha != hb: return -1 if ha < hb else 1
-        determinant = orient(a, b)
-        return -1 if determinant > 0 else 1 if determinant < 0 else 0
-    ordered = sorted(rays, key=cmp_to_key(compare))
-    unique = []
-    for ray in ordered:
-        if not unique or compare(ray, unique[-1]) != 0: unique.append(ray)
-    if len(unique) < 2: return False
-    for i, a in enumerate(unique):
-        b = unique[(i+1) % len(unique)]
-        determinant = orient(a, b)
-        sample = ((a[0]+b[0], a[1]+b[1]) if determinant > 0 else
-                  (-a[0]-b[0], -a[1]-b[1]) if determinant < 0 else (-a[1], a[0]))
-        direction = [F(0)]*3
-        direction[keep[0]], direction[keep[1]] = sample
-        direction[drop] = -(normal[keep[0]]*sample[0]+normal[keep[1]]*sample[1])/normal[drop]
-        if not any(all(dot(cross(edge, direction), n) >= 0 for edge, n in cone) for cone in cones):
-            return False
-    return True
-
-
 def select(origin, direction, triangles, previous=None):
     if direction == (0, 0, 0): raise ValueError('nonzero direction required')
     candidates, excluded = [], []
@@ -169,8 +116,7 @@ def select(origin, direction, triangles, previous=None):
     if any(row['object_id'] != first['object_id'] or not parallel(row['normal'], first['normal']) for row in rows):
         return dict(result, status='TRUE_TIE')
     point = add(origin, scale(direction, nearest))
-    if (not any(row['kind'] == 'interior' for row in rows) and not internal_seam(rows, point)
-            and not surface_union_interior(rows, point)):
+    if not any(row['kind'] == 'interior' for row in rows) and not internal_seam(rows, point):
         return dict(result, status='BOUNDARY')
     return dict(result, status='SELECT', selected=first, point=point)
 

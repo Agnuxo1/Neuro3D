@@ -1,0 +1,29 @@
+{
+  "schema": "neuro3d.blender_lab.scalar_ingress_software_audit.v1",
+  "status": "PASS",
+  "producer_imported": false,
+  "objects": 104,
+  "triangles": 6656,
+  "sources": 5,
+  "checked_vertices": 6760,
+  "checked_world_coordinates": 20280,
+  "faces_preserved": true,
+  "exact_affine_coordinates_preserved": true,
+  "source_positions_from_captured_instances": true,
+  "legacy_source_json_difference_max_BU": {
+    "numerator": 107803679,
+    "denominator": 281474976710656
+  },
+  "legacy_source_json_difference_max_BU_display": 3.829956050083183e-07,
+  "scope": "Input-preservation software audit only; difference to legacy source descriptors is not a complete native/phase/field bound.",
+  "optical_forward_executed": false,
+  "field_certified": false,
+  "training_executed": false,
+  "gpu_executed": false,
+  "input_sha256": {
+    "capture": "458ca5e3e09bc25e5f7174f38c87e1cbd2049f7534ef0e73d9ea03d266454d93",
+    "scene": "59963192f88df24bf5b1d7fd2f8119a81a0ecad353f62ee16831ccfb98627097",
+    "semantics": "bcd17460a49dbbe244997638b056dc5dfcf544f2bc2b59c3f18ce9edb2569336",
+    "fields": "ef8dfdcd26a9ad01afd20ca3ebbaab75d5f74ebcee1572c308a959f081849589"
+  }
+}

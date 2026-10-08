@@ -64,6 +64,17 @@ sin añadir redondeo decimal y ofrece un adaptador opcional para Blender Optics
 Simulator. La captura tiene controles de software; la integración con el cálculo
 neuronal óptico completo continúa pendiente.
 
+La [conexión con el formato del motor escalar](Docs/CAPTURED_SCALAR_INGRESS_AND_FAN_COVERAGE_2026-10-08.md)
+ya prepara 104 elementos ópticos y 6.656 triángulos de la captura Iris, con
+transformación afín racional y auditoría independiente de 20.280 coordenadas.
+Se corrigió también el falso borde en los centros de abanicos triangulados,
+conservando huecos y bordes reales. Esta etapa prepara entradas y comprueba el
+selector CPU; no publica nuevos campos, entrenamiento ni resultados GPU de Iris.
+
+![Interior de una unión de triángulos](Docs/assets/surface-union-interior-2026-10-08.png)
+
+El esquema ilustra el predicado geométrico exacto, sin representar campos ópticos.
+
 ![Control analítico de pérdida de información](Docs/assets/quantization-phase-witness-2026-10-08.gif)
 
 Un [testigo CPU exacto](Docs/QUANTIZATION_INFORMATION_LOSS_WITNESS_2026-10-08.md)

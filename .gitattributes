@@ -69,6 +69,7 @@ Docs/validation/quadratic-readout-2026-10-08/** -text !eol whitespace=cr-at-eol
 Docs/validation/iris-retrospective-interval-2026-10-08/** -text !eol whitespace=cr-at-eol
 Docs/validation/planned-geometry-linkage-2026-10-08/** -text !eol whitespace=cr-at-eol
 Docs/validation/blender-lab-capture-2026-10-08/** -text !eol whitespace=cr-at-eol
+Docs/validation/captured-scalar-ingress-2026-10-08/** -text !eol whitespace=cr-at-eol
 Docs/research/iris_scene_coordinate_bindings_v1.json -text !eol whitespace=cr-at-eol
 # Immutable legacy preimages retain their original blank-line spaces.
 Docs/validation/unreal-readiness-2026-10-08/*/source/Source/OptiXRayTracing.cu -text !eol -whitespace
