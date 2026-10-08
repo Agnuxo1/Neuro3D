@@ -70,6 +70,8 @@ Se contrasta también [la función del circuito Iris congelado](IRIS_LINEAR_FIEL
 
 ## Laboratorio virtual: comprobación actual
 
+Un [análisis retrospectivo de los readbacks existentes](IRIS_RETROSPECTIVE_RATIONAL_CERTIFICATE_2026-10-08.md) añade cotas racionales al modelo algebraico canónico: `native02` cumple la precisión y `native01` la viola pese a conservar450decisiones. Es evidencia de por qué se necesitan salidas/cotas completas; no es nuevo ensayo confirmatorio, certificado RTgeométrico ni prueba de novedad.
+
 Las páginas públicas de P2PCLAW responden. La ruta documentada de búsqueda anónima `/api/literature/search` devuelve404 en el sitio actual. El código público del ExperimentTracker generaUUID/hash en el navegador y conserva los registros en `localStorage`; eso no acredita un registro externo inmutable, IPFS o cómputo remoto. No se reintentaron credenciales previas inválidas. No se publicó un borrador generado automáticamente por el laboratorio: su plantilla contiene afirmaciones de resultados y referencias genéricas que no corresponden a este estudio.
 
 Estos hechos se conservan con hashes de los archivos públicos examinados. No hay recibo de cómputo remoto, preregId externo ni CID emitido por un registro externo para este nuevo estudio. La preregistración confirmatoria se prepara por separado antes de medir nuevos resultados.

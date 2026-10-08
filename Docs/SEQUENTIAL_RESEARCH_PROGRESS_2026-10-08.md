@@ -28,3 +28,5 @@ El propietario confirmó el 2026-10-08 el orden siguiente. Se conservan los cier
 Punto 0: [pregunta, hipótesis, comparadores y refutación](CONTRIBUTION_AND_FALSIFICATION_2026-10-08.md). Definir una hipótesis no demuestra que sea verdadera o nueva. No hay nuevos ensayos confirmatorios en este cierre; el registro externo/IPFS sigue ausente.
 
 Punto 1: [revisión crítica y límites de cobertura](LITERATURE_AND_NOVELTY_AUDIT_2026-10-08.md). Los componentes tienen antecedentes; el certificado conjunto es candidato sin demostración de originalidad. Quedan 106 antecedentes potencialmente relacionados sin extracción completa. No se declara revisión exhaustiva ni cierre positivo de novedad.
+
+Se añaden [cotas racionales retrospectivas del circuito Iris](IRIS_RETROSPECTIVE_RATIONAL_CERTIFICATE_2026-10-08.md), con controles negativos y decisiones certificadas. Son análisis de datos históricos para delimitar el método candidato; no se marca como cerrado el punto 2, el presupuesto de geometría nativa completo ni H1.
