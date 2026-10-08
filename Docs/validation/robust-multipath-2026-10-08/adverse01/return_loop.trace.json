@@ -1,0 +1,523 @@
+{
+  "schema": "neuro3d-exact-multipath-v1",
+  "backend": "CPU_FRACTION",
+  "status": "INCOMPLETE",
+  "fields": null,
+  "powers": null,
+  "paths": [],
+  "unresolved": [
+    {
+      "status": "RESOURCE_LIMIT",
+      "ray": {
+        "source_id": "input",
+        "source_reim": [
+          {
+            "numerator": 1,
+            "denominator": 1
+          },
+          {
+            "numerator": 0,
+            "denominator": 1
+          }
+        ],
+        "origin": [
+          {
+            "numerator": 0,
+            "denominator": 1
+          },
+          {
+            "numerator": 0,
+            "denominator": 1
+          },
+          {
+            "numerator": 0,
+            "denominator": 1
+          }
+        ],
+        "direction": [
+          {
+            "numerator": 1,
+            "denominator": 1
+          },
+          {
+            "numerator": 0,
+            "denominator": 1
+          },
+          {
+            "numerator": 0,
+            "denominator": 1
+          }
+        ],
+        "norm2": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "parameter_length": {
+          "numerator": 15,
+          "denominator": 2
+        },
+        "power_factor": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "mirror_phase": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "quarter_turns": 0,
+        "history": [
+          {
+            "object_id": "right",
+            "primitive_id": 1,
+            "coincident_primitives": [
+              1
+            ],
+            "parameter": {
+              "numerator": 1,
+              "denominator": 2
+            },
+            "point": [
+              {
+                "numerator": 1,
+                "denominator": 1
+              },
+              {
+                "numerator": 0,
+                "denominator": 1
+              },
+              {
+                "numerator": 0,
+                "denominator": 1
+              }
+            ],
+            "direction": [
+              {
+                "numerator": 1,
+                "denominator": 1
+              },
+              {
+                "numerator": 0,
+                "denominator": 1
+              },
+              {
+                "numerator": 0,
+                "denominator": 1
+              }
+            ],
+            "event": "mirror",
+            "coefficient_power": {
+              "numerator": 1,
+              "denominator": 1
+            }
+          },
+          {
+            "object_id": "left",
+            "primitive_id": 0,
+            "coincident_primitives": [
+              0
+            ],
+            "parameter": {
+              "numerator": 1,
+              "denominator": 1
+            },
+            "point": [
+              {
+                "numerator": 0,
+                "denominator": 1
+              },
+              {
+                "numerator": 0,
+                "denominator": 1
+              },
+              {
+                "numerator": 0,
+                "denominator": 1
+              }
+            ],
+            "direction": [
+              {
+                "numerator": -1,
+                "denominator": 1
+              },
+              {
+                "numerator": 0,
+                "denominator": 1
+              },
+              {
+                "numerator": 0,
+                "denominator": 1
+              }
+            ],
+            "event": "mirror",
+            "coefficient_power": {
+              "numerator": 1,
+              "denominator": 1
+            }
+          },
+          {
+            "object_id": "right",
+            "primitive_id": 1,
+            "coincident_primitives": [
+              1
+            ],
+            "parameter": {
+              "numerator": 1,
+              "denominator": 1
+            },
+            "point": [
+              {
+                "numerator": 1,
+                "denominator": 1
+              },
+              {
+                "numerator": 0,
+                "denominator": 1
+              },
+              {
+                "numerator": 0,
+                "denominator": 1
+              }
+            ],
+            "direction": [
+              {
+                "numerator": 1,
+                "denominator": 1
+              },
+              {
+                "numerator": 0,
+                "denominator": 1
+              },
+              {
+                "numerator": 0,
+                "denominator": 1
+              }
+            ],
+            "event": "mirror",
+            "coefficient_power": {
+              "numerator": 1,
+              "denominator": 1
+            }
+          },
+          {
+            "object_id": "left",
+            "primitive_id": 0,
+            "coincident_primitives": [
+              0
+            ],
+            "parameter": {
+              "numerator": 1,
+              "denominator": 1
+            },
+            "point": [
+              {
+                "numerator": 0,
+                "denominator": 1
+              },
+              {
+                "numerator": 0,
+                "denominator": 1
+              },
+              {
+                "numerator": 0,
+                "denominator": 1
+              }
+            ],
+            "direction": [
+              {
+                "numerator": -1,
+                "denominator": 1
+              },
+              {
+                "numerator": 0,
+                "denominator": 1
+              },
+              {
+                "numerator": 0,
+                "denominator": 1
+              }
+            ],
+            "event": "mirror",
+            "coefficient_power": {
+              "numerator": 1,
+              "denominator": 1
+            }
+          },
+          {
+            "object_id": "right",
+            "primitive_id": 1,
+            "coincident_primitives": [
+              1
+            ],
+            "parameter": {
+              "numerator": 1,
+              "denominator": 1
+            },
+            "point": [
+              {
+                "numerator": 1,
+                "denominator": 1
+              },
+              {
+                "numerator": 0,
+                "denominator": 1
+              },
+              {
+                "numerator": 0,
+                "denominator": 1
+              }
+            ],
+            "direction": [
+              {
+                "numerator": 1,
+                "denominator": 1
+              },
+              {
+                "numerator": 0,
+                "denominator": 1
+              },
+              {
+                "numerator": 0,
+                "denominator": 1
+              }
+            ],
+            "event": "mirror",
+            "coefficient_power": {
+              "numerator": 1,
+              "denominator": 1
+            }
+          },
+          {
+            "object_id": "left",
+            "primitive_id": 0,
+            "coincident_primitives": [
+              0
+            ],
+            "parameter": {
+              "numerator": 1,
+              "denominator": 1
+            },
+            "point": [
+              {
+                "numerator": 0,
+                "denominator": 1
+              },
+              {
+                "numerator": 0,
+                "denominator": 1
+              },
+              {
+                "numerator": 0,
+                "denominator": 1
+              }
+            ],
+            "direction": [
+              {
+                "numerator": -1,
+                "denominator": 1
+              },
+              {
+                "numerator": 0,
+                "denominator": 1
+              },
+              {
+                "numerator": 0,
+                "denominator": 1
+              }
+            ],
+            "event": "mirror",
+            "coefficient_power": {
+              "numerator": 1,
+              "denominator": 1
+            }
+          },
+          {
+            "object_id": "right",
+            "primitive_id": 1,
+            "coincident_primitives": [
+              1
+            ],
+            "parameter": {
+              "numerator": 1,
+              "denominator": 1
+            },
+            "point": [
+              {
+                "numerator": 1,
+                "denominator": 1
+              },
+              {
+                "numerator": 0,
+                "denominator": 1
+              },
+              {
+                "numerator": 0,
+                "denominator": 1
+              }
+            ],
+            "direction": [
+              {
+                "numerator": 1,
+                "denominator": 1
+              },
+              {
+                "numerator": 0,
+                "denominator": 1
+              },
+              {
+                "numerator": 0,
+                "denominator": 1
+              }
+            ],
+            "event": "mirror",
+            "coefficient_power": {
+              "numerator": 1,
+              "denominator": 1
+            }
+          },
+          {
+            "object_id": "left",
+            "primitive_id": 0,
+            "coincident_primitives": [
+              0
+            ],
+            "parameter": {
+              "numerator": 1,
+              "denominator": 1
+            },
+            "point": [
+              {
+                "numerator": 0,
+                "denominator": 1
+              },
+              {
+                "numerator": 0,
+                "denominator": 1
+              },
+              {
+                "numerator": 0,
+                "denominator": 1
+              }
+            ],
+            "direction": [
+              {
+                "numerator": -1,
+                "denominator": 1
+              },
+              {
+                "numerator": 0,
+                "denominator": 1
+              },
+              {
+                "numerator": 0,
+                "denominator": 1
+              }
+            ],
+            "event": "mirror",
+            "coefficient_power": {
+              "numerator": 1,
+              "denominator": 1
+            }
+          }
+        ],
+        "previous": {
+          "object_id": "left",
+          "primitive_id": 0,
+          "vertices": [
+            [
+              {
+                "numerator": 0,
+                "denominator": 1
+              },
+              {
+                "numerator": -4,
+                "denominator": 1
+              },
+              {
+                "numerator": -4,
+                "denominator": 1
+              }
+            ],
+            [
+              {
+                "numerator": 0,
+                "denominator": 1
+              },
+              {
+                "numerator": 4,
+                "denominator": 1
+              },
+              {
+                "numerator": -4,
+                "denominator": 1
+              }
+            ],
+            [
+              {
+                "numerator": 0,
+                "denominator": 1
+              },
+              {
+                "numerator": 0,
+                "denominator": 1
+              },
+              {
+                "numerator": 5,
+                "denominator": 1
+              }
+            ]
+          ],
+          "kind": "interior",
+          "t": {
+            "numerator": 1,
+            "denominator": 1
+          },
+          "normal": [
+            {
+              "numerator": 72,
+              "denominator": 1
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            }
+          ],
+          "barycentric": [
+            {
+              "numerator": 5,
+              "denominator": 18
+            },
+            {
+              "numerator": 5,
+              "denominator": 18
+            },
+            {
+              "numerator": 4,
+              "denominator": 9
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "rays": 8,
+  "input_power_exact": {
+    "numerator": 1,
+    "denominator": 1
+  },
+  "input_power": 1.0,
+  "output_power": null,
+  "exact_zero_branches": 0,
+  "departure_exclusions": 7,
+  "wavelength": {
+    "numerator": 1,
+    "denominator": 8
+  },
+  "ports": [
+    "out"
+  ],
+  "field_certified": false
+}

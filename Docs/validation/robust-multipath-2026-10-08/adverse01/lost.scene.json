@@ -1,0 +1,63 @@
+{
+  "schema": "exp005-readback-v2",
+  "lambda_BU": 0.125,
+  "objects": {
+    "out": {
+      "kind": "det",
+      "vertices_world_BU": [
+        [
+          1,
+          -4,
+          -4
+        ],
+        [
+          1,
+          4,
+          -4
+        ],
+        [
+          1,
+          0,
+          5
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "mode_origin_BU": [
+        1,
+        0,
+        0
+      ],
+      "mode_direction": [
+        1,
+        0,
+        0
+      ]
+    }
+  },
+  "undeclared_meshes": [],
+  "sources": [
+    {
+      "id": "input",
+      "position_BU": [
+        0,
+        0,
+        0
+      ],
+      "direction": [
+        -1,
+        0,
+        0
+      ],
+      "field_reim": [
+        1,
+        0
+      ]
+    }
+  ]
+}
