@@ -1,0 +1,46 @@
+{
+  "schema": "optic_neuro_blender.coherent_contract.v1",
+  "capture_state_sha256": "04d024d0db8bcb9288a23496dd2c4369a4268179f8da05d0ef8b8b249ce2dc53",
+  "phase": {
+    "time_dependence": "exp(-i*omega*t)",
+    "propagation": "exp(+i*2*pi*L_BU/lambda_BU)",
+    "reference": "COMMON_LAUNCH_PHASE",
+    "mirror": "minus_one_times_exp_i_declared_phase",
+    "splitter": "sqrt_tau_and_i_sqrt_one_minus_tau"
+  },
+  "units": {
+    "geometry": "BU",
+    "wavelength_BU_hex": "0x1.0000000000000p-3",
+    "metres_per_BU_hex": "0x1.0624de0000000p-10",
+    "scale_status": "SCENE_DISPLAY_SCALE_ONLY",
+    "reference_power_watt_hex": null
+  },
+  "encoding": {
+    "kind": "EXPLICIT_COMPLEX_FIELDS",
+    "normalization": "NONE",
+    "ports": {
+      "a": {
+        "coherence_group": "common",
+        "phase_reference": "launch"
+      },
+      "b": {
+        "coherence_group": "common",
+        "phase_reference": "launch"
+      }
+    }
+  },
+  "parameters": {
+    "detector.x": {
+      "unit": "BU",
+      "role": "GEOMETRY_COORDINATE"
+    }
+  },
+  "detectors": {
+    "D": {
+      "object": "detector",
+      "measurement": "NORMALIZED_MODAL_POWER",
+      "field_frame": "COMMON_LAUNCH_PHASE",
+      "renormalize": false
+    }
+  }
+}

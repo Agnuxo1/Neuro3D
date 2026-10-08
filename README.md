@@ -44,6 +44,15 @@ el [plan completo](Docs/BLENDER_SCIENTIFIC_ROADMAP_2026-10-08.md) y la
 
 ## Pregunta científica y progreso verificable
 
+El [contrato coherente ejecutable](Docs/OPTIC_NEURO_BLENDER_COHERENT_CONTRACT_2026-10-08.md)
+fija unidades, portadora/referencia común, fases, parámetros y potencia modal.
+Pasan 50 controles CPU y la admisión dentro de Blender del `.blend` Iris real:
+104 superficies, 6.656 triángulos, cinco entradas y tres detectores. Guardar/reabrir
+conserva la identidad de la fixture. Son controles de admisión; la propagación completa
+y el entrenamiento desde esta captura siguen pendientes.
+
+![Controles algebraicos del contrato](Docs/assets/coherent-contract-controls-2026-10-08.png)
+
 La [contribución operativa y el contraste dirigido de novedad](Docs/OPTIC_NEURO_BLENDER_OPERATIONAL_CONTRIBUTION_2026-10-08.md)
 fijan cuatro obligaciones: identidad de escena, caminos completos, inclusión del
 campo y decisión derivada de sus cotas. La revisión añade OptiBench como antecedente

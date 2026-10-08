@@ -1,0 +1,18 @@
+{
+  "exit_code": 0,
+  "test_count": 50,
+  "new_contract_controls": 18,
+  "command": [
+    "C:\\Python313\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "Blender.tests.test_coherent_contract_v1",
+    "Blender.tests.test_scalar_scene_ingress_v1",
+    "Blender.tests.test_surface_union_interior_v1",
+    "Blender.tests.test_blender_lab_capture_v1",
+    "-v"
+  ],
+  "optical_forward_executed": false
+}

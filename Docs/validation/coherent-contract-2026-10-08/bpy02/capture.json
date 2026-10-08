@@ -1,0 +1,357 @@
+{
+  "schema": "neuro3d.blender_lab.scene_capture.v1",
+  "state_sha256": "04d024d0db8bcb9288a23496dd2c4369a4268179f8da05d0ef8b8b249ce2dc53",
+  "state": {
+    "scene_name": "Scene",
+    "view_layer": "ViewLayer",
+    "frame": 1,
+    "subframe_hex": "0x0.0p+0",
+    "units": {
+      "system": "METRIC",
+      "scale_length_metres_per_BU_hex": "0x1.0624de0000000p-10",
+      "length_unit": "METERS",
+      "physical_unit_intent_declared": true
+    },
+    "scene_custom_properties": {},
+    "scene_optics": null,
+    "objects": [
+      {
+        "name": "detector",
+        "type": "MESH",
+        "matrix_world": [
+          [
+            "0x1.0000000000000p+0",
+            "0x0.0p+0",
+            "0x0.0p+0",
+            "0x1.0000000000000p+1"
+          ],
+          [
+            "0x0.0p+0",
+            "0x1.0000000000000p+0",
+            "0x0.0p+0",
+            "0x0.0p+0"
+          ],
+          [
+            "0x0.0p+0",
+            "0x0.0p+0",
+            "0x1.0000000000000p+0",
+            "0x0.0p+0"
+          ],
+          [
+            "0x0.0p+0",
+            "0x0.0p+0",
+            "0x0.0p+0",
+            "0x1.0000000000000p+0"
+          ]
+        ],
+        "custom_properties": {
+          "kind": "det"
+        },
+        "collections": [
+          "OwnOptics"
+        ],
+        "hide_render": false,
+        "hide_viewport": false,
+        "direct_scene_member": true,
+        "evaluated_instance_count": 1,
+        "optics": null
+      },
+      {
+        "name": "source.a",
+        "type": "EMPTY",
+        "matrix_world": [
+          [
+            "0x1.0000000000000p+0",
+            "0x0.0p+0",
+            "0x0.0p+0",
+            "0x0.0p+0"
+          ],
+          [
+            "0x0.0p+0",
+            "0x1.0000000000000p+0",
+            "0x0.0p+0",
+            "0x0.0p+0"
+          ],
+          [
+            "0x0.0p+0",
+            "0x0.0p+0",
+            "0x1.0000000000000p+0",
+            "0x0.0p+0"
+          ],
+          [
+            "0x0.0p+0",
+            "0x0.0p+0",
+            "0x0.0p+0",
+            "0x1.0000000000000p+0"
+          ]
+        ],
+        "custom_properties": {},
+        "collections": [
+          "Scene Collection"
+        ],
+        "hide_render": false,
+        "hide_viewport": false,
+        "direct_scene_member": true,
+        "evaluated_instance_count": 1,
+        "optics": null
+      },
+      {
+        "name": "source.b",
+        "type": "EMPTY",
+        "matrix_world": [
+          [
+            "0x1.0000000000000p+0",
+            "0x0.0p+0",
+            "0x0.0p+0",
+            "0x0.0p+0"
+          ],
+          [
+            "0x0.0p+0",
+            "0x1.0000000000000p+0",
+            "0x0.0p+0",
+            "0x0.0p+0"
+          ],
+          [
+            "0x0.0p+0",
+            "0x0.0p+0",
+            "0x1.0000000000000p+0",
+            "0x0.0p+0"
+          ],
+          [
+            "0x0.0p+0",
+            "0x0.0p+0",
+            "0x0.0p+0",
+            "0x1.0000000000000p+0"
+          ]
+        ],
+        "custom_properties": {},
+        "collections": [
+          "Scene Collection"
+        ],
+        "hide_render": false,
+        "hide_viewport": false,
+        "direct_scene_member": true,
+        "evaluated_instance_count": 1,
+        "optics": null
+      }
+    ],
+    "instances": [
+      {
+        "object": "source.a",
+        "is_instance": false,
+        "persistent_id": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "matrix_world": [
+          [
+            "0x1.0000000000000p+0",
+            "0x0.0p+0",
+            "0x0.0p+0",
+            "0x0.0p+0"
+          ],
+          [
+            "0x0.0p+0",
+            "0x1.0000000000000p+0",
+            "0x0.0p+0",
+            "0x0.0p+0"
+          ],
+          [
+            "0x0.0p+0",
+            "0x0.0p+0",
+            "0x1.0000000000000p+0",
+            "0x0.0p+0"
+          ],
+          [
+            "0x0.0p+0",
+            "0x0.0p+0",
+            "0x0.0p+0",
+            "0x1.0000000000000p+0"
+          ]
+        ],
+        "mesh_sha256": null,
+        "geometry_type": "EMPTY"
+      },
+      {
+        "object": "source.b",
+        "is_instance": false,
+        "persistent_id": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "matrix_world": [
+          [
+            "0x1.0000000000000p+0",
+            "0x0.0p+0",
+            "0x0.0p+0",
+            "0x0.0p+0"
+          ],
+          [
+            "0x0.0p+0",
+            "0x1.0000000000000p+0",
+            "0x0.0p+0",
+            "0x0.0p+0"
+          ],
+          [
+            "0x0.0p+0",
+            "0x0.0p+0",
+            "0x1.0000000000000p+0",
+            "0x0.0p+0"
+          ],
+          [
+            "0x0.0p+0",
+            "0x0.0p+0",
+            "0x0.0p+0",
+            "0x1.0000000000000p+0"
+          ]
+        ],
+        "mesh_sha256": null,
+        "geometry_type": "EMPTY"
+      },
+      {
+        "object": "detector",
+        "is_instance": false,
+        "persistent_id": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "matrix_world": [
+          [
+            "0x1.0000000000000p+0",
+            "0x0.0p+0",
+            "0x0.0p+0",
+            "0x1.0000000000000p+1"
+          ],
+          [
+            "0x0.0p+0",
+            "0x1.0000000000000p+0",
+            "0x0.0p+0",
+            "0x0.0p+0"
+          ],
+          [
+            "0x0.0p+0",
+            "0x0.0p+0",
+            "0x1.0000000000000p+0",
+            "0x0.0p+0"
+          ],
+          [
+            "0x0.0p+0",
+            "0x0.0p+0",
+            "0x0.0p+0",
+            "0x1.0000000000000p+0"
+          ]
+        ],
+        "mesh_sha256": "bb8fb86836411960ca31c99a0bddc84a55b2026085f76ba98df97df74a082644",
+        "geometry_type": "MESH"
+      }
+    ],
+    "meshes": {
+      "bb8fb86836411960ca31c99a0bddc84a55b2026085f76ba98df97df74a082644": {
+        "vertices_local_hex": [
+          [
+            "0x0.0p+0",
+            "-0x1.0000000000000p+1",
+            "-0x1.0000000000000p+1"
+          ],
+          [
+            "0x0.0p+0",
+            "0x1.0000000000000p+1",
+            "-0x1.0000000000000p+1"
+          ],
+          [
+            "0x0.0p+0",
+            "0x0.0p+0",
+            "0x1.0000000000000p+1"
+          ]
+        ],
+        "triangles": [
+          {
+            "vertices": [
+              0,
+              1,
+              2
+            ],
+            "material_index": 0,
+            "polygon_index": 0
+          }
+        ],
+        "material_slots": []
+      }
+    },
+    "network": {
+      "schema": "neuro3d.blender_lab.network_bindings.v1",
+      "model": "own.software.contract.fixture.v1",
+      "inputs": [
+        {
+          "id": "a",
+          "object": "source.a"
+        },
+        {
+          "id": "b",
+          "object": "source.b"
+        }
+      ],
+      "parameters": [
+        {
+          "id": "detector.x",
+          "object": "detector",
+          "path": [
+            "matrix_world",
+            0,
+            3
+          ],
+          "unit": "BU",
+          "bounds": [
+            "-0x1.9000000000000p+6",
+            "0x1.9000000000000p+6"
+          ],
+          "represented_value_hex": "0x1.0000000000000p+1"
+        }
+      ],
+      "detectors": [
+        {
+          "id": "D",
+          "object": "detector"
+        }
+      ],
+      "forward_executed": false,
+      "training_executed": false,
+      "optical_semantics_validated": false
+    }
+  },
+  "provenance": {
+    "blender_version": "4.5.14 LTS",
+    "blender_build_hash": "62c1db4208e8",
+    "source_file": ""
+  },
+  "scope": {
+    "represented_bpy_values_preserved": true,
+    "decimal_rounding_added": false,
+    "mesh_geometry_only": true,
+    "render_materials_interpreted_as_optics": false,
+    "non_mesh_geometry_fully_captured": false,
+    "physical_error_certified": false,
+    "optical_forward_executed": false,
+    "training_executed": false,
+    "gpu_executed": false,
+    "path_completeness_certified": false
+  }
+}

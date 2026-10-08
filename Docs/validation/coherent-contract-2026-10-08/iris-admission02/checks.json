@@ -1,0 +1,39 @@
+{
+  "schema": "optic_neuro_blender.iris_semantic_admission_check.v1",
+  "status": "PASS",
+  "command": [
+    "C:\\Python313\\python.exe",
+    "-X",
+    "utf8",
+    "D:\\PROJECTS\\Neuro3D-Scientific-20261008\\Tools\\admit_coherent_capture_v1.py",
+    "--capture",
+    "D:\\PROJECTS\\Neuro3D-Scientific-20261008\\Docs\\validation\\blender-lab-capture-2026-10-08\\resume01\\iris\\capture.json",
+    "--semantics",
+    "D:\\PROJECTS\\Neuro3D-Scientific-20261008\\Docs\\validation\\captured-scalar-ingress-2026-10-08\\semantics.json",
+    "--fields",
+    "D:\\PROJECTS\\Neuro3D-Scientific-20261008\\Docs\\validation\\captured-scalar-ingress-2026-10-08\\fields_admission_only.json",
+    "--contract",
+    "D:\\PROJECTS\\Neuro3D-Scientific-20261008\\Docs\\research\\iris_coherent_contract_v1.json",
+    "--out",
+    "D:\\PROJECTS\\.cognition\\neuro3d-sequential-20261008\\coherent-contract-iris02\\admitted.json"
+  ],
+  "exit_code": 0,
+  "capture_sha256": "458ca5e3e09bc25e5f7174f38c87e1cbd2049f7534ef0e73d9ea03d266454d93",
+  "contract_sha256": "72cd57ad26e9becfccab6304ccd62dc9afea21efd651ffbae1aefdfef337dd0b",
+  "capture_state_sha256": "8624d661252f143653f5b32c744cb7e6b23f71119253d7ad64510bbf1aa1a943",
+  "counts": {
+    "objects": 104,
+    "sources": 5,
+    "triangles": 6656
+  },
+  "parameter_binding_count": 32,
+  "detector_count": 3,
+  "all_original_packet_values_equal": true,
+  "optical_forward_executed": false,
+  "field_certified": false,
+  "training_executed": false,
+  "gpu_requested": false,
+  "wavelength_metres_is_display_conversion_only": true,
+  "pilot_protocol_sha256": "5d0cf372f2f66f043c2a219ba6a60f0182ced8a60039348d486ec163be736226",
+  "frozen_pilot_executed": false
+}

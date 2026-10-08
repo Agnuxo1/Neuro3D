@@ -1,0 +1,26 @@
+{
+  "schema": "optic_neuro_blender.actual_bpy_semantic_admission.v1",
+  "status": "PASS",
+  "blender_version": "4.5.14 LTS",
+  "blender_build_hash": "62c1db4208e8",
+  "opened_scene_sha256": "5884c6fa4cc8cee22dd99e2f4aeaf8f0e44ae44dba85d4f2447868d3d4d58c22",
+  "capture_state_sha256": "8624d661252f143653f5b32c744cb7e6b23f71119253d7ad64510bbf1aa1a943",
+  "input_file_sha256": {
+    "network": "85d7b5dd77589b5c1b11b19b1de082be4fb8e4cb7ddceafa50f35cdd4767b515",
+    "contract": "72cd57ad26e9becfccab6304ccd62dc9afea21efd651ffbae1aefdfef337dd0b",
+    "semantics": "bcd17460a49dbbe244997638b056dc5dfcf544f2bc2b59c3f18ce9edb2569336",
+    "fields": "ef8dfdcd26a9ad01afd20ca3ebbaab75d5f74ebcee1572c308a959f081849589"
+  },
+  "counts": {
+    "objects": 104,
+    "triangles": 6656,
+    "sources": 5
+  },
+  "parameter_binding_count": 32,
+  "detector_count": 3,
+  "optical_forward_executed": false,
+  "training_executed": false,
+  "field_certified": false,
+  "physical_calibration_verified": false,
+  "gpu_requested": false
+}

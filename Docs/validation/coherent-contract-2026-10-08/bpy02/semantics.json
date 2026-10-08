@@ -1,0 +1,42 @@
+{
+  "schema": "neuro3d.blender_lab.scalar_semantics.v1",
+  "model": "LOSSLESS_SCALAR_PLANAR_V1",
+  "capture_state_sha256": "04d024d0db8bcb9288a23496dd2c4369a4268179f8da05d0ef8b8b249ce2dc53",
+  "optical_collection": "OwnOptics",
+  "wavelength_BU_hex": "0x1.0000000000000p-3",
+  "objects": {
+    "detector": {
+      "kind": "det",
+      "mode_origin_local_hex": [
+        "0x0.0p+0",
+        "0x0.0p+0",
+        "0x0.0p+0"
+      ],
+      "mode_direction_world_hex": [
+        "0x1.0000000000000p+0",
+        "0x0.0p+0",
+        "0x0.0p+0"
+      ]
+    }
+  },
+  "sources": [
+    {
+      "id": "a",
+      "object": "source.a",
+      "direction_world_hex": [
+        "0x1.0000000000000p+0",
+        "0x0.0p+0",
+        "0x0.0p+0"
+      ]
+    },
+    {
+      "id": "b",
+      "object": "source.b",
+      "direction_world_hex": [
+        "0x1.0000000000000p+0",
+        "0x0.0p+0",
+        "0x0.0p+0"
+      ]
+    }
+  ]
+}
