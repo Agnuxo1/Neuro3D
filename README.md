@@ -1,5 +1,19 @@
 # Neuro3D
 
+## Progreso científico — 8 de octubre de 2026
+
+Los resultados nuevos están publicados en la [rama de investigación](https://github.com/Agnuxo1/Neuro3D/tree/codex/neuro3d-scientific-closure-20261008) y la [PR #6](https://github.com/Agnuxo1/Neuro3D/pull/6). Consulta el [README actualizado con esquemas, gráficas y GIF](https://github.com/Agnuxo1/Neuro3D/blob/codex/neuro3d-scientific-closure-20261008/README.md) y el [estado de cada punto](https://github.com/Agnuxo1/Neuro3D/blob/f10d74dff3525a317aa89504395aa8a120bc8f3f/Docs/SEQUENTIAL_RESEARCH_PROGRESS_2026-10-08.md).
+
+- [Aportación falsable formulada](https://github.com/Agnuxo1/Neuro3D/blob/f10d74dff3525a317aa89504395aa8a120bc8f3f/Docs/CONTRIBUTION_AND_FALSIFICATION_2026-10-08.md), con criterio de refutación y dominio explícito.
+- [Revisión crítica de antecedentes](https://github.com/Agnuxo1/Neuro3D/blob/f10d74dff3525a317aa89504395aa8a120bc8f3f/Docs/LITERATURE_AND_NOVELTY_AUDIT_2026-10-08.md): 194 registros brutos, 175 únicos y extracción de 30 fuentes. La novedad sigue sin demostrar.
+- [Cotas racionales de los resultados GPU archivados](https://github.com/Agnuxo1/Neuro3D/blob/f10d74dff3525a317aa89504395aa8a120bc8f3f/Docs/IRIS_RETROSPECTIVE_RATIONAL_CERTIFICATE_2026-10-08.md): error de campo ≤1.282e-13 y 450 decisiones certificadas frente al modelo algebraico canónico. Es un análisis retrospectivo CPU de datos existentes, sin nuevo ensayo GPU ni certificado de recorrido de triángulos.
+
+![Cotas racionales de readbacks históricos](https://raw.githubusercontent.com/Agnuxo1/Neuro3D/f10d74dff3525a317aa89504395aa8a120bc8f3f/Docs/assets/iris-retrospective-certificate-2026-10-08.png)
+
+**Blender es la plataforma principal; Unreal queda como referencia histórica.** RT coherente desde geometría real, AMD real, generalización y experimentos físicos siguen pendientes. La formulación y estas cotas no acreditan una ventaja sobre CNN/GPT ni calidad Nobel.
+
+El resto de esta portada conserva la documentación del corte de código de `main`; los avances y límites actuales se consultan en los enlaces anteriores.
+
 ![Neuro3D](Docs/assets/neuro3d-hero.png)
 
 > Arquitectura experimental en la que la geometría 3D y las propiedades ópticas de la escena determinan la propagación y transformación de señales entre neuronas. La apariencia visual es secundaria al cómputo.
@@ -123,7 +137,9 @@ trazabilidad. No se borran ni se presentan como parte validada del nuevo corte. 
 artefactos generados —`Binaries`, `Intermediate`, `Saved`, cachés, binarios y
 credenciales— permanecen fuera del release mediante `.gitignore`.
 
-## Estado de verificación
+## Estado histórico de este corte
+
+Esta tabla corresponde al código conservado en este corte. El estado actualizado de investigación se encuentra en los enlaces de progreso anteriores.
 
 | Compuerta | Estado |
 |---|---|
