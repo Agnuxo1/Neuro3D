@@ -1,0 +1,25 @@
+{
+  "schema": "neuro3d.blender_lab.capture_resume_artifacts.v1",
+  "files": {
+    "iris/blender.log": "885c5132c428927433e5657eea605d797ccb689252c6a00ddf24f88cb9b35041",
+    "iris/capture.json": "458ca5e3e09bc25e5f7174f38c87e1cbd2049f7534ef0e73d9ea03d266454d93",
+    "iris/runner.json": "7dbfbad0e69401615e3abd53d1c59626565ac461d68cae344ebcb644cd447ff6",
+    "iris/software_checks.json": "043811c365f5f98cd927736995c59821795df0771ef173588fb62a4c1c32f84c",
+    "software/blender.log": "cd3ed7f2044c5a2029a0522562db13233ed669fac0a69745bd3c63ea50ae9bb2",
+    "software/capture-software-fixture.blend": "6fc00260c58d217d12b05e98a4e6ee14711a297cdcea94efff7e724770fca217",
+    "software/capture.json": "660c4c30e1922b5e185f481f797725af7bb7ee63ec7ec7f4f40c61e813759cd9",
+    "software/linked-source-software-fixture.blend": "a2f24a556fd114d626ee5c59750ad8aee8215f84c951be3fe7b89f66a3b065e8",
+    "software/runner.json": "39f858ed40509a59bc4c6434f8a357db25a8f50ae7c7c3b5c570c6601b914346",
+    "software/software_checks.json": "99ef710a8ab38c03308a3246a583c441e5be53b35922e0758925cafe649231df",
+    "software/source/Blender/blender_lab/bos_adapter_v1.py": "83409838de0f7d71c623be729f0d4b8f754705f271161c2b429fbbd2ccf770e5",
+    "software/source/Blender/blender_lab/export_scene_v1.py": "d2c60bd956df8511a79d6f333446b736fc8633acad52fef2f2cf075d77e43fb0",
+    "software/source/Blender/blender_lab/scene_capture_v1.py": "fe676b61a9e743277d69b54890688555a604f659c7f23ee223703b907ad8a2d0",
+    "software/source/Blender/blender_lab/__init__.py": "8c93d859b2364fdd697db5fc3234c0406e2a01cbcceb9c6b05a72b92996f372f",
+    "software/source/Blender/tests/blender_lab_capture_smoke_v1.py": "56f762e8b046e4d1bd03c1d2694def96f3ab5709820b949c23daba92516c5999",
+    "iris/source/Docs/research/iris_scene_coordinate_bindings_v1.json": "85d7b5dd77589b5c1b11b19b1de082be4fb8e4cb7ddceafa50f35cdd4767b515",
+    "iris/source/Blender/blender_lab/bos_adapter_v1.py": "83409838de0f7d71c623be729f0d4b8f754705f271161c2b429fbbd2ccf770e5",
+    "iris/source/Blender/blender_lab/export_scene_v1.py": "d2c60bd956df8511a79d6f333446b736fc8633acad52fef2f2cf075d77e43fb0",
+    "iris/source/Blender/blender_lab/scene_capture_v1.py": "fe676b61a9e743277d69b54890688555a604f659c7f23ee223703b907ad8a2d0",
+    "iris/source/Blender/blender_lab/__init__.py": "8c93d859b2364fdd697db5fc3234c0406e2a01cbcceb9c6b05a72b92996f372f"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "direct_bpy_network_contract_admitted": true,
+  "same_state_as_prior_offline_binding": true,
+  "state_sha256": "8624d661252f143653f5b32c744cb7e6b23f71119253d7ad64510bbf1aa1a943",
+  "inputs": 5,
+  "geometric_coordinate_bindings": 32,
+  "detectors": 3,
+  "optical_forward_executed": false,
+  "training_executed": false,
+  "gpu_executed": false
+}

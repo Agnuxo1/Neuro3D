@@ -112,6 +112,41 @@ def main():
         raise AssertionError("expected excluded parameter rejection")
     mirror.hide_viewport = False
     bpy.context.view_layer.update()
+    # The external collection deliberately reuses the local source object name.
+    # A name-only match must not alias a linked-library instance to local data.
+    library_path = out / "linked-source-software-fixture.blend"
+    capture.need(not library_path.exists(), "fresh linked source fixture required")
+    bpy.data.libraries.write(str(library_path), {linked})
+    with bpy.data.libraries.load(str(library_path), link=True) as (available, requested):
+        capture.need(linked.name in available.collections, "source collection must be present in library")
+        requested.collections = [linked.name]
+    foreign_collection = requested.collections[0]
+    foreign_instance = bpy.data.objects.new("linked.library.instance", None)
+    foreign_instance.instance_type = "COLLECTION"
+    foreign_instance.instance_collection = foreign_collection
+    scene.collection.objects.link(foreign_instance)
+    try:
+        try:
+            capture.capture_scene(network=network)
+        except capture.CaptureError as error:
+            capture.need("linked library instances" in str(error), "specific linked-instance admission rejection")
+            rejects.append("linked_library_instance")
+        else:
+            raise AssertionError("expected linked library instance rejection")
+    finally:
+        bpy.data.objects.remove(foreign_instance, do_unlink=True)
+    foreign_object = next(iter(foreign_collection.objects))
+    scene.collection.objects.link(foreign_object)
+    try:
+        try:
+            capture.capture_scene(network=network)
+        except capture.CaptureError as error:
+            capture.need("linked library objects" in str(error), "specific linked-object admission rejection")
+            rejects.append("linked_library_object")
+        else:
+            raise AssertionError("expected linked library object rejection")
+    finally:
+        scene.collection.objects.unlink(foreign_object)
     before = capture_bos_scene(network=network)
     blend_path = out / "capture-software-fixture.blend"
     capture.need(not blend_path.exists(), "fresh fixture blend required")
@@ -126,6 +161,7 @@ def main():
               "evaluated_mirror_triangles": triangle_count, "rejections": rejects,
               "geometry_edit_detected_without_added_rounding": True, "rna_port_preserved": True,
               "bound_parameter_edit_read": True, "collection_instance_metadata_captured": True,
+              "linked_library_identity_rejections_exercised": True,
               "save_reopen_identity": True, "upstream_addon_executed": False,
               "optical_forward_executed": False, "training_executed": False, "gpu_executed": False}
     (out / "software_checks.json").write_bytes(capture.canonical_bytes(result))
