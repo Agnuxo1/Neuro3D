@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="530" viewBox="0 0 1240 530" role="img" aria-labelledby="title desc">
+<title id="title">Neuro3D: pregunta científica y pruebas de refutación</title>
+<desc id="desc">Esquema prospectivo. Captura Blender, trazado nativo coherente y campo complejo contrastados con oráculo independiente; salida certificada o rechazo explícito. Un certificado falso refuta la hipótesis.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#64748b"/></marker></defs>
+<rect width="1240" height="530" rx="20" fill="#f8fafc"/>
+<g font-family="Arial, sans-serif" fill="#0f172a">
+<text x="42" y="51" font-size="27" font-weight="700">¿Puede el trazado coherente entregar un certificado útil y válido?</text>
+<text x="42" y="83" font-size="17" fill="#475569">Método propuesto · óptica escalar representada · hipótesis pendiente de contraste</text>
+<g stroke="#cbd5e1" stroke-width="2">
+<rect x="42" y="126" width="260" height="116" rx="12" fill="#dbeafe"/>
+<rect x="352" y="126" width="260" height="116" rx="12" fill="#e0e7ff"/>
+<rect x="662" y="126" width="230" height="116" rx="12" fill="#ede9fe"/>
+<rect x="942" y="126" width="256" height="116" rx="12" fill="#dcfce7"/>
+<rect x="352" y="316" width="540" height="97" rx="12" fill="#fff7ed"/>
+</g>
+<g font-size="20" font-weight="700">
+<text x="61" y="158">Escena Blender real</text><text x="371" y="158">Trazador nativo</text><text x="681" y="158">Campo complejo</text><text x="960" y="158">Salida y cota</text>
+<text x="372" y="349">Oráculo independiente y controles</text>
+</g>
+<g font-size="17" fill="#334155">
+<text x="61" y="188">Bytes, unidades, fuentes</text><text x="61" y="215">Geometría y transformaciones</text>
+<text x="371" y="188">Caminos, longitudes, fase</text><text x="371" y="215">Completitud y aritmética</text>
+<text x="681" y="188">E = suma de campos</text><text x="681" y="215">I = |E|²</text>
+<text x="960" y="188">CERTIFIED: cota válida</text><text x="960" y="215">UNKNOWN: motivo explícito</text>
+<text x="372" y="379">Geometría exacta · intervalos · interferencia · negativos</text>
+</g>
+<g fill="none" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)">
+<path d="M302 184H345"/><path d="M612 184H655"/><path d="M892 184H935"/>
+<path d="M172 242V365H343"/><path d="M622 316V250"/><path d="M892 365H1070V250"/>
+</g>
+<text x="42" y="463" font-size="19" font-weight="700" fill="#b91c1c">Un certificado falso verificado refuta H1. Rechazar todos los casos tampoco demuestra utilidad.</text>
+<text x="42" y="496" font-size="16" fill="#475569">Novedad, velocidad, energía y dispositivo fotónico requieren pruebas separadas. Este esquema no acredita ejecución RT.</text>
+</g></svg>
