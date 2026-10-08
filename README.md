@@ -2,15 +2,17 @@
 
 ## Progreso científico — 8 de octubre de 2026
 
-Los resultados nuevos están publicados en la [rama de investigación](https://github.com/Agnuxo1/Neuro3D/tree/codex/neuro3d-scientific-closure-20261008) y la [PR #6](https://github.com/Agnuxo1/Neuro3D/pull/6). Consulta el [README actualizado con esquemas, gráficas y GIF](https://github.com/Agnuxo1/Neuro3D/blob/codex/neuro3d-scientific-closure-20261008/README.md) y el [estado de cada punto](https://github.com/Agnuxo1/Neuro3D/blob/f10d74dff3525a317aa89504395aa8a120bc8f3f/Docs/SEQUENTIAL_RESEARCH_PROGRESS_2026-10-08.md).
+Los resultados nuevos están publicados en la [rama de investigación](https://github.com/Agnuxo1/Neuro3D/tree/codex/neuro3d-scientific-closure-20261008) y la [PR #6](https://github.com/Agnuxo1/Neuro3D/pull/6). Consulta el [README actualizado con esquemas, gráficas y GIF](https://github.com/Agnuxo1/Neuro3D/blob/codex/neuro3d-scientific-closure-20261008/README.md) y el [estado de cada punto](https://github.com/Agnuxo1/Neuro3D/blob/487b18ceedc0bc0bc56daa6a1e7101148ecb7742/Docs/SEQUENTIAL_RESEARCH_PROGRESS_2026-10-08.md).
 
-- [Aportación falsable formulada](https://github.com/Agnuxo1/Neuro3D/blob/f10d74dff3525a317aa89504395aa8a120bc8f3f/Docs/CONTRIBUTION_AND_FALSIFICATION_2026-10-08.md), con criterio de refutación y dominio explícito.
-- [Revisión crítica de antecedentes](https://github.com/Agnuxo1/Neuro3D/blob/f10d74dff3525a317aa89504395aa8a120bc8f3f/Docs/LITERATURE_AND_NOVELTY_AUDIT_2026-10-08.md): 194 registros brutos, 175 únicos y extracción de 30 fuentes. La novedad sigue sin demostrar.
+**Objetivo concretado:** [Blender-Lab como laboratorio abierto y accesible](https://github.com/Agnuxo1/Neuro3D/blob/487b18ceedc0bc0bc56daa6a1e7101148ecb7742/Docs/BLENDER_LAB_RESEARCH_INSTRUMENT_2026-10-08.md), con Neuro3D como demostrador de red óptica que calcula desde la escena. Se han definido su arquitectura y criterios de validación; la distribución y el trazador completo siguen pendientes. [Cuatro antecedentes directos en Blender](https://github.com/Agnuxo1/Neuro3D/blob/487b18ceedc0bc0bc56daa6a1e7101148ecb7742/Docs/BLENDER_LAB_ANTECEDENTS_2026-10-08.md) orientan la comparación.
+
+- [Aportación falsable formulada](https://github.com/Agnuxo1/Neuro3D/blob/487b18ceedc0bc0bc56daa6a1e7101148ecb7742/Docs/CONTRIBUTION_AND_FALSIFICATION_2026-10-08.md), con criterio de refutación y dominio explícito.
+- [Revisión crítica de antecedentes](https://github.com/Agnuxo1/Neuro3D/blob/487b18ceedc0bc0bc56daa6a1e7101148ecb7742/Docs/LITERATURE_AND_NOVELTY_AUDIT_2026-10-08.md): 194 registros brutos, 175 únicos y extracción de 30 fuentes. La novedad sigue sin demostrar.
 - [Cotas racionales de los resultados GPU archivados](https://github.com/Agnuxo1/Neuro3D/blob/f10d74dff3525a317aa89504395aa8a120bc8f3f/Docs/IRIS_RETROSPECTIVE_RATIONAL_CERTIFICATE_2026-10-08.md): error de campo ≤1.282e-13 y 450 decisiones certificadas frente al modelo algebraico canónico. Es un análisis retrospectivo CPU de datos existentes, sin nuevo ensayo GPU ni certificado de recorrido de triángulos.
 
 ![Cotas racionales de readbacks históricos](https://raw.githubusercontent.com/Agnuxo1/Neuro3D/f10d74dff3525a317aa89504395aa8a120bc8f3f/Docs/assets/iris-retrospective-certificate-2026-10-08.png)
 
-**Blender es la plataforma principal; Unreal queda como referencia histórica.** RT coherente desde geometría real, AMD real, generalización y experimentos físicos siguen pendientes. La formulación y estas cotas no acreditan una ventaja sobre CNN/GPT ni calidad Nobel.
+**Blender es la plataforma principal; Unreal queda como referencia histórica.** RT coherente desde geometría real, AMD real y generalización siguen pendientes. La fabricación fotónica es una línea opcional, independiente de validar el instrumento computacional. La formulación y estas cotas no acreditan una ventaja sobre CNN/GPT ni calidad Nobel.
 
 El resto de esta portada conserva la documentación del corte de código de `main`; los avances y límites actuales se consultan en los enlaces anteriores.
 
