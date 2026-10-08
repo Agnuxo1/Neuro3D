@@ -1,0 +1,34 @@
+{
+  "command": [
+    "D:\\TOOLS\\Blender\\blender-4.5.14-windows-x64\\blender.exe",
+    "-b",
+    "--factory-startup",
+    "--disable-autoexec",
+    "-t",
+    "1",
+    "-noaudio",
+    "D:\\PROJECTS\\Neuro3D-Scientific-20261008\\Blender\\demo_lattice_iris\\renders\\neuro3d_iris_lattice.blend",
+    "--python-exit-code",
+    "3",
+    "--python",
+    "D:\\PROJECTS\\Neuro3D-Scientific-20261008\\Blender\\blender_lab\\export_scene_v1.py",
+    "--",
+    "--output",
+    "D:\\PROJECTS\\.cognition\\neuro3d-sequential-20261008\\capture-iris-attempt01\\capture.json"
+  ],
+  "exit_code": 0,
+  "stopped": null,
+  "peak_rss_mib": 219.7890625,
+  "elapsed_seconds": 2.0498077999800444,
+  "source_sha256": {
+    "Blender\\blender_lab\\__init__.py": "8c93d859b2364fdd697db5fc3234c0406e2a01cbcceb9c6b05a72b92996f372f",
+    "Blender\\blender_lab\\bos_adapter_v1.py": "83409838de0f7d71c623be729f0d4b8f754705f271161c2b429fbbd2ccf770e5",
+    "Blender\\blender_lab\\export_scene_v1.py": "d2c60bd956df8511a79d6f333446b736fc8633acad52fef2f2cf075d77e43fb0",
+    "Blender\\blender_lab\\scene_capture_v1.py": "69eaa0098ef86057c151b6af502bf8974374e9cb20a690c234732d3c18868906"
+  },
+  "sources_unchanged": true,
+  "gpu_requested": false,
+  "optical_forward_requested": false,
+  "training_requested": false,
+  "source_scene_sha256": "5884c6fa4cc8cee22dd99e2f4aeaf8f0e44ae44dba85d4f2447868d3d4d58c22"
+}

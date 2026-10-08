@@ -1,0 +1,10 @@
+{
+  "schema": "neuro3d.blender_lab.capture_preflight.v1",
+  "status": "NOT_EXECUTED",
+  "reason": "available RAM below the 4000 MiB preflight guard",
+  "attempt": "capture-software-attempt03 on latest source",
+  "gpu_executed": false,
+  "optical_forward_executed": false,
+  "source_sha256": "fe676b61a9e743277d69b54890688555a604f659c7f23ee223703b907ad8a2d0",
+  "scope": "Latest source adds an admission check for linked-library instance identities. The local-scene runtime checks have earlier pinned preimages; latest unit controls are recorded separately."
+}

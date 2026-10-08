@@ -1,0 +1,9 @@
+{
+  "schema": "neuro3d.blender_lab.capture_preflight.v1",
+  "status": "NOT_EXECUTED",
+  "reason": "available RAM below the 4000 MiB preflight guard",
+  "attempt": "live export with network contract",
+  "gpu_executed": false,
+  "optical_forward_executed": false,
+  "subsequent_action": "Resolved bindings against existing raw capture; no live process was started."
+}

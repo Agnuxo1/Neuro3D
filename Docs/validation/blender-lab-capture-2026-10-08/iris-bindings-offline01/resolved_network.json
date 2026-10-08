@@ -1,0 +1,525 @@
+{
+  "detectors": [
+    {
+      "id": "R0",
+      "object": "det.R0"
+    },
+    {
+      "id": "R1",
+      "object": "det.R1"
+    },
+    {
+      "id": "R2",
+      "object": "det.R2"
+    }
+  ],
+  "forward_executed": false,
+  "inputs": [
+    {
+      "id": "r0",
+      "object": "src.r0"
+    },
+    {
+      "id": "r1",
+      "object": "src.r1"
+    },
+    {
+      "id": "c0",
+      "object": "src.c0"
+    },
+    {
+      "id": "c1",
+      "object": "src.c1"
+    },
+    {
+      "id": "c2",
+      "object": "src.c2"
+    }
+  ],
+  "model": "neuro3d.iris.legacy_scene_coordinate_bindings.v1",
+  "optical_semantics_validated": false,
+  "parameters": [
+    {
+      "bounds": [
+        "-0x1.9000000000000p+6",
+        "0x1.9000000000000p+6"
+      ],
+      "id": "c00.r1.world_x",
+      "object": "c00.r1",
+      "path": [
+        "matrix_world",
+        0,
+        3
+      ],
+      "represented_value_hex": "0x1.0085980000000p+1",
+      "unit": "BU"
+    },
+    {
+      "bounds": [
+        "-0x1.9000000000000p+6",
+        "0x1.9000000000000p+6"
+      ],
+      "id": "c00.r2.world_x",
+      "object": "c00.r2",
+      "path": [
+        "matrix_world",
+        0,
+        3
+      ],
+      "represented_value_hex": "0x1.0085980000000p+1",
+      "unit": "BU"
+    },
+    {
+      "bounds": [
+        "-0x1.9000000000000p+6",
+        "0x1.9000000000000p+6"
+      ],
+      "id": "c01.r1.world_x",
+      "object": "c01.r1",
+      "path": [
+        "matrix_world",
+        0,
+        3
+      ],
+      "represented_value_hex": "0x1.82a79e0000000p+1",
+      "unit": "BU"
+    },
+    {
+      "bounds": [
+        "-0x1.9000000000000p+6",
+        "0x1.9000000000000p+6"
+      ],
+      "id": "c01.r2.world_x",
+      "object": "c01.r2",
+      "path": [
+        "matrix_world",
+        0,
+        3
+      ],
+      "represented_value_hex": "0x1.82a79e0000000p+1",
+      "unit": "BU"
+    },
+    {
+      "bounds": [
+        "-0x1.9000000000000p+6",
+        "0x1.9000000000000p+6"
+      ],
+      "id": "c02.r1.world_x",
+      "object": "c02.r1",
+      "path": [
+        "matrix_world",
+        0,
+        3
+      ],
+      "represented_value_hex": "0x1.0198960000000p+2",
+      "unit": "BU"
+    },
+    {
+      "bounds": [
+        "-0x1.9000000000000p+6",
+        "0x1.9000000000000p+6"
+      ],
+      "id": "c02.r2.world_x",
+      "object": "c02.r2",
+      "path": [
+        "matrix_world",
+        0,
+        3
+      ],
+      "represented_value_hex": "0x1.0198960000000p+2",
+      "unit": "BU"
+    },
+    {
+      "bounds": [
+        "-0x1.9000000000000p+6",
+        "0x1.9000000000000p+6"
+      ],
+      "id": "c03.r1.world_x",
+      "object": "c03.r1",
+      "path": [
+        "matrix_world",
+        0,
+        3
+      ],
+      "represented_value_hex": "0x1.41dcd60000000p+2",
+      "unit": "BU"
+    },
+    {
+      "bounds": [
+        "-0x1.9000000000000p+6",
+        "0x1.9000000000000p+6"
+      ],
+      "id": "c03.r2.world_x",
+      "object": "c03.r2",
+      "path": [
+        "matrix_world",
+        0,
+        3
+      ],
+      "represented_value_hex": "0x1.41dcd60000000p+2",
+      "unit": "BU"
+    },
+    {
+      "bounds": [
+        "-0x1.9000000000000p+6",
+        "0x1.9000000000000p+6"
+      ],
+      "id": "c10.r1.world_x",
+      "object": "c10.r1",
+      "path": [
+        "matrix_world",
+        0,
+        3
+      ],
+      "represented_value_hex": "0x1.81390e0000000p+2",
+      "unit": "BU"
+    },
+    {
+      "bounds": [
+        "-0x1.9000000000000p+6",
+        "0x1.9000000000000p+6"
+      ],
+      "id": "c10.r2.world_x",
+      "object": "c10.r2",
+      "path": [
+        "matrix_world",
+        0,
+        3
+      ],
+      "represented_value_hex": "0x1.81390e0000000p+2",
+      "unit": "BU"
+    },
+    {
+      "bounds": [
+        "-0x1.9000000000000p+6",
+        "0x1.9000000000000p+6"
+      ],
+      "id": "c11.r1.world_x",
+      "object": "c11.r1",
+      "path": [
+        "matrix_world",
+        0,
+        3
+      ],
+      "represented_value_hex": "0x1.c1fa960000000p+2",
+      "unit": "BU"
+    },
+    {
+      "bounds": [
+        "-0x1.9000000000000p+6",
+        "0x1.9000000000000p+6"
+      ],
+      "id": "c11.r2.world_x",
+      "object": "c11.r2",
+      "path": [
+        "matrix_world",
+        0,
+        3
+      ],
+      "represented_value_hex": "0x1.c1fa960000000p+2",
+      "unit": "BU"
+    },
+    {
+      "bounds": [
+        "-0x1.9000000000000p+6",
+        "0x1.9000000000000p+6"
+      ],
+      "id": "c12.r1.world_x",
+      "object": "c12.r1",
+      "path": [
+        "matrix_world",
+        0,
+        3
+      ],
+      "represented_value_hex": "0x1.016dbc0000000p+3",
+      "unit": "BU"
+    },
+    {
+      "bounds": [
+        "-0x1.9000000000000p+6",
+        "0x1.9000000000000p+6"
+      ],
+      "id": "c12.r2.world_x",
+      "object": "c12.r2",
+      "path": [
+        "matrix_world",
+        0,
+        3
+      ],
+      "represented_value_hex": "0x1.016dbc0000000p+3",
+      "unit": "BU"
+    },
+    {
+      "bounds": [
+        "-0x1.9000000000000p+6",
+        "0x1.9000000000000p+6"
+      ],
+      "id": "c13.r1.world_x",
+      "object": "c13.r1",
+      "path": [
+        "matrix_world",
+        0,
+        3
+      ],
+      "represented_value_hex": "0x1.20cb040000000p+3",
+      "unit": "BU"
+    },
+    {
+      "bounds": [
+        "-0x1.9000000000000p+6",
+        "0x1.9000000000000p+6"
+      ],
+      "id": "c13.r2.world_x",
+      "object": "c13.r2",
+      "path": [
+        "matrix_world",
+        0,
+        3
+      ],
+      "represented_value_hex": "0x1.20cb040000000p+3",
+      "unit": "BU"
+    },
+    {
+      "bounds": [
+        "-0x1.9000000000000p+6",
+        "0x1.9000000000000p+6"
+      ],
+      "id": "c20.r1.world_x",
+      "object": "c20.r1",
+      "path": [
+        "matrix_world",
+        0,
+        3
+      ],
+      "represented_value_hex": "0x1.42b93e0000000p+3",
+      "unit": "BU"
+    },
+    {
+      "bounds": [
+        "-0x1.9000000000000p+6",
+        "0x1.9000000000000p+6"
+      ],
+      "id": "c20.r2.world_x",
+      "object": "c20.r2",
+      "path": [
+        "matrix_world",
+        0,
+        3
+      ],
+      "represented_value_hex": "0x1.42b93e0000000p+3",
+      "unit": "BU"
+    },
+    {
+      "bounds": [
+        "-0x1.9000000000000p+6",
+        "0x1.9000000000000p+6"
+      ],
+      "id": "c21.r1.world_x",
+      "object": "c21.r1",
+      "path": [
+        "matrix_world",
+        0,
+        3
+      ],
+      "represented_value_hex": "0x1.61d4020000000p+3",
+      "unit": "BU"
+    },
+    {
+      "bounds": [
+        "-0x1.9000000000000p+6",
+        "0x1.9000000000000p+6"
+      ],
+      "id": "c21.r2.world_x",
+      "object": "c21.r2",
+      "path": [
+        "matrix_world",
+        0,
+        3
+      ],
+      "represented_value_hex": "0x1.61d4020000000p+3",
+      "unit": "BU"
+    },
+    {
+      "bounds": [
+        "-0x1.9000000000000p+6",
+        "0x1.9000000000000p+6"
+      ],
+      "id": "c22.r1.world_x",
+      "object": "c22.r1",
+      "path": [
+        "matrix_world",
+        0,
+        3
+      ],
+      "represented_value_hex": "0x1.8233be0000000p+3",
+      "unit": "BU"
+    },
+    {
+      "bounds": [
+        "-0x1.9000000000000p+6",
+        "0x1.9000000000000p+6"
+      ],
+      "id": "c22.r2.world_x",
+      "object": "c22.r2",
+      "path": [
+        "matrix_world",
+        0,
+        3
+      ],
+      "represented_value_hex": "0x1.8233be0000000p+3",
+      "unit": "BU"
+    },
+    {
+      "bounds": [
+        "-0x1.9000000000000p+6",
+        "0x1.9000000000000p+6"
+      ],
+      "id": "c23.r1.world_x",
+      "object": "c23.r1",
+      "path": [
+        "matrix_world",
+        0,
+        3
+      ],
+      "represented_value_hex": "0x1.a2a34a0000000p+3",
+      "unit": "BU"
+    },
+    {
+      "bounds": [
+        "-0x1.9000000000000p+6",
+        "0x1.9000000000000p+6"
+      ],
+      "id": "c23.r2.world_x",
+      "object": "c23.r2",
+      "path": [
+        "matrix_world",
+        0,
+        3
+      ],
+      "represented_value_hex": "0x1.a2a34a0000000p+3",
+      "unit": "BU"
+    },
+    {
+      "bounds": [
+        "-0x1.9000000000000p+6",
+        "0x1.9000000000000p+6"
+      ],
+      "id": "c30.r1.world_x",
+      "object": "c30.r1",
+      "path": [
+        "matrix_world",
+        0,
+        3
+      ],
+      "represented_value_hex": "0x1.c460600000000p+3",
+      "unit": "BU"
+    },
+    {
+      "bounds": [
+        "-0x1.9000000000000p+6",
+        "0x1.9000000000000p+6"
+      ],
+      "id": "c30.r2.world_x",
+      "object": "c30.r2",
+      "path": [
+        "matrix_world",
+        0,
+        3
+      ],
+      "represented_value_hex": "0x1.c460600000000p+3",
+      "unit": "BU"
+    },
+    {
+      "bounds": [
+        "-0x1.9000000000000p+6",
+        "0x1.9000000000000p+6"
+      ],
+      "id": "c31.r1.world_x",
+      "object": "c31.r1",
+      "path": [
+        "matrix_world",
+        0,
+        3
+      ],
+      "represented_value_hex": "0x1.e4f75c0000000p+3",
+      "unit": "BU"
+    },
+    {
+      "bounds": [
+        "-0x1.9000000000000p+6",
+        "0x1.9000000000000p+6"
+      ],
+      "id": "c31.r2.world_x",
+      "object": "c31.r2",
+      "path": [
+        "matrix_world",
+        0,
+        3
+      ],
+      "represented_value_hex": "0x1.e4f75c0000000p+3",
+      "unit": "BU"
+    },
+    {
+      "bounds": [
+        "-0x1.9000000000000p+6",
+        "0x1.9000000000000p+6"
+      ],
+      "id": "c32.r1.world_x",
+      "object": "c32.r1",
+      "path": [
+        "matrix_world",
+        0,
+        3
+      ],
+      "represented_value_hex": "0x1.025d6c0000000p+4",
+      "unit": "BU"
+    },
+    {
+      "bounds": [
+        "-0x1.9000000000000p+6",
+        "0x1.9000000000000p+6"
+      ],
+      "id": "c32.r2.world_x",
+      "object": "c32.r2",
+      "path": [
+        "matrix_world",
+        0,
+        3
+      ],
+      "represented_value_hex": "0x1.025d6c0000000p+4",
+      "unit": "BU"
+    },
+    {
+      "bounds": [
+        "-0x1.9000000000000p+6",
+        "0x1.9000000000000p+6"
+      ],
+      "id": "c33.r1.world_x",
+      "object": "c33.r1",
+      "path": [
+        "matrix_world",
+        0,
+        3
+      ],
+      "represented_value_hex": "0x1.12c6480000000p+4",
+      "unit": "BU"
+    },
+    {
+      "bounds": [
+        "-0x1.9000000000000p+6",
+        "0x1.9000000000000p+6"
+      ],
+      "id": "c33.r2.world_x",
+      "object": "c33.r2",
+      "path": [
+        "matrix_world",
+        0,
+        3
+      ],
+      "represented_value_hex": "0x1.12c6480000000p+4",
+      "unit": "BU"
+    }
+  ],
+  "schema": "neuro3d.blender_lab.network_bindings.v1",
+  "training_executed": false
+}
