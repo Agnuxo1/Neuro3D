@@ -7,6 +7,7 @@ operations. This worker never uses the CPU selector as an oracle.
 from __future__ import annotations
 
 import argparse
+import ctypes
 import gc
 import hashlib
 import json
@@ -26,6 +27,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from Blender.benchmarks.capacity_audit import scene_hilo_gpu_v1 as gpu_base
 from Blender.benchmarks.capacity_audit import scene_hilo_transport_v1 as transport
 from exp005_blender_gpu import schedule_exit
+from Blender.tests.robust_first_hit_raw_gl_v1 import RawProgram
 
 SCHEMA = "neuro3d.robust_first_hit.native_job.v1"
 REPORT_SCHEMA = "neuro3d.robust_first_hit.native_report.v1"
@@ -33,8 +35,9 @@ MAX_JSON = 16 * 1024 * 1024
 MAX_DISPATCHES = 32
 OUTPUT_WORDS = 64
 POISON = gpu_base.POISON
-SHADER = ROOT / "Blender/shaders/robust_first_hit_exact_v1.glsl"
-SIGNED512 = ROOT / "Blender/benchmarks/capacity_audit/axial_native_signed512_v1.glsl"
+SHADER = ROOT / "Blender/shaders/robust_first_hit_shared_exact_v1.glsl"
+SIGNED512 = ROOT / "Blender/shaders/robust_first_hit_shared_arithmetic_v1.glsl"
+COMPILE_OPTIONS = "#pragma optimize(on)\n#pragma optionNV(unroll none)\n"
 DEPARTURE = {None: 0, "mirror": 1, "t": 2, "r": 3}
 
 SCOPE = {
@@ -202,7 +205,93 @@ def validate_job(job):
     return dispatches
 
 
-def compile_shader(gpu):
+def raw_compile_diagnostic(retain_program=False):
+    """Retain bounded full driver logs; Blender's log buffer hides later errors.
+
+    Diagnostic compile/link only: no dispatch, buffers or result readback.
+    The original Blender shader failure remains a failure regardless of this log.
+    """
+    sync = gpu_base.OpenGLReadbackSync()
+    resolve = sync._resolve
+    uint, integer = ctypes.c_uint32, ctypes.c_int32
+    create_shader = resolve("glCreateShader", uint, uint)
+    shader_source = resolve("glShaderSource", None, uint, integer,
+                            ctypes.POINTER(ctypes.c_char_p), ctypes.POINTER(integer))
+    compile_stage = resolve("glCompileShader", None, uint)
+    get_shader = resolve("glGetShaderiv", None, uint, uint, ctypes.POINTER(integer))
+    shader_log = resolve("glGetShaderInfoLog", None, uint, integer,
+                         ctypes.POINTER(integer), ctypes.POINTER(ctypes.c_char))
+    create_program = resolve("glCreateProgram", uint)
+    attach = resolve("glAttachShader", None, uint, uint)
+    link = resolve("glLinkProgram", None, uint)
+    get_program = resolve("glGetProgramiv", None, uint, uint, ctypes.POINTER(integer))
+    program_log = resolve("glGetProgramInfoLog", None, uint, integer,
+                          ctypes.POINTER(integer), ctypes.POINTER(ctypes.c_char))
+    delete_shader = resolve("glDeleteShader", None, uint)
+    delete_program = resolve("glDeleteProgram", None, uint)
+    prefix = """#version 450 core
+layout(local_size_x=1,local_size_y=1,local_size_z=1) in;
+struct HiloInputPacket { uvec4 words[2048]; };
+layout(std140,binding=0) uniform PacketBlock { HiloInputPacket input_packet; };
+layout(r32ui,binding=0) uniform writeonly uimage2D echo_words;
+layout(r32ui,binding=1) uniform writeonly uimage2D result_words;
+uniform int input_word_count,source_index,previous_primitive,departure_event,dispatch_nonce;
+"""
+    source = (prefix + COMPILE_OPTIONS + SIGNED512.read_text(encoding="utf-8") + "\n" +
+              SHADER.read_text(encoding="utf-8")).encode()
+    stage = program = 0
+    report = {"dispatches": 0, "source_sha256": hashlib.sha256(source).hexdigest()}
+    def log(handle, getter, reader):
+        size = integer()
+        getter(handle, 0x8B84, ctypes.byref(size))  # GL_INFO_LOG_LENGTH
+        require(0 <= size.value <= 1024 * 1024, "bounded compile log")
+        buffer = ctypes.create_string_buffer(max(1, size.value))
+        written = integer()
+        reader(handle, len(buffer), ctypes.byref(written), buffer)
+        return buffer.raw[:written.value].decode("utf-8", errors="replace")
+    try:
+        stage = create_shader(0x91B9)  # GL_COMPUTE_SHADER
+        require(stage != 0, "diagnostic shader allocation")
+        pointers = (ctypes.c_char_p * 1)(source)
+        length = integer(len(source))
+        shader_source(stage, 1, pointers, ctypes.byref(length))
+        compile_stage(stage)
+        status = integer()
+        get_shader(stage, 0x8B81, ctypes.byref(status))  # GL_COMPILE_STATUS
+        report.update(stage_compiled=bool(status.value), stage_log=log(stage, get_shader, shader_log))
+        if status.value:
+            program = create_program()
+            require(program != 0, "diagnostic program allocation")
+            attach(program, stage)
+            link(program)
+            get_program(program, 0x8B82, ctypes.byref(status))  # GL_LINK_STATUS
+            report.update(program_linked=bool(status.value),
+                          program_log=log(program, get_program, program_log))
+            if status.value and retain_program:
+                report["retained_program"] = program
+                program = 0
+        return report
+    finally:
+        if program:
+            delete_program(program)
+        if stage:
+            delete_shader(stage)
+
+
+def compile_shader(gpu, report):
+    report["compile_options"] = COMPILE_OPTIONS.splitlines()
+    report["shader_api"] = "RAW_OPENGL_CORE_IN_BLENDER_WGL"
+    report["blender_shader_create_info_attempted"] = False
+    report["blender_shader_create_info_passed"] = None
+    diagnostic = raw_compile_diagnostic(retain_program=True)
+    handle = diagnostic.pop("retained_program", None)
+    report["compile_diagnostic"] = diagnostic
+    require(handle is not None and diagnostic.get("program_linked") is True,
+            "native raw OpenGL program failed to link")
+    return RawProgram(handle)
+
+
+def compile_blender_shader(gpu, report):
     sync = gpu_base.OpenGLReadbackSync()
     sync.uniform_buffer_limit()
     info = gpu.types.GPUShaderCreateInfo()
@@ -214,9 +303,24 @@ def compile_shader(gpu):
                  "departure_event", "dispatch_nonce"):
         info.push_constant("INT", name)
     info.local_group_size(1, 1, 1)
-    info.compute_source(SIGNED512.read_text(encoding="utf-8") + "\n" +
+    report["compile_options"] = COMPILE_OPTIONS.splitlines()
+    info.compute_source(COMPILE_OPTIONS + SIGNED512.read_text(encoding="utf-8") + "\n" +
                         SHADER.read_text(encoding="utf-8"))
-    return gpu.shader.create_from_info(info)
+    try:
+        return gpu.shader.create_from_info(info)
+    except Exception:
+        try:
+            diagnostic = raw_compile_diagnostic(retain_program=True)
+            handle = diagnostic.pop("retained_program", None)
+            report["compile_diagnostic"] = diagnostic
+            report["blender_shader_create_info_passed"] = False
+            if handle:
+                report["shader_api"] = "RAW_OPENGL_CORE_IN_BLENDER_WGL"
+                return RawProgram(handle)
+        except Exception as diagnostic_error:
+            report["compile_diagnostic"] = {"error": type(diagnostic_error).__name__ +
+                                             ": " + str(diagnostic_error), "dispatches": 0}
+        raise
 
 
 def dispatch(gpu, shader, wire, query, nonce):
@@ -231,6 +335,19 @@ def dispatch(gpu, shader, wire, query, nonce):
     sync.require_no_error("before exact first-hit allocation")
     input_words = len(wire) // 4
     padded = gpu_base.padded_word_count(input_words)
+    if isinstance(shader, RawProgram):
+        constants = {
+            "input_word_count": input_words, "source_index": query["source_index"],
+            "previous_primitive": -1 if query["previous_primitive"] is None else query["previous_primitive"],
+            "departure_event": DEPARTURE[query["departure_event"]], "dispatch_nonce": nonce,
+        }
+        result = shader.dispatch(wire, constants, OUTPUT_WORDS)
+        echo_words, result_words = result.pop("echo"), result.pop("result")
+        require(echo_words == gpu_base.unpack_words(wire) + [POISON] * (padded - input_words),
+                "bit-exact packet echo")
+        return dict(result, input_echo_hex=gpu_base.pack_words(echo_words).hex(),
+                    result_hex=gpu_base.pack_words(result_words).hex(),
+                    parsed=parse_result(result_words, nonce))
     source = echo = result = None
     allocation_started = time.perf_counter()
     try:
@@ -334,9 +451,10 @@ def main():
             Path(__file__).resolve(), Path(gpu_base.__file__), gpu_base.SHADER,
             Path(transport.__file__), Path(transport.codec.__file__), SHADER, SIGNED512,
             Path(__file__).with_name("exp005_blender_gpu.py"),
+            Path(__file__).with_name("robust_first_hit_raw_gl_v1.py"),
         ]
         report["code_sha256"] = {str(path.relative_to(ROOT)): sha(path) for path in dependencies}
-        shader = compile_shader(gpu)
+        shader = compile_shader(gpu, report)
         seen_nonces = set()
         for case in job["cases"]:
             packet_path = pinned_packet_path(case)
@@ -363,7 +481,6 @@ def main():
                 report["native_gpu_execution_attempted"] = True
                 result = dispatch(gpu, shader, wire, query, nonce)
                 report["native_gpu_executed"] = True
-                compare_expected(result["parsed"], frozen["expected"])
                 raw_record = {
                     "case_id": case["case_id"], "query_index": q_index,
                     "source_index": frozen["source_index"],
@@ -387,6 +504,7 @@ def main():
                     "resource_payload_bytes": result["resource_payload_bytes"],
                     "raw_record_index": len(report["gpu_readback_records"]) - 1,
                 })
+                compare_expected(result["parsed"], frozen["expected"])
         require(report["gpu_dispatch_count"] == report["completed_readbacks"] == dispatch_count == 20,
                 "exact 20 dispatch/readback coverage")
         validate_job(job)
@@ -400,6 +518,8 @@ def main():
         report["error"] = type(exc).__name__ + ": " + str(exc)
         report["traceback"] = traceback.format_exc()
     finally:
+        if isinstance(shader, RawProgram):
+            shader.close()
         shader = None
         gc.collect()
         report["total_seconds"] = time.perf_counter() - started

@@ -1,0 +1,369 @@
+{
+  "audit_wall_seconds": 0.06991380004910752,
+  "auditor_blender_executed": false,
+  "auditor_gpu_executed": false,
+  "cases": [
+    {
+      "case_id": "k3_real",
+      "queries": [
+        {
+          "equivalent_surface_tie": true,
+          "excluded_previous_contacts": 0,
+          "query_index": 0,
+          "selected_primitive": 2,
+          "status": "SELECT",
+          "t": [
+            1,
+            1
+          ],
+          "tie_primitive_ids": [
+            2,
+            3
+          ]
+        },
+        {
+          "equivalent_surface_tie": true,
+          "excluded_previous_contacts": 0,
+          "query_index": 1,
+          "selected_primitive": 2,
+          "status": "SELECT",
+          "t": [
+            1,
+            1
+          ],
+          "tie_primitive_ids": [
+            2,
+            3
+          ]
+        },
+        {
+          "equivalent_surface_tie": true,
+          "excluded_previous_contacts": 0,
+          "query_index": 2,
+          "selected_primitive": 16,
+          "status": "SELECT",
+          "t": [
+            1,
+            1
+          ],
+          "tie_primitive_ids": [
+            16,
+            17
+          ]
+        },
+        {
+          "equivalent_surface_tie": true,
+          "excluded_previous_contacts": 0,
+          "query_index": 3,
+          "selected_primitive": 30,
+          "status": "SELECT",
+          "t": [
+            1,
+            1
+          ],
+          "tie_primitive_ids": [
+            30,
+            31
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "k4_real",
+      "queries": [
+        {
+          "equivalent_surface_tie": true,
+          "excluded_previous_contacts": 0,
+          "query_index": 0,
+          "selected_primitive": 2,
+          "status": "SELECT",
+          "t": [
+            1,
+            1
+          ],
+          "tie_primitive_ids": [
+            2,
+            3
+          ]
+        },
+        {
+          "equivalent_surface_tie": true,
+          "excluded_previous_contacts": 0,
+          "query_index": 1,
+          "selected_primitive": 2,
+          "status": "SELECT",
+          "t": [
+            1,
+            1
+          ],
+          "tie_primitive_ids": [
+            2,
+            3
+          ]
+        },
+        {
+          "equivalent_surface_tie": true,
+          "excluded_previous_contacts": 0,
+          "query_index": 2,
+          "selected_primitive": 16,
+          "status": "SELECT",
+          "t": [
+            1,
+            1
+          ],
+          "tie_primitive_ids": [
+            16,
+            17
+          ]
+        },
+        {
+          "equivalent_surface_tie": true,
+          "excluded_previous_contacts": 0,
+          "query_index": 3,
+          "selected_primitive": 30,
+          "status": "SELECT",
+          "t": [
+            1,
+            1
+          ],
+          "tie_primitive_ids": [
+            30,
+            31
+          ]
+        },
+        {
+          "equivalent_surface_tie": true,
+          "excluded_previous_contacts": 0,
+          "query_index": 4,
+          "selected_primitive": 44,
+          "status": "SELECT",
+          "t": [
+            1,
+            1
+          ],
+          "tie_primitive_ids": [
+            44,
+            45
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "thin_gap_2m53",
+      "queries": [
+        {
+          "equivalent_surface_tie": false,
+          "excluded_previous_contacts": 0,
+          "query_index": 0,
+          "selected_primitive": 1,
+          "status": "SELECT",
+          "t": [
+            9007199254740991,
+            9007199254740992
+          ],
+          "tie_primitive_ids": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "thin_gap_2m54",
+      "queries": [
+        {
+          "equivalent_surface_tie": false,
+          "excluded_previous_contacts": 0,
+          "query_index": 0,
+          "selected_primitive": 1,
+          "status": "SELECT",
+          "t": [
+            18014398509481983,
+            18014398509481984
+          ],
+          "tie_primitive_ids": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "thin_gap_2m60",
+      "queries": [
+        {
+          "equivalent_surface_tie": false,
+          "excluded_previous_contacts": 0,
+          "query_index": 0,
+          "selected_primitive": 1,
+          "status": "SELECT",
+          "t": [
+            1152921504606846975,
+            1152921504606846976
+          ],
+          "tie_primitive_ids": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "true_coincident_objects",
+      "queries": [
+        {
+          "equivalent_surface_tie": false,
+          "excluded_previous_contacts": 0,
+          "query_index": 0,
+          "selected_primitive": 0,
+          "status": "TRUE_TIE",
+          "t": [
+            1,
+            1
+          ],
+          "tie_primitive_ids": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "previous_exact_contact_then_2m60_gap",
+      "queries": [
+        {
+          "equivalent_surface_tie": false,
+          "excluded_previous_contacts": 1,
+          "query_index": 0,
+          "selected_primitive": 0,
+          "status": "SELECT",
+          "t": [
+            1,
+            1152921504606846976
+          ],
+          "tie_primitive_ids": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "legitimate_later_return_same_primitive",
+      "queries": [
+        {
+          "equivalent_surface_tie": false,
+          "excluded_previous_contacts": 0,
+          "query_index": 0,
+          "selected_primitive": 0,
+          "status": "SELECT",
+          "t": [
+            1,
+            1
+          ],
+          "tie_primitive_ids": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "outer_boundary",
+      "queries": [
+        {
+          "equivalent_surface_tie": false,
+          "excluded_previous_contacts": 0,
+          "query_index": 0,
+          "selected_primitive": 0,
+          "status": "BOUNDARY",
+          "t": [
+            1,
+            1
+          ],
+          "tie_primitive_ids": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "coplanar",
+      "queries": [
+        {
+          "equivalent_surface_tie": false,
+          "excluded_previous_contacts": 0,
+          "query_index": 0,
+          "selected_primitive": null,
+          "status": "COPLANAR",
+          "t": null,
+          "tie_primitive_ids": []
+        }
+      ]
+    },
+    {
+      "case_id": "degenerate",
+      "queries": [
+        {
+          "equivalent_surface_tie": false,
+          "excluded_previous_contacts": 0,
+          "query_index": 0,
+          "selected_primitive": null,
+          "status": "INVALID_GEOMETRY",
+          "t": null,
+          "tie_primitive_ids": []
+        }
+      ]
+    },
+    {
+      "case_id": "near_parallel_2m100",
+      "queries": [
+        {
+          "equivalent_surface_tie": false,
+          "excluded_previous_contacts": 0,
+          "query_index": 0,
+          "selected_primitive": 0,
+          "status": "SELECT",
+          "t": [
+            1267650600228229401496703205376,
+            1
+          ],
+          "tie_primitive_ids": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "extreme_coordinate",
+      "queries": [
+        {
+          "equivalent_surface_tie": false,
+          "excluded_previous_contacts": 0,
+          "query_index": 0,
+          "selected_primitive": 0,
+          "status": "SELECT",
+          "t": [
+            1,
+            1
+          ],
+          "tie_primitive_ids": [
+            0
+          ]
+        }
+      ]
+    }
+  ],
+  "created_utc": "2026-10-08T08:10:49.486580+00:00",
+  "guard_sha256": "a192218bdfe6cb52fafa78bd73f0ffed5d0188676a44a0bd810602d9bc1aed27",
+  "implementation_imports": 0,
+  "input_sha256": "1ba451212cc136442ea34a1ec9a7cefd44fdf366211f28813590f21b732ba800",
+  "readback_sha256": "358be3eff5ec83d5e0ca8f7c0ece219f60bb997d6c6303ede3c020cb6aa858dd",
+  "real_scene_selects": 9,
+  "retained_native_evidence_validated": true,
+  "schema": "neuro3d.robust_first_hit.independent_audit.cpu.v1",
+  "status": "PASS_CPU_INDEPENDENT_EXACT_AUDIT",
+  "thin_gap_cases": [
+    "thin_gap_2m53",
+    "thin_gap_2m54",
+    "thin_gap_2m60"
+  ],
+  "total_queries": 20,
+  "verification_passed": true,
+  "worker_sha256": "dc22fec1191bbd818e640ebb26a5f8d5e6fcf7c9bd9430eae1338521995071f4"
+}
