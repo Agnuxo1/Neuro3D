@@ -12,6 +12,11 @@ Se añade [contrato coherente ejecutable](OPTIC_NEURO_BLENDER_COHERENT_CONTRACT_
 unidades/portadora/fase/parámetros/detectores. La prioridad actual 2 tiene cierre
 parcial de software; no cierra los antiguos puntos de forward/RT/cotas/entrenamiento.
 
+La prioridad actual 3 dispone de [supervisor y auditor preparados](CAPTURED_PILOT_SUPERVISOR_2026-10-08.md),
+con 16 controles nuevos y 66 conjuntos PASS. El preflight comprueba los cinco pins
+congelados y la negativa por registro ausente no inicia el worker. No hay nuevo
+resultado del piloto; sigue pendiente la elección explícita de registro.
+
 El propietario confirmó el 2026-10-08 el orden siguiente. Se conservan los cierres históricos 1–6 y el mapa original de 26 puntos. Esta secuencia nueva empieza por formular la aportación y revisar antecedentes antes del trazador RT, siguiendo la prioridad científica indicada.
 
 | Nuevo punto | Trabajo | Punto(s) original(es) | Estado |

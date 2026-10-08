@@ -1,0 +1,30 @@
+{
+  "schema": "optic_neuro_blender.pilot_gate_controls.v1",
+  "exit_code": 0,
+  "test_count": 66,
+  "new_supervisor_audit_controls": 16,
+  "command": [
+    "C:\\Python313\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "Blender.tests.test_coherent_contract_v1",
+    "Blender.tests.test_scalar_scene_ingress_v1",
+    "Blender.tests.test_surface_union_interior_v1",
+    "Blender.tests.test_blender_lab_capture_v1",
+    "Blender.tests.test_captured_pilot_supervision_v1",
+    "-v"
+  ],
+  "source_sha256": {
+    "Tools/run_captured_scalar_pilot_v1.py": "dc12e5c631e9e7db2c6ce84460d4467862162093826de0b2ee3801cbe920df02",
+    "Tools/audit_captured_pilot_result_v1.py": "a3f683ab11aa07eb52aefb4046ba89516321bb175ef01697c39131234b3ac686",
+    "Tools/bind_network_capture_v1.py": "af3bdbc41636214f01c2078ce26bd271794fa763ccefecd2a006f1014d2f117b",
+    "Blender/tests/test_captured_pilot_supervision_v1.py": "05cf7a8db77c024e04c6f9c48dd67e73f63390586405506858b9407e6c914eb1"
+  },
+  "prerequisite_contract_commit": "308cd0260528683ea6ca49dbf5042cd8414e5993",
+  "frozen_pilot_executed": false,
+  "synthetic_local_ledgers_only": true,
+  "external_registration_obtained": false,
+  "human_exception_received": false
+}
