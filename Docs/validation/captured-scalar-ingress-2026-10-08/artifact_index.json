@@ -15,7 +15,6 @@
     "negative-certification_claim/scene.json": "b8a4ff6ae2fc430fad9c4374d691b08a96021188d8525e6038b9443f0f0a59fd",
     "negative-coordinate/audit.log": "ef69e47947d698c9d1ee26d1c0c34f956b8b667b083ebfb9123e9fae9757f358",
     "negative-coordinate/scene.json": "a4cfcf676850d3cb7085f11aaca9e08ebe531baf8bc356b0084fe82d564277d2",
-    "__pycache__/old_selector_preimage.cpython-313.pyc": "7265185a913ccbf597de0bc8087801c6c1ddb434f915a5edd2684e5783c4938a",
     "source/Tools/audit_captured_scalar_ingress_v1.py": "e87ae07d5e4f54643217a980ddf41e369817bbba799fe142a3db6dcf8d17946e",
     "source/Tools/bind_network_capture_v1.py": "af3bdbc41636214f01c2078ce26bd271794fa763ccefecd2a006f1014d2f117b",
     "source/Tools/prepare_captured_scalar_scene_v1.py": "aeaecb787df1fe1ca27dbd6b7dacee85393d9853aa781fdd8b4f59df35d8c8d7",
