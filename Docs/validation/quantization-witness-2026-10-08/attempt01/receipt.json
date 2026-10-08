@@ -1,0 +1,68 @@
+{
+  "schema": "neuro3d.quantization_information_loss_witness.v1",
+  "status": "PASS_EXACT_CPU_MATHEMATICAL_WITNESS",
+  "delta_BU": "1/33554432",
+  "wavelength_BU": "1/8388608",
+  "cases": [
+    {
+      "mirror_displacement": "0",
+      "mirror_x": "1",
+      "arm_lengths": [
+        "5",
+        "5"
+      ],
+      "field": [
+        "1",
+        "0"
+      ],
+      "intensity": "1",
+      "complementary_intensity": "0",
+      "float32_triangle_words": [
+        "0000803f",
+        "000080bf",
+        "000080bf",
+        "0000803f",
+        "0000803f",
+        "000080bf",
+        "0000803f",
+        "00000000",
+        "0000803f"
+      ]
+    },
+    {
+      "mirror_displacement": "1/33554432",
+      "mirror_x": "33554433/33554432",
+      "arm_lengths": [
+        "5",
+        "83886081/16777216"
+      ],
+      "field": [
+        "0",
+        "0"
+      ],
+      "intensity": "0",
+      "complementary_intensity": "1",
+      "float32_triangle_words": [
+        "0000803f",
+        "000080bf",
+        "000080bf",
+        "0000803f",
+        "0000803f",
+        "000080bf",
+        "0000803f",
+        "00000000",
+        "0000803f"
+      ]
+    }
+  ],
+  "input_float32_bytes_identical": true,
+  "intensity_difference_exact": "1",
+  "minimum_worst_case_intensity_error_from_identical_wire": "1/2",
+  "numerical_scope": "exact_dyadic_and_cardinal_phase_algebra",
+  "geometry_scope": "analytic_planar_mirror_round_trip_model; no captured Blender traversal",
+  "mathematical_principle_is_claimed_new": false,
+  "GPU_executed": false,
+  "physical_measurement": false,
+  "H1_confirmatory_experiment": false,
+  "source_sha256": "207608dbc4c8d340f427080fce3f2e3db0fe8fe274ac72450756ac17398ada30"
+}

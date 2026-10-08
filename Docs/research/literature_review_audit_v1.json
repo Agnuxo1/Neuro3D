@@ -1,0 +1,3178 @@
+{
+  "schema": "neuro3d.systematic_review_audit.v1",
+  "raw_records": 194,
+  "unique_after_dedup": 175,
+  "duplicate_records": 19,
+  "selected_extraction_entries": 30,
+  "primary_papers_or_discussion": 29,
+  "book_chapters": 1,
+  "searches": [
+    {
+      "source": "arxiv",
+      "query_id": 0,
+      "query": "coherent optical ray tracing GPU numerical error phase precision",
+      "url": "https://export.arxiv.org/api/query?search_query=all%3Acoherent+AND+all%3Aoptical+AND+all%3Aray+AND+all%3Atracing+AND+all%3AGPU+AND+all%3Anumerical+AND+all%3Aerror+AND+all%3Aphase+AND+all%3Aprecision&max_results=20&sortBy=relevance",
+      "requested_at": "2026-10-08T11:27:54.159208+00:00",
+      "http_status": 200,
+      "error": null,
+      "raw_sha256": "cbf225b9d06a63b87f0bec43cda2d23ec2a7f77617b17b56c2be5a43b1df673b",
+      "paper_count": 0,
+      "receipt_folder": "step01_search01"
+    },
+    {
+      "source": "arxiv",
+      "query_id": 1,
+      "query": "robust ray triangle intersection interval arithmetic exact predicates",
+      "url": "https://export.arxiv.org/api/query?search_query=all%3Arobust+AND+all%3Aray+AND+all%3Atriangle+AND+all%3Aintersection+AND+all%3Ainterval+AND+all%3Aarithmetic+AND+all%3Aexact+AND+all%3Apredicates&max_results=20&sortBy=relevance",
+      "requested_at": "2026-10-08T11:27:55.003751+00:00",
+      "http_status": 200,
+      "error": null,
+      "raw_sha256": "3f952425e83e7414ef325f637dd1cc08a51a7b73f8613dc73d3f98164299a897",
+      "paper_count": 0,
+      "receipt_folder": "step01_search01"
+    },
+    {
+      "source": "arxiv",
+      "query_id": 2,
+      "query": "photonic neural network three dimensional programmable glass",
+      "url": "https://export.arxiv.org/api/query?search_query=all%3Aphotonic+AND+all%3Aneural+AND+all%3Anetwork+AND+all%3Athree+AND+all%3Adimensional+AND+all%3Aprogrammable+AND+all%3Aglass&max_results=20&sortBy=relevance",
+      "requested_at": "2026-10-08T11:27:55.731926+00:00",
+      "http_status": 200,
+      "error": null,
+      "raw_sha256": "558b053b4f1db9527f98de345f22550dcee7762cff80c5acee577f9d89bce1e1",
+      "paper_count": 1,
+      "receipt_folder": "step01_search01"
+    },
+    {
+      "source": "arxiv",
+      "query_id": 3,
+      "query": "photonic neural network on chip backpropagation in situ training",
+      "url": "https://export.arxiv.org/api/query?search_query=all%3Aphotonic+AND+all%3Aneural+AND+all%3Anetwork+AND+all%3Aon+AND+all%3Achip+AND+all%3Abackpropagation+AND+all%3Ain+AND+all%3Asitu+AND+all%3Atraining&max_results=20&sortBy=relevance",
+      "requested_at": "2026-10-08T11:27:56.441599+00:00",
+      "http_status": 200,
+      "error": null,
+      "raw_sha256": "b809e420cde4781861b7964780ba193874e5efb6c4c75a296b9c9279a61740c7",
+      "paper_count": 0,
+      "receipt_folder": "step01_search01"
+    },
+    {
+      "source": "arxiv",
+      "query_id": 4,
+      "query": "verified ray tracing coherent field error bounds path merging",
+      "url": "https://export.arxiv.org/api/query?search_query=all%3Averified+AND+all%3Aray+AND+all%3Atracing+AND+all%3Acoherent+AND+all%3Afield+AND+all%3Aerror+AND+all%3Abounds+AND+all%3Apath+AND+all%3Amerging&max_results=20&sortBy=relevance",
+      "requested_at": "2026-10-08T11:27:57.126531+00:00",
+      "http_status": 200,
+      "error": null,
+      "raw_sha256": "60b56257f532660a3710e2167d835ee0ff153b56598e16b677a0942021d10048",
+      "paper_count": 0,
+      "receipt_folder": "step01_search01"
+    },
+    {
+      "source": "semanticscholar",
+      "query_id": 0,
+      "query": "coherent optical ray tracing GPU numerical error phase precision",
+      "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=coherent+optical+ray+tracing+GPU+numerical+error+phase+precision&limit=20&fields=title%2Cyear%2Cabstract%2CexternalIds%2CcitationCount%2Curl%2CopenAccessPdf%2Cauthors",
+      "requested_at": "2026-10-08T11:27:54.160039+00:00",
+      "http_status": 429,
+      "error": "HTTPError",
+      "raw_sha256": null,
+      "paper_count": 0,
+      "receipt_folder": "step01_search01"
+    },
+    {
+      "source": "semanticscholar",
+      "query_id": 1,
+      "query": "robust ray triangle intersection interval arithmetic exact predicates",
+      "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=robust+ray+triangle+intersection+interval+arithmetic+exact+predicates&limit=20&fields=title%2Cyear%2Cabstract%2CexternalIds%2CcitationCount%2Curl%2CopenAccessPdf%2Cauthors",
+      "requested_at": "2026-10-08T11:27:55.203740+00:00",
+      "http_status": 429,
+      "error": "HTTPError",
+      "raw_sha256": null,
+      "paper_count": 0,
+      "receipt_folder": "step01_search01"
+    },
+    {
+      "source": "semanticscholar",
+      "query_id": 2,
+      "query": "photonic neural network three dimensional programmable glass",
+      "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=photonic+neural+network+three+dimensional+programmable+glass&limit=20&fields=title%2Cyear%2Cabstract%2CexternalIds%2CcitationCount%2Curl%2CopenAccessPdf%2Cauthors",
+      "requested_at": "2026-10-08T11:27:56.118812+00:00",
+      "http_status": 429,
+      "error": "HTTPError",
+      "raw_sha256": null,
+      "paper_count": 0,
+      "receipt_folder": "step01_search01"
+    },
+    {
+      "source": "semanticscholar",
+      "query_id": 3,
+      "query": "photonic neural network on chip backpropagation in situ training",
+      "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=photonic+neural+network+on+chip+backpropagation+in+situ+training&limit=20&fields=title%2Cyear%2Cabstract%2CexternalIds%2CcitationCount%2Curl%2CopenAccessPdf%2Cauthors",
+      "requested_at": "2026-10-08T11:27:56.720478+00:00",
+      "http_status": 429,
+      "error": "HTTPError",
+      "raw_sha256": null,
+      "paper_count": 0,
+      "receipt_folder": "step01_search01"
+    },
+    {
+      "source": "semanticscholar",
+      "query_id": 4,
+      "query": "verified ray tracing coherent field error bounds path merging",
+      "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=verified+ray+tracing+coherent+field+error+bounds+path+merging&limit=20&fields=title%2Cyear%2Cabstract%2CexternalIds%2CcitationCount%2Curl%2CopenAccessPdf%2Cauthors",
+      "requested_at": "2026-10-08T11:27:57.325007+00:00",
+      "http_status": 429,
+      "error": "HTTPError",
+      "raw_sha256": null,
+      "paper_count": 0,
+      "receipt_folder": "step01_search01"
+    },
+    {
+      "source": "openalex",
+      "query_id": 0,
+      "query": "coherent optical ray tracing GPU numerical error phase precision",
+      "url": "https://api.openalex.org/works?search=coherent+optical+ray+tracing+GPU+numerical+error+phase+precision&per-page=20&filter=to_publication_date%3A2026-10-08",
+      "requested_at": "2026-10-08T11:27:54.160545+00:00",
+      "http_status": 200,
+      "error": null,
+      "raw_sha256": "783257bce08d276838bb23aab5eead795252367258660bfc21e78a6ba4a27e2f",
+      "paper_count": 20,
+      "receipt_folder": "step01_search01"
+    },
+    {
+      "source": "openalex",
+      "query_id": 1,
+      "query": "robust ray triangle intersection interval arithmetic exact predicates",
+      "url": "https://api.openalex.org/works?search=robust+ray+triangle+intersection+interval+arithmetic+exact+predicates&per-page=20&filter=to_publication_date%3A2026-10-08",
+      "requested_at": "2026-10-08T11:27:55.980692+00:00",
+      "http_status": 200,
+      "error": null,
+      "raw_sha256": "c129dddf53f0139ec4c7415fcc050b7a1899b2b198d721b509ddf3edbb2acee9",
+      "paper_count": 20,
+      "receipt_folder": "step01_search01"
+    },
+    {
+      "source": "openalex",
+      "query_id": 2,
+      "query": "photonic neural network three dimensional programmable glass",
+      "url": "https://api.openalex.org/works?search=photonic+neural+network+three+dimensional+programmable+glass&per-page=20&filter=to_publication_date%3A2026-10-08",
+      "requested_at": "2026-10-08T11:27:57.345842+00:00",
+      "http_status": 200,
+      "error": null,
+      "raw_sha256": "8fa48f6631d47231f225e23754919dc438fd89e691462fdda8124888301b265f",
+      "paper_count": 20,
+      "receipt_folder": "step01_search01"
+    },
+    {
+      "source": "openalex",
+      "query_id": 3,
+      "query": "photonic neural network on chip backpropagation in situ training",
+      "url": "https://api.openalex.org/works?search=photonic+neural+network+on+chip+backpropagation+in+situ+training&per-page=20&filter=to_publication_date%3A2026-10-08",
+      "requested_at": "2026-10-08T11:27:58.606373+00:00",
+      "http_status": 200,
+      "error": null,
+      "raw_sha256": "7b530adcea344edd80e2d0905d53c28b7b9e0dc9a22e4677ca35e16d35f095d6",
+      "paper_count": 20,
+      "receipt_folder": "step01_search01"
+    },
+    {
+      "source": "openalex",
+      "query_id": 4,
+      "query": "verified ray tracing coherent field error bounds path merging",
+      "url": "https://api.openalex.org/works?search=verified+ray+tracing+coherent+field+error+bounds+path+merging&per-page=20&filter=to_publication_date%3A2026-10-08",
+      "requested_at": "2026-10-08T11:28:00.280934+00:00",
+      "http_status": 200,
+      "error": null,
+      "raw_sha256": "e13b65bca4bcc66ce2ffb56a2430c43f850236e379be2e36e5593e7d1a1a17a8",
+      "paper_count": 20,
+      "receipt_folder": "step01_search01"
+    },
+    {
+      "source": "arxiv",
+      "query_id": 0,
+      "query": "coherent optical ray tracing GPU numerical error phase precision",
+      "url": "https://export.arxiv.org/api/query?search_query=all%3A%22ray+tracing%22+AND+%28all%3Acoherent+OR+all%3Aphase%29&max_results=20&sortBy=relevance",
+      "requested_at": "2026-10-08T11:35:35.451680+00:00",
+      "http_status": 200,
+      "error": null,
+      "raw_sha256": "d3d3193b48c14822d83a45a98962cc06d9af60bfa131ac8a586efe7b690073b2",
+      "paper_count": 20,
+      "receipt_folder": "step01_search02"
+    },
+    {
+      "source": "arxiv",
+      "query_id": 1,
+      "query": "robust ray triangle intersection interval arithmetic exact predicates",
+      "url": "https://export.arxiv.org/api/query?search_query=all%3A%22ray+triangle%22+OR+all%3A%22robust+predicates%22+OR+all%3A%22ray+traversal%22&max_results=20&sortBy=relevance",
+      "requested_at": "2026-10-08T11:35:36.846957+00:00",
+      "http_status": 200,
+      "error": null,
+      "raw_sha256": "069dac22ebebb64b94d4a879fe1c20c6caa3a72518932a6854fbd573097b6b5c",
+      "paper_count": 20,
+      "receipt_folder": "step01_search02"
+    },
+    {
+      "source": "arxiv",
+      "query_id": 2,
+      "query": "photonic neural network three dimensional programmable glass",
+      "url": "https://export.arxiv.org/api/query?search_query=all%3A%22photonic+neural%22+AND+%28all%3A%22three+dimensional%22+OR+all%3Aglass+OR+all%3Aprogrammable%29&max_results=20&sortBy=relevance",
+      "requested_at": "2026-10-08T11:35:37.980082+00:00",
+      "http_status": 200,
+      "error": null,
+      "raw_sha256": "e4bd886d84a5d48317765d3c5a6908a589f3ede455f39f633c3a51252a96614d",
+      "paper_count": 20,
+      "receipt_folder": "step01_search02"
+    },
+    {
+      "source": "arxiv",
+      "query_id": 3,
+      "query": "photonic neural network on chip backpropagation in situ training",
+      "url": "https://export.arxiv.org/api/query?search_query=all%3A%22photonic+neural%22+AND+%28all%3Abackpropagation+OR+all%3A%22in+situ%22%29&max_results=20&sortBy=relevance",
+      "requested_at": "2026-10-08T11:35:39.335620+00:00",
+      "http_status": 200,
+      "error": null,
+      "raw_sha256": "d73172eea7c51c15b94deebb6018eaff220fade39e75c85f9ba9137ac22acd57",
+      "paper_count": 13,
+      "receipt_folder": "step01_search02"
+    },
+    {
+      "source": "arxiv",
+      "query_id": 4,
+      "query": "verified ray tracing coherent field error bounds path merging",
+      "url": "https://export.arxiv.org/api/query?search_query=all%3A%22ray+tracing%22+AND+%28all%3A%22error+bounds%22+OR+all%3Averified+OR+all%3Ainterval%29&max_results=20&sortBy=relevance",
+      "requested_at": "2026-10-08T11:35:40.277004+00:00",
+      "http_status": 200,
+      "error": null,
+      "raw_sha256": "a79d097f8192be33d82ec5fd11bd7c2329f4104d9f887dc7c7ac9f1a40b7da80",
+      "paper_count": 20,
+      "receipt_folder": "step01_search02"
+    }
+  ],
+  "lab_access": [
+    {
+      "url": "https://www.p2pclaw.com/lab/literature.html",
+      "mode": "anonymous_no_credentials",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "body_sha256": "c812f21bb00856faa249b55c46c10de4b711e834c8fe060d68e3784c852de7a3",
+      "file": "lab-public.html"
+    },
+    {
+      "url": "https://www.p2pclaw.com/api/literature/search",
+      "mode": "anonymous_no_credentials",
+      "http_status": 404,
+      "error": "HTTPError",
+      "body_sha256": null
+    }
+  ],
+  "screening_counts": {
+    "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED": 106,
+    "EXCLUDED_RETRACTED": 1,
+    "EXCLUDED_TITLE_SCOPE": 52,
+    "INCLUDED_FULL_EXTRACTION": 16
+  },
+  "screening": [
+    {
+      "record_id": "R001",
+      "title": "Programmable Photonic Simulator for Spin Glass Models",
+      "doi": null,
+      "arxiv": "2310.14781",
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "arxiv",
+          "query_id": 2
+        },
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 2
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R002",
+      "title": "A Monte Carlo ray-tracing simulation of coherent X-ray diffractive imaging",
+      "doi": "10.1107/s1600577519014425",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 0
+        }
+      ],
+      "decision": "INCLUDED_FULL_EXTRACTION",
+      "reason": "Direct primary antecedent or selected comparison method in extraction catalog",
+      "included_catalog_id": "fevola2020"
+    },
+    {
+      "record_id": "R003",
+      "title": "Interactive volume ray tracing",
+      "doi": "10.22028/d291-25931",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 0
+        },
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 4
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R004",
+      "title": "BVH-Accelerated Ray Tracing for High-Frequency Electromagnetic Backscattering",
+      "doi": null,
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 0
+        },
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 0
+        }
+      ],
+      "decision": "INCLUDED_FULL_EXTRACTION",
+      "reason": "Direct primary antecedent or selected comparison method in extraction catalog",
+      "included_catalog_id": "pasquale2026"
+    },
+    {
+      "record_id": "R005",
+      "title": "Interactive Ray Tracing of Trimmed Bicubic Bézier Surfaces without Triangulation",
+      "doi": null,
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 0
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R006",
+      "title": "Ray-tracing image simulations of transparent objects with complex shape and inhomogeneous refractive index",
+      "doi": "10.1103/cbtx-sfc4",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 0
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R007",
+      "title": "Evaluation of mmWave 5G Performance by Advanced Ray Tracing Techniques",
+      "doi": null,
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 0
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R008",
+      "title": "RETRACTED: Amplitude and Phase Computable Ocean Wave Real-Time Modeling with GPU Acceleration",
+      "doi": "10.3390/jmse10091208",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 0
+        }
+      ],
+      "decision": "EXCLUDED_RETRACTED",
+      "reason": "Retracted record; not positive evidence",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R009",
+      "title": "Hybrid Spectral Ray Tracing Method for Multi-scale Millimeter-wave and Photonic Propagation Problems",
+      "doi": null,
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 0
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R010",
+      "title": "Optical trapping and binding",
+      "doi": "10.1088/0034-4885/76/2/026401",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 0
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R011",
+      "title": "Roadmap for Optical Metasurfaces",
+      "doi": "10.1021/acsphotonics.3c00457",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 0
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R012",
+      "title": "Roadmap for optical tweezers",
+      "doi": "10.1088/2515-7647/acb57b",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 0
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R013",
+      "title": "Accuracy and error analysis of optical liquid film thickness measurement with total internal reflection method (TIRM)",
+      "doi": "10.1007/s00348-024-03820-1",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 0
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R014",
+      "title": "Volume graphics shaders for GPU",
+      "doi": "10.32657/10356/50773",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 0
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R015",
+      "title": "A Generalized Ray Formulation For Wave-Optics Rendering",
+      "doi": "10.48550/arxiv.2303.15762",
+      "arxiv": "2303.15762",
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 0
+        }
+      ],
+      "decision": "INCLUDED_FULL_EXTRACTION",
+      "reason": "Direct primary antecedent or selected comparison method in extraction catalog",
+      "included_catalog_id": "steinberg2024"
+    },
+    {
+      "record_id": "R016",
+      "title": "A Survey on Parallel Computing and Its Applications in Data-Parallel Problems Using GPU Architectures",
+      "doi": "10.4208/cicp.110113.010813a",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 0
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R017",
+      "title": "Aspects of phase retrieval in x-ray crystallography",
+      "doi": "10.26021/2121",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 0
+        },
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 4
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R018",
+      "title": "Vectorial ray-based diffraction integral",
+      "doi": "10.1364/josaa.32.001403",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 0
+        }
+      ],
+      "decision": "INCLUDED_FULL_EXTRACTION",
+      "reason": "Direct primary antecedent or selected comparison method in extraction catalog",
+      "included_catalog_id": "andreas2015"
+    },
+    {
+      "record_id": "R019",
+      "title": "GPU data structures for graphics and vision",
+      "doi": "10.22028/d291-26040",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 0
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R020",
+      "title": "Ray-traced radiative transfer on massively threaded architectures",
+      "doi": null,
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 0
+        },
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 4
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R021",
+      "title": "Optical Sensors and Methods for Underwater 3D Reconstruction",
+      "doi": "10.3390/s151229864",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 0
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R022",
+      "title": "Sound and robust solid modeling via exact real arithmetic and continuity",
+      "doi": "10.1145/3341703",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 1
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R023",
+      "title": "Exact, robust, and efficient regularized Booleans on general 3D meshes",
+      "doi": "10.1016/j.camwa.2015.06.016",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 1
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R024",
+      "title": "Adaptive Precision Based Fast Algorithms for Robust Surface Intersections",
+      "doi": null,
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 1
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R025",
+      "title": "Simple and Robust Boolean Operations for Triangulated Surfaces",
+      "doi": "10.3390/math11122713",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 1
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R026",
+      "title": "Robustness and Randomness",
+      "doi": "10.1007/978-3-540-85521-7_8",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 1
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R027",
+      "title": "On the degree of standard geometric predicates for line transversals in 3D",
+      "doi": "10.1016/j.comgeo.2007.11.002",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 1
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R028",
+      "title": "Accelerated robust Boolean operations based on hybrid representations",
+      "doi": "10.1016/j.cagd.2018.03.021",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 1
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R029",
+      "title": "Constrained Delaunay Tetrahedrization: A Robust and Practical Approach",
+      "doi": "10.1145/3618352",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 1
+        },
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 1
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R030",
+      "title": "Distributionally robust optimization",
+      "doi": "10.1017/s0962492924000084",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 1
+        },
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 1
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R031",
+      "title": "Accurate and Robust Geometric Algorithms for Regridding on the Sphere",
+      "doi": "10.5194/egusphere-2026-636",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 1
+        },
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 1
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R032",
+      "title": "Robustness Verification of Semantic Segmentation Neural Networks Using Relaxed Reachability",
+      "doi": "10.1007/978-3-030-81685-8_12",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 1
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R033",
+      "title": "At the Intersection of Graph and Machine Learning: Neighborhood Methods on the GPU",
+      "doi": "10.13016/m27wgp-md5l",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 1
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R034",
+      "title": "Almost-Delaunay simplices: Robust neighbor relations for imprecise 3D points using CGAL",
+      "doi": "10.1016/j.comgeo.2006.11.003",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 1
+        },
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 1
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R035",
+      "title": "Inner and outer rounding of Boolean operations on lattice polygonal regions",
+      "doi": "10.1016/j.comgeo.2004.08.005",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 1
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R036",
+      "title": "Advanced programming techniques applied to Cgal's arrangement package",
+      "doi": "10.1016/j.comgeo.2006.11.007",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 1
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R037",
+      "title": "Boolean operations on 3D selective Nef complexes: Data structure, algorithms, optimized implementation and experiments",
+      "doi": "10.1016/j.comgeo.2006.11.009",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 1
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R038",
+      "title": "Programmable Three-dimensional Photonic Neural Network Chip",
+      "doi": "10.1038/s41467-026-72316-9",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 2
+        }
+      ],
+      "decision": "INCLUDED_FULL_EXTRACTION",
+      "reason": "Direct primary antecedent or selected comparison method in extraction catalog",
+      "included_catalog_id": "lamp2026"
+    },
+    {
+      "record_id": "R039",
+      "title": "Opportunities for integrated photonic neural networks",
+      "doi": "10.1515/nanoph-2020-0297",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 2
+        },
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 3
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R040",
+      "title": "Three-dimensional photonic neural networks: computing beyond the planar limit",
+      "doi": "10.2738/foe.2026.0020",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 2
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R041",
+      "title": "Programmable photonic circuits",
+      "doi": "10.1038/s41586-020-2764-0",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 2
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R042",
+      "title": "Photonic Neural Networks with Spatiotemporal Dynamics",
+      "doi": null,
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 2
+        },
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 2
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R043",
+      "title": "Integrated platforms and techniques for photonic neural networks",
+      "doi": "10.1038/s44310-025-00088-z",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 2
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R044",
+      "title": "Exploring Types of Photonic Neural Networks for Imaging and Computing—A Review",
+      "doi": "10.3390/nano14080697",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 2
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R045",
+      "title": "A review of photonic integrated neural networks",
+      "doi": "10.31219/osf.io/u7v9k_v1",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 2
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R046",
+      "title": "Review on Integrated Photonic Neural Networks",
+      "doi": "10.20944/preprints202508.1621.v1",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 2
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R047",
+      "title": "Review of photonic integrated neural networks",
+      "doi": "10.1364/opticaopen.30006112",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 2
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R048",
+      "title": "Photonic-dispersion neural networks for inverse scattering problems",
+      "doi": "10.1038/s41377-021-00600-y",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 2
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R049",
+      "title": "Photonic quantum convolutional neural networks with adaptive state injection",
+      "doi": "10.1117/1.ap.7.6.066012",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 2
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R050",
+      "title": "Fully forward mode training for optical neural networks",
+      "doi": "10.1038/s41586-024-07687-4",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 2
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R051",
+      "title": "Advances in photonic reservoir computing",
+      "doi": "10.1515/nanoph-2016-0132",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 2
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R052",
+      "title": "Tera-OPs Photonic Convolutional Neural NetworksBased on Kerr Microcombs",
+      "doi": "10.20944/preprints202102.0549.v1",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 2
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R053",
+      "title": "Nonlinear response of Silicon Photonics microresonators for reservoir computing neural network",
+      "doi": "10.48550/arxiv.2302.10203",
+      "arxiv": "2302.10203",
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 2
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R054",
+      "title": "An optoacoustic field-programmable perceptron for recurrent neural networks",
+      "doi": "10.1038/s41467-024-47053-6",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 2
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R055",
+      "title": "Spatially varying nanophotonic neural networks",
+      "doi": "10.1126/sciadv.adp0391",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 2
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R056",
+      "title": "Single-chip photonic deep neural network with forward-only training",
+      "doi": "10.1038/s41566-024-01567-z",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 3
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R057",
+      "title": "Deep physical neural networks trained with backpropagation",
+      "doi": "10.1038/s41586-021-04223-6",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 3
+        }
+      ],
+      "decision": "INCLUDED_FULL_EXTRACTION",
+      "reason": "Direct primary antecedent or selected comparison method in extraction catalog",
+      "included_catalog_id": "wright2022"
+    },
+    {
+      "record_id": "R058",
+      "title": "Silicon photonic architecture for training deep neural networks with direct feedback alignment",
+      "doi": "10.1364/optica.475493",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 3
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R059",
+      "title": "Photonic convolutional neural network with pre-trained in situ training",
+      "doi": "10.48550/arxiv.2604.02429",
+      "arxiv": "2604.02429",
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 3
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R060",
+      "title": "Integrated photonic deep neural network with end-to-end on-chip backpropagation training",
+      "doi": "10.48550/arxiv.2506.14575",
+      "arxiv": "2506.14575",
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 3
+        },
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 3
+        }
+      ],
+      "decision": "INCLUDED_FULL_EXTRACTION",
+      "reason": "Direct primary antecedent or selected comparison method in extraction catalog",
+      "included_catalog_id": "ashtiani2025preprint"
+    },
+    {
+      "record_id": "R061",
+      "title": "Experimentally realized in situ backpropagation for deep learning in nanophotonic neural networks",
+      "doi": "10.48550/arxiv.2205.08501",
+      "arxiv": "2205.08501",
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 3
+        },
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 3
+        }
+      ],
+      "decision": "INCLUDED_FULL_EXTRACTION",
+      "reason": "Direct primary antecedent or selected comparison method in extraction catalog",
+      "included_catalog_id": "pai2023"
+    },
+    {
+      "record_id": "R062",
+      "title": "Electrically programmable phase-change photonic memory for optical neural networks with nanoseconds in situ training capability",
+      "doi": "10.1117/1.ap.5.4.046004",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 3
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R063",
+      "title": "Photonic Neural Networks: A Survey",
+      "doi": "10.1109/access.2019.2957245",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 3
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R064",
+      "title": "In‐Situ Trained Microring‐Based Neural Networks for Scalable and Robust Photonic Computing",
+      "doi": "10.1002/lpor.202501576",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 3
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R065",
+      "title": "Intelligent photonic computing: From free‐space to on‐chip integration",
+      "doi": "10.1049/ote2.12112",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 3
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R066",
+      "title": "Local learning for stable backpropagation-free neural network training towards physical learning",
+      "doi": "10.48550/arxiv.2603.24790",
+      "arxiv": "2603.24790",
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 3
+        },
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 3
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R067",
+      "title": "An optical neural chip for implementing complex-valued neural network",
+      "doi": "10.1038/s41467-020-20719-7",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 3
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R068",
+      "title": "Implementation of Pruned Backpropagation Neural Network Based on Photonic Integrated Circuits",
+      "doi": "10.3390/photonics8090363",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 3
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R069",
+      "title": "Training neural networks with end-to-end optical backpropagation",
+      "doi": "10.1117/1.ap.7.1.016004",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 3
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R070",
+      "title": "Scaling up for end-to-end on-chip photonic neural network inference",
+      "doi": "10.1038/s41377-025-02029-z",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 3
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R071",
+      "title": "Efficient On-Chip Training of Optical Neural Networks Using Genetic Algorithm",
+      "doi": "10.1021/acsphotonics.1c00035",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 3
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R072",
+      "title": "Dual adaptive training of photonic neural networks",
+      "doi": "10.48550/arxiv.2212.06141",
+      "arxiv": "2212.06141",
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 3
+        },
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 3
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R073",
+      "title": "Asymmetrical estimator for training encapsulated deep photonic neural networks",
+      "doi": "10.1038/s41467-025-57459-5",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 3
+        },
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 3
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R074",
+      "title": "Emergent Self‐Adaptation in an Integrated Photonic Neural Network for Backpropagation‐Free Learning",
+      "doi": "10.1002/advs.202404920",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 3
+        },
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 3
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R075",
+      "title": "CHC+RT: Coherent Hierarchical Culling for Ray Tracing",
+      "doi": "10.1111/cgf.12582",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 4
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R076",
+      "title": "Dynamic Indirect Illumination in Real-Time Ray Tracing using Lightcuts",
+      "doi": null,
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 4
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R077",
+      "title": "Constrained simulations of the magnetic field in the local Universe and the propagation of ultrahigh energy cosmic rays",
+      "doi": "10.1088/1475-7516/2005/01/009",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 4
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R078",
+      "title": "Sixty Years of Coherent Versus Non-Coherent Tradeoffs and the Road From 5G to Wireless Futures",
+      "doi": "10.1109/access.2019.2957706",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 4
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R079",
+      "title": "Performance bounds, optimization and estimation techniques for synthetic aperture radar",
+      "doi": "10.17760/d10018700",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 4
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R080",
+      "title": "Lower mass bounds on FIMP Dark Matter",
+      "doi": null,
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 4
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R081",
+      "title": "Feature-based clustered geometry for interpolated Ray-casting",
+      "doi": "10.1016/j.cag.2021.08.019",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 4
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R082",
+      "title": "SEARCH FOR ANISOTROPIES IN COSMIC-RAY POSITRONS DETECTED BY THE PAMELA EXPERIMENT",
+      "doi": "10.1088/0004-637x/811/1/21",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 4
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R083",
+      "title": "Anatomy of Spectatorship: Tracing the Body in Body Worlds, the Anatomical Exhibition of Real Human Bodies",
+      "doi": null,
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 4
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R084",
+      "title": "The MOUSE project: a meticulous approach for obtaining traceable, wide-range X-ray scattering information",
+      "doi": "10.1088/1748-0221/16/06/p06034",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 4
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R085",
+      "title": "Challenges and Paths Towards AI for Software Engineering",
+      "doi": "10.32388/vv1661",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 4
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R086",
+      "title": "BINDing the lightcone: A suite of astrophysical ray-traced weak lensing and SZ maps",
+      "doi": "10.48550/arxiv.2609.10710",
+      "arxiv": "2609.10710",
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 4
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R087",
+      "title": "Constraints on the Emission Geometries of Gamma-ray Millisecond Pulsars Observed with the Fermi Large Area Telescope",
+      "doi": "10.48550/arxiv.1209.4000",
+      "arxiv": "1209.4000",
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 4
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R088",
+      "title": "SpaceBeam",
+      "doi": "10.1145/3458864.3466864",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 4
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R089",
+      "title": "Search for magnetically-induced patterns in cosmic ray arrival directions using a new extragalactic filter technique at the pierre auger observatory",
+      "doi": "10.18154/rwth-2019-04788",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 4
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R090",
+      "title": "Exploring departures from Schwarzschild black hole in f(R) gravity",
+      "doi": "10.1140/epjc/s10052-023-11601-z",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 4
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R091",
+      "title": "Decoupling Data Layouts from Bounding Volume Hierarchies",
+      "doi": "10.1145/3808253",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search01",
+          "source": "openalex",
+          "query_id": 4
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R092",
+      "title": "Towards Quantum Ray Tracing",
+      "doi": null,
+      "arxiv": "2204.12797",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 0
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R093",
+      "title": "Improved Quantum Supersampling for Quantum Ray Tracing",
+      "doi": null,
+      "arxiv": "2208.05171",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 0
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R094",
+      "title": "Dynamic Coherence-Based EM Ray Tracing Simulations in Vehicular Environments",
+      "doi": null,
+      "arxiv": "2112.07115",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 0
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R095",
+      "title": "Learning Surface Scattering Parameters From SAR Images Using Differentiable Ray Tracing",
+      "doi": null,
+      "arxiv": "2401.01175",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 0
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R096",
+      "title": "Manifestation of Berry curvature in geophysical ray tracing",
+      "doi": "10.1098/rspa.2020.0844",
+      "arxiv": "2010.05575",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 0
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R097",
+      "title": "Calibrating Wireless Ray Tracing for Digital Twinning using Local Phase Error Estimates",
+      "doi": null,
+      "arxiv": "2312.12625",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 0
+        }
+      ],
+      "decision": "INCLUDED_FULL_EXTRACTION",
+      "reason": "Direct primary antecedent or selected comparison method in extraction catalog",
+      "included_catalog_id": "ruah2023"
+    },
+    {
+      "record_id": "R098",
+      "title": "Simulating Dual-Pixel Images From Ray Tracing For Depth Estimation",
+      "doi": null,
+      "arxiv": "2503.11213",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 0
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R099",
+      "title": "Ray tracing simulations of bending magnet sources with SHADOW4",
+      "doi": null,
+      "arxiv": "2406.16446",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 0
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R100",
+      "title": "Neural Reflectance Fields for Radio-Frequency Ray Tracing",
+      "doi": null,
+      "arxiv": "2501.02458",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 0
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R101",
+      "title": "Ray Tracing-Enabled Digital Twin for RIS Phase Optimization: Implementation and Experimental Validation",
+      "doi": null,
+      "arxiv": "2604.17929",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 0
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R102",
+      "title": "On Ray Reordering Techniques for Faster GPU Ray Tracing",
+      "doi": "10.1145/3384382.3384534",
+      "arxiv": "2506.11273",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 0
+        }
+      ],
+      "decision": "INCLUDED_FULL_EXTRACTION",
+      "reason": "Direct primary antecedent or selected comparison method in extraction catalog",
+      "included_catalog_id": "meister2020"
+    },
+    {
+      "record_id": "R103",
+      "title": "Bright-field microscopy of transparent objects: a ray tracing approach",
+      "doi": "10.1017/s1431927617012624",
+      "arxiv": "1702.04692",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 0
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R104",
+      "title": "Accelerating Ray Tracing-Based Wireless Channels Generation for Real-Time Network Digital Twins",
+      "doi": "10.1109/ojcoms.2025.3583202",
+      "arxiv": "2504.09751",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 0
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R105",
+      "title": "Ray-tracing and physical-optics analysis of the aperture efficiency in a radio telescope",
+      "doi": "10.1364/ao.46.004092",
+      "arxiv": "0705.3379",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 0
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R106",
+      "title": "Augmenting Image Warping-Based Remote Volume Rendering with Ray Tracing",
+      "doi": null,
+      "arxiv": "2006.14726",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 0
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R107",
+      "title": "Differentiable Voronoi Ray Tracing Beyond Rasterization Speeds",
+      "doi": null,
+      "arxiv": "2608.17682",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 0
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R108",
+      "title": "Probabilistic Positioning Via Ray Tracing With Noisy Angle of Arrival Measurements",
+      "doi": null,
+      "arxiv": "2403.00611",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 0
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R109",
+      "title": "From ray tracing to waves of topological origin in continuous media",
+      "doi": "10.21468/scipostphys.14.4.062",
+      "arxiv": "2207.01479",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 0
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R110",
+      "title": "RT-VSS: In-House Ray Tracing for Vital Signs Sensing in the FR3 Band",
+      "doi": null,
+      "arxiv": "2609.15310",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 0
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R111",
+      "title": "Fast Floating-Point Filters for Robust Predicates",
+      "doi": "10.1007/s10543-023-00975-x",
+      "arxiv": "2208.00497",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 1
+        }
+      ],
+      "decision": "INCLUDED_FULL_EXTRACTION",
+      "reason": "Direct primary antecedent or selected comparison method in extraction catalog",
+      "included_catalog_id": "fastfilters2022"
+    },
+    {
+      "record_id": "R112",
+      "title": "Gamma-ray triangles: a possible signature of asymmetric dark matter in indirect searches",
+      "doi": "10.1103/physrevd.94.103003",
+      "arxiv": "1604.01899",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 1
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R113",
+      "title": "Compact Tetrahedralization-based Acceleration Structure for Ray Tracing",
+      "doi": null,
+      "arxiv": "2103.02309",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 1
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R114",
+      "title": "Adding Custom Intersectors to the C++ Ray Tracing Template Library Visionaray",
+      "doi": null,
+      "arxiv": "1912.12786",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 1
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R115",
+      "title": "Plug-and-Play Acceleration of Occupancy Grid-based NeRF Rendering using VDB Grid and Hierarchical Ray Traversal",
+      "doi": null,
+      "arxiv": "2404.10272",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 1
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R116",
+      "title": "Beyond ExaBricks: GPU Volume Path Tracing of AMR Data",
+      "doi": null,
+      "arxiv": "2211.09997",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 1
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R117",
+      "title": "A Simple Ray Acceleration Structure for Non-LTE Radiative Transfer",
+      "doi": null,
+      "arxiv": "2511.08498",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 1
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R118",
+      "title": "DOBB-BVH: Efficient Ray Traversal by Transforming Wide BVHs into Oriented Bounding Box Trees using Discrete Rotations",
+      "doi": "10.1111/cgf.70220",
+      "arxiv": "2506.22849",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 1
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R119",
+      "title": "Power Foam: Unifying Real-Time Differentiable Ray Tracing and Rasterization",
+      "doi": null,
+      "arxiv": "2604.24994",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 1
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R120",
+      "title": "Hash-Based Ray Path Prediction: Skipping BVH Traversal Computation by Exploiting Ray Locality",
+      "doi": null,
+      "arxiv": "1910.01304",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 1
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R121",
+      "title": "3D Gaussian Accelerated Ray Tracing: Fast training through particle-based backward propagation",
+      "doi": null,
+      "arxiv": "2608.17298",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 1
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R122",
+      "title": "Accelerating mesh-based Monte Carlo simulations using contemporary graphics ray-tracing hardware",
+      "doi": null,
+      "arxiv": "2511.22779",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 1
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R123",
+      "title": "Gabor Fields: Orientation-Selective Level-of-Detail for Volume Rendering",
+      "doi": "10.1145/3811369",
+      "arxiv": "2602.05081",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 1
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R124",
+      "title": "Radiant Foam Rendering on a Graph Processor",
+      "doi": null,
+      "arxiv": "2601.04382",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 1
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R125",
+      "title": "Robust predicate and function computation in continuous chemical reaction networks",
+      "doi": null,
+      "arxiv": "2506.06590",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 1
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R126",
+      "title": "Data-driven dose calculation algorithm based on deep learning",
+      "doi": "10.1088/1361-6560/abca05",
+      "arxiv": "2006.15485",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 1
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R127",
+      "title": "Using ray-traversal for 3D particle matching in the context of particle tracking velocimetry in fluid mechanics",
+      "doi": null,
+      "arxiv": "2003.12135",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 1
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R128",
+      "title": "NaviX: A Native Vector Index Design for Graph DBMSs With Robust Predicate-Agnostic Search Performance",
+      "doi": null,
+      "arxiv": "2506.23397",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 1
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R129",
+      "title": "Point Containment Queries on Ray Tracing Cores for AMR Flow Visualization",
+      "doi": "10.1109/mcse.2022.3153677",
+      "arxiv": "2202.12020",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 1
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R130",
+      "title": "Debunking the Myth of Join Ordering: Toward Robust SQL Analytics",
+      "doi": null,
+      "arxiv": "2502.15181",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 1
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R131",
+      "title": "Programmable recirculating bricks mesh architecture for photonic neural networks",
+      "doi": null,
+      "arxiv": "2604.18160",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 2
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R132",
+      "title": "Deep Learning with Photonic Neural Cellular Automata",
+      "doi": null,
+      "arxiv": "2309.13186",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 2
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R133",
+      "title": "On-chip rewritable phase-change metasurface for programmable diffractive deep neural networks",
+      "doi": "10.1038/s41598-025-19638-8",
+      "arxiv": "2411.05723",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 2
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R134",
+      "title": "Three dimensional waveguide-interconnects for scalable integration of photonic neural networks",
+      "doi": "10.1364/optica.388205",
+      "arxiv": "1912.08203",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 2
+        }
+      ],
+      "decision": "INCLUDED_FULL_EXTRACTION",
+      "reason": "Direct primary antecedent or selected comparison method in extraction catalog",
+      "included_catalog_id": "moughames2019"
+    },
+    {
+      "record_id": "R135",
+      "title": "Programmable photonic waveguide arrays: opportunities and challenges",
+      "doi": "10.1021/acsphotonics.5c02901",
+      "arxiv": "2502.12385",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 2
+        }
+      ],
+      "decision": "INCLUDED_FULL_EXTRACTION",
+      "reason": "Direct primary antecedent or selected comparison method in extraction catalog",
+      "included_catalog_id": "wavearrays2025"
+    },
+    {
+      "record_id": "R136",
+      "title": "Programmable recirculating bricks mesh architecture for quantum photonics",
+      "doi": null,
+      "arxiv": "2604.01369",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 2
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R137",
+      "title": "Programmable Photonic Extreme Learning Machines",
+      "doi": null,
+      "arxiv": "2407.03218",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 2
+        },
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 3
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R138",
+      "title": "Programmable metasurfaces for future photonic artificial intelligence",
+      "doi": "10.1038/s42254-025-00831-7",
+      "arxiv": "2505.11659",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 2
+        },
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 3
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R139",
+      "title": "All-Optical High-speed Programmable Nonlinear Activation Functions using a Fabry-Perot Laser",
+      "doi": null,
+      "arxiv": "2503.21603",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 2
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R140",
+      "title": "Universal Neural Network Based Calibration and Control of Programmable Classical and Quantum Photonic Integrated Processors",
+      "doi": null,
+      "arxiv": "2607.09301",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 2
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R141",
+      "title": "Programming universal unitary transformations on a general-purpose silicon photonics platform",
+      "doi": null,
+      "arxiv": "2407.03235",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 2
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R142",
+      "title": "Implementation of distillation protocols using a recirculating bricks mesh network",
+      "doi": null,
+      "arxiv": "2605.25911",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 2
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R143",
+      "title": "Low-depth, compact and error-tolerant photonic matrix-vector multiplication beyond the unitary group",
+      "doi": "10.1364/oe.539666",
+      "arxiv": "2408.00669",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 2
+        }
+      ],
+      "decision": "INCLUDED_FULL_EXTRACTION",
+      "reason": "Direct primary antecedent or selected comparison method in extraction catalog",
+      "included_catalog_id": "fldzhyan2024"
+    },
+    {
+      "record_id": "R144",
+      "title": "Monolithically Integrated Optical Convolutional Processors on Thin Film Lithium Niobate",
+      "doi": null,
+      "arxiv": "2507.20552",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 2
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R145",
+      "title": "ADEPT: Automatic Differentiable DEsign of Photonic Tensor Cores",
+      "doi": "10.1145/3489517.3530562",
+      "arxiv": "2112.08703",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 2
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R146",
+      "title": "Versatile silicon integrated photonic processor: a reconfigurable solution for next-generation AI clusters",
+      "doi": null,
+      "arxiv": "2504.01463",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 2
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R147",
+      "title": "Inverse-designed nanophotonic neural network accelerators for ultra-compact optical computing",
+      "doi": null,
+      "arxiv": "2506.06150",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 2
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R148",
+      "title": "Segmentation-Engineered Ge4Sb6Te7 Switch on SOI Platform for Multilevel Non-Volatile Photonic Neural Inference",
+      "doi": null,
+      "arxiv": "2512.19105",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 2
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R149",
+      "title": "Scalable optical neural network with nonlocally coupled coherent photonic processor",
+      "doi": null,
+      "arxiv": "2603.07174",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 2
+        }
+      ],
+      "decision": "INCLUDED_FULL_EXTRACTION",
+      "reason": "Direct primary antecedent or selected comparison method in extraction catalog",
+      "included_catalog_id": "ren2026"
+    },
+    {
+      "record_id": "R150",
+      "title": "All-optical control of nonlinear emission from resonant metasurfaces",
+      "doi": null,
+      "arxiv": "2604.03830",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 2
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R151",
+      "title": "Training of photonic neural networks through in situ backpropagation",
+      "doi": "10.1364/optica.5.000864",
+      "arxiv": "1805.09943",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 3
+        }
+      ],
+      "decision": "INCLUDED_FULL_EXTRACTION",
+      "reason": "Direct primary antecedent or selected comparison method in extraction catalog",
+      "included_catalog_id": "hughes2018"
+    },
+    {
+      "record_id": "R152",
+      "title": "Compatible Learning for Deep Photonic Neural Network",
+      "doi": null,
+      "arxiv": "2003.08360",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 3
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R153",
+      "title": "Photonic Neural Network Fabricated on Thin Film Lithium Niobate for High-Fidelity and Power-Efficient Matrix Computation",
+      "doi": null,
+      "arxiv": "2402.16513",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 3
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R154",
+      "title": "L2ight: Enabling On-Chip Learning for Optical Neural Networks via Efficient in-situ Subspace Optimization",
+      "doi": null,
+      "arxiv": "2110.14807",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 3
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R155",
+      "title": "Ultra-high endurance silicon photonic memory using vanadium dioxide",
+      "doi": "10.1038/s44310-024-00038-1",
+      "arxiv": "2403.10162",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 3
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R156",
+      "title": "HoRAMA: Holistic Reconstruction with Automated Material Assignment for Ray Tracing using NYURay",
+      "doi": null,
+      "arxiv": "2602.12942",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 4
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R157",
+      "title": "Ray Tracing Algorithm for Reconfigurable Intelligent Surfaces",
+      "doi": null,
+      "arxiv": "2402.13034",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 4
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R158",
+      "title": "A Realistic Radar Ray Tracing Simulator for Hand Pose Imaging",
+      "doi": null,
+      "arxiv": "2307.15412",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 4
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R159",
+      "title": "Ray-tracing laser-deposition model for plasma particle-in-cell simulation",
+      "doi": null,
+      "arxiv": "2412.08543",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 4
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R160",
+      "title": "Cosmological distances with general-relativistic ray tracing: framework and comparison to cosmographic predictions",
+      "doi": "10.1088/1475-7516/2023/03/019",
+      "arxiv": "2209.06775",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 4
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R161",
+      "title": "Exploring Waveform Variations among Neutron Star Ray-tracing Codes for Complex Emission Geometries",
+      "doi": "10.3847/1538-4357/ad7255",
+      "arxiv": "2406.07285",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 4
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R162",
+      "title": "Ray-tracing a small orbital mission for soft-X-ray polarimetry",
+      "doi": null,
+      "arxiv": "2011.14857",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 4
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R163",
+      "title": "DART-Ray: a 3D ray-tracing radiative transfer code for calculating the propagation of light in dusty galaxies",
+      "doi": "10.1093/mnras/stt2418",
+      "arxiv": "1401.1437",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 4
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R164",
+      "title": "Ray-Tracing Based Narrow-Beam Channel Simulation, Characterization and Performance Evaluation for 5G-R Systems",
+      "doi": null,
+      "arxiv": "2510.19401",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 4
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R165",
+      "title": "Image Ellipticity from Atmospheric Aberrations",
+      "doi": "10.1086/517873",
+      "arxiv": null,
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 4
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R166",
+      "title": "Running Probabilistic Programs Backwards",
+      "doi": null,
+      "arxiv": "1412.4053",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 4
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R167",
+      "title": "Luneburg lens waveguide networks",
+      "doi": "10.1088/2040-8978/14/11/114006",
+      "arxiv": "1207.4337",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 4
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R168",
+      "title": "A NICER View of PSR J0030+0451: Millisecond Pulsar Parameter Estimation",
+      "doi": "10.3847/2041-8213/ab481c",
+      "arxiv": "1912.05702",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 4
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R169",
+      "title": "Channel Modeling for UAV-to-Ground Communications with Posture Variation and Fuselage Scattering Effect",
+      "doi": null,
+      "arxiv": "2210.02245",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 4
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R170",
+      "title": "Anisotropic transport in ballistic bilayer graphene cavities",
+      "doi": null,
+      "arxiv": "2512.08588",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 4
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R171",
+      "title": "Eigenrays in 3D heterogeneous anisotropic media: Part VII -- Dynamics, Finite-element implementation",
+      "doi": null,
+      "arxiv": "2003.11418",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 4
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R172",
+      "title": "Numerical Simulation of Black Hole Images from photon trajectories in Schwarzschild Geometry",
+      "doi": null,
+      "arxiv": "2608.07031",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 4
+        }
+      ],
+      "decision": "ELIGIBLE_BACKGROUND_NOT_FULL_EXTRACTED",
+      "reason": "Related background; bounded selected-method review does not claim exhaustive full-text coverage of this record",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R173",
+      "title": "SPHRAY: A Smoothed Particle Hydrodynamics Ray Tracer for Radiative Transfer",
+      "doi": "10.1111/j.1365-2966.2008.13212.x",
+      "arxiv": "0802.3698",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 4
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R174",
+      "title": "WEKP-PLP: A Wireless Environment Knowledge Pool-Enhanced Path Loss Prediction Framework for Shore-to-Ship Communication",
+      "doi": null,
+      "arxiv": "2609.19066",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 4
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    },
+    {
+      "record_id": "R175",
+      "title": "Deflection of Interferometry Beams due to Transverse Refractive Index Gradient in SST-1",
+      "doi": null,
+      "arxiv": "2501.18193",
+      "origins": [
+        {
+          "folder": "step01_search02",
+          "source": "arxiv",
+          "query_id": 4
+        }
+      ],
+      "decision": "EXCLUDED_TITLE_SCOPE",
+      "reason": "Title concerns unrelated astrophysics/dark matter/SQL/biology or other topic outside optical-geometry numerical claim; title screening only",
+      "included_catalog_id": null
+    }
+  ],
+  "catalog_sha256": "2cf8927be320a607541219b34f3f021f90bd271ecc1f0bef2a74ffeeb3d41d5c",
+  "scope": "bounded_systematic_search_and_selected_method_review_not_exhaustive_systematic_review",
+  "review_verdict": "NOVELTY_NOT_ESTABLISHED; individual ingredients prior; coupled certificate candidate requires demonstrated implementation/comparison",
+  "retrieved_fulltexts_read_in_entirety": false,
+  "reading_method": "relevant primary method, result, limitation and mathematical passages inspected; files retained privately by hash",
+  "external_preregistration_obtained": false,
+  "new_native_experiments": false
+}

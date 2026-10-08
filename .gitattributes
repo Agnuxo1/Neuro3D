@@ -7,6 +7,7 @@
 *.hlsl text eol=lf
 *.ps1 text eol=lf
 *.csv text eol=lf
+*.svg text eol=lf
 # Raw historical evidence: no conversion on either check-in or checkout.
 Blender/research/exp003/fixture.json -text !eol
 Blender/research/optical_mesh/results_cpu.json -text !eol
@@ -63,5 +64,6 @@ Docs/validation/multipath-error-2026-10-08/** -text !eol whitespace=cr-at-eol
 Docs/validation/path-operation-proofs-2026-10-08/** -text !eol whitespace=cr-at-eol
 Docs/validation/iris-native-circuit-2026-10-08/** -text !eol whitespace=cr-at-eol
 Docs/validation/unreal-readiness-2026-10-08/** -text !eol whitespace=cr-at-eol
+Docs/validation/quantization-witness-2026-10-08/** -text !eol whitespace=cr-at-eol
 # Immutable legacy preimages retain their original blank-line spaces.
 Docs/validation/unreal-readiness-2026-10-08/*/source/Source/OptiXRayTracing.cu -text !eol -whitespace

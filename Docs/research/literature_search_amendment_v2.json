@@ -1,0 +1,16 @@
+{
+  "schema": "neuro3d.systematic_literature_search_amendment.v2",
+  "recorded_on": "2026-10-08",
+  "reason": "First arxiv AND-all-words translation retrieved only one record; use explicit broader disjunctions. SemanticScholar HTTP429 retained, not retried. Supplement with primary publisher/author and backward citations. Do not overwrite initial receipt.",
+  "queries": ["coherent optical ray tracing GPU numerical error phase precision", "robust ray triangle intersection interval arithmetic exact predicates", "photonic neural network three dimensional programmable glass", "photonic neural network on chip backpropagation in situ training", "verified ray tracing coherent field error bounds path merging"],
+  "max_initial_results_per_query_per_source": 20,
+  "arxiv_query_overrides": {
+    "0": "all:\"ray tracing\" AND (all:coherent OR all:phase)",
+    "1": "all:\"ray triangle\" OR all:\"robust predicates\" OR all:\"ray traversal\"",
+    "2": "all:\"photonic neural\" AND (all:\"three dimensional\" OR all:glass OR all:programmable)",
+    "3": "all:\"photonic neural\" AND (all:backpropagation OR all:\"in situ\")",
+    "4": "all:\"ray tracing\" AND (all:\"error bounds\" OR all:verified OR all:interval)"
+  },
+  "changed_hypothesis_or_experimental_thresholds": false,
+  "status": "SEARCH_QUERY_AMENDMENT_NOT_EXPERIMENTAL_AMENDMENT"
+}

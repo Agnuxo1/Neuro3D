@@ -1,0 +1,27 @@
+{
+  "schema": "neuro3d.systematic_literature_search.v1",
+  "recorded_on": "2026-10-08",
+  "research_question_contract": "contribution_contract_v1.json",
+  "scope": "Targeted systematic review of geometric coherent optical computation with native GPU ray tracing, verified numerical bounds and photonic-network antecedents",
+  "sources": ["arxiv", "semanticscholar", "openalex", "primary_publisher_and_author_sources", "public_p2pclaw_lab_when_available"],
+  "queries": [
+    "coherent optical ray tracing GPU numerical error phase precision",
+    "robust ray triangle intersection interval arithmetic exact predicates",
+    "photonic neural network three dimensional programmable glass",
+    "photonic neural network on chip backpropagation in situ training",
+    "verified ray tracing coherent field error bounds path merging"
+  ],
+  "date_range": "all_available_through_2026-10-08",
+  "max_initial_results_per_query_per_source": 20,
+  "additional_searches": "required owner DOIs and backward/forward citations from most relevant primary papers",
+  "deduplication": ["normalized_DOI", "arxiv_id_without_version", "normalized_title"],
+  "include": "Primary research or authoritative numerical/optical methods directly relevant to coherent transport, robust geometry, bounded arithmetic, photonic implementation or their comparison baselines",
+  "exclude": "Unrelated application with no relevant method; duplicate version; marketing-only material as research evidence; sources lacking verifiable identity",
+  "full_text_requirement": "Extract evidence for each novelty-relevant assertion from accessible primary full text or label abstract-only/unavailable; do not convert access failure into absence of prior work",
+  "extraction_fields": ["method", "domain_and_task", "metric_and_unit", "reported_result_or_not_reported", "baseline", "geometry", "coherence", "GPU_RT", "rigorous_bound", "physical_measurement", "source_and_evidence_location", "access_status"],
+  "heterogeneous_metrics": "Do not rank unlike tasks/units as one SOTA leaderboard",
+  "target_primary_papers": "15_to_30_plus_direct_prior_art",
+  "novelty_rule": "Describe demonstrated overlap and residual candidate difference; absence in bounded search cannot prove absolute novelty",
+  "completion": "Search logs and failures retained; screening/dedup/extraction traceable; at least5 comparable-method entries plus gap/overlap verdict; inaccessible direct prior art remains explicit limitation",
+  "status_at_creation": "PROSPECTIVE_SEARCH_PROTOCOL_NO_NEW_RESULTS"
+}

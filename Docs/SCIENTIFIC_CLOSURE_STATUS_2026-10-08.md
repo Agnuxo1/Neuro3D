@@ -17,7 +17,7 @@ Actualización de alcance 2026-10-08 por decisión expresa del propietario: Blen
 | 9 | Reproducción integral desde checkout limpio | ABIERTO |
 | 10 | Flujos interactivos y reconciliación documental | ABIERTO |
 | 11 | Contribución central falsable | CERRADO como formulación de pregunta/H1, utilidad y refutación; [contrato](CONTRIBUTION_AND_FALSIFICATION_2026-10-08.md). Hipótesis y novedad sin confirmar |
-| 12 | Revisión sistemática y novedad | ABIERTO |
+| 12 | Revisión sistemática y novedad | ABIERTO; [búsqueda y revisión seleccionada](LITERATURE_AND_NOVELTY_AUDIT_2026-10-08.md):194registros/175únicos,30entradas extraídas; cobertura no exhaustiva y novedad no demostrada |
 | 13 | Expresividad, no linealidad, estabilidad y límites | ABIERTO |
 | 14 | Generalización con incertidumbre | ABIERTO |
 | 15 | Baselines de tarea/precisión/salidas/presupuesto equivalentes | ABIERTO |
