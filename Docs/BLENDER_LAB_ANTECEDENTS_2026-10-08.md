@@ -1,0 +1,26 @@
+# Antecedentes específicos del instrumento Blender-Lab
+
+Ampliación de la revisión tras la aclaración del propietario. Se hicieron siete búsquedas web dirigidas a simulación óptica/coherente en Blender, laboratorio, herramientas y redes, y se recuperaron 15 documentos/metadatos primarios. Se registran cuatro entradas de comparación en [el catálogo suplementario](research/blender_lab_antecedents_v1.json). No se suman sin deduplicación al inventario histórico de 194 resultados/175 únicos/30 extracciones. No se declara búsqueda exhaustiva ni prioridad demostrada.
+
+| Antecedente primario | Qué está documentado | Qué obliga a precisar en Blender-Lab |
+|---|---|---|
+| [Zhang y Fang, BlenderPhotonics, 2022](https://doi.org/10.1117/1.JBO.27.8.083014), [código de autores](https://github.com/NeuroJSON/BlenderPhotonics/tree/732799f9e3ebe10e013e316b8a21d88452755dc8) | Entorno abierto en Blender para geometría, mallado, propiedades ópticas, simulación Monte Carlo acelerada y visualización cuantitativa. El artículo explica el intercambio de datos y cinco ejemplos; el código actual añade rutas MMC/MCX | Blender como laboratorio científico abierto y acceso mediante GUI ya tienen antecedente. Nuestro problema específico es cómputo neuronal coherente desde la escena con completitud y cotas de campos/salidas |
+| [Çobanoğlu, Blender Optics Simulator v0.31.0, 2026](https://github.com/emircbngl/blender-optics-simulator/tree/2b488e2e99dff4f56d67f57f9674bd00f812dda1), [alcance](https://github.com/emircbngl/blender-optics-simulator/blob/2b488e2e99dff4f56d67f57f9674bd00f812dda1/docs/OPTICS_SCOPE.md) | Banco editable, detectores, longitudes, suma Jones coherente/interferencia, haces Gaussianos, automatización y límites de modelos. Sus autores declaran controles físicos y regresiones; la documentación distingue trazado de rayo principal y modelos adicionales | Interferencia y banco óptico interactivo también tienen antecedentes. Debemos comparar identidad de geometría, integración de red entrenable y contrato de error con pruebas equivalentes |
+| [Hinrichs, OptiCore](https://github.com/CodeFHD/OptiCore/tree/f9b0029009846abbf34a0947971dc4c6ba1a21f6), [Blender Conference 2025](https://conference.blender.org/2025/presentations/3985/) | Geometrías parametrizadas de elementos ópticos, importación de diseños y trazado secuencial interno; restricciones de superficies/materiales. Cálculos internos descritos como binary64 | Diseño óptico y trazado dentro de Blender ya existen. De la precisión de cálculo declarada no se infiere identidad con los bytes almacenados en la escena; esa relación debe comprobarse |
+| [Crowley y Gordon, SFDI en Blender, 2023](https://arxiv.org/abs/2302.12705v1) | Blender/Cycles para simular absorción/dispersión y geometrías de imagen biomédica. Métodos de render/calibración y contraste con Monte Carlo/tablas; ejemplos planos y tubulares | La utilidad científica de un renderizador y su validación cuantitativa también tienen antecedentes. Se requiere demostrar utilidad específica de redes coherentes y los controles/certificados propuestos |
+
+Se leyeron README y documentos de alcance/capacidades de los repositorios fijados, el artículo BlenderPhotonics por XML primario y pasajes de métodos/resultados del PDF de autores SFDI. El commit de Optics Simulator es del 23-09-2026 y su CFF declara versión 0.31.0 del 20-09-2026. Se separan versiones actuales de software y fechas de artículos/conferencias.
+
+No se instalaron ni ejecutaron estos programas. Las prestaciones y números de validación declarados por sus autores no son pruebas independientes obtenidas por Neuro3D. En los pasajes revisados no se ha establecido un certificado determinista conjunto equivalente al propuesto: esa casilla sigue `UNKNOWN`, sin inferir ausencia en todo el código o la literatura. Tampoco se infiere entrenamiento neuronal a partir de un ejemplo óptico.
+
+## Diferencia candidata y pruebas necesarias
+
+1. Calcular la red desde **geometría efectivamente capturada**, con convenciones de campo/modos y materiales trazables.
+2. Garantizar completitud o cota de caminos omitidos y conectar representación/intersección/longitud/fase/suma con campos, potencias y decisión nativos.
+3. Permitir un experimento neuronal con parámetros ópticos entrenables, tarea/test reservados y controles causales de geometría/fase, sin fuga de datos.
+4. Ofrecer captura, edición, ejecución, cancelación, reapertura y exportación reproducibles, con ruta CPU para experimentos básicos y GPU opcional acreditada.
+5. Demostrar que otro investigador obtiene resultados equivalentes y que el instrumento permite un experimento o garantía útil frente al comparador pertinente bajo el mismo contrato.
+
+Estos son requisitos futuros, no capacidades nuevas demostradas. El catálogo general conserva antecedentes de redes fotónicas, simulación coherente, RTX/HIP, predicados y cotas; el pase Blender añade la instrumentación científica solicitada por el propietario.
+
+Un instrumento útil puede incorporar componentes conocidos. Una reivindicación científica original requiere identificar, implementar y contrastar la diferencia concreta. El punto 1 sigue abierto; este pase no acredita Blender-Lab terminado ni el trazador nativo completo.

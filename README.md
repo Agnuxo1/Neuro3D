@@ -11,6 +11,23 @@
 
 ## Estado consolidado
 
+**Objetivo concretado por el propietario:** desarrollar
+[Blender-Lab](Docs/BLENDER_LAB_RESEARCH_INSTRUMENT_2026-10-08.md), un laboratorio
+abierto y accesible para investigar física óptica, con Neuro3D como demostrador
+de red neuronal que calcula a partir de la escena. La distribución y el trazador
+coherente completo siguen en desarrollo; sus resultados deberán ser cuantitativos,
+verificables y reproducibles. El instrumento computacional tiene criterios de
+éxito propios, independientemente de fabricar un procesador fotónico.
+
+```mermaid
+flowchart LR
+  E[Escena óptica editable] --> M[Motor científico y Neuro3D]
+  M --> V[Campos, detectores y cotas]
+  V --> R[Experimento reproducible]
+```
+
+El esquema representa la arquitectura objetivo de Blender-Lab.
+
 La agenda científica del 8 de octubre utiliza Blender como laboratorio principal;
 Unreal queda como referencia histórica por decisión del propietario.
 Consulta [los cierres y su alcance](Docs/SCIENTIFIC_CLOSURE_STATUS_2026-10-08.md),
@@ -34,6 +51,11 @@ ha registrado 194 resultados brutos, 175 únicos y una extracción de 30 fuentes
 Los ingredientes tienen antecedentes; la novedad de un certificado conjunto aún
 no está demostrada. La figura marca con `?` lo no establecido en los pasajes
 inspeccionados, sin afirmar ausencia en la literatura. Quedan candidatos por revisar.
+
+Se añade un [pase específico de antecedentes Blender-Lab](Docs/BLENDER_LAB_ANTECEDENTS_2026-10-08.md):
+BlenderPhotonics, Blender Optics Simulator, OptiCore y simulación científica SFDI
+en Blender. Las nuevas fuentes se registran por separado del mapa histórico de 30;
+son comparadores pertinentes, sin afirmar que sus capacidades hayan sido reproducidas aquí.
 
 ![Control analítico de pérdida de información](Docs/assets/quantization-phase-witness-2026-10-08.gif)
 

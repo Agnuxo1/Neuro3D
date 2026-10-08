@@ -22,10 +22,12 @@ El propietario confirmó el 2026-10-08 el orden siguiente. Se conservan los cier
 | 15 | Coste completo | 16 | ABIERTO |
 | 16 | Escalado y ablaciones | 17, 18 | ABIERTO |
 | 17 | Régimen físico y sílice | 19, 23 | ABIERTO |
-| 18 | Experimentos físicos | 20, 21, 22 | ABIERTO |
+| 18 | Experimentos físicos | 20, 21, 22 | CONDICIONAL para tesis de dispositivo físico; no requisito para el instrumento computacional |
 | 19 | Réplica externa, artículo e impacto | 24, 25, 26 | ABIERTO |
 
 Punto 0: [pregunta, hipótesis, comparadores y refutación](CONTRIBUTION_AND_FALSIFICATION_2026-10-08.md). Definir una hipótesis no demuestra que sea verdadera o nueva. No hay nuevos ensayos confirmatorios en este cierre; el registro externo/IPFS sigue ausente.
+
+Ampliación explícita del propietario: [Blender-Lab](BLENDER_LAB_RESEARCH_INSTRUMENT_2026-10-08.md) será el instrumento abierto de investigación y Neuro3D su demostrador de computación neuronal óptica. El contrato v2 conserva H1 y añade criterios de escena real, validez cuantitativa, uso y reproducción. La distribución aún no está completada. El punto 1 incorpora [antecedentes directos en Blender](BLENDER_LAB_ANTECEDENTS_2026-10-08.md); no se afirma prioridad por utilizar Blender.
 
 Punto 1: [revisión crítica y límites de cobertura](LITERATURE_AND_NOVELTY_AUDIT_2026-10-08.md). Los componentes tienen antecedentes; el certificado conjunto es candidato sin demostración de originalidad. Quedan 106 antecedentes potencialmente relacionados sin extracción completa. No se declara revisión exhaustiva ni cierre positivo de novedad.
 

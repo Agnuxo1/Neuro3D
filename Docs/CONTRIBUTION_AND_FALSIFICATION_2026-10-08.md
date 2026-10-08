@@ -2,7 +2,9 @@
 
 Registro de formulación: 2026-10-08. Este documento cierra **la definición de la pregunta**, no confirma la hipótesis, la novedad, una ventaja de rendimiento ni una tesis física. El nuevo orden solicitado por el propietario empieza por esta formulación, continúa con antecedentes y después aborda el trazador Blender. Sustituye la anterior regla de esperar al cierre RT antes de definir la contribución.
 
-## Pregunta única
+**Ampliación posterior del propietario:** el objetivo es desarrollar [Blender-Lab como laboratorio abierto](BLENDER_LAB_RESEARCH_INSTRUMENT_2026-10-08.md), con Neuro3D como red de óptica coherente que calcula dentro de Blender. El instrumento computacional se valida por sí mismo, independientemente de fabricar un procesador fotónico. El [contrato v2](research/contribution_contract_v2_blender_lab.json) registra esta aclaración y conserva H1 como garantía cuantitativa central. La formulación v1 y sus hashes históricos permanecen recuperables en su commit original.
+
+## Pregunta técnica inicial (v1)
 
 ¿Puede Neuro3D calcular desde la geometría real capturada de Blender campos coherentes mediante un backend nativo de rayos, con certificados de error válidos y utilizables para todas las escenas completas de una familia de evaluación fijada de antemano, detectando explícitamente los casos que no puede certificar?
 
