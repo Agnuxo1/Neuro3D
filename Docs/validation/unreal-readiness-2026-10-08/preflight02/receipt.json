@@ -1,0 +1,155 @@
+{
+  "schema": "neuro3d.unreal.readonly_preflight.v1",
+  "checked_utc": "2026-10-08T10:33:19.893884+00:00",
+  "status": "BLOCKED_NO_USABLE_ENGINE",
+  "registered_candidates": [
+    {
+      "InstallLocation": "E:\\NEBULA_SYSTEM\\Engine\\UE_5.6",
+      "AppName": "QuixelBridge_5.6",
+      "ArtifactId": "QuixelBridge_5.6",
+      "AppVersion": "5.6.0-43139311+++UE5+Release-5.6-2025.0.1-43139311-Windows"
+    }
+  ],
+  "engines": [
+    {
+      "root": "E:\\NEBULA_SYSTEM\\Engine\\UE_5.6",
+      "files": {
+        "version": {
+          "path": "E:\\NEBULA_SYSTEM\\Engine\\UE_5.6\\Engine\\Build\\Build.version",
+          "exists": false
+        },
+        "editor": {
+          "path": "E:\\NEBULA_SYSTEM\\Engine\\UE_5.6\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
+          "exists": false
+        },
+        "editor_command": {
+          "path": "E:\\NEBULA_SYSTEM\\Engine\\UE_5.6\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe",
+          "exists": false
+        },
+        "build_tool": {
+          "path": "E:\\NEBULA_SYSTEM\\Engine\\UE_5.6\\Engine\\Binaries\\DotNET\\UnrealBuildTool\\UnrealBuildTool.dll",
+          "exists": false
+        },
+        "build_script": {
+          "path": "E:\\NEBULA_SYSTEM\\Engine\\UE_5.6\\Engine\\Build\\BatchFiles\\Build.bat",
+          "exists": false
+        },
+        "automation_script": {
+          "path": "E:\\NEBULA_SYSTEM\\Engine\\UE_5.6\\Engine\\Build\\BatchFiles\\RunUAT.bat",
+          "exists": false
+        },
+        "shader_compiler": {
+          "path": "E:\\NEBULA_SYSTEM\\Engine\\UE_5.6\\Engine\\Binaries\\Win64\\ShaderCompileWorker.exe",
+          "exists": false
+        }
+      },
+      "version": null,
+      "usable_UE_5_6_candidate": false
+    },
+    {
+      "root": "C:\\Program Files\\Epic Games\\UE_5.6",
+      "files": {
+        "version": {
+          "path": "C:\\Program Files\\Epic Games\\UE_5.6\\Engine\\Build\\Build.version",
+          "exists": false
+        },
+        "editor": {
+          "path": "C:\\Program Files\\Epic Games\\UE_5.6\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
+          "exists": false
+        },
+        "editor_command": {
+          "path": "C:\\Program Files\\Epic Games\\UE_5.6\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe",
+          "exists": false
+        },
+        "build_tool": {
+          "path": "C:\\Program Files\\Epic Games\\UE_5.6\\Engine\\Binaries\\DotNET\\UnrealBuildTool\\UnrealBuildTool.dll",
+          "exists": false
+        },
+        "build_script": {
+          "path": "C:\\Program Files\\Epic Games\\UE_5.6\\Engine\\Build\\BatchFiles\\Build.bat",
+          "exists": false
+        },
+        "automation_script": {
+          "path": "C:\\Program Files\\Epic Games\\UE_5.6\\Engine\\Build\\BatchFiles\\RunUAT.bat",
+          "exists": false
+        },
+        "shader_compiler": {
+          "path": "C:\\Program Files\\Epic Games\\UE_5.6\\Engine\\Binaries\\Win64\\ShaderCompileWorker.exe",
+          "exists": false
+        }
+      },
+      "version": null,
+      "usable_UE_5_6_candidate": false
+    },
+    {
+      "root": "D:\\TOOLS\\Unreal\\UE_5.6",
+      "files": {
+        "version": {
+          "path": "D:\\TOOLS\\Unreal\\UE_5.6\\Engine\\Build\\Build.version",
+          "exists": false
+        },
+        "editor": {
+          "path": "D:\\TOOLS\\Unreal\\UE_5.6\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
+          "exists": false
+        },
+        "editor_command": {
+          "path": "D:\\TOOLS\\Unreal\\UE_5.6\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe",
+          "exists": false
+        },
+        "build_tool": {
+          "path": "D:\\TOOLS\\Unreal\\UE_5.6\\Engine\\Binaries\\DotNET\\UnrealBuildTool\\UnrealBuildTool.dll",
+          "exists": false
+        },
+        "build_script": {
+          "path": "D:\\TOOLS\\Unreal\\UE_5.6\\Engine\\Build\\BatchFiles\\Build.bat",
+          "exists": false
+        },
+        "automation_script": {
+          "path": "D:\\TOOLS\\Unreal\\UE_5.6\\Engine\\Build\\BatchFiles\\RunUAT.bat",
+          "exists": false
+        },
+        "shader_compiler": {
+          "path": "D:\\TOOLS\\Unreal\\UE_5.6\\Engine\\Binaries\\Win64\\ShaderCompileWorker.exe",
+          "exists": false
+        }
+      },
+      "version": null,
+      "usable_UE_5_6_candidate": false
+    }
+  ],
+  "visual_studio_inventory": {
+    "inventory_available": true,
+    "installations": [
+      {
+        "installationPath": "E:\\VS2022",
+        "installationVersion": "17.14.36414.22",
+        "isComplete": true,
+        "isLaunchable": true
+      }
+    ]
+  },
+  "plugin_module_loading_phase": "Default",
+  "legacy_OptiX_source_observed": {
+    "has_luminosity_rgb_payload": true,
+    "uses_fixed_tmin_and_origin_bias": true,
+    "canonical_Iris_weights_or_complex_phase_not_implemented_here": true
+  },
+  "source_scope": "Unreal plugin is a separate abstract digital graph; legacy OptiX is luminosity/RGB, not canonical coherent Iris",
+  "compiled": false,
+  "native_GPU_execution_verified": false,
+  "RT_coherent_propagation_certified": false,
+  "readback_parity_verified": false,
+  "next_required_evidence": [
+    "usable UE5.6 path",
+    "real compilation logs",
+    "frozen complete inputs/readbacks",
+    "all-field independent parity audit",
+    "guarded native RT coherent implementation if retained"
+  ],
+  "source_sha256": {
+    "Tools/unreal_preflight_v1.py": "f8e4a98cbd89a22d59b563114ecde4d9ae0a8bea9790935fc53ada64615ecdfb",
+    "Plugins/SantoGrialPhotonic/SantoGrialPhotonic.uplugin": "a68e96e08436ac777d5ac355e53e0c4d78fc196c8567cae08a0461e509dd1a8e",
+    "Plugins/SantoGrialPhotonic/Tests/photonic_reference.py": "a65b2f4f0ec827efd8c74e97ce2f935004f410e7e615da8986622bce32ac7814",
+    "Source/OptiXRayTracing.cu": "33b9ff2e074f2428a142e11a72e7e174764a6f91f248a6c2caa83a837d53d55b"
+  }
+}

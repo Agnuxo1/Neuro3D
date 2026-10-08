@@ -7,10 +7,10 @@ Fecha de inicio: 2026-10-08. Cada cierre requiere evidencia verificable y public
 | 1 | Entrada first-hit: `pinned packet` | CERRADO; commit 2522b4b; 21 pruebas CPU PASS; entradas originales intactas |
 | 2 | 20 consultas first-hit GPU | CERRADO; native18 20/20, supervisor PASS y auditor independiente PASS |
 | 3 | Contactos, huecos, empates, bordes y retornos en multicamino | CERRADO en referencia CPU de óptica escalar; 17 pruebas, 41 estímulos analíticos y 8 ejecuciones JSON; GPU completa en punto 6 |
-| 4 | Presupuesto completo geometría → intensidad | CERRADO en modelo CPU escalar y cajas certificables; 14 pruebas/41 certificados/9 ejecuciones JSON; GPU completa pendiente6 y física UNKNOWN_NOT_ZERO |
-| 5 | Justificación de fusión/reducción/descarte | CERRADO para operaciones activas de referencia/selector/certificado; prueba matemática y 8 testigos PASS; no fusión general ni poda heurística |
-| 6 | Red entrenada completa en GPU nativa | ABIERTO |
-| 7 | RT coherente y Unreal compilado/readback | ABIERTO; decidir continuidad con evidencia |
+| 4 | Presupuesto completo geometría → intensidad | CERRADO en modelo CPU escalar y cajas certificables; 14 pruebas/41 certificados/9 ejecuciones JSON; certificado integral de aritmética nativa y física requieren evidencia adicional |
+| 5 | Justificación de fusión/reducción/descarte | CERRADO para operaciones activas; prueba matemática y 8 testigos PASS; reducción coherente en DAG canónico justificada en punto 6, sin poda heurística |
+| 6 | Red entrenada completa en GPU nativa | CERRADO para circuito canónico Iris completo; commit 68d9b7d; 450/450 decisiones y todas las salidas coinciden con referencia; puente geométrico CPU exacto. No recorrido de triángulos GPU ni captura Blender float32 |
+| 7 | RT coherente y Unreal compilado/readback | ABIERTO; preflight actual sin motor UE 5.6 utilizable. Configuración de carga y referencia CPU corregidas/preparadas; no compilación, readback ni RT coherente certificados |
 | 8 | Supervisión y ramas defensivas restantes | ABIERTO |
 | 9 | Reproducción integral desde checkout limpio | ABIERTO |
 | 10 | Flujos interactivos y reconciliación documental | ABIERTO |
@@ -32,5 +32,9 @@ Fecha de inicio: 2026-10-08. Cada cierre requiere evidencia verificable y public
 | 26 | Consecuencia científica importante y duradera | ABIERTO; exige evidencia e impacto posteriores |
 
 Punto 1: [corrección y recibo](FIRST_HIT_ADMISSION_FIX_2026-10-08.md). Publicación de progreso: [PR #6](https://github.com/Agnuxo1/Neuro3D/pull/6), en borrador, branch `codex/neuro3d-scientific-closure-20261008`. Incluye la consolidación local anterior; no se ha fusionado automáticamente con main.
+
+Punto 6: [resultados, alcance y recibos](IRIS_NATIVE_CIRCUIT_RESULTS_2026-10-08.md). GPU nativa evalúa scaler/normalización, 16 celdas, ocho modos, fases/conexiones, campos/potencias/logits/argmax de la red congelada. Primer ensayo numérico fallido conservado; segundo PASS sin cambiar umbrales. El test histórico 29/30 no acredita generalización nueva ni el coste completo del punto 16.
+
+Punto 7: [disponibilidad, contraejemplo de paridad y siguiente verificación](UNREAL_RT_READINESS_2026-10-08.md). La ruta registrada corresponde a Quixel Bridge y no existe; ubicación actual del motor solicitada al propietario. Sin cerrar ni omitir este punto.
 
 Regla de ejecución: no elevar un resultado CPU a GPU, una simulación a medición física ni una publicación propia a reproducción independiente. Conservar intentos negativos y criterios preregistrados. Si un punto no satisface sus criterios, permanece abierto y se resuelve antes de declarar el siguiente cerrado.
