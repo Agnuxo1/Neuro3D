@@ -1,0 +1,22 @@
+{
+  "schema": "neuro3d.blender_lab.captured_fan_regression.v1",
+  "status": "PASS",
+  "query": "first captured r0 source, software geometry selector only",
+  "before_status": "BOUNDARY",
+  "after_status": "SELECT",
+  "selected_object": "c00.bs1",
+  "coincident_triangles": 64,
+  "shared_vertex_hit": true,
+  "nearest_parameter": {
+    "numerator": 1,
+    "denominator": 1
+  },
+  "old_source_sha256": "f4225b2f3f08fa675e72cba79460c815c5e91282fed9cdafbd8460d3fc16dce2",
+  "current_source_sha256": "7339cdbedf2838607f132c806b22a3c79cb00f64531129efbf2914c957c9e1e0",
+  "scene_sha256": "59963192f88df24bf5b1d7fd2f8119a81a0ecad353f62ee16831ccfb98627097",
+  "scope": "One CPU software regression on an exact affine represented capture; not GPU/native geometry/optical-field/H1 validation.",
+  "optical_forward_executed": false,
+  "field_certified": false,
+  "training_executed": false,
+  "gpu_executed": false
+}
