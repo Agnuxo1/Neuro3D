@@ -1,6 +1,8 @@
 # Punto 7: preparación verificada; compilación, readback y RT coherente abiertos
 
-**El punto 7 no está cerrado.** La ejecución Iris OpenGL del punto 6 no acredita Unreal ni RT. Se preservan las rutas y fuentes históricas mientras se resuelve el acceso a un motor utilizable.
+**Actualización posterior por decisión expresa del propietario, 2026-10-08:** Unreal Engine deja de ser requisito; Blender será la plataforma principal. Este informe y los recibos/fuentes se conservan como preparación histórica. Ya no es necesario localizar/compilar Unreal. El punto 7 continúa abierto para RT coherente en Blender, según el [nuevo plan](BLENDER_SCIENTIFIC_ROADMAP_2026-10-08.md); no se declara compilación Unreal ni equivalencia RT. Las condiciones UE descritas debajo pertenecen al alcance anterior.
+
+**Estado en la preparación original:** el punto 7 no estaba cerrado. La ejecución Iris OpenGL del punto 6 no acredita Unreal ni RT. Se preservaron las rutas y fuentes mientras se investigaba el acceso a un motor utilizable.
 
 ## Disponibilidad actual
 
