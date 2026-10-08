@@ -1,5 +1,7 @@
 # Antecedentes: búsqueda sistemática y revisión crítica acotada
 
+**Aclaración posterior del propietario:** Blender-Lab es el instrumento computacional abierto y Neuro3D su demostrador neuronal óptico. Se añade un [pase específico de cuatro antecedentes Blender](BLENDER_LAB_ANTECEDENTS_2026-10-08.md), con versiones y fuentes primarias, contado por separado del inventario histórico siguiente. La contribución y la validación del instrumento se describen en [su alcance actualizado](BLENDER_LAB_RESEARCH_INSTRUMENT_2026-10-08.md).
+
 **Resultado:** los ingredientes centrales de Neuro3D tienen antecedentes. La novedad científica de la integración candidata todavía **no está demostrada**. Este informe termina una búsqueda reproducible y una revisión seleccionada de métodos, pero no se presenta como lectura exhaustiva de todos los resultados ni cierra positivamente el nuevo punto 1 «demostrar la novedad».
 
 ## Procedimiento y alcance

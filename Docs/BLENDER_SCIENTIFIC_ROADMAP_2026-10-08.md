@@ -2,6 +2,8 @@
 
 Fecha: 2026-10-08. Plan prospectivo actualizado por indicación expresa del propietario: Blender será la plataforma principal y Unreal Engine deja de ser un requisito. Se preservan las fuentes y los recibos históricos de Unreal. Esta decisión no acredita propagación RT coherente ni cierra el punto 7.
 
+**Objetivo concretado posteriormente:** [Blender-Lab](BLENDER_LAB_RESEARCH_INSTRUMENT_2026-10-08.md) como laboratorio computacional abierto, con Neuro3D como demostrador de red óptica. La fabricación y medición de hardware fotónico es una línea opcional; los puntos físicos son necesarios para reivindicar un dispositivo, mientras que el instrumento se valida mediante modelos, controles cuantitativos y reproducción propios. Esta aclaración de alcance no convierte los puntos pendientes en resultados alcanzados.
+
 La referencia al Premio Nobel expresa una aspiración de relevancia científica. El criterio operativo será una contribución original, falsable, reproducible, útil y resistente a contrastes independientes. Completar una lista de ingeniería o aumentar el número de rayos no garantiza ese reconocimiento.
 
 ## Base que ya existe
