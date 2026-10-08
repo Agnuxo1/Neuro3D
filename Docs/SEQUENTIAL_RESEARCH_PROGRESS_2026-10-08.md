@@ -30,3 +30,5 @@ Punto 0: [pregunta, hipótesis, comparadores y refutación](CONTRIBUTION_AND_FAL
 Punto 1: [revisión crítica y límites de cobertura](LITERATURE_AND_NOVELTY_AUDIT_2026-10-08.md). Los componentes tienen antecedentes; el certificado conjunto es candidato sin demostración de originalidad. Quedan 106 antecedentes potencialmente relacionados sin extracción completa. No se declara revisión exhaustiva ni cierre positivo de novedad.
 
 Se añaden [cotas racionales retrospectivas del circuito Iris](IRIS_RETROSPECTIVE_RATIONAL_CERTIFICATE_2026-10-08.md), con controles negativos y decisiones certificadas. Son análisis de datos históricos para delimitar el método candidato; no se marca como cerrado el punto 2, el presupuesto de geometría nativa completo ni H1.
+
+El [puente retrospectivo del plano racional](PLANNED_GEOMETRY_RETROSPECTIVE_LINKAGE_2026-10-08.md) verifica de forma separada 136 estados/208 triángulos por caso, acota la conversión de fase a desplazamiento y conserva las 450 decisiones históricas con campo ≤1.304e-13. Es un cierre matemático del plano archivado, no un cierre de captura Blender ni de RT.

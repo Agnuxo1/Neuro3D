@@ -1,0 +1,14 @@
+{
+  "schema": "neuro3d.planned_geometry.checker_rejection.v1",
+  "status": "CHECKER_DOMAIN_REJECTION",
+  "exit_code": 1,
+  "error_type": "ValueError",
+  "error_message": "coplanar plane outside certificate domain",
+  "reason": "First checker rejected an infinite coplanar plane before clipping to its finite triangle.",
+  "new_GPU_execution": false,
+  "geometry_failure_demonstrated": false,
+  "source_sha256": {
+    "checker.py": "7ae135061d38cd8ad5a61f2a092dcbf46e8fbe6efaaf11573c972aeac2c4aa29",
+    "rational_interval_v1.py": "34ae4b0ea08a7bd9a3cd35c599f1d6277539dd7e5e936fe56c71254d3858b53d"
+  }
+}
