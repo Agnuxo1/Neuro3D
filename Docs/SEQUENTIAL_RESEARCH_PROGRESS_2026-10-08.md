@@ -1,5 +1,12 @@
 # Nueva secuencia de investigación solicitada
 
+**Mandato actual OpticNeuroBlender:** las diez prioridades de la continuación están
+registradas en [criterios verificables](research/optic_neuro_blender_acceptance_v1.json).
+La [aportación operativa](OPTIC_NEURO_BLENDER_OPERATIONAL_CONTRIBUTION_2026-10-08.md)
+concreta identidad/completitud/campo/decisión y añade el antecedente OptiBench.
+Se publica un hito de formulación y revisión dirigida; la novedad sigue sin establecerse,
+el piloto sigue preparado y el proyecto completo permanece abierto.
+
 El propietario confirmó el 2026-10-08 el orden siguiente. Se conservan los cierres históricos 1–6 y el mapa original de 26 puntos. Esta secuencia nueva empieza por formular la aportación y revisar antecedentes antes del trazador RT, siguiendo la prioridad científica indicada.
 
 | Nuevo punto | Trabajo | Punto(s) original(es) | Estado |

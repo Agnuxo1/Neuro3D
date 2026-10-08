@@ -44,6 +44,22 @@ el [plan completo](Docs/BLENDER_SCIENTIFIC_ROADMAP_2026-10-08.md) y la
 
 ## Pregunta científica y progreso verificable
 
+La [contribución operativa y el contraste dirigido de novedad](Docs/OPTIC_NEURO_BLENDER_OPERATIONAL_CONTRIBUTION_2026-10-08.md)
+fijan cuatro obligaciones: identidad de escena, caminos completos, inclusión del
+campo y decisión derivada de sus cotas. La revisión añade OptiBench como antecedente
+de laboratorio coherente. El resultado sigue siendo **novedad no establecida**.
+Los [criterios de las diez prioridades actuales](Docs/research/optic_neuro_blender_acceptance_v1.json)
+conservan los resultados históricos y explicitan lo que falta medir.
+
+```mermaid
+flowchart LR
+  Q[Escena e input identificados] --> P[Caminos completos o cota de omisión]
+  P --> F[Campo y cota válida]
+  F --> D[Intensidad y margen de decisión]
+```
+
+Este diagrama representa obligaciones de validación; la cadena completa aún no está cerrada.
+
 ![Pregunta y criterio de refutación](Docs/assets/certified-coherent-research-question.svg)
 
 Se ha [formulado la aportación candidata](Docs/CONTRIBUTION_AND_FALSIFICATION_2026-10-08.md):
