@@ -1,0 +1,9 @@
+{
+  "status": "FAILED_EQUIVALENCE_CHECK",
+  "reason": "New CLI omitted legacy ingress input_file_sha256 metadata; geometry, sources and modes unchanged",
+  "source_sha256": {
+    "Tools/admit_coherent_capture_v1.py": "2fde7e273644a9ba46ceac95e8cde40cdc9e5669ed0f0c40abe659548867b5a0",
+    "Blender/blender_lab/coherent_contract_v1.py": "4339ff387837932c71ffdd0a7107146fd378878a7ad38d5a8b773b56c71316f2"
+  },
+  "optical_forward_executed": false
+}

@@ -1,0 +1,275 @@
+{
+  "schema": "exp005-readback-v2",
+  "lambda_BU": {
+    "numerator": 1,
+    "denominator": 8
+  },
+  "objects": {
+    "detector": {
+      "kind": "det",
+      "vertices_world_BU": [
+        [
+          {
+            "numerator": 2,
+            "denominator": 1
+          },
+          {
+            "numerator": -2,
+            "denominator": 1
+          },
+          {
+            "numerator": -2,
+            "denominator": 1
+          }
+        ],
+        [
+          {
+            "numerator": 2,
+            "denominator": 1
+          },
+          {
+            "numerator": 2,
+            "denominator": 1
+          },
+          {
+            "numerator": -2,
+            "denominator": 1
+          }
+        ],
+        [
+          {
+            "numerator": 2,
+            "denominator": 1
+          },
+          {
+            "numerator": 0,
+            "denominator": 1
+          },
+          {
+            "numerator": 2,
+            "denominator": 1
+          }
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "mode_origin_BU": [
+        {
+          "numerator": 2,
+          "denominator": 1
+        },
+        {
+          "numerator": 0,
+          "denominator": 1
+        },
+        {
+          "numerator": 0,
+          "denominator": 1
+        }
+      ],
+      "mode_direction": [
+        {
+          "numerator": 1,
+          "denominator": 1
+        },
+        {
+          "numerator": 0,
+          "denominator": 1
+        },
+        {
+          "numerator": 0,
+          "denominator": 1
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "id": "a",
+      "position_BU": [
+        {
+          "numerator": 0,
+          "denominator": 1
+        },
+        {
+          "numerator": 0,
+          "denominator": 1
+        },
+        {
+          "numerator": 0,
+          "denominator": 1
+        }
+      ],
+      "direction": [
+        {
+          "numerator": 1,
+          "denominator": 1
+        },
+        {
+          "numerator": 0,
+          "denominator": 1
+        },
+        {
+          "numerator": 0,
+          "denominator": 1
+        }
+      ],
+      "field_reim": [
+        {
+          "numerator": 1,
+          "denominator": 1
+        },
+        {
+          "numerator": 0,
+          "denominator": 1
+        }
+      ]
+    },
+    {
+      "id": "b",
+      "position_BU": [
+        {
+          "numerator": 0,
+          "denominator": 1
+        },
+        {
+          "numerator": 0,
+          "denominator": 1
+        },
+        {
+          "numerator": 0,
+          "denominator": 1
+        }
+      ],
+      "direction": [
+        {
+          "numerator": 1,
+          "denominator": 1
+        },
+        {
+          "numerator": 0,
+          "denominator": 1
+        },
+        {
+          "numerator": 0,
+          "denominator": 1
+        }
+      ],
+      "field_reim": [
+        {
+          "numerator": -1,
+          "denominator": 1
+        },
+        {
+          "numerator": 0,
+          "denominator": 1
+        }
+      ]
+    }
+  ],
+  "undeclared_meshes": [],
+  "blender_lab_ingress": {
+    "schema": "neuro3d.blender_lab.scalar_ingress.v1",
+    "capture_state_sha256": "04d024d0db8bcb9288a23496dd2c4369a4268179f8da05d0ef8b8b249ce2dc53",
+    "semantics_sha256": "48cd47b9e02823aa13e30f936f304f94bcd9e7eaea716e8df388cce3fe475c62",
+    "selected_collection": "OwnOptics",
+    "excluded_geometry_objects": [
+      "source.a",
+      "source.b"
+    ],
+    "counts": {
+      "objects": 1,
+      "triangles": 1,
+      "sources": 2
+    },
+    "network_bindings": {
+      "schema": "neuro3d.blender_lab.network_bindings.v1",
+      "model": "own.software.contract.fixture.v1",
+      "inputs": [
+        {
+          "id": "a",
+          "object": "source.a"
+        },
+        {
+          "id": "b",
+          "object": "source.b"
+        }
+      ],
+      "parameters": [
+        {
+          "id": "detector.x",
+          "object": "detector",
+          "path": [
+            "matrix_world",
+            0,
+            3
+          ],
+          "unit": "BU",
+          "bounds": [
+            "-0x1.9000000000000p+6",
+            "0x1.9000000000000p+6"
+          ],
+          "represented_value_hex": "0x1.0000000000000p+1"
+        }
+      ],
+      "detectors": [
+        {
+          "id": "D",
+          "object": "detector"
+        }
+      ],
+      "forward_executed": false,
+      "training_executed": false,
+      "optical_semantics_validated": false
+    },
+    "source_position_policy": "CAPTURED_EVALUATED_INSTANCE_TRANSLATION",
+    "mirror_rule": "minus_one_times_exp_i_declared_phase",
+    "splitter_rule": "sqrt_tau_and_i_sqrt_one_minus_tau",
+    "scope": {
+      "exact_affine_represented_geometry": true,
+      "native_transform_rounding_reproduced": false,
+      "structural_geometry_admitted": true,
+      "optical_forward_executed": false,
+      "field_certified": false,
+      "decision_certified": false,
+      "training_executed": false,
+      "gpu_executed": false,
+      "physical_optics_certified": false
+    }
+  },
+  "blender_lab_optical_contract": {
+    "schema": "optic_neuro_blender.semantic_admission.v1",
+    "contract_sha256": "5c83ad3ef86f405de9bf636a5a62232756a4db05cf17237657cbe9d76b56d16c",
+    "capture_state_sha256": "04d024d0db8bcb9288a23496dd2c4369a4268179f8da05d0ef8b8b249ce2dc53",
+    "source_count": 2,
+    "parameter_binding_count": 1,
+    "detector_count": 1,
+    "common_coherence_group": "common",
+    "phase_reference": "launch",
+    "wavelength_BU": {
+      "numerator": 1,
+      "denominator": 8
+    },
+    "metres_per_BU": {
+      "numerator": 8589935,
+      "denominator": 8589934592
+    },
+    "declared_wavelength_metres": {
+      "numerator": 8589935,
+      "denominator": 68719476736
+    },
+    "scale_status": "SCENE_DISPLAY_SCALE_ONLY",
+    "reference_power_watt": null,
+    "units_and_coherence_admitted": true,
+    "optical_forward_executed": false,
+    "training_executed": false,
+    "field_certified": false,
+    "physical_calibration_verified": false,
+    "physical_optics_certified": false
+  }
+}

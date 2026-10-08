@@ -7,6 +7,11 @@ concreta identidad/completitud/campo/decisión y añade el antecedente OptiBench
 Se publica un hito de formulación y revisión dirigida; la novedad sigue sin establecerse,
 el piloto sigue preparado y el proyecto completo permanece abierto.
 
+Se añade [contrato coherente ejecutable](OPTIC_NEURO_BLENDER_COHERENT_CONTRACT_2026-10-08.md):
+50 controles CPU y admisión en Blender del Iris real, con semántica explícita de
+unidades/portadora/fase/parámetros/detectores. La prioridad actual 2 tiene cierre
+parcial de software; no cierra los antiguos puntos de forward/RT/cotas/entrenamiento.
+
 El propietario confirmó el 2026-10-08 el orden siguiente. Se conservan los cierres históricos 1–6 y el mapa original de 26 puntos. Esta secuencia nueva empieza por formular la aportación y revisar antecedentes antes del trazador RT, siguiendo la prioridad científica indicada.
 
 | Nuevo punto | Trabajo | Punto(s) original(es) | Estado |
