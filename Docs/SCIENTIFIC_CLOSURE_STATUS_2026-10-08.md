@@ -16,7 +16,7 @@ Actualización de alcance 2026-10-08 por decisión expresa del propietario: Blen
 | 8 | Supervisión y ramas defensivas restantes | ABIERTO |
 | 9 | Reproducción integral desde checkout limpio | ABIERTO |
 | 10 | Flujos interactivos y reconciliación documental | ABIERTO |
-| 11 | Contribución central falsable | ABIERTO; obligatorio antes de escalado/fabricación |
+| 11 | Contribución central falsable | CERRADO como formulación de pregunta/H1, utilidad y refutación; [contrato](CONTRIBUTION_AND_FALSIFICATION_2026-10-08.md). Hipótesis y novedad sin confirmar |
 | 12 | Revisión sistemática y novedad | ABIERTO |
 | 13 | Expresividad, no linealidad, estabilidad y límites | ABIERTO |
 | 14 | Generalización con incertidumbre | ABIERTO |
@@ -39,4 +39,4 @@ Punto 6: [resultados, alcance y recibos](IRIS_NATIVE_CIRCUIT_RESULTS_2026-10-08.
 
 Punto 7: [preparación Unreal histórica preservada](UNREAL_RT_READINESS_2026-10-08.md) y [nuevos ensayos RT en Blender](BLENDER_SCIENTIFIC_ROADMAP_2026-10-08.md). El propietario retiró expresamente Unreal del alcance; la consulta sobre ubicación del motor ya no es necesaria. Se preservan recibos y fuentes; el transporte RT coherente sigue abierto.
 
-Regla de ejecución: no elevar un resultado CPU a GPU, una simulación a medición física ni una publicación propia a reproducción independiente. Conservar intentos negativos y criterios preregistrados. Si un punto no satisface sus criterios, permanece abierto y se resuelve antes de declarar el siguiente cerrado.
+Regla de ejecución: no elevar un resultado CPU a GPU, una simulación a medición física ni una publicación propia a reproducción independiente. Conservar intentos negativos y criterios preregistrados. Si un punto no satisface sus criterios, permanece abierto. El propietario ha solicitado ahora [una nueva secuencia](SEQUENTIAL_RESEARCH_PROGRESS_2026-10-08.md): formulación, antecedentes y después trazador Blender; esa instrucción sustituye el orden anterior.

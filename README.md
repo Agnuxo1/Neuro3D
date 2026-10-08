@@ -6,10 +6,34 @@
 
 ![Estado del proyecto](https://img.shields.io/badge/estado-experimental%20%7C%20render%20verificado-6f42c1)
 ![Blender](https://img.shields.io/badge/Blender-4.5%20LTS-e87d0d)
-![Unreal Engine](https://img.shields.io/badge/Unreal%20Engine-5.6%20plugin%20preparado-6e4c9b)
+![Investigación](https://img.shields.io/badge/investigaci%C3%B3n-hip%C3%B3tesis%20falsable-6e4c9b)
 ![Licencia](https://img.shields.io/badge/licencia-MIT-2ea44f)
 
 ## Estado consolidado
+
+La agenda científica del 8 de octubre utiliza Blender como laboratorio principal;
+Unreal queda como referencia histórica por decisión del propietario.
+Consulta [los cierres y su alcance](Docs/SCIENTIFIC_CLOSURE_STATUS_2026-10-08.md),
+el [plan completo](Docs/BLENDER_SCIENTIFIC_ROADMAP_2026-10-08.md) y la
+[nueva secuencia de investigación](Docs/SEQUENTIAL_RESEARCH_PROGRESS_2026-10-08.md).
+
+## Pregunta científica y progreso verificable
+
+![Pregunta y criterio de refutación](Docs/assets/certified-coherent-research-question.svg)
+
+Se ha [formulado la aportación candidata](Docs/CONTRIBUTION_AND_FALSIFICATION_2026-10-08.md):
+transporte coherente desde geometría real con certificados de error utilizables.
+Un certificado falso verificado refutaría la hipótesis; rechazar todos los casos
+no demostraría utilidad. La novedad y la ejecución RT completa permanecen pendientes.
+El esquema muestra el método propuesto, no un resultado experimental.
+
+Los cierres anteriores incluyen 20 consultas first-hit GPU, referencia multicamino
+CPU exacta/certificada y el circuito Iris completo en GPU con 450 acuerdos con
+la referencia independiente. Los 450 acuerdos no son 450 clasificaciones correctas;
+el test histórico conserva 29/30. No acreditan recorrido completo de triángulos RT,
+generalización nueva, ventaja energética ni un dispositivo fotónico físico.
+
+## Consolidación histórica
 
 La integración del 6 de octubre reúne los avances locales del motor y las
 correcciones públicas de Iris. Consulta el [estado técnico y sus límites](Docs/PROJECT_STATUS_2026-10-06.md)
@@ -47,8 +71,8 @@ La reconstrucción actual contiene:
 - **Oracle CPU**: referencia determinista, reproducible y ejecutable sin GPU.
 - **Blender**: gates híbridos de raycast y campos, más el demostrador EEVEE
   ejecutado en GPU. La vista previa CPU y el contrato GPU antiguo se conservan.
-- **Unreal Engine**: plugin `SantoGrialPhotonic` con ciclo RDG y compute shaders;
-  su compilación real queda pendiente de disponer de UE 5.6.
+- **Unreal Engine histórico**: plugin `SantoGrialPhotonic` con ciclo RDG y compute
+  shaders preservado; su compilación no está acreditada y ya no es requisito.
 
 ## Vista de arquitectura
 
@@ -108,7 +132,10 @@ conservan en el historial, sin convertirlos retrospectivamente en éxitos.
 Consulta [la auditoría independiente de EXP-004 conf1](Docs/EXP-004-CONF1-INDEPENDENT-AUDIT-2026-09-29.md).
 Estos gates no validan óptica física ni el transporte geométrico del nuevo shader.
 
-## Versión Unreal Engine
+## Versión Unreal Engine histórica
+
+Ruta preservada para trazabilidad; retirada de los requisitos por el propietario.
+Las decisiones del plugin descritas debajo pertenecen a esa ruta histórica.
 
 El plugin está en `Plugins/SantoGrialPhotonic`. Implementa una primera rebanada
 vertical con:
@@ -138,7 +165,7 @@ credenciales— permanecen fuera del release mediante `.gitignore`.
 | Pilotos OpenGL nativos | Evidencia local K3/K4 y nearest V2; alcance geométrico acotado |
 | Precisión hi/lo | Verificación CPU; nueva integración nativa pendiente |
 | RT coherente completo | Pendiente; piloto geométrico parcial conservado |
-| Unreal 5.6 | Compilación y paridad reales pendientes |
+| Unreal 5.6 histórico | Compilación/paridad no acreditadas; ya no es requisito |
 | Hardware fotónico | Sin medición física establecida |
 
 Los informes y los límites de reproducción están enlazados en el
