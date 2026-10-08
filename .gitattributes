@@ -61,3 +61,4 @@ Docs/validation/robust-first-hit-native-2026-10-08/** -text !eol whitespace=cr-a
 Docs/validation/robust-multipath-2026-10-08/** -text !eol whitespace=cr-at-eol
 Docs/validation/multipath-error-2026-10-08/** -text !eol whitespace=cr-at-eol
 Docs/validation/path-operation-proofs-2026-10-08/** -text !eol whitespace=cr-at-eol
+Docs/validation/iris-native-circuit-2026-10-08/** -text !eol whitespace=cr-at-eol
