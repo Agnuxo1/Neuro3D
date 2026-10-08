@@ -56,6 +56,12 @@ frente al modelo canónico. El control antiguo conserva esas decisiones pero vio
 la precisión de campo: coincidir en clases no basta. Este análisis CPU reutiliza
 datos GPU históricos; no es un nuevo ensayo ni certifica recorrido de triángulos.
 
+El [puente al plano racional archivado](Docs/PLANNED_GEOMETRY_RETROSPECTIVE_LINKAGE_2026-10-08.md)
+comprueba su topología exacta y acota la diferencia de fase debida a π representado.
+Al combinarlo con los readbacks históricos, el campo queda en ≤1.304e-13 y las
+450 decisiones siguen certificadas para ese plano. La captura real Blender y
+el recorrido nativo de triángulos permanecen pendientes.
+
 Los cierres anteriores incluyen 20 consultas first-hit GPU, referencia multicamino
 CPU exacta/certificada y el circuito Iris completo en GPU con 450 acuerdos con
 la referencia independiente. Los 450 acuerdos no son 450 clasificaciones correctas;
