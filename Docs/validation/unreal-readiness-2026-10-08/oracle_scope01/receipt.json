@@ -1,0 +1,31 @@
+{
+  "schema": "neuro3d.unreal.oracle_scope_counterexample.v1",
+  "status": "COUNTEREXAMPLE_REPRODUCED",
+  "legacy_CPU_output_intensity": 2.0,
+  "algebraic_shader_expected_output_intensity": 1.0,
+  "input": {
+    "source_intensity": 1.0,
+    "source_activation": 1.0,
+    "source_color": [
+      2.0,
+      0.0,
+      0.0
+    ],
+    "phase": 0.0,
+    "frequency": 0.0,
+    "weight": 1.0,
+    "delay": 0.0,
+    "dt": 0.125,
+    "attenuation": 0.0,
+    "threshold": 0.25
+  },
+  "GPU_execution": false,
+  "Unreal_compilation": false,
+  "runtime_parity_verified": false,
+  "finding": "Existing CPU oracle and HLSL implement different color normalization; they cannot certify all-field parity without alignment or a versioned reference.",
+  "source_sha256": {
+    "Tools/check_unreal_oracle_scope_v1.py": "134282cf35d2c149aa2c512395b6f9373be2d7a8d8ef0b7229719287b957cb3e",
+    "Plugins/SantoGrialPhotonic/Tests/photonic_reference.py": "a65b2f4f0ec827efd8c74e97ce2f935004f410e7e615da8986622bce32ac7814",
+    "Plugins/SantoGrialPhotonic/Shaders/SantoGrialPhotonic.usf": "f0760093d51aac98e2e485ee3a3eea6c0b1ce05f9b034945c238ff4959c3647c"
+  }
+}
