@@ -89,7 +89,9 @@ Resultados de esta mejora:
 
 Un intento de captura adicional fue detenido antes de lanzar Blender por el umbral de RAM libre; se conservó el rechazo y no se redujo el guard. Las comprobaciones ejecutadas utilizaron un solo hilo, sin GPU, con timeout y límites de memoria. Sus tiempos son costes de comprobación de software, no benchmarks de inferencia.
 
-Las preimágenes distinguen las revisiones ejecutadas: la última fuente añade una negativa explícita para instancias enlazadas de otra biblioteca. El reintento en Blender de esa revisión quedó sin ejecutar por RAM, mientras que sus controles unitarios sí están registrados. Los controles Blender publicados acreditan el recorrido local anterior; no se declara ejercitada la nueva negativa de bibliotecas.
+Las preimágenes distinguen las revisiones ejecutadas. Los reintentos anteriores sin RAM permanecen archivados como no ejecutados. Al reanudar, la fuente vigente se ejecutó realmente en Blender: se ejercitaron las negativas tanto de objetos como de instancias enlazadas de otra biblioteca, incluyendo colisión de nombres con un objeto local. Se conservó también la identidad al guardar/reabrir.
+
+La CLI de captura con el contrato Iris se ejecutó directamente en Blender y obtuvo la misma huella de estado que la resolución previa sobre el archivo exportado: `8624d661252f143653f5b32c744cb7e6b23f71119253d7ad64510bbf1aa1a943`. Es equivalencia de datos y direcciones, sin cálculo óptico ni entrenamiento nuevos. [Recibos y preimágenes de la reanudación](validation/blender-lab-capture-2026-10-08/resume01/artifact_index.json).
 
 Comprobaciones de software regenerables:
 

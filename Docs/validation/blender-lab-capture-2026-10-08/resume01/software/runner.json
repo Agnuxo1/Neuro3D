@@ -1,0 +1,34 @@
+{
+  "command": [
+    "D:\\TOOLS\\Blender\\blender-4.5.14-windows-x64\\blender.exe",
+    "-b",
+    "--factory-startup",
+    "--disable-autoexec",
+    "-t",
+    "1",
+    "-noaudio",
+    "--python-exit-code",
+    "3",
+    "--python",
+    "D:\\PROJECTS\\Neuro3D-Scientific-20261008\\Blender\\tests\\blender_lab_capture_smoke_v1.py",
+    "--",
+    "D:\\PROJECTS\\.cognition\\neuro3d-sequential-20261008\\capture-software-resume01"
+  ],
+  "exit_code": 0,
+  "stopped": null,
+  "peak_rss_mib": 133.03125,
+  "elapsed_seconds": 10.394694000000072,
+  "source_sha256": {
+    "Blender\\blender_lab\\__init__.py": "8c93d859b2364fdd697db5fc3234c0406e2a01cbcceb9c6b05a72b92996f372f",
+    "Blender\\blender_lab\\bos_adapter_v1.py": "83409838de0f7d71c623be729f0d4b8f754705f271161c2b429fbbd2ccf770e5",
+    "Blender\\blender_lab\\export_scene_v1.py": "d2c60bd956df8511a79d6f333446b736fc8633acad52fef2f2cf075d77e43fb0",
+    "Blender\\blender_lab\\scene_capture_v1.py": "fe676b61a9e743277d69b54890688555a604f659c7f23ee223703b907ad8a2d0",
+    "Blender\\tests\\blender_lab_capture_smoke_v1.py": "56f762e8b046e4d1bd03c1d2694def96f3ab5709820b949c23daba92516c5999"
+  },
+  "sources_unchanged": true,
+  "gpu_requested": false,
+  "optical_forward_requested": false,
+  "training_requested": false,
+  "source_scene_sha256": null,
+  "network_contract_sha256": null
+}
