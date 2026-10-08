@@ -1,0 +1,35 @@
+{
+  "schema": "neuro3d.iris_lattice.native_job.v1",
+  "expected_backend": "OPENGL",
+  "expected_renderer_contains": "RTX 3090",
+  "limits": {
+    "samples": 150,
+    "cells": 16,
+    "modes": 8,
+    "dispatches": 3,
+    "output_row_words": 128
+  },
+  "assets": {
+    "trained_path": "Blender/demo_lattice_iris/trained_lattice.json",
+    "trained_sha256": "938e4f0a1fa5466f29829d856b17a47316378c6b65e1b99033c6f68347262fce",
+    "dataset_path": "Blender/demo_lattice_iris/iris.csv",
+    "dataset_sha256": "9cc1c345c71bcc9b486b74cbf6063fa66f4bb5e0f603a4b3c3471ec2e5e8e355"
+  },
+  "cases": [
+    {
+      "case_id": "baseline",
+      "packet_path": "Docs/validation/iris-native-circuit-2026-10-08/inputs02/baseline.packet.json",
+      "packet_sha256": "80893b00c860ad1c10856e6de0511def8081c983b7942a46346f394ff0767982"
+    },
+    {
+      "case_id": "phase",
+      "packet_path": "Docs/validation/iris-native-circuit-2026-10-08/inputs02/phase.packet.json",
+      "packet_sha256": "ebd7367bfb5d547cdbd9e4a27e7823cc85c95556c7be2a21f8463db1ce7400b4"
+    },
+    {
+      "case_id": "sham",
+      "packet_path": "Docs/validation/iris-native-circuit-2026-10-08/inputs02/sham.packet.json",
+      "packet_sha256": "80893b00c860ad1c10856e6de0511def8081c983b7942a46346f394ff0767982"
+    }
+  ]
+}
