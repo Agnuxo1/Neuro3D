@@ -1,0 +1,59 @@
+{
+  "schema": "optic_neuro_blender.installed_native_audit.v1",
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "actual_isolated_zip_install_and_registration",
+      "pass": true,
+      "manifest_files": 33
+    },
+    {
+      "name": "actual_background_blender_inference_all150",
+      "pass": true,
+      "power_max_difference": 0.0,
+      "worker_blender_version": "4.5.14 LTS"
+    },
+    {
+      "name": "changed_input_stale_rejected",
+      "pass": true
+    },
+    {
+      "name": "changed_scene_stale_rejected",
+      "pass": true
+    },
+    {
+      "name": "actual_blender_owned_cancel_and_evidence",
+      "pass": true,
+      "result_collected": false
+    },
+    {
+      "name": "actual_training_inside_background_blender",
+      "pass": true,
+      "states": 61,
+      "initial_loss": 6.255440538348521,
+      "final_loss": 0.30970667211199093,
+      "test_correct": 27,
+      "power_difference_from_earlier_runtime": 0.0,
+      "native_power_difference": 0.0
+    },
+    {
+      "name": "completed_training_recovery_and_atomic_apply",
+      "pass": true
+    },
+    {
+      "name": "new_copy_reopen_and_original_preserved",
+      "pass": true
+    },
+    {
+      "name": "modified_result_receipt_rejected",
+      "pass": true
+    }
+  ],
+  "profile_sha256": "21765d91490a84a4b45269c2c919e5a1a970e431e8ab1bd699ec1256982132ee",
+  "archive_sha256": "2e247000af5cdbc88c6fe43c6d6dae454c8a6bfb92a68c5766a9d7be7fd7903f",
+  "manifest_sha256": "f2ec0bbbfdff30dfa68308ca66e5010188fb006fd8face844d4f2e44ab1cce7d",
+  "blender_version": "4.5.14 LTS",
+  "seconds": 727.9949693999952,
+  "original_example_preserved": true,
+  "scope": "Actual isolated local Blender ZIP installation and own registered operators, background inference/training, cancellation, stale rejection, completed-job recovery and copy/reopen. Headless automation is not human UI usability, outside expert replication, physical calibration or AMD GPU execution."
+}

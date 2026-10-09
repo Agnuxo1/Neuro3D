@@ -1,0 +1,29 @@
+{
+  "events": [
+    {
+      "t": "2026-10-09T05:20:28",
+      "ev": "enqueue",
+      "name": "Neuro3D:trained-graph-cuda-v1-20261009",
+      "pid": 15636,
+      "vram": 4.0,
+      "ram": 8.0
+    },
+    {
+      "t": "2026-10-09T05:20:36",
+      "ev": "start",
+      "name": "Neuro3D:trained-graph-cuda-v1-20261009",
+      "pid": 15636,
+      "waited_min": 0.1
+    },
+    {
+      "t": "2026-10-09T05:20:44",
+      "ev": "end",
+      "name": "Neuro3D:trained-graph-cuda-v1-20261009",
+      "pid": 15636,
+      "rc": 0,
+      "minutes": 0.3
+    }
+  ],
+  "queue_source_sha256": "6d687c7c3bb09c0aad8b9762377817aa4b489e57a1efdc4d397aaf2656d20c5d",
+  "holder_absent_after_completion": true
+}

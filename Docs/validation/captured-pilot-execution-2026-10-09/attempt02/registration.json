@@ -1,0 +1,12 @@
+{
+  "schema": "optic_neuro_blender.pilot_registration.v1",
+  "kind": "HUMAN_GITHUB_EXCEPTION",
+  "proposal_id": "957514f2-a233-421f-aa04-50cccd063d97",
+  "protocol_sha256": "5d0cf372f2f66f043c2a219ba6a60f0182ced8a60039348d486ec163be736226",
+  "protocol_commit": "f22e7a1307e3a3b4c74a507463a0a8055d45fc04",
+  "approved": true,
+  "evidence_origin": "DIRECT_HUMAN_USER_MESSAGE_VERIFIED_BY_OPERATOR",
+  "evidence_reference": "Current Codex chat, direct human message received 2026-10-09 Europe/Madrid: Vamos a trabajar en las dos vías: Autorizo el protocolo congelado en GitHub o Mantener registro externo/IPFS. Both routes are authorized; GitHub exception applies to the already frozen pilot. External registration remains a separate objective and is not claimed obtained.",
+  "preregId": null,
+  "ipfsCid": null
+}

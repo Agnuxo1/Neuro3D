@@ -1,0 +1,198 @@
+{
+ "task_id": "PRECISION-006-followup-reduction",
+ "status": "complete",
+ "timestamp_utc": "2026-09-30T16:25:11+00:00",
+ "requested_by": "tablon 16:11/16:23 (MISMA critica CPU de precision/espectral; sin barrido ni guard review; no toca 006)",
+ "scope": "CPU proxy aritmetico de la expresion GLSL retenida + referencia racional exacta; NO GPU/shader/FMA/libm; sin instalaciones; no cambio de shaders ni umbrales",
+ "input_sha256": {
+  "Docs/EXP-005-PHASE-REDUCTION-CPU-2026-09-30.md": "4daa4f6dc33e83dbae475da359e7161b7b2402259121a791a388f11ab58c9a22",
+  "Blender/tests/exp005_phase_reduction_cpu_audit.py": "3569f1a95966dcdfe272f52007a1cc97fd548ae32132b39472e5b906b3d9e09e"
+ },
+ "artifacts": {
+  "b_reduction.py": "D:/PROJECTS/.cognition/neuro3d/precision006_claude/b_reduction.py",
+  "b_reduction.json": "D:/PROJECTS/.cognition/neuro3d/precision006_claude/b_reduction.json"
+ },
+ "artifact_sha256": {
+  "b_reduction.py": "9ce55ccb3fab0bc434635424a4f9f5e912ca141282454422a97390fdd7203952",
+  "b_reduction.json": "524405afc15861cacd44604346cec9b2e84ccfc7a31516c46348a1446e47d31f"
+ },
+ "reproduced": "los casos de Codex se reproducen con mi propio proxy: lambda 2^-20 phase-first 4,93e-4 / cycles-first 4,4e-8; lambda 2^-30 0,426 / 4,4e-8; control 0,125 exacto.",
+ "cases": [
+  {
+   "label": "CONTROL lambda 0,125 (potencia de 2), L=1000001,875",
+   "lambda": 0.125,
+   "L_BU": 1000001.875,
+   "N_waves": 8000015.0,
+   "phase_first_unit_err": 0.0,
+   "cycles_first_unit_err": 0.0
+  },
+  {
+   "label": "Codex: lambda 2^-20 (potencia de 2), L~1e6",
+   "lambda": 9.5367431640625e-07,
+   "L_BU": 1000001.8750002384,
+   "N_waves": 1048577966080.25,
+   "phase_first_unit_err": 0.0004927357001188357,
+   "cycles_first_unit_err": 4.371139006309476e-08
+  },
+  {
+   "label": "Codex: lambda 2^-30 (potencia de 2), L~1e6",
+   "lambda": 9.313225746154785e-10,
+   "L_BU": 1000001.8750000002,
+   "N_waves": 1073743837265920.2,
+   "phase_first_unit_err": 0.42591683031859245,
+   "cycles_first_unit_err": 4.371139006309476e-08
+  },
+  {
+   "label": "NUEVO adversario diadico exacto: lambda 3*2^-20 (float32 exacto, hi=lambda, lo=0), L~1e6",
+   "lambda": 2.86102294921875e-06,
+   "L_BU": 1000001.8750002384,
+   "N_waves": 349525988693.4167,
+   "phase_first_unit_err": 7.395611647755705e-05,
+   "cycles_first_unit_err": 0.00012774600133864833
+  },
+  {
+   "label": "NUEVO adversario diadico exacto: lambda 5*2^-24 (float32 exacto), L~3e5",
+   "lambda": 2.980232238769531e-07,
+   "L_BU": 300000.3125,
+   "N_waves": 1006634008576.0,
+   "phase_first_unit_err": 0.0,
+   "cycles_first_unit_err": 0.0
+  },
+  {
+   "label": "NUEVO: lambda 3*2^-20, L moderado 1000 (N~3e8)",
+   "lambda": 2.86102294921875e-06,
+   "L_BU": 1000.0625,
+   "N_waves": 349547178.6666667,
+   "phase_first_unit_err": 5.828185356548942e-08,
+   "cycles_first_unit_err": 1.8013672553607283e-07
+  }
+ ],
+ "sweep_worst_unit_error_by_N": {
+  "potencia_de_2": [
+   {
+    "N_waves_1e": 6,
+    "samples": 80,
+    "phase_first_worst": 1.1504877983625754e-07,
+    "cycles_first_worst": 1.1504877983625754e-07
+   },
+   {
+    "N_waves_1e": 7,
+    "samples": 80,
+    "phase_first_worst": 1.1809851718780344e-07,
+    "cycles_first_worst": 1.1809851718780344e-07
+   },
+   {
+    "N_waves_1e": 8,
+    "samples": 80,
+    "phase_first_worst": 1.784168199847611e-07,
+    "cycles_first_worst": 1.0430821895113235e-07
+   },
+   {
+    "N_waves_1e": 9,
+    "samples": 80,
+    "phase_first_worst": 1.336883728164551e-06,
+    "cycles_first_worst": 1.0586631304931865e-07
+   },
+   {
+    "N_waves_1e": 10,
+    "samples": 80,
+    "phase_first_worst": 1.347923256379345e-05,
+    "cycles_first_worst": 1.1900976470968765e-07
+   },
+   {
+    "N_waves_1e": 11,
+    "samples": 80,
+    "phase_first_worst": 0.00010853132852120173,
+    "cycles_first_worst": 1.1501173258210422e-07
+   },
+   {
+    "N_waves_1e": 12,
+    "samples": 80,
+    "phase_first_worst": 0.0009594511510675196,
+    "cycles_first_worst": 1.161671812077713e-07
+   },
+   {
+    "N_waves_1e": 13,
+    "samples": 80,
+    "phase_first_worst": 0.014622404755683835,
+    "cycles_first_worst": 1.1185434178884174e-07
+   },
+   {
+    "N_waves_1e": 14,
+    "samples": 80,
+    "phase_first_worst": 0.09813534865483614,
+    "cycles_first_worst": 1.139921543824584e-07
+   }
+  ],
+  "float32_general": [
+   {
+    "N_waves_1e": 6,
+    "samples": 80,
+    "phase_first_worst": 1.3493544948062208e-08,
+    "cycles_first_worst": 1.3493544948062208e-08
+   },
+   {
+    "N_waves_1e": 7,
+    "samples": 80,
+    "phase_first_worst": 1.2245852154535434e-07,
+    "cycles_first_worst": 1.1907655173004621e-07
+   },
+   {
+    "N_waves_1e": 8,
+    "samples": 80,
+    "phase_first_worst": 2.725465697572807e-07,
+    "cycles_first_worst": 1.4859092889452072e-07
+   },
+   {
+    "N_waves_1e": 9,
+    "samples": 80,
+    "phase_first_worst": 1.1109218176485453e-06,
+    "cycles_first_worst": 4.5778963730924313e-07
+   },
+   {
+    "N_waves_1e": 10,
+    "samples": 80,
+    "phase_first_worst": 9.364987240322504e-06,
+    "cycles_first_worst": 5.838178151576536e-06
+   },
+   {
+    "N_waves_1e": 11,
+    "samples": 80,
+    "phase_first_worst": 0.0001296597569468897,
+    "cycles_first_worst": 4.793086177364557e-05
+   },
+   {
+    "N_waves_1e": 12,
+    "samples": 80,
+    "phase_first_worst": 0.0011866306606034955,
+    "cycles_first_worst": 0.0003805028630799652
+   },
+   {
+    "N_waves_1e": 13,
+    "samples": 80,
+    "phase_first_worst": 0.01072216734901039,
+    "cycles_first_worst": 0.00611736682993057
+   },
+   {
+    "N_waves_1e": 14,
+    "samples": 80,
+    "phase_first_worst": 0.13174780936644795,
+    "cycles_first_worst": 0.04895557884490582
+   }
+  ]
+ },
+ "findings": [
+  "F1 (nuevo adversario diadico EXACTO): lambda=3*2^-20 es float32-exacta (hi=lambda, lo=0, error de transporte cero) y no es potencia de 2. Con L~1e6 BU (N=3,5e11): phase-first 7,4e-5 (pasa 1e-4) y cycles-first 1,28e-4 (FALLA): cycles-first puede ser PEOR que phase-first con transporte exacto. Con L moderado 1000 (N~3e8) ambos ~1e-7.",
+  "F2 (por que cycles-first \"mejora\" en los casos de Codex): con lambda potencia de 2 el cociente L/lambda es EXACTO en binary64 (solo cambia el exponente), asi que cycles-first solo conserva el redondeo float32 del angulo (~1,2e-7): en el barrido con lambda potencia de 2 su error es ~1,1e-7 hasta N=1e14, mientras phase-first cruza 1e-4 en N=1e11 y llega a 0,098 en 1e14. Es un artefacto de la potencia de 2, no una propiedad general.",
+  "F3 (lambda float32 general, tambien exactamente transportable): ambos fallan por el cociente/producto binario64 con error relativo ~1e-16 sobre N ondas: phase-first cruza 1e-4 en N=1e11 (1,3e-4) y cycles-first solo en N=1e12 (3,8e-4; 4,8e-5 a 1e11): ganancia de un factor ~3-10 en el dominio, no una solucion; a N=1e14 ambos dan 0,13 y 0,049 rad.",
+  "F4 (consecuencia para el contrato): el dominio seguro depende de N=L/lambda, no del orden de reduccion; con presupuesto de campo 1e-4 hace falta N_max ~ 5e10 para phase-first y ~1e11 para cycles-first con lambda general (cifras de este barrido, 80 muestras por celda, no cotas demostradas). Un N_max independiente del orden y del tipo de lambda (p.ej. el del helper de escena, con el error real del argumento binario64: 2*pi*N*2^-53) es el gate correcto antes de cualquier parche.",
+  "F5 (fuera de lo que el proxy prueba): el error del angulo float32 (~1,2e-7 rad) domina cuando la reduccion es exacta; sin/cos float32 del driver, FMA y contraccion de expresiones no se han modelado: no atribuir estas cifras a la GPU ni invalidar K3/K4 pequenos (N ~ 1e2..1e3).",
+  "F6 (propuesta NO implementada ni probada): reduccion compensada sin cambiar lambda transportado: q=L/lambda, r=fma(-q, lambda, L)/lambda, frac(q)+r con dos productos de Dekker si no hay FMA; o split hi/lo de L. Requiere contrato propio, tests con este barrido y verificacion GPU; no se propone tocar el shader congelado."
+ ],
+ "limits": [
+  "proxy aritmetico, no shader",
+  "80 muestras por celda de N; cifras de peor caso empirico, no cotas",
+  "L acotada a [1e5,1e6] BU en el barrido; lambda potencia de 2 en 2^-30..2^-4 o float32 general"
+ ],
+ "no_jev_aval": true
+}

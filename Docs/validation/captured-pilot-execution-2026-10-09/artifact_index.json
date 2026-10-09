@@ -1,0 +1,83 @@
+{
+  "schema": "optic_neuro_blender.authorized_pilot_attempt_index.v1",
+  "files": [
+    {
+      "path": "attempt01/supervisor.json",
+      "bytes": 1959,
+      "sha256": "690510a932d4d7640e49b7dc2c3aec521e3d93e30b5871ec5a89db03cfb7ee4d"
+    },
+    {
+      "path": "attempt02/audit_captured_pilot_result_v1.py",
+      "bytes": 9836,
+      "sha256": "a3f683ab11aa07eb52aefb4046ba89516321bb175ef01697c39131234b3ac686"
+    },
+    {
+      "path": "attempt02/bind_network_capture_v1.py",
+      "bytes": 2085,
+      "sha256": "af3bdbc41636214f01c2078ce26bd271794fa763ccefecd2a006f1014d2f117b"
+    },
+    {
+      "path": "attempt02/frozen/fields_admission_only.json",
+      "bytes": 143,
+      "sha256": "ef8dfdcd26a9ad01afd20ca3ebbaab75d5f74ebcee1572c308a959f081849589"
+    },
+    {
+      "path": "attempt02/frozen/pilot_protocol_prepared.json",
+      "bytes": 4335,
+      "sha256": "5d0cf372f2f66f043c2a219ba6a60f0182ced8a60039348d486ec163be736226"
+    },
+    {
+      "path": "attempt02/frozen/scene.json",
+      "bytes": 1184286,
+      "sha256": "59963192f88df24bf5b1d7fd2f8119a81a0ecad353f62ee16831ccfb98627097"
+    },
+    {
+      "path": "attempt02/frozen/semantics.json",
+      "bytes": 11610,
+      "sha256": "bcd17460a49dbbe244997638b056dc5dfcf544f2bc2b59c3f18ce9edb2569336"
+    },
+    {
+      "path": "attempt02/frozen/source/Blender/benchmarks/capacity_audit/robust_multipath_v1.py",
+      "bytes": 16662,
+      "sha256": "7339cdbedf2838607f132c806b22a3c79cb00f64531129efbf2914c957c9e1e0"
+    },
+    {
+      "path": "attempt02/frozen/source/Blender/benchmarks/capacity_audit/trace_exact_scene_v1.py",
+      "bytes": 2331,
+      "sha256": "add601f017eb42e1ca4e4a5349f5d6d24dc38e7f896f139f237c520cb492f2d5"
+    },
+    {
+      "path": "attempt02/registration.json",
+      "bytes": 813,
+      "sha256": "851012c61284358158588da4e64ba5f3609628c95db2eb69cb5978cc76bf6abc"
+    },
+    {
+      "path": "attempt02/run_captured_scalar_pilot_v1.py",
+      "bytes": 10897,
+      "sha256": "dc12e5c631e9e7db2c6ce84460d4467862162093826de0b2ee3801cbe920df02"
+    },
+    {
+      "path": "attempt02/supervisor.json",
+      "bytes": 3963,
+      "sha256": "164505276372419107cbfd9e44deddc71e0d3f1354360bc20efd0b1a7a4d4955"
+    },
+    {
+      "path": "attempt02/worker/stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "source/Tools/audit_captured_pilot_result_v1.py",
+      "bytes": 9836,
+      "sha256": "a3f683ab11aa07eb52aefb4046ba89516321bb175ef01697c39131234b3ac686"
+    },
+    {
+      "path": "source/Tools/run_captured_scalar_pilot_v1.py",
+      "bytes": 10897,
+      "sha256": "dc12e5c631e9e7db2c6ce84460d4467862162093826de0b2ee3801cbe920df02"
+    }
+  ],
+  "worker_started": true,
+  "primary_metric": null,
+  "outcome": "WORKER_DEADLINE_90_SECONDS"
+}

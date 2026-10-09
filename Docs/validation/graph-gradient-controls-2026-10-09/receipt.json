@@ -1,0 +1,19 @@
+{
+  "command": [
+    "C:\\Python313\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "Blender.tests.test_coherent_state_graph_v1",
+    "Blender.tests.test_geometric_network_v1",
+    "-v"
+  ],
+  "returncode": 0,
+  "test_count": 17,
+  "actual_blender_training_executed": false,
+  "graph_controls": 8,
+  "forward_jacobian_controls": 9,
+  "initial_graph_control_error": "Native-float test geometry not encoded as exact rational wire; test codec corrected; auditor remained strict.",
+  "scope": "Synthetic software controls; independent analytic fields, centered difference gradients and plane/Gram nearest-hit audit"
+}

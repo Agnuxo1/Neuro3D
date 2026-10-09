@@ -1,0 +1,203 @@
+{
+ "task_id": "PRECISION-005",
+ "status": "complete",
+ "timestamp_utc": "2026-09-30T09:52:36+00:00",
+ "reviewer": "Claude (local)",
+ "scope": "CPU un hilo, float64 sintetico; sin GPU/Blender; sin editar archivos de Codex; NO es readback Blender ni JEV",
+ "input_sha256": {
+  "Docs/EXP-005-LOCAL-FRAME-CPU-2026-09-30.md": "b0f22b3e6ec55dcbbe06653c20bc8e0ed54e8d60715852a4608546563dbeb0c6",
+  "Blender/benchmarks/capacity_audit/local_frame_v1.py": "ae44c544af3480418ae29c838b409956395f5a62f8adf726fc1f6dbd3c0a3cf7",
+  "Blender/tests/exp005_precision_transport_audit.py": "9fee9688f41ac39ae4b2d97003d86f4f4f3f8483e07dc781b77e0a545acc6e4a",
+  "Blender/tests/exp005_local_frame_audit.py": "39a180fbc024de5b242782615166e8b1cd3ea60db57371976d3e8b06c315c579",
+  "Blender/tests/exp005_modal_coverage_audit.py": "4bb001ed16665fe58b9cef9923077effff04404ec35cd4010e61748ec1b4443f"
+ },
+ "commands": [
+  "python a_frames.py",
+  "python b_selfhit_retained.py",
+  "python c_local_residual.py",
+  "python d_folded.py"
+ ],
+ "artifacts": {
+  "a_frames.py": "D:/PROJECTS/.cognition/neuro3d/precision005_claude/a_frames.py",
+  "a_frames.json": "D:/PROJECTS/.cognition/neuro3d/precision005_claude/a_frames.json",
+  "b_selfhit_retained.py": "D:/PROJECTS/.cognition/neuro3d/precision005_claude/b_selfhit_retained.py",
+  "b_selfhit_retained.json": "D:/PROJECTS/.cognition/neuro3d/precision005_claude/b_selfhit_retained.json",
+  "c_local_residual.py": "D:/PROJECTS/.cognition/neuro3d/precision005_claude/c_local_residual.py",
+  "c_local_residual.json": "D:/PROJECTS/.cognition/neuro3d/precision005_claude/c_local_residual.json",
+  "d_folded.py": "D:/PROJECTS/.cognition/neuro3d/precision005_claude/d_folded.py",
+  "d_folded.json": "D:/PROJECTS/.cognition/neuro3d/precision005_claude/d_folded.json",
+  "artifact_sha256": {
+   "a_frames.py": "7950d092e4d674b30b2d0259d3733a57a86511824e80e12d7e990e5b3dc12b23",
+   "a_frames.json": "9b33ac9dcd79305c4334e870f555ff53c8d8d3f4f1d340056aff19cc003411ce",
+   "b_selfhit_retained.py": "9e81b0f7f90fb6903a1809e13f1e74824a4cf1b71e0672cea23acd8b8b9933e3",
+   "b_selfhit_retained.json": "92c7ab54281eb2136109f895396369e3962cc9af42b191fcea2a3f25b0569181",
+   "c_local_residual.py": "1565300cb6aca89a236752a209991bdf0533759dc0d2ccafcb1a3abcc73f734c",
+   "c_local_residual.json": "58ea45ba26cd1bfa1a504f7a30609fbe5b6f95640deb5366adf1d7009cd7f084",
+   "d_folded.py": "0455088e1425abe3a83056fb882aa1a678b5c2b24a0e686fb22f8093194df586",
+   "d_folded.json": "5ea74b94e7639633a5e97d12358c712231a43a962b1988bcb84ce58d998dd627"
+  }
+ },
+ "findings": [
+  {
+   "id": "F1",
+   "item": 1,
+   "title": "local_frame_v1 solo ayuda al cluster de la fuente[0]; NO cubre varias fuentes/clusters lejanos",
+   "evidence": "a_frames.json: dos fuentes+dos detectores (gap 0,7123456789012345), cluster 2 a 999900,32 BU. lambda=1e-6: campo D2 error vs ideal 2,52e-4 (mundo) = 2,52e-4 (local, IDENTICO) y 2,45e-3 tras hi/lo ABI (> 1e-4). Control positivo (clusters a 3 BU): local/ABI <= 1,4e-8. lambda=0,125: 2e-9 / 2e-8.",
+   "why": "la traslacion es por fuente[0]; el otro cluster conserva coordenadas ~1e6 (max coord local 999901). El marco tampoco quita el error de construccion (local_vs_ideal == world_vs_ideal): solo evita perdida adicional en export/hi-lo.",
+   "contract_needed": "preflight: rechazar (o exigir marco por cluster) si max|coord local| o el diametro de la escena supera un limite fijado antes; el limite debe ser funcion de lambda: error de fase = 2*pi*dL/lambda con dL ~ ulp(coord)"
+  },
+  {
+   "id": "F2",
+   "item": 1,
+   "title": "Invarianza de fase por traslacion: correcta en teoria y en oraculo, pero el origen depende del ORDEN de fuentes",
+   "evidence": "el oraculo usa fase 2*pi*(longitud+offset de referencia del modo)/lambda; ambos invariantes bajo traslacion comun (referencia mode_origin_BU se traslada; verificado en control). Cambiar la primera fuente cambia el origen y por tanto los redondeos hi/lo (no evaluado en GPU).",
+   "contract_needed": "fijar origen canonico independiente del orden (p.ej. centroide de AABB de la escena redondeado a potencia de 2 o la referencia del primer detector) y registrarlo en metadatos; traslacion por potencia de 2 evita redondeo en la resta cuando la escena esta en el mismo binade"
+  },
+  {
+   "id": "F3",
+   "item": 2,
+   "title": "Autointerseccion sin sesgo: ejemplo exacto retenido; el marco local lo elimina en ESE ejemplo pero no en general",
+   "evidence": "b_selfhit_retained.json (vertices, origen y direccion incidente en doubles exactos; reflejado; reimpacto espurio tri 0 t=6,56e-9 BU con BIAS=0 T_MIN=1e-9). Control (rasante 0,1 rad): 0 reimpactos. Mundo L=100: 156/400 espurios a phi=1e-6; local: 0/400. Pero c_local_residual.json: phi=1e-7 local 67/400, phi=1e-8 local 199/400, 1e-9 209/400 (mundo 192,196,187).",
+   "why": "el residuo ~ eps(coord)/sin(phi): al bajar coordenadas de ~100 a ~2 se desplaza el umbral de ~1e-5 a ~2e-7 rad, no desaparece. Para phi < ~1e-7 el marco local no protege.",
+   "contract_needed": "dominio explicito: rechazar incidencia rasante con sin(phi) < K*eps*|coord_local|/T_MIN y tratar la exclusion como certificado por primitiva (F4)"
+  },
+  {
+   "id": "F4",
+   "item": 3,
+   "title": "Exclusion del objeto previo: solo primitiva plana certificada (o ids coplanares certificados), NO objeto/malla",
+   "evidence": "d_folded.json: espejo plegado de 2 triangulos, el reflejado desde tri 0 golpea tri 1 legitimamente a t=0,6288 BU. Excluir por objeto perderia ese camino; excluir solo el triangulo golpeado deja pasar el hermano coplanar en mallas planas de varios triangulos (caso b_selfhit: tri 0 y tri 1 comparten plano).",
+   "contract_proposal": "exclusion permitida solo si (a) el triangulo golpeado y el candidato son coplanares certificados (n_a x n_b = 0 exacto en racionales o dentro de tolerancia declarada) y (b) el candidato queda en el semiespacio no visible del rayo reflejado; si el objeto no es plano certificado -> no excluir y abortar por ambiguedad; registrar cada exclusion en el ledger. Se implementa tras gate CPU con este control plegado (debe NO excluir) y el fallo b_selfhit (debe excluir)."
+  }
+ ],
+ "limitations": [
+  "float64 sintetico; nada demuestra el comportamiento float32 de Blender ni del shader",
+  "oraculo de Moller-Trumbore propio con las constantes de PRECISION-004, no el kernel GLSL",
+  "una semilla por adversario (semilla fija, tasas sobre 400 muestras)",
+  "no se relajan umbrales ni se recupera precision perdida"
+ ],
+ "no_jev_aval": true,
+ "followup_origin_enclosure": {
+  "timestamp_utc": "2026-09-30T10:02:48+00:00",
+  "requested_by": "tablon 09:52 (Docs/EXP-005-ORIGIN-ENCLOSURE)",
+  "artifacts": {
+   "script": "D:/PROJECTS/.cognition/neuro3d/precision005_claude/e_origin.py",
+   "json": "D:/PROJECTS/.cognition/neuro3d/precision005_claude/e_origin.json",
+   "sha256": {
+    "e_origin.py": "a1fa9da97a1a3aed20c1b91e7df3969043770d50074e2fb1602b67b7e67980a5",
+    "e_origin.json": "dc67eb8b1625981a701199abed3a3027c0f705312ab3a159a776231f50b0cd94"
+   }
+  },
+  "A_local_case": {
+   "frame": "local (origen de la fuente restado en float64)",
+   "vertices": [
+    [
+     1.6948906761285656,
+     -0.8156329520906311,
+     0.22506296690283278
+    ],
+    [
+     1.9172890519885328,
+     -0.9288752055032958,
+     0.23973111119142132
+    ],
+    [
+     1.8902552328915903,
+     -1.0122922946804849,
+     0.005614127915457345
+    ],
+    [
+     1.667856857031623,
+     -0.8990500412678202,
+     -0.00905401637313119
+    ]
+   ],
+   "triangles": [
+    [
+     0,
+     1,
+     2
+    ],
+    [
+     0,
+     2,
+     3
+    ]
+   ],
+   "source_origin": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "incident_direction": [
+    0.889593499002187,
+    -0.45296902191796734,
+    0.058672580612464505
+   ],
+   "hit_tri": 1,
+   "t_float": 1.9999995706904523,
+   "point": [
+    1.7791866160933913,
+    -0.9059378493720087,
+    0.11734513603622997
+   ],
+   "reflected": [
+    0.8895935078775471,
+    -0.45296900538334806,
+    0.05867257369624396
+   ],
+   "spurious_t_BU": 5.592896854389736e-09,
+   "spurious_tri": 1,
+   "sin_grazing_reflected": 9.999996986517248e-09,
+   "normal_residual_exact_BU": -5.96937591734339e-17,
+   "predicted_t_from_residual": 5.969377716205069e-09,
+   "dt_float_vs_exact_BU": 1.2663958428426547e-08,
+   "box_uncorrelated_projected_radius_BU": 0.9998787320488127,
+   "ratio_box_over_normal_residual_projected": 167501334.24032494,
+   "reading": "el t espurio se explica por el residuo NORMAL exacto/ sin(phi): la parte tangencial del error del origen (aprox d*dt) no importa para reimpactar el mismo plano; la caja sin correlacion mete dt en las tres direcciones y luego divide otra vez por |n.d|."
+  },
+  "B_overlap_control": {
+   "mirror_z": 0.0,
+   "legit_surface_z_BU": 1e-08,
+   "grazing_rad": 0.001,
+   "incident_dir": [
+    0.9999995000000417,
+    0.0,
+    -0.0009999998333333417
+   ],
+   "origin": [
+    -0.5,
+    0.0,
+    0.0005000001666667334
+   ],
+   "hit_point": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "reflected": [
+    0.9999995000000417,
+    0.0,
+    0.0009999998333333417
+   ],
+   "legit_hit_t_BU": 1.0000001666666861e-05,
+   "expected_t": 1.0000001666666861e-05,
+   "mirror_self_hits": [],
+   "band_rule": {
+    "band_t_BU": 1e-05,
+    "band_used_BU": 0.332,
+    "omits_legit_surface": true
+   },
+   "plane_identity_rule": "excluir solo candidatos con plano IDENTICO al del triangulo de partida (ecuacion exacta racional/ID de primitiva plana certificada); Q tiene plano distinto -> se conserva",
+   "reading": "la banda de 0,33 BU (max de la caja) omitiria Q (t=1e-5); la exclusion por identidad de plano no."
+  },
+  "findings": [
+   "A: caso local retenido (marco local, rasante 1e-8): residuo normal EXACTO del punto de partida -5,97e-17 BU; predice t espurio |r_n|/sin(phi)=5,97e-9 frente a 5,59e-9 medido (misma magnitud, 7 % de diferencia por el orden de operaciones del kernel). La parte tangencial del error del origen no interviene en reimpactar el mismo plano.",
+   "A2: mi caja sin correlacion (reimplementacion propia, NO el arbol de Codex) da ~1 BU frente a 6e-9 reales (8 ordenes de magnitud): el sobreestimador viene de proyectar dos veces por 1/|n.d|; la siguiente cota debe propagar la restriccion n.(o+d t)=n.A (correlacion) y acotar el residuo NORMAL.",
+   "B: control de solape retenido: espejo z=0, superficie legitima paralela a gap 1e-8 BU, rasante 1e-3 rad: golpe legitimo a t=1,0000002e-5 BU (= gap/sin(phi)). Una banda-t de 0,332 BU (la maxima de la caja) la OMITE; excluir por identidad de plano (ecuacion exacta / ID de primitiva plana certificada) del triangulo de partida la conserva y sigue excluyendo el sibling coplanar. El espejo no da autoimpacto en B (control limpio)."
+  ],
+  "limitations": [
+   "un caso por adversario, semilla fija; local A no audita tasas",
+   "float64 sintetico; sin readback ni GPU"
+  ]
+ }
+}

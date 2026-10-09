@@ -1,0 +1,30 @@
+{
+  "external-cpu-instant-failure-20261009.json": {
+    "sha256": "375b8e3cfc1792279537f55cd4a3a4eca07e794ce127f7b23a06a551ef73b72d",
+    "bytes": 14562
+  },
+  "external-cpu-runs-20261009.json": {
+    "sha256": "e85f52bf2f42ae6c3321a078b529bad017931644160de309fcd01578e7b9815e",
+    "bytes": 410
+  },
+  "operator_setup_failure_receipt.json": {
+    "sha256": "0a92dac31cc8007df9becafc377372bd971d96c345168dd689defb3cd2138bbc",
+    "bytes": 807
+  },
+  "published-external-cpu-20261009.json": {
+    "sha256": "544798d34c753f7efe0b8b4bd9fa3750685d26f8ad8291419c3f2d6424ca3826",
+    "bytes": 430
+  },
+  "source/Docs/research/external_cpu_reproduction_profile_2026-10-09.json": {
+    "sha256": "ecb48f85f0785572bedc91a4254381ef5ca9683e3aaca7e9355a6db62b131385",
+    "bytes": 6956
+  },
+  "source/Docs/research/external_cpu_reproduction_registration_2026-10-09.json": {
+    "sha256": "8a3fed48873d7d90b0025fa9e4142e999c88d925b52f1ea93717fa672a43c8b1",
+    "bytes": 749
+  },
+  "source/.github/workflows/external-cpu-reproduction-20261009.yml": {
+    "sha256": "4e543d69793d2c3720ee59287754f8be9a50cae64e952f82d075fcc2d9453f16",
+    "bytes": 3299
+  }
+}

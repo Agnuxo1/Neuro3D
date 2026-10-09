@@ -1,0 +1,65 @@
+{
+  "schema": "neuro3d.robust_first_hit.native_report.v1",
+  "status": "FAIL",
+  "verification_passed": false,
+  "job_id": "03c996bf-c3ac-4417-bd74-bcaa0aa6a8fd",
+  "input_manifest_sha256": "1ba451212cc136442ea34a1ec9a7cefd44fdf366211f28813590f21b732ba800",
+  "native_gpu_executed": false,
+  "native_gpu_execution_attempted": false,
+  "gpu_dispatch_count": 0,
+  "completed_readbacks": 0,
+  "gpu_readback_records": [],
+  "gpu_readback_sha256": null,
+  "scope": {
+    "numeric_domain": "exact signed512 Moller-Trumbore over admitted hi/lo scene packet",
+    "fixed_origin_bias": false,
+    "epsilon_hit_band": false,
+    "previous_primitive_global_exclusion": false,
+    "exact_zero_departure_exclusion": true,
+    "same_surface_triangulation_equivalence": true,
+    "phase_certified": false,
+    "full_path_visibility_certified": false,
+    "physical_uncertainty_certified": false,
+    "hardware_RT_or_BVH": false,
+    "speed_advantage_claimed": false
+  },
+  "cases": [],
+  "backend": "OPENGL",
+  "vendor": "NVIDIA Corporation",
+  "renderer": "NVIDIA GeForce RTX 3090/PCIe/SSE2",
+  "driver_version": "4.6.0 NVIDIA 581.29",
+  "background": false,
+  "blender_version": "4.5.14 LTS",
+  "blender_build_hash": "62c1db4208e8",
+  "private_exit_settings": {
+    "save_user_preferences": false,
+    "save_prompt": false,
+    "temporary_autosave": false
+  },
+  "code_sha256": {
+    "Blender\\tests\\robust_first_hit_native_v1.py": "2d7a4a0fad46e129007206bf8f1642b2f996080341b43620a221c643d1f406ea",
+    "Blender\\benchmarks\\capacity_audit\\scene_hilo_gpu_v1.py": "539179dfdd72f8cdd6c3f171526dbbf70c81bc9b7a568691c12c0071246bee7a",
+    "Blender\\shaders\\scene_hilo_transport_v1.glsl": "cd9eead03d96aca64ef5e6c5bce8b71a97f0f994a0656ceb9363a3894e634d31",
+    "Blender\\benchmarks\\capacity_audit\\scene_hilo_transport_v1.py": "4bd86b411208c8a676c8a2c97926ce001ac781568913d5312906c591e02ca5ad",
+    "Blender\\benchmarks\\capacity_audit\\oblique_exact_scalar_hilo32_CPU_v1.py": "775e48b3507aa5b86bd96818f50e208e92d72e03b99d8862f816247418867a97",
+    "Blender\\shaders\\robust_first_hit_exact_v1.glsl": "be0a0b784b970767831202639d991b83fbf82d7ba917b8555d810b53ea4ee9cb",
+    "Blender\\shaders\\robust_first_hit_register_arithmetic_v1.glsl": "7738a2b66e12d53f1068d61435bab7c387df7ecada14687ee1c706ef55d67ad0",
+    "Blender\\tests\\exp005_blender_gpu.py": "851f29f9b1fb9b22948f59597d40fa8a55828040673fe0050d24e077b57cf497"
+  },
+  "compile_options": [
+    "#pragma optimize(off)",
+    "#pragma optionNV(unroll none)",
+    "#pragma optionNV(inline 0)"
+  ],
+  "compile_diagnostic": {
+    "dispatches": 0,
+    "source_sha256": "9dca83216be217af07323c8c146391229c861f94868acb3639e0a9fdeb3baaf8",
+    "stage_compiled": true,
+    "stage_log": "",
+    "program_linked": true,
+    "program_log": "Compute info\n------------\n0(357) : warning C7050: \"origin.x.q0\" might be used before being initialized\n0(357) : warning C7050: \"origin.x.q1\" might be used before being initialized\n0(357) : warning C7050: \"origin.x.q2\" might be used before being initialized\n0(357) : warning C7050: \"origin.x.q3\" might be used before being initialized\n0(357) : warning C7050: \"origin.y.q0\" might be used before being initialized\n0(357) : warning C7050: \"origin.y.q1\" might be used before being initialized\n0(357) : warning C7050: \"origin.y.q2\" might be used before being initialized\n0(357) : warning C7050: \"origin.y.q3\" might be used before being initialized\n0(357) : warning C7050: \"origin.z.q0\" might be used before being initialized\n0(357) : warning C7050: \"origin.z.q1\" might be used before being initialized\n0(357) : warning C7050: \"origin.z.q2\" might be used before being initialized\n0(357) : warning C7050: \"origin.z.q3\" might be used before being initialized\n0(357) : warning C7050: \"direction.x.q0\" might be used before being initialized\n0(357) : warning C7050: \"direction.x.q1\" might be used before being initialized\n0(357) : warning C7050: \"direction.x.q2\" might be used before being initialized\n0(357) : warning C7050: \"direction.x.q3\" might be used before being initialized\n0(357) : warning C7050: \"direction.y.q0\" might be used before being initialized\n0(357) : warning C7050: \"direction.y.q1\" might be used before being initialized\n0(357) : warning C7050: \"direction.y.q2\" might be used before being initialized\n0(357) : warning C7050: \"direction.y.q3\" might be used before being initialized\n0(357) : warning C7050: \"direction.z.q0\" might be used before being initialized\n0(357) : warning C7050: \"direction.z.q1\" might be used before being initialized\n0(357) : warning C7050: \"direction.z.q2\" might be used before being initialized\n0(357) : warning C7050: \"direction.z.q3\" might be used before being initialized\n"
+  },
+  "error": "Exception: Shader Compile Error, see console for more details",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\PROJECTS\\Neuro3D-Scientific-20261008\\Blender\\tests\\robust_first_hit_native_v1.py\", line 420, in main\n    shader = compile_shader(gpu, report)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\PROJECTS\\Neuro3D-Scientific-20261008\\Blender\\tests\\robust_first_hit_native_v1.py\", line 293, in compile_shader\n    return gpu.shader.create_from_info(info)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: Shader Compile Error, see console for more details\n",
+  "total_seconds": 6.490060399984941
+}

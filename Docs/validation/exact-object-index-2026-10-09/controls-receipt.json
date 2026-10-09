@@ -1,0 +1,26 @@
+{
+  "schema": "optic_neuro_blender.exact_index_controls.v1",
+  "command": [
+    "C:\\Python313\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "Blender.tests.test_exact_object_index_v1",
+    "Blender.tests.test_surface_union_interior_v1",
+    "Blender.tests.test_captured_pilot_supervision_v1",
+    "Blender.tests.test_coherent_contract_v1",
+    "Blender.tests.test_scalar_scene_ingress_v1",
+    "Blender.tests.test_blender_lab_capture_v1",
+    "-v"
+  ],
+  "returncode": 0,
+  "test_count": 74,
+  "new_index_test_count": 8,
+  "random_query_seed": 1940,
+  "random_query_count": 160,
+  "captured_scene_forward_executed": false,
+  "optical_model_accuracy_claimed": false,
+  "speed_advantage_measured": false,
+  "earlier_import_failure": "Historical test module requires Blender/tests in Python path; new index tests now have self-contained fixtures."
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "neuro3d-complete-error-certificate-v1",
+  "backend": "CPU_RATIONAL_OUTWARD_INTERVALS",
+  "interval_bits": 128,
+  "scene_sha256": "d9fb9b6b24b4a29e56741e1bf9bd435b0b9aefd93e1f93cb987017f083a342de",
+  "status": "UNKNOWN",
+  "physical_input_bounds": "UNKNOWN_NOT_ZERO",
+  "native_full_kernel_certified": false,
+  "scope": "explicit supplied scalar-model input box",
+  "paths": [],
+  "ports": null,
+  "reason": "finite represented real required",
+  "topology_certified": false
+}

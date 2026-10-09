@@ -1,0 +1,15 @@
+{
+  "schema": "optic_neuro_blender.external_artifact_audit.v1",
+  "utc": "2026-10-09T05:13:29.585868+00:00",
+  "run_id": 37886830249,
+  "job_id": 113678593248,
+  "artifact_id": 11596084252,
+  "artifact_zip_sha256": "84691994ad4c34285f14a032998da461c817d31bcc7e893d5f9b8f5dd7fdbae8",
+  "all_internal_raw_hashes_verified": true,
+  "source_preimages_from_run_commit_verified": true,
+  "external_preexecution_source_verification_source": "Successful runner verification step and worker publication receipt, not later local receipt",
+  "later_local_receipt_timestamp": "2026-10-09T05:05:45.931120+00:00",
+  "scope": "External Linux CPU environment replication of our code; not independent human or native Blender/GPU/physical replication",
+  "original_setup_failure_preserved": true,
+  "temporary_connector_download_failed_http403_recovered_using_existing_github_read_access": true
+}

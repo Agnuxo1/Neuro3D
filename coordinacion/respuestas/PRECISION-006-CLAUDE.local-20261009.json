@@ -1,0 +1,206 @@
+{
+ "task_id": "PRECISION-006",
+ "status": "complete",
+ "timestamp_utc": "2026-09-30T09:54:03+00:00",
+ "reviewer": "Claude (local)",
+ "scope": "CPU 1 hilo, fase exacta con fracciones racionales sobre la codificacion real split_double; solo lectura de codigo de Codex; sin GPU/Blender/instalaciones; sin aval JEV",
+ "input_sha256": {
+  "Docs/EXP-005-WAVELENGTH-TRANSPORT-CPU-2026-09-30.md": "97eb295c4b216fb96f7002f50e046acaa8ac43202e91c02e97fa4f0adbafd45b",
+  "Blender/benchmarks/capacity_audit/wavelength_transport_v1.py": "ffbaf4374430115de6b3ff5b75606658415fe713eea6c5c859073f0b6ee4b57e",
+  "Blender/tests/exp005_wavelength_transport_audit.py": "0435d5830c3836d1d86a90f117a23f76997aec9991e053d480557e37c4eb3f48",
+  "Blender/tests/exp005_blender_gpu.py": "851f29f9b1fb9b22948f59597d40fa8a55828040673fe0050d24e077b57cf497",
+  "Blender/shaders/exp005_shared_frontier.glsl": "914bf2962ead3c6a7b721a8dc2aa6c1e796af4bde1892db1802c3ca93ebdfcd1"
+ },
+ "commands": [
+  "python a_lambda.py"
+ ],
+ "artifacts": {
+  "a_lambda.py": "D:/PROJECTS/.cognition/neuro3d/precision006_claude/a_lambda.py",
+  "a_lambda.json": "D:/PROJECTS/.cognition/neuro3d/precision006_claude/a_lambda.json",
+  "artifact_sha256": {
+   "a_lambda.py": "53a1d952ce0f49601188c0c8b588ce0a54a317e7b2e283e50701c725332e62d6",
+   "a_lambda.json": "fbd36100950700bd1afde0b0b3a4e1b7c3340de364a38eb3d193fda0d749a12b"
+  }
+ },
+ "findings": [
+  {
+   "id": "F1",
+   "title": "Contraejemplo escalar: el gate relativo 1e-12 PASA y la fase se pierde",
+   "evidence": [
+    {
+     "lambda_BU": 1.0003057508007276e-06,
+     "L_eff_BU": 1.0,
+     "N_waves": 999694.3426542506,
+     "gate_1e-12_passes": true,
+     "relative_error": 1.6935480908237605e-15,
+     "phase_error_rad": -1.0637624019204199e-08,
+     "exceeds_1e-4_rad": false
+    },
+    {
+     "lambda_BU": 1.0001274594402607e-09,
+     "L_eff_BU": 10.0,
+     "N_waves": 9998725568.035778,
+     "gate_1e-12_passes": true,
+     "relative_error": 1.6541503880234909e-15,
+     "phase_error_rad": -0.00010392008854262876,
+     "exceeds_1e-4_rad": true
+    },
+    {
+     "lambda_BU": 1.00416693877201e-12,
+     "L_eff_BU": 1.0,
+     "N_waves": 995850352554.8196,
+     "gate_1e-12_passes": true,
+     "relative_error": 1.6088830168700083e-15,
+     "phase_error_rad": 0.010066961719463216,
+     "exceeds_1e-4_rad": true
+    },
+    {
+     "lambda_BU": 1.0003057508007276e-06,
+     "L_eff_BU": 1000.0,
+     "N_waves": 999694342.6542506,
+     "gate_1e-12_passes": true,
+     "relative_error": 1.6935480908237605e-15,
+     "phase_error_rad": -1.0637624019204199e-05,
+     "exceeds_1e-4_rad": false
+    }
+   ],
+   "reading": "lambda=1,00013e-9 BU con L_eff=10 BU: pasa checked_wavelength(1e-12), error de fase 1,04e-4 rad (> FIELD_TOL 1e-4); lambda=1,0042e-12 con L_eff=1: 1,0e-2 rad. Error relativo real 1,6e-15 en ambos. Es identidad exacta dphi=2*pi*L*(1/lam-1/lam_dec), no cota."
+  },
+  {
+   "id": "F2",
+   "title": "Control positivo",
+   "evidence": [
+    {
+     "lambda_BU": 0.125,
+     "L_eff_BU": 1000000.0,
+     "N_waves": 8000000.0,
+     "relative_error": 0.0,
+     "phase_error_rad": 0.0,
+     "within_1e-4_rad": true
+    },
+    {
+     "lambda_BU": 9.5367431640625e-07,
+     "L_eff_BU": 1000.0,
+     "N_waves": 1048576000.0,
+     "relative_error": 0.0,
+     "phase_error_rad": 0.0,
+     "within_1e-4_rad": true
+    },
+    {
+     "lambda_BU": 1e-06,
+     "L_eff_BU": 1.0,
+     "N_waves": 1000000.0,
+     "relative_error": 0.0,
+     "phase_error_rad": 0.0,
+     "within_1e-4_rad": true
+    },
+    {
+     "lambda_BU": 1e-06,
+     "L_eff_BU": 10.0,
+     "N_waves": 10000000.0,
+     "relative_error": 0.0,
+     "phase_error_rad": 0.0,
+     "within_1e-4_rad": true
+    }
+   ],
+   "reading": "lambda=0,125 y 2^-20 (exactas en float32) dan fase exacta hasta L=1e6; ATENCION: lambda=1e-6 sale con error 0 solo por suerte de su mantisa (no es caso de peor error: el peor cerca de 1e-6 da 1,8e-15)."
+  },
+  {
+   "id": "F3",
+   "title": "La cota propuesta es correcta pero incompleta y el presupuesto 1e-12 es vacio o inutil segun el uso",
+   "evidence": {
+    "error_relativo_maximo_medido_por_decada": {
+     "1e-40": {
+      "max_rel_err": 6.480416780698471e-06,
+      "encodable": 2000
+     },
+     "1e-36": {
+      "max_rel_err": 6.806859002701118e-10,
+      "encodable": 2000
+     },
+     "1e-33": {
+      "max_rel_err": 6.630832350621786e-13,
+      "encodable": 2000
+     },
+     "1e-30": {
+      "max_rel_err": 1.7644323207427712e-15,
+      "encodable": 2000
+     },
+     "1e-20": {
+      "max_rel_err": 1.7428874903352553e-15,
+      "encodable": 2000
+     },
+     "1e-9": {
+      "max_rel_err": 1.7739651357294697e-15,
+      "encodable": 2000
+     },
+     "1e-6": {
+      "max_rel_err": 1.759649628679383e-15,
+      "encodable": 2000
+     },
+     "1e-3": {
+      "max_rel_err": 1.7277609528683648e-15,
+      "encodable": 2000
+     },
+     "1e0": {
+      "max_rel_err": 1.6850222294437802e-15,
+      "encodable": 2000
+     },
+     "1e3": {
+      "max_rel_err": 1.7760994516159785e-15,
+      "encodable": 2000
+     },
+     "1e20": {
+      "max_rel_err": 1.7599000584854701e-15,
+      "encodable": 2000
+     },
+     "1e30": {
+      "max_rel_err": 1.7339979678357541e-15,
+      "encodable": 2000
+     }
+    },
+    "nmax_para_1e-4_rad": {
+     "r=1e-12": 15915494.309189536,
+     "r=1.78e-15": 8941288937.74693,
+     "r=1.1e-16": 144686311901.72305
+    },
+    "geometria_vs_lambda": {
+     "ulp_over_2_C=1e6_BU": 1.1641532182693481e-10,
+     "lambda_hilo_rel_max_2^-49*L(=C=1e6)": 1.78e-09,
+     "note": "medido r_max~1.78e-15 (~2^-49); para L~C el termino de lambda es ~16x MAYOR que el de geometria float64 (eps/2=1.1e-16)"
+    }
+   },
+   "reading": [
+    "error real de la codificacion hi/lo ~1,8e-15 (2^-49) para 1e-30<=lambda<=1e30: el presupuesto 1e-12 es ~560x mas laxo que lo alcanzable; con 1e-12 como peor caso, N=L/lambda solo puede llegar a 1,6e7 ondas para 1e-4 rad (lambda=1e-6 => L<=16 BU); con el error real 1,78e-15, N<=8,9e9.",
+    "el gate deja pasar lambda hasta ~1e-33 (error 6,6e-13 < 1e-12) donde N=L/lambda ~ 1e33: la fase es indefinible aunque la representacion \"pase\".",
+    "el termino de lambda (1,8e-15*L) es ~16x MAYOR que el de geometria float64 (eps/2=1,1e-16 por coordenada) cuando L~C: hi/lo de lambda domina antes que la geometria; tratar en el presupuesto conjunto: dphi_total <= 2*pi*(N*r_lam + sum(dL_geom)/lam + dphase_ref) con N = L_eff_max/lam.",
+    "fase con envoltura mod 2*pi: la cota sin envolver es conservadora, pero N debe acotar tambien el argumento 2*pi*L/lam (double, >2^53 pierde fase por completo) antes de la reduccion de argumento en GPU."
+   ]
+  },
+  {
+   "id": "F4",
+   "title": "Que dominio de longitud efectiva y de referencia debe fijarse ANTES de integrar en nativo",
+   "contract_proposal": [
+    "L_eff = longitud de camino + offset de referencia del modo (como en exp005_triangle_oracle: fase = 2*pi*(length+offset)/lambda): declararlo unico y con signo; el offset depende de mode_origin_BU, que puede desplazarse a lo largo del eje sin cambiar la fisica pero cambia la fase en 2*pi*d/lambda: fijar referencia canonica (p.ej. punto dentro del AABB de la escena) y rechazar referencias fuera de el.",
+    "L_eff_max = (profundidad_max+1) * diagonal(AABB de fuentes, triangulos y referencias) (cada tramo <= diagonal); N_max = L_eff_max/lambda declarado en el contrato; rechazar si 2*pi*N_max*r_lam_real > presupuesto de fase (elegir presupuesto de fase de campo antes de ver resultados) o si N_max > 2^40 (argumento de fase en double).",
+    "gate en dos partes: (a) representacion con r_real de ESTA lambda (no un umbral fijo comun) y (b) dominio de fase N_max*r_real; no relajar el presupuesto tras un fallo.",
+    "registrar en el ledger el L_eff_max, N_max y r_real usados."
+   ]
+  }
+ ],
+ "exclusions": [
+  "reduccion de argumento de fase en GPU (sin/cos de doble) no medida aqui; no certifica ni desmiente fallos GPU actuales",
+  "precision de geometria ya perdida en export float32/Blender no se recupera ni se oculta",
+  "no se ha cargado ninguna red real; L_eff son valores de ejemplo, no de las escenas K3/K4"
+ ],
+ "limitations": [
+  "1 muestra de 2000 por decada para el barrido; maximo empirico, no demostracion (cota teorica 2^-49 esperada por hi 24 bits+lo 24 bits)",
+  "fase evaluada con fracciones racionales de doubles, no con el shader"
+ ],
+ "no_jev_aval": true,
+ "corrections_10_12_utc": [
+  "Etiqueta corregida: ulp(1e6)/2 = 5,8207660913e-11 BU (el valor 1,164e-10 del artefacto a_lambda.json es el ulp entero, clave ulp_over_2_C=1e6_BU mal etiquetada).",
+  "2^40 no es gate suficiente: con r=1,78e-15 da 1,23e-2 rad; medio ulp del argumento 2*pi*N en double = 4,9e-4 rad; para 1e-4 rad N<=~9e9. Tope grueso solamente.",
+  "Supuestos por probar antes de implementar el bound L/ref: tramos<=diagonal AABB (todo dentro del AABB), profundidad acotada por contrato (cavidades truncan amplitud), error de la suma bajo interferencia destructiva."
+ ]
+}

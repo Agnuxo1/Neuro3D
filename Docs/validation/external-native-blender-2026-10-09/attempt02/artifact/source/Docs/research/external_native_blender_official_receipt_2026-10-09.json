@@ -1,0 +1,18 @@
+{
+  "schema": "optic_neuro_blender.official_linux_blender_receipt.v1",
+  "url": "https://download.blender.org/release/Blender4.5/blender-4.5.14-linux-x64.tar.xz",
+  "archive_sha256": "9ba871ff2ecd36526b77432745980b7e6664ecd0c7ca11c48849073dcfe06da3",
+  "archive_bytes": 378045212,
+  "binary_member": "blender-4.5.14-linux-x64/blender",
+  "binary_bytes": 163613240,
+  "binary_sha256": "050c02562f81fe80ba616a80198fa02d381e60f8b61b8d39add881f4bca0d7d8",
+  "bundled_python_members": [
+    "blender-4.5.14-linux-x64/4.5/python/bin/python3.11"
+  ],
+  "download_and_inspection_seconds": 36.223656800000754,
+  "tls_verified": true,
+  "archive_executed": false,
+  "external_native_blender_executed": false,
+  "official_checksum_url": "https://download.blender.org/release/Blender4.5/blender-4.5.14.sha256",
+  "checksum_bytes_sha256": "f1aed1e7db457995d7b0348dc2639fddb6595b06ee911d409a33a13c6e160c1f"
+}

@@ -1,0 +1,194 @@
+{
+  "schema": "optic_neuro_blender.coherent_contract.v1",
+  "capture_state_sha256": "8624d661252f143653f5b32c744cb7e6b23f71119253d7ad64510bbf1aa1a943",
+  "phase": {
+    "time_dependence": "exp(-i*omega*t)",
+    "propagation": "exp(+i*2*pi*L_BU/lambda_BU)",
+    "reference": "COMMON_LAUNCH_PHASE",
+    "mirror": "minus_one_times_exp_i_declared_phase",
+    "splitter": "sqrt_tau_and_i_sqrt_one_minus_tau"
+  },
+  "units": {
+    "geometry": "BU",
+    "wavelength_BU_hex": "0x1.999999999999ap-4",
+    "metres_per_BU_hex": "0x1.0000000000000p+0",
+    "scale_status": "SCENE_DISPLAY_SCALE_ONLY",
+    "reference_power_watt_hex": null
+  },
+  "encoding": {
+    "kind": "EXPLICIT_COMPLEX_FIELDS",
+    "normalization": "NONE",
+    "ports": {
+      "r0": {
+        "coherence_group": "iris_common_carrier",
+        "phase_reference": "iris_common_launch"
+      },
+      "r1": {
+        "coherence_group": "iris_common_carrier",
+        "phase_reference": "iris_common_launch"
+      },
+      "c0": {
+        "coherence_group": "iris_common_carrier",
+        "phase_reference": "iris_common_launch"
+      },
+      "c1": {
+        "coherence_group": "iris_common_carrier",
+        "phase_reference": "iris_common_launch"
+      },
+      "c2": {
+        "coherence_group": "iris_common_carrier",
+        "phase_reference": "iris_common_launch"
+      }
+    }
+  },
+  "parameters": {
+    "c00.r1.world_x": {
+      "unit": "BU",
+      "role": "GEOMETRY_COORDINATE"
+    },
+    "c00.r2.world_x": {
+      "unit": "BU",
+      "role": "GEOMETRY_COORDINATE"
+    },
+    "c01.r1.world_x": {
+      "unit": "BU",
+      "role": "GEOMETRY_COORDINATE"
+    },
+    "c01.r2.world_x": {
+      "unit": "BU",
+      "role": "GEOMETRY_COORDINATE"
+    },
+    "c02.r1.world_x": {
+      "unit": "BU",
+      "role": "GEOMETRY_COORDINATE"
+    },
+    "c02.r2.world_x": {
+      "unit": "BU",
+      "role": "GEOMETRY_COORDINATE"
+    },
+    "c03.r1.world_x": {
+      "unit": "BU",
+      "role": "GEOMETRY_COORDINATE"
+    },
+    "c03.r2.world_x": {
+      "unit": "BU",
+      "role": "GEOMETRY_COORDINATE"
+    },
+    "c10.r1.world_x": {
+      "unit": "BU",
+      "role": "GEOMETRY_COORDINATE"
+    },
+    "c10.r2.world_x": {
+      "unit": "BU",
+      "role": "GEOMETRY_COORDINATE"
+    },
+    "c11.r1.world_x": {
+      "unit": "BU",
+      "role": "GEOMETRY_COORDINATE"
+    },
+    "c11.r2.world_x": {
+      "unit": "BU",
+      "role": "GEOMETRY_COORDINATE"
+    },
+    "c12.r1.world_x": {
+      "unit": "BU",
+      "role": "GEOMETRY_COORDINATE"
+    },
+    "c12.r2.world_x": {
+      "unit": "BU",
+      "role": "GEOMETRY_COORDINATE"
+    },
+    "c13.r1.world_x": {
+      "unit": "BU",
+      "role": "GEOMETRY_COORDINATE"
+    },
+    "c13.r2.world_x": {
+      "unit": "BU",
+      "role": "GEOMETRY_COORDINATE"
+    },
+    "c20.r1.world_x": {
+      "unit": "BU",
+      "role": "GEOMETRY_COORDINATE"
+    },
+    "c20.r2.world_x": {
+      "unit": "BU",
+      "role": "GEOMETRY_COORDINATE"
+    },
+    "c21.r1.world_x": {
+      "unit": "BU",
+      "role": "GEOMETRY_COORDINATE"
+    },
+    "c21.r2.world_x": {
+      "unit": "BU",
+      "role": "GEOMETRY_COORDINATE"
+    },
+    "c22.r1.world_x": {
+      "unit": "BU",
+      "role": "GEOMETRY_COORDINATE"
+    },
+    "c22.r2.world_x": {
+      "unit": "BU",
+      "role": "GEOMETRY_COORDINATE"
+    },
+    "c23.r1.world_x": {
+      "unit": "BU",
+      "role": "GEOMETRY_COORDINATE"
+    },
+    "c23.r2.world_x": {
+      "unit": "BU",
+      "role": "GEOMETRY_COORDINATE"
+    },
+    "c30.r1.world_x": {
+      "unit": "BU",
+      "role": "GEOMETRY_COORDINATE"
+    },
+    "c30.r2.world_x": {
+      "unit": "BU",
+      "role": "GEOMETRY_COORDINATE"
+    },
+    "c31.r1.world_x": {
+      "unit": "BU",
+      "role": "GEOMETRY_COORDINATE"
+    },
+    "c31.r2.world_x": {
+      "unit": "BU",
+      "role": "GEOMETRY_COORDINATE"
+    },
+    "c32.r1.world_x": {
+      "unit": "BU",
+      "role": "GEOMETRY_COORDINATE"
+    },
+    "c32.r2.world_x": {
+      "unit": "BU",
+      "role": "GEOMETRY_COORDINATE"
+    },
+    "c33.r1.world_x": {
+      "unit": "BU",
+      "role": "GEOMETRY_COORDINATE"
+    },
+    "c33.r2.world_x": {
+      "unit": "BU",
+      "role": "GEOMETRY_COORDINATE"
+    }
+  },
+  "detectors": {
+    "R0": {
+      "object": "det.R0",
+      "measurement": "NORMALIZED_MODAL_POWER",
+      "field_frame": "COMMON_LAUNCH_PHASE",
+      "renormalize": false
+    },
+    "R1": {
+      "object": "det.R1",
+      "measurement": "NORMALIZED_MODAL_POWER",
+      "field_frame": "COMMON_LAUNCH_PHASE",
+      "renormalize": false
+    },
+    "R2": {
+      "object": "det.R2",
+      "measurement": "NORMALIZED_MODAL_POWER",
+      "field_frame": "COMMON_LAUNCH_PHASE",
+      "renormalize": false
+    }
+  }
+}

@@ -1,0 +1,398 @@
+{
+  "vertex_radius": {
+    "numerator": 0,
+    "denominator": 1
+  },
+  "object_translation": {
+    "c0.bs1": [
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      }
+    ],
+    "c0.r1": [
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      }
+    ],
+    "c0.r2": [
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      }
+    ],
+    "c0.f1": [
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      }
+    ],
+    "c0.m2": [
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      }
+    ],
+    "c0.bs2": [
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      }
+    ],
+    "c0.Y": [
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      }
+    ],
+    "c1.bs1": [
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      }
+    ],
+    "c1.r1": [
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      }
+    ],
+    "c1.r2": [
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      }
+    ],
+    "c1.f1": [
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      }
+    ],
+    "c1.m2": [
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      }
+    ],
+    "c1.bs2": [
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      }
+    ],
+    "c1.Y": [
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      }
+    ],
+    "c2.bs1": [
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      }
+    ],
+    "c2.r1": [
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      }
+    ],
+    "c2.r2": [
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      }
+    ],
+    "c2.f1": [
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      }
+    ],
+    "c2.m2": [
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      }
+    ],
+    "c2.bs2": [
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      }
+    ],
+    "c2.Y": [
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      }
+    ],
+    "c2.escape": [
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      }
+    ]
+  },
+  "source_position": {
+    "numerator": 1,
+    "denominator": 100000000
+  },
+  "source_direction": {
+    "row": [
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "col0": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "col1": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "col2": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 100000000
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ]
+  },
+  "source_field": {
+    "numerator": 0,
+    "denominator": 1
+  },
+  "wavelength": {
+    "numerator": 0,
+    "denominator": 1
+  },
+  "mirror_phase": {
+    "numerator": 0,
+    "denominator": 1
+  },
+  "transmittance": {
+    "numerator": 0,
+    "denominator": 1
+  },
+  "reference": {
+    "numerator": 0,
+    "denominator": 1
+  }
+}

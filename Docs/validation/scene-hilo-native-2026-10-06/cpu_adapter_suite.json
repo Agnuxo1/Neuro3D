@@ -1,0 +1,22 @@
+{
+  "schema": "neuro3d.point4.cpu_adapter_suite.v1",
+  "started_utc": "2026-10-06T22:26:28.825982+00:00",
+  "status": "PASS",
+  "exit_code": 0,
+  "elapsed_seconds": 0.32627610000781715,
+  "command": [
+    "C:\\Python313\\python.exe",
+    "-m",
+    "unittest",
+    "Blender.tests.test_scene_hilo_transport_v1",
+    "-v"
+  ],
+  "code_sha256": {
+    "Blender/benchmarks/capacity_audit/scene_hilo_transport_v1.py": "4bd86b411208c8a676c8a2c97926ce001ac781568913d5312906c591e02ca5ad",
+    "Blender/tests/test_scene_hilo_transport_v1.py": "47665bdec2b615d7f2d2f5235f4141258b6dc861161c710648544887f3f17585",
+    "Blender/benchmarks/capacity_audit/oblique_exact_scalar_hilo32_CPU_v1.py": "775e48b3507aa5b86bd96818f50e208e92d72e03b99d8862f816247418867a97"
+  },
+  "stdout": "",
+  "stderr": "test_claimed_reopened_input_requires_evaluated_scene_evidence (Blender.tests.test_scene_hilo_transport_v1.Tests.test_claimed_reopened_input_requires_evaluated_scene_evidence) ... ok\ntest_complete_packet_and_independent_scalar_oracle (Blender.tests.test_scene_hilo_transport_v1.Tests.test_complete_packet_and_independent_scalar_oracle) ... ok\ntest_controlled_low_components_and_nonzero_intervals (Blender.tests.test_scene_hilo_transport_v1.Tests.test_controlled_low_components_and_nonzero_intervals) ... ok\ntest_degenerate_coordinate_geometry_is_preserved_without_hit_claim (Blender.tests.test_scene_hilo_transport_v1.Tests.test_degenerate_coordinate_geometry_is_preserved_without_hit_claim) ... ok\ntest_duplicate_persisted_json_keys_are_rejected (Blender.tests.test_scene_hilo_transport_v1.Tests.test_duplicate_persisted_json_keys_are_rejected) ... ok\ntest_future_native_delta_requires_pair64_not_float64_collapse (Blender.tests.test_scene_hilo_transport_v1.Tests.test_future_native_delta_requires_pair64_not_float64_collapse) ... ok\ntest_geometry_and_source_completeness_rejections (Blender.tests.test_scene_hilo_transport_v1.Tests.test_geometry_and_source_completeness_rejections) ... ok\ntest_header_counts_endian_padding_previous_and_triangle_corruption (Blender.tests.test_scene_hilo_transport_v1.Tests.test_header_counts_endian_padding_previous_and_triangle_corruption) ... ok\ntest_material_metadata_retains_nonrepresentable_values_uniformly (Blender.tests.test_scene_hilo_transport_v1.Tests.test_material_metadata_retains_nonrepresentable_values_uniformly) ... ok\ntest_packet_and_provenance_schemas_are_closed (Blender.tests.test_scene_hilo_transport_v1.Tests.test_packet_and_provenance_schemas_are_closed) ... ok\ntest_resealed_bounds_collapse_rejected_against_fixed_manifest (Blender.tests.test_scene_hilo_transport_v1.Tests.test_resealed_bounds_collapse_rejected_against_fixed_manifest) ... ok\ntest_resealed_identity_substitutions_rejected_even_with_equal_wire (Blender.tests.test_scene_hilo_transport_v1.Tests.test_resealed_identity_substitutions_rejected_even_with_equal_wire) ... ok\ntest_resealed_zero_low_and_component_swap_rejected (Blender.tests.test_scene_hilo_transport_v1.Tests.test_resealed_zero_low_and_component_swap_rejected) ... ok\ntest_reversed_noncontaining_unknown_and_unbound_intervals (Blender.tests.test_scene_hilo_transport_v1.Tests.test_reversed_noncontaining_unknown_and_unbound_intervals) ... ok\ntest_selected_numeric_domain_failures (Blender.tests.test_scene_hilo_transport_v1.Tests.test_selected_numeric_domain_failures) ... ok\ntest_sorted_serialized_manifest_is_reproducible_without_input_mutation (Blender.tests.test_scene_hilo_transport_v1.Tests.test_sorted_serialized_manifest_is_reproducible_without_input_mutation) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 0.140s\n\nOK\n",
+  "native_gpu_executed": false
+}

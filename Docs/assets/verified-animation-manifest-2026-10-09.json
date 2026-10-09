@@ -1,0 +1,24 @@
+{
+  "schema": "optic_neuro_blender.verified_animation_manifest.v1",
+  "sources": {
+    "Docs/validation/native-graphics-field-2026-10-09/attempt11/worker/actual_gpu_geometry_graph.json": "644c1d5fb4203fac23b7b338e24b4c0c2ed78685baffdda3de42c94f5ef72639",
+    "Docs/validation/native-graphics-field-2026-10-09/attempt11/worker/native_gpu_transport_0.json": "66e80738f2080c2f804ade3061ae801defa56a1ccb44ab496855da78ec68893b",
+    "Docs/validation/own-blender-addon-2026-10-09/attempt03/worker/jobs/optic-neuro-326edc59834b425d92ea2a99f43faa61/result.json": "3e8ed06fb9c542031583705206c949c0ef443a22f1cb4fb38000cf3a24f8a8bd",
+    "Docs/validation/own-blender-addon-2026-10-09/attempt03/worker/jobs/optic-neuro-326edc59834b425d92ea2a99f43faa61/worker.stdout": "43abf8218d18480f250c7cb8448d3d3daf882af6c17e7fa8bc72ca60063690cf"
+  },
+  "outputs": {
+    "Docs/assets/captured-gpu-coherent-network-2026-10-09.gif": {
+      "sha256": "a86751d6be5a78f125e9b912ca4bc52ee7b2f81c4f931e6111eae757a1559e24",
+      "bytes": 1189789,
+      "frames": 36
+    },
+    "Docs/assets/native-blender-geometry-training-2026-10-09.gif": {
+      "sha256": "3ce515a9416d751e5af8facb65b6b1f03afe8f8590712e4fe160c28afa9c63f5",
+      "bytes": 830731,
+      "frames": 31
+    }
+  },
+  "native_gpu_final_complex_accumulations_bit_identical": true,
+  "native_training_all61_audits_verified": true,
+  "scope": "Animations replay archived observations. Computational stages are not physical time; XY projection does not show all3D surfaces. Phase colors are explanatory. No experiment, speedup, physical photon motion or GPU training is inferred."
+}

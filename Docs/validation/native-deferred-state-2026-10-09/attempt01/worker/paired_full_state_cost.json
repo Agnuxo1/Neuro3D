@@ -1,0 +1,17 @@
+{
+  "order": [
+    "DEFERRED",
+    "FORWARD"
+  ],
+  "same_actual_geometry_sha256": "56eab476a2ace8003f2db6584d7a4c14ff0c00454ec0fc2620f9f8fbcb5b5aea",
+  "inputs": 120,
+  "parameters": 16,
+  "deferred_seconds": 42.9737873999984,
+  "forward_seconds": 38.27294350000011,
+  "field_max_difference": 0.0,
+  "jacobian_max_difference": 0.0,
+  "loss_gradient_max_difference": 0.0,
+  "loss_difference": 0.0,
+  "no_confidence_interval": true,
+  "full_training_speedup_measured": false
+}

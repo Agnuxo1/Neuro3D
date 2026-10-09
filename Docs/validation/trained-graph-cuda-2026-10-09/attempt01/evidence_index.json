@@ -1,0 +1,162 @@
+{
+  "archive_and_plot.py": {
+    "sha256": "79d2f6e7c22c91e228f0d5c3b3c6825a168d88ad8ad40ca763ce673b45962eae",
+    "bytes": 6451
+  },
+  "cpu_controls.log": {
+    "sha256": "a4c4864640684c14b199adb59ed0844b019653159ef3b6b729e15b105fd7e439",
+    "bytes": 485
+  },
+  "profile.json": {
+    "sha256": "6073f16df3daec27c156f7d347be27d3f621152408ed942da67e4ee32218da19",
+    "bytes": 33929
+  },
+  "registration.json": {
+    "sha256": "fa2b2c25f8d3083f52199e7e630b394d7154cbf3a54e5eba62a9f49d01d8844c",
+    "bytes": 738
+  },
+  "shared_fifo_events.json": {
+    "sha256": "5d2339c4bfb5d3d1d6ef1ef9491199984f871191313b7c39b4f667eb02248d5d",
+    "bytes": 684
+  },
+  "supervisor.json": {
+    "sha256": "118ce00cabc15c3d15a3e55aba039649035119ad4b4b579bdb512e89c7084b63",
+    "bytes": 3921
+  },
+  "worker.stdout": {
+    "sha256": "f742c301b0c9873cda5f8672a70a1e97ad97725b611a48c432d452b683567428",
+    "bytes": 423
+  },
+  "interval_analysis01/certificate.json": {
+    "sha256": "1f3f91ba25b2b9b1f7a92e79f8372617958042101cdf446122a2e4c362907014",
+    "bytes": 832487
+  },
+  "interval_analysis02/certificate.json": {
+    "sha256": "12beb25f81da5b8d90e122e431f6d946d5070ec57df7e9ecbd2c0983b4c08e43",
+    "bytes": 832486
+  },
+  "worker/result.json": {
+    "sha256": "04d5e7a46eea9a1643a5ec272b7499c86c108dcb405971eace4d302bdd3de8a4",
+    "bytes": 616476
+  },
+  "source/Tools/audit_captured_pilot_result_v1.py": {
+    "sha256": "a3f683ab11aa07eb52aefb4046ba89516321bb175ef01697c39131234b3ac686",
+    "bytes": 9836
+  },
+  "source/Tools/audit_coherent_state_graph_v1.py": {
+    "sha256": "2bb9bb285ec93922fd96cc1eec98fa1fc2c73d20856140536ba5adfe50d4519d",
+    "bytes": 9570
+  },
+  "source/Tools/audit_graph_neighborhood_v1.py": {
+    "sha256": "a5186cabf4ae3e7b0ea3995f66b315709e64751d3e4636b37d2172a7fad02ef2",
+    "bytes": 4025
+  },
+  "source/Tools/benchmark_trained_graph_cuda_v1.py": {
+    "sha256": "fd5e840593d3992e6f40e9ec430d1fa02c9b468260c9fc87e3e10d8650f19993",
+    "bytes": 9974
+  },
+  "source/Tools/bind_network_capture_v1.py": {
+    "sha256": "af3bdbc41636214f01c2078ce26bd271794fa763ccefecd2a006f1014d2f117b",
+    "bytes": 2085
+  },
+  "source/Tools/run_frozen_state_graph_profile_v1.py": {
+    "sha256": "9f234e7214e7c740f18ae9e9cf880de98f28f6caf532938a4fbaf1dcd1470895",
+    "bytes": 8165
+  },
+  "source/Tools/run_frozen_trained_graph_cuda_v1.py": {
+    "sha256": "615459f7c6e79f8fe6c5f77557cc7c79544fc94414df3b9b115c040535651b1d",
+    "bytes": 5691
+  },
+  "source/Tools/trace_indexed_scene_v1.py": {
+    "sha256": "e1ce3a4cf1c83234897de221cc28833017e76863c4ac88e2ead3957f1bac13ac",
+    "bytes": 1732
+  },
+  "source/Tools/train_captured_geometry_v1.py": {
+    "sha256": "5700e71eed99d398239603f35c6c449814be0926d477df4944ff999a8e9b9dba",
+    "bytes": 9575
+  },
+  "source/Docs/validation/trained-geometry-blender-reproduction-2026-10-09/attempt01/worker/graph.json": {
+    "sha256": "b344145ca3df61093be1708cd69f44f60edcb1f90958c33391e964d521f51b55",
+    "bytes": 159663
+  },
+  "source/Docs/validation/trained-geometry-blender-reproduction-2026-10-09/attempt01/worker/scene.json": {
+    "sha256": "68ab482255cfcfcc0c66de9c0da33af18803a40f47bbb6ce1be943cc4a47f1b1",
+    "bytes": 1184894
+  },
+  "source/Blender/blender_lab/affine_geometry_network_v1.py": {
+    "sha256": "3f163e622e645a706b903ab3f714f3a695605463d2de51b9cd7218b02023696c",
+    "bytes": 9264
+  },
+  "source/Blender/blender_lab/coherent_state_graph_v1.py": {
+    "sha256": "d67c389be8a48d9aebe563fd3333af8c962c28d5f5942ea092bf448af403e439",
+    "bytes": 8421
+  },
+  "source/Blender/blender_lab/scalar_scene_ingress_v1.py": {
+    "sha256": "a2f53daa2f34ea71585bc9e9c3d742a02e66651cff2dee450dba09274b30d3d3",
+    "bytes": 10227
+  },
+  "source/Blender/blender_lab/scene_capture_v1.py": {
+    "sha256": "fe676b61a9e743277d69b54890688555a604f659c7f23ee223703b907ad8a2d0",
+    "bytes": 13990
+  },
+  "source/Blender/blender_lab/torch_geometry_backend_v1.py": {
+    "sha256": "c8b0eace6c7cd24aad27b54e820d743c194e56c0ad0810f03422f02e200b3d6f",
+    "bytes": 5412
+  },
+  "source/Blender/benchmarks/capacity_audit/exact_object_index_v1.py": {
+    "sha256": "ce7313f7702b46ed987943a2808957e0da4fb313a09e54a7f77a9c1b2b5126d2",
+    "bytes": 3618
+  },
+  "source/Blender/benchmarks/capacity_audit/robust_multipath_v1.py": {
+    "sha256": "26dcbe7bb61dbf98430cd481292970d5631e79aec9fc9794ba672611f559d4d8",
+    "bytes": 16867
+  },
+  "interval_analysis02/sources/Tools/audit_captured_pilot_result_v1.py": {
+    "sha256": "a3f683ab11aa07eb52aefb4046ba89516321bb175ef01697c39131234b3ac686",
+    "bytes": 9836
+  },
+  "interval_analysis02/sources/Tools/audit_coherent_state_graph_v1.py": {
+    "sha256": "2bb9bb285ec93922fd96cc1eec98fa1fc2c73d20856140536ba5adfe50d4519d",
+    "bytes": 9570
+  },
+  "interval_analysis02/sources/Tools/audit_graph_neighborhood_v1.py": {
+    "sha256": "a5186cabf4ae3e7b0ea3995f66b315709e64751d3e4636b37d2172a7fad02ef2",
+    "bytes": 4025
+  },
+  "interval_analysis02/sources/Tools/certify_cuda_coherent_probes_v1.py": {
+    "sha256": "a4ef446f57202df206be19b742a80f1a95030ea33764c8b298c794ec0edc6b26",
+    "bytes": 4718
+  },
+  "interval_analysis02/sources/Blender/blender_lab/state_graph_enclosure_v1.py": {
+    "sha256": "a972b5cc196489e9bbbdb8f47fef51db5fbf748c92648fee78b30666f996db15",
+    "bytes": 7177
+  },
+  "interval_analysis02/sources/Blender/benchmarks/capacity_audit/rational_interval_v1.py": {
+    "sha256": "34ae4b0ea08a7bd9a3cd35c599f1d6277539dd7e5e936fe56c71254d3858b53d",
+    "bytes": 5002
+  },
+  "interval_analysis01/sources/Tools/audit_captured_pilot_result_v1.py": {
+    "sha256": "a3f683ab11aa07eb52aefb4046ba89516321bb175ef01697c39131234b3ac686",
+    "bytes": 9836
+  },
+  "interval_analysis01/sources/Tools/audit_coherent_state_graph_v1.py": {
+    "sha256": "2bb9bb285ec93922fd96cc1eec98fa1fc2c73d20856140536ba5adfe50d4519d",
+    "bytes": 9570
+  },
+  "interval_analysis01/sources/Tools/audit_graph_neighborhood_v1.py": {
+    "sha256": "a5186cabf4ae3e7b0ea3995f66b315709e64751d3e4636b37d2172a7fad02ef2",
+    "bytes": 4025
+  },
+  "interval_analysis01/sources/Tools/certify_cuda_coherent_probes_v1.py": {
+    "sha256": "d70647a57bdf85b41f48efad7025c1390951857c95798e2682a7ebab78cf1a64",
+    "bytes": 4265
+  },
+  "interval_analysis01/sources/Blender/blender_lab/state_graph_enclosure_v1.py": {
+    "sha256": "a972b5cc196489e9bbbdb8f47fef51db5fbf748c92648fee78b30666f996db15",
+    "bytes": 7177
+  },
+  "interval_analysis01/sources/Blender/benchmarks/capacity_audit/rational_interval_v1.py": {
+    "sha256": "34ae4b0ea08a7bd9a3cd35c599f1d6277539dd7e5e936fe56c71254d3858b53d",
+    "bytes": 5002
+  }
+}

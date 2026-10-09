@@ -1,0 +1,84 @@
+{
+  "schema": "optic_neuro_blender.publication_integrity.v1",
+  "primary_metric": 1,
+  "local_document_links_checked": 110,
+  "missing_targets": [],
+  "animation_source_hashes_checked": 77,
+  "visual_outputs": [
+    {
+      "path": "Docs/assets/captured-gpu-coherent-network-2026-10-09.gif",
+      "frames": 36,
+      "pixels": [
+        1000,
+        560
+      ],
+      "sha256": "a86751d6be5a78f125e9b912ca4bc52ee7b2f81c4f931e6111eae757a1559e24"
+    },
+    {
+      "path": "Docs/assets/native-blender-geometry-training-2026-10-09.gif",
+      "frames": 31,
+      "pixels": [
+        950,
+        520
+      ],
+      "sha256": "3ce515a9416d751e5af8facb65b6b1f03afe8f8590712e4fe160c28afa9c63f5"
+    },
+    {
+      "path": "Docs/assets/installed-blender-exact-resume-2026-10-09.gif",
+      "frames": 31,
+      "pixels": [
+        1320,
+        693
+      ],
+      "sha256": "ba4c045b60e8142d89b69daa1a21b0a4294142883da29080942dd2dc0621d468"
+    },
+    {
+      "path": "Docs/assets/installed-blender-exact-resume-preview-2026-10-09.png",
+      "frames": 1,
+      "pixels": [
+        1320,
+        693
+      ],
+      "sha256": "97c455de5eb6b67916c31233c2eb7b563e57b280fb3c39abcf13bf5a9c5c2780"
+    },
+    {
+      "path": "Docs/assets/native-gpu-geometry-learning-2026-10-09.gif",
+      "frames": 31,
+      "pixels": [
+        1260,
+        840
+      ],
+      "sha256": "c2f62c3b1d2208db03c94ff736c12aa38a618fb3bfd852afbdd4d6fe767b8606"
+    },
+    {
+      "path": "Docs/assets/native-gpu-geometry-learning-preview-2026-10-09.png",
+      "frames": 1,
+      "pixels": [
+        1260,
+        840
+      ],
+      "sha256": "3152aa63b74d19debd2d7ac031d1c4960d96f07b5bb8e49ffe2e3eeb095e0859"
+    },
+    {
+      "path": "Docs/assets/native-graphics-batch-cost-2026-10-09.gif",
+      "frames": 6,
+      "pixels": [
+        1260,
+        630
+      ],
+      "sha256": "15a68b28df7c6fb87a308b6e84898edc333b214e6d28396f68389f24e18b6e1c"
+    },
+    {
+      "path": "Docs/assets/native-graphics-batch-cost-preview-2026-10-09.png",
+      "frames": 1,
+      "pixels": [
+        1260,
+        630
+      ],
+      "sha256": "2e93ea77ff597f9ed17235779f8019146f70acd74152af7a8302fab58160ded9"
+    }
+  ],
+  "article_source_tex_pdf_hashes_match": true,
+  "actual_two_compiler_exits_zero": true,
+  "scope": "Read-only local integrity and rendering metadata. Does not validate experimental science, remote publication, scientific novelty or expert review."
+}

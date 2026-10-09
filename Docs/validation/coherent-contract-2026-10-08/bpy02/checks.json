@@ -1,0 +1,20 @@
+{
+  "schema": "optic_neuro_blender.bpy_semantic_check.v1",
+  "status": "PASS",
+  "blender_version": "4.5.14 LTS",
+  "blender_build_hash": "62c1db4208e8",
+  "capture_state_sha256": "04d024d0db8bcb9288a23496dd2c4369a4268179f8da05d0ef8b8b249ce2dc53",
+  "save_reopen_same_identity": true,
+  "negative_controls_rejected": [
+    "split_coherence",
+    "detector_renormalization",
+    "wrong_unit_scale",
+    "edited_scene_units"
+  ],
+  "analytic_input_cancellation_only": true,
+  "optical_forward_executed": false,
+  "training_executed": false,
+  "gpu_requested": false,
+  "physical_calibration_verified": false,
+  "blend_sha256": "220642a2426b7885dd4dfb3a0623fea38fbfd09f1fab11840d8202dd31a8acdf"
+}

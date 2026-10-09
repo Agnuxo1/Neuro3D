@@ -1,0 +1,22 @@
+{
+  "status": "REJECTED_BEFORE_NATIVE_EXECUTION",
+  "native_gpu_executed": false,
+  "reason": "At Blender build 62c1db4208e8 GPUTexture(data=...) accepts only FLOAT buffers and RGBA32UI texture.read() falls through to FLOAT. Never executed. Replacement uses raw-byte GPUUniformBuf and explicitly UINT R32UI readback.",
+  "drafts": [
+    {
+      "original_path": "Blender/shaders/scene_hilo_transport_v1.glsl",
+      "retained_path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\rejected-native-texture-draft\\scene_hilo_transport_v1.glsl",
+      "sha256": "b842054a809be4bfe7e59e5944d70f6f72e5ac2d9dee9bfca52a7655d9642afe"
+    },
+    {
+      "original_path": "Blender/benchmarks/capacity_audit/scene_hilo_gpu_v1.py",
+      "retained_path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\rejected-native-texture-draft\\scene_hilo_gpu_v1.py",
+      "sha256": "916899f4c3dc09e3b5f7aea17bafd26999b947436529c808b1e5aaa4af820e8b"
+    },
+    {
+      "original_path": "Blender/tests/scene_hilo_native_runtime_v1.py",
+      "retained_path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\rejected-native-texture-draft\\scene_hilo_native_runtime_v1.py",
+      "sha256": "0bae5f3cf05e99cbc5370cbaa3249540408fafedcbe0f6b87cc6eea85a9a4b30"
+    }
+  ]
+}

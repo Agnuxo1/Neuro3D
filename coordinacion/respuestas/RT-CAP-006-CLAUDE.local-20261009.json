@@ -1,0 +1,42 @@
+{
+ "task_id": "RT-CAP-006",
+ "status": "BLOCKED_WAITING_EXTERNAL_HOLDER_ticket_still_queued",
+ "timestamp_utc": "2026-09-30T15:08:06+00:00",
+ "input_sha256": {
+  "coordinacion/tareas/RT-CAP-006-CLAUDE.md": "43c9b80f9acd7991ef8b458d8186114bcdbc669b052ec83107ad61b435239a5e"
+ },
+ "contract": {
+  "path": "D:/PROJECTS/.cognition/neuro3d/rt_cap002/pilot006_contract.json",
+  "sha256": "bcc04e6bf7c7df5f636e7bd14320a249e8f318d77d85b87f2ceb998d6a4dc672"
+ },
+ "code_sha256": {
+  "pilot006_job.py": "ce067e9d617a36388804aa1ac9fec9deb9c6f52084cb6ecd3dea5bad06465387",
+  "guard_v4.py": "cf097276e040230d4d470e4648098b507aa4bc5f03b70c0a599d5ff2c591d820",
+  "blender_capture_v2.py": "f4f8ade9f5985564be0eb7f0b607f8ff74d024e074bf4d03d76f69c519587530",
+  "rtcap_v2.py": "e5fee14508ae3ca4e11b6483788544e5cfcf1ad3d2a26d60464ba6607c4c48a4",
+  "manifest_T32_pilot006.json": "81b852f92a3ea6b6922fb1885474ccc39324f85c52eefe7390dac4d6967ccb07"
+ },
+ "attempt1": {
+  "result": "BLOCKED por guard_v4 fail-closed antes de lanzar Blender",
+  "reason": "ram_free_after_budget: RAM libre 5,988 GiB menos presupuesto 2,0 = 3,99 GiB < piso 4,0",
+  "evidence": {
+   "dir": "D:/PROJECTS/.cognition/neuro3d/rt_cap002/attempt1_blocked",
+   "sha256": {
+    "pilot006_envelope.json": "71e2b7b88dcb67f7986cc20058f2843ee2200dd5a40edc5c15f129d670b97f3e",
+    "pilot006_verdict.json": "236e4499775e578889b9ec0fe4780ebf032e42f57807ed8cdcfcfc3f5f8e1bed"
+   }
+  },
+  "renders": 0
+ },
+ "attempt2": {
+  "ticket": "neuro3d:rtcap006-pilot-2 (pid 26480, --vram 2 --ram 6.3) en cola gpuq desde 14:25 hora local (12:25 UTC)",
+  "queue_evidence": "gpuq status 12:29-15:07 UTC: TURNO filament:FIL-011 ms_learned_cons_40k (pid 41932) desde 14:25:15 local con util GPU 95-100 %; mi ticket primero en cola; RAM libre de la maquina 3,4 -> 3,0 -> 2,7 -> 1,2 -> 1,6 GiB (necesito 6,3 para arrancar)",
+  "waited_minutes": 162,
+  "resources_used": "ninguno (el ticket no consume RAM ni GPU en cola)"
+ },
+ "no_measures_lowered": "ni presupuestos (2 GiB RAM, 2 GiB VRAM), ni piso 4 GiB, ni timeout 100 s, ni deadline; no he cancelado ni tocado tickets/procesos ajenos",
+ "captures_untouched": "capturas 002/003 y EXR previos intactos; salida nueva out_pilot006_gpu NO creada",
+ "not_definitive": "bloqueo por recursos externos, no definitivo: el ticket sigue vivo y ejecutara el piloto si llega su turno con RAM libre >= 6,3 GiB; si no ocurre, cuando Fran/Codex lo indiquen paso a cierre con este informe y vuelvo a CPU",
+ "limits": "C3 BLOCKED; sin speedup ni RT coherente; inventario OptiX no certifica hardware RT",
+ "no_jev_aval": true
+}

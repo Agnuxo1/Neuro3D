@@ -1,0 +1,13 @@
+{
+  "schema": "optic_neuro_blender.installed_resume_owner.v1",
+  "status": "PASS",
+  "mode": "BASELINE",
+  "job_folder": "D:\\PROJECTS\\.cognition\\neuro3d-sequential-20261008\\installed-blender-resume-attempt01-20261009\\jobs\\optic-neuro-9bca025e46c145e3b41e0c0533b0c32f",
+  "checks": [],
+  "test_correct": 27,
+  "native_power_max_difference": 0.0,
+  "resume_step": 0,
+  "geometry_membership_states": 61,
+  "seconds": 257.86621909999667,
+  "original_example_preserved": true
+}

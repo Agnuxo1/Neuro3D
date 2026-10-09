@@ -1,0 +1,314 @@
+{
+  "schema": "optic_neuro_blender.semantic_artifact_index.v1",
+  "file_count": 61,
+  "files": [
+    {
+      "path": "actual-bpy01/admitted.json",
+      "bytes": 1184924,
+      "sha256": "75eedb170220eddde69111bc02c4ffc652cab7998052de31d9a9f3a0c7465989"
+    },
+    {
+      "path": "actual-bpy01/blender.log",
+      "bytes": 1141,
+      "sha256": "ca7c1fdf4b472a37c3d334a3120566b7b87b5f968b1e54dbcce7c4de9aa8e95f"
+    },
+    {
+      "path": "actual-bpy01/capture.json",
+      "bytes": 4532023,
+      "sha256": "458ca5e3e09bc25e5f7174f38c87e1cbd2049f7534ef0e73d9ea03d266454d93"
+    },
+    {
+      "path": "actual-bpy01/checks.json",
+      "bytes": 1040,
+      "sha256": "b77af70fcc0bf135c472d4f50605b6136cdc2a3faffc9ef99671a03055d50bb4"
+    },
+    {
+      "path": "actual-bpy01/runner.json",
+      "bytes": 1799,
+      "sha256": "9151128d80bbb6a903049081958763b9171fcdc7fdd4d30994ebefb5d57e1290"
+    },
+    {
+      "path": "actual-bpy01/source/Blender/blender_lab/__init__.py",
+      "bytes": 85,
+      "sha256": "8c93d859b2364fdd697db5fc3234c0406e2a01cbcceb9c6b05a72b92996f372f"
+    },
+    {
+      "path": "actual-bpy01/source/Blender/blender_lab/bos_adapter_v1.py",
+      "bytes": 2036,
+      "sha256": "83409838de0f7d71c623be729f0d4b8f754705f271161c2b429fbbd2ccf770e5"
+    },
+    {
+      "path": "actual-bpy01/source/Blender/blender_lab/coherent_contract_v1.py",
+      "bytes": 10178,
+      "sha256": "4339ff387837932c71ffdd0a7107146fd378878a7ad38d5a8b773b56c71316f2"
+    },
+    {
+      "path": "actual-bpy01/source/Blender/blender_lab/export_scene_v1.py",
+      "bytes": 1649,
+      "sha256": "d2c60bd956df8511a79d6f333446b736fc8633acad52fef2f2cf075d77e43fb0"
+    },
+    {
+      "path": "actual-bpy01/source/Blender/blender_lab/scalar_scene_ingress_v1.py",
+      "bytes": 10227,
+      "sha256": "a2f53daa2f34ea71585bc9e9c3d742a02e66651cff2dee450dba09274b30d3d3"
+    },
+    {
+      "path": "actual-bpy01/source/Blender/blender_lab/scene_capture_v1.py",
+      "bytes": 13990,
+      "sha256": "fe676b61a9e743277d69b54890688555a604f659c7f23ee223703b907ad8a2d0"
+    },
+    {
+      "path": "actual-bpy01/source/Tools/check_coherent_contract_in_blender_v1.py",
+      "bytes": 2538,
+      "sha256": "6b80c8baaa60b00135127c5004e5891cfdc6d12da2c4cd3b14b9a7bfe561c0d1"
+    },
+    {
+      "path": "bpy01/blender.log",
+      "bytes": 1685,
+      "sha256": "1e1e62312918fd21526ecfc5dbedb503186becd6ef3968d019bca60842b99015"
+    },
+    {
+      "path": "bpy01/runner.json",
+      "bytes": 1623,
+      "sha256": "cf78a4af287cd7a076bf7d924dbecaf11cf0bb2cd5998c7f82207b6f751d1fce"
+    },
+    {
+      "path": "bpy01/source/Blender/blender_lab/__init__.py",
+      "bytes": 85,
+      "sha256": "8c93d859b2364fdd697db5fc3234c0406e2a01cbcceb9c6b05a72b92996f372f"
+    },
+    {
+      "path": "bpy01/source/Blender/blender_lab/bos_adapter_v1.py",
+      "bytes": 2036,
+      "sha256": "83409838de0f7d71c623be729f0d4b8f754705f271161c2b429fbbd2ccf770e5"
+    },
+    {
+      "path": "bpy01/source/Blender/blender_lab/coherent_contract_v1.py",
+      "bytes": 9529,
+      "sha256": "0d48ee973eab5dd4dd480bb4d1641305ab2b2d413b856c2f2c18f3c0623cd56e"
+    },
+    {
+      "path": "bpy01/source/Blender/blender_lab/export_scene_v1.py",
+      "bytes": 1649,
+      "sha256": "d2c60bd956df8511a79d6f333446b736fc8633acad52fef2f2cf075d77e43fb0"
+    },
+    {
+      "path": "bpy01/source/Blender/blender_lab/scalar_scene_ingress_v1.py",
+      "bytes": 10227,
+      "sha256": "a2f53daa2f34ea71585bc9e9c3d742a02e66651cff2dee450dba09274b30d3d3"
+    },
+    {
+      "path": "bpy01/source/Blender/blender_lab/scene_capture_v1.py",
+      "bytes": 13990,
+      "sha256": "fe676b61a9e743277d69b54890688555a604f659c7f23ee223703b907ad8a2d0"
+    },
+    {
+      "path": "bpy01/source/Blender/tests/test_coherent_contract_blender_v1.py",
+      "bytes": 6035,
+      "sha256": "5ef5c5a27af3dc87eabfd8f02e11f07ae2c9c5b33bc035889b2c7ab8aa73f44c"
+    },
+    {
+      "path": "bpy02/admitted.json",
+      "bytes": 6325,
+      "sha256": "bb85b2eb198d700c19a4914131c20438c815d1dad5137423c6d5230c17bfcc8d"
+    },
+    {
+      "path": "bpy02/blender.log",
+      "bytes": 879,
+      "sha256": "4e8bd8356b5e4f29005cb7dbab8dfce05e1a438fb80c6653b8a963ebb3d49a3a"
+    },
+    {
+      "path": "bpy02/capture.json",
+      "bytes": 8426,
+      "sha256": "1a1c8116e5a674c3fc0ba9c7644b146a8a2c80b80755cbb6a5309909beddfef3"
+    },
+    {
+      "path": "bpy02/checks.json",
+      "bytes": 714,
+      "sha256": "906e06ad7b7048314ddd5d17a3bce8fbc91c824147d58112a95f28eb18b0db01"
+    },
+    {
+      "path": "bpy02/contract-fixture.blend",
+      "bytes": 429418,
+      "sha256": "220642a2426b7885dd4dfb3a0623fea38fbfd09f1fab11840d8202dd31a8acdf"
+    },
+    {
+      "path": "bpy02/contract.json",
+      "bytes": 1268,
+      "sha256": "d787cc304b0b4387d2fa80f32200ed49589a3a63459e940f025ff647688d17c4"
+    },
+    {
+      "path": "bpy02/fields.json",
+      "bytes": 68,
+      "sha256": "bff50d00f20588303ca3a77d3d42d29c9a7777d46d28a67ed5b0fe42fc426988"
+    },
+    {
+      "path": "bpy02/runner.json",
+      "bytes": 1626,
+      "sha256": "1f7b9c36c60cb98ee25e02d1428d8eb92189372815b6c13bed7ea764b571df81"
+    },
+    {
+      "path": "bpy02/semantics.json",
+      "bytes": 954,
+      "sha256": "a40f0b9e9d40b619837a98079c7bb732256ffb7f4faa98c3b961a6044f8e1fa4"
+    },
+    {
+      "path": "bpy02/source/Blender/blender_lab/__init__.py",
+      "bytes": 85,
+      "sha256": "8c93d859b2364fdd697db5fc3234c0406e2a01cbcceb9c6b05a72b92996f372f"
+    },
+    {
+      "path": "bpy02/source/Blender/blender_lab/bos_adapter_v1.py",
+      "bytes": 2036,
+      "sha256": "83409838de0f7d71c623be729f0d4b8f754705f271161c2b429fbbd2ccf770e5"
+    },
+    {
+      "path": "bpy02/source/Blender/blender_lab/coherent_contract_v1.py",
+      "bytes": 10178,
+      "sha256": "4339ff387837932c71ffdd0a7107146fd378878a7ad38d5a8b773b56c71316f2"
+    },
+    {
+      "path": "bpy02/source/Blender/blender_lab/export_scene_v1.py",
+      "bytes": 1649,
+      "sha256": "d2c60bd956df8511a79d6f333446b736fc8633acad52fef2f2cf075d77e43fb0"
+    },
+    {
+      "path": "bpy02/source/Blender/blender_lab/scalar_scene_ingress_v1.py",
+      "bytes": 10227,
+      "sha256": "a2f53daa2f34ea71585bc9e9c3d742a02e66651cff2dee450dba09274b30d3d3"
+    },
+    {
+      "path": "bpy02/source/Blender/blender_lab/scene_capture_v1.py",
+      "bytes": 13990,
+      "sha256": "fe676b61a9e743277d69b54890688555a604f659c7f23ee223703b907ad8a2d0"
+    },
+    {
+      "path": "bpy02/source/Blender/tests/test_coherent_contract_blender_v1.py",
+      "bytes": 6019,
+      "sha256": "e7edbeed31f1045c54a05c75cf27622dd8022f95d8fb2351bcf712205ab6420d"
+    },
+    {
+      "path": "iris-admission01/admitted.json",
+      "bytes": 2682148,
+      "sha256": "dedc87220e1aa124ee5fd98ea7f4d6a8789931851870887c3fdcfc2c2f08d8c8"
+    },
+    {
+      "path": "iris-admission01/checks_failed.json",
+      "bytes": 455,
+      "sha256": "5a8c00119f5858b5f94019405c5efa005f93bce361c696876f818616d550d774"
+    },
+    {
+      "path": "iris-admission01/cli.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "iris-admission01/cli.stdout",
+      "bytes": 328,
+      "sha256": "03dfd5ef876222e7afa350b3535591917ef5fcc3ff91ddaf0889217e2b7e39f4"
+    },
+    {
+      "path": "iris-admission01/prepare_evidence_source.py",
+      "bytes": 5131,
+      "sha256": "8df2e12fa5f5ace7a080d9f8b7bbc0c4ecfaa3756c18a1d8067184a7d6b02a22"
+    },
+    {
+      "path": "iris-admission01/source/Blender/blender_lab/coherent_contract_v1.py",
+      "bytes": 10178,
+      "sha256": "4339ff387837932c71ffdd0a7107146fd378878a7ad38d5a8b773b56c71316f2"
+    },
+    {
+      "path": "iris-admission01/source/Tools/admit_coherent_capture_v1.py",
+      "bytes": 1612,
+      "sha256": "2fde7e273644a9ba46ceac95e8cde40cdc9e5669ed0f0c40abe659548867b5a0"
+    },
+    {
+      "path": "iris-admission02/admitted.json",
+      "bytes": 1185510,
+      "sha256": "52d28c2c3696ddd529f9fa065954880b4a13ae4a5df33c9db08b1c522a602bc6"
+    },
+    {
+      "path": "iris-admission02/checks.json",
+      "bytes": 1725,
+      "sha256": "11fc98a6f33543398314aacad277f375083ee93efe7af3c7a003223c3345f11a"
+    },
+    {
+      "path": "iris-admission02/cli.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "iris-admission02/cli.stdout",
+      "bytes": 328,
+      "sha256": "4268025f47d9266e8fadca5a5a8ed1a57380625f79ff6e93fb3ddebe1e7d1510"
+    },
+    {
+      "path": "prepare_evidence_source.py",
+      "bytes": 5368,
+      "sha256": "2988ec7db90ddfbba3180d9406b922e83233a3caec11e3109714b7cea819402b"
+    },
+    {
+      "path": "readout_controls.json",
+      "bytes": 911,
+      "sha256": "3d84d08f8777ffab104c0c54fedfb9fceb35970ab050dfc7865fbac277acbd5c"
+    },
+    {
+      "path": "software_guard_runner.py",
+      "bytes": 3570,
+      "sha256": "eea140ff832e2a2e2de6f9b8dfe57ec5d9d6ea8c3dbb427b6270717b18fff750"
+    },
+    {
+      "path": "source/Blender/benchmarks/capacity_audit/robust_multipath_v1.py",
+      "bytes": 16662,
+      "sha256": "7339cdbedf2838607f132c806b22a3c79cb00f64531129efbf2914c957c9e1e0"
+    },
+    {
+      "path": "source/Blender/blender_lab/coherent_contract_v1.py",
+      "bytes": 10178,
+      "sha256": "4339ff387837932c71ffdd0a7107146fd378878a7ad38d5a8b773b56c71316f2"
+    },
+    {
+      "path": "source/Blender/tests/test_coherent_contract_v1.py",
+      "bytes": 10592,
+      "sha256": "4bf975dd0851e48893591bcdf06be9b228403ac412c0e91fb511ff83f6d67b9f"
+    },
+    {
+      "path": "source/Tools/admit_coherent_capture_v1.py",
+      "bytes": 1949,
+      "sha256": "a18cf63477b70ea402109a9ee522d788d9e4350c3003573c87c69d2411575fe6"
+    },
+    {
+      "path": "source/Tools/bind_network_capture_v1.py",
+      "bytes": 2085,
+      "sha256": "af3bdbc41636214f01c2078ce26bd271794fa763ccefecd2a006f1014d2f117b"
+    },
+    {
+      "path": "source/Tools/check_coherent_contract_in_blender_v1.py",
+      "bytes": 2538,
+      "sha256": "6b80c8baaa60b00135127c5004e5891cfdc6d12da2c4cd3b14b9a7bfe561c0d1"
+    },
+    {
+      "path": "source/Tools/plot_coherent_readout_controls_v1.py",
+      "bytes": 2630,
+      "sha256": "f26094bde68df07180e5631ac2b8329ef0fe413389f84e2224f06918dbf738ef"
+    },
+    {
+      "path": "unit-controls-receipt.json",
+      "bytes": 435,
+      "sha256": "5553c4d42a0e76b70bd1a73ed75946f57e932f3e0e45fa18d45dbb2dcce619bc"
+    },
+    {
+      "path": "unit-controls.stderr",
+      "bytes": 8243,
+      "sha256": "242054701ac297671254d3e93ad0b31050243971ded7d997aec36dc7a1923ae5"
+    },
+    {
+      "path": "unit-controls.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "optical_forward_executed": false,
+  "field_certified": false,
+  "frozen_pilot_executed": false
+}

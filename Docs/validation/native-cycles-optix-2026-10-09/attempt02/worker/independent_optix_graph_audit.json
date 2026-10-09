@@ -1,0 +1,11 @@
+{
+  "primary_metric": 1,
+  "status": "VALID_COMPLETE_GRAPH",
+  "states": 133,
+  "sources": 5,
+  "nearest_hits_independently_verified": true,
+  "nonzero_branch_coverage_verified": true,
+  "boundary_neighborhood_independently_verified": false,
+  "field_certified": false,
+  "physical_optics_certified": false
+}

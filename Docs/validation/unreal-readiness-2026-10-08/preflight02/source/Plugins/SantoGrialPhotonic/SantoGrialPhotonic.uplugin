@@ -1,0 +1,18 @@
+{
+    "FileVersion": 3,
+    "Version": 1,
+    "VersionName": "0.1.0",
+    "FriendlyName": "Santo Grial Photonic Neural Core",
+    "Description": "Deterministic GPU compute core for an optical-state neural galaxy.",
+    "Category": "AI",
+    "CreatedBy": "Santo Grial reconstruction",
+    "CanContainContent": false,
+    "IsExperimentalVersion": true,
+    "Modules": [
+        {
+            "Name": "SantoGrialPhotonic",
+            "Type": "Runtime",
+            "LoadingPhase": "Default"
+        }
+    ]
+}

@@ -1,0 +1,4 @@
+[gpuq] 2026-10-08T12:18:31 en cola: 719cc043-5941-4e3a-9b03-15ab4c2481aa
+[gpuq] 2026-10-08T12:18:39 TURNO: 719cc043-5941-4e3a-9b03-15ab4c2481aa -> C:\Python313\python.exe -I -B D:\PROJECTS\Neuro3D-Scientific-20261008\Blender\benchmarks\capacity_audit\iris_native_gpu_guard_v1.py --manifest D:\PROJECTS\.cognition\neuro3d-sequential-20261008\point06\native02\job.json --receipt D:\PROJECTS\.cognition\neuro3d-sequential-20261008\point06\native02\guard.json
+{"job_id": "719cc043-5941-4e3a-9b03-15ab4c2481aa", "status": "PASS", "worker_exit_code": 0, "cleanup_confirmed": true, "worker_report_sha256": "6dcd43b344960a275d3945b7d706d09c4fdaecfbf341d925387ee559f44589ce", "elapsed_seconds": 4.693384599988349, "failure": null}
+[gpuq] 2026-10-08T12:18:44 fin: 719cc043-5941-4e3a-9b03-15ab4c2481aa rc=0

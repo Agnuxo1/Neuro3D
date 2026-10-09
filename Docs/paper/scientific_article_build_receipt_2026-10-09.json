@@ -1,0 +1,37 @@
+{
+  "schema": "optic_neuro_blender.scientific_article_build.v1",
+  "utc": "2026-10-09T12:57:15.622819+00:00",
+  "source_evidence_commit": "7cce9f0b0465000a47ad5952654d6f9de28d9b64",
+  "compiler": "pdfTeX1.40.28/MiKTeX25.12",
+  "compiler_command": [
+    "C:/Program Files/MiKTeX/miktex/bin/x64/pdflatex.exe",
+    "-interaction=nonstopmode",
+    "-halt-on-error",
+    "-no-shell-escape",
+    "-output-directory=D:\\PROJECTS\\.cognition\\neuro3d-sequential-20261008\\article-tex-build12-20261009",
+    "optic_neuro_blender_reproducible_draft_2026-10-09.tex"
+  ],
+  "shell_escape": false,
+  "two_actual_exit_codes": [
+    0,
+    0
+  ],
+  "pages": 14,
+  "pdf_bytes": 368032,
+  "pdf_links": 105,
+  "source_equations_and_tables_checked": true,
+  "warnings": {
+    "underfull_boxes": 15,
+    "overfull_boxes": 0,
+    "miktex_administrator_update_notice": true
+  },
+  "not_submitted": true,
+  "not_external_peer_review": true,
+  "bit_identical_pdf_between_hosts_claimed": false,
+  "files": {
+    "Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.md": "58f5fdc77c99f23eb355a00604ef6c713ac9391bc7700e9a0463f83be3560788",
+    "Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.tex": "06bb24621088d44995ba690786f916c54470e6a86ab0ca5dcb88d5d1098fbb48",
+    "Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.pdf": "c0e879bb91746af839a4f645583ce8c43e0318ca265db7b3a03dd99b329224d1",
+    "Tools/build_scientific_tex_draft_v1.py": "9755a1cd85b2346d163e42b114ab71e29108b319b5b152780b9814a03e9c5139"
+  }
+}

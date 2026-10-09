@@ -12,7 +12,7 @@
         {
             "Name": "SantoGrialPhotonic",
             "Type": "Runtime",
-            "LoadingPhase": "Default"
+            "LoadingPhase": "PostConfigInit"
         }
     ]
 }

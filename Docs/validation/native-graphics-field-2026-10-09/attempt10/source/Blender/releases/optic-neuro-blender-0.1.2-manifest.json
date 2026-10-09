@@ -1,0 +1,342 @@
+{
+  "schema": "optic_neuro_blender.package.v1",
+  "version": "0.1.2",
+  "runtime": "Blender4.5 with bundled NumPy, stdlib, Windows or Linux resource supervision",
+  "files": {
+    "__init__.py": {
+      "sha256": "6272042722f3f277bf63e695e71b2c4dbbb679f8f14f045bb18f1cd0ac9f3c8d",
+      "bytes": 12187
+    },
+    "_vendor/__init__.py": {
+      "sha256": "44be256a676b1ee83d2db8665b77e0dff09c4f7f0e6ba5d4c9caa76a11eb0f87",
+      "bytes": 64
+    },
+    "_vendor/Blender/__init__.py": {
+      "sha256": "44be256a676b1ee83d2db8665b77e0dff09c4f7f0e6ba5d4c9caa76a11eb0f87",
+      "bytes": 64
+    },
+    "_vendor/Blender/benchmarks/__init__.py": {
+      "sha256": "44be256a676b1ee83d2db8665b77e0dff09c4f7f0e6ba5d4c9caa76a11eb0f87",
+      "bytes": 64
+    },
+    "_vendor/Blender/benchmarks/capacity_audit/__init__.py": {
+      "sha256": "44be256a676b1ee83d2db8665b77e0dff09c4f7f0e6ba5d4c9caa76a11eb0f87",
+      "bytes": 64
+    },
+    "_vendor/Blender/benchmarks/capacity_audit/exact_object_index_v1.py": {
+      "sha256": "ce7313f7702b46ed987943a2808957e0da4fb313a09e54a7f77a9c1b2b5126d2",
+      "bytes": 3618
+    },
+    "_vendor/Blender/benchmarks/capacity_audit/robust_multipath_v1.py": {
+      "sha256": "26dcbe7bb61dbf98430cd481292970d5631e79aec9fc9794ba672611f559d4d8",
+      "bytes": 16867
+    },
+    "_vendor/Blender/blender_lab/__init__.py": {
+      "sha256": "8c93d859b2364fdd697db5fc3234c0406e2a01cbcceb9c6b05a72b92996f372f",
+      "bytes": 85
+    },
+    "_vendor/Blender/blender_lab/affine_geometry_network_v1.py": {
+      "sha256": "77bc3b419cf5a5c2141687d8f46664e745832b3c5651d41efd6111691aa56cb0",
+      "bytes": 9292
+    },
+    "_vendor/Blender/blender_lab/coherent_contract_v1.py": {
+      "sha256": "4339ff387837932c71ffdd0a7107146fd378878a7ad38d5a8b773b56c71316f2",
+      "bytes": 10178
+    },
+    "_vendor/Blender/blender_lab/coherent_state_graph_v1.py": {
+      "sha256": "9859e21508b1224cd91b9863310d9691f4cd50dfc54ef3876989fd340488f613",
+      "bytes": 8477
+    },
+    "_vendor/Blender/blender_lab/scalar_scene_ingress_v1.py": {
+      "sha256": "2c04c2c8255b2c29a93020ebda9b0be304528b3d3f7d86dfcdf5b09ff5ed5c24",
+      "bytes": 10255
+    },
+    "_vendor/Blender/blender_lab/scene_capture_v1.py": {
+      "sha256": "fe676b61a9e743277d69b54890688555a604f659c7f23ee223703b907ad8a2d0",
+      "bytes": 13990
+    },
+    "_vendor/Tools/__init__.py": {
+      "sha256": "44be256a676b1ee83d2db8665b77e0dff09c4f7f0e6ba5d4c9caa76a11eb0f87",
+      "bytes": 64
+    },
+    "_vendor/Tools/audit_captured_pilot_result_v1.py": {
+      "sha256": "a3f683ab11aa07eb52aefb4046ba89516321bb175ef01697c39131234b3ac686",
+      "bytes": 9836
+    },
+    "_vendor/Tools/audit_coherent_state_graph_v1.py": {
+      "sha256": "c9e4258b32354d318e2b7bc598b0b49e00529fc05ada38f9d6c10ff13cf87b96",
+      "bytes": 9598
+    },
+    "_vendor/Tools/audit_graph_neighborhood_v1.py": {
+      "sha256": "c0aff0f726f29448f0186750d38511fce4d7e5c053cc0b47eaa98660ff5c2f95",
+      "bytes": 4081
+    },
+    "_vendor/Tools/bind_network_capture_v1.py": {
+      "sha256": "5966d65c6acf9f70dfab4f80b7abfcdf3295276269b9ecc1b92918c26a1d07fd",
+      "bytes": 2113
+    },
+    "_vendor/Tools/trace_indexed_scene_v1.py": {
+      "sha256": "ab53ebae4a30711a44f6161c35a406f9a64b96c5e90081676a6f2648279ce381",
+      "bytes": 1844
+    },
+    "_vendor/Tools/train_captured_geometry_v1.py": {
+      "sha256": "0616aeafc13ff39eef669223fc97fecde40e041999703c6b3f86114fb8450ab4",
+      "bytes": 9715
+    },
+    "bootstrap.py": {
+      "sha256": "858c26e08bef42f8e0ce5f4a22f4dbfc50cf2acb5623bae67c36e80638f45dbb",
+      "bytes": 1158
+    },
+    "data/contract.json": {
+      "sha256": "72cd57ad26e9becfccab6304ccd62dc9afea21efd651ffbae1aefdfef337dd0b",
+      "bytes": 4662
+    },
+    "data/iris.csv": {
+      "sha256": "9cc1c345c71bcc9b486b74cbf6063fa66f4bb5e0f603a4b3c3471ec2e5e8e355",
+      "bytes": 3858
+    },
+    "data/network.json": {
+      "sha256": "85d7b5dd77589b5c1b11b19b1de082be4fb8e4cb7ddceafa50f35cdd4767b515",
+      "bytes": 7872
+    },
+    "data/semantics.json": {
+      "sha256": "bcd17460a49dbbe244997638b056dc5dfcf544f2bc2b59c3f18ce9edb2569336",
+      "bytes": 11610
+    },
+    "data/trained_geometry.blend": {
+      "sha256": "7d800f4c598674c21e4ce5d39db5d02d59cadec0ba8458304622f69e020e8f04",
+      "bytes": 7922480
+    },
+    "data/training_profile.json": {
+      "sha256": "0eba46caad4b11a4405910d80d6d52c802e7db743e5b267004612d563f971914",
+      "bytes": 5909
+    },
+    "data/training_result.json": {
+      "sha256": "cd15f461839d9e7863079e60cedbfcbad040f77a18b6f1cec4d7594d03b3df3a",
+      "bytes": 44267
+    },
+    "INSTALL.txt": {
+      "sha256": "fa9f7da5bc8726eec2ea9710cb2a104bc06e6eac4333e7f08dc9d18864e3b576",
+      "bytes": 942
+    },
+    "LICENSE": {
+      "sha256": "3e678775bdc901ec198d173d64cffd4d5998a5491fd67899ce3067e93c842ab5",
+      "bytes": 1106
+    },
+    "model.py": {
+      "sha256": "6ef4efb2588b0a4b41c8c6dcfe3e0ca00368decb230ebf7b6362b66cbfbc53d6",
+      "bytes": 3528
+    },
+    "runtime.py": {
+      "sha256": "42f0f87c2cf323bdcd70bcb00e3ee295a2c538f78bfd2e9389e7036cbe92918c",
+      "bytes": 6411
+    },
+    "worker_v2.py": {
+      "sha256": "35b81ac6af071f22f8411851f2cf816161d1b81355d71ead3d21d5e6a3a63c78",
+      "bytes": 7968
+    }
+  },
+  "source_provenance": {
+    "__init__.py": {
+      "source": "Blender/addon/optic_neuro_blender/__init__.py",
+      "source_sha256": "6272042722f3f277bf63e695e71b2c4dbbb679f8f14f045bb18f1cd0ac9f3c8d",
+      "namespace_rewrite": false
+    },
+    "bootstrap.py": {
+      "source": "Blender/addon/optic_neuro_blender/bootstrap.py",
+      "source_sha256": "858c26e08bef42f8e0ce5f4a22f4dbfc50cf2acb5623bae67c36e80638f45dbb",
+      "namespace_rewrite": false
+    },
+    "model.py": {
+      "source": "Blender/addon/optic_neuro_blender/model.py",
+      "source_sha256": "6ef4efb2588b0a4b41c8c6dcfe3e0ca00368decb230ebf7b6362b66cbfbc53d6",
+      "namespace_rewrite": false
+    },
+    "runtime.py": {
+      "source": "Blender/addon/optic_neuro_blender/runtime.py",
+      "source_sha256": "42f0f87c2cf323bdcd70bcb00e3ee295a2c538f78bfd2e9389e7036cbe92918c",
+      "namespace_rewrite": false
+    },
+    "worker_v2.py": {
+      "source": "Blender/addon/optic_neuro_blender/worker_v2.py",
+      "source_sha256": "35b81ac6af071f22f8411851f2cf816161d1b81355d71ead3d21d5e6a3a63c78",
+      "namespace_rewrite": false
+    },
+    "_vendor/Blender/blender_lab/__init__.py": {
+      "source": "Blender/blender_lab/__init__.py",
+      "source_sha256": "8c93d859b2364fdd697db5fc3234c0406e2a01cbcceb9c6b05a72b92996f372f",
+      "namespace_rewrite": true,
+      "rewrites": [
+        "from Tools. → from optic_neuro_blender._vendor.Tools.",
+        "from Blender. → from optic_neuro_blender._vendor.Blender.",
+        "text newline normalization to LF"
+      ]
+    },
+    "_vendor/Blender/blender_lab/scene_capture_v1.py": {
+      "source": "Blender/blender_lab/scene_capture_v1.py",
+      "source_sha256": "fe676b61a9e743277d69b54890688555a604f659c7f23ee223703b907ad8a2d0",
+      "namespace_rewrite": true,
+      "rewrites": [
+        "from Tools. → from optic_neuro_blender._vendor.Tools.",
+        "from Blender. → from optic_neuro_blender._vendor.Blender.",
+        "text newline normalization to LF"
+      ]
+    },
+    "_vendor/Blender/blender_lab/scalar_scene_ingress_v1.py": {
+      "source": "Blender/blender_lab/scalar_scene_ingress_v1.py",
+      "source_sha256": "a2f53daa2f34ea71585bc9e9c3d742a02e66651cff2dee450dba09274b30d3d3",
+      "namespace_rewrite": true,
+      "rewrites": [
+        "from Tools. → from optic_neuro_blender._vendor.Tools.",
+        "from Blender. → from optic_neuro_blender._vendor.Blender.",
+        "text newline normalization to LF"
+      ]
+    },
+    "_vendor/Blender/blender_lab/coherent_contract_v1.py": {
+      "source": "Blender/blender_lab/coherent_contract_v1.py",
+      "source_sha256": "4339ff387837932c71ffdd0a7107146fd378878a7ad38d5a8b773b56c71316f2",
+      "namespace_rewrite": true,
+      "rewrites": [
+        "from Tools. → from optic_neuro_blender._vendor.Tools.",
+        "from Blender. → from optic_neuro_blender._vendor.Blender.",
+        "text newline normalization to LF"
+      ]
+    },
+    "_vendor/Blender/blender_lab/coherent_state_graph_v1.py": {
+      "source": "Blender/blender_lab/coherent_state_graph_v1.py",
+      "source_sha256": "d67c389be8a48d9aebe563fd3333af8c962c28d5f5942ea092bf448af403e439",
+      "namespace_rewrite": true,
+      "rewrites": [
+        "from Tools. → from optic_neuro_blender._vendor.Tools.",
+        "from Blender. → from optic_neuro_blender._vendor.Blender.",
+        "text newline normalization to LF"
+      ]
+    },
+    "_vendor/Blender/blender_lab/affine_geometry_network_v1.py": {
+      "source": "Blender/blender_lab/affine_geometry_network_v1.py",
+      "source_sha256": "3f163e622e645a706b903ab3f714f3a695605463d2de51b9cd7218b02023696c",
+      "namespace_rewrite": true,
+      "rewrites": [
+        "from Tools. → from optic_neuro_blender._vendor.Tools.",
+        "from Blender. → from optic_neuro_blender._vendor.Blender.",
+        "text newline normalization to LF"
+      ]
+    },
+    "_vendor/Blender/benchmarks/capacity_audit/robust_multipath_v1.py": {
+      "source": "Blender/benchmarks/capacity_audit/robust_multipath_v1.py",
+      "source_sha256": "26dcbe7bb61dbf98430cd481292970d5631e79aec9fc9794ba672611f559d4d8",
+      "namespace_rewrite": true,
+      "rewrites": [
+        "from Tools. → from optic_neuro_blender._vendor.Tools.",
+        "from Blender. → from optic_neuro_blender._vendor.Blender.",
+        "text newline normalization to LF"
+      ]
+    },
+    "_vendor/Blender/benchmarks/capacity_audit/exact_object_index_v1.py": {
+      "source": "Blender/benchmarks/capacity_audit/exact_object_index_v1.py",
+      "source_sha256": "ce7313f7702b46ed987943a2808957e0da4fb313a09e54a7f77a9c1b2b5126d2",
+      "namespace_rewrite": true,
+      "rewrites": [
+        "from Tools. → from optic_neuro_blender._vendor.Tools.",
+        "from Blender. → from optic_neuro_blender._vendor.Blender.",
+        "text newline normalization to LF"
+      ]
+    },
+    "_vendor/Tools/audit_captured_pilot_result_v1.py": {
+      "source": "Tools/audit_captured_pilot_result_v1.py",
+      "source_sha256": "a3f683ab11aa07eb52aefb4046ba89516321bb175ef01697c39131234b3ac686",
+      "namespace_rewrite": true,
+      "rewrites": [
+        "from Tools. → from optic_neuro_blender._vendor.Tools.",
+        "from Blender. → from optic_neuro_blender._vendor.Blender.",
+        "text newline normalization to LF"
+      ]
+    },
+    "_vendor/Tools/audit_coherent_state_graph_v1.py": {
+      "source": "Tools/audit_coherent_state_graph_v1.py",
+      "source_sha256": "2bb9bb285ec93922fd96cc1eec98fa1fc2c73d20856140536ba5adfe50d4519d",
+      "namespace_rewrite": true,
+      "rewrites": [
+        "from Tools. → from optic_neuro_blender._vendor.Tools.",
+        "from Blender. → from optic_neuro_blender._vendor.Blender.",
+        "text newline normalization to LF"
+      ]
+    },
+    "_vendor/Tools/audit_graph_neighborhood_v1.py": {
+      "source": "Tools/audit_graph_neighborhood_v1.py",
+      "source_sha256": "a5186cabf4ae3e7b0ea3995f66b315709e64751d3e4636b37d2172a7fad02ef2",
+      "namespace_rewrite": true,
+      "rewrites": [
+        "from Tools. → from optic_neuro_blender._vendor.Tools.",
+        "from Blender. → from optic_neuro_blender._vendor.Blender.",
+        "text newline normalization to LF"
+      ]
+    },
+    "_vendor/Tools/bind_network_capture_v1.py": {
+      "source": "Tools/bind_network_capture_v1.py",
+      "source_sha256": "af3bdbc41636214f01c2078ce26bd271794fa763ccefecd2a006f1014d2f117b",
+      "namespace_rewrite": true,
+      "rewrites": [
+        "from Tools. → from optic_neuro_blender._vendor.Tools.",
+        "from Blender. → from optic_neuro_blender._vendor.Blender.",
+        "text newline normalization to LF"
+      ]
+    },
+    "_vendor/Tools/trace_indexed_scene_v1.py": {
+      "source": "Tools/trace_indexed_scene_v1.py",
+      "source_sha256": "e1ce3a4cf1c83234897de221cc28833017e76863c4ac88e2ead3957f1bac13ac",
+      "namespace_rewrite": true,
+      "rewrites": [
+        "from Tools. → from optic_neuro_blender._vendor.Tools.",
+        "from Blender. → from optic_neuro_blender._vendor.Blender.",
+        "text newline normalization to LF"
+      ]
+    },
+    "_vendor/Tools/train_captured_geometry_v1.py": {
+      "source": "Tools/train_captured_geometry_v1.py",
+      "source_sha256": "5700e71eed99d398239603f35c6c449814be0926d477df4944ff999a8e9b9dba",
+      "namespace_rewrite": true,
+      "rewrites": [
+        "from Tools. → from optic_neuro_blender._vendor.Tools.",
+        "from Blender. → from optic_neuro_blender._vendor.Blender.",
+        "text newline normalization to LF"
+      ]
+    },
+    "data/network.json": {
+      "source": "Docs/research/iris_scene_coordinate_bindings_v1.json",
+      "source_sha256": "85d7b5dd77589b5c1b11b19b1de082be4fb8e4cb7ddceafa50f35cdd4767b515",
+      "namespace_rewrite": false
+    },
+    "data/semantics.json": {
+      "source": "Docs/validation/captured-scalar-ingress-2026-10-08/semantics.json",
+      "source_sha256": "bcd17460a49dbbe244997638b056dc5dfcf544f2bc2b59c3f18ce9edb2569336",
+      "namespace_rewrite": false
+    },
+    "data/contract.json": {
+      "source": "Docs/research/iris_coherent_contract_v1.json",
+      "source_sha256": "72cd57ad26e9becfccab6304ccd62dc9afea21efd651ffbae1aefdfef337dd0b",
+      "namespace_rewrite": false
+    },
+    "data/training_profile.json": {
+      "source": "Docs/research/captured_geometry_training_profile_2026-10-09.json",
+      "source_sha256": "0eba46caad4b11a4405910d80d6d52c802e7db743e5b267004612d563f971914",
+      "namespace_rewrite": false
+    },
+    "data/training_result.json": {
+      "source": "Docs/validation/captured-geometry-training-2026-10-09/attempt01/worker/result.json",
+      "source_sha256": "cd15f461839d9e7863079e60cedbfcbad040f77a18b6f1cec4d7594d03b3df3a",
+      "namespace_rewrite": false
+    },
+    "data/trained_geometry.blend": {
+      "source": "Docs/validation/trained-geometry-blender-reproduction-2026-10-09/attempt01/worker/trained_geometry.blend",
+      "source_sha256": "7d800f4c598674c21e4ce5d39db5d02d59cadec0ba8458304622f69e020e8f04",
+      "namespace_rewrite": false
+    },
+    "data/iris.csv": {
+      "source": "Blender/demo_lattice_iris/iris.csv",
+      "source_sha256": "9cc1c345c71bcc9b486b74cbf6063fa66f4bb5e0f603a4b3c3471ec2e5e8e355",
+      "namespace_rewrite": false
+    }
+  },
+  "third_party_optical_code_bundled": false
+}

@@ -1,0 +1,7 @@
+{
+  "job_id": "9c1737ad-0aed-4372-b2c9-2e507f407909",
+  "manifest_sha256": "dedc2afad5ede6c20d692f48cf43d79a5814c52bdc2d9dcc3d9e113156f1d1c2",
+  "pin_count": 35,
+  "returncode": 0,
+  "schema": "neuro3d.iris_lattice.guarded_launch.v1"
+}

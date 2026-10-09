@@ -1,0 +1,44 @@
+[
+  {
+    "repo": "emircbngl/blender-optics-simulator",
+    "commit": "2b488e2e99dff4f56d67f57f9674bd00f812dda1",
+    "path": "LICENSE",
+    "sha256": "e57f1c320b8cf8798a7d2ff83a6f9e06a33a03585f6e065fea97f1d86db84052",
+    "bytes": 35150
+  },
+  {
+    "repo": "emircbngl/blender-optics-simulator",
+    "commit": "2b488e2e99dff4f56d67f57f9674bd00f812dda1",
+    "path": "optical_alignment_sim/optics_api.py",
+    "sha256": "e57d8d661ed4c01b23912435d4eaa298452c38a18011bd68ca8a346a2a7acfd9",
+    "bytes": 175178
+  },
+  {
+    "repo": "emircbngl/blender-optics-simulator",
+    "commit": "2b488e2e99dff4f56d67f57f9674bd00f812dda1",
+    "path": "optical_alignment_sim/properties.py",
+    "sha256": "781945025ec7424ff8c3b4983dbeec7980f3c5d341cbb7fb1d64c3ff82d71f86",
+    "bytes": 78629
+  },
+  {
+    "repo": "emircbngl/blender-optics-simulator",
+    "commit": "2b488e2e99dff4f56d67f57f9674bd00f812dda1",
+    "path": "tests/_verify_detector.py",
+    "sha256": "02eb5b7cbef9a48cd86016688529140c3e266897048ecbf68551f2d7e28bdd69",
+    "bytes": 8994
+  },
+  {
+    "repo": "NeuroJSON/BlenderPhotonics",
+    "commit": "732799f9e3ebe10e013e316b8a21d88452755dc8",
+    "path": "LICENSE.txt",
+    "sha256": "1e5767fda75109bb768d6bcd5f2ac7ce1034ed8e87fc68e5351519bec1f67f1a",
+    "bytes": 36216
+  },
+  {
+    "repo": "NeuroJSON/BlenderPhotonics",
+    "commit": "732799f9e3ebe10e013e316b8a21d88452755dc8",
+    "path": "README.md",
+    "sha256": "692a0551b4e682bc953c393247da9b6a89768fbde3d5ac6408b435a0fb7a50bc",
+    "bytes": 4542
+  }
+]

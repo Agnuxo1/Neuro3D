@@ -1,0 +1,303 @@
+[
+  {
+    "case": "stable",
+    "certificate": {
+      "schema": "neuro3d-complete-error-certificate-v1",
+      "backend": "CPU_RATIONAL_OUTWARD_INTERVALS",
+      "interval_bits": 128,
+      "scene_sha256": "d9fb9b6b24b4a29e56741e1bf9bd435b0b9aefd93e1f93cb987017f083a342de",
+      "status": "CERTIFIED_SUPPLIED_MODEL_BOX",
+      "physical_input_bounds": "UNKNOWN_NOT_ZERO",
+      "native_full_kernel_certified": false,
+      "scope": "explicit supplied scalar-model input box",
+      "paths": [
+        {
+          "source_id": "input",
+          "terminal": "out",
+          "effective_length_BU": {
+            "lo": [
+              170140928248694041027839706184928531865,
+              85070591730234615865843651857942052864
+            ],
+            "hi": [
+              170141438672244422435534901246839679591,
+              85070591730234615865843651857942052864
+            ]
+          },
+          "segment_lengths_BU": [
+            {
+              "lo": [
+                680564393559510005988285751488928991063,
+                340282366920938463463374607431768211456
+              ],
+              "hi": [
+                340282537062121923932606339119071927373,
+                170141183460469231731687303715884105728
+              ]
+            }
+          ],
+          "phase_rad_before_quarter_turn": {
+            "lo": [
+              4276107922088362601638234334565244161017,
+              42535295865117307932921825928971026432
+            ],
+            "hi": [
+              4276120750431371381239208650729722105399,
+              42535295865117307932921825928971026432
+            ]
+          },
+          "power_factor": {
+            "lo": [
+              1,
+              1
+            ],
+            "hi": [
+              1,
+              1
+            ]
+          },
+          "field_real": {
+            "lo": [
+              340282363052001360668624634525428820591,
+              340282366920938463463374607431768211456
+            ],
+            "hi": [
+              1,
+              1
+            ]
+          },
+          "field_imag": {
+            "lo": [
+              -51313372035118403897264657911777849,
+              340282366920938463463374607431768211456
+            ],
+            "hi": [
+              51313372035118403897264657911777849,
+              340282366920938463463374607431768211456
+            ]
+          }
+        }
+      ],
+      "ports": {
+        "out": {
+          "field_real": {
+            "lo": [
+              340282363052001360668624634525428820591,
+              340282366920938463463374607431768211456
+            ],
+            "hi": [
+              1,
+              1
+            ]
+          },
+          "field_imag": {
+            "lo": [
+              -51313372035118403897264657911777849,
+              340282366920938463463374607431768211456
+            ],
+            "hi": [
+              51313372035118403897264657911777849,
+              340282366920938463463374607431768211456
+            ]
+          },
+          "intensity": {
+            "lo": [
+              340282359183064301862854874806774482319,
+              340282366920938463463374607431768211456
+            ],
+            "hi": [
+              10633824208087895907902329788888968537,
+              10633823966279326983230456482242756608
+            ]
+          },
+          "estimated_field": [
+            1.0,
+            -3.91886975727153e-15
+          ],
+          "estimated_intensity": 1.0,
+          "field_error_L1_upper": [
+            25658620486777360461948402083131365,
+            170141183460469231731687303715884105728
+          ],
+          "intensity_error_upper": [
+            241808568924671873306646211929,
+            10633823966279326983230456482242756608
+          ],
+          "field_error_L1_upward_float": 0.00015080781716049902,
+          "intensity_error_upward_float": 2.2739568540109886e-08
+        }
+      },
+      "input_radii": {
+        "vertex_radius": [
+          0,
+          1
+        ],
+        "object_translation": {
+          "out": [
+            [
+              1,
+              1000000
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        },
+        "source_position": [
+          0,
+          1
+        ],
+        "source_direction": {
+          "input": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        },
+        "source_field": [
+          0,
+          1
+        ],
+        "wavelength": [
+          0,
+          1
+        ],
+        "mirror_phase": [
+          0,
+          1
+        ],
+        "transmittance": [
+          0,
+          1
+        ],
+        "reference": [
+          0,
+          1
+        ]
+      },
+      "topology_certified": true,
+      "pi_interval": {
+        "lo": [
+          267257146016241686964920093290467695823,
+          85070591730234615865843651857942052864
+        ],
+        "hi": [
+          66814286504060421741230023322616923957,
+          21267647932558653966460912964485513216
+        ]
+      },
+      "path_count": 1,
+      "rays": 1
+    }
+  },
+  {
+    "case": "angular",
+    "certificate": {
+      "schema": "neuro3d-complete-error-certificate-v1",
+      "backend": "CPU_RATIONAL_OUTWARD_INTERVALS",
+      "interval_bits": 128,
+      "scene_sha256": "d9fb9b6b24b4a29e56741e1bf9bd435b0b9aefd93e1f93cb987017f083a342de",
+      "status": "UNKNOWN",
+      "physical_input_bounds": "UNKNOWN_NOT_ZERO",
+      "native_full_kernel_certified": false,
+      "scope": "explicit supplied scalar-model input box",
+      "paths": [],
+      "ports": null,
+      "input_radii": {
+        "vertex_radius": [
+          0,
+          1
+        ],
+        "object_translation": {
+          "out": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        },
+        "source_position": [
+          0,
+          1
+        ],
+        "source_direction": {
+          "input": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1000000
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        },
+        "source_field": [
+          0,
+          1
+        ],
+        "wavelength": [
+          0,
+          1
+        ],
+        "mirror_phase": [
+          0,
+          1
+        ],
+        "transmittance": [
+          0,
+          1
+        ],
+        "reference": [
+          0,
+          1
+        ]
+      },
+      "reason": "UNKNOWN_TERMINAL_MODE",
+      "topology_certified": false
+    }
+  },
+  {
+    "case": "missing_physical",
+    "certificate": {
+      "schema": "neuro3d-complete-error-certificate-v1",
+      "backend": "CPU_RATIONAL_OUTWARD_INTERVALS",
+      "interval_bits": 128,
+      "scene_sha256": "d9fb9b6b24b4a29e56741e1bf9bd435b0b9aefd93e1f93cb987017f083a342de",
+      "status": "UNKNOWN",
+      "physical_input_bounds": "UNKNOWN_NOT_ZERO",
+      "native_full_kernel_certified": false,
+      "scope": "explicit supplied scalar-model input box",
+      "paths": [],
+      "ports": null,
+      "reason": "finite represented real required",
+      "topology_certified": false
+    }
+  }
+]

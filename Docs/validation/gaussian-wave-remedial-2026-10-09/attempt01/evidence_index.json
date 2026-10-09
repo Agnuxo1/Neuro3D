@@ -1,0 +1,82 @@
+{
+  "archive_and_plot.py": {
+    "sha256": "61b6567a66dd7cc93303fb3b4ebe816ffed66b87160a33a4e5006b8e2d5d3752",
+    "bytes": 4207
+  },
+  "prepare_wave_remedial_v2_20261009.py": {
+    "sha256": "bf95b3cfe1b21901233e9090a5c3ef54ec7fe1c4403ce98b3facdec748589b8b",
+    "bytes": 5764
+  },
+  "profile.json": {
+    "sha256": "f11f1e2bd1aebf1cfc0ca4b62202025664a80cf5da934fee571bc358b7a9d5a6",
+    "bytes": 4200
+  },
+  "published-wave-remedial-v2-20261009.json": {
+    "sha256": "a90473914d1696be6d9960cfea78651e03283da81a77e66f63fe1876e0c499c8",
+    "bytes": 430
+  },
+  "registration.json": {
+    "sha256": "e33360aa4d69dec8799f5b550782c8d8e338ded9af27d98f3ec8b9e4f13d809c",
+    "bytes": 749
+  },
+  "supervisor.json": {
+    "sha256": "82281daba3a9e9937c431ee38b7da1a73f8b4a5395adfb101c3505d2d89498b7",
+    "bytes": 2342
+  },
+  "verify_published_frozen_profile_v1.py": {
+    "sha256": "a4f5c0db7af7542e1e13e3808989ff712c84367e5f22da3af2567132a66e61a3",
+    "bytes": 1930
+  },
+  "worker.stdout": {
+    "sha256": "d97dc5a8955a27c93dc9407dec22d0d1cf02dfb8891b0f87785b1655588cb4ed",
+    "bytes": 9894
+  },
+  "worker/progress.jsonl": {
+    "sha256": "6e181ae754776eec93c34a18c308385dbce8bfb7c985770441d9a1a4ec732cd3",
+    "bytes": 284132
+  },
+  "worker/result.json": {
+    "sha256": "2de1f80b56f7b549ad6c2d71e14d1c99ee1140911283d0675cf4a19a553eb231",
+    "bytes": 392869
+  },
+  "source/Tools/audit_captured_pilot_result_v1.py": {
+    "sha256": "a3f683ab11aa07eb52aefb4046ba89516321bb175ef01697c39131234b3ac686",
+    "bytes": 9836
+  },
+  "source/Tools/audit_coherent_state_graph_v1.py": {
+    "sha256": "2bb9bb285ec93922fd96cc1eec98fa1fc2c73d20856140536ba5adfe50d4519d",
+    "bytes": 9570
+  },
+  "source/Tools/bind_network_capture_v1.py": {
+    "sha256": "af3bdbc41636214f01c2078ce26bd271794fa763ccefecd2a006f1014d2f117b",
+    "bytes": 2085
+  },
+  "source/Tools/independent_gaussian_hankel_v1.py": {
+    "sha256": "33ed5b3d77cda769b6f1aa6892b7e5af2a8c3f8108d8c5aa0f53df3ed15795b0",
+    "bytes": 2559
+  },
+  "source/Tools/run_frozen_state_graph_profile_v1.py": {
+    "sha256": "9f234e7214e7c740f18ae9e9cf880de98f28f6caf532938a4fbaf1dcd1470895",
+    "bytes": 8165
+  },
+  "source/Tools/run_frozen_wave_reference_v2.py": {
+    "sha256": "14dbabe95c2ffff9d7ea24e1ff30469c9ab57d8ce7cded89ca17544090a3469d",
+    "bytes": 5577
+  },
+  "source/Tools/run_gaussian_wave_reference_v2.py": {
+    "sha256": "38f9f962fb4ae39db5c1a357c335108c54550b8eea315b56ca58cfeffd10b6fa",
+    "bytes": 7721
+  },
+  "source/Blender/blender_lab/scene_capture_v1.py": {
+    "sha256": "fe676b61a9e743277d69b54890688555a604f659c7f23ee223703b907ad8a2d0",
+    "bytes": 13990
+  },
+  "source/Blender/blender_lab/wave_optics_v1.py": {
+    "sha256": "c7aba16074a1e654a889f7dd27d61d14ea9a3b7a9405abe22c552cf142de2584",
+    "bytes": 3794
+  },
+  "source/Blender/blender_lab/__init__.py": {
+    "sha256": "8c93d859b2364fdd697db5fc3234c0406e2a01cbcceb9c6b05a72b92996f372f",
+    "bytes": 85
+  }
+}

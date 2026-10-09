@@ -1,0 +1,69 @@
+{
+  "schema": "neuro3d.blender_lab.captured_iris_pilot_protocol.v1",
+  "proposal_id": "957514f2-a233-421f-aa04-50cccd063d97",
+  "registration_status": "PREPARED_NOT_EXECUTED_EXTERNAL_REGISTRATION_PENDING",
+  "research_question": "Can Blender-Lab construct and execute coherent optical neural networks from the actual Blender scene with quantitatively valid, reproducible results, useful error certificates and explicit rejection beyond its model?",
+  "pilot_scope": "Deterministic feasibility of complete scalar path traversal on one fixed represented Blender capture; not confirmatory validation of main H1, field precision, neural accuracy, learning or physical optics.",
+  "hypothesis": "For this fixed packet and specified ray/depth budgets, the scalar CPU traversal returns COMPLETE with no unresolved or omitted nonzero branches and finite detector estimates.",
+  "primary_metric": "complete_traversal_binary",
+  "success_threshold": 1,
+  "failure_threshold": 0,
+  "null_zone": "No intermediate values. Supervisor interruption, RAM preflight failure, malformed output or environmental failure are INCONCLUSIVE/NOT_EXECUTED and never silently counted as a geometry result. Algorithmic INCOMPLETE is0.",
+  "methodology": "Load the byte-pinned captured-scene scalar packet with five explicitly declared unit real source fields. Execute the archived CPU worker once with max-rays4096 and max-depth64 under the stated memory/time profile. Retain raw output and logs before analysis. A valid COMPLETE requires no unresolved rays, all declared source IDs represented, finite complex fields/powers at every declared terminal and no field-certification claim. INCOMPLETE preserves unresolved reasons and null fields. Do not alter geometry, modes, bounds or success criteria after a result; any later profile is a new amendment.",
+  "planned_analysis": "Deterministic categorical audit and exact path-ledger checks. No p-values, statistical population claim or neural accuracy metric. Record optional timing as supervised pilot duration, not matched-baseline inference cost.",
+  "planned_replications": 1,
+  "stochastic_experiment": false,
+  "known_limitations": [
+    "One fixed represented affine scene and one CPU execution; no independent external reproduction.",
+    "Exact affine capture model differs from native floating-point transforms and from legacy source JSON descriptors.",
+    "Scalar ideal mirrors/splitters/modes do not establish the physical validity of diffraction, polarization or finite-beam coupling.",
+    "COMPLETE indicates finite traversal; floating field estimates remain uncertified.",
+    "Resource bounds can make traversal incomplete; no post-result increase is allowed in this protocol.",
+    "No training, held-out generalization, classifier decision or NVIDIA/AMD result is part of this pilot."
+  ],
+  "input_files": {
+    "scene.json": {
+      "path": "scene.json",
+      "sha256": "59963192f88df24bf5b1d7fd2f8119a81a0ecad353f62ee16831ccfb98627097"
+    },
+    "semantics.json": {
+      "path": "semantics.json",
+      "sha256": "bcd17460a49dbbe244997638b056dc5dfcf544f2bc2b59c3f18ce9edb2569336"
+    },
+    "fields_admission_only.json": {
+      "path": "fields_admission_only.json",
+      "sha256": "ef8dfdcd26a9ad01afd20ca3ebbaab75d5f74ebcee1572c308a959f081849589"
+    }
+  },
+  "source_files": {
+    "source/Blender/benchmarks/capacity_audit/trace_exact_scene_v1.py": "add601f017eb42e1ca4e4a5349f5d6d24dc38e7f896f139f237c520cb492f2d5",
+    "source/Blender/benchmarks/capacity_audit/robust_multipath_v1.py": "7339cdbedf2838607f132c806b22a3c79cb00f64531129efbf2914c957c9e1e0"
+  },
+  "worker_path": "source/Blender/benchmarks/capacity_audit/trace_exact_scene_v1.py",
+  "worker_arguments": [
+    "--scene",
+    "scene.json",
+    "--out",
+    "FRESH_OUTPUT/result.json",
+    "--max-rays",
+    "4096",
+    "--max-depth",
+    "64"
+  ],
+  "supervision": {
+    "logical_cpus": 1,
+    "priority": "BELOW_NORMAL",
+    "hidden_process": true,
+    "timeout_seconds": 90,
+    "preflight_free_ram_mib": 4000,
+    "minimum_free_ram_mib": 2500,
+    "maximum_owned_process_rss_mib": 1500,
+    "maximum_result_bytes": 67108864,
+    "gpu_requested": false
+  },
+  "preregId": null,
+  "ipfsCid": null,
+  "external_registration_obtained": false,
+  "owner_registration_exception_approved": false,
+  "result_collected": false
+}

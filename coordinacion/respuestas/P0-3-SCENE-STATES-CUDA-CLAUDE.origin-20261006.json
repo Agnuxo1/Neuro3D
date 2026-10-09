@@ -1,0 +1,226 @@
+{
+ "task_id": "P0-3-SCENE-STATES-CUDA-CLAUDE",
+ "status": "PHASE_B_CUDA_PASS",
+ "timestamp_utc": "2026-10-01T10:22:09+00:00",
+ "result": {
+  "success": true,
+  "guard_rc": 0,
+  "envelope_status": "OK",
+  "child_exit": 0,
+  "own_child_dead": true,
+  "checker_v2_verdict": "PASS",
+  "checker_failures": [],
+  "checker_warnings": [],
+  "device": "cuda",
+  "torch": "2.6.0+cu124",
+  "scenes_measured": 104,
+  "errors": [],
+  "max_field_diff_vs_my_oracle_and_codex": 1.3187211140465806e-13,
+  "mzi_max_diff": 1.4210854715202007e-14,
+  "conf1": {
+   "states": 136,
+   "ref_states": 136,
+   "max_diff_vs_statefuse": 5.355233758506401e-13,
+   "max_diff_vs_oracleB": 4.887200272673166e-13
+  },
+  "negatives_aborted": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "strict_control": {
+   "spec": "MZI de Codex con MB desplazado 2^-31 BU, segunda fuente s2; referencia statefuse SIN fusion",
+   "lambda_0.125_max_diff_vs_unfused": 3.552713680454862e-15,
+   "lambda_2^-17_rejected": true,
+   "lambda_2^-17_reason": "politica auto_strict_per_scene: escena 0 lambda=7.62939e-06 no cubierta (quant 3.04e-15 < suelo 1.42"
+  },
+  "groups": [
+   {
+    "shape": [
+     3,
+     3,
+     1
+    ],
+    "states": 14,
+    "edges": 0,
+    "casts": 14,
+    "levels": 1,
+    "prop_iters": 1,
+    "seconds_total": 0.5374360000132583
+   },
+   {
+    "shape": [
+     3,
+     3,
+     2
+    ],
+    "states": 16,
+    "edges": 0,
+    "casts": 16,
+    "levels": 1,
+    "prop_iters": 1,
+    "seconds_total": 0.007161399989854544
+   },
+   {
+    "shape": [
+     7,
+     3,
+     1
+    ],
+    "states": 22,
+    "edges": 7,
+    "casts": 22,
+    "levels": 3,
+    "prop_iters": 3,
+    "seconds_total": 0.4462522999965586
+   },
+   {
+    "shape": [
+     6,
+     3,
+     1
+    ],
+    "states": 17,
+    "edges": 3,
+    "casts": 17,
+    "levels": 2,
+    "prop_iters": 2,
+    "seconds_total": 0.014239900017855689
+   },
+   {
+    "shape": [
+     4,
+     3,
+     1
+    ],
+    "states": 13,
+    "edges": 2,
+    "casts": 13,
+    "levels": 2,
+    "prop_iters": 2,
+    "seconds_total": 0.01348689998849295
+   },
+   {
+    "shape": [
+     6,
+     3,
+     2
+    ],
+    "states": 18,
+    "edges": 0,
+    "casts": 18,
+    "levels": 1,
+    "prop_iters": 1,
+    "seconds_total": 0.005212999996729195
+   },
+   {
+    "shape": [
+     5,
+     3,
+     1
+    ],
+    "states": 19,
+    "edges": 2,
+    "casts": 19,
+    "levels": 2,
+    "prop_iters": 2,
+    "seconds_total": 0.013416300003882498
+   },
+   {
+    "shape": [
+     7,
+     3,
+     2
+    ],
+    "states": 19,
+    "edges": 5,
+    "casts": 19,
+    "levels": 3,
+    "prop_iters": 3,
+    "seconds_total": 0.02117079999879934
+   },
+   {
+    "shape": [
+     4,
+     3,
+     2
+    ],
+    "states": 12,
+    "edges": 0,
+    "casts": 12,
+    "levels": 1,
+    "prop_iters": 1,
+    "seconds_total": 0.005022199999075383
+   },
+   {
+    "shape": [
+     5,
+     3,
+     2
+    ],
+    "states": 6,
+    "edges": 0,
+    "casts": 6,
+    "levels": 1,
+    "prop_iters": 1,
+    "seconds_total": 0.0051642999751493335
+   }
+  ],
+  "seconds_child": 11.7523111999908,
+  "preflight": {
+   "ram_free_gib": 8.85357666015625,
+   "vram_used_gib": 0.81640625,
+   "vram_total_gib": 24.0,
+   "temp_c": 53.0
+  },
+  "postflight": {
+   "ram_free_gib": 8.836597442626953,
+   "vram_used_gib": 0.8076171875,
+   "vram_total_gib": 24.0,
+   "temp_c": 54.0
+  }
+ },
+ "gates_original_unchanged": {
+  "field_vs_oracle": 1e-10,
+  "conf1_vs_oracleB": 1e-09,
+  "global": 0.0001,
+  "strict_control": 1e-08
+ },
+ "policy": "auto_strict_per_scene",
+ "manifest_sha256": "3343fa298cef2286e6643026a7e8b23ac4a6db011b443ffdf8c9c625fa89fe5b",
+ "guard_override": {
+  "ram_floor_GiB": 1.5,
+  "ram_budget_GiB": 1.8,
+  "original_floor_GiB": 4.0,
+  "authority": "Fran, respuesta Si bajar a 1,5 GiB (30/09 ~21:15 UTC)",
+  "measured_peak_rss_cpu_GiB": 0.39
+ },
+ "override_note": "el override (piso RAM 1,5 GiB, presupuesto 1,8 GiB medido, autorizado por Fran) NO hizo falta: al arrancar habia 8,85 GiB libres; el resultado no depende de el",
+ "attempt1": "BLOQUEADO por guard con piso 4 GiB (RAM libre 5,28 GiB); conservado en attempt1_cuda_blocked/",
+ "reading": [
+  "El motor de estados fusionados (gpu_states_v2) ejecuta en CUDA (torch float64, RTX 3090) la propagacion y la fusion DESDE ESCENA para las 104 escenas del manifiesto, el MZI de Codex (6 configuraciones) y conf1 K4 (136 estados, igual que statefuse): diferencia de campo maxima 1,3e-13 frente a mi oraculo independiente y al ideal_fields de Codex (umbral 1e-10); conf1 4,9e-13 frente al oraculo B (umbral 1e-9); los 4 negativos abortan; control estricto 3,6e-15 y lambda 2^-17 rechazada antes de fusionar.",
+  "El checker v2 obligatorio (cobertura medida de las 104 escenas, valores de politica por escena recalculados desde la escena, puertos y fuentes) da PASS sin fallos ni avisos; el job exige rc 0 + envelope OK + proceso muerto + PASS."
+ ],
+ "limits": [
+  "float64 en CUDA con torch (fuerza bruta paralela por rayo), no float32 ni RT; no mide velocidad ni ventaja",
+  "clase de escenas axiales/diagonales diadicas con lambda 0,07 a 0,125; las cotas angulares y de acumulacion de fusiones siguen pendientes",
+  "los resultados no se autentican criptograficamente: el envelope del guard y el SHA ligan el contenido, no prueban la ejecucion ante un tercero",
+  "P0-4 y la comparacion de trabajo igual siguen pendientes de ejecutar en CUDA"
+ ],
+ "artifact_sha256": {
+  "p03_cuda_job.py": "e7eeffd8e6147ec50f1cd61028dcb6b5fd90877a4ce9b88ede6ddb27ba547099",
+  "p03_cuda_result.json": "ed222ba40e6aaa8ca809353e101a2ff70dab847dd2aa4d0c613fb15bc8c44bba",
+  "p03_cuda_checker_verdict.json": "3af3628d36b65304996abbcc06d4760a939724d7207847573f1c8edfb2161dd3",
+  "p03_cuda_envelope.json": "374a6ac74240963dacc9c1eeef7e1927b8a73740778f934202617a89794a4ff9",
+  "p03_cuda_harness.log": "c65cbebc955f370b74db726a2203e0e04caa622cd14a05f658f1a9fbfe28f4c7",
+  "p03_cuda_job_verdict.json": "01474b62d6fbc0340c65f6bec8f9809f7b70f25be244fd5c774d8c157fac5fc2",
+  "p03_harness_v4.py": "31075e4a71ce8df323868a7013b030774476806adb9499141918732f87a627bc",
+  "p03_checker_v2.py": "d4ba59108695084af4e2b9b9487e3a17a98e9c6866f059df3e931499d55b17a0",
+  "p03_manifest.json": "3343fa298cef2286e6643026a7e8b23ac4a6db011b443ffdf8c9c625fa89fe5b",
+  "CONTRATO-P0-3.md": "ebaf059828776cd30ca67731deab247288a19bd23320ac072135c4ed681e159a",
+  "attempt1_cuda_blocked/p03_cuda_envelope.json": "6c3ff467ed6eb22cafc12766d5611b2831f7f9895de63a7237c4a8e085e2506d",
+  "attempt1_cuda_blocked/p03_cuda_job_verdict.json": "c19c2a18c5d1cf0ef063416e1c9cc0674c04fbecc2d4687e68b684ef71b06eae"
+ },
+ "no_jev_aval": false
+}

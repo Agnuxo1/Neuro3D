@@ -1,0 +1,7 @@
+{
+  "job_id": "e2808118-f944-463c-ba5f-f6c5170ff21c",
+  "manifest_sha256": "1ba451212cc136442ea34a1ec9a7cefd44fdf366211f28813590f21b732ba800",
+  "pin_count": 40,
+  "returncode": 1,
+  "schema": "neuro3d.first_hit.guarded_launch.v1"
+}

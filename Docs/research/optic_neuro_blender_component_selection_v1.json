@@ -1,0 +1,222 @@
+{
+  "schema": "neuro3d.optic_neuro_blender.component_selection.v1",
+  "date": "2026-10-08",
+  "owner_goal": "Our own functional optical neural network inside Blender; reuse selected techniques without replacing or diverting Neuro3D objectives.",
+  "application_name": "OpticNeuroBlender",
+  "own_repository": "Agnuxo1/Neuro3D",
+  "decision": "OWN_CORE_WITH_SELECTED_EXTERNAL_TECHNIQUES",
+  "priority_order": [
+    "Close own coherent neural forward and error chain from scene",
+    "Reuse mesh/model preparation techniques when required by the optical component",
+    "Adopt validated coherence/polarization/beam/wave-reference techniques",
+    "Accelerate equivalent computation with exact/controlled geometry caching, spatial queries and coherent graph compilation",
+    "Measure matched task/model/precision/output full cost before adoption"
+  ],
+  "component_choices": [
+    {
+      "source": "BlenderPhotonics",
+      "use": "Mesh generation, unit/material association and scene-to-solver workflow",
+      "scope": "Volumetric meshing only when required; no claim of accelerating the current surface-only circuit"
+    },
+    {
+      "source": "Blender Optics Simulator",
+      "use": "Optical component models, coherence, Jones/Gaussian/Fresnel and wave references",
+      "scope": "Explicit adaptation to same input coherence/phase/detector semantics"
+    },
+    {
+      "source": "Neuro3D own solver",
+      "use": "Neural input encoding, trainable optical parameters, complete coherent propagation, readout and learning",
+      "scope": "Remain authoritative for project semantics; no learned-matrix fallback introduced"
+    },
+    {
+      "source": "BlenderPhotonics MMC/MCX",
+      "use": "Optional statistical volumetric transport",
+      "scope": "Not a replacement for coherent carrier fields; only if a neural task needs such media"
+    }
+  ],
+  "integration_blockers": [
+    {
+      "id": "source_coherence",
+      "finding": "BOS emits distinct src_id groups and its measurement adds different-source intensities. Neuro3D inputs are coherent.",
+      "required_action": "Common-source modulated channels or explicitly equivalent mutual coherence and relative phases"
+    },
+    {
+      "id": "path_completeness",
+      "finding": "BOS tracer EPS1e-4, near-parallel threshold1e-9, aperture tolerance1e-3, power cutoff1e-4 and depth/segment limits",
+      "required_action": "Preserve our exact/admissible contacts and explicit incompleteness; rigorous omitted-field bound before discard"
+    },
+    {
+      "id": "detector_definition",
+      "finding": "BOS common Jones frame restores intercepted beam power; this is not automatically modal coupling",
+      "required_action": "Define integrated-power vs modal-projection detector before comparing"
+    },
+    {
+      "id": "gpu_precision_and_scope",
+      "finding": "BOS CuPy/MLX GPU module accelerates off-trace FFT; fast complex64\u22481e-6 is author claim, not a universal error bound",
+      "required_action": "Start comparison at suitable precision, reject unexpected nonfinites, include transfers; actual hardware tests required"
+    },
+    {
+      "id": "physical_regime",
+      "finding": "Nominal Iris aperture D/lambda\u22484; ray-regime physical validity not established",
+      "required_action": "Wave-reference convergence and explicit regime limits before physical fidelity claim"
+    }
+  ],
+  "observations": {
+    "schema": "neuro3d.component_selection.analytic_observations.v1",
+    "scope": "Code review and exact algebra/counts only; no new optics, training or performance experiment",
+    "coherence_examples": [
+      {
+        "fields": [
+          [
+            1,
+            0
+          ],
+          [
+            -1,
+            0
+          ]
+        ],
+        "same_group_intensity": 0,
+        "independent_groups_intensity": 2
+      },
+      {
+        "fields": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "same_group_intensity": 4,
+        "independent_groups_intensity": 2
+      }
+    ],
+    "geometry_counts": {
+      "optical_objects": 104,
+      "triangles": 6656,
+      "triangles_per_object": 64,
+      "candidate_ratio": 64.0,
+      "measured_speedup": null
+    },
+    "nominal_aperture": {
+      "lambda_BU": 0.1,
+      "diameter_BU": 0.4,
+      "diameter_over_wavelength_approx": 4.0,
+      "physical_ray_regime_established": false,
+      "note": "Nominal legacy radius0.2BU. Ratio motivates a wave-reference study, not a measured physical error."
+    },
+    "precision_warning": {
+      "BOS_author_fast_complex64_deviation_approx": 1e-06,
+      "universal_error_bound": false,
+      "Neuro3D_budget_satisfied_by_this_claim": false
+    },
+    "own_scene_sha256": "59963192f88df24bf5b1d7fd2f8119a81a0ecad353f62ee16831ccfb98627097",
+    "new_Neuro3D_fields_computed": false,
+    "new_accuracy_or_speed_improvement_demonstrated": false
+  },
+  "primary_sources": [
+    {
+      "repo": "emircbngl/blender-optics-simulator",
+      "commit": "2b488e2e99dff4f56d67f57f9674bd00f812dda1",
+      "path": "optical_alignment_sim/tracer.py",
+      "url": "https://raw.githubusercontent.com/emircbngl/blender-optics-simulator/2b488e2e99dff4f56d67f57f9674bd00f812dda1/optical_alignment_sim/tracer.py",
+      "sha256": "34c55bb1bb25813bf0add905398717c4e27dfe4a826314faad1e46607b0580ef",
+      "bytes": 143546
+    },
+    {
+      "repo": "emircbngl/blender-optics-simulator",
+      "commit": "2b488e2e99dff4f56d67f57f9674bd00f812dda1",
+      "path": "optical_alignment_sim/geometry.py",
+      "url": "https://raw.githubusercontent.com/emircbngl/blender-optics-simulator/2b488e2e99dff4f56d67f57f9674bd00f812dda1/optical_alignment_sim/geometry.py",
+      "sha256": "6868977bfa257fe3728668ec450a1cac2c4572d164ef39f92cd3b5c5da4f2889",
+      "bytes": 7709
+    },
+    {
+      "repo": "emircbngl/blender-optics-simulator",
+      "commit": "2b488e2e99dff4f56d67f57f9674bd00f812dda1",
+      "path": "optical_alignment_sim/physics.py",
+      "url": "https://raw.githubusercontent.com/emircbngl/blender-optics-simulator/2b488e2e99dff4f56d67f57f9674bd00f812dda1/optical_alignment_sim/physics.py",
+      "sha256": "033af0cdfc3e4b83d679274230bd612f9a8771e77749cabcc9e6257394180366",
+      "bytes": 145352
+    },
+    {
+      "repo": "emircbngl/blender-optics-simulator",
+      "commit": "2b488e2e99dff4f56d67f57f9674bd00f812dda1",
+      "path": "optical_alignment_sim/gaussian.py",
+      "url": "https://raw.githubusercontent.com/emircbngl/blender-optics-simulator/2b488e2e99dff4f56d67f57f9674bd00f812dda1/optical_alignment_sim/gaussian.py",
+      "sha256": "b7615c907aa7babe4ab651646b29a67e4dc138dcc248567406c64d962cb679e7",
+      "bytes": 4259
+    },
+    {
+      "repo": "emircbngl/blender-optics-simulator",
+      "commit": "2b488e2e99dff4f56d67f57f9674bd00f812dda1",
+      "path": "optical_alignment_sim/field.py",
+      "url": "https://raw.githubusercontent.com/emircbngl/blender-optics-simulator/2b488e2e99dff4f56d67f57f9674bd00f812dda1/optical_alignment_sim/field.py",
+      "sha256": "0b726a7f06de3f6a868205e414ad24f1245019d783dc8ededc2d34d9ae8e4236",
+      "bytes": 39123
+    },
+    {
+      "repo": "emircbngl/blender-optics-simulator",
+      "commit": "2b488e2e99dff4f56d67f57f9674bd00f812dda1",
+      "path": "optical_alignment_sim/gpu.py",
+      "url": "https://raw.githubusercontent.com/emircbngl/blender-optics-simulator/2b488e2e99dff4f56d67f57f9674bd00f812dda1/optical_alignment_sim/gpu.py",
+      "sha256": "f3b1c70d552808c25ebf1ba6d88d9d0da8ba50ec89205ac1aaef4523b3835fca",
+      "bytes": 6580
+    },
+    {
+      "repo": "NeuroJSON/BlenderPhotonics",
+      "commit": "732799f9e3ebe10e013e316b8a21d88452755dc8",
+      "path": "runmcx.py",
+      "url": "https://raw.githubusercontent.com/NeuroJSON/BlenderPhotonics/732799f9e3ebe10e013e316b8a21d88452755dc8/runmcx.py",
+      "sha256": "7191544be54757251256f00aa2a98f4b3f2eda41f0ad729decddebb7208eed30",
+      "bytes": 19326
+    },
+    {
+      "repo": "NeuroJSON/BlenderPhotonics",
+      "commit": "732799f9e3ebe10e013e316b8a21d88452755dc8",
+      "path": "runmmc.py",
+      "url": "https://raw.githubusercontent.com/NeuroJSON/BlenderPhotonics/732799f9e3ebe10e013e316b8a21d88452755dc8/runmmc.py",
+      "sha256": "9276720acf49e31d0fa57691c34a9aeade22d829dc606c89ba55a9f3a2db0a13",
+      "bytes": 26594
+    },
+    {
+      "repo": "NeuroJSON/BlenderPhotonics",
+      "commit": "732799f9e3ebe10e013e316b8a21d88452755dc8",
+      "path": "blender2tet.py",
+      "url": "https://raw.githubusercontent.com/NeuroJSON/BlenderPhotonics/732799f9e3ebe10e013e316b8a21d88452755dc8/blender2tet.py",
+      "sha256": "db80472eed086875e94afe67a53b3cdb7ff8fdff0b7db7a48610e67f7c82d945",
+      "bytes": 28023
+    },
+    {
+      "repo": "NeuroJSON/BlenderPhotonics",
+      "commit": "732799f9e3ebe10e013e316b8a21d88452755dc8",
+      "path": "blender2voxel.py",
+      "url": "https://raw.githubusercontent.com/NeuroJSON/BlenderPhotonics/732799f9e3ebe10e013e316b8a21d88452755dc8/blender2voxel.py",
+      "sha256": "55324f0dcb66f0bacf3d142757fbdd49de877a5cdb639d670faa4f275593359e",
+      "bytes": 31583
+    },
+    {
+      "repo": "emircbngl/blender-optics-simulator",
+      "commit": "2b488e2e99dff4f56d67f57f9674bd00f812dda1",
+      "path": "optical_alignment_sim/alignment.py",
+      "url": "https://raw.githubusercontent.com/emircbngl/blender-optics-simulator/2b488e2e99dff4f56d67f57f9674bd00f812dda1/optical_alignment_sim/alignment.py",
+      "sha256": "69e1935562023d43a994a8f251c7a7113017bd56d005e73aea036cd56b05df6f",
+      "bytes": 22682
+    }
+  ],
+  "claim_status": {
+    "decision_made": true,
+    "new_external_software_executed": false,
+    "new_Neuro3D_optical_experiment_executed": false,
+    "accuracy_improved_demonstrated": false,
+    "speedup_measured": false,
+    "energy_improved_measured": false,
+    "novelty_demonstrated": false,
+    "complete_OpticNeuroBlender_validated": false,
+    "registration_choice_resolved": false
+  },
+  "licenses": "Reviewed upstream GPL-3.0; source not redistributed or copied into MIT code in this evaluation."
+}

@@ -1,0 +1,11 @@
+{
+  "host_identity": {
+    "pid": 2612,
+    "os_creation_token": "7499"
+  },
+  "child_identity": {
+    "pid": 2621,
+    "os_creation_token": "7686"
+  },
+  "job_folder": "/home/runner/work/Neuro3D/Neuro3D/installed-resume-evidence/native/jobs/optic-neuro-727366ee58464d4fb2003e691462fbcc"
+}

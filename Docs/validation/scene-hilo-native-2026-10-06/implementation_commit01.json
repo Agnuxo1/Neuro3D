@@ -1,0 +1,15 @@
+{
+  "implementation_commit": "b305043016427d796aff4eb649e090961db026ff",
+  "source_pins": {
+    "Blender/benchmarks/capacity_audit/scene_hilo_gpu_guard_v1.py": "2675a764230ec2bf9e554dde24acb81bd12a9bb0d156b7978129087c6c6de546",
+    "Blender/benchmarks/capacity_audit/scene_hilo_gpu_v1.py": "539179dfdd72f8cdd6c3f171526dbbf70c81bc9b7a568691c12c0071246bee7a",
+    "Blender/benchmarks/capacity_audit/scene_hilo_transport_v1.py": "4bd86b411208c8a676c8a2c97926ce001ac781568913d5312906c591e02ca5ad",
+    "Blender/shaders/scene_hilo_transport_v1.glsl": "cd9eead03d96aca64ef5e6c5bce8b71a97f0f994a0656ceb9363a3894e634d31",
+    "Blender/tests/scene_hilo_native_runtime_v1.py": "b033439597d989c13252dcc21e5ab007b3645fa8606f1385dd1cd483d4bbb414",
+    "Blender/tests/scene_hilo_prepare_inputs_v1.py": "d4d23e3b381867f0d4ea2f6cc61028f20f2d0b27c2a17e0f9d6a25dfefba27ef",
+    "Blender/tests/test_scene_hilo_gpu_guard_v1.py": "85efefc25b34018c78f4d722547ba1662f16b17c2cfd9235f955109fb1f9ef52",
+    "Blender/tests/test_scene_hilo_transport_v1.py": "47665bdec2b615d7f2d2f5235f4141258b6dc861161c710648544887f3f17585"
+  },
+  "gpu_not_yet_executed": true,
+  "status": ""
+}

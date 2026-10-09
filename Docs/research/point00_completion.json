@@ -1,0 +1,27 @@
+{
+  "schema": "neuro3d.definition_completion.v1",
+  "status": "PASS_FORMULATION_ONLY",
+  "original_point": 11,
+  "new_point": 0,
+  "new_experiments": false,
+  "novelty_proven": false,
+  "external_registration": false,
+  "artifacts": [
+    {
+      "path": "Docs/CONTRIBUTION_AND_FALSIFICATION_2026-10-08.md",
+      "sha256": "68699ec4c26ac670d97882d481f56e47c6027e769ebfdc0ca82e480366d47902"
+    },
+    {
+      "path": "Docs/research/contribution_contract_v1.json",
+      "sha256": "d48fe245e0e97dd43c5ebe175150fb04a4ab72bc5c50158134df1b011f36653f"
+    },
+    {
+      "path": "Docs/assets/certified-coherent-research-question.svg",
+      "sha256": "66ad318c6e5ae7bf5f4f3a66d00a9e19318dab6aeb0878ad56c50ccb06c9b72c"
+    },
+    {
+      "path": "Docs/SEQUENTIAL_RESEARCH_PROGRESS_2026-10-08.md",
+      "sha256": "884272189c711c2ff577d54f24fb9599d10e2d6c6264cae64c3eeb7cff868e51"
+    }
+  ]
+}

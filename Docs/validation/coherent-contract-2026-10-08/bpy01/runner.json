@@ -1,0 +1,36 @@
+{
+  "command": [
+    "D:\\TOOLS\\Blender\\blender-4.5.14-windows-x64\\blender.exe",
+    "-b",
+    "--factory-startup",
+    "--disable-autoexec",
+    "-t",
+    "1",
+    "-noaudio",
+    "--python-exit-code",
+    "3",
+    "--python",
+    "D:\\PROJECTS\\Neuro3D-Scientific-20261008\\Blender\\tests\\test_coherent_contract_blender_v1.py",
+    "--",
+    "D:\\PROJECTS\\.cognition\\neuro3d-sequential-20261008\\coherent-contract-bpy01"
+  ],
+  "exit_code": 3,
+  "stopped": null,
+  "peak_rss_mib": 131.765625,
+  "elapsed_seconds": 6.605071799998768,
+  "source_sha256": {
+    "Blender\\blender_lab\\__init__.py": "8c93d859b2364fdd697db5fc3234c0406e2a01cbcceb9c6b05a72b92996f372f",
+    "Blender\\blender_lab\\bos_adapter_v1.py": "83409838de0f7d71c623be729f0d4b8f754705f271161c2b429fbbd2ccf770e5",
+    "Blender\\blender_lab\\coherent_contract_v1.py": "0d48ee973eab5dd4dd480bb4d1641305ab2b2d413b856c2f2c18f3c0623cd56e",
+    "Blender\\blender_lab\\export_scene_v1.py": "d2c60bd956df8511a79d6f333446b736fc8633acad52fef2f2cf075d77e43fb0",
+    "Blender\\blender_lab\\scalar_scene_ingress_v1.py": "a2f53daa2f34ea71585bc9e9c3d742a02e66651cff2dee450dba09274b30d3d3",
+    "Blender\\blender_lab\\scene_capture_v1.py": "fe676b61a9e743277d69b54890688555a604f659c7f23ee223703b907ad8a2d0",
+    "Blender\\tests\\test_coherent_contract_blender_v1.py": "5ef5c5a27af3dc87eabfd8f02e11f07ae2c9c5b33bc035889b2c7ab8aa73f44c"
+  },
+  "sources_unchanged": true,
+  "gpu_requested": false,
+  "optical_forward_requested": false,
+  "training_requested": false,
+  "source_scene_sha256": null,
+  "network_contract_sha256": null
+}

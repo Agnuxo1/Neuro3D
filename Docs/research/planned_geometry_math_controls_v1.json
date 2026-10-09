@@ -1,0 +1,85 @@
+{
+  "schema": "neuro3d.planned_geometry.math_controls.v1",
+  "status": "PASS",
+  "controls": [
+    {
+      "control": "interior_exact_plane_halfplanes",
+      "PASS": true
+    },
+    {
+      "control": "boundary_exact_membership",
+      "PASS": true
+    },
+    {
+      "control": "outside_triangle",
+      "PASS": true
+    },
+    {
+      "control": "intersection_behind_origin",
+      "PASS": true
+    },
+    {
+      "control": "parallel_distinct_plane",
+      "PASS": true
+    },
+    {
+      "control": "coplanar_infinite_plane_finite_triangle_miss",
+      "PASS": true
+    },
+    {
+      "control": "coplanar_actual_finite_encounter_rejected",
+      "PASS": true
+    },
+    {
+      "control": "degenerate_triangle_rejected",
+      "PASS": true
+    },
+    {
+      "control": "cardinal_reflection_8",
+      "PASS": true
+    },
+    {
+      "control": "cardinal_reflection_9",
+      "PASS": true
+    },
+    {
+      "control": "cardinal_reflection_10",
+      "PASS": true
+    },
+    {
+      "control": "cardinal_reflection_11",
+      "PASS": true
+    },
+    {
+      "control": "length_to_phase_exact_0",
+      "PASS": true
+    },
+    {
+      "control": "length_to_phase_exact_1/3",
+      "PASS": true
+    },
+    {
+      "control": "length_to_phase_exact_-7/5",
+      "PASS": true
+    },
+    {
+      "control": "exp_zero_exact",
+      "PASS": true
+    },
+    {
+      "control": "exp_one_upper_consistent_with_tail",
+      "PASS": true
+    },
+    {
+      "control": "scalar_unitary_telescope_triangle_bound",
+      "PASS": true
+    }
+  ],
+  "new_GPU_execution": false,
+  "H1_confirmatory": false,
+  "source_sha256": {
+    "Tools/check_planned_geometry_linkage_math_v1.py": "560748fb7c383db6eaf5d6a870d147e2dad8f6a1b43646906da0c0ae77ad3336",
+    "Tools/certify_planned_geometry_linkage_v1.py": "54b59d0c92f99a5b2041665b86ed24b3857444e6ca13086449d40ecad9d4355e",
+    "Blender/benchmarks/capacity_audit/rational_interval_v1.py": "34ae4b0ea08a7bd9a3cd35c599f1d6277539dd7e5e936fe56c71254d3858b53d"
+  }
+}

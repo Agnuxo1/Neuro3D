@@ -1,0 +1,45 @@
+{
+  "accuracy": {},
+  "background": true,
+  "blend": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point03\\independent\\neuro3d_iris_lattice.blend",
+  "blend_manifest_hash_verified": true,
+  "blend_sha256": "5884c6fa4cc8cee22dd99e2f4aeaf8f0e44ae44dba85d4f2447868d3d4d58c22",
+  "blender_version": "4.5.14 LTS",
+  "classify_calls_attempted": 0,
+  "classify_calls_completed": 0,
+  "decoration_invariance_max": null,
+  "exception_traceback": "Traceback (most recent call last):\n  File \"D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\demo_lattice_iris\\verify_portable_blender.py\", line 553, in main\n    run_verification(args, report)\n  File \"D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\demo_lattice_iris\\verify_portable_blender.py\", line 387, in run_verification\n    texts, asset_evidence = read_embedded_assets(bpy, manifest)\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\demo_lattice_iris\\verify_portable_blender.py\", line 178, in read_embedded_assets\n    require(actual == entry[\"sha256\"], \"Embedded asset hash mismatch: \" + text_name)\n  File \"D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\demo_lattice_iris\\verify_portable_blender.py\", line 51, in require\n    raise RuntimeError(message)\nRuntimeError: Embedded asset hash mismatch: neuro3d_iris_demo.py\n",
+  "export_decoration_invariance_max_declared": 0.0,
+  "export_pid": null,
+  "external_asset_access_denied": [],
+  "finished_utc": "2026-10-06T22:06:17.891292+00:00",
+  "fresh_process_required_by_supervisor": true,
+  "manifest_sha256": "7ddcc28eeaed240f0f3221e134f73b973bbea19e3448c0bbae95bcb2e3f85779",
+  "metric_status": {
+    "decoration_invariance_max": "NOT_MEASURED_BY_THIS_VERIFIER",
+    "save_reopen_max": "NOT_MEASURED"
+  },
+  "operations": {
+    "build": false,
+    "gpu_workload_requested": false,
+    "render": false,
+    "reset": false,
+    "save_blend": false,
+    "train": false
+  },
+  "outside_repository": true,
+  "pid": 35708,
+  "process_cost_scope": "CPU/wall time of this verification process; not an energy benchmark",
+  "rows": [],
+  "save_reopen_max": null,
+  "schema": "neuro3d-iris-portable-v1-verification",
+  "source_commit_declared_by_manifest": "7c037702486ae9ab153f605edab432b85c44ba0d",
+  "started_utc": "2026-10-06T22:06:17.674290+00:00",
+  "status": "FAIL",
+  "total_cpu_seconds": 0.21875,
+  "total_wall_seconds": 0.21719670004677027,
+  "verification_failures": [
+    "RuntimeError: Embedded asset hash mismatch: neuro3d_iris_demo.py"
+  ],
+  "verification_passed": false
+}

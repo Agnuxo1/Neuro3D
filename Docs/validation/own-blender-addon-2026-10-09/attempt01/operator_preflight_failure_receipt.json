@@ -1,0 +1,21 @@
+{
+  "scope": "Operator factual audit; not raw stdout",
+  "preexecution_verification_attempts": [
+    "literal HEAD comparison rejected before source check",
+    "actual commit matched remote, then LICENSE byte check failed"
+  ],
+  "published_commit": "8c3e189bd325ac0f65502e78bada57cc1a66024d",
+  "source_blob_pin_mismatches": [
+    {
+      "path": "LICENSE",
+      "working_pinned_sha256": "3e678775bdc901ec198d173d64cffd4d5998a5491fd67899ce3067e93c842ab5",
+      "published_blob_sha256": "afa3de7e3edd0ad130afc2f31d1f8dbc0a4bda40899f7ecce9c032310e4701c5"
+    }
+  ],
+  "trial_erroneously_started_after_verifier_failure": true,
+  "trial_failed_before_zip_install": true,
+  "failure": "bpy.app.version_string is 4.5.14 LTS, profile expected 4.5.14",
+  "metric": null,
+  "no_native_network_or_install_result_collected": true,
+  "corrective_action": "Archive unchanged output, normalize local LICENSE to existing Git blob without changing Git license text, new versioned audit/profile comparing bpy.app.version tuple, publish and require successful verifier exit before execution"
+}

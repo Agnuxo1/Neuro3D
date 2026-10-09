@@ -1,0 +1,11 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "unittest",
+    "-v",
+    "test_verification_cpu.py"
+  ],
+  "exit_code": 0,
+  "source_sha256": "6b5b32434679ae4da9410afbeeeee2c25a614eaf4b2776892aa8fb907617592d"
+}

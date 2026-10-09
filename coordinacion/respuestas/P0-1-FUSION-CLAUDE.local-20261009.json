@@ -1,0 +1,682 @@
+{
+ "task_id": "P0-1-FUSION-CLAUDE",
+ "status": "complete_H0_confirmed_H1_H2_H3_confirmed",
+ "timestamp_utc": "2026-09-30T17:54:28+00:00",
+ "plan": "P0-1 del plan recibido de Codex (refutar o validar la fusion de estados)",
+ "contract_registered_before_measuring": "D:/PROJECTS/.cognition/neuro3d/p0_fusion/CONTRATO-P0-1.md",
+ "contract_sha256": "49b081cb7ac0657f822b9edff906a8082dd622bdd037ec14a360854d03065a10",
+ "scope": "CPU float64, statefuse.py propio, un hilo, 30 s; sin GPU; sin float32",
+ "artifacts": {
+  "CONTRATO-P0-1.md": "D:/PROJECTS/.cognition/neuro3d/p0_fusion/CONTRATO-P0-1.md",
+  "p01_fusion.py": "D:/PROJECTS/.cognition/neuro3d/p0_fusion/p01_fusion.py",
+  "p01_result.json": "D:/PROJECTS/.cognition/neuro3d/p0_fusion/p01_result.json"
+ },
+ "artifact_sha256": {
+  "CONTRATO-P0-1.md": "49b081cb7ac0657f822b9edff906a8082dd622bdd037ec14a360854d03065a10",
+  "p01_fusion.py": "01c6f5dbe1c3c17c0d0cbc47da2cf5e44dea1e98a33e746ea4da3f53aacf266b",
+  "p01_result.json": "4da1dfddd0272a0605736f5f15b031c46beb5a2e1e17b4920d70f029db3d9f0e"
+ },
+ "code_changed": "statefuse.py (mio): solve(quant=\"auto\") usa quant=dquant=min(1e-9, 1e-6*lambda/(2*pi*4)); el comportamiento por defecto NO cambia; en conf1 K4 auto da los mismos 136 estados y dU=0",
+ "results": {
+  "E0_fusion_on_vs_off": [
+   {
+    "scene": "conf1 K4 (208 triangulos)",
+    "states_fused": 136,
+    "states_unfused": 58288,
+    "casts_fused": 136,
+    "casts_unfused": 58288,
+    "max_abs_dU": 1.6710964393650674e-13,
+    "seconds_fused": 0.02454972267150879,
+    "seconds_unfused": 7.973719358444214
+   },
+   {
+    "scene": "rejilla big K=3 seed=1",
+    "states_fused": 114,
+    "states_unfused": 7674,
+    "max_abs_dU": 1.1115836735211111e-13,
+    "seconds": 1.0790536403656006
+   },
+   {
+    "scene": "rejilla big K=3 seed=2",
+    "states_fused": 114,
+    "states_unfused": 7674,
+    "max_abs_dU": 1.5583584888045716e-13,
+    "seconds": 0.9908277988433838
+   },
+   {
+    "scene": "rejilla big K=4 seed=1",
+    "states_fused": 200,
+    "states_unfused": 104912,
+    "max_abs_dU": 1.208115480547792e-12,
+    "seconds": 16.070521354675293
+   }
+  ],
+  "E1_near_coincident_arms_lateral_shift": [
+   {
+    "lambda": 0.125,
+    "delta": 0.0,
+    "k_delta": 0.0,
+    "quant_actual": {
+     "max_abs_dU": 1.0658141036401503e-14,
+     "states_fused": 7,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 1.0658141036401503e-14,
+     "states_fused": 7,
+     "states_unfused": 9,
+     "quant": 1e-09
+    }
+   },
+   {
+    "lambda": 0.125,
+    "delta": 1e-12,
+    "k_delta": 5.026548245743669e-11,
+    "quant_actual": {
+     "max_abs_dU": 2.5139001991192348e-11,
+     "states_fused": 7,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 2.5139001991192348e-11,
+     "states_fused": 7,
+     "states_unfused": 9,
+     "quant": 1e-09
+    }
+   },
+   {
+    "lambda": 0.125,
+    "delta": 1e-10,
+    "k_delta": 5.026548245743669e-09,
+    "quant_actual": {
+     "max_abs_dU": 2.5132607106570508e-09,
+     "states_fused": 7,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 2.5132607106570508e-09,
+     "states_fused": 7,
+     "states_unfused": 9,
+     "quant": 1e-09
+    }
+   },
+   {
+    "lambda": 0.125,
+    "delta": 3e-10,
+    "k_delta": 1.5079644737231007e-08,
+    "quant_actual": {
+     "max_abs_dU": 7.53981055368058e-09,
+     "states_fused": 7,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 7.53981055368058e-09,
+     "states_fused": 7,
+     "states_unfused": 9,
+     "quant": 1e-09
+    }
+   },
+   {
+    "lambda": 0.125,
+    "delta": 4.9e-10,
+    "k_delta": 2.4630086404143977e-08,
+    "quant_actual": {
+     "max_abs_dU": 1.231503077292473e-08,
+     "states_fused": 7,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 1.231503077292473e-08,
+     "states_fused": 7,
+     "states_unfused": 9,
+     "quant": 1e-09
+    }
+   },
+   {
+    "lambda": 0.125,
+    "delta": 1e-09,
+    "k_delta": 5.026548245743669e-08,
+    "quant_actual": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9,
+     "quant": 1e-09
+    }
+   },
+   {
+    "lambda": 0.125,
+    "delta": 5e-09,
+    "k_delta": 2.5132741228718345e-07,
+    "quant_actual": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9,
+     "quant": 1e-09
+    }
+   },
+   {
+    "lambda": 0.125,
+    "delta": 1e-07,
+    "k_delta": 5.026548245743669e-06,
+    "quant_actual": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9,
+     "quant": 1e-09
+    }
+   },
+   {
+    "lambda": 0.001,
+    "delta": 0.0,
+    "k_delta": 0.0,
+    "quant_actual": {
+     "max_abs_dU": 1.3642420526593928e-12,
+     "states_fused": 7,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 1.3642420526593928e-12,
+     "states_fused": 7,
+     "states_unfused": 9,
+     "quant": 3.978873577297384e-11
+    }
+   },
+   {
+    "lambda": 0.001,
+    "delta": 1e-12,
+    "k_delta": 6.2831853071795855e-09,
+    "quant_actual": {
+     "max_abs_dU": 3.1423041946254675e-09,
+     "states_fused": 7,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 3.1423041946254675e-09,
+     "states_fused": 7,
+     "states_unfused": 9,
+     "quant": 3.978873577297384e-11
+    }
+   },
+   {
+    "lambda": 0.001,
+    "delta": 1e-10,
+    "k_delta": 6.283185307179586e-07,
+    "quant_actual": {
+     "max_abs_dU": 3.1415765988639984e-07,
+     "states_fused": 7,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9,
+     "quant": 3.978873577297384e-11
+    }
+   },
+   {
+    "lambda": 0.001,
+    "delta": 3e-10,
+    "k_delta": 1.8849555921538758e-06,
+    "quant_actual": {
+     "max_abs_dU": 9.424761628905315e-07,
+     "states_fused": 7,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9,
+     "quant": 3.978873577297384e-11
+    }
+   },
+   {
+    "lambda": 0.001,
+    "delta": 4.9e-10,
+    "k_delta": 3.078760800517997e-06,
+    "quant_actual": {
+     "max_abs_dU": 1.5393788999056881e-06,
+     "states_fused": 7,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9,
+     "quant": 3.978873577297384e-11
+    }
+   },
+   {
+    "lambda": 0.001,
+    "delta": 1e-09,
+    "k_delta": 6.283185307179586e-06,
+    "quant_actual": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9,
+     "quant": 3.978873577297384e-11
+    }
+   },
+   {
+    "lambda": 0.001,
+    "delta": 5e-09,
+    "k_delta": 3.141592653589793e-05,
+    "quant_actual": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9,
+     "quant": 3.978873577297384e-11
+    }
+   },
+   {
+    "lambda": 0.001,
+    "delta": 1e-07,
+    "k_delta": 0.0006283185307179585,
+    "quant_actual": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9,
+     "quant": 3.978873577297384e-11
+    }
+   },
+   {
+    "lambda": 1e-05,
+    "delta": 0.0,
+    "k_delta": 0.0,
+    "quant_actual": {
+     "max_abs_dU": 1.7462298274040222e-10,
+     "states_fused": 7,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 1.7462298274040222e-10,
+     "states_fused": 7,
+     "states_unfused": 9,
+     "quant": 3.978873577297384e-13
+    }
+   },
+   {
+    "lambda": 1e-05,
+    "delta": 1e-12,
+    "k_delta": 6.283185307179585e-07,
+    "quant_actual": {
+     "max_abs_dU": 3.142049536108918e-07,
+     "states_fused": 7,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9,
+     "quant": 3.978873577297384e-13
+    }
+   },
+   {
+    "lambda": 1e-05,
+    "delta": 1e-10,
+    "k_delta": 6.283185307179586e-05,
+    "quant_actual": {
+     "max_abs_dU": 3.1415722327727196e-05,
+     "states_fused": 7,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9,
+     "quant": 3.978873577297384e-13
+    }
+   },
+   {
+    "lambda": 1e-05,
+    "delta": 3e-10,
+    "k_delta": 0.00018849555921538757,
+    "quant_actual": {
+     "max_abs_dU": 9.424757431278345e-05,
+     "states_fused": 7,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9,
+     "quant": 3.978873577297384e-13
+    }
+   },
+   {
+    "lambda": 1e-05,
+    "delta": 4.9e-10,
+    "k_delta": 0.00030787608005179967,
+    "quant_actual": {
+     "max_abs_dU": 0.0001539378420889313,
+     "states_fused": 7,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9,
+     "quant": 3.978873577297384e-13
+    }
+   },
+   {
+    "lambda": 1e-05,
+    "delta": 1e-09,
+    "k_delta": 0.0006283185307179586,
+    "quant_actual": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9,
+     "quant": 3.978873577297384e-13
+    }
+   },
+   {
+    "lambda": 1e-05,
+    "delta": 5e-09,
+    "k_delta": 0.003141592653589793,
+    "quant_actual": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9,
+     "quant": 3.978873577297384e-13
+    }
+   },
+   {
+    "lambda": 1e-05,
+    "delta": 1e-07,
+    "k_delta": 0.06283185307179585,
+    "quant_actual": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9,
+     "quant": 3.978873577297384e-13
+    }
+   }
+  ],
+  "E2_controls_two_sources_references": [
+   {
+    "lambda": 0.125,
+    "reference_shift_BU": 0.0,
+    "max_abs_dU": 1.0658141036401503e-14,
+    "states_fused": 8,
+    "states_unfused": 18
+   },
+   {
+    "lambda": 0.125,
+    "reference_shift_BU": 0.03125,
+    "max_abs_dU": 1.0658141036401503e-14,
+    "states_fused": 8,
+    "states_unfused": 18
+   },
+   {
+    "lambda": 0.125,
+    "reference_shift_BU": 0.5,
+    "max_abs_dU": 7.105427357601002e-15,
+    "states_fused": 8,
+    "states_unfused": 18
+   },
+   {
+    "lambda": 0.01,
+    "reference_shift_BU": 0.0,
+    "max_abs_dU": 1.7053025658242412e-13,
+    "states_fused": 8,
+    "states_unfused": 18
+   },
+   {
+    "lambda": 0.01,
+    "reference_shift_BU": 0.03125,
+    "max_abs_dU": 1.7066905025892636e-13,
+    "states_fused": 8,
+    "states_unfused": 18
+   },
+   {
+    "lambda": 0.01,
+    "reference_shift_BU": 0.5,
+    "max_abs_dU": 1.7053025658242404e-13,
+    "states_fused": 8,
+    "states_unfused": 18
+   }
+  ],
+  "E3_angular_offset": [
+   {
+    "lambda": 0.125,
+    "alpha": 0.0,
+    "quant_actual": {
+     "max_abs_dU": 1.0658141036401503e-14,
+     "states_fused": 7,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 1.0658141036401503e-14,
+     "states_fused": 7,
+     "states_unfused": 9,
+     "quant": 1e-09
+    }
+   },
+   {
+    "lambda": 0.125,
+    "alpha": 1e-11,
+    "quant_actual": {
+     "max_abs_dU": 5.026592475587679e-10,
+     "states_fused": 7,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 5.026592475587679e-10,
+     "states_fused": 7,
+     "states_unfused": 9,
+     "quant": 1e-09
+    }
+   },
+   {
+    "lambda": 0.125,
+    "alpha": 1e-10,
+    "quant_actual": {
+     "max_abs_dU": 5.0265427375961735e-09,
+     "states_fused": 7,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 5.0265427375961735e-09,
+     "states_fused": 7,
+     "states_unfused": 9,
+     "quant": 1e-09
+    }
+   },
+   {
+    "lambda": 0.125,
+    "alpha": 2e-10,
+    "quant_actual": {
+     "max_abs_dU": 1.0053089027906031e-08,
+     "states_fused": 7,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 1.0053089027906031e-08,
+     "states_fused": 7,
+     "states_unfused": 9,
+     "quant": 1e-09
+    }
+   },
+   {
+    "lambda": 0.125,
+    "alpha": 4e-10,
+    "quant_actual": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9,
+     "quant": 1e-09
+    }
+   },
+   {
+    "lambda": 0.125,
+    "alpha": 2e-09,
+    "quant_actual": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9,
+     "quant": 1e-09
+    }
+   },
+   {
+    "lambda": 1e-05,
+    "alpha": 0.0,
+    "quant_actual": {
+     "max_abs_dU": 1.7462298274040222e-10,
+     "states_fused": 7,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 1.7462298274040222e-10,
+     "states_fused": 7,
+     "states_unfused": 9,
+     "quant": 3.978873577297384e-13
+    }
+   },
+   {
+    "lambda": 1e-05,
+    "alpha": 1e-11,
+    "quant_actual": {
+     "max_abs_dU": 6.283225957262897e-06,
+     "states_fused": 7,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9,
+     "quant": 3.978873577297384e-13
+    }
+   },
+   {
+    "lambda": 1e-05,
+    "alpha": 1e-10,
+    "quant_actual": {
+     "max_abs_dU": 6.28317356627527e-05,
+     "states_fused": 7,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9,
+     "quant": 3.978873577297384e-13
+    }
+   },
+   {
+    "lambda": 1e-05,
+    "alpha": 2e-10,
+    "quant_actual": {
+     "max_abs_dU": 0.00012566358749277752,
+     "states_fused": 7,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9,
+     "quant": 3.978873577297384e-13
+    }
+   },
+   {
+    "lambda": 1e-05,
+    "alpha": 4e-10,
+    "quant_actual": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9,
+     "quant": 3.978873577297384e-13
+    }
+   },
+   {
+    "lambda": 1e-05,
+    "alpha": 2e-09,
+    "quant_actual": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9
+    },
+    "quant_lambda": {
+     "max_abs_dU": 0.0,
+     "states_fused": 9,
+     "states_unfused": 9,
+     "quant": 3.978873577297384e-13
+    }
+   }
+  ]
+ },
+ "findings": [
+  "H0 CONFIRMADA: conf1 K4 (208 tri) 58 288 estados sin fusion frente a 136 con fusion, max|dU|=1,7e-13; rejillas big K=3 (7 674 a 114 estados, 1,1e-13 y 1,6e-13) y K=4 (104 912 a 200 estados, 1,2e-12).",
+  "H1 CONFIRMADA (refutacion de la clave cuantizada independiente de lambda): dos ramas casi coincidentes (desplazamiento lateral delta < quant) se fusionan y el error es ~ 0,5*k*delta: a lambda=1e-5 con delta=3e-10 el error es 9,4e-5 y con delta=4,9e-10 es 1,54e-4 (> puerta 1e-4); a lambda=1e-3 llega a 1,5e-6; a lambda=0,125 (la de K3/K4) solo 1,2e-8. Sham: delta >= 1e-9 no se fusiona y el error es 0.",
+  "H2 CONFIRMADA: desfase angular alpha de un brazo (direccion 2*alpha < dquant): a lambda=1e-5 alpha=2e-10 da 1,26e-4 (> 1e-4); a lambda=0,125 1,0e-8.",
+  "H3 CONFIRMADA: con quant escalado por lambda (quant_lambda) los casos subcuantizacion dejan de fusionarse y el error es EXACTAMENTE igual al no fusionado (0,0) para lambda=1e-3 y 1e-5; a lambda=0,125 quant_lambda>=1e-9 coincide con el actual (error <= 1,2e-8).",
+  "Controles E2: dos fuentes independientes y referencias de modo distintas (0, 0,03125, 0,5 BU) con lambda 0,125 y 0,01: fusionado = no fusionado <= 1,7e-13 (8 frente a 18 estados).",
+  "Coincidir en una clave cuantizada NO basta para fusionar estados opticamente distintos cuando k*quant no es despreciable: la clave debe depender de lambda (o el error de la fusion debe acotarse por k*(quant + L*dquant)); en el regimen usado (lambda 0,1 a 0,125, quant 1e-9) la fusion es valida a 1e-8."
+ ],
+ "limits": [
+  "geometria: MZI modificado y rejillas propias; desplazamientos impuestos a un brazo; no cubre todas las topologias",
+  "float64 CPU; no dice nada de la fusion en float32/GPU (P0-3)",
+  "quant \"auto\" no se ha probado en K5 o mayores ni con cocientes de coherencia entre muchas fusiones sucesivas (el error por fusion se suma en el peor caso)"
+ ],
+ "no_jev_aval": false,
+ "jev_router_plan": "router.py plan: executor main_agent, esfuerzo high, sin paralelo (remote_decision true)"
+}

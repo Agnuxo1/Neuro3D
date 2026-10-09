@@ -1,0 +1,99 @@
+{
+  "files": [
+    {
+      "path": "archive_plot_source.py",
+      "bytes": 3104,
+      "sha256": "4d70a66b711f5407aa91c5b670a449352c5f7310cc3851c668509eb1569c216f"
+    },
+    {
+      "path": "attempt01/profile.json",
+      "bytes": 2772,
+      "sha256": "bb15121f0f3fbe4e54a3c1a51d12d0fc587d63bb6470aa15864ff63e50715914"
+    },
+    {
+      "path": "attempt01/registration.json",
+      "bytes": 894,
+      "sha256": "eb47850bbe8c8c0265a17d9453cf39bdb3c0f740f2bc47a3003a533e083d08e5"
+    },
+    {
+      "path": "attempt01/result.json",
+      "bytes": 432304,
+      "sha256": "a35a1213a5b4cccf9487d257069848550c5d3ff8b2060b9e1004f98e5aa7d448"
+    },
+    {
+      "path": "attempt01/source/Blender/benchmarks/capacity_audit/exact_object_index_v1.py",
+      "bytes": 3618,
+      "sha256": "ce7313f7702b46ed987943a2808957e0da4fb313a09e54a7f77a9c1b2b5126d2"
+    },
+    {
+      "path": "attempt01/source/Blender/benchmarks/capacity_audit/robust_multipath_v1.py",
+      "bytes": 16867,
+      "sha256": "26dcbe7bb61dbf98430cd481292970d5631e79aec9fc9794ba672611f559d4d8"
+    },
+    {
+      "path": "attempt01/source/Blender/blender_lab/coherent_state_graph_v1.py",
+      "bytes": 8421,
+      "sha256": "d67c389be8a48d9aebe563fd3333af8c962c28d5f5942ea092bf448af403e439"
+    },
+    {
+      "path": "attempt01/source/Blender/blender_lab/scalar_scene_ingress_v1.py",
+      "bytes": 10227,
+      "sha256": "a2f53daa2f34ea71585bc9e9c3d742a02e66651cff2dee450dba09274b30d3d3"
+    },
+    {
+      "path": "attempt01/source/Blender/blender_lab/scene_capture_v1.py",
+      "bytes": 13990,
+      "sha256": "fe676b61a9e743277d69b54890688555a604f659c7f23ee223703b907ad8a2d0"
+    },
+    {
+      "path": "attempt01/source/Docs/validation/captured-scalar-ingress-2026-10-08/scene.json",
+      "bytes": 1184286,
+      "sha256": "59963192f88df24bf5b1d7fd2f8119a81a0ecad353f62ee16831ccfb98627097"
+    },
+    {
+      "path": "attempt01/source/Tools/audit_captured_pilot_result_v1.py",
+      "bytes": 9836,
+      "sha256": "a3f683ab11aa07eb52aefb4046ba89516321bb175ef01697c39131234b3ac686"
+    },
+    {
+      "path": "attempt01/source/Tools/audit_coherent_state_graph_v1.py",
+      "bytes": 9570,
+      "sha256": "2bb9bb285ec93922fd96cc1eec98fa1fc2c73d20856140536ba5adfe50d4519d"
+    },
+    {
+      "path": "attempt01/source/Tools/bind_network_capture_v1.py",
+      "bytes": 2085,
+      "sha256": "af3bdbc41636214f01c2078ce26bd271794fa763ccefecd2a006f1014d2f117b"
+    },
+    {
+      "path": "attempt01/source/Tools/run_frozen_state_graph_profile_v1.py",
+      "bytes": 8165,
+      "sha256": "9f234e7214e7c740f18ae9e9cf880de98f28f6caf532938a4fbaf1dcd1470895"
+    },
+    {
+      "path": "attempt01/source/Tools/trace_coherent_state_graph_v1.py",
+      "bytes": 1691,
+      "sha256": "134d784e829fb8c5a5c3b5bd5be391e5b5ceb56063f1782fcadd71277aee2a05"
+    },
+    {
+      "path": "attempt01/source/Tools/trace_indexed_scene_v1.py",
+      "bytes": 1732,
+      "sha256": "e1ce3a4cf1c83234897de221cc28833017e76863c4ac88e2ead3957f1bac13ac"
+    },
+    {
+      "path": "attempt01/supervisor.json",
+      "bytes": 3600,
+      "sha256": "85bc0fc20ef4fbe2db7edf2eb936213fc3883f737c5a305154c3b7e2ffd037d8"
+    },
+    {
+      "path": "attempt01/worker.stdout",
+      "bytes": 82,
+      "sha256": "15ffbb2d07877838b54d027b8b8cf82bb48e9264eb7d23b83248a2031aea2ae5"
+    },
+    {
+      "path": "plot-receipt.json",
+      "bytes": 348,
+      "sha256": "c0418a384dca54eb59b512a49aefa99ff330bb918079f40f78b5511bfa7e7d74"
+    }
+  ]
+}

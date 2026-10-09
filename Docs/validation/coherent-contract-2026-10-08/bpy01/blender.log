@@ -1,0 +1,25 @@
+Blender 4.5.14 LTS (hash 62c1db4208e8 built 2026-09-15 01:33:49)
+Traceback (most recent call last):
+  File "D:\PROJECTS\Neuro3D-Scientific-20261008\Blender\tests\test_coherent_contract_blender_v1.py", line 106, in <module>
+    main()
+  File "D:\PROJECTS\Neuro3D-Scientific-20261008\Blender\tests\test_coherent_contract_blender_v1.py", line 42, in main
+    capture = capture_scene(network=network)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PROJECTS\Neuro3D-Scientific-20261008\Blender\blender_lab\scene_capture_v1.py", line 239, in capture_scene
+    "network": resolve_network(network, objects)}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PROJECTS\Neuro3D-Scientific-20261008\Blender\blender_lab\scene_capture_v1.py", line 147, in resolve_network
+    low, high = (float.fromhex(float_hex(value)) for value in bounds)
+    ^^^^^^^^^
+  File "D:\PROJECTS\Neuro3D-Scientific-20261008\Blender\blender_lab\scene_capture_v1.py", line 147, in <genexpr>
+    low, high = (float.fromhex(float_hex(value)) for value in bounds)
+                               ^^^^^^^^^^^^^^^^
+  File "D:\PROJECTS\Neuro3D-Scientific-20261008\Blender\blender_lab\scene_capture_v1.py", line 29, in float_hex
+    need(isinstance(value, (int, float)) and not isinstance(value, bool), "numeric scalar required")
+  File "D:\PROJECTS\Neuro3D-Scientific-20261008\Blender\blender_lab\scene_capture_v1.py", line 25, in need
+    raise CaptureError(message)
+Blender.blender_lab.scene_capture_v1.CaptureError: numeric scalar required
+
+Error: script failed, file: 'D:\PROJECTS\Neuro3D-Scientific-20261008\Blender\tests\test_coherent_contract_blender_v1.py', exiting.
+
+Blender quit

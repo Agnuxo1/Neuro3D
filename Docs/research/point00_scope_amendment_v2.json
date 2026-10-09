@@ -1,0 +1,21 @@
+{
+  "schema": "neuro3d.formulation.blender_lab_scope_amendment.v2",
+  "generated_at_utc": "2026-10-08T15:26:02.717937+00:00",
+  "status": "FORMULATED_SCOPE_AMENDMENT_ONLY",
+  "owner_clarification": "Blender-Lab as an open accessible optical-physics research laboratory and Neuro3D as a neural network computing inside Blender, independently of fabricated photonic processors.",
+  "files_sha256": {
+    "Docs/BLENDER_LAB_RESEARCH_INSTRUMENT_2026-10-08.md": "4b557e1bde6caae847f609f088543577690b5aa58c3d9f82770db60097b03961",
+    "Docs/BLENDER_LAB_ANTECEDENTS_2026-10-08.md": "fbf8b25fff5550c1e60c454423093f2127efcd7a4f242c7e3b18e55fff3ad6a5",
+    "Docs/research/contribution_contract_v2_blender_lab.json": "01dfa8b1052de5272fe973964f0b8364c300049f838700e75d935fc2484e3d1d",
+    "Docs/research/blender_lab_antecedents_v1.json": "e59f3c424ca812eb6ca41e8bebe37117ab3d5869628169ce43f836f9b7b1e7b2"
+  },
+  "v1_unchanged_sha256": "d48fe245e0e97dd43c5ebe175150fb04a4ab72bc5c50158134df1b011f36653f",
+  "review_new_entries": 4,
+  "primary_documents_retrieved": 15,
+  "new_native_or_physical_trial": false,
+  "H1_confirmatory": false,
+  "novelty_demonstrated": false,
+  "Blender_Lab_distribution_finished": false,
+  "native_coherent_triangle_tracer_finished": false,
+  "external_registration_obtained": false
+}

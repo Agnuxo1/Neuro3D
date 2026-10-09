@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "raw_files_sha256": {
+    "Docs/validation/planned-geometry-linkage-2026-10-08/attempt01/rejection.json": "eb6f05c8229f38bc3be890d03313d68fbf04c838fbe52ba8b0d1637baf830ce6",
+    "Docs/validation/planned-geometry-linkage-2026-10-08/attempt02/receipt.json": "15895e51b2d1d32b8f1ac7a6fcc3e21feba4c257263983a6a7411152ba939366",
+    "Docs/validation/planned-geometry-linkage-2026-10-08/attempt02/source/checker.py": "54b59d0c92f99a5b2041665b86ed24b3857444e6ca13086449d40ecad9d4355e",
+    "Docs/validation/planned-geometry-linkage-2026-10-08/attempt02/source/rational_interval_v1.py": "34ae4b0ea08a7bd9a3cd35c599f1d6277539dd7e5e936fe56c71254d3858b53d",
+    "Docs/validation/planned-geometry-linkage-2026-10-08/attempt01/source/checker.py": "7ae135061d38cd8ad5a61f2a092dcbf46e8fbe6efaaf11573c972aeac2c4aa29",
+    "Docs/validation/planned-geometry-linkage-2026-10-08/attempt01/source/rational_interval_v1.py": "34ae4b0ea08a7bd9a3cd35c599f1d6277539dd7e5e936fe56c71254d3858b53d"
+  },
+  "positive_decisions": 450,
+  "controls": 18,
+  "negative_attempt_preserved": true,
+  "new_GPU_execution": false
+}

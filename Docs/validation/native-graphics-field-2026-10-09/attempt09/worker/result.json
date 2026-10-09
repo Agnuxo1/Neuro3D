@@ -1,0 +1,18 @@
+{
+  "schema": "optic_neuro_blender.native_graphics_frontier_audit.v1",
+  "status": "INCONCLUSIVE_ENVIRONMENT_OR_INVALID_OUTPUT",
+  "primary_metric": null,
+  "native_gpu_executed": true,
+  "gpu_geometry_readback": true,
+  "gpu_fields_executed": false,
+  "hardware_RT_executed": false,
+  "blender_version": "4.5.14 LTS",
+  "blender_build_hash": "62c1db4208e8",
+  "backend": "OPENGL",
+  "vendor": "NVIDIA Corporation",
+  "renderer": "NVIDIA GeForce RTX 3090/PCIe/SSE2",
+  "driver": "4.6.0 NVIDIA 581.29",
+  "failure_type": "ValueError",
+  "reason": "Owned native field graphics stage shader_creation OpenGL error 0x501",
+  "seconds": 20.079890099994373
+}

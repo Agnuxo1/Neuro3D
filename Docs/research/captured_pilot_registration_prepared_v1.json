@@ -1,0 +1,12 @@
+{
+  "schema": "optic_neuro_blender.pilot_registration.v1",
+  "kind": "PENDING_DECISION_NOT_AUTHORIZATION",
+  "proposal_id": "957514f2-a233-421f-aa04-50cccd063d97",
+  "protocol_sha256": "5d0cf372f2f66f043c2a219ba6a60f0182ced8a60039348d486ec163be736226",
+  "protocol_commit": "f22e7a1307e3a3b4c74a507463a0a8055d45fc04",
+  "approved": false,
+  "evidence_origin": "PENDING_DIRECT_HUMAN_MESSAGE_OR_VERIFIED_EXTERNAL_REGISTRATION",
+  "evidence_reference": null,
+  "preregId": null,
+  "ipfsCid": null
+}

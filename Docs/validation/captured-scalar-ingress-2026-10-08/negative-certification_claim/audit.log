@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "D:\PROJECTS\Neuro3D-Scientific-20261008\Tools\audit_captured_scalar_ingress_v1.py", line 145, in <module>
+    main()
+    ~~~~^^
+  File "D:\PROJECTS\Neuro3D-Scientific-20261008\Tools\audit_captured_scalar_ingress_v1.py", line 125, in main
+    need(not any(scope[key] for key in ("optical_forward_executed", "field_certified", "decision_certified", "training_executed", "gpu_executed")),
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+         "ingress-only scope must not claim propagated or certified outputs")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PROJECTS\Neuro3D-Scientific-20261008\Tools\audit_captured_scalar_ingress_v1.py", line 12, in need
+    raise ValueError(message)
+ValueError: ingress-only scope must not claim propagated or certified outputs

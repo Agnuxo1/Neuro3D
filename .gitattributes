@@ -1,0 +1,180 @@
+# Deterministic text checkouts; preserve byte-pinned historical CRLF files below.
+*.py text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.tex text eol=lf
+*.glsl text eol=lf
+*.comp text eol=lf
+*.hlsl text eol=lf
+*.ps1 text eol=lf
+*.csv text eol=lf
+*.svg text eol=lf
+# Raw historical evidence: no conversion on either check-in or checkout.
+Blender/research/exp003/fixture.json -text !eol
+Blender/research/optical_mesh/results_cpu.json -text !eol
+Blender/research/optical_mesh/results_cpu_noleak.json -text !eol
+Blender/research/optical_mesh/results_cuda.json -text !eol
+Blender/research/optical_mesh/run_exp.py -text !eol
+Blender/research/optical_mesh/train_save.py -text !eol
+coordinacion/respuestas/CAPACIDAD-CLAUDE-2026-09-30.md -text !eol
+coordinacion/respuestas/EXP-005-REVISION-CLAUDE.md -text !eol
+coordinacion/respuestas/FIELD-ORACLE-CLAUDE.json -text !eol
+coordinacion/respuestas/HISTORY-LINEAGE-CLAUDE.json -text !eol
+coordinacion/respuestas/MI-ANIDADA-CLAUDE-2026-09-30.md -text !eol
+coordinacion/respuestas/MOTOR-ESCALA-ESTADOS-CLAUDE-2026-09-30.md -text !eol
+coordinacion/respuestas/P0-1-FUSION-CLAUDE.json -text !eol
+coordinacion/respuestas/P0-3-SCENE-STATES-CLAUDE.json -text !eol
+coordinacion/respuestas/P0-3-SCENE-STATES-CUDA-CLAUDE.json -text !eol
+coordinacion/respuestas/P0-4-RT-EQUAL-CLAUDE.json -text !eol
+coordinacion/respuestas/P0-CRONOLOGIA-ERRATA-CLAUDE.json -text !eol
+coordinacion/respuestas/P0-FUSION-BRIDGE-002-CLAUDE.json -text !eol
+coordinacion/respuestas/P0-FUSION-POLICY-004-CLAUDE.json -text !eol
+coordinacion/respuestas/P0-FUSION-POLICY-006-CLAUDE.json -text !eol
+coordinacion/respuestas/P0-FUSION-POLICY-008-CLAUDE.json -text !eol
+coordinacion/respuestas/PHASE-COMPENSATED-CRITIQUE-CLAUDE.json -text !eol
+coordinacion/respuestas/PHASE-SIGNED-CAPTURE-010-CLAUDE.json -text !eol
+coordinacion/respuestas/PRECISION-004-CLAUDE.json -text !eol
+coordinacion/respuestas/PRECISION-005-CLAUDE.json -text !eol
+coordinacion/respuestas/PRECISION-006-CLAUDE.json -text !eol
+coordinacion/respuestas/PRECISION-006-REDUCTION-CLAUDE.json -text !eol
+coordinacion/respuestas/PRECISION-COMPLETE-001-CLAUDE.json -text !eol
+coordinacion/respuestas/RESUMEN-NOCHE-CLAUDE-2026-09-30.md -text !eol
+coordinacion/respuestas/RT-CAP-002-CLAUDE.json -text !eol
+coordinacion/respuestas/RT-CAP-003-CLAUDE.json -text !eol
+coordinacion/respuestas/RT-CAP-004-CLAUDE.json -text !eol
+coordinacion/respuestas/RT-CAP-005-CLAUDE.json -text !eol
+coordinacion/respuestas/RT-CAP-006-CLAUDE-FINAL.json -text !eol
+coordinacion/respuestas/RT-CAP-006-CLAUDE.json -text !eol
+coordinacion/respuestas/RT-CYCLES-VS-BRUTA-CLAUDE-2026-09-30.md -text !eol
+coordinacion/respuestas/RT-EQUAL-001-CLAUDE.json -text !eol
+coordinacion/respuestas/TRACE-ORACLE-CLAUDE.json -text !eol
+
+# Preserve the generated manifest hash recorded by the portable verifier.
+Blender/demo_lattice_iris/renders/portable_manifest.json -text !eol whitespace=cr-at-eol
+
+# Point-3 raw execution receipts retain their recorded byte hashes.
+Docs/validation/iris-rebuild-2026-10-06/** -text !eol whitespace=cr-at-eol
+Docs/validation/iris-portable-point02-2026-10-06/** -text !eol whitespace=cr-at-eol
+Docs/validation/scene-hilo-native-2026-10-06/** -text
+
+# Byte-pinned sequential closure receipts, including unsuccessful native attempts.
+Docs/validation/first-hit-admission-2026-10-08/** -text !eol whitespace=cr-at-eol
+Docs/validation/robust-first-hit-native-2026-10-08/** -text !eol whitespace=cr-at-eol
+Docs/validation/robust-multipath-2026-10-08/** -text !eol whitespace=cr-at-eol
+Docs/validation/multipath-error-2026-10-08/** -text !eol whitespace=cr-at-eol
+Docs/validation/path-operation-proofs-2026-10-08/** -text !eol whitespace=cr-at-eol
+Docs/validation/iris-native-circuit-2026-10-08/** -text !eol whitespace=cr-at-eol
+Docs/validation/unreal-readiness-2026-10-08/** -text !eol whitespace=cr-at-eol
+Docs/validation/quantization-witness-2026-10-08/** -text !eol whitespace=cr-at-eol
+Docs/validation/quadratic-readout-2026-10-08/** -text !eol whitespace=cr-at-eol
+Docs/validation/iris-retrospective-interval-2026-10-08/** -text !eol whitespace=cr-at-eol
+Docs/validation/planned-geometry-linkage-2026-10-08/** -text !eol whitespace=cr-at-eol
+Docs/validation/blender-lab-capture-2026-10-08/** -text !eol whitespace=cr-at-eol
+Docs/validation/captured-scalar-ingress-2026-10-08/** -text !eol whitespace=cr-at-eol
+Docs/research/iris_scene_coordinate_bindings_v1.json -text !eol whitespace=cr-at-eol
+Docs/research/iris_coherent_contract_v1.json -text !eol whitespace=cr-at-eol
+Docs/research/indexed_capture_profile_prepared_2026-10-09.json -text !eol whitespace=cr-at-eol
+Docs/research/github_sequence_authorization_2026-10-09.json -text !eol whitespace=cr-at-eol
+Docs/validation/coherent-contract-2026-10-08/** -text !eol whitespace=cr-at-eol
+Docs/validation/captured-pilot-supervisor-2026-10-08/** -text !eol whitespace=cr-at-eol
+Docs/validation/captured-pilot-execution-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/exact-object-index-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/indexed-capture-execution-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/captured-path-diagnostic-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/graph-gradient-controls-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/coherent-state-graph-capture-2026-10-09/** -text !eol whitespace=cr-at-eol
+# Immutable legacy preimages retain their original blank-line spaces.
+Docs/validation/unreal-readiness-2026-10-08/*/source/Source/OptiXRayTracing.cu -text !eol -whitespace
+# Preserve bytes of independently audited secondary output enclosures.
+Docs/validation/observed-graph-output-enclosure-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/independent-surface-neighborhood-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/research/captured_geometry_training_profile_2026-10-09.json -text !eol whitespace=cr-at-eol
+Docs/research/captured_geometry_training_registration_2026-10-09.json -text !eol whitespace=cr-at-eol
+Docs/validation/captured-geometry-training-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/research/trained_geometry_blender_reproduction_profile_2026-10-09.json -text !eol whitespace=cr-at-eol
+Docs/research/trained_geometry_blender_reproduction_registration_2026-10-09.json -text !eol whitespace=cr-at-eol
+Docs/validation/trained-geometry-blender-reproduction-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/research/trained_graph_cuda_profile_2026-10-09.json -text !eol whitespace=cr-at-eol
+Docs/research/trained_graph_cuda_registration_2026-10-09.json -text !eol whitespace=cr-at-eol
+Docs/validation/trained-graph-cuda-2026-10-09/** -text !eol whitespace=cr-at-eol
+
+Docs/research/wine_comparison_profile_2026-10-09.json -text !eol whitespace=cr-at-eol
+Docs/research/wine_comparison_registration_2026-10-09.json -text !eol whitespace=cr-at-eol
+Docs/data/uci-wine/** -text !eol whitespace=cr-at-eol
+# Exact upstream metadata retains its original spacing and indentation.
+Docs/data/uci-wine/wine.names -whitespace
+Docs/validation/wine-comparison-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/wine-comparison-2026-10-09/**/wine.names -whitespace
+
+Docs/research/gaussian_wave_profile_2026-10-09.json -text !eol whitespace=cr-at-eol
+Docs/research/gaussian_wave_registration_2026-10-09.json -text !eol whitespace=cr-at-eol
+Docs/validation/gaussian-wave-reference-2026-10-09/** -text !eol whitespace=cr-at-eol
+
+Docs/research/gaussian_wave_remedial_profile_2026-10-09.json -text !eol whitespace=cr-at-eol
+Docs/research/gaussian_wave_remedial_registration_2026-10-09.json -text !eol whitespace=cr-at-eol
+Docs/validation/gaussian-wave-remedial-2026-10-09/** -text !eol whitespace=cr-at-eol
+
+Docs/research/own_blender_addon_profile_2026-10-09.json -text !eol whitespace=cr-at-eol
+Docs/research/own_blender_addon_registration_2026-10-09.json -text !eol whitespace=cr-at-eol
+Docs/validation/own-blender-addon-2026-10-09/** -text !eol whitespace=cr-at-eol
+Blender/releases/** -text !eol whitespace=cr-at-eol
+
+LICENSE -text !eol whitespace=cr-at-eol
+Docs/research/own_blender_addon_profile_v2_2026-10-09.json -text !eol whitespace=cr-at-eol
+Docs/research/own_blender_addon_registration_v2_2026-10-09.json -text !eol whitespace=cr-at-eol
+
+Docs/research/own_blender_addon_profile_v3_2026-10-09.json -text !eol whitespace=cr-at-eol
+Docs/research/own_blender_addon_registration_v3_2026-10-09.json -text !eol whitespace=cr-at-eol
+
+Docs/research/external_cpu_reproduction_profile_2026-10-09.json -text !eol whitespace=cr-at-eol
+Docs/research/external_cpu_reproduction_registration_2026-10-09.json -text !eol whitespace=cr-at-eol
+Docs/research/external_cpu_requirements_2026-10-09.txt -text !eol whitespace=cr-at-eol
+Docs/research/external_cpu_dependency_primary_receipt_2026-10-09.json -text !eol whitespace=cr-at-eol
+Docs/validation/external-cpu-reproduction-2026-10-09/** -text !eol whitespace=cr-at-eol
+
+*.yml text eol=lf
+Docs/validation/own-addon-lifecycle-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/native-training-batch-certificate-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/native-parameter-boxes-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/research/external_native_blender_official_checksum_2026-10-09.txt -text !eol whitespace=cr-at-eol
+Docs/validation/external-native-blender-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/geometry-cuda-training-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/research/external_cpu_reproduction_profile_v2_2026-10-09.json -text !eol whitespace=cr-at-eol
+Docs/research/external_cpu_reproduction_registration_v2_2026-10-09.json -text !eol whitespace=cr-at-eol
+
+Docs/validation/native-operator-gram-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/global-training-family-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/geometry-reuse-training-2026-10-09/** -text !eol whitespace=cr-at-eol
+
+Docs/validation/native-graphics-geometry-2026-10-09/** -text !eol whitespace=cr-at-eol
+
+Docs/validation/native-graphics-frontier-2026-10-09/** -text !eol whitespace=cr-at-eol
+
+Docs/validation/training-recovery-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/native-geometry-ablation-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/native-graphics-field-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/native-graphics-field-certificate-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/native-graphics-gradients-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/native-cycles-optix-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/native-cycles-optix-2026-10-09/**/worker.stdout -text !eol -whitespace
+
+Docs/validation/native-graphics-training-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/native-graphics-training-2026-10-09/**/worker.stdout -text !eol -whitespace
+Docs/validation/installed-blender-host-recovery-2026-10-09/** -text !eol whitespace=cr-at-eol
+
+Docs/validation/native-deferred-state-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/native-deferred-state-2026-10-09/**/worker.stdout -text !eol -whitespace
+
+Docs/validation/external-installed-blender-recovery-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/external-installed-blender-recovery-2026-10-09/**/*.stdout -text !eol -whitespace
+
+Docs/validation/native-deferred-training-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/native-deferred-training-2026-10-09/**/*.stdout -text !eol -whitespace
+Docs/validation/native-deferred-training-certificate-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/native-graphics-scaling-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/native-graphics-scaling-2026-10-09/**/*.stdout -text !eol -whitespace
+
+# Preserve all raw bytes and hashes while keeping millions of array rows out of
+# automatic diff previews. Canonical source code and protocols remain diffable.
+Docs/validation/** -diff
+Docs/validation/**/evidence_index.json diff
