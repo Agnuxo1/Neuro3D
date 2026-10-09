@@ -28,3 +28,24 @@ Blender real; GPU, reproducción externa y fidelidad física se comprueban apart
 [Perfil fijado](research/trained_geometry_blender_reproduction_profile_2026-10-09.json),
 [registro de continuidad](research/trained_geometry_blender_reproduction_registration_2026-10-09.json),
 [ejecutor bpy](../Tools/restore_trained_geometry_in_blender_v1.py).
+
+## Resultado nativo
+
+El perfil se publicó en `2e14f4c1189ece21ab670d774ba522ddd8a0358b` antes
+de ejecutarse. Los 29 archivos fijados coincidían con los bytes en GitHub.
+El [recibo con fuentes y artefactos](validation/trained-geometry-blender-reproduction-2026-10-09/attempt01/evidence_index.json)
+da `VALID_NATIVE_BLENDER_REPRODUCTION`, métrica 1: 37,63 s supervisados y
+298,59 MiB de RSS máxima observada, sin interrupción.
+
+Blender 4.5.14 LTS guardó y reabrió el archivo nuevo. La identidad de la captura
+se conserva y la geometría óptica recapturada coincide exactamente con la
+representada entrenada. El grafo reconstruido tiene 133 estados. Las potencias
+de las ocho salidas para las 150 entradas coinciden con diferencia observada
+máxima 0, y las 150 predicciones son idénticas. El cero describe esta comparación
+entre dos ejecuciones; no un error nulo frente al modelo exacto o físico.
+
+La auditoría independiente secundaria también verifica primeros hits, ramas
+y vecindades interiores en los 133 estados de la captura reabierta. El `.blend`
+original conserva su hash. Se publica el [archivo entrenado nuevo](validation/trained-geometry-blender-reproduction-2026-10-09/attempt01/worker/trained_geometry.blend).
+Es reproducción local dentro de Blender; la réplica por un equipo externo y
+la instalación limpia de la interfaz siguen pendientes.

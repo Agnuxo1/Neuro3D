@@ -53,8 +53,9 @@ acota las ocho salidas nativas observadas frente al modelo representado: error
 de campo L1 ≤ `4,94×10⁻¹⁵` y de potencia ≤ `3,14×10⁻¹⁵`, con presupuesto
 previo `10⁻¹¹`. Certifica R1 para el estímulo unitario, con margen ≥ `0,189336`.
 La [auditoría de vecindades interiores](Docs/INDEPENDENT_SURFACE_NEIGHBORHOOD_AUDIT_2026-10-09.md)
-también pasa independientemente en los 133 estados. Todavía faltan entrenamiento,
-generalización y fidelidad física. El nuevo perfil conserva los dos ensayos inconclusos.
+también pasa independientemente en los 133 estados. El entrenamiento propio
+dispone del ensayo acotado descrito debajo; todavía faltan generalización más
+amplia y fidelidad física. El nuevo perfil conserva los dos ensayos inconclusos.
 
 ![Recorrido y detectores de la captura real](Docs/assets/captured-coherent-graph-2026-10-09.png)
 
@@ -66,6 +67,11 @@ acierta 110/120 filas de entrenamiento y 27/30 reservadas. Iris ya fue utilizado
 en el proyecto; faltan comparaciones y conjuntos independientes.
 
 ![Entrenamiento propio y matriz de errores](Docs/assets/captured-own-geometry-training-2026-10-09.png)
+
+La [reproducción nativa en Blender](Docs/TRAINED_GEOMETRY_BLENDER_REPRODUCTION_2026-10-09.md)
+también pasa: guardar, reabrir y recapturar el [archivo entrenado nuevo](Docs/validation/trained-geometry-blender-reproduction-2026-10-09/attempt01/worker/trained_geometry.blend)
+conserva la geometría admitida y reproduce las 150 predicciones. El archivo
+original se mantiene. Es una reproducción local; no una réplica externa.
 
 El [ejecutor y auditor del piloto](Docs/CAPTURED_PILOT_SUPERVISOR_2026-10-08.md)
 están preparados con fuentes/inputs fijados, límites de recursos y negativa por
