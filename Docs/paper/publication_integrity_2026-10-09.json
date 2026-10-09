@@ -1,7 +1,7 @@
 {
   "schema": "optic_neuro_blender.publication_integrity.v1",
   "primary_metric": 1,
-  "local_document_links_checked": 112,
+  "local_document_links_checked": 118,
   "missing_targets": [],
   "animation_source_hashes_checked": 77,
   "visual_outputs": [

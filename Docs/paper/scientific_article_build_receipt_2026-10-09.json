@@ -1,14 +1,14 @@
 {
   "schema": "optic_neuro_blender.scientific_article_build.v1",
-  "utc": "2026-10-09T12:57:15.622819+00:00",
-  "source_evidence_commit": "7cce9f0b0465000a47ad5952654d6f9de28d9b64",
+  "utc": "2026-10-09T13:54:15.306106+00:00",
+  "source_evidence_commit": "a6d0fbec5011bdc76abad71edac86519016348f4",
   "compiler": "pdfTeX1.40.28/MiKTeX25.12",
   "compiler_command": [
     "C:/Program Files/MiKTeX/miktex/bin/x64/pdflatex.exe",
     "-interaction=nonstopmode",
     "-halt-on-error",
     "-no-shell-escape",
-    "-output-directory=D:\\PROJECTS\\.cognition\\neuro3d-sequential-20261008\\article-tex-build12-20261009",
+    "-output-directory=D:\\PROJECTS\\.cognition\\neuro3d-sequential-20261008\\article-tex-build13-20261009",
     "optic_neuro_blender_reproducible_draft_2026-10-09.tex"
   ],
   "shell_escape": false,
@@ -17,11 +17,11 @@
     0
   ],
   "pages": 14,
-  "pdf_bytes": 368032,
+  "pdf_bytes": 370182,
   "pdf_links": 105,
   "source_equations_and_tables_checked": true,
   "warnings": {
-    "underfull_boxes": 15,
+    "underfull_boxes": 16,
     "overfull_boxes": 0,
     "miktex_administrator_update_notice": true
   },
@@ -29,9 +29,9 @@
   "not_external_peer_review": true,
   "bit_identical_pdf_between_hosts_claimed": false,
   "files": {
-    "Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.md": "58f5fdc77c99f23eb355a00604ef6c713ac9391bc7700e9a0463f83be3560788",
-    "Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.tex": "06bb24621088d44995ba690786f916c54470e6a86ab0ca5dcb88d5d1098fbb48",
-    "Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.pdf": "c0e879bb91746af839a4f645583ce8c43e0318ca265db7b3a03dd99b329224d1",
+    "Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.md": "1f2a79d999fbb31befd98fefcc2154e9642bb3ce054f86f13ef52152bed365e7",
+    "Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.tex": "5983f92b5c926e840350ec87e46ef44332cd9a26fac2239589181bece35234dd",
+    "Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.pdf": "05a13d391cfd0c2ddc821243fc1ce1ef3ebe8b6d5c422695fb4699321a9db563",
     "Tools/build_scientific_tex_draft_v1.py": "9755a1cd85b2346d163e42b114ab71e29108b319b5b152780b9814a03e9c5139"
   }
 }

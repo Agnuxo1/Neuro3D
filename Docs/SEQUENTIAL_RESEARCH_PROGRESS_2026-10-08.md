@@ -197,3 +197,19 @@ SharedFIFOadmitted13:37:27, fullactual133stategraph+independentaudit reached; na
 ## 2026-10-09T13:41:44.879350+00:00 — resident GPUv2 prepared, NOT_EXECUTED
 
 ActualBlender6attachmentceiling handledbynewv2(two4modeoutputpasses+5inputbit-echo) withallnumericgates unchanged; v1NULLsource preserved/published1d0d31e/raw163hashes. JEVprovenancejev recommendsseparatefrozenv2. 123pins/profile83db9d5d7c893063d49bb6a80dab56371067828bd09cee8232ff130019000748. PublishverifybeforeFIFO/nativeexecution; deadline13:55UTC.
+
+## 2026-10-09T13:46:55.143718+00:00 — resident GPUv2 coherentcontrol failure
+
+Actualnative sixattachments/2outputpasses+fiveinputexactecho reached; initialcoherentfieldgate1e-11 fails, fullworker24.439s, metricNULL. Original123pins/profile83db9d5 preserved. RawSHAverified; firstworker lacks pre-failurefield/coeff observation files, deficiencyexplicit. Next newdiagnosticworker saves actualcoeffs+fields beforeunchangedgate. Noresidentequivalence orspeedclaim. Deadline13:55UTC.
+
+## 2026-10-09T13:47:36.203091+00:00 — newresidentv3diagnostic protocol NOT_EXECUTED
+
+GPUenginev2 unchanged and1e-11 gatesunchanged; worker nowretains actualcoefficients/fourcontrolfields/inputs beforefailuregate. 125pins/profilef63f3a4ad3d577a464f0c7dbed051452d38b1ccdce503c74604708cfceed3b2f. Publishverifybeforeexecution, deadline13:55UTC.
+
+## 2026-10-09T13:53:10.748087+00:00 — residentv3actualGPUrejection witness retained
+
+125pins/profilef63f3a4 preverifiedf78fcc3/13:48:20; FIFOactualadmitted13:48:53; allfiveinputexactecho pass, controlfieldmax6.376147888196662e-8 exceeds1e-11. All64observedcontrolscalarsonbinary32grid, causeUNKNOWN; actualGPUunitcoefficients andcontrolfields retainedbeforegate. v1/v2/v3NULLs/allrawSHAarchived, no speedadvantage. EarliercompletehybridGPU60updates/61captures and150certificate remainvalid. Next publishlastdiagnostics/updatearticle/finalintegrity before13:55UTC deadline. Fullproject notcomplete.
+
+## 2026-10-09T13:55:27.931052+00:00 — end-of-window factual campaign checkpoint
+
+Twelve-hour campaign final bounded checkpoint. Complete ownhybridGPUtraining60updates/61actualBlendercaptures, train110/120/test27/30, all150sameCPU/independentfinalfieldencoderdecisioncertificate PASS; nativeequal-output1/150/4096sixpairsPASSnumerically butGPUslower; exact5650hostpacketbyteparitycandidate faster150/4096/slower1. ActualGPUresident133stateprototype v1/v2/v3 rejected, allraw163/166/170SHAretained; maxcontrolfield6.376147888196662e-8>1e-11/allfiveinputechoexact/all64controlscalarsbinary32grid; causeUNKNOWN, noacceptedresidentinference/speed/GPUtraining/UI. AllownedGPUworkers terminal/cleanedup. ActualfourGIFs/PDF/ZIP/mainHTTPbyteverification and118currentlocaldocumentlinks+77animation sourcehashesPASS. Articleupdatedtoalllatestnegativeoutcomes:14pages370182bytes/PDF05a13d391cfd0c2ddc821243fc1ce1ef3ebe8b6d5c422695fb4699321a9db563/twoactualcompilerexits0/zerooverfull. Sourceevidencea6d0fbe alreadymain+scientificbranch. PreserveforeignEXP005 merges1a53ef6/f78fcc3 withoutforce. Finalpublisharticle/checkremote/status next before13:55UTC. FullprojectstillNOTcomplete; remainingactualAMD/GPUUI/fullnetworkwavefidelity/nativepreimages/allgradientbounds/broaderblindgeneralization/humanexpertreview/IPFS/exceptionalimportance. Specialistpacketpreparednotreviewed; nojournal/physicaldeviceclaim. Next futureauthorizedwork diagnoseGPUresidentprecisionloss with retainedunitcoefficients/nativecontrols andfreshprospectiveprofile before anykernelchange; do not relaxgates oroverwrite3NULLs.
