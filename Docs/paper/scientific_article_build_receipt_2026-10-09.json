@@ -1,14 +1,14 @@
 {
   "schema": "optic_neuro_blender.scientific_article_build.v1",
-  "utc": "2026-10-09T09:52:53.635420+00:00",
-  "source_evidence_commit": "d98f506bf116b31f81afee552c172e1d63f87152",
+  "utc": "2026-10-09T09:54:02.553737+00:00",
+  "source_evidence_commit": "b30edbcd59ec9d9942d8ddcf36541b744c181aa9",
   "compiler": "pdfTeX1.40.28/MiKTeX25.12",
   "compiler_command": [
     "C:/Program Files/MiKTeX/miktex/bin/x64/pdflatex.exe",
     "-interaction=nonstopmode",
     "-halt-on-error",
     "-no-shell-escape",
-    "-output-directory=D:\\PROJECTS\\.cognition\\neuro3d-sequential-20261008\\article-tex-build08-20261009",
+    "-output-directory=D:\\PROJECTS\\.cognition\\neuro3d-sequential-20261008\\article-tex-build09-20261009",
     "optic_neuro_blender_reproducible_draft_2026-10-09.tex"
   ],
   "shell_escape": false,
@@ -29,9 +29,9 @@
   "not_external_peer_review": true,
   "bit_identical_pdf_between_hosts_claimed": false,
   "files": {
-    "Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.md": "7b7cad2b7c900a65a0c3ffb30845c42c606fe1ea8bfdd7ec98701e7bced446c2",
-    "Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.tex": "83d23340da37699c170b8a2259f9c7affed9474a31f7f4ab038cfe125be7d735",
-    "Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.pdf": "28a30a45aac6e0ae1b94809b94288976340a9a4a9487dfd9f0bddd043140243a",
+    "Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.md": "8d4a9e77ff120605189a0298af65e2040e1f3559fd0e5519e06c88c1c3bf7a41",
+    "Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.tex": "2db0321ceac1c9bc254146f1b1af32b09987fd7c22358cf19d4897749491aaa9",
+    "Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.pdf": "30b23cd64e9fe97932b4766d38044eb113eeca455573ecb7abf424675ca07550",
     "Tools/build_scientific_tex_draft_v1.py": "9755a1cd85b2346d163e42b114ab71e29108b319b5b152780b9814a03e9c5139"
   }
 }
