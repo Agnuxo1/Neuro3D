@@ -42,8 +42,8 @@
       "name": "Coherent propagation and error",
       "status": "PARTIAL_OBSERVED_REPRESENTED_ERROR_CERTIFIED",
       "acceptance": "All relevant branches covered; adverse controls; capture/representation/geometry/phase/sum/readout budgets complete; invalid margins stay unknown",
-      "achieved": "Independent interval enclosure: observed native field L1<=4.9383434427813286e-15,power<=3.1372973883238074e-15; represented det.R1 argmax margin>=0.18933601504039158; seven adverse/enclosure controls plus full graph90-digit cross-check",
-      "remaining": "Unknown intendedgeometry/native Blender transform andphysicalmodel error; nativeparameter/input uncertainty andtrainedbatch certificates remain separate. ActualNVIDIA60probe outputs haveindependentbounds."
+      "achieved": "Independent interval enclosure: observed native field L1<=4.9383434427813286e-15,power<=3.1372973883238074e-15; represented det.R1 argmax margin>=0.18933601504039158; seven adverse/enclosure controls plus full graph90-digit cross-check; independentnative150field/power/decisioncert includesidealtrainonlyinputencoding,fieldmax2.7683e-15/power1.0366e-15,150argmaxcert137correct13wrong",
+      "remaining": "Intendedgeometry/Blendertransform preimages, geometric/inputmeasurementuncertainty andfullphysicalmodelerror; certificateofobservednativearithmetic completed"
     },
     {
       "id": 5,
@@ -51,7 +51,7 @@
       "status": "OWN_GEOMETRY_TRAINING_AND_NATIVE_BLENDER_REPRODUCTION_VERIFIED_FOR_FROZEN_IRIS_FAMILY",
       "acceptance": "Forward and gradients originate from captured geometry; held-fixed readout; training-only preprocessing and updates; saved scene changes reproduce inference",
       "achieved": "16pairedmirrortranslations; owngeometryforward/gradients;61independentlyauditedquantizedstates; train110/120,heldout27/30; historicaltraineddelaysreset; freshfinalfieldrebuilderror<=4.619448428525917e-16; actualBlender4.5.14nativeupdate/save/reopen/capturePASS; exactopticalgeometrymatchesvirtualscene; all150powersandpredictionsidentical; ZIP0.1.1 ownoptimizerandmanualgradients runinsidebackgroundBlender,61audits,all150nativepowerdifference0 and27of30sameheldout",
-      "remaining": "Broader geometry/input families and clean installation; testdataset previously examined; numerical field/decision certification for trainedbatch is separate"
+      "remaining": "Broadergeometry/inputfamilies, externalhumanreplication; numericalnative150certificate nowcompletedbutclasserrorsremain"
     },
     {
       "id": 6,
@@ -122,5 +122,6 @@
   "latest_own_addon_native_audit": "Docs/validation/own-blender-addon-2026-10-09/attempt03/worker/result.json",
   "latest_wave_remedial": "Docs/validation/gaussian-wave-remedial-2026-10-09/attempt01/worker/result.json",
   "latest_external_cpu_result": "Docs/validation/external-cpu-reproduction-2026-10-09/attempt02/artifact/result.json",
-  "latest_own_addon_lifecycle": "Docs/validation/own-addon-lifecycle-2026-10-09/attempt01/worker/result.json"
+  "latest_own_addon_lifecycle": "Docs/validation/own-addon-lifecycle-2026-10-09/attempt01/worker/result.json",
+  "latest_native_training_batch_certificate": "Docs/validation/native-training-batch-certificate-2026-10-09/analysis01/worker/certificate.json"
 }

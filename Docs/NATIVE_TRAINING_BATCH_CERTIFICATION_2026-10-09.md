@@ -1,6 +1,6 @@
 # Certificación secundaria de las 150 salidas nativas del entrenamiento
 
-Estado: preparado, no ejecutado. Se analizarán observaciones anteriores ya publicadas del entrenamiento propio dentro de Blender, sin obtener nuevas filas ni elegir semillas. Es una certificación matemática secundaria, no un ensayo neuronal confirmatorio nuevo.
+Estado: análisis completo, ambas referencias y todos los presupuestos pasan. Se analizarán observaciones anteriores ya publicadas del entrenamiento propio dentro de Blender, sin obtener nuevas filas ni elegir semillas. Es una certificación matemática secundaria, no un ensayo neuronal confirmatorio nuevo.
 
 [Perfil](research/native_training_batch_certificate_profile_2026-10-09.json), UUID `1a5ef921-d322-4e4f-b765-bff322428e3a`, SHA-256 `440c8cb2d06d011ba42af370a94c326b6d345f1cb748a83fc55a03828838b070`, 23 pins. [Recibo GitHub autorizado](research/native_training_batch_certificate_registration_2026-10-09.json); registro externo/IPFS pendiente, sin identificadores.
 
@@ -24,3 +24,18 @@ python Tools/run_frozen_native_batch_certificate_v1.py --profile Docs/research/n
 ```
 
 Siguen sin cotas: geometría pretendida y preimágenes de captura, redondeo de transformaciones Blender frente a esa intención, perturbaciones geométricas o de medida, ejecuciones GPU no observadas y discrepancia del modelo escalar frente a la red física. La decisión representada certificada no prueba generalización, acierto biológico ni ventaja del clasificador.
+
+## Resultado conservado
+
+Publicado y verificado antes de analizar en `3935fa4bc73a1901e58b69466c209f85a779a82e`, todos los 23 pins idénticos a Git. [Certificado completo](validation/native-training-batch-certificate-2026-10-09/analysis01/worker/certificate.json) e [índice de hashes/fuentes](validation/native-training-batch-certificate-2026-10-09/analysis01/evidence_index.json). Estado `CERTIFIED_OBSERVED_NATIVE_BATCH_AND_ENCODER`, métrica 1; 27,4638 s, RSS máximo 35,770 MiB.
+
+| Referencia | Error campo L1 máximo | Error potencia máximo | Decisiones certificadas / desconocidas |
+|---|---:|---:|---:|
+| Entradas complejas registradas | 2,768280064335375×10⁻¹⁵ | 9,805711007964366×10⁻¹⁶ | 150 / 0 |
+| Codificación matemática ideal desde valores CSV analizados | 2,767110017198810×10⁻¹⁵ | 1,036527463460674×10⁻¹⁵ | 150 / 0 |
+
+El error L1 máximo observado del codificador es ≤1,578666018378917×10⁻¹⁶ frente al presupuesto `10⁻¹²`. Margen inferior mínimo de decisión ≥0,0002111971201181 en ambas referencias. Cada cota exacta racional está conservada; las cifras de error se redondean hacia arriba y las de margen hacia abajo.
+
+Las 150 decisiones certificadas incluyen **137 correctas y 13 equivocadas**. Se mantienen 110/120 aciertos de entrenamiento y 27/30 de evaluación. La certificación no corrige ni oculta los errores neuronales: demuestra que esos trece errores no se explican por el presupuesto aritmético analizado. No se han añadido nuevas etiquetas para entrenar ni cambiado los umbrales.
+
+![Decisiones certificadas y cotas observadas](assets/native-training-batch-certification-2026-10-09.png)
