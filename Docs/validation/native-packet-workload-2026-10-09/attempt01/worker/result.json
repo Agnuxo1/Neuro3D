@@ -1,0 +1,118 @@
+{
+  "schema": "optic_neuro_blender.native_packet_workload.v1",
+  "status": "VALID_STRUCTURAL_COUNTS_AND_EXACT_PACKET_REPLAY",
+  "primary_metric": 1,
+  "profile_sha256": "64a2fb9cbcfc26f996ae43dc0bbed8a4fc688af0be7abcdb2f4c3d2a53332a81",
+  "structural": {
+    "optical_chunks": 5650,
+    "selector_chunks": 184,
+    "all_chunks": 5834,
+    "optical_queries_before_echo": 1129702,
+    "actual_selector_queries": 399,
+    "logical_ubo_bytes": 191168512,
+    "source_derived_integer_glReadPixels_calls": 35004,
+    "source_derived_float_texture_reads": 11668,
+    "logical_integer_readback_bytes": 108489696,
+    "logical_float_readback_bytes": 36163232,
+    "source_derived_texture_creations": 46488,
+    "scope": "Counts reconciled with actual GL stage and surface receipts; byte extents derived from frozen source. These are logical API payloads, not measured PCIe traffic, physical bandwidth, or causal runtime attribution."
+  },
+  "measurements": [
+    {
+      "batch_size": 1,
+      "repetition": 0,
+      "order": [
+        "original",
+        "vectorized"
+      ],
+      "packet_count": 36,
+      "packet_generation_seconds": {
+        "original": 0.00048499999684281647,
+        "vectorized": 0.0006839000416221097
+      },
+      "replay_packet_sha256": "38267a54b2eac16c423510d4d2b93b2ae37b15a4b6dcd413e1b76a1681552568",
+      "byte_identical": true
+    },
+    {
+      "batch_size": 1,
+      "repetition": 1,
+      "order": [
+        "vectorized",
+        "original"
+      ],
+      "packet_count": 36,
+      "packet_generation_seconds": {
+        "vectorized": 0.0006100000027799979,
+        "original": 0.000484999967738986
+      },
+      "replay_packet_sha256": "38267a54b2eac16c423510d4d2b93b2ae37b15a4b6dcd413e1b76a1681552568",
+      "byte_identical": true
+    },
+    {
+      "batch_size": 150,
+      "repetition": 0,
+      "order": [
+        "original",
+        "vectorized"
+      ],
+      "packet_count": 98,
+      "packet_generation_seconds": {
+        "original": 0.04061759989417624,
+        "vectorized": 0.020165900074061938
+      },
+      "replay_packet_sha256": "f3a25645c7b2f4b982cc298976615d68ea8ad44340153e880db7c6c5f686b68d",
+      "byte_identical": true
+    },
+    {
+      "batch_size": 150,
+      "repetition": 1,
+      "order": [
+        "vectorized",
+        "original"
+      ],
+      "packet_count": 98,
+      "packet_generation_seconds": {
+        "vectorized": 0.015188000063062645,
+        "original": 0.036749200080521405
+      },
+      "replay_packet_sha256": "f3a25645c7b2f4b982cc298976615d68ea8ad44340153e880db7c6c5f686b68d",
+      "byte_identical": true
+    },
+    {
+      "batch_size": 4096,
+      "repetition": 0,
+      "order": [
+        "original",
+        "vectorized"
+      ],
+      "packet_count": 2691,
+      "packet_generation_seconds": {
+        "original": 1.2773968002729816,
+        "vectorized": 0.511504199981573
+      },
+      "replay_packet_sha256": "f97dacd546e305288983d9327615466ad3e6baa58f2b3e0033dbed71e1f60c58",
+      "byte_identical": true
+    },
+    {
+      "batch_size": 4096,
+      "repetition": 1,
+      "order": [
+        "vectorized",
+        "original"
+      ],
+      "packet_count": 2691,
+      "packet_generation_seconds": {
+        "vectorized": 0.4567024001298705,
+        "original": 1.1187762996851234
+      },
+      "replay_packet_sha256": "f97dacd546e305288983d9327615466ad3e6baa58f2b3e0033dbed71e1f60c58",
+      "byte_identical": true
+    }
+  ],
+  "invalid_input_rejections": 12,
+  "signed_zero_and_subnormal_parity": true,
+  "seconds": 9.242061500001,
+  "gpu_requested": false,
+  "gpu_integration_validated": false,
+  "scope": "CPU-only secondary synthetic packet replay from archived actual fields and matching rays. Packing timings exclude input-list construction, digest checks, allocation/upload/driver/readback/merges. No total GPU speedup, causal cost fraction, new generalization, or physical bandwidth claim."
+}

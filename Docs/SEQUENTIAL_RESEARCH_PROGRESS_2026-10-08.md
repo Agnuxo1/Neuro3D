@@ -173,3 +173,27 @@ exactsamefrozenprofile repeat full1/150/4096batchsixpairedCPU/GPUmodaloutputcomp
 ## 2026-10-09T13:01:03.903748+00:00 — updated scientific manuscript and publication integrity
 
 Full native GPU60updates/61actualcaptures and independentfinal150numericcertificate + equal-output1/150/4096scaling included. ActualMiKTeX twoexits0,14pages368032bytes/PDFc0e879bb91746af839a4f645583ce8c43e0318ca265db7b3a03dd99b329224d1, zerooverfull. Local110documentlinks+77animation sourcehashes+allsourceTex/PDF/receipt hashesPASS. Literaturecounts corrected:106eligiblebackgroundnotfullymethodextracted,30selected29papers/discussion1chapter/16inside14outsidecohort, fulltextsnotallreadentirely. Nojournal/expertreview/novelty/AMD/physical/IPFS claim. Sourceversion7cce9f0 alreadybothmain+branch; nextpublishmanuscript thenactualcall-count/CPUpacking optimization auditwhileforeignGPUFIFOheadrequires11GiBRAMwith5GiBfree. Goalactive13:55UTC.
+
+## 2026-10-09T13:12:50.580773+00:00 — secondary packet/count protocol prepared, NOT EXECUTED
+
+JEV actualexit0/provenancejev/statusconnected recommends frozen count/byte-parity replay. Source-derived payload counts and CPU-only microbenchmark do not identify causal GPUcost fractions or speedup. New512MiB/300secCPU secondary envelope based on13.7MiB archived trace; oldGPUlimits unchanged. New helper notGPUintegrated. 126pins/profile64a2fb9cbcfc26f996ae43dc0bbed8a4fc688af0be7abcdb2f4c3d2a53332a81. Publish and verify before execution. Full project stillopen.
+
+## 2026-10-09T13:16:47.731158+00:00 — exact packet replay and structural cost audit
+
+Exact same originalfrozenpacketprofile accepted,5650packetsbyteidentical; CPUcandidate faster150/4096/slower1; structural counts5834/35004reads/46488textures, logicalpayloadsnotPCIecounters. Full10GPUtraining+finalcert+scaling alreadybothmain. MainforeignEXP005history merged1a53ef6, all126sourcepinsunchanged. Candidate notGPUintegrated. Next actualBlenderCPUcompatibility/graphicsAPIinspection whileforeignFIFOhead11GiB remainsblocked. Goalactive13:55UTC.
+
+## 2026-10-09T13:25:58.843037+00:00 — resident optical graph hypothesis prepared, NOT EXECUTED
+
+ActualGPU-derived localcoefficients (notglobalU) plus GPU133state fragmentpropagation/complexKahanmerges/all8modalreadbacks/exactfiveinputbit echoes. Freshgeometry/independentfullproof/fourcoherencecontrols/sixsameCPUoutputpairs required, fixedbudgets1e-11. 120pins/profiledc077d1be88d90f7916d7bcf278d37c8a8f83704f4b24148c4a74f3f5f7501ba. Existingvalidatedengines/installerunchanged. PublishverifybeforeFIFOadmission; no native shadercompilation/equivalence/speedclaim yet. Goalactive13:55UTC.
+
+## 2026-10-09T13:36:17.318480+00:00 — publication and scientific acceptance audit
+
+Requirement-by-requirement acceptance reviewed, stale historicalstatements replaced with currentcompleteGPUtraining/intervalcertificate/negativecost/0.1.3actualrecovery evidence; originalacceptancejson preserved. PublicHTTP7artifacts4051651bytes exactGitblobmatching. SpecialistreviewpacketpreparedNOTsent/reviewed. ResidentexperimentalGPUprofiledc077d1 published564dae9 and120pins verified13:27UTC; sharedFIFOrequestwaiting/max10min. Allremainingphysical/AMD/GPUUI/humanreview/IPFS/exceptionalnovelty explicit; fullprojectNOTcomplete. Goalactive13:55UTC.
+
+## 2026-10-09T13:40:19.252040+00:00 — actual resident GPU first attempt NULL
+
+SharedFIFOadmitted13:37:27, fullactual133stategraph+independentaudit reached; nativeGPUlocalcoefficients/shadercompile reached; Blender framebuffermax6 rejects8attachments. Original120pins/profiledc077d1 preserved; allrawSHAverified. Newv2two4modepasses+5inputecho plannedbeforedeadline13:55, newfreeze/publicationbeforeexecution required. Noresidentinference/speedclaim.
+
+## 2026-10-09T13:41:44.879350+00:00 — resident GPUv2 prepared, NOT_EXECUTED
+
+ActualBlender6attachmentceiling handledbynewv2(two4modeoutputpasses+5inputbit-echo) withallnumericgates unchanged; v1NULLsource preserved/published1d0d31e/raw163hashes. JEVprovenancejev recommendsseparatefrozenv2. 123pins/profile83db9d5d7c893063d49bb6a80dab56371067828bd09cee8232ff130019000748. PublishverifybeforeFIFO/nativeexecution; deadline13:55UTC.
