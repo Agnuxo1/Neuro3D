@@ -128,7 +128,7 @@ Esto caracteriza una familia gaussiana escalar declarada; la fidelidad física d
 El [complemento propio instalable](Docs/OWN_BLENDER_ADDON_PROTOCOL_2026-10-09.md)
 supera nueve controles reales en Blender: instalación aislada, inferencia, entrenamiento geométrico propio dentro de Blender,
 cancelación, rechazo de resultados obsoletos, recuperación y copia/reapertura. Reproduce los 27/30 aciertos Iris y las 150 potencias
-con diferencia observada cero; coste completo 729,01 s. El registro conserva un fallo de doble desregistro al cerrar, pendiente de corrección.
+con diferencia observada cero; coste completo 729,01 s. El fallo histórico de doble desregistro está conservado y corregido en [0.1.2](Docs/OWN_ADDON_LIFECYCLE_PROTOCOL_2026-10-09.md), con cinco controles nativos y salida sin errores.
 
 ![Resultados nativos del complemento propio](Docs/assets/own-blender-addon-native-training-2026-10-09.png)
 
@@ -407,3 +407,5 @@ La colaboración Codex–Claude–JEV y la agenda actual están documentadas en
 ## Licencia
 
 MIT. Consulta [LICENSE](LICENSE).
+
+La [versión propia 0.1.2](Blender/releases/optic-neuro-blender-0.1.2.zip) cierra el defecto de doble desregistro: [cinco controles reales en Blender](Docs/OWN_ADDON_LIFECYCLE_PROTOCOL_2026-10-09.md) y salida sin errores, con las 150 potencias/predicciones iguales y el núcleo científico intacto.

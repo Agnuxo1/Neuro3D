@@ -81,10 +81,10 @@
     {
       "id": 9,
       "name": "Recovery, Blender interface, clean reproduction",
-      "status": "PARTIAL_STANDALONE_NATIVE_ADDON_FLOW_VERIFIED_WITH_OPEN_SHUTDOWN_LIFECYCLE",
+      "status": "PARTIAL_STANDALONE_NATIVE_ADDON_FLOW_AND_LIFECYCLE_VERIFIED",
       "acceptance": "Install/edit/run/cancel/save/reopen/export; guarded failure recovery; clean-environment documented reproduction",
-      "achieved": "ZIP0.1.1 isolatedactualinstall/registeredoperators; ownbackgroundBlenderinfer150/training61audits27of30,staleinput/scene,ownedcancel,recover/apply,newcopy/reopen,tamperrejectionPASS9. Originalpreserved;shutdownlogshowsdoubleunregisterRuntimeError retained",
-      "remaining": "Idempotentregistration/unregistration shortnativeaudit; interruptedhost/crashrecovery,Windows/Linuxcleaninstallandspecialistoutsideusability"
+      "achieved": "ZIP0.1.1 isolatedactualinstall/registeredoperators; ownbackgroundBlenderinfer150/training61audits27of30,staleinput/scene,ownedcancel,recover/apply,newcopy/reopen,tamperrejectionPASS9. Originalpreserved;shutdownlogshowsdoubleunregisterRuntimeError retained; separatelyfrozenZIP0.1.2 unchangedscientificpayload,5actualnativecycles/cancel/infercontrols PASS65.04s,wholepostexitlognoerror",
+      "remaining": "Interruptedhost/crashrecovery, nativeLinuxcleaninstall, humanusabilityandindependentexperts"
     },
     {
       "id": 10,
@@ -121,5 +121,6 @@
   "latest_wave_reference": "Docs/validation/gaussian-wave-reference-2026-10-09/attempt01/worker/result.json",
   "latest_own_addon_native_audit": "Docs/validation/own-blender-addon-2026-10-09/attempt03/worker/result.json",
   "latest_wave_remedial": "Docs/validation/gaussian-wave-remedial-2026-10-09/attempt01/worker/result.json",
-  "latest_external_cpu_result": "Docs/validation/external-cpu-reproduction-2026-10-09/attempt02/artifact/result.json"
+  "latest_external_cpu_result": "Docs/validation/external-cpu-reproduction-2026-10-09/attempt02/artifact/result.json",
+  "latest_own_addon_lifecycle": "Docs/validation/own-addon-lifecycle-2026-10-09/attempt01/worker/result.json"
 }
