@@ -2,10 +2,13 @@ from copy import deepcopy
 from datetime import datetime, timezone
 import hashlib
 import json
+import os
 from pathlib import Path
 import unittest
 from exp005_history_job_plan import BASELINE, BASELINE_SHA
 from exp005_history_artifact_data import validate_data, canonical
+REPO_ROOT = Path(__file__).resolve().parents[2]
+NEURO3D_COGNITION = Path(os.environ.get("NEURO3D_COGNITION_DIR", REPO_ROOT / ".cognition"))
 
 
 def audit():
@@ -13,7 +16,7 @@ def audit():
     report=deepcopy(json.loads(BASELINE.read_text())['control']['result'])
     deadline=datetime(2026,9,30,15,0,tzinfo=timezone.utc)
     report['job_deadline_utc']=deadline.isoformat()
-    folder=Path('D:/PROJECTS/.cognition/neuro3d/CPU_DOUBLES_NOT_BLEND')
+    folder=NEURO3D_COGNITION / 'neuro3d/CPU_DOUBLES_NOT_BLEND'
     blobs={c['case']+'.blend':('CPU DOUBLE NOT BLEND '+c['case']).encode() for c in report['cases']}
     for case in report['cases']:
         case['blend_path']=str(folder/(case['case']+'.blend'))

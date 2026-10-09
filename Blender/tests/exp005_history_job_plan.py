@@ -7,15 +7,18 @@ from datetime import datetime, timezone
 import hashlib
 import json
 import math
+import os
 from pathlib import Path
 import sys
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'Blender/benchmarks/capacity_audit'))
 from guarded_job import violations
+REPO_ROOT = Path(__file__).resolve().parents[2]
+NEURO3D_COGNITION = Path(os.environ.get("NEURO3D_COGNITION_DIR", REPO_ROOT / ".cognition"))
 
 GIB = 2**30
-BASELINE = Path('D:/PROJECTS/.cognition/neuro3d/exp005_history_runtime_cpu_20260930_1414.json')
+BASELINE = NEURO3D_COGNITION / 'neuro3d/exp005_history_runtime_cpu_20260930_1414.json'
 BASELINE_SHA = 'b49a22bb0afae6907117eb720f96a29161281837f642193e55455f572a30df8c'
 RUNNER = ROOT / 'Blender/tests/exp005_history_generated_runtime.py'
 POLICY = ROOT / 'Blender/benchmarks/capacity_audit/guarded_job.py'

@@ -14,12 +14,15 @@ import hashlib
 import importlib.util
 import json
 import math
+import os
 from pathlib import Path
 import sys
 import time
+REPO_ROOT = Path(__file__).resolve().parents[2]
+NEURO3D_COGNITION = Path(os.environ.get("NEURO3D_COGNITION_DIR", REPO_ROOT / ".cognition"))
 
 ROOT = Path(__file__).resolve().parents[1]
-PEER = Path('D:/PROJECTS/.cognition/neuro3d/trace_oracle_claude')
+PEER = NEURO3D_COGNITION / 'neuro3d/trace_oracle_claude'
 RESPONSE = ROOT.parent / 'coordinacion/respuestas/FIELD-ORACLE-CLAUDE.json'
 PINS = {
     RESPONSE: 'c54d1f2d5a5146b75c028431aefaa766f93b789ff1f45b91480052de793aac23',

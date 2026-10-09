@@ -2,15 +2,18 @@
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path
 import sys
 sys.path.insert(0,str(Path(__file__).parents[1]/'benchmarks/capacity_audit'))
 import history_lineage_cpu_v1 as old
 import history_lineage_cpu_v2 as new
 from exp005_history_lineage_audit import fixture,negatives
+REPO_ROOT = Path(__file__).resolve().parents[2]
+NEURO3D_COGNITION = Path(os.environ.get("NEURO3D_COGNITION_DIR", REPO_ROOT / ".cognition"))
 
 ROOT=Path(__file__).parents[2]
-PEER=Path('D:/PROJECTS/.cognition/neuro3d/history_claude')
+PEER=NEURO3D_COGNITION / 'neuro3d/history_claude'
 PINS={ROOT/'coordinacion/respuestas/HISTORY-LINEAGE-CLAUDE.json':'80e5e57de7696485e3d5738efe224a4ceab5e3650d71c8fdc7ede4a8f3242ca0',
       PEER/'a_false_reject.py':'c26f56f8d63c51f35b8738c7a07e5ef47406f03bba15615ae12c13c7346f92b0',
       PEER/'a_false_reject.json':'9acd37b274dbe8aafaf0f5bf3df5c6deee2e0ee05b2cae5767248f55a0fac4a2'}

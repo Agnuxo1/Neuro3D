@@ -7,13 +7,16 @@ Parity with Claude's training model is not an independent physical-wave oracle.
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path
 import sys
 
 import bpy
 import numpy as np
+REPO_ROOT = Path(__file__).resolve().parents[2]
+NEURO3D_COGNITION = Path(os.environ.get("NEURO3D_COGNITION_DIR", REPO_ROOT / ".cognition"))
 
-HERE = Path('D:/PROJECTS/.cognition/neuro3d/wt-demo/Blender/demo_lattice_iris')
+HERE = NEURO3D_COGNITION / 'neuro3d/wt-demo/Blender/demo_lattice_iris'
 
 
 def main():
