@@ -1,7 +1,10 @@
 """Independent evidence check by Z separators, without importing matcher."""
 import base64, hashlib, json, zlib
 from fractions import Fraction as F
+import os
 from pathlib import Path
+REPO_ROOT=Path(__file__).resolve().parents[2]
+NEURO3D_COGNITION = Path(os.environ.get("NEURO3D_COGNITION_DIR", REPO_ROOT / ".cognition"))
 r = json.loads(Path("coordinacion/respuestas/PRECISION-EXISTING-P03-SCENE-INVARIANTS-HOST-001-CODEX.json").read_bytes())
 for path, pin in r["pins"].items():
     raw = Path(path).read_bytes()
@@ -16,8 +19,8 @@ c = l["test_run"]
 raw = zlib.decompress(base64.b64decode(c["stdout_zlib_base64"]))
 assert len(raw) == c["stdout_bytes"] and hashlib.sha256(raw).hexdigest() == c["stdout_sha256"]
 inputs = json.loads(raw)["data"]["inputs"]
-manifest = json.loads(Path("D:/PROJECTS/.cognition/neuro3d/p0_scene_gpu/p03_manifest.json").read_bytes())
-result = json.loads(Path("D:/PROJECTS/.cognition/neuro3d/p0_scene_gpu/p03_cuda_result.json").read_bytes())
+manifest = json.loads((NEURO3D_COGNITION / "neuro3d/p0_scene_gpu/p03_manifest.json").read_bytes())
+result = json.loads((NEURO3D_COGNITION / "neuro3d/p0_scene_gpu/p03_cuda_result.json").read_bytes())
 assert len(manifest["scenes"]) == len(result["scene_results"]) == 104
 rows = [x for x in qa["records"] if x["kind"] == "ARCHIVED_SCENE_COMPARISON"]
 assert len(rows) == 416
