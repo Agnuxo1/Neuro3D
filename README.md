@@ -1,5 +1,31 @@
 # Neuro3D
 
+## Progreso científico — 8 de octubre de 2026
+
+Los resultados nuevos están publicados en la [rama de investigación](https://github.com/Agnuxo1/Neuro3D/tree/codex/neuro3d-scientific-closure-20261008) y la [PR #6](https://github.com/Agnuxo1/Neuro3D/pull/6). Consulta el [README actualizado con esquemas, gráficas y GIF](https://github.com/Agnuxo1/Neuro3D/blob/codex/neuro3d-scientific-closure-20261008/README.md) y el [estado de cada punto](https://github.com/Agnuxo1/Neuro3D/blob/061526413a9e42f97c8405a765bac870b3db49be/Docs/SEQUENTIAL_RESEARCH_PROGRESS_2026-10-08.md).
+
+**Prioridad de nuestro proyecto:** [OpticNeuroBlender](https://github.com/Agnuxo1/Neuro3D/blob/061526413a9e42f97c8405a765bac870b3db49be/Docs/OPTIC_NEURO_BLENDER_COMPONENT_SELECTION_2026-10-08.md), nuestro propio sistema neuronal óptico dentro de Blender. Se seleccionan técnicas de BlenderPhotonics para mallas/modelos y de Blender Optics Simulator para física y referencias; el núcleo neuronal y su validación permanecen en Neuro3D. La evaluación identifica diferencias de coherencia, detector, tolerancias y alcance GPU que deben adaptarse. No se han medido nuevas mejoras de precisión, rapidez, eficiencia o acierto.
+
+**Objetivo concretado:** [Blender-Lab como laboratorio abierto y accesible](https://github.com/Agnuxo1/Neuro3D/blob/487b18ceedc0bc0bc56daa6a1e7101148ecb7742/Docs/BLENDER_LAB_RESEARCH_INSTRUMENT_2026-10-08.md), con Neuro3D como demostrador de red óptica que calcula desde la escena. Se han definido su arquitectura y criterios de validación; la distribución y el trazador completo siguen pendientes. [Cuatro antecedentes directos en Blender](https://github.com/Agnuxo1/Neuro3D/blob/487b18ceedc0bc0bc56daa6a1e7101148ecb7742/Docs/BLENDER_LAB_ANTECEDENTS_2026-10-08.md) orientan la comparación.
+
+**Mejora implementada:** [captura real y contratos neuronales interoperables](https://github.com/Agnuxo1/Neuro3D/blob/58fbe579ccc13eca6d014c8b499c6724460a50e6/Docs/BLENDER_LAB_REUSE_AND_CAPTURE_2026-10-08.md). Se registran mallas evaluadas y parámetros sin añadir redondeo decimal: once pruebas unitarias PASS, controles de software en Blender y captura de la escena Iris con 462 objetos. Cinco entradas, 32 direcciones geométricas de espejos y tres detectores se vinculan sobre la captura. El adaptador de Blender Optics Simulator es opcional; no se declara validado el addon completo ni un nuevo resultado de entrenamiento o propagación óptica.
+
+**Reanudación verificada:** [entrada óptica desde la captura y corrección de abanicos](https://github.com/Agnuxo1/Neuro3D/blob/f22e7a1307e3a3b4c74a507463a0a8055d45fc04/Docs/CAPTURED_SCALAR_INGRESS_AND_FAN_COVERAGE_2026-10-08.md). Se preparan 104 elementos/6.656 triángulos; un auditor independiente verifica 20.280 coordenadas. El selector CPU reconoce como interior el centro compartido por 64 triángulos de `c00.bs1`, conservando bordes y huecos. Pasan 13 controles de entrada, ocho de unión y 17 tests históricos. Captura+contrato y negativas de bibliotecas también se ejecutaron en Blender. El [piloto de propagación](https://github.com/Agnuxo1/Neuro3D/blob/f22e7a1307e3a3b4c74a507463a0a8055d45fc04/Docs/validation/captured-scalar-ingress-2026-10-08/pilot_protocol_prepared.json) está preparado, pendiente de registro; no hay nuevas salidas ópticas, entrenamiento ni GPU de Iris.
+
+![Cobertura local exacta de triángulos](https://raw.githubusercontent.com/Agnuxo1/Neuro3D/f22e7a1307e3a3b4c74a507463a0a8055d45fc04/Docs/assets/surface-union-interior-2026-10-08.png)
+
+El diagrama ilustra un predicado geométrico, sin representar campos ópticos.
+
+- [Aportación falsable formulada](https://github.com/Agnuxo1/Neuro3D/blob/487b18ceedc0bc0bc56daa6a1e7101148ecb7742/Docs/CONTRIBUTION_AND_FALSIFICATION_2026-10-08.md), con criterio de refutación y dominio explícito.
+- [Revisión crítica de antecedentes](https://github.com/Agnuxo1/Neuro3D/blob/487b18ceedc0bc0bc56daa6a1e7101148ecb7742/Docs/LITERATURE_AND_NOVELTY_AUDIT_2026-10-08.md): 194 registros brutos, 175 únicos y extracción de 30 fuentes. La novedad sigue sin demostrar.
+- [Cotas racionales de los resultados GPU archivados](https://github.com/Agnuxo1/Neuro3D/blob/f10d74dff3525a317aa89504395aa8a120bc8f3f/Docs/IRIS_RETROSPECTIVE_RATIONAL_CERTIFICATE_2026-10-08.md): error de campo ≤1.282e-13 y 450 decisiones certificadas frente al modelo algebraico canónico. Es un análisis retrospectivo CPU de datos existentes, sin nuevo ensayo GPU ni certificado de recorrido de triángulos.
+
+![Cotas racionales de readbacks históricos](https://raw.githubusercontent.com/Agnuxo1/Neuro3D/f10d74dff3525a317aa89504395aa8a120bc8f3f/Docs/assets/iris-retrospective-certificate-2026-10-08.png)
+
+**Blender es la plataforma principal; Unreal queda como referencia histórica.** RT coherente desde geometría real, AMD real y generalización siguen pendientes. La fabricación fotónica es una línea opcional, independiente de validar el instrumento computacional. La formulación y estas cotas no acreditan una ventaja sobre CNN/GPT ni calidad Nobel.
+
+El resto de esta portada conserva la documentación del corte de código de `main`; los avances y límites actuales se consultan en los enlaces anteriores.
+
 ![Neuro3D](Docs/assets/neuro3d-hero.png)
 
 > Arquitectura experimental en la que la geometría 3D y las propiedades ópticas de la escena determinan la propagación y transformación de señales entre neuronas. La apariencia visual es secundaria al cómputo.
@@ -462,7 +488,9 @@ trazabilidad. No se borran ni se presentan como parte validada del nuevo corte. 
 artefactos generados —`Binaries`, `Intermediate`, `Saved`, cachés, binarios y
 credenciales— permanecen fuera del release mediante `.gitignore`.
 
-## Estado de verificación
+## Estado histórico de este corte
+
+Esta tabla corresponde al código conservado en este corte. El estado actualizado de investigación se encuentra en los enlaces de progreso anteriores.
 
 | Ruta | Estado y alcance |
 |---|---|
