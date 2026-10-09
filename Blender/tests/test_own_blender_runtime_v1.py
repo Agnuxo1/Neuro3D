@@ -8,6 +8,8 @@ import sys
 import tempfile
 import time
 import unittest
+REPO_ROOT = Path(__file__).resolve().parents[2]
+NEURO3D_COGNITION = Path(os.environ.get("NEURO3D_COGNITION_DIR", REPO_ROOT / ".cognition"))
 
 ROOT = Path(__file__).resolve().parents[2]
 spec = importlib.util.spec_from_file_location('onb_runtime_controls', ROOT / 'Blender/addon/optic_neuro_blender/runtime.py')
@@ -16,7 +18,8 @@ runtime = importlib.util.module_from_spec(spec); spec.loader.exec_module(runtime
 
 class OwnedRuntimeControls(unittest.TestCase):
     def test_complete_and_actual_cancel_with_evidence(self):
-        directory = 'D:/PROJECTS/.cognition/neuro3d-sequential-20261008' if os.name == 'nt' else None
+        directory = str(NEURO3D_COGNITION / 'neuro3d-sequential-20261008') if os.name == 'nt' else None
+        if directory: Path(directory).mkdir(parents=True, exist_ok=True)
         with tempfile.TemporaryDirectory(dir=directory) as temporary:
             root = Path(temporary)
             completed = root / 'complete'; completed.mkdir()
@@ -38,7 +41,8 @@ class OwnedRuntimeControls(unittest.TestCase):
             self.assertFalse(runtime.read_json(cancelled / 'supervision.json')['result_collected'])
 
     def test_duplicate_nonfinite_and_byte_budget_rejected(self):
-        directory = 'D:/PROJECTS/.cognition/neuro3d-sequential-20261008' if os.name == 'nt' else None
+        directory = str(NEURO3D_COGNITION / 'neuro3d-sequential-20261008') if os.name == 'nt' else None
+        if directory: Path(directory).mkdir(parents=True, exist_ok=True)
         with tempfile.TemporaryDirectory(dir=directory) as temporary:
             path = Path(temporary) / 'value.json'
             for value in ['{"x":1,"x":2}', '{"x":NaN}']:

@@ -2,8 +2,11 @@
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path
 import sys
+REPO_ROOT = Path(__file__).resolve().parents[2]
+NEURO3D_COGNITION = Path(os.environ.get("NEURO3D_COGNITION_DIR", REPO_ROOT / ".cognition"))
 
 
 def main():
@@ -17,7 +20,7 @@ def main():
     p=argparse.ArgumentParser(); p.add_argument('--evidence',required=True)
     a=p.parse_args(sys.argv[sys.argv.index('--')+1:]); folder=Path(a.evidence)
     folder.mkdir(parents=True,exist_ok=True)
-    source=Path('D:/PROJECTS/.cognition/neuro3d/exp005_cascade_cpu_20260930_0014/base.blend')
+    source=NEURO3D_COGNITION / 'neuro3d/exp005_cascade_cpu_20260930_0014/base.blend'
     bpy.ops.wm.open_mainfile(filepath=str(source)); bpy.context.view_layer.update()
     scene=bpy.context.scene; dg=bpy.context.evaluated_depsgraph_get()
     snapshot=export_snapshot(scene,depsgraph=dg,view_layer=bpy.context.view_layer)

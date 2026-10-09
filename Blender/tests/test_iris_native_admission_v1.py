@@ -6,6 +6,7 @@ import argparse
 import copy
 import hashlib
 import json
+import os
 from pathlib import Path
 import struct
 import sys
@@ -21,6 +22,8 @@ from Blender.benchmarks.capacity_audit import iris_native_gpu_guard_v1 as adapte
 from Blender.benchmarks.capacity_audit import iris_native_packet_v1 as packet
 from Blender.benchmarks.capacity_audit.iris_native_readback_v1 import validate_result
 from Blender.tests import iris_native_circuit_v1 as worker
+REPO_ROOT = Path(__file__).resolve().parents[2]
+NEURO3D_COGNITION = Path(os.environ.get("NEURO3D_COGNITION_DIR", REPO_ROOT / ".cognition"))
 
 MANIFEST=ROOT/'Docs/validation/iris-native-circuit-2026-10-08/inputs02/input_manifest.json'
 
@@ -72,7 +75,8 @@ class Tests(unittest.TestCase):
             with self.assertRaises(ValueError):packet.admit(self.change_wire(fn))
 
     def test_duplicate_json_key(self):
-        with tempfile.TemporaryDirectory(dir='D:/PROJECTS/.cognition/neuro3d-sequential-20261008') as d:
+        (NEURO3D_COGNITION / 'neuro3d-sequential-20261008').mkdir(parents=True, exist_ok=True)
+        with tempfile.TemporaryDirectory(dir=NEURO3D_COGNITION / 'neuro3d-sequential-20261008') as d:
             p=Path(d)/'duplicate.json';p.write_bytes(b'{"a":1,"a":2}')
             with self.assertRaises(ValueError):worker.read(p)
 
@@ -95,7 +99,8 @@ class Tests(unittest.TestCase):
                 'job_id':job_id,'input_manifest_sha256':packet.sha(MANIFEST),'native_gpu_executed':True,
                 'backend':'OPENGL','background':False,'vendor':'NVIDIA','renderer':'RTX 3090',
                 'gpu_dispatch_count':3,'completed_readbacks':3,'gpu_readback_records':records,'gpu_readback_sha256':digest.hexdigest()}
-        with tempfile.TemporaryDirectory(dir='D:/PROJECTS/.cognition/neuro3d-sequential-20261008') as d:
+        (NEURO3D_COGNITION / 'neuro3d-sequential-20261008').mkdir(parents=True, exist_ok=True)
+        with tempfile.TemporaryDirectory(dir=NEURO3D_COGNITION / 'neuro3d-sequential-20261008') as d:
             path=Path(d)/'synthetic_worker.json';plan=SimpleNamespace(job_id=job_id,input_sha=packet.sha(MANIFEST),input_manifest=MANIFEST)
             def gate(r):path.write_bytes(json.dumps(r).encode());return adapter.worker_gate(path,plan)
             self.assertTrue(gate(report)['native_gpu_execution_verified']) # synthetic function test only

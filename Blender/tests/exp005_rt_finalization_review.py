@@ -8,11 +8,14 @@ import ast
 import copy
 import hashlib
 import json
+import os
 from pathlib import Path
 from types import SimpleNamespace
+REPO_ROOT = Path(__file__).resolve().parents[2]
+NEURO3D_COGNITION = Path(os.environ.get("NEURO3D_COGNITION_DIR", REPO_ROOT / ".cognition"))
 
 ROOT=Path(__file__).parents[2]
-PEER=Path('D:/PROJECTS/.cognition/neuro3d/rt_cap002')
+PEER=NEURO3D_COGNITION / 'neuro3d/rt_cap002'
 PINS={ROOT/'coordinacion/respuestas/RT-CAP-005-CLAUDE.json':'51f94861ed9b9d1f2e09bf9a2a77345e62fde1e1b7ac981ddb708ced8f1f6d13',
       ROOT/'coordinacion/tareas/RT-CAP-005-CLAUDE.md':'6ea6175332c1a9fb0dd713255eec9a49fb60fc581bce1d024e05faf76659684b',
       PEER/'guard_v4.py':'cf097276e040230d4d470e4648098b507aa4bc5f03b70c0a599d5ff2c591d820',

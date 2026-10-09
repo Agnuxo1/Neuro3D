@@ -2,17 +2,20 @@ import copy
 import hashlib
 import json
 from fractions import Fraction
+import os
 from pathlib import Path
 import unittest
 from exp005_origin_enclosure_audit import enclosure, audit, REPLAY_SHA
 from exp005_departure_replay_audit import load_frozen
+REPO_ROOT = Path(__file__).resolve().parents[2]
+NEURO3D_COGNITION = Path(os.environ.get("NEURO3D_COGNITION_DIR", REPO_ROOT / ".cognition"))
 
 
 class OriginEnclosureTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.retained = load_frozen('D:/PROJECTS/.cognition/neuro3d/exp005_self_hit_cpu_20260930_0804.json')
-        raw = Path('D:/PROJECTS/.cognition/neuro3d/exp005_departure_replay_cpu_20260930_0942.json').read_bytes()
+        cls.retained = load_frozen(NEURO3D_COGNITION / 'neuro3d/exp005_self_hit_cpu_20260930_0804.json')
+        raw = (NEURO3D_COGNITION / 'neuro3d/exp005_departure_replay_cpu_20260930_0942.json').read_bytes()
         if hashlib.sha256(raw).hexdigest() != REPLAY_SHA: raise ValueError('frozen replay changed')
         cls.replay = json.loads(raw); cls.report = audit(cls.retained, cls.replay)
 

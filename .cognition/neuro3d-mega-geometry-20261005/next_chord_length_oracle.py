@@ -1,11 +1,12 @@
 """Captured endpoint-norm proof audit; no imports of helpers, suites or producers."""
 import base64,ctypes,hashlib,itertools,json,pathlib,psutil,zlib
 from fractions import Fraction as F
+REPO_ROOT=pathlib.Path(__file__).resolve().parents[2]
 k=ctypes.WinDLL("kernel32");k.GetCurrentProcess.restype=ctypes.c_void_p
 k.SetProcessAffinityMask.argtypes=[ctypes.c_void_p,ctypes.c_size_t]
 assert k.SetProcessAffinityMask(k.GetCurrentProcess(),1)
 assert psutil.virtual_memory().available-128*2**20>=4*2**30
-root=pathlib.Path("D:/PROJECTS/9_NEBULA_NEW")
+root=REPO_ROOT
 receipt=json.loads((root/"coordinacion/respuestas/PRECISION-ORIGINAL-SOURCE-NEXT-CHORD-LENGTH-CPU-001-CODEX.json").read_bytes())
 def unpack(cap):
     dec=zlib.decompressobj()
