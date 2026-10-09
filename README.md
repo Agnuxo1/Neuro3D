@@ -118,6 +118,15 @@ todavía más eficiente para geometría fija. AMD real sigue pendiente.
 
 ![Coste medido CPU/CUDA y baseline equivalente](Docs/assets/trained-graph-cpu-cuda-scaling-2026-10-09.png)
 
+El [entrenamiento propio con CUDA](Docs/GEOMETRY_CUDA_TRAINING_PROTOCOL_2026-10-09.md)
+completa las 60 actualizaciones y 61 auditorías, con 27/30 aciertos y las 150 decisiones
+iguales a CPU. Las geometrías finales coinciden; diferencia máxima de potencia
+3,89×10⁻¹⁶ y de gradiente en cada estado 2,85×10⁻¹³. El coste completo observado
+es **370,46 s CPU frente a 390,09 s CUDA**: no hay aceleración global en esta pareja.
+El coste dominante sigue siendo auditar geometría en CPU; AMD y energía siguen pendientes.
+
+![Entrenamiento CUDA real y coste completo](Docs/assets/geometry-cuda-training-2026-10-09.png)
+
 La [evaluación prospectiva en Wine](Docs/WINE_GENERALIZATION_COMPARISON_2026-10-09.md)
 añade tres inicializaciones fijadas y 183 estados geométricos auditados. Aciertan
 33/37, 30/37 y 28/37 filas reservadas; los baselines lineal y cuadrático, con las

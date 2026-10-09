@@ -75,8 +75,8 @@
       "status": "PARTIAL_ACTUAL_NVIDIA_COMPLEX128_GRAPH_AND_GRADIENTS_VERIFIED",
       "acceptance": "Equivalent outputs and precision, actual vendor execution receipts, complete preparation/transfer/compute/readout/training cost and resource/ablation evidence",
       "amd_execution_verified": false,
-      "achieved": "ActualRTX3090/CUDA12.4/Torch2.6.0 kernels/readback60inputs; ownfields/powers/manualJacobian parity/autogradcontrol; independentobservedfieldsL1<=2.9356882610688944e-15,power<=1.3807709003001215e-15;59argmaxcertified,zeroUNKNOWN;5repeatsbatches1/150/2048,fullworker6.7155s,source/setup/transfers/readback costs andequivalentdensebaseline measured",
-      "remaining": "ActualAMDhardware; wholetrainingandgeometryGPUcost/energy/structuralscaling/ablations; noGPUtrianglepredicate claimed"
+      "achieved": "ActualRTX3090/CUDA12.4/Torch2.6.0 kernels/readback60inputs; ownfields/powers/manualJacobian parity/autogradcontrol; independentobservedfieldsL1<=2.9356882610688944e-15,power<=1.3807709003001215e-15;59argmaxcertified,zeroUNKNOWN;5repeatsbatches1/150/2048,fullworker6.7155s,source/setup/transfers/readback costs andequivalentdensebaseline measured; pairedfullactualCPU/CUDAowntraining60updates61geometryauditsboth27of30/150decisionssame, field5.4e-16/gradient2.85e-13parity;CPU370.46/CUDA390.09s,nofullspeedup,CUDA22MiBreserved",
+      "remaining": "ActualAMDhardware; geometryGPUexecution/energy/structuralscaling/ablations; ownCUDAtrainingfullcostcompleted; noGPUtrianglepredicate claimed"
     },
     {
       "id": 9,
