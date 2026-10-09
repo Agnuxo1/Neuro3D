@@ -15,7 +15,7 @@ Red óptica escalar entrenable que calcula desde la **geometría evaluada de Ble
 | Aprendizaje en el motor gráfico | 16 parámetros, 60 actualizaciones, 61 capturas reales; nueva escena guardada y reabierta |
 | Iris: división fija 120/30 | Pérdida 6.255441 → 0.309707; train 110/120, test **27/30** |
 | Control del entrenamiento GPU | Posiciones cuantizadas idénticas a la referencia CPU; 150 decisiones finales iguales |
-| Derivadas gráficas | 16 parámetros y 32 perturbaciones geométricas; controles de diferencias finitas pasan |
+| Derivadas gráficas | 16 parámetros y 32 perturbaciones del modelo geométrico; controles de diferencias finitas pasan |
 | Generalización Wine | Tres semillas: 33/37, 30/37, 28/37; baselines 32/37; sin superioridad demostrada |
 | Recuperación instalada 0.1.3 | Interrupción real en checkpoint12; 61 estados y 150 potencias idénticos al baseline, en Windows y Linux externo |
 
@@ -54,7 +54,7 @@ La fase relativa cambia la función de la red: sumar intensidades de fuentes ind
 |---|---|
 | Rasterización instanciada + shaders FP64 | Superficies, campo coherente y gradientes desde triángulos; aprendizaje completo validado |
 | Sombreado diferido con candidatos GPU | Campos y Jacobianos idénticos al control directo; estado equivalente 42,974 s frente a 38,273 s, sin mejora |
-| Cycles OptiX sobre RTX 3090 | Grafo completo y decisiones correctas numéricamente; candidatos + prueba 41,008 s frente a BVH CPU 10,331 s |
+| Cycles OptiX sobre RTX 3090 | Grafo completo y decisiones iguales a la referencia; candidatos + prueba 41,008 s frente a BVH CPU 10,331 s |
 | CUDA complex128 como referencia adicional | Inferencia, gradientes y aprendizaje propios comprobados; no demuestra ventaja global |
 
 La supervisión del aprendizaje gráfico completo cuesta **3066.60 s**, incluyendo capturas, prueba geométrica y referencia CPU; RSS propio máximo 499.45 MiB. Las fases del coste permanecen en el [resultado completo](Docs/validation/native-deferred-training-2026-10-09/attempt01/worker/result.json). Los ensayos anteriores cancelados y los resultados negativos están conservados.
@@ -99,4 +99,4 @@ La fabricación es opcional para el simulador. El artículo es un borrador repro
 
 [Checkpoint científico público](Docs/SEQUENTIAL_RESEARCH_PROGRESS_2026-10-08.md) · [Aceptación por objetivo](Docs/research/optic_neuro_blender_acceptance_v1.json) · [Revisión de antecedentes](Docs/LITERATURE_AND_NOVELTY_AUDIT_2026-10-08.md) · [Técnicas externas y licencias](Docs/OPTIC_NEURO_BLENDER_COMPONENT_SELECTION_2026-10-08.md) · [Recibo de compilación del artículo](Docs/paper/scientific_article_build_receipt_2026-10-09.json)
 
-Las portadas [original de main](Docs/HISTORICAL_MAIN_README_BEFORE_INTEGRATION_2026-10-09.md) y [científica anterior](Docs/HISTORICAL_SCIENTIFIC_README_BEFORE_FINAL_PUBLICATION_2026-10-09.md), versiones previas, protocolos y fallos se conservan. La [animación histórica del entrenamiento CPU](Docs/assets/native-blender-geometry-training-2026-10-09.gif) mantiene su procedencia original. Código propio bajo [MIT](LICENSE); atribuciones y licencias de datos en los protocolos. [Historia de la PR6](https://github.com/Agnuxo1/Neuro3D/pull/6).
+Las portadas [original de main](Docs/HISTORICAL_MAIN_README_BEFORE_INTEGRATION_2026-10-09.md) y [científica anterior](Docs/HISTORICAL_SCIENTIFIC_README_BEFORE_FINAL_PUBLICATION_2026-10-09.md), versiones previas, protocolos y fallos se conservan. La [animación histórica del entrenamiento CPU](Docs/assets/native-blender-geometry-training-2026-10-09.gif) mantiene su procedencia original. Código propio bajo [MIT](LICENSE); atribuciones y licencias de datos en los protocolos. [Historia de la PR6](https://github.com/Agnuxo1/Neuro3D/pull/6). [Política de diff de registros crudos](Docs/RAW_EVIDENCE_DIFF_POLICY_2026-10-09.md).
