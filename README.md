@@ -44,6 +44,21 @@ el [plan completo](Docs/BLENDER_SCIENTIFIC_ROADMAP_2026-10-08.md) y la
 
 ## Pregunta científica y progreso verificable
 
+La [reproducción CPU en un entorno Linux de GitHub](Docs/EXTERNAL_CPU_REPRODUCTION_PROTOCOL_2026-10-09.md)
+pasa los 34 controles, el certificado racional y las 61 auditorías del entrenamiento.
+Reproduce **150/150 decisiones y 27/30 aciertos**, con diferencia máxima de
+potencia `3,89×10⁻¹⁶`; el ejecutor científico tarda 367,37 s. La réplica por
+investigadores independientes y la instalación nativa Blender Linux siguen pendientes.
+
+```mermaid
+flowchart LR
+  F[40 blobs publicados verificados] --> C[34 controles CPU pasan]
+  C --> I[Certificado racional reproducido]
+  I --> T[61 estados de entrenamiento auditados]
+  T --> D[150 decisiones iguales a Windows]
+```
+
+
 El [recorrido coherente de la captura real](Docs/COHERENT_STATE_GRAPH_AND_GRADIENTS_2026-10-09.md)
 ya devuelve `COMPLETE`: **133 estados exactos, 186 aristas y 17.060 caminos
 terminales representados**, con las 104 superficies alcanzadas desde cinco fuentes.

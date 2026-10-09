@@ -89,8 +89,10 @@
     {
       "id": 10,
       "name": "External reproduction and scientific article",
-      "status": "OPEN",
-      "acceptance": "Release evidence and reproducible article; independently executed external reproduction explicitly distinguished from local checks"
+      "status": "PARTIAL_EXTERNAL_LINUX_CPU_REPRODUCTION_AND_REPRODUCIBLE_DRAFT_PUBLISHED",
+      "acceptance": "Release evidence and reproducible article; independently executed external reproduction explicitly distinguished from local checks",
+      "achieved": "GitHub-hosted Linux CPU run37886830249/commitbbc06c3 verifies40blobs beforedata;34controls, rational replay,61trainingauditsPASS;27of30test,150predictionssame, powerdifference3.886e-16. English reproducible scientific draft published; rawexternalartifact permanentlyarchived.",
+      "remaining": "Independent researchers and specialist critique; native Linux Blender/GPU beyond CPU; journal submission and broader replication; exceptional novelty/importance not established"
     }
   ],
   "claim_policy": {
@@ -118,5 +120,6 @@
   "latest_wine_comparison": "Docs/validation/wine-comparison-2026-10-09/attempt01/worker/result.json",
   "latest_wave_reference": "Docs/validation/gaussian-wave-reference-2026-10-09/attempt01/worker/result.json",
   "latest_own_addon_native_audit": "Docs/validation/own-blender-addon-2026-10-09/attempt03/worker/result.json",
-  "latest_wave_remedial": "Docs/validation/gaussian-wave-remedial-2026-10-09/attempt01/worker/result.json"
+  "latest_wave_remedial": "Docs/validation/gaussian-wave-remedial-2026-10-09/attempt01/worker/result.json",
+  "latest_external_cpu_result": "Docs/validation/external-cpu-reproduction-2026-10-09/attempt02/artifact/result.json"
 }
