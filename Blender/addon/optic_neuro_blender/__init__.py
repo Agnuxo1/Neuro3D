@@ -11,7 +11,7 @@ from bpy.props import FloatVectorProperty, PointerProperty, StringProperty
 from .bootstrap import PACKAGE, verify_bundle
 from .runtime import OwnedJob, canonical, digest, read_json
 
-bl_info = {'name': 'OpticNeuroBlender', 'author': 'Neuro3D contributors', 'version': (0, 1, 0),
+bl_info = {'name': 'OpticNeuroBlender', 'author': 'Neuro3D contributors', 'version': (0, 1, 1),
            'blender': (4, 5, 0), 'location': 'View3D > Sidebar > OpticNeuro',
            'description': 'Red óptica coherente propia desde geometría evaluada', 'category': '3D View'}
 
@@ -89,7 +89,7 @@ def start_job(action):
     (folder / 'capture.json').write_bytes(canonical(capture))
     save_copy(folder / 'snapshot.blend')
     command = [bpy.app.binary_path, '--background', '--disable-autoexec', '--threads', '1', '-noaudio',
-               str(folder / 'snapshot.blend'), '--python-exit-code', '3', '--python', str(PACKAGE / 'worker.py'), '--', str(folder / 'request.json')]
+               str(folder / 'snapshot.blend'), '--python-exit-code', '3', '--python', str(PACKAGE / 'worker_v2.py'), '--', str(folder / 'request.json')]
     _job = OwnedJob(command, folder)
     _last_folder = folder; scene.optic_neuro_settings.recover_directory = str(folder)
     _status = 'Entrenando desde geometría…' if action == 'TRAIN' else 'Recorriendo la escena y calculando campos…'

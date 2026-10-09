@@ -121,3 +121,6 @@ Blender/releases/** -text !eol whitespace=cr-at-eol
 LICENSE -text !eol whitespace=cr-at-eol
 Docs/research/own_blender_addon_profile_v2_2026-10-09.json -text !eol whitespace=cr-at-eol
 Docs/research/own_blender_addon_registration_v2_2026-10-09.json -text !eol whitespace=cr-at-eol
+
+Docs/research/own_blender_addon_profile_v3_2026-10-09.json -text !eol whitespace=cr-at-eol
+Docs/research/own_blender_addon_registration_v3_2026-10-09.json -text !eol whitespace=cr-at-eol
