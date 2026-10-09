@@ -1,0 +1,33 @@
+{
+  "schema": "optic_neuro_blender.wave_supervision.v2",
+  "status": "VALID_FROZEN_WAVE_REFERENCE_RESULT",
+  "primary_metric": 1,
+  "worker_started": true,
+  "result_collected": true,
+  "profile_sha256": "f11f1e2bd1aebf1cfc0ca4b62202025664a80cf5da934fee571bc358b7a9d5a6",
+  "registration_sha256": "e33360aa4d69dec8799f5b550782c8d8e338ded9af27d98f3ec8b9e4f13d809c",
+  "preflight_free_ram_mib": 7909.015625,
+  "worker_seconds": 133.0454241999978,
+  "worker_exit_code": 0,
+  "peak_owned_rss_mib": 1866.79296875,
+  "stopped": null,
+  "result_sha256": "2de1f80b56f7b549ad6c2d71e14d1c99ee1140911283d0675cf4a19a553eb231",
+  "owned_worker_cleaned_up": true,
+  "raw_file_sha256": {
+    "profile.json": "f11f1e2bd1aebf1cfc0ca4b62202025664a80cf5da934fee571bc358b7a9d5a6",
+    "registration.json": "e33360aa4d69dec8799f5b550782c8d8e338ded9af27d98f3ec8b9e4f13d809c",
+    "worker.stdout": "d97dc5a8955a27c93dc9407dec22d0d1cf02dfb8891b0f87785b1655588cb4ed",
+    "worker/progress.jsonl": "6e181ae754776eec93c34a18c308385dbce8bfb7c985770441d9a1a4ec732cd3",
+    "worker/result.json": "2de1f80b56f7b549ad6c2d71e14d1c99ee1140911283d0675cf4a19a553eb231",
+    "source/Tools/audit_captured_pilot_result_v1.py": "a3f683ab11aa07eb52aefb4046ba89516321bb175ef01697c39131234b3ac686",
+    "source/Tools/audit_coherent_state_graph_v1.py": "2bb9bb285ec93922fd96cc1eec98fa1fc2c73d20856140536ba5adfe50d4519d",
+    "source/Tools/bind_network_capture_v1.py": "af3bdbc41636214f01c2078ce26bd271794fa763ccefecd2a006f1014d2f117b",
+    "source/Tools/independent_gaussian_hankel_v1.py": "33ed5b3d77cda769b6f1aa6892b7e5af2a8c3f8108d8c5aa0f53df3ed15795b0",
+    "source/Tools/run_frozen_state_graph_profile_v1.py": "9f234e7214e7c740f18ae9e9cf880de98f28f6caf532938a4fbaf1dcd1470895",
+    "source/Tools/run_frozen_wave_reference_v2.py": "14dbabe95c2ffff9d7ea24e1ff30469c9ab57d8ce7cded89ca17544090a3469d",
+    "source/Tools/run_gaussian_wave_reference_v2.py": "38f9f962fb4ae39db5c1a357c335108c54550b8eea315b56ca58cfeffd10b6fa",
+    "source/Blender/blender_lab/scene_capture_v1.py": "fe676b61a9e743277d69b54890688555a604f659c7f23ee223703b907ad8a2d0",
+    "source/Blender/blender_lab/wave_optics_v1.py": "c7aba16074a1e654a889f7dd27d61d14ea9a3b7a9405abe22c552cf142de2584",
+    "source/Blender/blender_lab/__init__.py": "8c93d859b2364fdd697db5fc3234c0406e2a01cbcceb9c6b05a72b92996f372f"
+  }
+}
