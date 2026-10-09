@@ -1,0 +1,25 @@
+{
+  "total_count": 1,
+  "artifacts": [
+    {
+      "id": 11611358901,
+      "node_id": "MDg6QXJ0aWZhY3QxMTYxMTM1ODkwMQ==",
+      "name": "external-installed-resume-evidence-37919893102-1",
+      "size_in_bytes": 11702543,
+      "url": "https://api.github.com/repos/Agnuxo1/Neuro3D/actions/artifacts/11611358901",
+      "archive_download_url": "https://api.github.com/repos/Agnuxo1/Neuro3D/actions/artifacts/11611358901/zip",
+      "expired": false,
+      "digest": "sha256:e46daecc50b2d783be6cb7eeb8e33f11591268e9480471b3f174e968b9b6e80c",
+      "created_at": "2026-10-09T11:00:09Z",
+      "updated_at": "2026-10-09T11:00:09Z",
+      "expires_at": "2026-10-19T11:00:06Z",
+      "workflow_run": {
+        "id": 37919893102,
+        "repository_id": 1392765301,
+        "head_repository_id": 1392765301,
+        "head_branch": "codex/neuro3d-scientific-closure-20261008",
+        "head_sha": "fb690dae6b6a4b474c0bf568bb34d5d3223506e2"
+      }
+    }
+  ]
+}

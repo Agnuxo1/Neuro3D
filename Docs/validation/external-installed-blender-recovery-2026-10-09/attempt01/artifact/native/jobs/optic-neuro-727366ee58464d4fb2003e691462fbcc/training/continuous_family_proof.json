@@ -1,0 +1,4719 @@
+{
+  "base_geometry_audit": {
+    "primary_metric": 1,
+    "status": "VALID_COMPLETE_GRAPH",
+    "states": 133,
+    "sources": 5,
+    "nearest_hits_independently_verified": true,
+    "nonzero_branch_coverage_verified": true,
+    "boundary_neighborhood_independently_verified": true,
+    "field_certified": false,
+    "physical_optics_certified": false,
+    "neighborhood_witnesses": [
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 0,
+        "object_id": "c00.bs1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 1,
+        "object_id": "c01.bs1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 2,
+        "object_id": "c00.bs1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 3,
+        "object_id": "c10.bs1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 4,
+        "object_id": "c20.bs1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 5,
+        "object_id": "c00.r1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 6,
+        "object_id": "c00.m2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 7,
+        "object_id": "c01.r1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 8,
+        "object_id": "c01.m2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 9,
+        "object_id": "c10.m2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 10,
+        "object_id": "c10.r1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 11,
+        "object_id": "c20.m2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 12,
+        "object_id": "c20.r1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 13,
+        "object_id": "c00.r2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 14,
+        "object_id": "c00.bs2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 15,
+        "object_id": "c01.r2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 16,
+        "object_id": "c01.bs2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 17,
+        "object_id": "c10.bs2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 18,
+        "object_id": "c10.r2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 19,
+        "object_id": "c20.bs2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 20,
+        "object_id": "c20.r2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 21,
+        "object_id": "c00.f1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 22,
+        "object_id": "c10.bs1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 23,
+        "object_id": "c01.bs1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 24,
+        "object_id": "c01.f1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 25,
+        "object_id": "c11.bs1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 26,
+        "object_id": "c02.bs1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 27,
+        "object_id": "c20.bs1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 28,
+        "object_id": "c11.bs1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 29,
+        "object_id": "c10.f1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 30,
+        "object_id": "c30.bs1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 31,
+        "object_id": "c21.bs1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 32,
+        "object_id": "c20.f1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 33,
+        "object_id": "c00.bs2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 34,
+        "object_id": "c01.bs2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 35,
+        "object_id": "c11.r1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 36,
+        "object_id": "c11.m2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 37,
+        "object_id": "c02.m2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 38,
+        "object_id": "c02.r1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 39,
+        "object_id": "c10.bs2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 40,
+        "object_id": "c30.r1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 41,
+        "object_id": "c30.m2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 42,
+        "object_id": "c21.m2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 43,
+        "object_id": "c21.r1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 44,
+        "object_id": "c20.bs2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 45,
+        "object_id": "c11.r2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 46,
+        "object_id": "c11.bs2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 47,
+        "object_id": "c02.bs2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 48,
+        "object_id": "c02.r2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 49,
+        "object_id": "c30.r2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 50,
+        "object_id": "c30.bs2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 51,
+        "object_id": "c21.bs2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 52,
+        "object_id": "c21.r2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 53,
+        "object_id": "c11.f1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 54,
+        "object_id": "c21.bs1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 55,
+        "object_id": "c12.bs1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 56,
+        "object_id": "c12.bs1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 57,
+        "object_id": "c03.bs1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 58,
+        "object_id": "c02.f1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 59,
+        "object_id": "c30.f1"
+      },
+      {
+        "projected_radius": [
+          3558985,
+          67108864
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          18,
+          18,
+          18,
+          18
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 60,
+        "object_id": "det.R0"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 61,
+        "object_id": "c31.bs1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 62,
+        "object_id": "c31.bs1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 63,
+        "object_id": "c22.bs1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 64,
+        "object_id": "c21.f1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 65,
+        "object_id": "c11.bs2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 66,
+        "object_id": "c12.m2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 67,
+        "object_id": "c12.r1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 68,
+        "object_id": "c03.m2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 69,
+        "object_id": "c03.r1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 70,
+        "object_id": "c02.bs2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 71,
+        "object_id": "c30.bs2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 72,
+        "object_id": "c31.m2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 73,
+        "object_id": "c31.r1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 74,
+        "object_id": "c22.m2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 75,
+        "object_id": "c22.r1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 76,
+        "object_id": "c21.bs2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 77,
+        "object_id": "c12.bs2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 78,
+        "object_id": "c12.r2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 79,
+        "object_id": "c03.bs2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 80,
+        "object_id": "c03.r2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 81,
+        "object_id": "c31.bs2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 82,
+        "object_id": "c31.r2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 83,
+        "object_id": "c22.bs2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 84,
+        "object_id": "c22.r2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 85,
+        "object_id": "c22.bs1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 86,
+        "object_id": "c13.bs1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 87,
+        "object_id": "c12.f1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 88,
+        "object_id": "c13.bs1"
+      },
+      {
+        "projected_radius": [
+          3558985,
+          67108864
+        ],
+        "projection_keeps": [
+          0,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          18,
+          18,
+          18,
+          18
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 89,
+        "object_id": "det.C0"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 90,
+        "object_id": "c03.f1"
+      },
+      {
+        "projected_radius": [
+          3558985,
+          67108864
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          18,
+          18,
+          18,
+          18
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 91,
+        "object_id": "det.R1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 92,
+        "object_id": "c32.bs1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 93,
+        "object_id": "c31.f1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 94,
+        "object_id": "c32.bs1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 95,
+        "object_id": "c23.bs1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 96,
+        "object_id": "c22.f1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 97,
+        "object_id": "c13.m2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 98,
+        "object_id": "c13.r1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 99,
+        "object_id": "c12.bs2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 100,
+        "object_id": "c03.bs2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 101,
+        "object_id": "c32.m2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 102,
+        "object_id": "c32.r1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 103,
+        "object_id": "c31.bs2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 104,
+        "object_id": "c23.m2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 105,
+        "object_id": "c23.r1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 106,
+        "object_id": "c22.bs2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 107,
+        "object_id": "c13.bs2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 108,
+        "object_id": "c13.r2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 109,
+        "object_id": "c32.bs2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 110,
+        "object_id": "c32.r2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 111,
+        "object_id": "c23.bs2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 112,
+        "object_id": "c23.r2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 113,
+        "object_id": "c23.bs1"
+      },
+      {
+        "projected_radius": [
+          3558985,
+          67108864
+        ],
+        "projection_keeps": [
+          0,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          18,
+          18,
+          18,
+          18
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 114,
+        "object_id": "det.C1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 115,
+        "object_id": "c13.f1"
+      },
+      {
+        "projected_radius": [
+          3558985,
+          67108864
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          18,
+          18,
+          18,
+          18
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 116,
+        "object_id": "det.R2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 117,
+        "object_id": "c33.bs1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 118,
+        "object_id": "c32.f1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 119,
+        "object_id": "c33.bs1"
+      },
+      {
+        "projected_radius": [
+          3558985,
+          67108864
+        ],
+        "projection_keeps": [
+          0,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          18,
+          18,
+          18,
+          18
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 120,
+        "object_id": "det.C2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 121,
+        "object_id": "c23.f1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 122,
+        "object_id": "c13.bs2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 123,
+        "object_id": "c33.m2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 124,
+        "object_id": "c33.r1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 125,
+        "object_id": "c32.bs2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 126,
+        "object_id": "c23.bs2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 127,
+        "object_id": "c33.bs2"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 128,
+        "object_id": "c33.r2"
+      },
+      {
+        "projected_radius": [
+          3558985,
+          67108864
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          18,
+          18,
+          18,
+          18
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 129,
+        "object_id": "det.R3"
+      },
+      {
+        "projected_radius": [
+          3558985,
+          67108864
+        ],
+        "projection_keeps": [
+          0,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          18,
+          18,
+          18,
+          18
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 130,
+        "object_id": "det.C3"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 131,
+        "object_id": "c33.f1"
+      },
+      {
+        "projected_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ],
+        "projection_keeps": [
+          1,
+          2
+        ],
+        "perimeter_closed_interval_counts": [
+          20,
+          14,
+          20,
+          14
+        ],
+        "all_four_edges_covered": true,
+        "node_id": 132,
+        "object_id": "c33.bs2"
+      }
+    ],
+    "neighborhood_method": "EXACT_PROJECTED_SQUARE_PERIMETER_CONVEX_RADIAL_COVERAGE",
+    "scope": "Represented planar geometry only; no intended geometry or physical error bound"
+  },
+  "exact_expression_identity": {
+    "status": "CERTIFIED_EXACT_AFFINE_EXPRESSION_IDENTITY",
+    "scalar_expressions_compared": 1251,
+    "states": 133,
+    "scope": "Exact base and all parameter coefficients; no fitted/sample transfer matrix. Continuous topology proof still required."
+  },
+  "continuous_topology_proof": {
+    "status": "PROVED_CONTINUOUS_AFFINE_BOX_TOPOLOGY",
+    "states": 133,
+    "issues": [],
+    "proofs": [
+      {
+        "node": 0,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 6,
+          "STRICTLY_AFTER_SELECTED": 59,
+          "STRICTLY_BEHIND": 34,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 1,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 72,
+          "STRICTLY_BEHIND": 23,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 4,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 2,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 75,
+          "STRICTLY_BEHIND": 19,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 5,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 3,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 82,
+          "STRICTLY_BEHIND": 12,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 5,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 4,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 86,
+          "STRICTLY_BEHIND": 11,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 2,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 5,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "STRICTLY_BEHIND": 39,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 11,
+          "STRICTLY_AFTER_SELECTED": 48,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 6,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 9,
+          "STRICTLY_BEHIND": 23,
+          "STRICTLY_AFTER_SELECTED": 66,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 7,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 60,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 11,
+          "STRICTLY_BEHIND": 27,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 8,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 40,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 8,
+          "STRICTLY_AFTER_SELECTED": 50,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 9,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 71,
+          "STRICTLY_BEHIND": 16,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 11,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 10,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 50,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 10,
+          "STRICTLY_AFTER_SELECTED": 38,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 11,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 75,
+          "STRICTLY_BEHIND": 13,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 10,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 12,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 64,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 7,
+          "STRICTLY_AFTER_SELECTED": 27,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 13,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 82,
+          "STRICTLY_BEHIND": 14,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 2,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 14,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 61,
+          "STRICTLY_BEHIND": 32,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 5,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 15,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 30,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 4,
+          "STRICTLY_AFTER_SELECTED": 64,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 16,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 73,
+          "STRICTLY_BEHIND": 20,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 5,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 17,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 45,
+          "STRICTLY_AFTER_SELECTED": 48,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 5,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 18,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 86,
+          "STRICTLY_BEHIND": 12,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 19,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 61,
+          "STRICTLY_AFTER_SELECTED": 33,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 4,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 20,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 85,
+          "STRICTLY_BEHIND": 13,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 21,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 44,
+          "STRICTLY_BEHIND": 50,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 4,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 22,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 14,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "STRICTLY_BEHIND": 36,
+          "STRICTLY_AFTER_SELECTED": 48,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 23,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 29,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 10,
+          "STRICTLY_AFTER_SELECTED": 59,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 24,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 62,
+          "STRICTLY_AFTER_SELECTED": 30,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 6,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 25,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 58,
+          "STRICTLY_BEHIND": 26,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 14,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 26,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 47,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 10,
+          "STRICTLY_AFTER_SELECTED": 41,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 27,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 50,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 13,
+          "STRICTLY_AFTER_SELECTED": 35,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 28,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 11,
+          "STRICTLY_BEHIND": 24,
+          "STRICTLY_AFTER_SELECTED": 63,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 29,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 56,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 4,
+          "STRICTLY_BEHIND": 38,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 30,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 65,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 11,
+          "STRICTLY_AFTER_SELECTED": 22,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 31,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 69,
+          "STRICTLY_BEHIND": 21,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 8,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 32,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 68,
+          "STRICTLY_BEHIND": 27,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 3,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 33,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 10,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "STRICTLY_AFTER_SELECTED": 68,
+          "STRICTLY_BEHIND": 20,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 34,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 38,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 8,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "STRICTLY_AFTER_SELECTED": 52,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 35,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 14,
+          "STRICTLY_BEHIND": 39,
+          "STRICTLY_AFTER_SELECTED": 45,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 36,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 34,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 10,
+          "STRICTLY_AFTER_SELECTED": 54,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 37,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 58,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 6,
+          "STRICTLY_AFTER_SELECTED": 34,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 38,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 73,
+          "STRICTLY_BEHIND": 17,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 8,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 39,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 74,
+          "STRICTLY_BEHIND": 14,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 10,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 40,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 77,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 5,
+          "STRICTLY_AFTER_SELECTED": 16,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 41,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 75,
+          "STRICTLY_BEHIND": 16,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 7,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 42,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 12,
+          "STRICTLY_AFTER_SELECTED": 56,
+          "STRICTLY_BEHIND": 30,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 43,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 59,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 11,
+          "STRICTLY_AFTER_SELECTED": 28,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 44,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 77,
+          "STRICTLY_BEHIND": 14,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 7,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 45,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 69,
+          "STRICTLY_BEHIND": 27,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 2,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 46,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 58,
+          "STRICTLY_BEHIND": 36,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 4,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 47,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 81,
+          "STRICTLY_BEHIND": 12,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 5,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 48,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 51,
+          "STRICTLY_AFTER_SELECTED": 45,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 2,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 49,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 79,
+          "STRICTLY_BEHIND": 19,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "COPLANAR_TIME_SEGMENT_ALL_TRIANGLES_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 3
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 50,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 77,
+          "STRICTLY_AFTER_SELECTED": 19,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 2,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 51,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 6,
+          "STRICTLY_BEHIND": 54,
+          "STRICTLY_AFTER_SELECTED": 38,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 52,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 71,
+          "STRICTLY_BEHIND": 26,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 1,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 53,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 7,
+          "STRICTLY_AFTER_SELECTED": 46,
+          "STRICTLY_BEHIND": 45,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 54,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 17,
+          "STRICTLY_BEHIND": 41,
+          "STRICTLY_AFTER_SELECTED": 40,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 55,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 44,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 12,
+          "STRICTLY_AFTER_SELECTED": 42,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 56,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 68,
+          "STRICTLY_BEHIND": 18,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 12,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 57,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 63,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 9,
+          "STRICTLY_AFTER_SELECTED": 26,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 58,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 73,
+          "STRICTLY_AFTER_SELECTED": 19,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 6,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 59,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 81,
+          "STRICTLY_BEHIND": 16,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 1
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 60,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 79,
+          "STRICTLY_AFTER_SELECTED": 16,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 3,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          3558985,
+          67108864
+        ]
+      },
+      {
+        "node": 61,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 70,
+          "STRICTLY_BEHIND": 23,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 5,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 62,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 61,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 14,
+          "STRICTLY_AFTER_SELECTED": 23,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 63,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 13,
+          "STRICTLY_BEHIND": 40,
+          "STRICTLY_AFTER_SELECTED": 45,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 64,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 63,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 6,
+          "STRICTLY_BEHIND": 29,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 65,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 32,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 11,
+          "STRICTLY_AFTER_SELECTED": 55,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 66,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 56,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 9,
+          "STRICTLY_AFTER_SELECTED": 33,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 67,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 56,
+          "STRICTLY_BEHIND": 30,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 12,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 68,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 73,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 2,
+          "STRICTLY_AFTER_SELECTED": 23,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 69,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 79,
+          "STRICTLY_BEHIND": 14,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 5,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 70,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 57,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 5,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "STRICTLY_AFTER_SELECTED": 36,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 71,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 75,
+          "STRICTLY_BEHIND": 19,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 4,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 72,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 58,
+          "STRICTLY_BEHIND": 29,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 11,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 73,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 76,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 10,
+          "STRICTLY_AFTER_SELECTED": 12,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 74,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 54,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 9,
+          "STRICTLY_AFTER_SELECTED": 35,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 75,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 14,
+          "STRICTLY_BEHIND": 49,
+          "STRICTLY_AFTER_SELECTED": 35,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 76,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 59,
+          "STRICTLY_BEHIND": 31,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 8,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 77,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 67,
+          "STRICTLY_BEHIND": 27,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 4,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 78,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 50,
+          "STRICTLY_AFTER_SELECTED": 47,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 79,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 83,
+          "STRICTLY_BEHIND": 13,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 2,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 80,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 69,
+          "STRICTLY_AFTER_SELECTED": 27,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 2,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 81,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 72,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 6,
+          "STRICTLY_AFTER_SELECTED": 20,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 82,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 69,
+          "STRICTLY_BEHIND": 28,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 1,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 3,
+          "COPLANAR_TIME_SEGMENT_ALL_TRIANGLES_EXCLUDED": 1
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 83,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 48,
+          "STRICTLY_BEHIND": 45,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 5,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 84,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 3,
+          "STRICTLY_AFTER_SELECTED": 50,
+          "STRICTLY_BEHIND": 45,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 85,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 50,
+          "STRICTLY_BEHIND": 32,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 16,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 86,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 65,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 11,
+          "STRICTLY_AFTER_SELECTED": 22,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 87,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 55,
+          "STRICTLY_AFTER_SELECTED": 36,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 7,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 88,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 72,
+          "STRICTLY_BEHIND": 16,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 10,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 89,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 77,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 3,
+          "STRICTLY_AFTER_SELECTED": 18,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          3558985,
+          67108864
+        ]
+      },
+      {
+        "node": 90,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 79,
+          "STRICTLY_AFTER_SELECTED": 16,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 3,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 91,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 78,
+          "STRICTLY_AFTER_SELECTED": 16,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 4,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          3558985,
+          67108864
+        ]
+      },
+      {
+        "node": 92,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 53,
+          "STRICTLY_BEHIND": 37,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 8,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "COPLANAR_TIME_SEGMENT_ALL_TRIANGLES_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 3
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 93,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 79,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 6,
+          "STRICTLY_BEHIND": 13,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 94,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 18,
+          "STRICTLY_BEHIND": 51,
+          "STRICTLY_AFTER_SELECTED": 29,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 95,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 62,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 13,
+          "STRICTLY_AFTER_SELECTED": 23,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 96,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 36,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 8,
+          "STRICTLY_AFTER_SELECTED": 54,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 97,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 76,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 5,
+          "STRICTLY_AFTER_SELECTED": 17,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 98,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 65,
+          "STRICTLY_BEHIND": 26,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 7,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 99,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 54,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 10,
+          "STRICTLY_AFTER_SELECTED": 34,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 100,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 72,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 4,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "STRICTLY_AFTER_SELECTED": 22,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 101,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 14,
+          "STRICTLY_BEHIND": 46,
+          "STRICTLY_AFTER_SELECTED": 38,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "COPLANAR_TIME_SEGMENT_ALL_TRIANGLES_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 3
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 102,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 69,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 13,
+          "STRICTLY_AFTER_SELECTED": 16,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 103,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 62,
+          "STRICTLY_BEHIND": 31,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 5,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "COPLANAR_TIME_SEGMENT_ALL_TRIANGLES_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 3
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 104,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 76,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 7,
+          "STRICTLY_AFTER_SELECTED": 15,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 105,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 49,
+          "STRICTLY_BEHIND": 40,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 9,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 106,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 52,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 9,
+          "STRICTLY_AFTER_SELECTED": 37,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 107,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 72,
+          "STRICTLY_BEHIND": 24,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 2,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 108,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 71,
+          "STRICTLY_AFTER_SELECTED": 26,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 109,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 29,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 8,
+          "STRICTLY_BEHIND": 61,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 110,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 54,
+          "STRICTLY_BEHIND": 41,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 3,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 3,
+          "COPLANAR_TIME_SEGMENT_ALL_TRIANGLES_EXCLUDED": 1
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 111,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 60,
+          "STRICTLY_BEHIND": 35,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 3,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 112,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 68,
+          "STRICTLY_AFTER_SELECTED": 29,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 113,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 59,
+          "STRICTLY_BEHIND": 27,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 12,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 114,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 83,
+          "STRICTLY_AFTER_SELECTED": 12,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 3,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          3558985,
+          67108864
+        ]
+      },
+      {
+        "node": 115,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 64,
+          "STRICTLY_AFTER_SELECTED": 30,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 4,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 116,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 6,
+          "STRICTLY_BEHIND": 69,
+          "STRICTLY_AFTER_SELECTED": 23,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          3558985,
+          67108864
+        ]
+      },
+      {
+        "node": 117,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 56,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 14,
+          "STRICTLY_AFTER_SELECTED": 28,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 3,
+          "COPLANAR_TIME_SEGMENT_ALL_TRIANGLES_EXCLUDED": 1
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 118,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 72,
+          "STRICTLY_BEHIND": 19,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 7,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 119,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 43,
+          "STRICTLY_BEHIND": 39,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 16,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 120,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 84,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 3,
+          "STRICTLY_AFTER_SELECTED": 11,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          3558985,
+          67108864
+        ]
+      },
+      {
+        "node": 121,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 48,
+          "STRICTLY_AFTER_SELECTED": 44,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 6,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 122,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 74,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 8,
+          "STRICTLY_AFTER_SELECTED": 16,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 123,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 71,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 9,
+          "STRICTLY_AFTER_SELECTED": 18,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 3,
+          "COPLANAR_TIME_SEGMENT_ALL_TRIANGLES_EXCLUDED": 1
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 124,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 28,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 15,
+          "STRICTLY_BEHIND": 55,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 125,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 8,
+          "STRICTLY_AFTER_SELECTED": 43,
+          "STRICTLY_BEHIND": 47,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 3,
+          "COPLANAR_TIME_SEGMENT_ALL_TRIANGLES_EXCLUDED": 1
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 126,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 73,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 10,
+          "STRICTLY_AFTER_SELECTED": 15,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 127,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 44,
+          "STRICTLY_BEHIND": 48,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 6,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 128,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 60,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 3,
+          "STRICTLY_AFTER_SELECTED": 35,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 3,
+          "COPLANAR_TIME_SEGMENT_ALL_TRIANGLES_EXCLUDED": 1
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 129,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_AFTER_SELECTED": 39,
+          "STRICTLY_BEHIND": 54,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 5,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          3558985,
+          67108864
+        ]
+      },
+      {
+        "node": 130,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 78,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 3,
+          "STRICTLY_AFTER_SELECTED": 17,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 3,
+          "COPLANAR_TIME_SEGMENT_ALL_TRIANGLES_EXCLUDED": 1
+        },
+        "selected_square_radius": [
+          3558985,
+          67108864
+        ]
+      },
+      {
+        "node": 131,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 31,
+          "STRICTLY_AFTER_SELECTED": 60,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 7,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 4
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      },
+      {
+        "node": 132,
+        "objects_checked": 104,
+        "competitor_exclusions": {
+          "STRICTLY_BEHIND": 68,
+          "EVERY_CLOSED_TRIANGLE_STRICTLY_OUTSIDE": 9,
+          "STRICTLY_AFTER_SELECTED": 21,
+          "EXACT_PREVIOUS_PLANE_ZERO_CONTACT_EXCLUDED": 1,
+          "PARALLEL_SEPARATED": 3,
+          "COPLANAR_TIME_SEGMENT_ALL_TRIANGLES_EXCLUDED": 1
+        },
+        "selected_square_radius": [
+          209472361100400143961,
+          3631610989002448961536
+        ]
+      }
+    ],
+    "scope": "Every point of the declared represented translation box; excludes independent triangle-plane competitors; coincident primitive identity may vary within the proved selected surface union"
+  },
+  "box_relative_bounds": [
+    [
+      [
+        -108707903910341307789,
+        2361183241434822606848
+      ],
+      [
+        56584367723062029709,
+        2361183241434822606848
+      ]
+    ],
+    [
+      [
+        -143207165905859571085,
+        2361183241434822606848
+      ],
+      [
+        22085105727543766413,
+        2361183241434822606848
+      ]
+    ],
+    [
+      [
+        -13511377936937184653,
+        2361183241434822606848
+      ],
+      [
+        151780893696466152845,
+        2361183241434822606848
+      ]
+    ],
+    [
+      [
+        -93518951217080888717,
+        2361183241434822606848
+      ],
+      [
+        71773320416322448781,
+        2361183241434822606848
+      ]
+    ],
+    [
+      [
+        -57651157884795415949,
+        2361183241434822606848
+      ],
+      [
+        107641113748607921549,
+        2361183241434822606848
+      ]
+    ],
+    [
+      [
+        -83803560920935886221,
+        2361183241434822606848
+      ],
+      [
+        81488710712467451277,
+        2361183241434822606848
+      ]
+    ],
+    [
+      [
+        -29445113418573999501,
+        2361183241434822606848
+      ],
+      [
+        135847158214829337997,
+        2361183241434822606848
+      ]
+    ],
+    [
+      [
+        -70448136225968680333,
+        2361183241434822606848
+      ],
+      [
+        94844135407434657165,
+        2361183241434822606848
+      ]
+    ],
+    [
+      [
+        -115977276658870709645,
+        2361183241434822606848
+      ],
+      [
+        49314994974532627853,
+        2361183241434822606848
+      ]
+    ],
+    [
+      [
+        -87487505416124951949,
+        2361183241434822606848
+      ],
+      [
+        77804766217278385549,
+        2361183241434822606848
+      ]
+    ],
+    [
+      [
+        -82062919664957189517,
+        2361183241434822606848
+      ],
+      [
+        83229351968446147981,
+        2361183241434822606848
+      ]
+    ],
+    [
+      [
+        -110489640512919760269,
+        2361183241434822606848
+      ],
+      [
+        54802631120483577229,
+        2361183241434822606848
+      ]
+    ],
+    [
+      [
+        -58142050244178800013,
+        2361183241434822606848
+      ],
+      [
+        107150221389224537485,
+        2361183241434822606848
+      ]
+    ],
+    [
+      [
+        -47860332294891957645,
+        2361183241434822606848
+      ],
+      [
+        117431939338511379853,
+        2361183241434822606848
+      ]
+    ],
+    [
+      [
+        -111135907059447426445,
+        2361183241434822606848
+      ],
+      [
+        54156364573955911053,
+        2361183241434822606848
+      ]
+    ],
+    [
+      [
+        -102538535370797149581,
+        2361183241434822606848
+      ],
+      [
+        62753736262606187917,
+        2361183241434822606848
+      ]
+    ]
+  ]
+}
