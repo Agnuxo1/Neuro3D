@@ -15,3 +15,21 @@ SharedFIFO,900s,4,000MiB RAMpreflight/2,500MiB floor,2,000MiB ownedRSS,256MiB ev
 Profiled72b1d77/116pins and publication31591b9 were verified before sharedFIFO execution. Two1-input arms and the first150-input arm passed modal-field/power/decision gates; the fourth arm was interrupted when hostavailableRAM crossed the unchanged2500MiB floor. Preflight8257.35MiB; ownedBlender peak357.25MiB; wholeGPUmemory at most928MiB. Full supervision51.313518s, complete six-pair resultNULL. Partial timings are not a completed performance result, and no cause is assigned to a particular unrelated application without recorded evidence.
 
 Retain the exact profile, limits, allpartial outputs and resourcefailure. A repeat can use the same immutable profile after a separatelyrecorded reversible working-set reclamation; no threshold, method or testselection changes. [Original rawhashes and supervisor](validation/native-graphics-scaling-2026-10-09/attempt01/evidence_index.json).
+
+## Actual same-profile repeat: complete numerical comparison accepted
+
+The original RAM-floor failure remains unchanged/null. Publication72e367e/profiled72b1d77/116pins was reverified before a fresh shared-FIFO repeat of exactly the same method, limits and inputs. Oldapplication resident pages were reclaimed reversibly before the repeat; no windows/processes were terminated. Preflight10633.97MiB; no causal attribution of the earlier RAM fluctuation to an application or the success to reclamation is made. All six CPU/GPU pairs complete with all8 modalfields/powers and everyclassdecision equivalent. These are4247 deterministic repeatedinput positions per repeat, not8494 new independent examples.
+
+| Batch | CPU first / second (s) | GPU cold / warm (s) |
+|---|---|---|
+| 1 | 0.026787700 / 0.020903600 | 0.592881500 / 0.335261400 |
+| 150 | 0.020159900 / 0.031941500 | 4.027876400 / 3.458444000 |
+| 4096 | 0.024341800 / 0.026418100 | 98.006908500 / 97.720299400 |
+
+Maximum field difference7.50104996543e-14, power difference7.21644966006e-15. The actual current graphical implementation is slower in every measured pair; no speedup is established. ItsGPU timings include validzero-tangent/echo draws, hostpacking and CPUcoherentmerges. The CPU geometryDAG reuses eachgeometry-derived node phase within a batch; it receives no precomputedtransfermatrix. This compares actual equivalent-output implementations, not equallyoptimized hardware limits.
+
+Complete worker-launch-to-exit supervision239.213143s, nativeworker231.850553s, peak ownedRSS364.48MiB. Actualcapture1.742281s; freshGPUgraph11.196749s; independentexactgraphaudit9.346555s; CPUsetup0.099648s; GPUcompile0.455664s. FIFOwait/preflight/sourcecopy/publication are not part of timed inference arms.
+
+Native triangle surfacequeries399; opticalfragments includingechoes2259404; ownedGLstages81689, all pass. 189 actual wholeGPU utilization/memory/temperature/power samples are retained; display and otheractivity are included. They are not isolatedkernelenergy, photonicdevice efficiency or RTcounters.
+
+[All rawhashes and same-profile receipt](validation/native-graphics-scaling-2026-10-09/attempt02/evidence_index.json), [modaloutputs and costs](validation/native-graphics-scaling-2026-10-09/attempt02/worker/result.json), [actualGPU surface provenance](validation/native-graphics-scaling-2026-10-09/attempt02/worker/actual_surface_provenance.json), [wholeGPUtelemetry](validation/native-graphics-scaling-2026-10-09/attempt02/supervisor.json).

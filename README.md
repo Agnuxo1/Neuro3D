@@ -59,7 +59,17 @@ La fase relativa cambia la función de la red: sumar intensidades de fuentes ind
 
 La supervisión del aprendizaje gráfico completo cuesta **3066.60 s**, incluyendo capturas, prueba geométrica y referencia CPU; RSS propio máximo 499.45 MiB. Las fases del coste permanecen en el [resultado completo](Docs/validation/native-deferred-training-2026-10-09/attempt01/worker/result.json). Los ensayos anteriores cancelados y los resultados negativos están conservados.
 
-El [primer ensayo de escalado](Docs/NATIVE_GRAPHICS_SCALING_PROTOCOL_2026-10-09.md) quedó inconcluso al alcanzar el suelo de RAM del sistema; tres mediciones parciales pasaron los controles numéricos. Los datos y el resultado nulo se conservan. La repetición mantiene el protocolo y los límites originales.
+[Escalado nativo por lotes y datos completos](Docs/NATIVE_GRAPHICS_SCALING_PROTOCOL_2026-10-09.md): dos órdenes CPU/GPU alternados para cada tamaño, con campos, potencias y decisiones equivalentes. Las entradas repetidas miden coste; no son datos nuevos de generalización.
+
+| Entradas | CPU: primera / segunda (s) | GPU + fusión CPU: fría / caliente (s) |
+|---|---|---|
+| 1 | 0.0268 / 0.0209 | 0.5929 / 0.3353 |
+| 150 | 0.0202 / 0.0319 | 4.0279 / 3.4584 |
+| 4096 | 0.0243 / 0.0264 | 98.0069 / 97.7203 |
+
+![Coste real por lote y potencia muestreada](Docs/assets/native-graphics-batch-cost-2026-10-09.gif)
+
+[Hashes y procedencia del GIF](Docs/assets/verified-native-scaling-animation-manifest-2026-10-09.json). La potencia muestreada incluye toda la GPU y la pantalla; no mide aisladamente un kernel ni eficiencia fotónica.
 
 [Selección técnica y límites de hardware](Docs/ADVANCED_GRAPHICS_TECHNOLOGY_SELECTION_2026-10-09.md), [OptiX real](Docs/NATIVE_CYCLES_OPTIX_COMPONENT_V2_PROTOCOL_2026-10-09.md), [comparación directa/diferida](Docs/NATIVE_DEFERRED_GRAPHICS_STATE_PROTOCOL_2026-10-09.md). SER, Vulkan e HIP/AMD no se etiquetan como ejecutados por disponer de una API o documentación.
 

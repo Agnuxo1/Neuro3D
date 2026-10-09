@@ -165,3 +165,7 @@ independentfinalnativeGPUtrained150field/power/encoder intervalanalysis metric1,
 ## 2026-10-09T12:00:34.878721+00:00 — native batch scaling original RAM-floor null
 
 Published31591b9/d72b1d77/116pins. Threecompletedmodalfield/power/decisionarms passed; fourth stoppedHOST_RAM_FLOOR2500MiB. Preflight8257.35MiB/ownedRSS357.25/wholeGPUmax928MiB/full51.313518s. FullsixpairresultNULL/allSHApreserved. No cause assigned orspeedclaim. Reclaimoldappresidentpagesreversibly, noapplicationtermination; sameprofilefuturefreshattempt. CorefullGPU3066.60s/61captures60updates27of30 andindependentfinal150certificatePASSalreadymain. Goalactive13:55UTC.
+
+## 2026-10-09T12:42:59.210841+00:00 — actual native equal-output scaling complete
+
+exactsamefrozenprofile repeat full1/150/4096batchsixpairedCPU/GPUmodaloutputcomparisonsPASS, GPUallpairsSLOWERthanownCPUgeometryDAG, maxfield7.50105e-14/power7.21645e-15, full239.213s/RSS364.48MiB;189wholeGPU powersamples notisolatedenergy; originalRAMfloorNULLretained;116immutablepins reverified72e367e before repeat; rawSHAverified. Next publish all results, actualcostGIF, updatearticle/PDF/integrity thenremaining feasibleGPUengine optimization work. Physical/AMD/human/IPFS/exceptionalnovelty stillopen. Goalactive13:55UTC.

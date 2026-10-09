@@ -1,0 +1,23 @@
+{
+  "schema": "optic_neuro_blender.verified_native_scaling_animation.v1",
+  "sources": {
+    "Docs/validation/native-graphics-scaling-2026-10-09/attempt02/supervisor.json": "cdbe987afb4a31b811e7017f816c5d4b361233a731d245b8a22cd6c68e095fb2",
+    "Docs/validation/native-graphics-scaling-2026-10-09/attempt02/worker/result.json": "2556aeb79241cac7e1a867aae8180f4e474c5cf863d5e4e662700ee1ec4fdb18"
+  },
+  "outputs": {
+    "Docs/assets/native-graphics-batch-cost-2026-10-09.gif": {
+      "sha256": "15a68b28df7c6fb87a308b6e84898edc333b214e6d28396f68389f24e18b6e1c",
+      "bytes": 245746
+    },
+    "Docs/assets/native-graphics-batch-cost-preview-2026-10-09.png": {
+      "sha256": "2e93ea77ff597f9ed17235779f8019146f70acd74152af7a8302fab58160ded9",
+      "bytes": 140535
+    }
+  },
+  "frames": 6,
+  "size_px": [
+    1260,
+    630
+  ],
+  "scope": "Each frame adds one measured equal-output CPU/GPU pair. Actual native captured geometry andFP64shader; CPUmerge/zero-tangent echoes included. WholeGPU sample trace not isolated energy. Deterministic repeatedIris inputs, two orders per size, not blind generalization or statistically established performance advantage."
+}
