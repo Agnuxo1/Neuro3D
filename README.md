@@ -102,6 +102,14 @@ fidelidad física de la red completa sigue pendiente.
 
 ![Control ondulatorio y fallo de ventana conservado](Docs/assets/gaussian-wave-reference-2026-10-09.png)
 
+El [ensayo adaptativo de mayor ventana](Docs/GAUSSIAN_WAVE_REMEDIAL_PROTOCOL_2026-10-09.md),
+publicado antes de ejecutar y con las mismas tolerancias, satisface las puertas de sus nueve pares λ/z.
+La diferencia máxima de campo observada baja a 9,29×10⁻⁸ con ventana de 64 BU;
+coste completo 133,05 s y RSS máximo 1866,79 MiB. Se conserva el fallo anterior y el error de apertura de las mallas gruesas.
+Esto caracteriza una familia gaussiana escalar declarada; la fidelidad física de la red completa sigue pendiente.
+
+![Mayor ventana y referencia independiente](Docs/assets/gaussian-wave-remedial-2026-10-09.png)
+
 El [ejecutor y auditor del piloto](Docs/CAPTURED_PILOT_SUPERVISOR_2026-10-08.md)
 están preparados con fuentes/inputs fijados, límites de recursos y negativa por
 registro ausente. Pasan 66 controles conjuntos de software. El piloto se ejecutó

@@ -1,0 +1,77 @@
+{
+  "schema": "optic_neuro_blender.gaussian_wave_profile.v2",
+  "profile_id": "b4c698e7-5260-4e28-bc1a-d34d117fa38d",
+  "worker": "Tools/run_gaussian_wave_reference_v2.py",
+  "gaussian_waist_BU": 0.1,
+  "detector_radius_BU": 0.15,
+  "wavelengths_BU": [
+    0.1,
+    0.025,
+    0.00625
+  ],
+  "distances_BU": [
+    1,
+    2,
+    4
+  ],
+  "grids": [
+    [
+      1024,
+      32
+    ],
+    [
+      2048,
+      32
+    ],
+    [
+      4096,
+      32
+    ],
+    [
+      4096,
+      64
+    ]
+  ],
+  "disk_subpixels": 8,
+  "gates": {
+    "input_norm_relative": 5e-12,
+    "norm_roundoff": 1e-10,
+    "reference_refinement_absolute": 1e-09,
+    "finest_radial_field_absolute": 2e-06,
+    "finest_disk_fraction_absolute": 0.0005,
+    "expanded_radial_field_absolute": 2e-06,
+    "expanded_disk_fraction_absolute": 0.0022,
+    "disk_grid_refinement_absolute": 0.002,
+    "same_dx_window_field_absolute": 2e-06,
+    "same_dx_window_disk_fraction_absolute": 2e-06
+  },
+  "limits": {
+    "worker_seconds": 240,
+    "free_ram_before_mib": 6144,
+    "free_ram_floor_mib": 3500,
+    "owned_rss_mib": 3000,
+    "evidence_mib": 64,
+    "cpu_cores": 1,
+    "gpu": false
+  },
+  "representation": "Complex128 boundary field exp(-(x\u00b2+y\u00b2)/w0\u00b2). exp(-i\u03c9t),outgoing exp(+ikz) carrierremoved uniformly at each observationplane. Propagating exactscalarHelmholtzroot; evanescentsdecay, neverintensityonly substitution. UniformBU,n=1. No normalizationafterpropagation.",
+  "reference": "IndependentradialGaussianFourier-Besselintegral; GL512/128 versus1024/256; analyticalspectralabsoluteamplitudetail<=exp(-36); refinement differences are numericalestimates, notcertifiedquadraturebounds. AnalyticparaxialGaussian asdistinctapproximation, noforcedsmallerrorat\u03bb/w0=1.",
+  "readout": "Discreteintegralof|E|\u00b2 inradius.15BU dividedbyanalyticinitialtransversenorm\u03c0w0\u00b2/2; pixelconstantintensityand8x8circlecoverage; finite-window/gridconvergence. This is not fullvectorPoyntingflux oractualcapturednetworkmodalpower.",
+  "scope": "Declaredfree-spaceGaussianmodulevalidation and regimecharacterization, notcompleteBlendernetworkphysicalfidelity. Captured\u03bb.1BUdoesnotdefineGaussianwaist; do not applythisassumedwaist asanactualnetworkcorrectionfactor. No measuredhardware, allphysicalmodelerrorselsewhereUNKNOWN_NOT_ZERO.",
+  "prepared_utc": "2026-10-09T04:16:48.243810+00:00",
+  "pins": {
+    "Blender/blender_lab/__init__.py": "8c93d859b2364fdd697db5fc3234c0406e2a01cbcceb9c6b05a72b92996f372f",
+    "Blender/blender_lab/scene_capture_v1.py": "fe676b61a9e743277d69b54890688555a604f659c7f23ee223703b907ad8a2d0",
+    "Blender/blender_lab/wave_optics_v1.py": "c7aba16074a1e654a889f7dd27d61d14ea9a3b7a9405abe22c552cf142de2584",
+    "Tools/audit_captured_pilot_result_v1.py": "a3f683ab11aa07eb52aefb4046ba89516321bb175ef01697c39131234b3ac686",
+    "Tools/audit_coherent_state_graph_v1.py": "2bb9bb285ec93922fd96cc1eec98fa1fc2c73d20856140536ba5adfe50d4519d",
+    "Tools/bind_network_capture_v1.py": "af3bdbc41636214f01c2078ce26bd271794fa763ccefecd2a006f1014d2f117b",
+    "Tools/independent_gaussian_hankel_v1.py": "33ed5b3d77cda769b6f1aa6892b7e5af2a8c3f8108d8c5aa0f53df3ed15795b0",
+    "Tools/run_frozen_state_graph_profile_v1.py": "9f234e7214e7c740f18ae9e9cf880de98f28f6caf532938a4fbaf1dcd1470895",
+    "Tools/run_frozen_wave_reference_v2.py": "14dbabe95c2ffff9d7ea24e1ff30469c9ab57d8ce7cded89ca17544090a3469d",
+    "Tools/run_gaussian_wave_reference_v2.py": "38f9f962fb4ae39db5c1a357c335108c54550b8eea315b56ca58cfeffd10b6fa"
+  },
+  "negative_outcomes": "All finite numericalbudget failures retained with36rows andvalidmetric0; onlyinvalidinputs/nonfinite/environmentinterruptionsproduceinconclusive.",
+  "previous_valid_negative_profile_sha256": "6c138f2ab91c9ca01942d5113efcef4abdf38ef0ac75d8f09d56f1a27575ad6e",
+  "amendment": "Remedial adaptation after publishednegative30a835bb: doubledspatialwindows32/64 andgrids1024/2048/4096, samephysicalfamily/readout/allnumericalbudgets; independentwindowcomparisonatidenticaldx2048/32versus4096/64. Explicitlyincreasedmemoryguard6144prefree/3500floor/3000RSS,notoldprofilealteration. Validation ofknownfailure repair,notnewblindscientificdiscovery."
+}
