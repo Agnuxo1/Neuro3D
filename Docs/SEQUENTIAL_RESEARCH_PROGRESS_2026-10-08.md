@@ -185,3 +185,7 @@ Exact same originalfrozenpacketprofile accepted,5650packetsbyteidentical; CPUcan
 ## 2026-10-09T13:25:58.843037+00:00 — resident optical graph hypothesis prepared, NOT EXECUTED
 
 ActualGPU-derived localcoefficients (notglobalU) plus GPU133state fragmentpropagation/complexKahanmerges/all8modalreadbacks/exactfiveinputbit echoes. Freshgeometry/independentfullproof/fourcoherencecontrols/sixsameCPUoutputpairs required, fixedbudgets1e-11. 120pins/profiledc077d1be88d90f7916d7bcf278d37c8a8f83704f4b24148c4a74f3f5f7501ba. Existingvalidatedengines/installerunchanged. PublishverifybeforeFIFOadmission; no native shadercompilation/equivalence/speedclaim yet. Goalactive13:55UTC.
+
+## 2026-10-09T13:36:17.318480+00:00 — publication and scientific acceptance audit
+
+Requirement-by-requirement acceptance reviewed, stale historicalstatements replaced with currentcompleteGPUtraining/intervalcertificate/negativecost/0.1.3actualrecovery evidence; originalacceptancejson preserved. PublicHTTP7artifacts4051651bytes exactGitblobmatching. SpecialistreviewpacketpreparedNOTsent/reviewed. ResidentexperimentalGPUprofiledc077d1 published564dae9 and120pins verified13:27UTC; sharedFIFOrequestwaiting/max10min. Allremainingphysical/AMD/GPUUI/humanreview/IPFS/exceptionalnovelty explicit; fullprojectNOTcomplete. Goalactive13:55UTC.

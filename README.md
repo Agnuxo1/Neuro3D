@@ -4,7 +4,7 @@ Red óptica escalar entrenable que calcula desde la **geometría evaluada de Ble
 
 **El motor gráfico ya participa en el aprendizaje:** la RTX 3090 selecciona triángulos capturados y calcula distancia, fase y derivadas ópticas en shaders FP64. La topología exacta, las fusiones coherentes, la pérdida y Adam se calculan en CPU. Todos los resultados, protocolos, código y fallos se publican en `main`, conservando las versiones anteriores.
 
-[Instalar y usar](Docs/OPTIC_NEURO_BLENDER_USER_GUIDE_2026-10-09.md) · [Complemento 0.1.3](Blender/releases/optic-neuro-blender-0.1.3.zip) · [Artículo PDF](Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.pdf) · [Fuentes del artículo](Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.md) · [Estado de los diez objetivos](Docs/research/optic_neuro_blender_acceptance_v1.json)
+[Instalar y usar](Docs/OPTIC_NEURO_BLENDER_USER_GUIDE_2026-10-09.md) · [Complemento 0.1.3](Blender/releases/optic-neuro-blender-0.1.3.zip) · [Artículo PDF](Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.pdf) · [Fuentes del artículo](Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.md) · [Estado de los diez objetivos](Docs/SCIENTIFIC_ACCEPTANCE_REPORT_2026-10-09.md)
 
 ## Resultados comprobados
 
@@ -95,7 +95,7 @@ El Blender propietario se interrumpe en checkpoint12; un Blender nuevo reanuda c
 - Registro externo/IPFS: ruta conservada, **sin identificadores emitidos**. Los protocolos ejecutados usaron autorización GitHub publicada.
 - La novedad excepcional, importancia e impacto duradero requieren evidencia adicional. No están demostrados por estos ensayos.
 
-La fabricación es opcional para el simulador. El artículo es un borrador reproducible, sin envío a revista ni revisión especializada. Una cota numérica, un test de software y un acierto neuronal son evidencias diferentes.
+El [paquete de revisión externa](Docs/EXTERNAL_REVIEW_PACKET_2026-10-09.md) fija las comprobaciones y criterios de rechazo para futuros revisores; está preparado y no enviado. La fabricación es opcional para el simulador. El artículo es un borrador reproducible, sin envío a revista ni revisión especializada. Una cota numérica, un test de software y un acierto neuronal son evidencias diferentes.
 
 ## Evidencia, licencias e historia
 

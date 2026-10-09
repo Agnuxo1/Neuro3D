@@ -1,0 +1,79 @@
+{
+  "schema": "optic_neuro_blender.public_artifact_http_verification.v1",
+  "utc": "2026-10-09T13:29:02.192289+00:00",
+  "pinned_public_commit": "564dae98ae32f7c4f926b4344f92aee7504e2edc",
+  "artifacts": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/Agnuxo1/Neuro3D/564dae98ae32f7c4f926b4344f92aee7504e2edc/README.md",
+      "http_status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "expected_sha256": "de41fd960ef63dbac650725e805c32b574f2f2d887f500ae04df76156702dccc",
+      "retrieved_bytes": 10581,
+      "observed_sha256": "de41fd960ef63dbac650725e805c32b574f2f2d887f500ae04df76156702dccc",
+      "byte_identical": true
+    },
+    {
+      "path": "Docs/assets/captured-gpu-coherent-network-2026-10-09.gif",
+      "url": "https://raw.githubusercontent.com/Agnuxo1/Neuro3D/564dae98ae32f7c4f926b4344f92aee7504e2edc/Docs/assets/captured-gpu-coherent-network-2026-10-09.gif",
+      "http_status": 200,
+      "content_type": "image/gif",
+      "expected_sha256": "a86751d6be5a78f125e9b912ca4bc52ee7b2f81c4f931e6111eae757a1559e24",
+      "retrieved_bytes": 1189789,
+      "observed_sha256": "a86751d6be5a78f125e9b912ca4bc52ee7b2f81c4f931e6111eae757a1559e24",
+      "byte_identical": true
+    },
+    {
+      "path": "Docs/assets/native-gpu-geometry-learning-2026-10-09.gif",
+      "url": "https://raw.githubusercontent.com/Agnuxo1/Neuro3D/564dae98ae32f7c4f926b4344f92aee7504e2edc/Docs/assets/native-gpu-geometry-learning-2026-10-09.gif",
+      "http_status": 200,
+      "content_type": "image/gif",
+      "expected_sha256": "c2f62c3b1d2208db03c94ff736c12aa38a618fb3bfd852afbdd4d6fe767b8606",
+      "retrieved_bytes": 807029,
+      "observed_sha256": "c2f62c3b1d2208db03c94ff736c12aa38a618fb3bfd852afbdd4d6fe767b8606",
+      "byte_identical": true
+    },
+    {
+      "path": "Docs/assets/installed-blender-exact-resume-2026-10-09.gif",
+      "url": "https://raw.githubusercontent.com/Agnuxo1/Neuro3D/564dae98ae32f7c4f926b4344f92aee7504e2edc/Docs/assets/installed-blender-exact-resume-2026-10-09.gif",
+      "http_status": 200,
+      "content_type": "image/gif",
+      "expected_sha256": "ba4c045b60e8142d89b69daa1a21b0a4294142883da29080942dd2dc0621d468",
+      "retrieved_bytes": 790812,
+      "observed_sha256": "ba4c045b60e8142d89b69daa1a21b0a4294142883da29080942dd2dc0621d468",
+      "byte_identical": true
+    },
+    {
+      "path": "Docs/assets/native-graphics-batch-cost-2026-10-09.gif",
+      "url": "https://raw.githubusercontent.com/Agnuxo1/Neuro3D/564dae98ae32f7c4f926b4344f92aee7504e2edc/Docs/assets/native-graphics-batch-cost-2026-10-09.gif",
+      "http_status": 200,
+      "content_type": "image/gif",
+      "expected_sha256": "15a68b28df7c6fb87a308b6e84898edc333b214e6d28396f68389f24e18b6e1c",
+      "retrieved_bytes": 245746,
+      "observed_sha256": "15a68b28df7c6fb87a308b6e84898edc333b214e6d28396f68389f24e18b6e1c",
+      "byte_identical": true
+    },
+    {
+      "path": "Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.pdf",
+      "url": "https://raw.githubusercontent.com/Agnuxo1/Neuro3D/564dae98ae32f7c4f926b4344f92aee7504e2edc/Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.pdf",
+      "http_status": 200,
+      "content_type": "application/octet-stream",
+      "expected_sha256": "c0e879bb91746af839a4f645583ce8c43e0318ca265db7b3a03dd99b329224d1",
+      "retrieved_bytes": 368032,
+      "observed_sha256": "c0e879bb91746af839a4f645583ce8c43e0318ca265db7b3a03dd99b329224d1",
+      "byte_identical": true
+    },
+    {
+      "path": "Blender/releases/optic-neuro-blender-0.1.3.zip",
+      "url": "https://raw.githubusercontent.com/Agnuxo1/Neuro3D/564dae98ae32f7c4f926b4344f92aee7504e2edc/Blender/releases/optic-neuro-blender-0.1.3.zip",
+      "http_status": 200,
+      "content_type": "application/zip",
+      "expected_sha256": "46f16976f9401d8ff226b8136ccb08dc348967dece726fb3e2c9424238851341",
+      "retrieved_bytes": 639662,
+      "observed_sha256": "46f16976f9401d8ff226b8136ccb08dc348967dece726fb3e2c9424238851341",
+      "byte_identical": true
+    }
+  ],
+  "all_byte_identical": true,
+  "scope": "Actual public HTTP byte retrieval of README/fourGIF/PDF/installer at commit published in main. Does not verify scientific claims, browser animation rendering, independent research reproduction, or peer review."
+}
