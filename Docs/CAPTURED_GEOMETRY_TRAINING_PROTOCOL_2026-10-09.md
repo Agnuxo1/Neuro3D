@@ -53,3 +53,35 @@ conservó. Pasan los cinco controles y dos de protocolo/registro.
 [Perfil y valores exactos fijados](research/captured_geometry_training_profile_2026-10-09.json),
 [recibo de autorización](research/captured_geometry_training_registration_2026-10-09.json),
 [motor y gradientes propios](../Blender/blender_lab/affine_geometry_network_v1.py).
+
+## Resultado del ensayo fijado
+
+El perfil se publicó en `7d09d009a1f2bf72e0d57afb8bcaded6115f7854` antes
+de ejecutarse. Los 18 archivos fijados coincidían con los bytes publicados.
+El [recibo y las preimágenes](validation/captured-geometry-training-2026-10-09/attempt01/evidence_index.json)
+conservan `VALID_FROZEN_TRAINING_PROFILE_RESULT`, métrica 1, sin interrupción.
+
+| Criterio o resultado | Valor observado |
+|---|---:|
+| Pérdida inicial → final | 6,25544 → 0,309707 |
+| Diferencia máxima de los 16 gradientes | 1,475×10⁻⁶, límite 10⁻⁴ |
+| Campo frente a reconstrucción geométrica final | 4,620×10⁻¹⁶, límite 10⁻¹¹ |
+| Estados geométricos auditados | 61/61 |
+| Acierto de entrenamiento | 110/120, 91,67 % |
+| Acierto en filas reservadas | 27/30, 90 % |
+| Tiempo supervisado del worker | 369,43 s |
+| RSS propia máxima observada | 59,32 MiB |
+
+Los 369,43 s incluyen preparación, diferencias centrales, entrenamiento,
+auditorías y reconstrucción final. La pérdida/gradientes de las 61 evaluaciones
+consumieron 1,17 s; las auditorías geométricas, 349,67 s; la reconstrucción
+final, 17,33 s; y el compilador afín, 0,063 s. No debe compararse sólo el tiempo
+de gradientes con el coste completo de otra solución.
+
+![Pérdida propia y errores en las filas reservadas](assets/captured-own-geometry-training-2026-10-09.png)
+
+Esto demuestra entrenamiento propio de las coordenadas de la geometría
+representada, con gradientes útiles y readout fijo. El tamaño reservado es
+pequeño y el proyecto ya había examinado Iris. Las comparaciones equivalentes,
+otros conjuntos, estabilidad, cotas de las nuevas salidas y reproducción
+externa siguen abiertas. Guardar/reabrir la escena nativa se comprueba aparte.
