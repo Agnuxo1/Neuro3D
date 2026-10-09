@@ -43,3 +43,12 @@ Solver 2D escalar; espejos PEC; película dieléctrica sin pérdidas; el modelo 
 
 ## Integridad
 Hashes SHA-256 de código, calibraciones y resultados en `resultados/SHA256SUMS.txt` (saltos LF).
+
+## Estado de la entrega (respuesta a la petición de coordinación del 2026-10-09)
+
+- **Entregado:** decisión H0 refutada para w = 8λ con las pruebas previas (dominio vacío: reflexión 3,3e-10 con λ/16 y 3,8e-10 con λ/24) y la diferencia entre mallas (0,0006 < 0,005). Historia completa en las secciones 1 a 5.
+- **Cobertura del barrido:** 12 de 21 fases en λ/16 y 18 de 21 en λ/24. Las 21 fases preregistradas no se alcanzaron porque el espejo solo ocupa posiciones de malla. Los ΔL efectivos se registran en `resultados/RESULTADOS_VALIDACION.json`. Desviación declarada.
+- **Procesos:** no queda ningún proceso de simulación en marcha al cierre de esta entrega.
+- **Calibración por malla:** la película no tiene el mismo índice en las dos mallas. λ/16 usa n = 2,426975 (ajustado en tres pasos desde 2,422043; diferencias de |r|² y |t|² de −0,000249 y 0,000302). λ/24 usa n = 2,484992 sin ajuste (diferencias de −0,002977 y 0,003029). Así, la comparación de convergencia enfrenta dos dispositivos discretos recalibrados, no un único dispositivo. Esa prueba de convergencia es débil y queda declarada como limitación. Un control con dispositivo fijo sigue pendiente.
+- **Métrica primaria:** E_max sobre el barrido, según la sección 6 del preregistro. El valor 0,026926 corresponde al punto ΔL = 0 con λ/16. Las lecturas de campo del modelo con difracción son un diagnóstico exploratorio, no preregistrado, y no entran en la decisión.
+- **Límites:** 2D escalar TM; sin polarización, sin 3D y sin pérdidas de fabricación; solo w = 8λ. La contrastación de la red completa queda pendiente.
