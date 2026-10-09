@@ -9,3 +9,9 @@ For each size: actual geometrycache reset, then fixed CPU→GPU pair followed by
 SharedFIFO,900s,4,000MiB RAMpreflight/2,500MiB floor,2,000MiB ownedRSS,256MiB evidence,8,192MiB wholeGPUmemory/80°C/oneCPUcore. Record whole physicalGPU utilization/memory/temperature/powerdraw at approximately1Hz. These samples include display/otheractivity, cannot isolate opticalkernelenergy, and must not be equated with photonic-device efficiency. Two pairs are descriptive observations, not broad statistical speed evidence. No threshold relaxation; failure/null retained. Publish/verify main+scientificbranch before trial under continuingGitHubauthorization; external/IPFS remains pending.
 
 [Profile](research/native_graphics_scaling_profile_2026-10-09.json), [receipt](research/native_graphics_scaling_registration_2026-10-09.json), [complete trained native model](NATIVE_DEFERRED_GRAPHICS_TRAINING_PROTOCOL_2026-10-09.md), [previous equal state forward/deferred negative result](NATIVE_DEFERRED_GRAPHICS_STATE_PROTOCOL_2026-10-09.md).
+
+## Original first scaling attempt retained: RAM-floor null
+
+Profiled72b1d77/116pins and publication31591b9 were verified before sharedFIFO execution. Two1-input arms and the first150-input arm passed modal-field/power/decision gates; the fourth arm was interrupted when hostavailableRAM crossed the unchanged2500MiB floor. Preflight8257.35MiB; ownedBlender peak357.25MiB; wholeGPUmemory at most928MiB. Full supervision51.313518s, complete six-pair resultNULL. Partial timings are not a completed performance result, and no cause is assigned to a particular unrelated application without recorded evidence.
+
+Retain the exact profile, limits, allpartial outputs and resourcefailure. A repeat can use the same immutable profile after a separatelyrecorded reversible working-set reclamation; no threshold, method or testselection changes. [Original rawhashes and supervisor](validation/native-graphics-scaling-2026-10-09/attempt01/evidence_index.json).

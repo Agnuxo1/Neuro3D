@@ -59,7 +59,7 @@ La fase relativa cambia la función de la red: sumar intensidades de fuentes ind
 
 La supervisión del aprendizaje gráfico completo cuesta **3066.60 s**, incluyendo capturas, prueba geométrica y referencia CPU; RSS propio máximo 499.45 MiB. Las fases del coste permanecen en el [resultado completo](Docs/validation/native-deferred-training-2026-10-09/attempt01/worker/result.json). Los ensayos anteriores cancelados y los resultados negativos están conservados.
 
-El escalado por lotes de 1, 150 y 4.096 entradas tiene un protocolo separado; sus resultados se publicarán cuando se ejecute.
+El [primer ensayo de escalado](Docs/NATIVE_GRAPHICS_SCALING_PROTOCOL_2026-10-09.md) quedó inconcluso al alcanzar el suelo de RAM del sistema; tres mediciones parciales pasaron los controles numéricos. Los datos y el resultado nulo se conservan. La repetición mantiene el protocolo y los límites originales.
 
 [Selección técnica y límites de hardware](Docs/ADVANCED_GRAPHICS_TECHNOLOGY_SELECTION_2026-10-09.md), [OptiX real](Docs/NATIVE_CYCLES_OPTIX_COMPONENT_V2_PROTOCOL_2026-10-09.md), [comparación directa/diferida](Docs/NATIVE_DEFERRED_GRAPHICS_STATE_PROTOCOL_2026-10-09.md). SER, Vulkan e HIP/AMD no se etiquetan como ejecutados por disponer de una API o documentación.
 

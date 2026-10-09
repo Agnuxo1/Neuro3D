@@ -172,3 +172,8 @@ Docs/validation/native-deferred-training-2026-10-09/**/*.stdout -text !eol -whit
 Docs/validation/native-deferred-training-certificate-2026-10-09/** -text !eol whitespace=cr-at-eol
 Docs/validation/native-graphics-scaling-2026-10-09/** -text !eol whitespace=cr-at-eol
 Docs/validation/native-graphics-scaling-2026-10-09/**/*.stdout -text !eol -whitespace
+
+# Preserve all raw bytes and hashes while keeping millions of array rows out of
+# automatic diff previews. Canonical source code and protocols remain diffable.
+Docs/validation/** -diff
+Docs/validation/**/evidence_index.json diff
