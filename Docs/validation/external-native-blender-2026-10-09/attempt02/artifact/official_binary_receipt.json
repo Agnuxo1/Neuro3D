@@ -1,0 +1,22 @@
+{
+  "archive_url": "https://download.blender.org/release/Blender4.5/blender-4.5.14-linux-x64.tar.xz",
+  "actual_transport_url": "https://download.blender.org/release/Blender4.5/blender-4.5.14-linux-x64.tar.xz",
+  "download_attempts": [
+    {
+      "url": "https://download.blender.org/release/Blender4.5/blender-4.5.14-linux-x64.tar.xz",
+      "received_bytes": 378045212,
+      "seconds": 1.742537851999998,
+      "download_completed": true
+    }
+  ],
+  "archive_sha256": "9ba871ff2ecd36526b77432745980b7e6664ecd0c7ca11c48849073dcfe06da3",
+  "archive_bytes": 378045212,
+  "binary_sha256": "050c02562f81fe80ba616a80198fa02d381e60f8b61b8d39add881f4bca0d7d8",
+  "executable": "/tmp/optic-neuro-native-0ibhk5n6/official/blender-4.5.14-linux-x64/blender",
+  "version_exit_code": 0,
+  "version_stdout": "Blender 4.5.14 LTS\n\tbuild date: 2026-09-15\n\tbuild time: 01:31:19\n\tbuild commit date: 2026-09-14\n\tbuild commit time: 14:54\n\tbuild hash: 62c1db4208e8\n\tbuild branch: blender-v4.5-release\n\tbuild platform: Linux\n\tbuild type: Release\n\tbuild c flags:  -Wall -Werror=implicit-function-declaration -Wstrict-prototypes -Werror=return-type -Werror=vla -Wmissing-prototypes -Wno-char-subscripts -Wno-unknown-pragmas -Wpointer-arith -Wunused-parameter -Wwrite-strings -Wlogical-op -Wundef -Winit-self -Wmissing-include-dirs -Wno-div-by-zero -Wtype-limits -Wformat-signedness -Wrestrict -Wno-stringop-overread -Wno-stringop-overflow -Wnonnull -Wabsolute-value -Wuninitialized -Wredundant-decls -Wshadow -Wimplicit-fallthrough=5 -Wno-error=unused-but-set-variable  -march=x86-64-v2 -std=gnu11 -pipe -fPIC -funsigned-char -fno-strict-aliasing -ffp-contract=off  \n\tbuild c++ flags:  -Wuninitialized -Wredundant-decls -Wall -Wno-invalid-offsetof -Wno-sign-compare -Wlogical-op -Winit-self -Wmissing-include-dirs -Wno-div-by-zero -Wtype-limits -Werror=return-type -Wno-char-subscripts -Wno-unknown-pragmas -Wpointer-arith -Wunused-parameter -Wwrite-strings -Wundef -Wcomma-subscript -Wformat-signedness -Wrestrict -Wno-suggest-override -Wuninitialized -Wno-stringop-overread -Wno-stringop-overflow -Wimplicit-fallthrough=5 -Wundef -Wmissing-declarations  -march=x86-64-v2 -pipe -fPIC -funsigned-char -fno-strict-aliasing -ffp-contract=off  \n\tbuild link flags:  -Wl,--version-script='/home/blender/git/blender-v450/blender.git/source/creator/symbols_unix.map'\n\tbuild system: CMake\n",
+  "version_stderr": "",
+  "seconds": 20.967896350000046,
+  "tls_verified": true,
+  "scientific_worker_executed": false
+}

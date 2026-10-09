@@ -1,0 +1,13 @@
+addon_utils.disable: optic_neuro_blender not loaded
+Modules Installed (optic_neuro_blender) from '/home/runner/work/Neuro3D/Neuro3D/Blender/releases/optic-neuro-blender-0.1.2.zip' into '/home/runner/work/Neuro3D/Neuro3D/native-reproduction-evidence/isolated/scripts/addons'
+Info: Modules Installed (optic_neuro_blender) from '/home/runner/work/Neuro3D/Neuro3D/Blender/releases/optic-neuro-blender-0.1.2.zip' into '/home/runner/work/Neuro3D/Neuro3D/native-reproduction-evidence/isolated/scripts/addons'
+Info: Saved copy as "snapshot.blend"
+Info: Saved copy as "snapshot.blend"
+Info: Saved copy as "snapshot.blend"
+Info: Saved copy as "recovered_geometry.blend"
+{"status": "PASS", "checks": 9, "seconds": 663.0802559029999}
+Blender 4.5.14 LTS (hash 62c1db4208e8 built 2026-09-15 01:31:19)
+Read blend: "/home/runner/work/Neuro3D/Neuro3D/native-reproduction-evidence/isolated/scripts/addons/optic_neuro_blender/data/trained_geometry.blend"
+Read blend: "/home/runner/work/Neuro3D/Neuro3D/native-reproduction-evidence/worker/recovered_geometry.blend"
+
+Blender quit
