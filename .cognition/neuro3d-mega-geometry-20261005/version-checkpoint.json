@@ -1,0 +1,29 @@
+{
+  "id": "MEGA-GEOMETRY-EXACT-WORK-PREP-001-LOCAL-VERSION",
+  "date": "2026-10-05",
+  "scope": "Documentary preparation review and local version only",
+  "status": "POST_VERSION_VERIFIED_DOCUMENTS_ONLY",
+  "commit": "1c41f4f9bc1b2c6e6937911f7186bd92f5bb0dee",
+  "parent": "7535f84151799b06e9d9cddbe3c1f1f3de7bde57",
+  "committed_paths": [
+    "Docs/EXP-005-MEGA-GEOMETRY-RESEARCH-2026-10-05.md",
+    "coordinacion/experimentos/EXP-005-MEGA-GEOMETRY-EXACT-WORK-PREPARACION.md",
+    "coordinacion/respuestas/MEGA-GEOMETRY-EXACT-WORK-PREP-001-CODEX.json"
+  ],
+  "own_raw_commit_equal_disk": true,
+  "own_sha256": {
+    "Docs/EXP-005-MEGA-GEOMETRY-RESEARCH-2026-10-05.md": "e486b0599faedabe776c3112a53a0f494008eefce880b5520ca8d0f92451f819",
+    "coordinacion/experimentos/EXP-005-MEGA-GEOMETRY-EXACT-WORK-PREPARACION.md": "e1f2ed9c0f7afcd90868113fbde47ce23d235ff47a9102fdd98ccbfda1d9d3ba",
+    "coordinacion/respuestas/MEGA-GEOMETRY-EXACT-WORK-PREP-001-CODEX.json": "1bd36d77350b9192e49f35a7bd5f4827cf062ecf9018c7c8f34725f925c4b605"
+  },
+  "pins_checked": 461,
+  "old_pins_unchanged": true,
+  "shared_boards_excluded_from_commit": true,
+  "index_empty": true,
+  "GPU_launch_allowed": false,
+  "push_performed": false,
+  "committed_receipt_commit_null_is_preversion_snapshot": true,
+  "full_costs": "UNKNOWN_NOT_ZERO",
+  "JEV": "SECURITY_BLOCKED_LOCAL_NO_REMOTE_ENDORSEMENT_NO_RETRY",
+  "next": "Existing native artifacts M01..M14 or precise gaps; no repeated sweeps or invented ACK"
+}

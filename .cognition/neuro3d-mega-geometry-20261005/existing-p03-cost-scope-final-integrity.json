@@ -1,0 +1,48 @@
+{
+  "rc": 0,
+  "timed_out": false,
+  "before_deadline": true,
+  "started_utc": "2026-10-07T10:48:43.369178+00:00",
+  "ended_utc": "2026-10-07T10:48:43.936624+00:00",
+  "deadline_utc": "2026-10-07T10:49:18.369178+00:00",
+  "elapsed_QA_seconds": 0.567446,
+  "timeout_seconds": 30,
+  "affinity_mask": 1,
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "RAM_available_before_bytes": 9033687040,
+  "RAM_budget_bytes": 134217728,
+  "RAM_reserve_after_budget_bytes": 8899469312,
+  "command": [
+    "C:/Python313/python.exe",
+    "-B",
+    ".cognition/neuro3d-mega-geometry-20261005/existing_p03_cost_scope_final_integrity.py"
+  ],
+  "stdout_bytes": 678,
+  "stdout_sha256": "34cef6c644d7523089d89ca4ab2f3ef722ba94cbcac07b47713366d6c75fb353",
+  "stdout_zlib_base64": "eNplUstuE0EQvCPxD9GeCcz7wW2TWDg4si1izquZnm4Y4eya9ToORPn3zCCLgHIZaaq6u/pRj81+CtNh33w8a9bt7W3z7qwZw7Gbz9qrDn8ewnbfpbz/UfhpPGBhh2PfwRZD/wLlPuFDh3e76dcLGEb4nu+xC33qas4u91VFsMLROPzGv5AyvGC7YT91I95nPHa14A7L01cIhh7yNocpD3/idYmOQxhT/Tw2MAxjyn2AQn+4nM8uF+vV9XLz/i7VoZzQlDgQUhDB2RhJonCoQXtpMQEk1FxbqVIwjDnQFI0VyTlmldGB6kL+V1jdtOdXs/PNl/ai/bw6yZiUotNG8eg5UpnIKhkFOAChMAJx7jEp4TVn0hNaFnwMRRolRasBXsls5tfLxaZdLk4CMgRhvCYVmSVrvNLgVTRAWgpmnYygEIJUPiI3gCE5BOaQuyCDTsBfC7QXN6vlqTp6I7VVoAWrawLm0UpnwGI0gsgykqAKZqOySLGMQBGcQxEjMhd081SvOoyYvxV3DAk7fEA4TFirUzFRdURfLvtp/fVElR7+4eiw3ZbEYgHAccqUXzKf3r55Bk+l1LU=",
+  "stderr_utf8": "",
+  "GPU_used": false,
+  "summary": {
+    "status": "PASS",
+    "raw_HEAD_equals_disk": true,
+    "own_clean": true,
+    "index_empty": true,
+    "archive_and_own_pins": 20,
+    "frozen_pins": 461,
+    "post_review_independent_reconciliations": 5,
+    "boards": {
+      "coordinacion/CHECKPOINT.md": "825fd1cfefa2a87bbf3e28e5c5937edccde515734da6008c5fb672d8807465af",
+      "coordinacion/COLA-DE-TRABAJO.md": "6ddb85641b91ef461743b2c8cc24ebcf119ed42951039fe70a9bade5e3fb75cc",
+      "coordinacion/THINKTANK.md": "3aa2695f4b07f76945c94b6cf5320783bc4eca349be16cead8ec08e18a3a5dc1",
+      "coordinacion/TABLON.md": "e963574c520a2a8c09e7386c7eb62ff70f3c49e77b47efb39ffbc88e2bbe08a5"
+    },
+    "foreign_code_executed": false,
+    "new_GPU_execution": false,
+    "full_cost_certified": false
+  }
+}

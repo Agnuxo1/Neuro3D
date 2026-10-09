@@ -1,0 +1,103 @@
+{
+  "id": "PRECISION-ORIGINAL-SOURCE-DETECTOR-CONNECTION-RESIDUAL-HOST-001",
+  "UTC": "2026-10-07T09:10:17Z",
+  "HEAD": "2f54b21433e9d7a3d1268b86d37ce60670066417",
+  "parent": "15b266eb20f982095e38b00386c5d210da0fdbe8",
+  "own_files": {
+    "Blender/benchmarks/capacity_audit/original_SOURCE_detector_connection_residual_HOST_v1.py": {
+      "sha256": "478e81069c41dbe3b817e7bc010864a6f9af5b03a346e510de062ab9e074480e",
+      "bytes": 11065
+    },
+    "Blender/tests/test_original_SOURCE_detector_connection_residual_HOST_v1.py": {
+      "sha256": "3662de82d17c116cd579ae3b5afb29683fd65509d47f839818a415059ad4a637",
+      "bytes": 11242
+    },
+    "Docs/EXP-005-ORIGINAL-SOURCE-DETECTOR-CONNECTION-RESIDUAL-HOST-001.md": {
+      "sha256": "5eb62ae7846bdbb566f4b4c8e9823f81c3a85a44962a6acf38d163b54a997ade",
+      "bytes": 4760
+    },
+    "coordinacion/respuestas/PRECISION-ORIGINAL-SOURCE-DETECTOR-CONNECTION-RESIDUAL-HOST-001-CODEX.json": {
+      "sha256": "3fbea434bb4c877787db3f9dc99632c05b119da09ddcacf626963d2361673920",
+      "bytes": 40282
+    }
+  },
+  "QA": {
+    "tests": 5,
+    "records": 84,
+    "new_norms_including_copy20": 20,
+    "new_root_certificates_including_copy": 40,
+    "stdout_sha256": "a875e4b0a40b20ee9584bea7a365d6dc7f87c675725eed433b9d40e7bd609e15",
+    "before_deadline": true
+  },
+  "oracle": {
+    "GPU_used": false,
+    "additional_copy_control_norm_not_in_captured_results": 1,
+    "captured_new_norms_verified": 19,
+    "captured_new_root_certificates_verified": 38,
+    "fixed_conditional_allowances_rad_decimal_integer_strings": {
+      "direction_scaled/S0": [
+        "102579190550159",
+        "1237940039285380274899124224"
+      ],
+      "direction_scaled/S1": [
+        "102579190550159",
+        "1237940039285380274899124224"
+      ],
+      "oblique/S0": [
+        "102579190550159",
+        "1237940039285380274899124224"
+      ],
+      "oblique/S1": [
+        "102579190550159",
+        "1237940039285380274899124224"
+      ],
+      "shared_ref1000/S0": [
+        "102579190550159",
+        "1237940039285380274899124224"
+      ],
+      "shared_ref1000/S1": [
+        "102579190550159",
+        "1237940039285380274899124224"
+      ],
+      "tiny_gap_2m60/S0": [
+        "1",
+        "1237940039285380274899124224"
+      ],
+      "tiny_gap_2m60/S1": [
+        "1",
+        "1237940039285380274899124224"
+      ]
+    },
+    "fixed_new_norms": 8,
+    "fixed_new_root_certificates": 16,
+    "frozen_producer_replays": 0,
+    "groups": {
+      "BINDING_NEG": 23,
+      "CAPTURE_NEG": 5,
+      "COPY_CONTROL": 1,
+      "FIXED_RESIDUAL_OR_STOP": 28,
+      "INPUT_NEG": 16,
+      "RESIDUAL_CONTROL": 7,
+      "REVERSE_TRIANGLE_CONTROL": 4
+    },
+    "id": "PRECISION-ORIGINAL-SOURCE-DETECTOR-CONNECTION-RESIDUAL-HOST-001",
+    "native_detector_connection_certified": false,
+    "new_corner_combinations_verified": 152,
+    "old_root_replays": 0,
+    "pinned_files_intact": 461,
+    "records": 84,
+    "status": "PASS",
+    "tests": 5,
+    "upstream_STOP_preserved": 20
+  },
+  "oracle_stdout_sha256": "38cc3c8c8af7f84a0833484752813a49700b45353dd524b7e81e8e67cfb219e9",
+  "GPU_used": false,
+  "native_detector_connection_certified": false,
+  "native_phase_error_bound": null,
+  "detector_connection_budget": null,
+  "actual_Q_replaced": false,
+  "cap_budget_admitted": false,
+  "JEV": "LOCAL_SECURITY_BLOCKED_NO_RETRY",
+  "sharedboards_staged": false,
+  "next": "Scene/backend SOURCE ingress + first-leg ALU and detector connection with explicit reference-lambda-phase budget; existing Claude artifacts or absent M03/M04/M05/M08/M13."
+}

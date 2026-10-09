@@ -1,0 +1,26 @@
+{
+  "id": "GPU-POLICY-HOST-INVENTORY-NEG-CPU-001",
+  "head": "ba87272570be38188cb0bee7ae8bbc7fcd08a3f6",
+  "parent": "51cb54b3187caf56e61e350cfbd89d0df10dffe5",
+  "owned_files": {
+    "Blender/tests/test_gpu_policy_host_inventory_NEG_CPU_v1.py": "626a5046f1672d4ad849172a71ab53cb2ddcc6be88ec3f584140367cbe6e8b7a",
+    "Docs/EXP-005-GPU-POLICY-HOST-INVENTORY-NEG-CPU-001.md": "e2dabe75f61fa7f46052ff375ab7393b080141c4645224e36dfa1ed68054ea22",
+    "coordinacion/respuestas/GPU-POLICY-HOST-INVENTORY-NEG-CPU-001-CODEX.json": "6c772d0b46afd843ef6f44f0f0cc2b0177c2f8eac1c975d1699df92602c23cb5"
+  },
+  "raw_HEAD_equals_disk": true,
+  "own_clean": true,
+  "index_empty": true,
+  "frozen_pins": 461,
+  "boards_sha256": {
+    "CHECKPOINT.md": "78e2bf9f6b9727bda6cebd3505f403df35dca246947f345ccaed3cf735f88c32",
+    "COLA-DE-TRABAJO.md": "d08c588d888f8b4acb402d61b1934cd72b9188569d9e19e65495b9547290087f",
+    "THINKTANK.md": "5fdc0f3ca614c4cbae29e12e2c66dea11944bdebdeb790ad87f68b25c0aeadaf",
+    "TABLON.md": "bbef0b775185c922b3cc6e537e5b11cf31e92e93a8a88c674e44501503097447"
+  },
+  "suite_replayed_this_turn": false,
+  "GPU_launched": false,
+  "SDK_installation": false,
+  "push_merge": false,
+  "JEV": "LOCAL_SECURITY_BLOCKED_NO_RETRY",
+  "next": "Precision SOURCE / join existing native artifacts; no repeated coercion sweeps without changes"
+}

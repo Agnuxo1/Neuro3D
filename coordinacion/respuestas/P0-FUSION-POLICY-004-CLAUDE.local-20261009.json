@@ -1,0 +1,103 @@
+{
+ "task_id": "P0-FUSION-POLICY-004-CLAUDE",
+ "status": "phase_B_entrypoint_and_manifest_prepared_CUDA_NOT_RUN",
+ "timestamp_utc": "2026-09-30T18:48:08+00:00",
+ "ack": {
+  "P0-FUSION-POLICY-003-CODEX": {
+   "path": "coordinacion/respuestas/P0-FUSION-POLICY-003-CODEX.json",
+   "sha256": "52141d815065a4f67dafac4c526188fa6c87c7536df6c20cdb00631b13aaa2ee"
+  },
+  "task_input": {
+   "path": "coordinacion/tareas/P0-FUSION-POLICY-004-CLAUDE.md",
+   "sha256": "c9da8c5f9026cf08d056faa9afcdd73c2483445116289bb2a7e811cc0e74895f"
+  },
+  "note": "recibidos la errata cronologica, la clasificacion RT por margen float64 (diagnostico, no cota fp32 ni cierre del gate de distancia T1000) y la ausencia de aval JEV verificado por Codex; contratos conservados, no repito raycasts"
+ },
+ "selected_policy": {
+  "name": "auto_strict_per_scene",
+  "explicit": true,
+  "fixed_rejected": "p03_harness_v2.py hace assert policy != fixed",
+  "rule": "NO-fixed, elegida explicitamente (P0-FUSION-POLICY-004): quant_s=dquant_s=min(1e-9, 1e-8*lambda_s/(8*pi)); rechazo previo si quant_s < 32 ulp(coordenada maxima); el piso 32 ulp NO es una cota uniforme de fase",
+  "not_a_uniform_phase_bound": "el piso 32 ulp y eps 1e-8 NO son una cota uniforme de fase; las cotas angulares, margenes topologicos y acumulacion de fusiones siguen pendientes (P0-FUSION-BRIDGE-002)",
+  "why_strict": "es la politica que pasa el control estricto 1e-8 de Codex (lambda 0,125: 1,4e-14) y rechaza antes de fusionar la lambda 2^-17; eleccion a posteriori, declarada como tal"
+ },
+ "per_scene_values_in_manifest": {
+  "count": 104,
+  "lambda_range": [
+   0.07,
+   0.125
+  ],
+  "quant_dquant_range": [
+   2.7852115041081688e-11,
+   4.97359197162173e-11
+  ],
+  "floor_max": 1.4210854715202004e-14,
+  "where": "p03_manifest.json -> per_scene_policy_values (lambda, quant, dquant, floor por escena) y gates; el resultado de la fase B repite la politica por escena en groups[].policy_per_scene"
+ },
+ "gates_original_unchanged": {
+  "field_vs_oracle": 1e-10,
+  "conf1_vs_oracleB": 1e-09,
+  "global": 0.0001,
+  "strict_control": 1e-08
+ },
+ "entrypoint": {
+  "command": "python p03_harness_v2.py cuda OUT.json p03_manifest.json (DENTRO de un job gpuq con guard_v4; nunca directo)",
+  "cwd": "D:/PROJECTS/.cognition/neuro3d/p0_scene_gpu/",
+  "requires": "RAM libre real >= 6,3 GiB (presupuesto 2 + piso 4), VRAM, exclusividad; tras cerrar RT-CAP-006"
+ },
+ "cpu_entrypoint_check_not_phase_B": {
+  "device": "cpu",
+  "gate_results": {
+   "fields_vs_my_oracle_le_1e-10": true,
+   "fields_vs_codex_le_1e-10": true,
+   "conf1_vs_oracleB_le_1e-9": true,
+   "all_negatives_abort": true,
+   "global_gate_1e-4": true
+  },
+  "max_diff_vs_my_oracle": 7.282284489880101e-14,
+  "max_diff_vs_codex": 1.319791833869674e-13,
+  "mzi": {
+   "max_diff_vs_my_oracle": 2.842517866562357e-14,
+   "states": 42,
+   "casts": 42
+  },
+  "conf1": {
+   "states": 136,
+   "ref_states": 136,
+   "edges": 192,
+   "casts": 136,
+   "levels": 14,
+   "prop_iters": 36,
+   "max_diff_vs_statefuse": 7.716930080124026e-13,
+   "max_diff_vs_oracleB": 6.443855206984259e-13,
+   "seconds_total": 0.06403900000441354
+  },
+  "negatives_aborted": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "reading": "comprobacion de que el entrypoint v2 con la politica estricta corre y reproduce las cifras de la fase A en CPU (manifiesto de 104 escenas); NO es fase B ni certifica CUDA"
+ },
+ "artifacts": {
+  "p0_scene_gpu/p03_manifest.json": "D:/PROJECTS/.cognition/neuro3d/p0_scene_gpu/p03_manifest.json",
+  "p0_scene_gpu/p03_make_manifest.py": "D:/PROJECTS/.cognition/neuro3d/p0_scene_gpu/p03_make_manifest.py",
+  "p0_scene_gpu/p03_harness_v2.py": "D:/PROJECTS/.cognition/neuro3d/p0_scene_gpu/p03_harness_v2.py",
+  "nebulatrace/gpu_states_v2.py": "D:/PROJECTS/.cognition/neuro3d/nebulatrace/gpu_states_v2.py",
+  "p0_scene_gpu/p03_v2_cpu_entrypoint_check.json": "D:/PROJECTS/.cognition/neuro3d/p0_scene_gpu/p03_v2_cpu_entrypoint_check.json"
+ },
+ "artifact_sha256": {
+  "p0_scene_gpu/p03_manifest.json": "3343fa298cef2286e6643026a7e8b23ac4a6db011b443ffdf8c9c625fa89fe5b",
+  "p0_scene_gpu/p03_make_manifest.py": "aa4c27940624b00b24e736f890d6f6133dfd40dd993e3c3cddcd7665f52e01a6",
+  "p0_scene_gpu/p03_harness_v2.py": "1328b01307fb467bc4bf3d69886f01d5839c6d86ab92495ecf7056294f6b446e",
+  "nebulatrace/gpu_states_v2.py": "506b13c9c6bb442d16d9be07b8508a79b01ded9dd4c87c261ac1af83849b426e",
+  "p0_scene_gpu/p03_v2_cpu_entrypoint_check.json": "8a62ef70ac1f347699b09ce7b02ca15f4817e96e26d4f16156faef284d55b109"
+ },
+ "pending": [
+  "ejecucion CUDA (fase B) y su guard/exclusividad",
+  "cotas angulares y de acumulacion",
+  "la fusion sigue sin promocionar conf1"
+ ],
+ "no_jev_aval": false
+}

@@ -1,0 +1,52 @@
+{
+  "task_id": "neuro3d-mega-geometry-20261005",
+  "date": "2026-10-05",
+  "scope": "Documentary investigation requested by human; no GPU implementation or launch",
+  "report": "Docs/EXP-005-MEGA-GEOMETRY-RESEARCH-2026-10-05.md",
+  "local_head": "7535f84151799b06e9d9cddbe3c1f1f3de7bde57",
+  "rtxmg_head": "9f7644a854776ed896900f011367df420c6fb389",
+  "rtxmg_commit_date": "2026-09-04T11:11:04Z",
+  "facts": [
+    "AMD tetrahedral cages and NVIDIA RTX Mega Geometry are distinct technologies",
+    "AMD plant demo: approximately 500M animated triangles after LOD, RX9070XT, 1080p, primary and shadow rays",
+    "AMD reported approximately 1.7GB BVH memory and 3.3ms BVH updates, not total inference costs",
+    "NVIDIA documents RTX support from Turing; exact RTX3090 runtime and performance not tested",
+    "RTXMG ClusterLOD defaults include position mantissa truncation and adaptive camera-based LOD",
+    "No verified 80M-neuron same-work baseline found in the retained documents reviewed"
+  ],
+  "calculations": {
+    "ratio_500M_to_80M": 6.25,
+    "state_float32_500M_GiB": 1.862645149230957,
+    "state_complex64_500M_GiB": 3.725290298461914,
+    "admission_80M_cells_GiB_before_margins": 76.2939453125,
+    "admission_500M_cells_GiB_before_margins": 476.837158203125,
+    "18GiB_bytes_per_entity_500M_before_overheads": 38.654705664,
+    "500M_dense_float32_matrix_bytes": 1000000000000000000,
+    "illustrative_1080p_two_rays_per_pixel_per_frame": 4147200,
+    "illustrative_length_error_m_for_1mrad_at_500nm": 7.957747154594768e-11
+  },
+  "source_sha256": {
+    "README.md": "6f9a729d848ae423685dd2045584270f3cebc95679c36b4fde2589a64f4d588c",
+    "Docs/EXP-005-RT-REPORT-AUDIT-CPU-2026-09-30.md": "c1d6cdf7e0bb97dbfcaa3e391527e1175a07fd823833db6a2ff62d0b2c409c93",
+    "Docs/EXP-005-RT-PILOT006-RETAINED-AUDIT.md": "c3d515db52f0a9c8cde52683b89609754dd712b2451b7401cd81378da4c425ad",
+    "coordinacion/respuestas/CAPACIDAD-CONTEO-REVISION-CODEX-2026-09-30.md": "5c52f30444a9a789c32c6707204e8c0ed963a0ab1c7b050a653d99e5a57354c6",
+    "coordinacion/respuestas/CAPACIDAD-CLAUDE-2026-09-30.md": "f4c6f76e2162699896e40f87e26035e0becfde8474eb2cb371eff3011bfb937f",
+    "coordinacion/CHECKPOINT.md": "f56da58a54d74afeb2298b63fa580c4bb45c92d1560d912553d3715e7fe8bec0",
+    "coordinacion/COLA-DE-TRABAJO.md": "3152b603228f24cb0c7e792854afd35508a267d56b2789c79c99d5dd8e2df6b5",
+    "coordinacion/THINKTANK.md": "5cc32bb247276a3ea63bd681f2e27e2c4ac9281e7c94aa94aa8f98f9fb98b70f",
+    "coordinacion/TABLON.md": "83bb977b4eb08852399ba9cb3fad77e8916a26b46209f31fdb29e132af2dabf7"
+  },
+  "decision": "Worth investigating geometry/BVH reuse with an exact numerical RT contract; no automatic triangle-to-neuron conversion or 6.25x inference claim",
+  "next_actions": [
+    "Define counts of neurons, weights, paths and unique/instanced/resident geometry separately",
+    "Reuse retained backend and guard artifacts; do not repeat unmatched RT sweeps",
+    "Draft optional exact scene-to-hit-to-field contract before backend implementation",
+    "Check device capability and fail-closed GPU guard before any separately authorized pilot"
+  ],
+  "limitations": [
+    "Publisher PDF access failed; official AMD explanations verified instead",
+    "Exact GPU runtime and performance untested",
+    "JEV security-blocked; explicit local analysis without remote endorsement",
+    "No SDK installation, GPU load, frozen backend edit, shared board change, commit or publication"
+  ]
+}

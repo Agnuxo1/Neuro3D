@@ -52,6 +52,34 @@ def binding(packet):
                                           "direction_binding_sha256", "wire_hex")})
 
 
+def validate_slot_wire(slot, query):
+    """Internal typed consistency, independent of a caller-supplied expected value."""
+    require(type(slot) is dict and set(slot) == set(IDENTITY), "closed slot schema required")
+    words(query, 19)
+    require(type(slot["case"]) is str and 0 < len(slot["case"]) <= 128, "case label required")
+    require(type(slot["source_id"]) is str and slot["source_id"] in ("S0", "S1"), "SOURCE label required")
+    for key in ("scene_sha256", "query_sha256", "input_sha256", "source_record_sha256"):
+        hashword(slot[key])
+    previous = slot["previous_primitive_id"]
+    require(type(previous) is int and 0 <= previous <= 0xffffffff and
+            previous == query[18], "previous primitive does not match wire")
+    for key in ("saved_point_bounds", "saved_direction_bounds"):
+        box = slot[key]
+        require(type(box) is list and len(box) == 3, "three-axis box required")
+        for endpoints in box:
+            require(type(endpoints) is list and len(endpoints) == 2, "two endpoints required")
+            lo, hi = map(codec.rational, endpoints)  # Reject bools/noncanonical fractions.
+            require(lo <= hi, "reversed saved interval")
+    points = decoded(query[:6], 3, 1)
+    require([[v[0], v[0]] for v in points] == slot["saved_point_bounds"], "point/slot contradiction")
+    require(decoded(query[6:18], 3, 2) == slot["saved_direction_bounds"], "direction/slot contradiction")
+    triangles = slot["saved_triangle_words"]
+    require(type(triangles) is list and len(triangles) == 3, "three triangle vertices required")
+    for vertex in triangles:
+        words(vertex, 3)
+        require(all(((w >> 23) & 255) != 255 for w in vertex), "finite triangle metadata required")
+
+
 def make_packet(point, direction, *, model):
     require(type(model) is str and model == MODEL, "explicit CPU candidate model required")
     require(type(point) is dict and type(direction) is dict, "two retained rows required")
@@ -84,6 +112,7 @@ def make_packet(point, direction, *, model):
     except (KeyError, TypeError, struct.error) as exc:
         raise ValueError("missing or malformed CPU row") from exc
     query = list(pw) + list(dw) + [previous]
+    validate_slot_wire(slot, query)
     wire = struct.pack("<19I", *query)
     packet = dict(model=MODEL, slot=slot, point_binding_sha256=pb,
                   direction_binding_sha256=db, query_words=query, wire_hex=wire.hex(),
@@ -106,6 +135,9 @@ def audit_packet(packet, *, expected, model):
             "no native bound allowed in this candidate")
     require(packet["full_costs"] == "UNKNOWN_NOT_ZERO", "costs remain unknown")
     words(packet["query_words"], 19)
+    validate_slot_wire(packet["slot"], packet["query_words"])
+    hashword(packet["point_binding_sha256"])
+    hashword(packet["direction_binding_sha256"])
     wire = struct.pack("<19I", *packet["query_words"])
     require(wire.hex() == packet["wire_hex"] and
             hashlib.sha256(wire).hexdigest() == packet["wire_sha256"], "wire integrity mismatch")

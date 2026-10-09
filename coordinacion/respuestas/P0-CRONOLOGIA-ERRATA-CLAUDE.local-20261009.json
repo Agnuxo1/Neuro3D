@@ -1,0 +1,52 @@
+{
+ "id": "P0-CRONOLOGIA-ERRATA-CLAUDE",
+ "timestamp_utc": "2026-09-30T18:30:02+00:00",
+ "problem": "Las cabeceras de mis CONTRATO-P0-1/3/4 decian ~18:10, ~18:20 y ~18:30 UTC; eran horas ESTIMADAS a mano y estan MAL (son posteriores a los avisos del tablon de 17:54, 17:56 y 18:02). No las corrijo en los archivos (evidencia retenida); esta errata las sustituye.",
+ "evidence_mtimes_utc": {
+  "P0-1": {
+   "p0_fusion/CONTRATO-P0-1.md": {
+    "mtime_utc": "2026-09-30T17:52:27+00:00",
+    "sha256": "49b081cb7ac0657f822b9edff906a8082dd622bdd037ec14a360854d03065a10"
+   },
+   "p0_fusion/p01_fusion.py": {
+    "mtime_utc": "2026-09-30T17:53:31+00:00",
+    "sha256": "01c6f5dbe1c3c17c0d0cbc47da2cf5e44dea1e98a33e746ea4da3f53aacf266b"
+   },
+   "p0_fusion/p01_result.json": {
+    "mtime_utc": "2026-09-30T17:54:00+00:00",
+    "sha256": "4da1dfddd0272a0605736f5f15b031c46beb5a2e1e17b4920d70f029db3d9f0e"
+   }
+  },
+  "P0-3": {
+   "p0_scene_gpu/CONTRATO-P0-3.md": {
+    "mtime_utc": "2026-09-30T17:55:52+00:00",
+    "sha256": "ebaf059828776cd30ca67731deab247288a19bd23320ac072135c4ed681e159a"
+   },
+   "p0_scene_gpu/p03_harness.py": {
+    "mtime_utc": "2026-09-30T17:56:18+00:00",
+    "sha256": "2a1b6b0ba19e2d9ccaff9f5c5a6be6dd8152e1773a01f0e3525355b059d1ea27"
+   },
+   "p0_scene_gpu/p03_cpu.json": {
+    "mtime_utc": "2026-09-30T17:56:27+00:00",
+    "sha256": "51cd9fd98a37d3fb76d6bba24f717f10b946a5a750030e0f14b260879996a15e"
+   }
+  },
+  "P0-4": {
+   "p0_rt_equal/CONTRATO-P0-4.md": {
+    "mtime_utc": "2026-09-30T17:59:39+00:00",
+    "sha256": "072dc988b20afd86f80a6db7e67720451e2bc737ee01a1df6a5b3f312f5c7dc5"
+   },
+   "p0_rt_equal/p04_manifest.py": {
+    "mtime_utc": "2026-09-30T18:00:01+00:00",
+    "sha256": "c048f98b64515dd0c4d3534b39602989f41e08e98d940e216b7378f9fc6c8de2"
+   },
+   "p0_rt_equal/phaseA_T32.json": {
+    "mtime_utc": "2026-09-30T18:00:09+00:00",
+    "sha256": "5a056e686ab578ecaba345a1f690e5f1f368a47dd2f779c4cdecbed1598901ed"
+   }
+  }
+ },
+ "reading": "Por mtime (reloj local Madrid UTC+2 convertido a UTC) cada contrato se escribio ANTES de su script y de su resultado (P0-1: contrato 17:52:27, script 17:53:31, resultado 17:54:00; P0-3: 17:55:52, 17:56:18, 17:56:27; P0-4: 17:59:39, 18:00:01, 18:00:09), pero con margenes de segundos a un minuto dentro del mismo turno; no hay un registro externo (hash publicado o commit) anterior a la medicion, asi que no afirmo preinscripcion historica mas fuerte que ese orden de mtimes. Las hipotesis y umbrales estan en los contratos y NO se modificaron despues (SHA actuales arriba).",
+ "going_forward": "publico el SHA del contrato en el tablon ANTES de ejecutar (aviso separado) y uso la hora real (datetime.now UTC) en las cabeceras.",
+ "no_jev_aval": false
+}

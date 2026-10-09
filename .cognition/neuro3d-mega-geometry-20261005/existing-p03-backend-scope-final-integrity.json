@@ -1,0 +1,46 @@
+{
+  "rc": 0,
+  "timed_out": false,
+  "before_deadline": true,
+  "started_utc": "2026-10-07T10:39:17.136662+00:00",
+  "ended_utc": "2026-10-07T10:39:17.698854+00:00",
+  "deadline_utc": "2026-10-07T10:39:52.136662+00:00",
+  "elapsed_QA_seconds": 0.562192,
+  "timeout_seconds": 30,
+  "affinity_mask": 1,
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "RAM_available_before_bytes": 7525273600,
+  "RAM_budget_bytes": 134217728,
+  "RAM_reserve_after_budget_bytes": 7391055872,
+  "command": [
+    "C:/Python313/python.exe",
+    "-B",
+    ".cognition/neuro3d-mega-geometry-20261005/existing_p03_backend_scope_final_integrity.py"
+  ],
+  "stdout_bytes": 602,
+  "stdout_sha256": "9229c333c2f5278b1ff25b52cef7bb6dba0dca990da9050f511b675c4cb5e576",
+  "stdout_zlib_base64": "eNplUl1P2zAUfZ/Ef0B5HiP+vPbeAlQrK2qr0T1b177XWwQkLE1XNsR/nyMFoYkXSz7HOh86fq72I46HffX5tNo2t7fVx9NqwGNYLpqrwL8OeL8P1O7vCj8OBy5sf+xCumfs3qC2I34K/PA4/nkD89D/5S48tt0krq0oGA7pZ/ubA3YUJp2ZFFC42ONA0+25Sn0/UNthavvu/HK5uFxtN9fr3acHmmISK+MRs62TyEl5RdFxAgRMSici5dnlaKR0wJASYkQZ0YM21kuIeqr4v8Pmpjm7WpztvjUXzdfNbCNA5khgndIRjYlMaL0TGG2mrE3yQtqaUZJGbzN7QTVblLWunYVyvLPZLa/Xq12zXs0GVjorlRbaoTc1xqi1ZAEAicABmVLBs1HGuJylIOmj9UIJA3YqDfm9QXNxs1nP6tn5GDPabK2D2gqPPtXeGVn7ElZm6ZhiphIhS6miNBgVCE/kyguhbfUybdgP3P4oe/fEgZ84HUae1HP5FtPGHR/Dl+33mSoZXrmXkw//AOTLtWc=",
+  "stderr_utf8": "",
+  "GPU_used": false,
+  "summary": {
+    "status": "PASS",
+    "raw_HEAD_equals_disk": true,
+    "own_clean": true,
+    "index_empty": true,
+    "frozen_pins": 461,
+    "archive_and_own_pins": 17,
+    "boards": {
+      "coordinacion/CHECKPOINT.md": "de359aaf60c1fc393db8ec7a7ac34cdd39e8fb52287e7ccaaba2ba97456927b4",
+      "coordinacion/COLA-DE-TRABAJO.md": "172fbd76834ba55beda6981ab6fdf45c91260ea2d4a96fe91d0e6a2040867408",
+      "coordinacion/THINKTANK.md": "6286234148a950abb442e1777cd787d5b529e53558ff21d29b69131576c3937f",
+      "coordinacion/TABLON.md": "f89bbfa6f66870619a9c0985209fe92f28edbfd862f223b25ab3719dd8209146"
+    },
+    "foreign_code_executed": false,
+    "new_GPU_execution": false
+  }
+}

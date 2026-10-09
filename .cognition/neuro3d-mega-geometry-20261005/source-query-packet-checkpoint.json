@@ -1,0 +1,51 @@
+{
+  "id": "PRECISION-ORIGINAL-SOURCE-QUERY-PACKET-CPU-001",
+  "checked_at_utc": "2026-10-07T07:05:39Z",
+  "base_commit": "ba87272570be38188cb0bee7ae8bbc7fcd08a3f6",
+  "files": {
+    "Blender/benchmarks/capacity_audit/original_SOURCE_query_packet_CPU_v1.py": {
+      "sha256": "bd39e42cdb59941470b0b37b662a003a22ea261f98aeba22829098d15642fc8b",
+      "bytes": 8051
+    },
+    "Blender/tests/test_original_SOURCE_query_packet_CPU_v1.py": {
+      "sha256": "dcde0639fa2f2a79b1c836f1623de77e9253b9ec8c03a2320c5ffc1003e8f322",
+      "bytes": 8147
+    },
+    "Docs/EXP-005-ORIGINAL-SOURCE-QUERY-PACKET-CPU-001.md": {
+      "sha256": "86850db32f119e69fb87894291d00e6a3c4af10c4aaa924041bc11c9a0bfd0a5",
+      "bytes": 4823
+    },
+    "coordinacion/respuestas/PRECISION-ORIGINAL-SOURCE-QUERY-PACKET-CPU-001-CODEX.json": {
+      "sha256": "5f6b3d0ec64df544fc771044796cd88f62967322a879b10fd74fd012a194d272",
+      "bytes": 54762
+    }
+  },
+  "tests": 5,
+  "records": 113,
+  "positive": 12,
+  "fixed_negative": 96,
+  "internal_negative": 5,
+  "bindings": 12,
+  "equal_wire_group_sizes": [
+    2,
+    4,
+    6
+  ],
+  "logical_payload_bytes_no_dedup": 912,
+  "initial_FAIL_preserved": true,
+  "test_unchanged_after_FAIL": true,
+  "native_join_count": 0,
+  "boards_sha256": {
+    "CHECKPOINT.md": "61fde5fd23fcbd8937587a5bbbc601dc282a9da94512b2b27b32d38a5eda4445",
+    "COLA-DE-TRABAJO.md": "9d4d5be8a8e990e233031533bcf4a0095e604f5c0ce3459fb144e4b4b1586aa8",
+    "THINKTANK.md": "965daf6e95e66dbe8be59c8d6bb75fb554a2c6dbb09dc1b0c2bd4e2fa45d8a78",
+    "TABLON.md": "57aeded94e38336d3f43aa1ed94bdc0ee0014a61df2209c203625d371ab479b5"
+  },
+  "index_empty": true,
+  "native_STOP": true,
+  "GPU0": true,
+  "new_files_versioned": false,
+  "original_query_replays": 0,
+  "JEV": "LOCAL_SECURITY_BLOCKED_NO_RETRY",
+  "next": "Review/version only four own files; native consumer ABI, coverage, length/reference/phase and full guard remain STOP."
+}

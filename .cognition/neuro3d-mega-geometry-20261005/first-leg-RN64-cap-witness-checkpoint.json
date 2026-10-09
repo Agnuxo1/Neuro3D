@@ -1,0 +1,135 @@
+{
+  "id": "PRECISION-ORIGINAL-SOURCE-FIRST-LEG-RN64-CAP-WITNESS-CPU-001",
+  "UTC": "2026-10-07T09:50:00Z",
+  "HEAD": "71e5bcc4990da196f87c20c94558d9e59969a9c5",
+  "parent": "7b3edcc4e488e89423dcf57c7bd1f8e39577041a",
+  "own_files": {
+    "Blender/benchmarks/capacity_audit/original_SOURCE_first_leg_RN64_cap_witness_CPU_v1.py": {
+      "bytes": 11120,
+      "sha256": "e1157f05993af5d575d26ae7d3b96eade2beeccaed4db94087eba74b2d7e6be5"
+    },
+    "Blender/tests/test_original_SOURCE_first_leg_RN64_cap_witness_CPU_v1.py": {
+      "bytes": 5820,
+      "sha256": "d43235d25a3326d487a68cdcea1fef83b2a5db70b2fe6f6f0a92c0ec4ecd9cc0"
+    },
+    "Docs/EXP-005-ORIGINAL-SOURCE-FIRST-LEG-RN64-CAP-WITNESS-CPU-001.md": {
+      "bytes": 4454,
+      "sha256": "3b76b17ae0ed203a891cb63017d838c87a93c18c75fd77bd58c61d270fdcf7d1"
+    },
+    "coordinacion/respuestas/PRECISION-ORIGINAL-SOURCE-FIRST-LEG-RN64-CAP-WITNESS-CPU-001-CODEX.json": {
+      "bytes": 47883,
+      "sha256": "0611221f8b72ba5637f19679af2785fb1674b391653916372a014ee5d9bc70c7"
+    }
+  },
+  "status": "PASS_HOST_COUNTEREXAMPLE_NATIVE_STOP",
+  "facts": [
+    "Eight correctly rounded modeled RN64 length point outputs have zero interval width but nonzero geometric discrepancy: exact r*r != q.",
+    "Six isolated SOURCE phase-term discrepancies are above literal geometric width scale; two tiny bounds below. Width is NOT an equivalent native pointwise accuracy budget. No original-width-contract or total-path failure proved; other-term cancellation not excluded.",
+    "28 SOURCE rows tied by captured-row SHA, scene/query/primitives/original SOURCE;20 upstream STOP preserved; no root replays or producer execution."
+  ],
+  "tests": {
+    "status": "PASS",
+    "tests": 4,
+    "records": 61,
+    "kinds": {
+      "EXACT_ZERO_CONTROL": 1,
+      "FIXED_WITNESS_OR_STOP": 28,
+      "NEGATIVE": 30,
+      "TIE_CONTROL": 2
+    }
+  },
+  "QA_capture": {
+    "started_utc": "2026-10-07T09:47:13.304838+00:00",
+    "ended_utc": "2026-10-07T09:47:13.561047+00:00",
+    "deadline_utc": "2026-10-07T09:47:48.304838+00:00",
+    "stdout_sha256": "a6481ef701a1a2c11262ee3de18213af7853150d1b99c91a8f01ab7de01d563d"
+  },
+  "oracle": {
+    "GPU_used": false,
+    "counts": {
+      "exceeded": 6,
+      "fits": 2,
+      "ties": 2,
+      "upstream_STOP": 20
+    },
+    "frozen_pins_verified": 461,
+    "full_costs": "UNKNOWN_NOT_ZERO",
+    "isolated_term_lower_bound_over_literal_width_scale_decimal_integer_strings": {
+      "direction_scaled/S0": [
+        "22349176171431",
+        "4096"
+      ],
+      "direction_scaled/S1": [
+        "2872207071417",
+        "2048"
+      ],
+      "oblique/S0": [
+        "22349176171431",
+        "4096"
+      ],
+      "oblique/S1": [
+        "2872207071417",
+        "2048"
+      ],
+      "shared_ref1000/S0": [
+        "22349176171431",
+        "4096"
+      ],
+      "shared_ref1000/S1": [
+        "2872207071417",
+        "2048"
+      ]
+    },
+    "native_precision_certified": false,
+    "new_root_evaluations": 0,
+    "original_width_contract_failure_proved": false,
+    "selected_RN_lengths_decimal_integer_strings": {
+      "direction_scaled/S0": [
+        "4776788754394329",
+        "4503599627370496"
+      ],
+      "direction_scaled/S1": [
+        "6369051672525773",
+        "18014398509481984"
+      ],
+      "oblique/S0": [
+        "4776788754394329",
+        "4503599627370496"
+      ],
+      "oblique/S1": [
+        "6369051672525773",
+        "18014398509481984"
+      ],
+      "shared_ref1000/S0": [
+        "4776788754394329",
+        "4503599627370496"
+      ],
+      "shared_ref1000/S1": [
+        "6369051672525773",
+        "18014398509481984"
+      ],
+      "tiny_gap_2m60/S0": [
+        "4776788754394329",
+        "5192296858534827628530496329220096"
+      ],
+      "tiny_gap_2m60/S1": [
+        "6369051672525773",
+        "20769187434139310514121985316880384"
+      ]
+    },
+    "status": "PASS",
+    "total_path_cap_failure_proved": false
+  },
+  "oracle_capture": {
+    "started_utc": "2026-10-07T09:48:08.108874+00:00",
+    "ended_utc": "2026-10-07T09:48:08.393300+00:00",
+    "deadline_utc": "2026-10-07T09:48:43.108874+00:00",
+    "stdout_sha256": "d6e4990650f80c9edeb8b337876f3e6a36501ff82d9e896674c7d00b20a39635"
+  },
+  "review_correction": "Initial cap-failure language corrected to width-scale diagnostic; previous captures preserved, no numeric cap/bound changes.",
+  "JEV": "LOCAL_SECURITY_BLOCKED_NO_RETRY",
+  "GPU_used": false,
+  "shared_boards_staged": false,
+  "native_accuracy_budgets": "NULL_UNKNOWN_NOT_ZERO",
+  "next": "Fail-closed contract separating pointwise error and interval width, tied to backend/scene/SOURCE ingress and primitive context; use existing Claude M03/M04/M05/M08/M13 artifacts or explicit absence. No GPU/native promotion by diagnostic alone."
+}

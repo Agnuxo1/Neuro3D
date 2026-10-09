@@ -1,0 +1,83 @@
+{
+  "id": "PRECISION-ORIGINAL-SOURCE-NEXT-POSITION-BOX-CPU-001",
+  "checkpoint_UTC": "2026-10-07T08:01:00Z",
+  "head": "1a21ffe52730fc68c58ef2436aefcaf444ca007e",
+  "parent": "88de36c77904d1ffd161dafff765cebcfb3c9bba",
+  "own4clean": true,
+  "index_empty": true,
+  "raw_HEAD_equals_disk": true,
+  "frozen_pins": 461,
+  "own": [
+    {
+      "path": "Blender/benchmarks/capacity_audit/original_SOURCE_next_position_box_CPU_v1.py",
+      "sha256": "78f81602d38a98732e9d6ab3fa034ddabb788ff4052bde0cfb327b176099b9d4",
+      "bytes": 9939
+    },
+    {
+      "path": "Blender/tests/test_original_SOURCE_next_position_box_CPU_v1.py",
+      "sha256": "63b271ac72cb9a641ad6c71cda4cd1ca1efd92e52e8cad4a1a950b391e334d3f",
+      "bytes": 10262
+    },
+    {
+      "path": "Docs/EXP-005-ORIGINAL-SOURCE-NEXT-POSITION-BOX-CPU-001.md",
+      "sha256": "55aba960ea7b9adcca26ea946c509af091988e2c8543c0a1f2299e585fc139a2",
+      "bytes": 6079
+    },
+    {
+      "path": "coordinacion/respuestas/PRECISION-ORIGINAL-SOURCE-NEXT-POSITION-BOX-CPU-001-CODEX.json",
+      "sha256": "2f55ba29b624ddddef68b1e28ec8b50f23d85eaec6ffb6b9cd6c39e668528b29",
+      "bytes": 50686
+    }
+  ],
+  "summary": {
+    "fixed_SOURCE_slots": 12,
+    "fixed_triangle_rows_as_DATA": 28,
+    "conditional_interior_rows": 12,
+    "previous_contact_STOP_rows": 12,
+    "conditional_miss_rows": 4,
+    "new_polynomial_controls": 8,
+    "binding_NEG": 17,
+    "input_NEG": 9,
+    "capture_NEG": 4,
+    "tests": 4,
+    "records": 67,
+    "valid_new_ray_position_evaluations": 37,
+    "modeled_outward_scalar_operations": 222,
+    "fixed_corner_combinations": 3584,
+    "control_corner_combinations": 1024,
+    "caller_corner_combinations": 128,
+    "old_triangle_queries": 0,
+    "old_contact_evaluators": 0,
+    "old_roots": 0,
+    "old_suites": 0,
+    "preserved_triangle_nonzero_errors": 72,
+    "preserved_prior_nonzero_rows": 16
+  },
+  "independent_verification_summary": {
+    "GPU_used": false,
+    "SOURCE_slots": 12,
+    "captured_polynomial_rows": 36,
+    "fixed_binding_rows": 28,
+    "fixed_nonzero_width_position_boxes": 12,
+    "frozen_pins": 461,
+    "independently_checked_corner_combinations": 4608,
+    "ledger_STOPs": 12,
+    "native_position_error_bound": null,
+    "new_negative_records": 30,
+    "old_triangle_queries": 0,
+    "phase_error_bound": null,
+    "retained_nonzero_scalars": 72,
+    "retained_prior_error_rows": 16,
+    "source_snapshots": 4,
+    "status": "PASS",
+    "upstream_status_counts": {
+      "CONDITIONAL_TRIANGLE_INTERIOR_HIT": 12,
+      "CONDITIONAL_TRIANGLE_MISS": 4,
+      "STOP_TRIANGLE_CONTACT_OR_BOUNDARY_UNRESOLVED": 12
+    }
+  },
+  "receipt_sha256": "2f55ba29b624ddddef68b1e28ec8b50f23d85eaec6ffb6b9cd6c39e668528b29",
+  "next": "Siguiente unidad propia Codex: cota condicional de desplazamiento/norma/longitud-referencia-fase desde incertidumbre propagada, sin trasplantar cotas ideales ni rescatar selecciónSTOP. Claude mantiene capacity/nebulatrace/research/RT. Guard GPU/exclusión/origen nativos no acreditados; sin reserva ni carga solicitada. No telemetría nueva: no se afirma GPU libre u ocupada.",
+  "sharedboards_stage": false,
+  "JEV": "LOCAL_SECURITY_BLOCKED_NO_REMOTE_ENDORSEMENT"
+}

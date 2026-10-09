@@ -115,6 +115,30 @@ class Tests(unittest.TestCase):
         with self.assertRaises(ValueError):
             packet.make_packet(p, d0, model=packet.MODEL)
 
+    def test_self_resealed_internal_inconsistency_rejected(self):
+        # A caller-supplied expected packet cannot excuse internal contradictions.
+        p = self.points[0]
+        got = packet.make_packet(p, self.by_slot[p["case"], p["source_id"]], model=packet.MODEL)
+        for kind in ("point_bound", "direction_bound", "previous_slot", "bool_rational", "nonfinite_word"):
+            bad = copy.deepcopy(got)
+            if kind == "point_bound":
+                bad["slot"]["saved_point_bounds"][0] = [[0, 1], [0, 1]]
+            elif kind == "direction_bound":
+                bad["slot"]["saved_direction_bounds"][0] = [[0, 1], [0, 1]]
+            elif kind == "previous_slot":
+                bad["slot"]["previous_primitive_id"] = 2
+            elif kind == "bool_rational":
+                bad["slot"]["saved_point_bounds"][0][0][1] = True
+            else:
+                bad["query_words"][0] = 0x7f800000
+            raw = struct.pack("<19I", *bad["query_words"])
+            bad.update(wire_hex=raw.hex(), wire_sha256=hashlib.sha256(raw).hexdigest())
+            bad["CPU_packet_binding_sha256"] = packet.binding(bad)
+            with self.assertRaises(ValueError, msg=kind):
+                packet.audit_packet(bad, expected=copy.deepcopy(bad), model=packet.MODEL)
+            RECORDS.append(dict(case=p["case"], source_id=p["source_id"],
+                                negative="internal:"+kind, status="REJECT"))
+
 
 if __name__ == "__main__":
     out = unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromTestCase(Tests))
