@@ -21,7 +21,7 @@ def main():
     power=np.asarray(results[0]['all150_native_powers']);other=np.asarray(results[1]['all150_native_powers']);assert np.array_equal(power,other) and results[0]['all150_predictions']==results[1]['all150_predictions']
     assert results[1]['training']['recovery']['resume_step']==12 and results[1]['training']['recovery']['prefix_replay_verified']
     steps=np.arange(61);loss=np.asarray([r['train_loss'] for r in traces[0]])
-    translations=np.asarray([r['deltas_BU'] for r in traces[1]]);frames=[]
+    translations=np.asarray([r['deltas_BU'] for r in traces[1]]);translations=translations-translations[0];frames=[]
     fig,(left,right)=plt.subplots(1,2,figsize=(12,6.3),dpi=110,gridspec_kw={'width_ratios':[1.35,1]});fig.subplots_adjust(left=.075,right=.965,bottom=.23,top=.77,wspace=.3);fig.patch.set_facecolor('#f7fafc')
     for k in range(0,61,2):
         for ax in (left,right):ax.clear();ax.set_facecolor('white');ax.grid(alpha=.16)
@@ -31,8 +31,8 @@ def main():
         left.axvline(12,color='#bc455b',ls=':',lw=1.5);left.scatter([k],[loss[k]],color='#175b89',s=30,zorder=5)
         left.set(xlim=(0,60),ylim=(0,float(loss.max())*1.08),xlabel='Estado del optimizador',ylabel='Pérdida de entrenamiento',title='61 pérdidas y posiciones idénticas');left.legend(fontsize=8,loc='upper right')
         right.bar(np.arange(16),translations[k],color=['#287c8e' if v>=0 else '#926696' for v in translations[k]])
-        span=float(np.max(np.abs(translations)))*1.12;right.set(ylim=(-span,span),xlabel='Par de espejos (16 parámetros)',ylabel='Traslación respecto a la base (BU)',title=f'Geometría reanudada · estado {k}/60');right.set_xticks(np.arange(0,16,3))
-        fig.suptitle('OpticNeuroBlender 0.1.3 · recuperación nativa comprobada',x=.5,y=.945,fontsize=16,fontweight='bold',color='#19364b')
+        span=float(np.max(np.abs(translations)))*1.12;right.set(ylim=(-span,span),xlabel='Par de espejos (16 parámetros)',ylabel='Cambio desde el estado inicial (BU)',title=f'Geometría reanudada · estado {k}/60');right.set_xticks(np.arange(0,16,3))
+        fig.text(.5,.945,'OpticNeuroBlender 0.1.3 · recuperación nativa comprobada',ha='center',fontsize=16,fontweight='bold',color='#19364b')
         subtitle='Propietario interrumpido → checkpoint 12 → nuevo Blender → resultado exacto'
         fig.text(.5,.875,subtitle,ha='center',fontsize=10,color='#4d6371')
         fig.text(.075,.145,'Checkpoint tras 12 actualizaciones; el estado 12 se evalúa al reanudar.',fontsize=9,color='#4d6371')
