@@ -1,0 +1,66 @@
+{
+  "schema": "optic_neuro_blender.geometry_cuda_training_profile.v1",
+  "profile_id": "96e1e586-0d35-4075-9b3a-88dc42e58c8e",
+  "created_utc": "2026-10-09T06:03:33.064616+00:00",
+  "worker": "Tools/train_captured_geometry_cuda_v1.py",
+  "training_profile": "Docs/research/captured_geometry_training_profile_2026-10-09.json",
+  "queue_job_name": "Neuro3D:own-cuda-training-20261009",
+  "device_uuid": "GPU-b163fedb-dda0-d4f4-68b2-298b6975efe3",
+  "runtime": {
+    "python": [
+      3,
+      13,
+      7
+    ],
+    "numpy": "2.2.6",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "nvidia_driver": "581.29"
+  },
+  "cpu_parity_tolerances": {
+    "field": 1e-11,
+    "power": 1e-11,
+    "loss": 1e-11,
+    "gradient": 1e-09
+  },
+  "limits": {
+    "total_seconds": 1900,
+    "cpu_seconds": 900,
+    "cuda_seconds": 900,
+    "free_ram_before_mib": 8192,
+    "free_ram_floor_mib": 4000,
+    "owned_rss_mib": 1500,
+    "evidence_mib": 128,
+    "cpu_cores": 1,
+    "cuda_peak_reserved_mib": 1024
+  },
+  "pins": {
+    "Blender/benchmarks/capacity_audit/exact_object_index_v1.py": "ce7313f7702b46ed987943a2808957e0da4fb313a09e54a7f77a9c1b2b5126d2",
+    "Blender/benchmarks/capacity_audit/robust_multipath_v1.py": "26dcbe7bb61dbf98430cd481292970d5631e79aec9fc9794ba672611f559d4d8",
+    "Blender/blender_lab/affine_geometry_network_v1.py": "3f163e622e645a706b903ab3f714f3a695605463d2de51b9cd7218b02023696c",
+    "Blender/blender_lab/coherent_state_graph_v1.py": "d67c389be8a48d9aebe563fd3333af8c962c28d5f5942ea092bf448af403e439",
+    "Blender/blender_lab/scalar_scene_ingress_v1.py": "a2f53daa2f34ea71585bc9e9c3d742a02e66651cff2dee450dba09274b30d3d3",
+    "Blender/blender_lab/scene_capture_v1.py": "fe676b61a9e743277d69b54890688555a604f659c7f23ee223703b907ad8a2d0",
+    "Blender/blender_lab/torch_geometry_backend_v1.py": "c8b0eace6c7cd24aad27b54e820d743c194e56c0ad0810f03422f02e200b3d6f",
+    "Blender/blender_lab/torch_training_arithmetic_v1.py": "ba3a757e69f9e522a3606e5bd2dfb105794c2e18505ee7d13ed6d73b2a859955",
+    "Blender/demo_lattice_iris/iris.csv": "9cc1c345c71bcc9b486b74cbf6063fa66f4bb5e0f603a4b3c3471ec2e5e8e355",
+    "Blender/tests/test_torch_training_arithmetic_v1.py": "a6a35d05da1e5069f388364c9d0530cb5cb7a360868c1a2497a450a77feb794e",
+    "Docs/research/captured_geometry_training_profile_2026-10-09.json": "0eba46caad4b11a4405910d80d6d52c802e7db743e5b267004612d563f971914",
+    "Docs/research/github_sequence_authorization_2026-10-09.json": "22e7b2039b791a538ad0458c0e1b04787c393cb8a55aefe84cb4fe8c29824b0a",
+    "Docs/validation/blender-lab-capture-2026-10-08/resume01/iris/capture.json": "458ca5e3e09bc25e5f7174f38c87e1cbd2049f7534ef0e73d9ea03d266454d93",
+    "Docs/validation/captured-scalar-ingress-2026-10-08/scene.json": "59963192f88df24bf5b1d7fd2f8119a81a0ecad353f62ee16831ccfb98627097",
+    "Docs/validation/coherent-state-graph-capture-2026-10-09/attempt01/result.json": "a35a1213a5b4cccf9487d257069848550c5d3ff8b2060b9e1004f98e5aa7d448",
+    "Tools/audit_captured_pilot_result_v1.py": "a3f683ab11aa07eb52aefb4046ba89516321bb175ef01697c39131234b3ac686",
+    "Tools/audit_coherent_state_graph_v1.py": "2bb9bb285ec93922fd96cc1eec98fa1fc2c73d20856140536ba5adfe50d4519d",
+    "Tools/audit_graph_neighborhood_v1.py": "a5186cabf4ae3e7b0ea3995f66b315709e64751d3e4636b37d2172a7fad02ef2",
+    "Tools/bind_network_capture_v1.py": "af3bdbc41636214f01c2078ce26bd271794fa763ccefecd2a006f1014d2f117b",
+    "Tools/run_frozen_geometry_cuda_training_v1.py": "15ce7db623bf4dcebb49b9af456a056e5300714c878093ca04bedb566a981a6d",
+    "Tools/run_frozen_geometry_training_v1.py": "d813e5bcce102be8517cb165195f4dece7edbea0d290901dab598bfadadbded4",
+    "Tools/run_frozen_state_graph_profile_v1.py": "9f234e7214e7c740f18ae9e9cf880de98f28f6caf532938a4fbaf1dcd1470895",
+    "Tools/trace_indexed_scene_v1.py": "e1ce3a4cf1c83234897de221cc28833017e76863c4ac88e2ead3957f1bac13ac",
+    "Tools/train_captured_geometry_cuda_v1.py": "a0e9905e5b5efe8fee08d1b17aa841bf628874aeb7ba0487476bb9d168a7f582",
+    "Tools/train_captured_geometry_v1.py": "5700e71eed99d398239603f35c6c449814be0926d477df4944ff999a8e9b9dba"
+  },
+  "acceptance": "Complete CPUandactualCUDAtraining samefixedIris120/30/60updates/61audits, sameinitializationandquantization, minimumlossdroporiginalfixed. At eachCUDAstate independently compareCPUfieldpowerlossgradient with fixedtolerances, finalfreshCPUgeometrybuild field<=1e-11, originalinitialFD<=1e-4. Heldoutonlyafterfinalupdate. Onefullpairedcostincludingaudit/preparation/readback/nativequantization; noadvantagehypothesized. Completevalidlossfailure=metric0, environment/incomplete=null.",
+  "scope": "Own actual CUDAmanualCEchainruleandAdamfromcapturedgeometry, CPUexactray/affinephase/nativefloat32quantization/audits. Not GPUtriangletracing/fullBlenderGPUtraining, repeatedtimingstatistics, AMDhardware, physicalprocessor, energy, outsidehumanreplication."
+}

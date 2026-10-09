@@ -137,5 +137,6 @@ Docs/validation/native-training-batch-certificate-2026-10-09/** -text !eol white
 Docs/validation/native-parameter-boxes-2026-10-09/** -text !eol whitespace=cr-at-eol
 Docs/research/external_native_blender_official_checksum_2026-10-09.txt -text !eol whitespace=cr-at-eol
 Docs/validation/external-native-blender-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/geometry-cuda-training-2026-10-09/** -text !eol whitespace=cr-at-eol
 Docs/research/external_cpu_reproduction_profile_v2_2026-10-09.json -text !eol whitespace=cr-at-eol
 Docs/research/external_cpu_reproduction_registration_v2_2026-10-09.json -text !eol whitespace=cr-at-eol
