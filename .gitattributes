@@ -179,3 +179,8 @@ Docs/validation/native-graphics-scaling-2026-10-09/**/*.stdout -text !eol -white
 Docs/validation/** -diff
 Docs/validation/native-resident-graph-2026-10-09/** -text !eol
 Docs/validation/**/evidence_index.json diff
+
+# Evidencia de la validacion anidada EEG (P0-3): bytes originales, sin conversion.
+Benchmarks/eeg-motor-imagery/evidencia-validacion-anidada/** -text !eol
+Benchmarks/eeg-motor-imagery/codigo/work/nested/nested_bench.py -text !eol
+Benchmarks/eeg-motor-imagery/codigo/work/lattice_torch.py -text !eol
