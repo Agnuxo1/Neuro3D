@@ -1,0 +1,27 @@
+dit": 1}
+{"seed": 1051, "step": 38, "train_loss": 0.80895431824913, "geometry_audit": 1}
+{"seed": 1051, "step": 39, "train_loss": 0.8043204471497343, "geometry_audit": 1}
+{"seed": 1051, "step": 40, "train_loss": 0.7996797839675016, "geometry_audit": 1}
+{"seed": 1051, "step": 41, "train_loss": 0.7954717500351877, "geometry_audit": 1}
+{"seed": 1051, "step": 42, "train_loss": 0.7919656618980686, "geometry_audit": 1}
+{"seed": 1051, "step": 43, "train_loss": 0.7890865186702789, "geometry_audit": 1}
+{"seed": 1051, "step": 44, "train_loss": 0.7865489295493383, "geometry_audit": 1}
+{"seed": 1051, "step": 45, "train_loss": 0.7840632928974811, "geometry_audit": 1}
+{"seed": 1051, "step": 46, "train_loss": 0.7814217307776398, "geometry_audit": 1}
+{"seed": 1051, "step": 47, "train_loss": 0.7785434625841785, "geometry_audit": 1}
+{"seed": 1051, "step": 48, "train_loss": 0.7754882697607395, "geometry_audit": 1}
+{"seed": 1051, "step": 49, "train_loss": 0.772577347320757, "geometry_audit": 1}
+{"seed": 1051, "step": 50, "train_loss": 0.7701278941302595, "geometry_audit": 1}
+{"seed": 1051, "step": 51, "train_loss": 0.7681511235006562, "geometry_audit": 1}
+{"seed": 1051, "step": 52, "train_loss": 0.7663103715281414, "geometry_audit": 1}
+{"seed": 1051, "step": 53, "train_loss": 0.7642783859345057, "geometry_audit": 1}
+{"seed": 1051, "step": 54, "train_loss": 0.7620558985058838, "geometry_audit": 1}
+{"seed": 1051, "step": 55, "train_loss": 0.7598969552876272, "geometry_audit": 1}
+{"seed": 1051, "step": 56, "train_loss": 0.7580118822449752, "geometry_audit": 1}
+{"seed": 1051, "step": 57, "train_loss": 0.756387783208058, "geometry_audit": 1}
+{"seed": 1051, "step": 58, "train_loss": 0.7548918000203113, "geometry_audit": 1}
+{"seed": 1051, "step": 59, "train_loss": 0.7534275842324957, "geometry_audit": 1}
+{"seed": 1051, "step": 60, "train_loss": 0.7519416613697802, "geometry_audit": 1}
+{"status": "PASS", "own_heldout_correct": [25], "baseline_heldout_correct": {"linear": 33, "quadratic": 33}}
+
+--stderr--

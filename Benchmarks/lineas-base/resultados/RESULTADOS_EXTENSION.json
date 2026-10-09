@@ -1,0 +1,187 @@
+{
+ "schema": "p0-4.resultados_extension",
+ "etiqueta": "EXPLORATORIO post hoc (decisi\u00f3n JEV 2026-10-09)",
+ "seeds": [
+  1049,
+  1050,
+  1051
+ ],
+ "nota": "Analisis exploratorio decidido tras observar el split k=0; no sustituye al analisis primario (semilla 1049).",
+ "wine_mean_of_3_seeds": {
+  "test_accuracy_per_partition": [
+   0.8018018018018017,
+   0.8198198198198199,
+   0.7747747747747749,
+   0.7477477477477478,
+   0.7927927927927927,
+   0.8198198198198199,
+   0.8558558558558559,
+   0.7207207207207208,
+   0.8198198198198199,
+   0.7567567567567567
+  ],
+  "descriptives": {
+   "mean": 0.7909909909909911,
+   "std": 0.04091143871694031,
+   "min": 0.7207207207207208,
+   "max": 0.8558558558558559,
+   "n": 10
+  },
+  "descriptives_linear": {
+   "mean": 0.854054054054054,
+   "std": 0.04628912640960407,
+   "min": 0.7837837837837838,
+   "max": 0.918918918918919,
+   "n": 10
+  },
+  "descriptives_quadratic": {
+   "mean": 0.8621621621621622,
+   "std": 0.04843127948005627,
+   "min": 0.7837837837837838,
+   "max": 0.918918918918919,
+   "n": 10
+  },
+  "comparisons": {
+   "linear": {
+    "paired_diff_mean_of_3_seeds_minus_baseline": [
+     -0.09009009009009017,
+     -0.09909909909909909,
+     -0.009009009009008917,
+     -0.11711711711711714,
+     -0.07207207207207222,
+     -0.072072072072072,
+     -0.009009009009009028,
+     -0.06306306306306297,
+     -0.04504504504504503,
+     -0.05405405405405417
+    ],
+    "mean_diff": -0.06306306306306307,
+    "ci95_bootstrap": [
+     -0.0837837837837838,
+     -0.04144144144144145
+    ],
+    "wilcoxon_p_raw": 0.001953125,
+    "wilcoxon_method": "scipy.stats.wilcoxon bilateral, zero_method=wilcox, method=auto",
+    "wilcoxon_p_holm": 0.00390625,
+    "classification": "inferior_o_inconcluso"
+   },
+   "quadratic": {
+    "paired_diff_mean_of_3_seeds_minus_baseline": [
+     -0.09009009009009017,
+     -0.09909909909909909,
+     -0.009009009009008917,
+     -0.11711711711711714,
+     -0.07207207207207222,
+     -0.072072072072072,
+     -0.009009009009009028,
+     -0.06306306306306297,
+     -0.09909909909909909,
+     -0.08108108108108114
+    ],
+    "mean_diff": -0.07117117117117118,
+    "ci95_bootstrap": [
+     -0.09099099099099103,
+     -0.04864864864864861
+    ],
+    "wilcoxon_p_raw": 0.001953125,
+    "wilcoxon_method": "scipy.stats.wilcoxon bilateral, zero_method=wilcox, method=auto",
+    "wilcoxon_p_holm": 0.00390625,
+    "classification": "inferior_o_inconcluso"
+   }
+  },
+  "dataset_classification": "inferior_o_inconcluso"
+ },
+ "per_seed": {
+  "1049": {
+   "mean_accuracy": 0.8621621621621622,
+   "std": 0.04495486468423299,
+   "mean_diff_vs_linear": 0.008108108108108103,
+   "partitions_beating_linear": 4,
+   "partitions_tying_linear": 4,
+   "partitions_losing_to_linear": 2,
+   "mean_diff_vs_quadratic": 0.0,
+   "partitions_beating_quadratic": 2,
+   "test_accuracy_per_partition": [
+    0.8918918918918919,
+    0.8918918918918919,
+    0.7837837837837838,
+    0.8378378378378378,
+    0.8648648648648649,
+    0.918918918918919,
+    0.8648648648648649,
+    0.8108108108108109,
+    0.918918918918919,
+    0.8378378378378378
+   ]
+  },
+  "1050": {
+   "mean_accuracy": 0.827027027027027,
+   "std": 0.04628912640960407,
+   "mean_diff_vs_linear": -0.02702702702702704,
+   "partitions_beating_linear": 1,
+   "partitions_tying_linear": 3,
+   "partitions_losing_to_linear": 6,
+   "mean_diff_vs_quadratic": -0.035135135135135144,
+   "partitions_beating_quadratic": 1,
+   "test_accuracy_per_partition": [
+    0.8378378378378378,
+    0.8648648648648649,
+    0.7837837837837838,
+    0.7567567567567568,
+    0.8378378378378378,
+    0.8648648648648649,
+    0.8918918918918919,
+    0.7837837837837838,
+    0.8648648648648649,
+    0.7837837837837838
+   ]
+  },
+  "1051": {
+   "mean_accuracy": 0.6837837837837839,
+   "std": 0.06502732408150845,
+   "mean_diff_vs_linear": -0.17027027027027025,
+   "partitions_beating_linear": 0,
+   "partitions_tying_linear": 0,
+   "partitions_losing_to_linear": 10,
+   "mean_diff_vs_quadratic": -0.1783783783783784,
+   "partitions_beating_quadratic": 0,
+   "test_accuracy_per_partition": [
+    0.6756756756756757,
+    0.7027027027027027,
+    0.7567567567567568,
+    0.6486486486486487,
+    0.6756756756756757,
+    0.6756756756756757,
+    0.8108108108108109,
+    0.5675675675675675,
+    0.6756756756756757,
+    0.6486486486486487
+   ]
+  }
+ },
+ "seed_std_per_partition": [
+  0.1125224864576288,
+  0.10232267289730222,
+  0.015604061329449314,
+  0.09491579957524987,
+  0.10232267289730226,
+  0.12772474665547595,
+  0.041284465720322856,
+  0.13332115844097966,
+  0.12772474665547595,
+  0.09744733176929699
+ ],
+ "seed_std_mean_over_partitions": 0.09551901423984839,
+ "seed_spread_per_partition_max_minus_min": [
+  0.21621621621621623,
+  0.18918918918918914,
+  0.027027027027026973,
+  0.18918918918918914,
+  0.18918918918918926,
+  0.2432432432432433,
+  0.08108108108108103,
+  0.2432432432432433,
+  0.2432432432432433,
+  0.18918918918918914
+ ]
+}
