@@ -93,3 +93,6 @@ Frozenaaf32b/profile7ab66f8c/source34verifiedpreexecution. Original393.1103s/con
 
 ## 2026-10-09T07:15:12.303058+00:00 — actual native GPU graphics geometry component PASS
 Frozen dda7cbd/profile16ba7e0b/source38 verified before FIFO. All133queries/6656triangles and1/133/4096batches×5match closest object, maxdistance2.384e-7BU.133batch3.26–5.66ms/4096batch65.15–72.60ms/full23.4748s/RSS430.64MiB. Near-plane2^-25 diagnostic wrong far retained; candidates not globally exact. Allrawfiles verified, archive prepared needs publication before ownGPU frontier. No equivalent fullspeedup or RTcore/physical/AMD claim.
+
+## 2026-10-09T07:26:47.971134+00:00 — autonomous actual native graphics frontier PASS, no speedup
+Frozenf333914/profile19bd4e0c/source43verified beforeFIFO. Three133states/186edges/17060paths/17frontiers, everyGPUcandidate exactlyverified/noCPUreplacement; independentfullauditPASS/all150predictionssame,field5.118e-16power5.551e-16. CPU29.866–30.766s/GPU+proof31.535–33.008s, exactsupportproofdominates30.55–32.02s; full201.1724s/RSS357.48MiB. Allrawhashesverified/archivepreparedneedpublish. Next scientific candidateverificationoptimization or recoveryprofilealreadypreparednotexecuted. ArticlecurrentMarkdownupdated buttex/PDFnotyetlatest. GoalACTIVE13:55UTC.

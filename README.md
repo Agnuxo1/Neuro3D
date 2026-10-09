@@ -118,11 +118,21 @@ todavía más eficiente para geometría fija. AMD real sigue pendiente.
 
 ![Coste medido CPU/CUDA y baseline equivalente](Docs/assets/trained-graph-cpu-cuda-scaling-2026-10-09.png)
 
+El [recorrido autónomo con GPU gráfica](Docs/NATIVE_GRAPHICS_FRONTIER_PROTOCOL_2026-10-09.md)
+parte de las cinco fuentes y reproduce **133 estados, 186 conexiones y 17.060 caminos**,
+con los 133 candidatos verificados exactamente y las 150 decisiones originales iguales.
+Diferencia máxima de potencia 5,56×10⁻¹⁶. Construcción completa CPU 29,87–30,77 s
+frente a GPU gráfica + comprobación exacta 31,53–33,01 s: todavía sin aceleración global.
+La fase se conserva mediante longitudes racionales refinadas; el coste dominante es verificar
+los contactos de los triángulos.
+
+![Recorrido autónomo y coste completo](Docs/assets/native-graphics-frontier-2026-10-09.png)
+
 La [GPU gráfica de Blender ya selecciona superficies reales](Docs/NATIVE_GRAPHICS_GEOMETRY_PROTOCOL_2026-10-09.md):
 6.656 triángulos, los 133 rayos correctos en cinco repeticiones y 3,26–5,66 ms por lote con lectura incluida.
 El control de planos separados por 2⁻²⁵ unidades falla y queda registrado; la selección FP32
 requiere verificación exacta antes de propagar fase. Este es un componente geométrico,
-con recorrido autónomo de la red todavía pendiente; no demuestra aceleración completa.
+con recorrido autónomo validado por separado; no demuestra aceleración completa.
 
 ![Geometría real en GPU gráfica](Docs/assets/native-graphics-geometry-2026-10-09.png)
 
