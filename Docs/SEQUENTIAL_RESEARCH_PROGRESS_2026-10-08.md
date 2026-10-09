@@ -137,3 +137,7 @@ One120input/16parameter native state0CPUparityPASS field6.773e-14/Jac6.848e-12/l
 ## 2026-10-09T10:43:17.576265+00:00 — actual installed0.1.3 host recovery PASS
 
 Frozen975d264/90471d0d/40pins. Actualnativebaseline/ownhostkillstep12/childselfexit9/freshregisteredResumeoperator. Completecontinuousproof/exactprefixreplay/all61coords+lossfloathexexact/all150powersdiff0+predsame/test27of30. Staleinput/geometry/truncated +4forgedadversaries rejected; applyNEWsave/reopen/examplepreserved. Full695.905176/RSS574.68. ZIP46f16976/manifestcf781691. Guideupdated0.1.3/old0.1.2preserved. NoGPUUI/powerloss/humanusability/repeatedresumedinterruption claim. Deferredpaired120inputstatepilotd6986c4/425317fc/102pins queuedprospectively. Goalactive13:55UTC.
+
+## 2026-10-09T10:51:06.032000+00:00 — deferred native full-state pilot PASS, equivalent cost no gain
+
+Frozen d6986c4/425317fc/102pins. Deferredandforward120inputs/16params/sameactualgeometry fields/Jac/lossgrad/loss EXACT0diff. IndependentCPUfield6.773e-14/Jac6.848e-12/lossgrad8.641e-12. DEFERRED42.973787/FORWARD38.272944s;noperformancegain; old322snotcausal. Full270.328783/RSS503.53. ActualGPU266surfacequeries/550620opticalfragments/2geometrygenerations. ZEROupdates/untrained40of12010of30. Rawscope60updates templateerratumandlegacystagelabeldocumentedwithouteditingraw. Nextseparatelyfrozenfull60updateprofile. ExternalLinuxinstalled0.1.3run37919893102/sourcefb690da ongoing. Goalactive13:55UTC.
