@@ -51,3 +51,9 @@ The [v7 profile](research/native_graphics_field_profile_v7_2026-10-09.json) rest
 Frozenf062b0761a305a1076d4b3bd8cc71bbde9d81bd6/profileaf503e75/source70verified. The native integer reader correctly rejects GL_INVALID_VALUE0x501 before reading; no field result. Full22.523154seconds/RSS358.816406MiB. [Retained failure](validation/native-graphics-field-2026-10-09/attempt07/evidence_index.json).
 
 The [v8 profile](research/native_graphics_field_profile_v8_2026-10-09.json) records/drains any pre-existing GLerrors once before constructing the owned field kernel, without claiming the preceding geometry/context was error-free. It then records each owned object/rayUBO,shader,VBO,texture,framebuffer,clear,state,binding,draw and readback stage and rejects every newly raised error. This distinguishes stale context errors from faults in this kernel; none of its own errors are ignored. Optical arithmetic, binary64 echo, native integer reading and all150validation gates remain unchanged. The recorded stage audit is retained even if initialization fails.
+
+## Attempt08 localization and prospective native driver messages
+
+Frozen 1c35254d2383a190425fe30c8cfa030676db8201, profile 771d626f, 74 pinned files. No pre-existing GL errors were found. Object UBO creation passes; shader creation introduces GL_INVALID_VALUE 0x501. Transport is rejected before accepting any optical result. Full 22.146367 seconds; peak owned RSS 361.0625 MiB. [Retained stage audit and failure](validation/native-graphics-field-2026-10-09/attempt08/evidence_index.json).
+
+The [v9 profile](research/native_graphics_field_profile_v9_2026-10-09.json) adds a bounded synchronous Khronos debug callback in the owned disposable factory context. It retains the native driver's diagnostic messages around shader creation. Arithmetic, binary64 echo, raw integer readback and all numerical gates remain unchanged. Every newly raised GL error still rejects the trial. No error is waived.
