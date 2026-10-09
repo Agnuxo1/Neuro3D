@@ -117,3 +117,7 @@ Docs/research/own_blender_addon_profile_2026-10-09.json -text !eol whitespace=cr
 Docs/research/own_blender_addon_registration_2026-10-09.json -text !eol whitespace=cr-at-eol
 Docs/validation/own-blender-addon-2026-10-09/** -text !eol whitespace=cr-at-eol
 Blender/releases/** -text !eol whitespace=cr-at-eol
+
+LICENSE -text !eol whitespace=cr-at-eol
+Docs/research/own_blender_addon_profile_v2_2026-10-09.json -text !eol whitespace=cr-at-eol
+Docs/research/own_blender_addon_registration_v2_2026-10-09.json -text !eol whitespace=cr-at-eol
