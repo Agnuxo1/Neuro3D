@@ -1,5 +1,7 @@
 # Perfil posterior de recorrido: preparado, no ejecutado
 
+**Autorización recibida:** el propietario respondió «Sí, autorizo esa continuidad en GitHub» a una pregunta que vinculaba este perfil y los siguientes protocolos de esta secuencia, siempre publicados y fijados antes de cada ensayo. El [recibo separado](research/github_sequence_authorization_2026-10-09.json) conserva esa ampliación y declara ausentes los IDs externos. No se solicitará otra vez la misma autorización.
+
 El [piloto original](CAPTURED_PILOT_EXECUTION_2026-10-09.md) conserva su interrupción a los 90 segundos y métrica nula. El nuevo [perfil congelado](research/indexed_capture_profile_prepared_2026-10-09.json) usa **la misma escena, campos y límites**, pero cambia el selector mediante cajas racionales conservadoras por objeto. Es otro ensayo; su resultado no reescribirá el anterior.
 
 - UUID: `4a0adb28-92de-4910-b2cb-5252df5fa8ef`.
