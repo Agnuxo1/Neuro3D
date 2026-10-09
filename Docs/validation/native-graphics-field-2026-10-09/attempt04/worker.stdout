@@ -1,0 +1,31 @@
+Read blend: "D:\PROJECTS\Neuro3D-Scientific-20261008\Docs\validation\own-blender-addon-2026-10-09\attempt03\worker\jobs\optic-neuro-326edc59834b425d92ea2a99f43faa61\trained_geometry.blend"
+Traceback (most recent call last):
+  File "D:\PROJECTS\Neuro3D-Scientific-20261008\Tools\audit_native_graphics_field_v4.py", line 103, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\PROJECTS\Neuro3D-Scientific-20261008\Tools\audit_native_graphics_field_v4.py", line 91, in main
+    if failure is not None:raise failure
+                           ^^^^^^^^^^^^^
+  File "D:\PROJECTS\Neuro3D-Scientific-20261008\Tools\audit_native_graphics_field_v4.py", line 60, in main
+    actual=transport_batch(own,transport,inputs,distance_tolerance_BU=profile['distance_absolute_tolerance_BU']);report['gpu_fields_executed']=True
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PROJECTS\Neuro3D-Scientific-20261008\Blender\blender_lab\native_graphics_coherent_network_v1.py", line 26, in transport_batch
+    result=backend.query(queries,fields);need(len(result['rows'])==len(mapping),'Complete native field readback required')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PROJECTS\Neuro3D-Scientific-20261008\Blender\blender_lab\native_graphics_field_v4.py", line 126, in query
+    start=time.perf_counter();blocks=[self.query(queries[i:i+256],fields[i:i+256]) for i in range(0,len(queries),256)]
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PROJECTS\Neuro3D-Scientific-20261008\Blender\blender_lab\native_graphics_field_v4.py", line 126, in <listcomp>
+    start=time.perf_counter();blocks=[self.query(queries[i:i+256],fields[i:i+256]) for i in range(0,len(queries),256)]
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PROJECTS\Neuro3D-Scientific-20261008\Blender\blender_lab\native_graphics_field_v4.py", line 155, in query
+    if struct.pack('<dd',fields[3].real,fields[3].imag)!=struct.pack('<dd',complex(fields_input[j]).real,complex(fields_input[j]).imag):raise ValueError('Native GPU incoming binary64 echo differs from exact uploaded field')
+                                                                                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Native GPU incoming binary64 echo differs from exact uploaded field
+addon_utils.disable: optic_neuro_blender not loaded
+Modules Installed (optic_neuro_blender) from 'D:\\PROJECTS\\Neuro3D-Scientific-20261008\\Blender\\releases\\optic-neuro-blender-0.1.2.zip' into 'D:\\PROJECTS\\.cognition\\neuro3d-sequential-20261008\\native-graphics-field-attempt04-20261009\\isolated_scripts\\addons'
+Info: Modules Installed (optic_neuro_blender) from 'D:\\PROJECTS\\Neuro3D-Scientific-20261008\\Blender\\releases\\optic-neuro-blender-0.1.2.zip' into 'D:\\PROJECTS\\.cognition\\neuro3d-sequential-20261008\\native-graphics-field-attempt04-20261009\\isolated_scripts\\addons'
+
+Error: script failed, file: 'D:\PROJECTS\Neuro3D-Scientific-20261008\Tools\audit_native_graphics_field_v4.py', exiting.
+
+Blender quit

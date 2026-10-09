@@ -27,3 +27,9 @@ The [v3 profile](research/native_graphics_field_profile_v3_2026-10-09.json) requ
 Frozen40f74074c335dfd0747c2b655a490f91300d9504/profile86593ade/source63verified. Explicit framebufferUINTreadback passed its word-type gate, but the exact incoming binary64 echo differed from uploaded inputs. Full22.625684seconds/RSS377.109375MiB, metricnull and complete field transport unverified. [Raw failure](validation/native-graphics-field-2026-10-09/attempt03/evidence_index.json).
 
 The separately frozen [v4 diagnostic profile](research/native_graphics_field_profile_v4_2026-10-09.json) retains all gates and adds raw unsigned UBO input-word echo alongside the double-converted echo, recording the first eight input/readback word arrays before validation. This distinguishes ingress, binary64 conversion and integer readback failures without accepting any mismatch or relaxing phase tolerance. It is diagnostic evidence, not a pre-assumed successful optical run.
+
+## Attempt04 word diagnostic and prospective native MRT diagnosis
+
+Frozen961930d/profile734f2919/source66verified, full22.693901seconds/RSS377.902344MiB/null. First8rays retain valid captured geometry readback while all five integer attachments, including raw UBO echo, read zero. [Actual word diagnostic](validation/native-graphics-field-2026-10-09/attempt04/worker/native_binary64_diagnostic.json). This does not identify a phase arithmetic error; it rejects the current graphics transport boundary.
+
+The [v5 profile](research/native_graphics_field_profile_v5_2026-10-09.json) adds constant floating/unsigned attachment probes and reads native GL draw-buffer/capability/error state in the same verified context. It preserves every original field gate. Its purpose is to distinguish a missing draw target or unsigned attachment/readback fault from packet interpretation. It does not accept zero outputs as valid fields. All previous sources and diagnostics remain intact.
