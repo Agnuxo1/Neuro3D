@@ -96,3 +96,10 @@ Docs/validation/trained-geometry-blender-reproduction-2026-10-09/** -text !eol w
 Docs/research/trained_graph_cuda_profile_2026-10-09.json -text !eol whitespace=cr-at-eol
 Docs/research/trained_graph_cuda_registration_2026-10-09.json -text !eol whitespace=cr-at-eol
 Docs/validation/trained-graph-cuda-2026-10-09/** -text !eol whitespace=cr-at-eol
+
+Docs/research/wine_comparison_profile_2026-10-09.json -text !eol whitespace=cr-at-eol
+Docs/research/wine_comparison_registration_2026-10-09.json -text !eol whitespace=cr-at-eol
+Docs/data/uci-wine/** -text !eol whitespace=cr-at-eol
+# Exact upstream metadata retains its original spacing and indentation.
+Docs/data/uci-wine/wine.names -whitespace
+Docs/validation/wine-comparison-2026-10-09/** -text !eol whitespace=cr-at-eol
