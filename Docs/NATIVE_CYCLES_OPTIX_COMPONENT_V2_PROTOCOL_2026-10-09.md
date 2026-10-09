@@ -9,3 +9,11 @@ The existing installed OptiX backend is used without a new SDK. Private OptiX/CU
 Publication on main and the scientific branch, byte verification and shared FIFO precede execution. The prior continuing GitHub authorization applies; external/IPFS registration remains pending. Full133-state/186-edge/17,060-path exact-verified graph, all150 CPU coherent outputs and identical-proof CPU BVH baseline are required for success. GPU coherent optical fields/training and RT kernel counters are separate.
 
 [Frozen v2 profile](research/native_cycles_optix_profile_v2_2026-10-09.json), [v2 registration](research/native_cycles_optix_registration_v2_2026-10-09.json), [original protocol and retained null](NATIVE_CYCLES_OPTIX_COMPONENT_PROTOCOL_2026-10-09.md).
+
+## Actual complete installed OptiX component: accepted
+
+Frozen c0917e20/profile befe0aa4/95 source pins was verified on GitHub before shared-FIFO execution. Blender4.5.14 selected RTX3090 OPTIX exclusively. All133 native renders produced geometric candidates admitted by the independent exact represented-ray verifier:133states,186edges,17,060represented terminal paths. CPU coherent propagation then gave all150 identical decisions, field difference5.118e-16 and power difference5.552e-16. No approximate candidate was silently replaced by a CPU result.
+
+Complete supervised cost63.167784s, peak owned RSS704.27MiB. OptiX candidates plus the identical exact proof took41.008216s; CPU BVH plus that proof10.330787s. This single equivalent pair favors CPU for this small scene; it does not establish an acceleration benefit. Samples of the whole GPU peaked at71% utilization and2631MiB allocated memory; these are not kernel occupancy or energy measurements. Actual rendering is established by selected device and native logs; RT kernel counters were not measured. The coherent fields in this component were computed in CPU, separately from our verified coherent fragment shaders and prepared graphics learning trial. The original extent failure remains preserved.
+
+[Raw evidence and hashes](validation/native-cycles-optix-2026-10-09/attempt02/evidence_index.json), [native result and equivalent costs](validation/native-cycles-optix-2026-10-09/attempt02/worker/result.json), [complete supervisor receipt](validation/native-cycles-optix-2026-10-09/attempt02/supervisor.json).
