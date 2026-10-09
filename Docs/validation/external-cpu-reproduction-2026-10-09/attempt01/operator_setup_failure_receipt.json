@@ -1,0 +1,15 @@
+{
+  "status": "WORKFLOW_SYNTAX_REJECTED_BEFORE_JOB",
+  "primary_metric": null,
+  "run_id": 37886493361,
+  "run_url": "https://github.com/Agnuxo1/Neuro3D/actions/runs/37886493361",
+  "published_commit": "62c9c5d5194d81382793d5f06a25871d37e16447",
+  "jobs_created": 0,
+  "scientific_worker_started": false,
+  "result_collected": false,
+  "local_all38_source_blob_verification_passed": true,
+  "local_verification_receipt_is_not_proof_of_external_execution": true,
+  "diagnosis": "YAML plain run scalar contains colon followed by whitespace in --only-binary=:all:; parser rejects line56 column71. Needs literal block run.",
+  "source_of_diagnosis": "Local PyYAML syntax parser plus GitHub public no-jobs failure metadata",
+  "scope": "Operator factual infrastructure failure receipt; no reproduction result"
+}

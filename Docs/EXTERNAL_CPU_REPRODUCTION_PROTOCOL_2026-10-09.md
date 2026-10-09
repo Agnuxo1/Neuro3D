@@ -1,6 +1,6 @@
 # Repetición CPU en un entorno Linux de GitHub
 
-Estado: PREPARADO, todavía no ejecutado. Esta prueba usa un entorno de ejecución externo al ordenador de desarrollo, con nuestro mismo código y protocolo. No se denomina reproducción realizada o interpretada por un investigador independiente.
+Estado: PRIMER WORKFLOW RECHAZADO ANTES DE CREAR JOBS; no se ejecutó el worker científico ni se obtuvo una réplica. Esta prueba prevé un entorno de ejecución externo al ordenador de desarrollo, con nuestro mismo código y protocolo. No se denomina reproducción realizada o interpretada por un investigador independiente.
 
 ## Perfil y límites fijados
 
@@ -31,3 +31,7 @@ python -X utf8 Tools/run_external_cpu_reproduction_v1.py --profile Docs/research
 ```
 
 Esta receta no ejecuta Blender nativo ni CUDA/AMD y no puede validar hardware fotónico. La descarga oficial de Blender Linux no pudo verificarse desde este entorno, por lo que no se sustituye esa ausencia por una afirmación de instalación Linux satisfactoria. La crítica especializada y réplica independiente humana permanecen pendientes.
+
+## Fallo de infraestructura conservado
+
+Publicado `62c9c5d5194d81382793d5f06a25871d37e16447`, fuentes/perfil/recibo byte a byte verificados localmente. El [run GitHub 37886493361](https://github.com/Agnuxo1/Neuro3D/actions/runs/37886493361) terminó inmediatamente con fallo y cero jobs/artefactos. El parser YAML local identifica `--only-binary=:all:` dentro de un escalar de comando sin bloque: el último `:` seguido de espacio provoca sintaxis inválida. Se conservan [metadatos primarios, preimágenes Git y recibo del operador](validation/external-cpu-reproduction-2026-10-09/attempt01/evidence_index.json), con métrica nula y sin ejecución científica. La corrección usará bloque literal de comando y un perfil nuevo publicado; no se considerará este intento reproducción externa.
