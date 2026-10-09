@@ -15,3 +15,11 @@ The final scene is saved as a new file, reopened, recaptured and independently r
 Full cost includes capture, GPU candidate/proof, independent original-family proof, compile/upload, all61 actual captures, graphical transport and CPU merges, all61 references/shadow updates, save/reopen/fresh final proof and readout. No universal GPU rounding, physical calibration, AMD, hardware RT or speed advantage is assumed. Resource envelope:7,200seconds, oneCPUcore,4,000MiB free RAM before trial/2,500MiB floor,3,000MiB owned RSS,512MiB evidence,8,192MiB sampled whole-device GPU memory and80°C. Failure or deadline is null and retained.
 
 [Frozen profile](research/native_graphics_training_profile_2026-10-09.json), [registration](research/native_graphics_training_registration_2026-10-09.json), [prior graphical derivative audit](NATIVE_GRAPHICS_GEOMETRY_GRADIENT_PROTOCOL_2026-10-09.md), [original CPU learning](CAPTURED_GEOMETRY_TRAINING_PROTOCOL_2026-10-09.md), [continuous-family proof](GLOBAL_TRAINING_FAMILY_PROTOCOL_2026-10-09.md).
+
+## Retained partial first attempt: full training result null
+
+Published5e2c003/profile c3a442b0/98pins was verified before FIFO execution. One complete native state0 recaptured actual geometry and computed all16 field/power/loss tangents for120 training inputs. Field discrepancy6.773e-14, field-Jacobian6.848e-12 and loss-gradient8.641e-12 passed their frozen numerical gates. This does not complete the required60 updates and61 native states.
+
+Observed first-state graphics transport plus CPU merges took322.452627s. A simple61-state projection is19,669.61s, exceeding the7200s prospective resource envelope; this projection is not a measured full training time. The operator stopped only the owned Blender worker, retaining all partial data and a null complete-trial metric. Supervisor cost492.533853s, peak owned RSS393.55MiB. A separately frozen deferred geometry/optical shading implementation is needed before another trial. No threshold or original profile was relaxed.
+
+[Partial state, supervisor and stop hashes](validation/native-graphics-training-2026-10-09/attempt01/evidence_index.json), [state0 numerical outputs](validation/native-graphics-training-2026-10-09/attempt01/worker/state_0.json), [operator stop reason](validation/native-graphics-training-2026-10-09/attempt01/operator_stop.json).

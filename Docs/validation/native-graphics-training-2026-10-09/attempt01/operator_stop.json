@@ -1,0 +1,12 @@
+{
+  "schema": "optic_neuro_blender.operator_stop.v1",
+  "utc": "2026-10-09T10:35:34.707385+00:00",
+  "reason": "First complete120-input/16parameter native graphics state alone projects beyond frozen7200-second envelope; retainpartialstate andnullfulltrial, develop separatelyfrozen deferredsurface/opticalshading arm. No thresholds relaxed.",
+  "completed_states": 1,
+  "observed_first_state_graphics_seconds": 322.452626899998,
+  "simple61_state_projection_seconds": 19669.610240899878,
+  "projection_is_not_measured_full_cost": true,
+  "owned_blender_pid": 28212,
+  "birth_unix": 1791541642.564737,
+  "completed_state0_sha256": "b91bf3f7df0aba8c940df71e32ff37c14d30b758111231d483272de73f1267de"
+}

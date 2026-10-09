@@ -129,3 +129,7 @@ Frozen d98f506/d7a23b34/92pins prospective. LogRTX3090(OptiX)/OPTIXBVH/4x4 rende
 ## 2026-10-09T10:26:31.149847+00:00 — complete actual native OptiX component PASS
 
 Frozen c0917e20/befe0aa4/95pins prospective. RTX3090 OPTIX133nativequeries/exactadmission133states186edges17060paths/all150same, field5.118e-16/power5.552e-16. Full63.167784s/RSS704.27MiB. Identical-proofOptiX41.008s/CPUBVH10.331s/no speedgain. WholeGPU sampled71percent/max2631MiB, notRTcounters/energy. CPUcoherentfields explicit. All raw SHA verified; originalnull preserved. Next frozen native graphics training fd91670/98pins NOT yet executed. Installed0.1.3 resume draft not yet frozen/nativevalidated. Goalactive deadline13:55UTC.
+
+## 2026-10-09T10:36:18.658245+00:00 — native graphics learning v1 partial/null retained
+
+One120input/16parameter native state0CPUparityPASS field6.773e-14/Jac6.848e-12/lossgrad8.641e-12. Observedgraphics+merges322.452627s/state; simple61projection19669.61s>7200s. OperatorkilledONLYownBlender28212birthverified, allpartialSHAarchived/nullfulltraining. Fullsupervisor492.533853s/RSS393.55. NewdeferredactualGPUcandidatecache/fullscreenFP64phase-tangent method underdevelopment, no phase/U supplied; JEVconnected/provenancejev recommendsprospectivepilot. Installed0.1.3hostrecovery runningbaselinePASS27of30/150same; pause/resume pending. Mainandbranch975d264matched. Goalactive13:55UTC.
