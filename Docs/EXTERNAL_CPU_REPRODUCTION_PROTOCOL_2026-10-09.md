@@ -35,3 +35,7 @@ Esta receta no ejecuta Blender nativo ni CUDA/AMD y no puede validar hardware fo
 ## Fallo de infraestructura conservado
 
 Publicado `62c9c5d5194d81382793d5f06a25871d37e16447`, fuentes/perfil/recibo byte a byte verificados localmente. El [run GitHub 37886493361](https://github.com/Agnuxo1/Neuro3D/actions/runs/37886493361) terminó inmediatamente con fallo y cero jobs/artefactos. El parser YAML local identifica `--only-binary=:all:` dentro de un escalar de comando sin bloque: el último `:` seguido de espacio provoca sintaxis inválida. Se conservan [metadatos primarios, preimágenes Git y recibo del operador](validation/external-cpu-reproduction-2026-10-09/attempt01/evidence_index.json), con métrica nula y sin ejecución científica. La corrección usará bloque literal de comando y un perfil nuevo publicado; no se considerará este intento reproducción externa.
+
+## Perfil v2 con sintaxis corregida, todavía no ejecutado
+
+[Perfil v2](research/external_cpu_reproduction_profile_v2_2026-10-09.json), UUID `67ba33d3-4006-43d9-b3cf-e0eae2fc1d6a`, SHA-256 `cee34399e9d6a0529cdae293677551ae8341640853a0e60c628fe510ded42fef`. Cambia únicamente el hash del workflow por el uso de bloques literales y rutas de perfil/recibo versionadas. Los otros 37 pins, datos, controles, software científico, ruedas de dependencias, versiones y límites son los mismos. Un parser YAML confirma ahora la sintaxis antes de publicar. La ejecución sigue exigiendo igualdad con todos los blobs Git antes de obtener datos.
