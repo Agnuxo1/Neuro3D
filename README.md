@@ -48,7 +48,12 @@ La [reproducción CPU en un entorno Linux de GitHub](Docs/EXTERNAL_CPU_REPRODUCT
 pasa los 34 controles, el certificado racional y las 61 auditorías del entrenamiento.
 Reproduce **150/150 decisiones y 27/30 aciertos**, con diferencia máxima de
 potencia `3,89×10⁻¹⁶`; el ejecutor científico tarda 367,37 s. La réplica por
-investigadores independientes y la instalación nativa Blender Linux siguen pendientes.
+investigadores independientes sigue pendiente. La [instalación nativa Blender Linux](Docs/EXTERNAL_NATIVE_BLENDER_PROTOCOL_2026-10-09.md) también
+pasa sus nueve controles: entrenamiento real con 61 auditorías y 27/30 aciertos,
+recuperación, copia/reapertura y log de salida sin errores. Coste completo 685,77 s;
+preparación 21,09 s y controles nativos 663,69 s; diferencias de potencia con Windows≤3,89×10⁻¹⁶.
+
+![Controles y coste del Blender nativo Linux](Docs/assets/external-native-blender-2026-10-09.png)
 
 ```mermaid
 flowchart LR

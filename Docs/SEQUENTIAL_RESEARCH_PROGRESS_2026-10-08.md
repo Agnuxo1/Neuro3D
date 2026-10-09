@@ -70,3 +70,7 @@ Análisis de cajas continuas publicado en be4c73f8f1aaa49ebeea9765bd70f4c85f0dd3
 ## 2026-10-09 — Linux nativo, fallo previo al ensayo
 
 Run37890682207/commit09ff486:42blobs verificados, descarga oficial HTTP403,0.428s/métrica nula/Blender no iniciado. Raw+ZIP SHA6719928c publicados con preimágenes. Próximo protocolo con transporte alternativo y mismos hashes/controles; novedad aún no establecida.
+
+## 2026-10-09T06:13:17.269490+00:00 — external native Linux Blender PASS
+
+Frozenc1642ca/profile321bb660/42blobs runnerverifiedbeforeexecution. Run37891059818/job113691864448 all9nativecontrols+wholepostexitlog PASS;685.7705s/RSS756.336MiB,preparation21.0921/native663.6866s. Blender4.5.14LTS actualLinux/Python3.11.15/np1.26.4/build62c1db4208e8;61nativegeometryaudits/27of30/powerdiffWindows3.886e-16/nativefinal0. Artifact11598995624SHA896ca548verifiedallraw/publishedpreimages; archivereadydocupdates needpublish. GPUpairedtrainingfrozen9225699/source25 verifiedbeforeFIFO execution, CPUbaseline complete andCUDAstate3 underway, nofinalCUDAresultyet. Article.tex pdflatexlocalfirstpass8pages compiled; integratedhelperfailed/latexmknoPerl retained, needfinalupdate/recompile/publication. Independentexpert/AMD/IPFS/physicalremainopen. Goalactiveuntil13:55UTC.

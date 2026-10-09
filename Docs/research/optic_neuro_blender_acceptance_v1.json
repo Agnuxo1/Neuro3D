@@ -83,16 +83,16 @@
       "name": "Recovery, Blender interface, clean reproduction",
       "status": "PARTIAL_STANDALONE_NATIVE_ADDON_FLOW_AND_LIFECYCLE_VERIFIED",
       "acceptance": "Install/edit/run/cancel/save/reopen/export; guarded failure recovery; clean-environment documented reproduction",
-      "achieved": "ZIP0.1.1 isolatedactualinstall/registeredoperators; ownbackgroundBlenderinfer150/training61audits27of30,staleinput/scene,ownedcancel,recover/apply,newcopy/reopen,tamperrejectionPASS9. Originalpreserved;shutdownlogshowsdoubleunregisterRuntimeError retained; separatelyfrozenZIP0.1.2 unchangedscientificpayload,5actualnativecycles/cancel/infercontrols PASS65.04s,wholepostexitlognoerror",
-      "remaining": "Interruptedhost/crashrecovery, nativeLinuxcleaninstall, humanusabilityandindependentexperts"
+      "achieved": "ZIP0.1.1 isolatedactualinstall/registeredoperators; ownbackgroundBlenderinfer150/training61audits27of30,staleinput/scene,ownedcancel,recover/apply,newcopy/reopen,tamperrejectionPASS9. Originalpreserved;shutdownlogshowsdoubleunregisterRuntimeError retained; separatelyfrozenZIP0.1.2 unchangedscientificpayload,5actualnativecycles/cancel/infercontrols PASS65.04s,wholepostexitlognoerror; actualnativeLinuxBlender run37891059818 all9controls/61trainingaudits27of30/logclean/full685.77s/RSS756.34MiB",
+      "remaining": "Interruptedhost/crashrecovery, humanusabilityandindependentexperts"
     },
     {
       "id": 10,
       "name": "External reproduction and scientific article",
       "status": "PARTIAL_EXTERNAL_LINUX_CPU_REPRODUCTION_AND_REPRODUCIBLE_DRAFT_PUBLISHED",
       "acceptance": "Release evidence and reproducible article; independently executed external reproduction explicitly distinguished from local checks",
-      "achieved": "GitHub-hosted Linux CPU run37886830249/commitbbc06c3 verifies40blobs beforedata;34controls, rational replay,61trainingauditsPASS;27of30test,150predictionssame, powerdifference3.886e-16. English reproducible scientific draft published; rawexternalartifact permanentlyarchived.",
-      "remaining": "Independent researchers and specialist critique; native Linux Blender/GPU beyond CPU; journal submission and broader replication; exceptional novelty/importance not established"
+      "achieved": "GitHub-hosted Linux CPU run37886830249/commitbbc06c3 verifies40blobs beforedata;34controls, rational replay,61trainingauditsPASS;27of30test,150predictionssame, powerdifference3.886e-16. English reproducible scientific draft published; rawexternalartifact permanentlyarchived.; actualnativeLinuxBlender run37891059818 all9controls/61trainingaudits27of30/logclean/full685.77s/RSS756.34MiB",
+      "remaining": "Independent researchers and specialist critique; actual external GPU beyond native Linux Blender; journal submission and broader replication; exceptional novelty/importance not established"
     }
   ],
   "claim_policy": {
