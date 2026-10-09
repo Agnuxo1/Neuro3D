@@ -75,7 +75,7 @@
       "status": "PARTIAL_ACTUAL_NATIVE_GRAPHICS_FRONTIER_AND_CUDA_ARITHMETIC_VERIFIED",
       "acceptance": "Equivalent outputs and precision, actual vendor execution receipts, complete preparation/transfer/compute/readout/training cost and resource/ablation evidence",
       "amd_execution_verified": false,
-      "achieved": "Actual RTX3090 raster/FP64 coherentfields/gradients/fullhybridlearning; actual CyclesOptiX and supplementary CUDA. Identical-proof engine ablations and paired fullcost retained. Native equal-output1/150/4096sixpairs accepted; GPUslower in every pair, no globaladvantage. Secondary CPU packing5650packets exactbyteparity: faster150/4096, slower1;5834chunks/35004integerreads/46488textureallocations reconciled, logicalbytes notPCIecounters. Resident133state GPUgraph/localactualsurface coefficients experimental published120pins, nativeexecution/advantage notyetverified.",
+      "achieved": "Actual RTX3090 raster/FP64 coherentfields/gradients/fullhybridlearning; actual CyclesOptiX and supplementary CUDA. Identical-proof engine ablations and paired fullcost retained. Native equal-output1/150/4096sixpairs accepted; GPUslower in every pair, no globaladvantage. Secondary CPU packing5650packets exactbyteparity: faster150/4096, slower1;5834chunks/35004integerreads/46488textureallocations reconciled, logicalbytes notPCIecounters. Resident133state GPUgraph/localactualsurface coefficients experimental published120pins, nativeexecution/advantage notyetverified. Native residentphase-cache/GPUrecurrence actually executed: v1max6attachmentNULL; separatev2/v3exactfiveinputecho pass butcoherentcontrol6.376147888196662e-8 exceeds1e-11, so rejected; allrawretained, noadvantage orvalidinferenceclaim.",
       "remaining": "ActualAMDhardware; energy/structuralscaling/ablations; exact GPU geometry predicates or lower-cost valid candidate certificates; installedgraphicsintegration"
     },
     {
@@ -146,13 +146,14 @@
   "latest_native_graphics_learned_field_certificate": "Docs/validation/native-deferred-training-certificate-2026-10-09/attempt01/evidence_index.json",
   "latest_native_graphics_batch_scaling": "Docs/validation/native-graphics-scaling-2026-10-09/attempt02/evidence_index.json",
   "latest_native_packet_workload": "Docs/validation/native-packet-workload-2026-10-09/attempt01/evidence_index.json",
-  "updated_utc": "2026-10-09T13:36:17.318480+00:00",
+  "updated_utc": "2026-10-09T13:53:10.748087+00:00",
   "historical_previous_acceptance": "Docs/research/historical_acceptance_before_final_audit_2026-10-09.json",
   "latest_authoritative_summary": "Docs/SCIENTIFIC_ACCEPTANCE_REPORT_2026-10-09.md",
   "earlier_cpu_geometry_training_result": "Docs/validation/captured-geometry-training-2026-10-09/attempt01/worker/result.json",
   "earlier_pilot_output_certificate": "Docs/validation/observed-graph-output-enclosure-2026-10-09/analysis02/certificate.json",
-  "latest_native_resident_graph_profile": "Docs/research/native_resident_graph_profile_2026-10-09.json",
-  "native_resident_graph_status": "PUBLISHED_AND_VERIFIED_WAITING_SHARED_FIFO_NOT_EXECUTED",
+  "latest_native_resident_graph_profile": "Docs/research/native_resident_graph_v3_profile_2026-10-09.json",
+  "native_resident_graph_status": "REJECTED_NATIVE_CONTROL_FIELD_ERROR_ORIGINAL_THREE_ATTEMPTS_RETAINED",
   "latest_public_http_receipt": "Docs/publication/public_main_http_verification_2026-10-09.json",
-  "review_packet": "Docs/EXTERNAL_REVIEW_PACKET_2026-10-09.md"
+  "review_packet": "Docs/EXTERNAL_REVIEW_PACKET_2026-10-09.md",
+  "latest_native_resident_graph_attempt": "Docs/validation/native-resident-graph-2026-10-09/attempt03/evidence_index.json"
 }
