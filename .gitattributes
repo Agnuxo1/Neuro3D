@@ -73,6 +73,7 @@ Docs/validation/captured-scalar-ingress-2026-10-08/** -text !eol whitespace=cr-a
 Docs/research/iris_scene_coordinate_bindings_v1.json -text !eol whitespace=cr-at-eol
 Docs/research/iris_coherent_contract_v1.json -text !eol whitespace=cr-at-eol
 Docs/research/indexed_capture_profile_prepared_2026-10-09.json -text !eol whitespace=cr-at-eol
+Docs/research/github_sequence_authorization_2026-10-09.json -text !eol whitespace=cr-at-eol
 Docs/validation/coherent-contract-2026-10-08/** -text !eol whitespace=cr-at-eol
 Docs/validation/captured-pilot-supervisor-2026-10-08/** -text !eol whitespace=cr-at-eol
 Docs/validation/captured-pilot-execution-2026-10-09/** -text !eol whitespace=cr-at-eol
