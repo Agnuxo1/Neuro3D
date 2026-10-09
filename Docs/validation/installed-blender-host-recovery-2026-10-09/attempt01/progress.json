@@ -1,0 +1,78 @@
+{
+  "schema": "optic_neuro_blender.installed_resume_supervision.v1",
+  "status": "NOT_EXECUTED",
+  "primary_metric": null,
+  "worker_started": true,
+  "profile_sha256": "90471d0d2083e09a6f1e7c02b7a75a4a57b21ee98ec320147906e4c03dac9b43",
+  "registration_sha256": "0731958f9ab47be14b4728366d1564e594274ace118daf4d03ea2ce056fdd452",
+  "stages": [
+    {
+      "mode": "BASELINE",
+      "seconds": 258.8760456000018,
+      "host_exit_code": 0,
+      "owned_host_killed": false,
+      "result": {
+        "schema": "optic_neuro_blender.installed_resume_owner.v1",
+        "status": "PASS",
+        "mode": "BASELINE",
+        "job_folder": "D:\\PROJECTS\\.cognition\\neuro3d-sequential-20261008\\installed-blender-resume-attempt01-20261009\\jobs\\optic-neuro-9bca025e46c145e3b41e0c0533b0c32f",
+        "checks": [],
+        "test_correct": 27,
+        "native_power_max_difference": 0.0,
+        "resume_step": 0,
+        "geometry_membership_states": 61,
+        "seconds": 257.86621909999667,
+        "original_example_preserved": true
+      }
+    },
+    {
+      "mode": "PAUSE",
+      "seconds": 182.36066939999728,
+      "host_exit_code": 1,
+      "owned_host_killed": true,
+      "child_self_exit_code": 9,
+      "original_interrupted_folder": "D:\\PROJECTS\\.cognition\\neuro3d-sequential-20261008\\installed-blender-resume-attempt01-20261009\\jobs\\optic-neuro-19d0255012584241a9100c5e84c93171",
+      "checkpoint_sha256": "cc401ca3899bba51548b2b5a20529cb88bbef99d49f3a42d996731e40beb9b87"
+    },
+    {
+      "mode": "RESUME",
+      "seconds": 253.91099410000606,
+      "host_exit_code": 0,
+      "owned_host_killed": false,
+      "result": {
+        "schema": "optic_neuro_blender.installed_resume_owner.v1",
+        "status": "PASS",
+        "mode": "RESUME",
+        "job_folder": "D:\\PROJECTS\\.cognition\\neuro3d-sequential-20261008\\installed-blender-resume-attempt01-20261009\\jobs\\optic-neuro-f72310fc06b343babd282b0c524c5930",
+        "checks": [
+          {
+            "name": "changed_inputs_resume_rejected",
+            "pass": true
+          },
+          {
+            "name": "changed_geometry_resume_rejected",
+            "pass": true
+          },
+          {
+            "name": "truncated_checkpoint_resume_rejected",
+            "pass": true
+          },
+          {
+            "name": "checkpoint12_replay_adam_and_four_adversaries",
+            "pass": true
+          },
+          {
+            "name": "resumed_complete_apply_save_reopen",
+            "pass": true
+          }
+        ],
+        "test_correct": 27,
+        "native_power_max_difference": 0.0,
+        "resume_step": 12,
+        "geometry_membership_states": 61,
+        "seconds": 252.8066020000042,
+        "original_example_preserved": true
+      }
+    }
+  ]
+}

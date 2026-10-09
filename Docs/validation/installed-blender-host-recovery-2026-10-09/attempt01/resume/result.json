@@ -1,0 +1,34 @@
+{
+  "schema": "optic_neuro_blender.installed_resume_owner.v1",
+  "status": "PASS",
+  "mode": "RESUME",
+  "job_folder": "D:\\PROJECTS\\.cognition\\neuro3d-sequential-20261008\\installed-blender-resume-attempt01-20261009\\jobs\\optic-neuro-f72310fc06b343babd282b0c524c5930",
+  "checks": [
+    {
+      "name": "changed_inputs_resume_rejected",
+      "pass": true
+    },
+    {
+      "name": "changed_geometry_resume_rejected",
+      "pass": true
+    },
+    {
+      "name": "truncated_checkpoint_resume_rejected",
+      "pass": true
+    },
+    {
+      "name": "checkpoint12_replay_adam_and_four_adversaries",
+      "pass": true
+    },
+    {
+      "name": "resumed_complete_apply_save_reopen",
+      "pass": true
+    }
+  ],
+  "test_correct": 27,
+  "native_power_max_difference": 0.0,
+  "resume_step": 12,
+  "geometry_membership_states": 61,
+  "seconds": 252.8066020000042,
+  "original_example_preserved": true
+}
