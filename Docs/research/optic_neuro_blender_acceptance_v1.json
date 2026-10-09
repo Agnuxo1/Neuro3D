@@ -24,16 +24,18 @@
     {
       "id": 3,
       "name": "Frozen pilot and captured-scene traversal",
-      "status": "FROZEN_PILOT_EXECUTED_INCONCLUSIVE_DEADLINE",
+      "status": "CAPTURED_EXACT_STATE_GRAPH_COMPLETE_NATIVE_ESTIMATES",
       "acceptance": "Valid external registration or explicit human GitHub exception, then execute unchanged archived protocol and independent categorical audit",
       "proposal_id": "957514f2-a233-421f-aa04-50cccd063d97",
       "protocol_sha256": "5d0cf372f2f66f043c2a219ba6a60f0182ced8a60039348d486ec163be736226",
       "result_collected": false,
-      "achieved": "Authorized frozen worker executed once; pins,90s supervisor limit,raw preimages and cleanup audited; prior RAM refusal retained",
-      "remaining": "New prospective traversal work required; no field result from frozen pilot; external registry still pending",
+      "achieved": "Original frozen pilot remains deadline/null; separate frozen graph COMPLETE133states186edges17060terminalpaths104objects5sources; independent closed nearest and nonzero branch audit",
+      "remaining": "Independent interior-neighborhood check,native field/error/decision certification,and scientific training validation remain distinct",
       "latest_attempt": "Docs/validation/captured-pilot-execution-2026-10-09/attempt02/supervisor.json",
       "latest_attempt_status": "WORKER_DEADLINE",
-      "primary_metric": null
+      "primary_metric": null,
+      "latest_graph_result": "Docs/validation/coherent-state-graph-capture-2026-10-09/attempt01/supervisor.json",
+      "latest_graph_metric": 1
     },
     {
       "id": 4,

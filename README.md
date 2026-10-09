@@ -44,6 +44,15 @@ el [plan completo](Docs/BLENDER_SCIENTIFIC_ROADMAP_2026-10-08.md) y la
 
 ## Pregunta científica y progreso verificable
 
+El [recorrido coherente de la captura real](Docs/COHERENT_STATE_GRAPH_AND_GRADIENTS_2026-10-09.md)
+ya devuelve `COMPLETE`: **133 estados exactos, 186 aristas y 17.060 caminos
+terminales representados**, con las 104 superficies alcanzadas desde cinco fuentes.
+El auditor separado verifica primeros hits y cobertura de ramas no nulas.
+Son ocho campos/potencias nativos calculados; todavía falta certificar su error,
+entrenamiento y generalización. El nuevo perfil no sustituye los dos ensayos inconclusos.
+
+![Recorrido y detectores de la captura real](Docs/assets/captured-coherent-graph-2026-10-09.png)
+
 El [ejecutor y auditor del piloto](Docs/CAPTURED_PILOT_SUPERVISOR_2026-10-08.md)
 están preparados con fuentes/inputs fijados, límites de recursos y negativa por
 registro ausente. Pasan 66 controles conjuntos de software. El piloto se ejecutó
