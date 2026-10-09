@@ -61,3 +61,5 @@ python -X utf8 Tools/run_frozen_own_addon_audit_v2.py --profile Docs/research/ow
 ```
 
 La comprobación de todos los bytes Git y del remoto debe terminar con salida 0 antes de lanzar este proceso.
+
+El segundo intento se ejecutó después de verificar las 32 fuentes y el remoto en `02572a80ba966e6a807b993c6e6c3d76dc67fa0a`. La instalación ZIP aislada y el registro de operadores sí funcionaron. La inferencia se detuvo al pasar campos complejos al auditor mediante un conversor que sólo admite racionales. Se conserva [el intento completo](validation/own-blender-addon-2026-10-09/attempt02/evidence_index.json), 42,7916 s, RSS agregado máximo 529,461 MiB, métrica nula y sin resultado de inferencia o entrenamiento. La corrección será un nuevo worker que usa el conversor complejo existente y un ZIP 0.1.1, conservando 0.1.0.
