@@ -74,3 +74,16 @@ Pendiente de autorización. Este commit es la marca temporal interna.
 4. **Decisión:** sin cambios respecto a la sección 6, aplicada al régimen de esta enmienda.
 
 **Alcance declarado.** La validación cubre el interferómetro con divisores a 45° y w ≥ 8λ. No cubre incidencias ±10°, haces estrechos ni otras geometrías. Esta enmienda se decidió con JEV (procedencia `jev`; confianza 1,0 en ambas decisiones).
+
+## Enmienda 2 (2026-10-09, antes de cualquier simulación con el nuevo solver)
+
+**Motivo medido.** Con el solver directo de Helmholtz (factorización dispersa), el dominio con w = 8λ tiene 2,1 M incógnitas a λ/16 y 4,7 M a λ/24. Cada factorización necesita entre 6 y 37 GB y entre 1 y 14 h, y el barrido exige 21 factorizaciones por malla y anchura. Con 9,5 GB libres esto no es viable (`Benchmarks/validacion-onda/INFORME-EJECUCION-P1-7.md`). Además, mover un espejo para barrer ΔL desplaza el haz hasta 0,5λ en el puerto de salida.
+
+**Cambios.**
+1. **Solver de referencia:** FDTD escalar 2D, modo TM, en CPU con numpy: malla de Yee, capas absorbentes PML, fuente de onda continua con encendido suave y extracción del fasor en régimen permanente. Sustituye al solver directo. Antes de cualquier simulación, deben pasar dos pruebas: (a) **dominio vacío** con reflexión < 10⁻³ y (b) **convergencia** entre λ/16 y λ/24 con diferencia de E_max < 0,005 (criterio sin cambios; si no se cumple, el resultado es no concluyente).
+2. **Barrido:** se mantiene el espejo móvil. El modelo incluye el desplazamiento del haz: la amplitud de salida de cada brazo es el solapamiento del haz gaussiano desplazado con el modo gaussiano de cada puerto, con la misma definición que en el solver. El modelo sigue sin difracción de camino (propagación exp(i2πL/λ) y coeficientes calibrados de los divisores).
+3. **Anchura:** solo w = 8λ (régimen declarado). Las anchuras 4λ y 16λ se descartan del protocolo.
+4. **Divisores:** sin cambios respecto a la enmienda 1 (divisores a 45°, TM, película recalibrada a 45°, con las pruebas de calibración de la enmienda 1).
+5. **Decisión:** sin cambios (sección 6), aplicada a w = 8λ.
+
+**Alcance.** La validación cubre el interferómetro de la enmienda 1 con w = 8λ, con solver FDTD. Esta enmienda se decidió con JEV (procedencia `jev`; confianza 1,0 en el solver, 0,94 en el barrido, 0,80 en la anchura).
