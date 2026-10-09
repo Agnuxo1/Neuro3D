@@ -133,3 +133,7 @@ Frozen c0917e20/befe0aa4/95pins prospective. RTX3090 OPTIX133nativequeries/exact
 ## 2026-10-09T10:36:18.658245+00:00 — native graphics learning v1 partial/null retained
 
 One120input/16parameter native state0CPUparityPASS field6.773e-14/Jac6.848e-12/lossgrad8.641e-12. Observedgraphics+merges322.452627s/state; simple61projection19669.61s>7200s. OperatorkilledONLYownBlender28212birthverified, allpartialSHAarchived/nullfulltraining. Fullsupervisor492.533853s/RSS393.55. NewdeferredactualGPUcandidatecache/fullscreenFP64phase-tangent method underdevelopment, no phase/U supplied; JEVconnected/provenancejev recommendsprospectivepilot. Installed0.1.3hostrecovery runningbaselinePASS27of30/150same; pause/resume pending. Mainandbranch975d264matched. Goalactive13:55UTC.
+
+## 2026-10-09T10:43:17.576265+00:00 — actual installed0.1.3 host recovery PASS
+
+Frozen975d264/90471d0d/40pins. Actualnativebaseline/ownhostkillstep12/childselfexit9/freshregisteredResumeoperator. Completecontinuousproof/exactprefixreplay/all61coords+lossfloathexexact/all150powersdiff0+predsame/test27of30. Staleinput/geometry/truncated +4forgedadversaries rejected; applyNEWsave/reopen/examplepreserved. Full695.905176/RSS574.68. ZIP46f16976/manifestcf781691. Guideupdated0.1.3/old0.1.2preserved. NoGPUUI/powerloss/humanusability/repeatedresumedinterruption claim. Deferredpaired120inputstatepilotd6986c4/425317fc/102pins queuedprospectively. Goalactive13:55UTC.

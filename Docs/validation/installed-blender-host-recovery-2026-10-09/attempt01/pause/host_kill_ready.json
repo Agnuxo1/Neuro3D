@@ -1,0 +1,13 @@
+{
+  "host_identity": {
+    "pid": 14712,
+    "os_creation_token": "134360156570146323"
+  },
+  "child_identity": {
+    "pid": 31548,
+    "os_creation_token": "134360156664641263"
+  },
+  "job_folder": "D:\\PROJECTS\\.cognition\\neuro3d-sequential-20261008\\installed-blender-resume-attempt01-20261009\\jobs\\optic-neuro-19d0255012584241a9100c5e84c93171",
+  "checkpoint_sha256": "cc401ca3899bba51548b2b5a20529cb88bbef99d49f3a42d996731e40beb9b87",
+  "next_step": 12
+}

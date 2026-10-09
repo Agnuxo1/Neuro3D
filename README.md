@@ -32,6 +32,8 @@ La [prueba nativa de OptiX en RTX 3090](Docs/NATIVE_CYCLES_OPTIX_COMPONENT_V2_PR
 
 La [selección de aceleración gráfica](Docs/ADVANCED_GRAPHICS_TECHNOLOGY_SELECTION_2026-10-09.md) distingue las tecnologías ejecutadas de los ensayos preparados. El [artículo PDF](Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.pdf) incluye métodos, resultados negativos y mapa de reproducción; se conserva su [recibo de compilación](Docs/paper/scientific_article_build_receipt_2026-10-09.json). Sigue siendo un borrador sin revisión externa ni envío a una revista.
 
+El [complemento 0.1.3](Blender/releases/optic-neuro-blender-0.1.3.zip) ya incorpora **reanudar entrenamiento interrumpido**. En la [prueba nativa de recuperación](Docs/INSTALLED_BLENDER_HOST_RECOVERY_PROTOCOL_2026-10-09.md), un Blender nuevo recupera el checkpoint 12 y reproduce exactamente los 61 estados y las 150 potencias; el trabajador se detiene solo al perder su propietario. Es un flujo CPU comprobado, con instrucciones y versiones anteriores conservadas.
+
 ## Funcionamiento verificado de la red
 
 ![Recorrido del campo coherente observado en GPU](Docs/assets/captured-gpu-coherent-network-2026-10-09.gif)
