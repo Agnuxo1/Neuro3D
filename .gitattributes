@@ -103,3 +103,8 @@ Docs/data/uci-wine/** -text !eol whitespace=cr-at-eol
 # Exact upstream metadata retains its original spacing and indentation.
 Docs/data/uci-wine/wine.names -whitespace
 Docs/validation/wine-comparison-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/wine-comparison-2026-10-09/**/wine.names -whitespace
+
+Docs/research/gaussian_wave_profile_2026-10-09.json -text !eol whitespace=cr-at-eol
+Docs/research/gaussian_wave_registration_2026-10-09.json -text !eol whitespace=cr-at-eol
+Docs/validation/gaussian-wave-reference-2026-10-09/** -text !eol whitespace=cr-at-eol

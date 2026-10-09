@@ -1,0 +1,11 @@
+{
+  "schema": "optic_neuro_blender.operator_recorded_software_controls.v1",
+  "preexecution": true,
+  "tests_passed": 5,
+  "tests_failed": 0,
+  "suite": [
+    "Blender.tests.test_classifier_comparison_v1",
+    "Blender.tests.test_frozen_wine_profile_v1"
+  ],
+  "evidence": "Successful tool execution beforecommit0e2e7c1,unittest5tests0.608seconds. This is a factualoperatorreceipt, not a rawstdout capture; no controls rerun solely for logging."
+}

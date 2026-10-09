@@ -18,7 +18,7 @@
       "name": "Units, coherence, phases, parameters, detectors",
       "status": "PARTIAL_SEMANTIC_CONTRACT_VERIFIED",
       "acceptance": "Versioned contract enforced at actual scene ingress; analytic controls and roundtrip; normalized power separated from calibrated watts",
-      "remaining": "Full solver and training consumption; certified native error and physical regime remain separate",
+      "remaining": "Broader geometry/model families and calibrated physical units; existing solver/training consume declared common-coherence unit-power input contract",
       "achieved": "Explicit units, common phase/coherence, modal readout enforced; 50 CPU controls; actual Iris bpy admission and fixture save/reopen PASS"
     },
     {
@@ -30,7 +30,7 @@
       "protocol_sha256": "5d0cf372f2f66f043c2a219ba6a60f0182ced8a60039348d486ec163be736226",
       "result_collected": false,
       "achieved": "Original frozen pilot remains deadline/null; separate frozen graph COMPLETE133states186edges17060terminalpaths104objects5sources; independent closed nearest and nonzero branch audit",
-      "remaining": "Scientific training validation; original pilot deadline remains unchanged",
+      "remaining": "Originalpilotdeadline remains unchanged/null; wideradmittedfamilies andexternalregistration remain separate",
       "latest_attempt": "Docs/validation/captured-pilot-execution-2026-10-09/attempt02/supervisor.json",
       "latest_attempt_status": "WORKER_DEADLINE",
       "primary_metric": null,
@@ -43,7 +43,7 @@
       "status": "PARTIAL_OBSERVED_REPRESENTED_ERROR_CERTIFIED",
       "acceptance": "All relevant branches covered; adverse controls; capture/representation/geometry/phase/sum/readout budgets complete; invalid margins stay unknown",
       "achieved": "Independent interval enclosure: observed native field L1<=4.9383434427813286e-15,power<=3.1372973883238074e-15; represented det.R1 argmax margin>=0.18933601504039158; seven adverse/enclosure controls plus full graph90-digit cross-check",
-      "remaining": "Unknown intended-geometry/native Blender transform error and physical model error; broader inputs/families/GPU"
+      "remaining": "Unknown intendedgeometry/native Blender transform andphysicalmodel error; nativeparameter/input uncertainty andtrainedbatch certificates remain separate. ActualNVIDIA60probe outputs haveindependentbounds."
     },
     {
       "id": 5,
@@ -56,15 +56,18 @@
     {
       "id": 6,
       "name": "Capacity, stability, physical fidelity",
-      "status": "OPEN",
-      "acceptance": "State restricted function family; compare analytic and independent wave references over declared regime; physical-model error quantified or unknown"
+      "status": "PARTIAL_REAL_QUADRATIC_CAPACITY_AND_THREE_SEED_STABILITY_CHARACTERIZED",
+      "acceptance": "State restricted function family; compare analytic and independent wave references over declared regime; physical-model error quantified or unknown",
+      "achieved": "All8ports realquadratic equivalence: rank<=2perdetector; sameinputdensefields/powers reconstructed. Threefixedinitializations and183independentaudits evaluated; broadcapacity/universalitynotclaimed",
+      "remaining": "Quantifiedparameter/inputperturbation robustness andindependentwave references; actualfullnetworkphysicalerror unknown"
     },
     {
       "id": 7,
       "name": "Generalization and equivalent baselines",
-      "status": "OPEN",
+      "status": "PARTIAL_PROSPECTIVE_WINE_HELDOUT_AND_TRAINONLY_BASELINES_VERIFIED",
       "acceptance": "Prospectively fixed held-out evaluation, no test-fitted preprocessing, matched algebraic and scientific baselines; uncertainty and failures reported",
-      "achieved": "Frozen separated120/30Irisrows,trainonlyscaler,lastprefixedmodel90percentheldout; no equivalent baseline or new independent dataset yet"
+      "achieved": "PublicWine fixedfirst4features,141/37train/test,trainonlyscaler,3fixed60updateseedsallreported;15nominalparamlinear/45nominalparamquadratic convexbaselines sameencoding; Wilsondescriptiveintervals andexploratorypairedMcNemar; noheldoutselection",
+      "remaining": "Broaderdatasets/tasks, transferwithoutretraining, multiplerandomsplits andexternalblinddata. No superiorityclaim."
     },
     {
       "id": 8,
@@ -93,7 +96,8 @@
     "novelty_demonstrated": false,
     "new_confirmatory_data_collected": false,
     "full_project_complete": false,
-    "physical_device_claim": false
+    "physical_device_claim": false,
+    "prospectively_frozen_new_dataset_evaluation_collected": true
   },
   "registration": {
     "preregId": null,
@@ -109,5 +113,6 @@
   "latest_training_result": "Docs/validation/captured-geometry-training-2026-10-09/attempt01/worker/result.json",
   "latest_native_blender_reproduction": "Docs/validation/trained-geometry-blender-reproduction-2026-10-09/attempt01/worker/result.json",
   "latest_nvidia_result": "Docs/validation/trained-graph-cuda-2026-10-09/attempt01/worker/result.json",
-  "latest_nvidia_certificate": "Docs/validation/trained-graph-cuda-2026-10-09/attempt01/interval_analysis02/certificate.json"
+  "latest_nvidia_certificate": "Docs/validation/trained-graph-cuda-2026-10-09/attempt01/interval_analysis02/certificate.json",
+  "latest_wine_comparison": "Docs/validation/wine-comparison-2026-10-09/attempt01/worker/result.json"
 }
