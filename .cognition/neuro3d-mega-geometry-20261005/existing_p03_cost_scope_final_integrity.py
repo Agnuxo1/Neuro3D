@@ -1,13 +1,16 @@
 import base64,hashlib,json,zlib
 from fractions import Fraction as F
+import os
 from pathlib import Path
+REPO_ROOT=Path(__file__).resolve().parents[2]
+NEURO3D_COGNITION = Path(os.environ.get("NEURO3D_COGNITION_DIR", REPO_ROOT / ".cognition"))
 r=json.loads(Path('coordinacion/respuestas/PRECISION-EXISTING-P03-COST-SCOPE-HOST-001-CODEX.json').read_bytes())
 for p,pin in r['pins'].items():
  b=Path(p).read_bytes();assert hashlib.sha256(b).hexdigest()==pin['sha256'] and len(b)==pin['bytes'],p
 raw=zlib.decompress(base64.b64decode(r['test_run']['stdout_zlib_base64']))
 assert hashlib.sha256(raw).hexdigest()==r['test_run']['stdout_sha256']
 qa=json.loads(raw);assert qa['status']=='PASS' and qa['tests']==3 and len(qa['records'])==13
-base=Path('D:/PROJECTS/.cognition/neuro3d/p0_scene_gpu')
+base=NEURO3D_COGNITION / 'neuro3d/p0_scene_gpu'
 result=json.loads((base/'p03_cuda_result.json').read_bytes(),parse_float=F)
 env=json.loads((base/'p03_cuda_envelope.json').read_bytes(),parse_float=F)
 rows=[x for x in qa['records'] if x['kind']=='RETAINED_GROUP_ENGINE_DURATION'];assert len(rows)==10
@@ -21,7 +24,7 @@ assert F(a['guard_envelope_seconds'])==env['seconds']
 assert F(a['harness_minus_group_sum_seconds'])==result['seconds']-total
 assert F(a['guard_minus_harness_seconds'])==env['seconds']-result['seconds']
 assert not a['subtraction_proves_overhead'] and not a['performance_comparison']
-code=Path('D:/PROJECTS/.cognition/neuro3d/nebulatrace/gpu_states_v2.py').read_text()
+code=(NEURO3D_COGNITION / 'neuro3d/nebulatrace/gpu_states_v2.py').read_text()
 trace=code[code.index('def trace('):]
 assert trace.index('quant_policy(B, policy, quant, dquant)')<trace.index('t0 = time.perf_counter()')
 h=(base/'p03_harness_v4.py').read_text()

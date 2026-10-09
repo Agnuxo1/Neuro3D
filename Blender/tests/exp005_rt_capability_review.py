@@ -9,10 +9,13 @@ import copy
 import hashlib
 import json
 import math
+import os
 from pathlib import Path
+REPO_ROOT = Path(__file__).resolve().parents[2]
+NEURO3D_COGNITION = Path(os.environ.get("NEURO3D_COGNITION_DIR", REPO_ROOT / ".cognition"))
 
 ROOT = Path(__file__).parents[2]
-PEER = Path('D:/PROJECTS/.cognition/neuro3d/rt_cap002')
+PEER = NEURO3D_COGNITION / 'neuro3d/rt_cap002'
 EXPECTED = {
     'rtcap.py': '86479f750963e2201f3283808eab25535192274ad27769c899e246bf25c26145',
     'test_rtcap.py': 'd1039895bc80e29a9dd2531353d3ed0bb9e641ce49c6510a983cd99e2fcf9562',

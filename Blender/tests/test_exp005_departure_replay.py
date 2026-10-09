@@ -1,11 +1,14 @@
 import copy
+import os
 from pathlib import Path
 import unittest
 from fractions import Fraction
 from exp005_departure_replay_audit import load_frozen, replay
 from exp005_interval_audit import Interval
+REPO_ROOT = Path(__file__).resolve().parents[2]
+NEURO3D_COGNITION = Path(os.environ.get("NEURO3D_COGNITION_DIR", REPO_ROOT / ".cognition"))
 
-INPUT = Path('D:/PROJECTS/.cognition/neuro3d/exp005_self_hit_cpu_20260930_0804.json')
+INPUT = NEURO3D_COGNITION / 'neuro3d/exp005_self_hit_cpu_20260930_0804.json'
 
 
 class DepartureReplayTests(unittest.TestCase):

@@ -1,9 +1,12 @@
 from datetime import datetime, timedelta, timezone
+import os
 from pathlib import Path
 import tempfile
 import unittest
 from unittest.mock import patch
 import exp005_history_job_plan as plan
+REPO_ROOT = Path(__file__).resolve().parents[2]
+NEURO3D_COGNITION = Path(os.environ.get("NEURO3D_COGNITION_DIR", REPO_ROOT / ".cognition"))
 
 
 def audit():
@@ -11,7 +14,8 @@ def audit():
     now = datetime(2026, 9, 30, 14, 30, tzinfo=timezone.utc)
     sample = {'ram_available_bytes': 9*plan.GIB, 'device_used_bytes': plan.GIB, 'temperature_c': 40}
     negatives = {}
-    with tempfile.TemporaryDirectory(prefix='cpu-job-plan-', dir='D:/PROJECTS/.cognition/neuro3d') as temp:
+    (NEURO3D_COGNITION / 'neuro3d').mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory(prefix='cpu-job-plan-', dir=NEURO3D_COGNITION / 'neuro3d') as temp:
         folder = Path(temp)
         # No executable is written or run: mock its existence/hash explicitly.
         exe = folder/'blender.exe'; evidence = folder/'private_evidence'

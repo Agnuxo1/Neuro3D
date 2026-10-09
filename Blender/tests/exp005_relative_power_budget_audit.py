@@ -6,6 +6,7 @@ from fractions import Fraction as F
 import hashlib
 import io
 import json
+import os
 from pathlib import Path
 import sys
 import time
@@ -18,8 +19,10 @@ from history_relative_power_budget_v1 import upper
 from history_wavelength_field_budget_v1 import scene_wavelength_field_budget
 from history_trace_cpu_v1 import trace_scene
 from history_fields_cpu_v1 import ideal_fields
+REPO_ROOT = Path(__file__).resolve().parents[2]
+NEURO3D_COGNITION = Path(os.environ.get("NEURO3D_COGNITION_DIR", REPO_ROOT / ".cognition"))
 
-BASELINE=Path('D:/PROJECTS/.cognition/neuro3d/exp005_history_wavelength_budget_20260930_1541.json')
+BASELINE=NEURO3D_COGNITION / 'neuro3d/exp005_history_wavelength_budget_20260930_1541.json'
 BASELINE_SHA='a6e49baefa5196c2c3740fed3de3eb28cd7ba3fd62a1adb0fa4c30e0d7d3103f'
 
 

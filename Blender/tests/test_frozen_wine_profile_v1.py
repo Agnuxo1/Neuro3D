@@ -1,7 +1,10 @@
 import copy,json,tempfile,unittest
+import os
 from pathlib import Path
 from Tools.run_frozen_wine_comparison_v1 import ROOT,validate_profile
 from Tools.run_frozen_state_graph_profile_v1 import check_registration
+REPO_ROOT = Path(__file__).resolve().parents[2]
+NEURO3D_COGNITION = Path(os.environ.get("NEURO3D_COGNITION_DIR", REPO_ROOT / ".cognition"))
 
 
 class ProtocolControls(unittest.TestCase):
@@ -15,7 +18,8 @@ class ProtocolControls(unittest.TestCase):
 
     def test_source_seed_and_budget_mutations_rejected(self):
         original=json.loads((ROOT/'Docs/research/wine_comparison_profile_2026-10-09.json').read_bytes())
-        with tempfile.TemporaryDirectory(dir='D:/PROJECTS/.cognition/neuro3d-sequential-20261008') as directory:
+        (NEURO3D_COGNITION / 'neuro3d-sequential-20261008').mkdir(parents=True, exist_ok=True)
+        with tempfile.TemporaryDirectory(dir=NEURO3D_COGNITION / 'neuro3d-sequential-20261008') as directory:
             target=Path(directory)/'profile.json'
             for mutation in ('source','seed','budget','features'):
                 p=copy.deepcopy(original)

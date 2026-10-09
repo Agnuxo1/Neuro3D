@@ -20,8 +20,9 @@ from pathlib import Path
 
 import bpy
 import numpy as np
+REPO_ROOT = Path(__file__).resolve().parents[3]
 
-HERE = Path("D:/PROJECTS/9_NEBULA_NEW/Blender/research/optical_mesh")
+HERE = (REPO_ROOT / "Blender/research/optical_mesh")
 DATA = json.loads((HERE / "digits_mesh_seed0.json").read_text())
 N, C, LAM = DATA["n"], DATA["classes"], DATA["lambda"]
 K = 2 * math.pi / LAM

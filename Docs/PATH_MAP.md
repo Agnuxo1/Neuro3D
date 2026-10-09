@@ -53,6 +53,101 @@ Puntuación L/O: local / origin. Hash: SHA-256 (16 primeros caracteres) de la ve
 
 Nota sobre el módulo de consolidación: `Docs/validation/consolidation-2026-10-06.json` registra `sha256 5ab941e2…` para `original_SOURCE_query_packet_CPU_v1.py` de origen. Esa versión está hoy en `Blender/benchmarks/capacity_audit/original_SOURCE_query_packet_CPU_v1_origin_20261006.py` con el mismo hash. Para el test de origen, `Blender/tests/test_original_SOURCE_query_packet_CPU_v1.py` (sha `e6b3b43b…`) queda en `..._origin_20261006.py` con una única línea distinta (la importación del módulo movido). El texto original sigue en el commit `63dee34`.
 
-## 2. Rutas absolutas `D:/PROJECTS/...`
+## 2. Rutas absolutas `D:/PROJECTS/...` en código Python
 
-Pendiente de la siguiente fase de este mismo trabajo (P0-1, parte 2). Se documentará aquí cada cambio de ruta en código y configuración. Los documentos congelados y los registros de coordinación no se reescriben: se listan aquí con su ruta relativa equivalente.
+Inventario en HEAD (5401e1d): 58 archivos .py contienen rutas absolutas. Se separan en dos grupos según si su SHA-256 aparece en algún recibo JSON congelado del repositorio.
+
+### 2.1 Reescritos (41): ya no dependen de D:/PROJECTS
+
+Regla: raíz del repositorio = `Path(__file__).resolve().parents[N]`; artefactos externos = `NEURO3D_COGNITION_DIR` (por defecto `<repo>/.cognition`). Ver `Docs/WORKSPACE.md`.
+
+| Archivo | Cambio |
+|---|---|
+| `.cognition/neuro3d-mega-geometry-20261005/existing-p03-scene-invariants-oracle.py` | rutas relativas / variable de entorno |
+| `.cognition/neuro3d-mega-geometry-20261005/existing_p03_backend_scope_oracle.py` | rutas relativas / variable de entorno |
+| `.cognition/neuro3d-mega-geometry-20261005/existing_p03_cost_scope_final_integrity.py` | rutas relativas / variable de entorno |
+| `.cognition/neuro3d-mega-geometry-20261005/existing_p03_cost_scope_oracle.py` | rutas relativas / variable de entorno |
+| `.cognition/neuro3d-mega-geometry-20261005/next_chord_length_oracle.py` | rutas relativas / variable de entorno |
+| `.cognition/neuro3d-mega-geometry-20261005/next_position_box_oracle.py` | rutas relativas / variable de entorno |
+| `Blender/benchmarks/capacity_audit/exp005_peer_phaseB_gate_probe.py` | rutas relativas / variable de entorno |
+| `Blender/benchmarks/capacity_audit/robust_first_hit_gpu_guard_v1.py` | rutas relativas / variable de entorno |
+| `Blender/benchmarks/capacity_audit/scene_hilo_gpu_guard_v1.py` | rutas relativas / variable de entorno |
+| `Blender/benchmarks/capacity_audit/test_pilot_watchdog_v1.py` | rutas relativas / variable de entorno |
+| `Blender/research/optical_mesh/blender_mesh_scene.py` | rutas relativas / variable de entorno |
+| `Blender/tests/exp005_cascade_diagnose.py` | rutas relativas / variable de entorno |
+| `Blender/tests/exp005_complete_peer_review.py` | rutas relativas / variable de entorno |
+| `Blender/tests/exp005_departure_replay_audit.py` | rutas relativas / variable de entorno |
+| `Blender/tests/exp005_history_coplanar_review.py` | rutas relativas / variable de entorno |
+| `Blender/tests/exp005_history_job_plan.py` | rutas relativas / variable de entorno |
+| `Blender/tests/exp005_normal_residual_audit.py` | rutas relativas / variable de entorno |
+| `Blender/tests/exp005_origin_enclosure_audit.py` | rutas relativas / variable de entorno |
+| `Blender/tests/exp005_peer_field_replay.py` | rutas relativas / variable de entorno |
+| `Blender/tests/exp005_relative_power_budget_audit.py` | rutas relativas / variable de entorno |
+| `Blender/tests/exp005_rt_capability_review.py` | rutas relativas / variable de entorno |
+| `Blender/tests/exp005_rt_finalization_review.py` | rutas relativas / variable de entorno |
+| `Blender/tests/exp005_rt_report_audit.py` | rutas relativas / variable de entorno |
+| `Blender/tests/exp005_scene_length_audit.py` | rutas relativas / variable de entorno |
+| `Blender/tests/pr003_fresh_recompute.py` | rutas relativas / variable de entorno |
+| `Blender/tests/test_captured_pilot_supervision_v1.py` | rutas relativas / variable de entorno |
+| `Blender/tests/test_exp005_departure_replay.py` | rutas relativas / variable de entorno |
+| `Blender/tests/test_exp005_history_artifact_data.py` | rutas relativas / variable de entorno |
+| `Blender/tests/test_exp005_history_job_plan.py` | rutas relativas / variable de entorno |
+| `Blender/tests/test_exp005_origin_enclosure.py` | rutas relativas / variable de entorno |
+| `Blender/tests/test_external_cpu_reproduction_profile_v1.py` | rutas relativas / variable de entorno |
+| `Blender/tests/test_frozen_geometry_training_v1.py` | rutas relativas / variable de entorno |
+| `Blender/tests/test_frozen_indexed_profile_v1.py` | rutas relativas / variable de entorno |
+| `Blender/tests/test_frozen_own_addon_profile_v1.py` | rutas relativas / variable de entorno |
+| `Blender/tests/test_frozen_own_addon_profile_v2.py` | rutas relativas / variable de entorno |
+| `Blender/tests/test_frozen_own_addon_profile_v3.py` | rutas relativas / variable de entorno |
+| `Blender/tests/test_frozen_wave_profile_v1.py` | rutas relativas / variable de entorno |
+| `Blender/tests/test_frozen_wave_profile_v2.py` | rutas relativas / variable de entorno |
+| `Blender/tests/test_frozen_wine_profile_v1.py` | rutas relativas / variable de entorno |
+| `Blender/tests/test_iris_native_admission_v1.py` | rutas relativas / variable de entorno |
+| `Blender/tests/test_own_blender_runtime_v1.py` | rutas relativas / variable de entorno |
+
+### 2.2 Congelados (17): byte a byte, sin edición
+
+Su SHA-256 aparece en recibos publicados; cambiarlos rompería la cadena de evidencia. Para ejecutarlos se requiere el diseño de carpetas de `Docs/WORKSPACE.md` (uniones creadas con `Tools/workspace/Initialize-Neuro3DWorkspace.ps1`).
+
+| Archivo | SHA-256 (16) |
+|---|---|
+| `.cognition/neuro3d-mega-geometry-20261005/candidate_total_phase_oracle.py` | `c906aa476d727918` |
+| `.cognition/neuro3d-mega-geometry-20261005/detector_connection_residual_oracle.py` | `009517caa274ddf9` |
+| `Blender/benchmarks/capacity_audit/axial_reference_closure_cpu_v1.py` | `15f31f0b0d7bb38c` |
+| `Blender/benchmarks/capacity_audit/axial_scene_closure_cpu_v1.py` | `45fa5d81fc54d68e` |
+| `Blender/benchmarks/capacity_audit/exp005_peer_fusion_bridge_cpu.py` | `8d11b89d417a8081` |
+| `Blender/benchmarks/capacity_audit/exp005_peer_phaseB_binding_probe.py` | `c8f65aea33e48686` |
+| `Blender/benchmarks/capacity_audit/exp005_peer_phaseB_policy_probe.py` | `5c73b3c66355bf4c` |
+| `Blender/benchmarks/capacity_audit/oblique_existing_evidence_inventory_HOST_v1.py` | `2de317fc4ed2d170` |
+| `Blender/benchmarks/capacity_audit/scalar_job_supervisor_v1.py` | `60c174a00c4e407c` |
+| `Blender/tests/exp005_phase_peer_probe.py` | `4abc6f3eed5baad2` |
+| `Blender/tests/exp005_rt_pilot006_retained_audit.py` | `14a7a22213cd652a` |
+| `Blender/tests/exp005_rt_readback_review.py` | `85d0c96713fa15b7` |
+| `Blender/tests/test_axial_native_evidence_contract.py` | `c481ffeab79157bc` |
+| `Blender/tests/test_existing_p03_backend_scope_HOST_v1.py` | `a78fc4e556f4230e` |
+| `Blender/tests/test_existing_p03_cost_scope_HOST_v1.py` | `bcfc6c986eaa878b` |
+| `Blender/tests/test_existing_p03_scene_invariants_HOST_v1.py` | `50453ca9829037e8` |
+| `Blender/tests/test_exp005_retained_ledger_intervals.py` | `3bd2d170ffc54fa5` |
+
+### 2.3 Raíces externas referenciadas (no están en git)
+
+| Raíz esperada | Referencias en código | Presente en la máquina de origen |
+|---|---|---|
+| `D:/PROJECTS/.cognition/neuro3d` | 57 | sí |
+| `D:/PROJECTS/.cognition/neuro3d-sequential-20261008` | 13 | sí |
+| `D:/PROJECTS/.cognition/gpu_queue` | 3 | sí (herramienta de cola GPU) |
+
+### 2.4 Copias de scripts dentro de `Docs/validation/`
+
+Git las marca como binarias y contienen rutas absolutas. Son copias de evidencia congeladas: no se modifican.
+
+Vease tambien `Docs/WORKSPACE.md` (diseno de carpetas y procedimiento de reproduccion).
+
+### 2.5 Dependencia externa: ejecutable de Blender
+
+Los dos guardas GPU (`robust_first_hit_gpu_guard_v1.py` y `scene_hilo_gpu_guard_v1.py`) contienen `BLENDER = D:/TOOLS/Blender/...`. Es el ejecutable de Blender, no un artefacto del proyecto. Queda fuera de la regla de reescritura y se documenta como dependencia del equipo de trabajo; no está en git.
+
+### 2.6 Informe de la reescritura
+
+El informe completo (antes/después de las pruebas, literales conservados y diferencias) está en `Docs/validation/p0-1-rutas-2026-10-09/REWRITE-REPORT.md`.
+

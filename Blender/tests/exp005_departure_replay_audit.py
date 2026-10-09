@@ -6,12 +6,15 @@ import argparse
 import copy
 import hashlib
 import json
+import os
 from pathlib import Path
 from exp005_departure_audit import witness, triangle
 from exp005_geometric_return_audit import canonical, geometric_candidates, FROZEN_INPUT
 from exp005_self_hit_audit import query
 from exp005_interval_audit import exact_parameters, parameters
 from exp005_triangle_oracle import sub
+REPO_ROOT = Path(__file__).resolve().parents[2]
+NEURO3D_COGNITION = Path(os.environ.get("NEURO3D_COGNITION_DIR", REPO_ROOT / ".cognition"))
 
 
 def load_frozen(path):
@@ -75,7 +78,7 @@ def main():
     parser.add_argument('--output', type=Path, required=True); args = parser.parse_args()
     if args.output.exists(): raise ValueError('new evidence path required')
     report = replay(load_frozen(args.input))
-    previous = Path('D:/PROJECTS/.cognition/neuro3d/exp005_departure_cpu_20260930_0934.json')
+    previous = NEURO3D_COGNITION / 'neuro3d/exp005_departure_cpu_20260930_0934.json'
     raw = previous.read_bytes()
     if hashlib.sha256(raw).hexdigest() != 'e358a954d96700e7b90788631028e853a32d67ea0bb91758222db132134323f5':
         raise ValueError('prior witness evidence changed')

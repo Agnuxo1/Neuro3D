@@ -3,12 +3,15 @@ import argparse
 import copy
 import hashlib
 import json
+import os
 from pathlib import Path
 import sys
 sys.path.insert(0,str(Path(__file__).parents[1]/'benchmarks/capacity_audit'))
 from history_completeness_cpu_v1 import validate_complete_tree
 from history_lineage_cpu_v2 import scene_binding
 from exp005_history_mzi_audit import fixture
+REPO_ROOT = Path(__file__).resolve().parents[2]
+NEURO3D_COGNITION = Path(os.environ.get("NEURO3D_COGNITION_DIR", REPO_ROOT / ".cognition"))
 
 ROOT=Path(__file__).parents[2]
 RESPONSE=ROOT/'coordinacion/respuestas/PRECISION-COMPLETE-001-CLAUDE.json'
@@ -17,7 +20,7 @@ RESPONSE=ROOT/'coordinacion/respuestas/PRECISION-COMPLETE-001-CLAUDE.json'
 def verify_peer():
     data=json.loads(RESPONSE.read_text(encoding='utf-8'));checked={}
     for name,expected in data['input_sha256_verified_equal_to_task_pins'].items():
-        path=(Path('D:/PROJECTS/.cognition/neuro3d')/name) if name=='exp005_history_mzi_cpu_20260930_1308.json' else ROOT/name
+        path=(NEURO3D_COGNITION / 'neuro3d'/name) if name=='exp005_history_mzi_cpu_20260930_1308.json' else ROOT/name
         actual=hashlib.sha256(path.read_bytes()).hexdigest()
         if actual!=expected:raise ValueError('peer input changed: '+name)
         checked[str(path)]=actual

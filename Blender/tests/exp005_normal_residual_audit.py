@@ -8,13 +8,16 @@ from fractions import Fraction
 import hashlib
 import json
 import math
+import os
 from pathlib import Path
 from exp005_near_origin_audit import vector, sub, dot, cross
 from exp005_interval_audit import exact_parameters
+REPO_ROOT = Path(__file__).resolve().parents[2]
+NEURO3D_COGNITION = Path(os.environ.get("NEURO3D_COGNITION_DIR", REPO_ROOT / ".cognition"))
 
 ROOT = Path(__file__).parents[2]
 PEER_SHA = 'dc67eb8b1625981a701199abed3a3027c0f705312ab3a159a776231f50b0cd94'
-PEER_PATH = Path('D:/PROJECTS/.cognition/neuro3d/precision005_claude/e_origin.json')
+PEER_PATH = NEURO3D_COGNITION / 'neuro3d/precision005_claude/e_origin.json'
 
 
 def plane_offset(triangle, saved_origin, outgoing):

@@ -9,6 +9,8 @@ import zipfile
 from Tools.run_frozen_own_addon_audit_v3 import ROOT, validate
 from Tools.run_frozen_state_graph_profile_v1 import check_registration
 from Tools.trace_indexed_scene_v1 import wire
+REPO_ROOT = Path(__file__).resolve().parents[2]
+NEURO3D_COGNITION = Path(os.environ.get("NEURO3D_COGNITION_DIR", REPO_ROOT / ".cognition"))
 
 
 class ComplexInstalledProfileControls(unittest.TestCase):
@@ -28,7 +30,8 @@ class ComplexInstalledProfileControls(unittest.TestCase):
 
     def test_changed_source_limits_rejected(self):
         original = json.loads((ROOT / 'Docs/research/own_blender_addon_profile_v3_2026-10-09.json').read_bytes())
-        directory = 'D:/PROJECTS/.cognition/neuro3d-sequential-20261008' if os.name == 'nt' else None
+        directory = str(NEURO3D_COGNITION / 'neuro3d-sequential-20261008') if os.name == 'nt' else None
+        if directory: Path(directory).mkdir(parents=True, exist_ok=True)
         with tempfile.TemporaryDirectory(dir=directory) as folder:
             path = Path(folder) / 'profile.json'
             for kind in ('source', 'limits'):

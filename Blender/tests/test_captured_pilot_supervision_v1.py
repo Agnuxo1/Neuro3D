@@ -2,6 +2,7 @@
 import copy
 from fractions import Fraction as F
 import json
+import os
 from pathlib import Path
 import tempfile
 import unittest
@@ -9,8 +10,10 @@ from unittest.mock import patch
 
 from Tools.audit_captured_pilot_result_v1 import audit_result
 from Tools.run_captured_scalar_pilot_v1 import check_protocol, check_registration, main as supervisor
+REPO_ROOT = Path(__file__).resolve().parents[2]
+NEURO3D_COGNITION = Path(os.environ.get("NEURO3D_COGNITION_DIR", REPO_ROOT / ".cognition"))
 
-WORK = Path('D:/PROJECTS/.cognition/neuro3d-sequential-20261008')
+WORK = NEURO3D_COGNITION / 'neuro3d-sequential-20261008'
 
 
 def plane(x, kind, axis=1):

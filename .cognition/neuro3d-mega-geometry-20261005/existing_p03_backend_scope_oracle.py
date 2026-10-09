@@ -1,19 +1,22 @@
 import base64,hashlib,json,zlib
+import os
 from pathlib import Path
+REPO_ROOT=Path(__file__).resolve().parents[2]
+NEURO3D_COGNITION = Path(os.environ.get("NEURO3D_COGNITION_DIR", REPO_ROOT / ".cognition"))
 r=json.loads(Path('coordinacion/respuestas/PRECISION-EXISTING-P03-BACKEND-SCOPE-HOST-001-CODEX.json').read_bytes())
 # Document pin is refreshed before this verifier is run.
 for path,pin in r['pins'].items():
  b=Path(path).read_bytes();assert hashlib.sha256(b).hexdigest()==pin['sha256'] and len(b)==pin['bytes'],path
 raw=zlib.decompress(base64.b64decode(r['test_run']['stdout_zlib_base64']));assert hashlib.sha256(raw).hexdigest()==r['test_run']['stdout_sha256']
 qa=json.loads(raw);assert qa['status']=='PASS' and qa['tests']==3 and len(qa['records'])==13
-base=Path('D:/PROJECTS/.cognition/neuro3d/p0_scene_gpu')
+base=NEURO3D_COGNITION / 'neuro3d/p0_scene_gpu'
 result=json.loads((base/'p03_cuda_result.json').read_bytes())
 manifest=json.loads((base/'p03_manifest.json').read_bytes())
 declared=set()
 for scene,row in zip(manifest['scenes'],result['scene_results'],strict=True):
  sha=hashlib.sha256(json.dumps(scene,sort_keys=True).encode()).hexdigest();assert row['scene_sha256']==sha;declared.add(sha)
 assert len(result['scene_results'])==104
-backend=Path('D:/PROJECTS/.cognition/neuro3d/nebulatrace/gpu_states_v2.py').read_bytes()
+backend=(NEURO3D_COGNITION / 'neuro3d/nebulatrace/gpu_states_v2.py').read_bytes()
 assert result['code_sha256']['D:/PROJECTS/.cognition/neuro3d/nebulatrace/gpu_states_v2.py']==hashlib.sha256(backend).hexdigest()
 for row in qa['records']:
  if row['kind']=='SOURCE_STAGE':assert row['anchor'] in backend.decode().splitlines()[row['line']-1]
