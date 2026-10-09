@@ -64,6 +64,11 @@ autorizado antes de ejecutarse, también agotó 90 segundos y conserva métrica 
 La autorización humana cubre la secuencia de futuros perfiles fijados y publicados
 antes de sus ensayos; el registro externo/IPFS permanece pendiente.
 
+El [diagnóstico corto de la captura](Docs/CAPTURED_PATH_DIAGNOSTIC_2026-10-09.md)
+recogió 16 consultas y un resultado incompleto válido en 2,72 s: 4.736 candidatos
+frente a 106.496 oportunidades exhaustivas. Conserva nueve límites de recursos
+y campos nulos. Es un diagnóstico, no inferencia neuronal ni una ventaja de tiempo demostrada.
+
 El [contrato coherente ejecutable](Docs/OPTIC_NEURO_BLENDER_COHERENT_CONTRACT_2026-10-08.md)
 fija unidades, portadora/referencia común, fases, parámetros y potencia modal.
 Pasan 50 controles CPU y la admisión dentro de Blender del `.blend` Iris real:
