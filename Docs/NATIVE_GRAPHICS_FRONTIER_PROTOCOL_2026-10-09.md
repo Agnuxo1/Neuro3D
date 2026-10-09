@@ -27,3 +27,9 @@ Full graph construction times: CPU 30.7660, 30.4246, 29.8658 seconds; graphical 
 ![Full frontier costs](assets/native-graphics-frontier-2026-10-09.png)
 
 The graph uses the existing rational state schema for exact CPU phase and verification, with explicit selection_backend=NATIVE_GPU_RASTER_DEPTH_WITH_EXACT_CPU_VERIFICATION and selection_is_gpu=true. This does not claim all calculations execute on GPU, hardware RT cores, AMD, physical fidelity or a new neural expressivity class.
+
+## Prospective v2: independent exact candidate refinement
+
+The previous source and data remain frozen. The [v2 profile](research/native_graphics_frontier_profile_v2_2026-10-09.json) keeps all three native repetitions, GPU geometry, full costs, precision and topology gates unchanged. Candidate refinement computes the exact selected-plane intersection, checks every closed triangle of the GPU-selected object using independent exact Gram predicates, and proves a positive local interior through the already established independent square-perimeter coverage witness. It then runs the unchanged exhaustive independent nearest-object exclusion across all surfaces. No approximate depth enters optical phase, no wrong candidate is replaced, and every coincident primitive must still match.
+
+Four meaningful software controls pass, including rejection of a point on a closed triangle boundary with no positive interior witness. The new refinement is intended to reduce verification cost; no speed improvement is assumed before execution. [Authorization](research/native_graphics_frontier_registration_v2_2026-10-09.json) and all source bytes must be published and verified first.
