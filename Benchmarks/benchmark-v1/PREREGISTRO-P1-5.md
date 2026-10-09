@@ -83,3 +83,9 @@ Todos fijados aquí. Ninguna búsqueda sobre el conjunto de prueba. Los hiperpar
 ## 11. Registro externo (pendiente de autorización)
 
 Plataforma objetivo: OSF (o IPFS). Contenido: este documento, `Benchmarks/benchmark-v1/` y el hash del commit. No se envía nada hasta autorización explícita.
+
+## Enmienda 1 (2026-10-09, antes de ejecutar nada de esta carpeta)
+
+La sección 3 decía que las semillas `20261009 + k` se aplican a todos los conjuntos. Eso contradice la sección 7: el claim óptico de Iris y Wine compara con B5 y B6 sobre las particiones de P0-4, y la comparación pareada exige las mismas particiones.
+
+Corrección: para Iris y Wine, B1 a B6 usan las particiones de P0-4 (`Benchmarks/lineas-base/resultados/splits.json`, con SHA-256 registrado). Las semillas `20261009 + k` se aplican solo a Breast Cancer y Digits. Esta enmienda se comprometió antes de ejecutar ninguna línea base nueva.
