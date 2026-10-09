@@ -49,6 +49,9 @@ están preparados con fuentes/inputs fijados, límites de recursos y negativa po
 registro ausente. Pasan 66 controles conjuntos de software. El piloto permanece
 **sin ejecutar**. El propietario ha [autorizado el protocolo congelado en GitHub](Docs/PILOT_REGISTRATION_DUAL_ROUTE_2026-10-09.md)
 y mantiene la vía externa/IPFS adicional; no hay registro externo emitido todavía.
+El [primer intento autorizado](Docs/CAPTURED_PILOT_EXECUTION_2026-10-09.md)
+verificó todos los hashes pero no inició el cálculo: 3.652 MiB libres frente al
+umbral fijo de 4.000 MiB. La métrica permanece nula; este rechazo no es un resultado geométrico.
 
 El [contrato coherente ejecutable](Docs/OPTIC_NEURO_BLENDER_COHERENT_CONTRACT_2026-10-08.md)
 fija unidades, portadora/referencia común, fases, parámetros y potencia modal.
