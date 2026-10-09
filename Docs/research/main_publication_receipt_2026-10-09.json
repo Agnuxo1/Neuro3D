@@ -1,0 +1,14 @@
+{
+  "schema": "optic_neuro_blender.main_publication_receipt.v1",
+  "verified_utc": "2026-10-09T09:28:05.003178+00:00",
+  "published_commit": "75cdb7c5c4202f08777aa20091f555f4d6e88059",
+  "remote_main_and_scientific_branch_match": true,
+  "git_blob_animation_and_readme_byte_identity": true,
+  "files": {
+    "README.md": "664d803fb8e1c76128d8ff4b1b202fe04fb117c6c7d94994b7447feafe5d3368",
+    "Docs/assets/captured-gpu-coherent-network-2026-10-09.gif": "a86751d6be5a78f125e9b912ca4bc52ee7b2f81c4f931e6111eae757a1559e24",
+    "Docs/assets/native-blender-geometry-training-2026-10-09.gif": "3ce515a9416d751e5af8facb65b6b1f03afe8f8590712e4fe160c28afa9c63f5"
+  },
+  "previous_main_history_preserved": true,
+  "scientific_completion_claim": false
+}

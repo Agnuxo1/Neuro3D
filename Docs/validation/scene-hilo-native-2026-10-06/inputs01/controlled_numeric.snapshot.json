@@ -1,0 +1,155 @@
+{
+  "schema": "exp005-readback-v2",
+  "lambda_BU": 0.125,
+  "objects": {
+    "panel_x1": {
+      "kind": "mirror",
+      "phase_rad": 0.2,
+      "vertices_world_BU": [
+        [
+          1.0,
+          -0.5,
+          -0.5
+        ],
+        [
+          1.0,
+          0.5,
+          -0.5
+        ],
+        [
+          1.0,
+          0.5,
+          0.5
+        ],
+        [
+          1.0,
+          -0.5,
+          0.5
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ]
+    },
+    "panel_x2": {
+      "kind": "mirror",
+      "phase_rad": 0.2,
+      "vertices_world_BU": [
+        [
+          2.0,
+          -0.5,
+          -0.5
+        ],
+        [
+          2.0,
+          0.5,
+          -0.5
+        ],
+        [
+          2.0,
+          0.5,
+          0.5
+        ],
+        [
+          2.0,
+          -0.5,
+          0.5
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ]
+    }
+  },
+  "sources": [
+    {
+      "id": "tiny",
+      "position_BU": [
+        8.673617379884035e-19,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0000000009313226,
+        0.0,
+        0.0
+      ],
+      "field_reim": [
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "id": "low",
+      "position_BU": [
+        1.0000000009313226,
+        9.094947017729282e-13,
+        -2.842170943040401e-14
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "field_reim": [
+        0.5,
+        0.25
+      ]
+    }
+  ],
+  "evaluated_optics_checked": true,
+  "evaluated_optical_ids": [
+    "panel_x1",
+    "panel_x2"
+  ],
+  "evaluation_scope": "viewport raycast only; no render/RT or wave validation",
+  "undeclared_meshes": [],
+  "neuro3d_direction_bounds": {
+    "tiny": [
+      [
+        1.0000000009313217,
+        1.0000000009313235
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "low": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        8.673617379891924e-19,
+        1.0000000009313226
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ]
+  }
+}

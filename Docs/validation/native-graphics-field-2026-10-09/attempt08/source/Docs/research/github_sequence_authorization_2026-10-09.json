@@ -1,0 +1,12 @@
+{
+  "schema": "optic_neuro_blender.profile_registration.v1",
+  "profile_id": "4a0adb28-92de-4910-b2cb-5252df5fa8ef",
+  "profile_sha256": "8e0937bfb8db349ed2a52ba4263221465782c0bb8e28734d90d9c654ee1914ab",
+  "approved": true,
+  "kind": "HUMAN_GITHUB_EXCEPTION",
+  "evidence_origin": "DIRECT_HUMAN_USER_MESSAGE_VERIFIED_BY_OPERATOR",
+  "evidence_reference": "Direct human reply in this chat2026-10-09: Sí, autorizo esa continuidad en GitHub. Question explicitly linked profile at ac27ed0 and extended authorization to subsequent protocols in this sequence published and fixed before each execution; external/IPFS route retained.",
+  "authorization_scope": "Current indexed profile and subsequent Neuro3D/OpticNeuroBlender protocols in the authorized sequence; freeze and publish before collecting each new experimental result; no invented external IDs.",
+  "preregId": null,
+  "ipfsCid": null
+}

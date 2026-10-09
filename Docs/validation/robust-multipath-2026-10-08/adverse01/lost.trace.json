@@ -1,0 +1,95 @@
+{
+  "schema": "neuro3d-exact-multipath-v1",
+  "backend": "CPU_FRACTION",
+  "status": "INCOMPLETE",
+  "fields": null,
+  "powers": null,
+  "paths": [],
+  "unresolved": [
+    {
+      "status": "MISS",
+      "ray": {
+        "source_id": "input",
+        "source_reim": [
+          {
+            "numerator": 1,
+            "denominator": 1
+          },
+          {
+            "numerator": 0,
+            "denominator": 1
+          }
+        ],
+        "origin": [
+          {
+            "numerator": 0,
+            "denominator": 1
+          },
+          {
+            "numerator": 0,
+            "denominator": 1
+          },
+          {
+            "numerator": 0,
+            "denominator": 1
+          }
+        ],
+        "direction": [
+          {
+            "numerator": -1,
+            "denominator": 1
+          },
+          {
+            "numerator": 0,
+            "denominator": 1
+          },
+          {
+            "numerator": 0,
+            "denominator": 1
+          }
+        ],
+        "norm2": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "parameter_length": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "power_factor": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "mirror_phase": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "quarter_turns": 0,
+        "history": [],
+        "previous": null
+      },
+      "selection": {
+        "status": "MISS",
+        "candidates": [],
+        "excluded": []
+      }
+    }
+  ],
+  "rays": 1,
+  "input_power_exact": {
+    "numerator": 1,
+    "denominator": 1
+  },
+  "input_power": 1.0,
+  "output_power": null,
+  "exact_zero_branches": 0,
+  "departure_exclusions": 0,
+  "wavelength": {
+    "numerator": 1,
+    "denominator": 8
+  },
+  "ports": [
+    "out"
+  ],
+  "field_certified": false
+}

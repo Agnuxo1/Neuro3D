@@ -1,0 +1,6 @@
+Info: Saved as "capture-software-fixture.blend"
+BLENDER_LAB_SOFTWARE_CHECKS {"schema": "neuro3d.blender_lab.capture_software_checks.v1", "status": "PASS", "blender_version": "4.5.14 LTS", "state_sha256": "806837a557f6705a25a2db78c060166f7ed702db8104ffc153ffc015ac1b0b21", "objects": 8, "instances": 8, "evaluated_mirror_triangles": 12, "rejections": ["object_bound", "triangle_bound", "missing_detector", "excluded_parameter"], "geometry_edit_detected_without_added_rounding": true, "rna_port_preserved": true, "bound_parameter_edit_read": true, "collection_instance_metadata_captured": true, "save_reopen_identity": true, "upstream_addon_executed": false, "optical_forward_executed": false, "training_executed": false, "gpu_executed": false}
+Blender 4.5.14 LTS (hash 62c1db4208e8 built 2026-09-15 01:33:49)
+Read blend: "D:\PROJECTS\.cognition\neuro3d-sequential-20261008\capture-software-attempt01\capture-software-fixture.blend"
+
+Blender quit

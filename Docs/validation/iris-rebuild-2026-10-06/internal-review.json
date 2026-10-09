@@ -1,0 +1,15 @@
+{
+  "kind": "internal_read_only_review",
+  "status": "PASS",
+  "reviewer": "/root/consolidation_review",
+  "source_commit": "7c037702486ae9ab153f605edab432b85c44ba0d",
+  "source_sha256": "6b5b32434679ae4da9410afbeeeee2c25a614eaf4b2776892aa8fb907617592d",
+  "blend_sha256": "5884c6fa4cc8cee22dd99e2f4aeaf8f0e44ae44dba85d4f2447868d3d4d58c22",
+  "portable_report_sha256": "ee7eaa6e71f5c3c36e54c7d13a00706e7610f6197735957c47275281f4167b17",
+  "verified_rows": 150,
+  "verified_rebuild_assertions": 230,
+  "source_contracts": 5,
+  "no_blocking_findings": true,
+  "physical_validation": false,
+  "external_scientific_replication": false
+}

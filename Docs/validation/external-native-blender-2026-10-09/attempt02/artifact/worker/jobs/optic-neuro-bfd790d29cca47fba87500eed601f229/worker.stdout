@@ -1,0 +1,5 @@
+{"status": "PASS", "action": "INFER", "seconds": 36.13235476900002, "decision": "det.R1"}
+Blender 4.5.14 LTS (hash 62c1db4208e8 built 2026-09-15 01:31:19)
+Read blend: "/home/runner/work/Neuro3D/Neuro3D/native-reproduction-evidence/worker/jobs/optic-neuro-bfd790d29cca47fba87500eed601f229/snapshot.blend"
+
+Blender quit

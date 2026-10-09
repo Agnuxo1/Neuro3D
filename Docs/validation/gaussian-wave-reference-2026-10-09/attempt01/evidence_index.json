@@ -1,0 +1,122 @@
+{
+  "archive_and_plot.py": {
+    "sha256": "5826d402dcbc48be5959c5e8024dc4f3fccf5083dc9fc80f690b23915ba7dbcf",
+    "bytes": 6313
+  },
+  "finalize_prepared_wave_window_20261009.py": {
+    "sha256": "2b646e790fd4de6f5ca5961cad7ba1be805b49a13ed796a202f39fef4be3cd99",
+    "bytes": 2086
+  },
+  "gaussian-wave-published-preexecution-verification-20261009.json": {
+    "sha256": "9462803274b51915f4feefa1ad7166f0ece85f364cf80ed5a3ad01960741f3b9",
+    "bytes": 430
+  },
+  "prepare_wave_protocol_20261009.py": {
+    "sha256": "50b842176b7b62359049a091d9f2852b70ec0a048a180dd75e401dcaed1bf4c4",
+    "bytes": 7291
+  },
+  "private_primary_source_retrieval_receipt.json": {
+    "sha256": "da0ed4d8f71fc9bc4e65cccac282806c10d99bbfcce25f54617037e385c4a1a2",
+    "bytes": 865
+  },
+  "profile.json": {
+    "sha256": "6c138f2ab91c9ca01942d5113efcef4abdf38ef0ac75d8f09d56f1a27575ad6e",
+    "bytes": 3705
+  },
+  "registration.json": {
+    "sha256": "6a5d792799acf61f1b195a6c2b89562d8844d67c2e786b479768e243593b1689",
+    "bytes": 749
+  },
+  "supervisor.json": {
+    "sha256": "c3832923a0f3c0ff54f583e4b1d09a78593b396f0820ae34bc86894d43b8720e",
+    "bytes": 2339
+  },
+  "update_prepared_wave_guards_20261009.py": {
+    "sha256": "25487b9fe850d37311deee77ec2e4ef8187dd86a4c9bec57bf71bf7c9e0fcbaf",
+    "bytes": 1398
+  },
+  "verify_published_frozen_profile_v1.py": {
+    "sha256": "a4f5c0db7af7542e1e13e3808989ff712c84367e5f22da3af2567132a66e61a3",
+    "bytes": 1930
+  },
+  "wave-controls-development-receipt-20261009.json": {
+    "sha256": "3e475e6b4dc4613b6ce0c3cac4e09e31d2d887fcb766464554cb4b92885e24d3",
+    "bytes": 560
+  },
+  "worker.stdout": {
+    "sha256": "25d5111c4166c4d97399a4546ad744ce2e31acf27a64670126edb37363635b9b",
+    "bytes": 9915
+  },
+  "wave-prepared-prepublication01/amendment.json": {
+    "sha256": "fe53e1780650116a683cf685994bd42b3a2242b93478a63d96517cfb791adeef",
+    "bytes": 320
+  },
+  "wave-prepared-prepublication01/profile.json": {
+    "sha256": "8b749257433c99343ec3976c22a5af652f2490c0cdfb07241f97ab17686587b1",
+    "bytes": 3437
+  },
+  "wave-prepared-prepublication01/registration.json": {
+    "sha256": "be2146f1fee28ef315bd4e1dadac513fcc59f0eb935df2ba472d94c1707869e1",
+    "bytes": 749
+  },
+  "wave-prepared-prepublication02/amendment.json": {
+    "sha256": "149fd40e10733926f5033812d2ab070b6f2678890cc04f09b4a29d2001dcf187",
+    "bytes": 324
+  },
+  "wave-prepared-prepublication02/profile.json": {
+    "sha256": "760adf1852f1eb2633149cef29e9b644b852097ad53b01f20e8cad49ab2e26fe",
+    "bytes": 3609
+  },
+  "wave-prepared-prepublication02/registration.json": {
+    "sha256": "a611a532cee769fd614a543a7aa65b9d94a9dd749063778d70ca8aebd43e3af6",
+    "bytes": 749
+  },
+  "worker/progress.jsonl": {
+    "sha256": "e52df53b92d583d2faaceb44ca293e4a9c8b56cb482cd089e189761026886c3d",
+    "bytes": 283977
+  },
+  "worker/result.json": {
+    "sha256": "79d41836ba133c398519076b9ee11cff79b8f08b300b97287c85a0d03468ac35",
+    "bytes": 392740
+  },
+  "source/Tools/audit_captured_pilot_result_v1.py": {
+    "sha256": "a3f683ab11aa07eb52aefb4046ba89516321bb175ef01697c39131234b3ac686",
+    "bytes": 9836
+  },
+  "source/Tools/audit_coherent_state_graph_v1.py": {
+    "sha256": "2bb9bb285ec93922fd96cc1eec98fa1fc2c73d20856140536ba5adfe50d4519d",
+    "bytes": 9570
+  },
+  "source/Tools/bind_network_capture_v1.py": {
+    "sha256": "af3bdbc41636214f01c2078ce26bd271794fa763ccefecd2a006f1014d2f117b",
+    "bytes": 2085
+  },
+  "source/Tools/independent_gaussian_hankel_v1.py": {
+    "sha256": "33ed5b3d77cda769b6f1aa6892b7e5af2a8c3f8108d8c5aa0f53df3ed15795b0",
+    "bytes": 2559
+  },
+  "source/Tools/run_frozen_state_graph_profile_v1.py": {
+    "sha256": "9f234e7214e7c740f18ae9e9cf880de98f28f6caf532938a4fbaf1dcd1470895",
+    "bytes": 8165
+  },
+  "source/Tools/run_frozen_wave_reference_v1.py": {
+    "sha256": "6d7ece593d06ef951865f00dfd0f0035c3629951004c6c69edbd65a6302df023",
+    "bytes": 5371
+  },
+  "source/Tools/run_gaussian_wave_reference_v1.py": {
+    "sha256": "f46cc27b8834834243069cb345bdbbe10b5337652bda7a47ec518b10ad2b1a2a",
+    "bytes": 7643
+  },
+  "source/Blender/blender_lab/scene_capture_v1.py": {
+    "sha256": "fe676b61a9e743277d69b54890688555a604f659c7f23ee223703b907ad8a2d0",
+    "bytes": 13990
+  },
+  "source/Blender/blender_lab/wave_optics_v1.py": {
+    "sha256": "c7aba16074a1e654a889f7dd27d61d14ea9a3b7a9405abe22c552cf142de2584",
+    "bytes": 3794
+  },
+  "source/Blender/blender_lab/__init__.py": {
+    "sha256": "8c93d859b2364fdd697db5fc3234c0406e2a01cbcceb9c6b05a72b92996f372f",
+    "bytes": 85
+  }
+}

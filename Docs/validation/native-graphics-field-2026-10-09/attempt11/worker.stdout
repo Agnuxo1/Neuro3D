@@ -1,0 +1,8 @@
+addon_utils.disable: optic_neuro_blender not loaded
+Modules Installed (optic_neuro_blender) from 'D:\\PROJECTS\\Neuro3D-Scientific-20261008\\Blender\\releases\\optic-neuro-blender-0.1.2.zip' into 'D:\\PROJECTS\\.cognition\\neuro3d-sequential-20261008\\native-graphics-field-attempt11-20261009\\isolated_scripts\\addons'
+Info: Modules Installed (optic_neuro_blender) from 'D:\\PROJECTS\\Neuro3D-Scientific-20261008\\Blender\\releases\\optic-neuro-blender-0.1.2.zip' into 'D:\\PROJECTS\\.cognition\\neuro3d-sequential-20261008\\native-graphics-field-attempt11-20261009\\isolated_scripts\\addons'
+{"status": "VALID_NATIVE_GRAPHICS_FIELD_AUDIT", "primary_metric": 1, "seconds": 34.588296900001296}
+Read blend: "D:\PROJECTS\Neuro3D-Scientific-20261008\Docs\validation\own-blender-addon-2026-10-09\attempt03\worker\jobs\optic-neuro-326edc59834b425d92ea2a99f43faa61\trained_geometry.blend"
+Saved session recovery to "D:\PROJECTS\.cognition\neuro3d-sequential-20261008\native-graphics-field-attempt11-20261009\temporary\quit.blend"
+
+Blender quit

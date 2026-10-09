@@ -1,0 +1,3938 @@
+{
+  "blender_version": "4.5.14 LTS",
+  "cases": [
+    {
+      "name": "baseline_numeric_and_nested_exclusions",
+      "status": "FAIL",
+      "steps": [
+        {
+          "active_scene": "Scene",
+          "checks": [
+            {
+              "name": "builder_returned_active_scene",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 3.703125,
+          "name": "build_reset_true_baseline",
+          "reset_argument": true,
+          "status": "PASS",
+          "wall_seconds": 3.7113057000096887
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "after": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2788735405408,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams": {
+                    "collection_pointer": 2788735407176,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor": {
+                    "collection_pointer": 2788735404936,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels": {
+                    "collection_pointer": 2788735407624,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Optics": {
+                    "collection_pointer": 2788735406728,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Stage": {
+                    "collection_pointer": 2788735408072,
+                    "exclude": false
+                  }
+                },
+                "before": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2788735405408,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams": {
+                    "collection_pointer": 2788735407176,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor": {
+                    "collection_pointer": 2788735404936,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels": {
+                    "collection_pointer": 2788735407624,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Optics": {
+                    "collection_pointer": 2788735406728,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Stage": {
+                    "collection_pointer": 2788735408072,
+                    "exclude": false
+                  }
+                }
+              },
+              "name": "exclude_flags_restored",
+              "passed": true
+            },
+            {
+              "details": {
+                "observed": [
+                  "C0",
+                  "C1",
+                  "C2",
+                  "C3",
+                  "R0",
+                  "R1",
+                  "R2",
+                  "R3"
+                ]
+              },
+              "name": "recognized_detector_ids",
+              "passed": true
+            },
+            {
+              "details": {
+                "total_detected_power": 0.9999421988273209
+              },
+              "name": "detectors_not_all_zero",
+              "passed": true
+            },
+            {
+              "name": "prediction_matches_model",
+              "passed": true
+            },
+            {
+              "name": "prediction_matches_returned_class_powers",
+              "passed": true
+            },
+            {
+              "name": "returned_class_powers_match_fields",
+              "passed": true
+            },
+            {
+              "name": "escape_nonnegative",
+              "passed": true
+            },
+            {
+              "name": "positive_ray_cast_count",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 6.149433015161594e-05,
+                "limit": 0.001
+              },
+              "name": "field_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 2.879860132209977e-05,
+                "limit": 0.001
+              },
+              "name": "power_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 5.780117267906171e-05,
+                "limit": 0.0002
+              },
+              "name": "balance_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 1e-08
+              },
+              "name": "escape_within_limit",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 2.015625,
+          "name": "baseline_0",
+          "sample": {
+            "classify_cpu_seconds": 2.015625,
+            "classify_wall_seconds": 2.0138670000014827,
+            "errors": {
+              "balance": 5.780117267906171e-05,
+              "escape": 0.0,
+              "field": 6.149433015161594e-05,
+              "power": 2.879860132209977e-05
+            },
+            "escape": 0.0,
+            "fields": {
+              "C0": [
+                0.0001101742482433176,
+                -0.0006778965333626175
+              ],
+              "C1": [
+                0.024928272117923082,
+                -0.5988716033131796
+              ],
+              "C2": [
+                -0.1665037455827171,
+                -0.2747132554241978
+              ],
+              "C3": [
+                0.004763078014204763,
+                0.14797979467222946
+              ],
+              "R0": [
+                0.45021277267650184,
+                0.2988516919244518
+              ],
+              "R1": [
+                0.2898289548093307,
+                -0.3318453918120967
+              ],
+              "R2": [
+                0.08206921088737842,
+                -0.1196918994091608
+              ],
+              "R3": [
+                -0.09104625337607303,
+                -0.009194923800085445
+              ]
+            },
+            "index": 0,
+            "powers": {
+              "C0": 4.7168207492103457e-07,
+              "C1": 0.35926861600568355,
+              "C2": 0.10319086999883471,
+              "C3": 0.02192070654340459,
+              "R0": 0.29200387444717096,
+              "R1": 0.19412218711279303,
+              "R2": 0.021061506159849662,
+              "R3": 0.00837396687750947
+            },
+            "prediction": 0,
+            "ray_casts": 56855,
+            "truth": 0
+          },
+          "status": "PASS",
+          "wall_seconds": 2.014180700003635
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "after": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2788735405408,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams": {
+                    "collection_pointer": 2788735407176,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor": {
+                    "collection_pointer": 2788735404936,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels": {
+                    "collection_pointer": 2788735407624,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Optics": {
+                    "collection_pointer": 2788735406728,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Stage": {
+                    "collection_pointer": 2788735408072,
+                    "exclude": false
+                  }
+                },
+                "before": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2788735405408,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams": {
+                    "collection_pointer": 2788735407176,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor": {
+                    "collection_pointer": 2788735404936,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels": {
+                    "collection_pointer": 2788735407624,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Optics": {
+                    "collection_pointer": 2788735406728,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Stage": {
+                    "collection_pointer": 2788735408072,
+                    "exclude": false
+                  }
+                }
+              },
+              "name": "exclude_flags_restored",
+              "passed": true
+            },
+            {
+              "details": {
+                "observed": [
+                  "C0",
+                  "C1",
+                  "C2",
+                  "C3",
+                  "R0",
+                  "R1",
+                  "R2",
+                  "R3"
+                ]
+              },
+              "name": "recognized_detector_ids",
+              "passed": true
+            },
+            {
+              "details": {
+                "total_detected_power": 0.9999949606431727
+              },
+              "name": "detectors_not_all_zero",
+              "passed": true
+            },
+            {
+              "name": "prediction_matches_model",
+              "passed": true
+            },
+            {
+              "name": "prediction_matches_returned_class_powers",
+              "passed": true
+            },
+            {
+              "name": "returned_class_powers_match_fields",
+              "passed": true
+            },
+            {
+              "name": "escape_nonnegative",
+              "passed": true
+            },
+            {
+              "name": "positive_ray_cast_count",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 6.660998115115991e-05,
+                "limit": 0.001
+              },
+              "name": "field_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 3.555307192987245e-05,
+                "limit": 0.001
+              },
+              "name": "power_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 5.0393568272744105e-06,
+                "limit": 0.0002
+              },
+              "name": "balance_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 1e-08
+              },
+              "name": "escape_within_limit",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 2.015625,
+          "name": "baseline_71",
+          "sample": {
+            "classify_cpu_seconds": 2.015625,
+            "classify_wall_seconds": 2.0185442000511102,
+            "errors": {
+              "balance": 5.0393568272744105e-06,
+              "escape": 0.0,
+              "field": 6.660998115115991e-05,
+              "power": 3.555307192987245e-05
+            },
+            "escape": 0.0,
+            "fields": {
+              "C0": [
+                8.360475883744528e-05,
+                -0.00042218331946097733
+              ],
+              "C1": [
+                0.015547531606024245,
+                -0.3278371891597116
+              ],
+              "C2": [
+                -0.08827241693271595,
+                -0.14218730567695212
+              ],
+              "C3": [
+                0.13844443343469848,
+                0.3916574061779666
+              ],
+              "R0": [
+                0.3711592001451412,
+                0.2560186281295562
+              ],
+              "R1": [
+                0.34434366542880207,
+                -0.4066386627860794
+              ],
+              "R2": [
+                -0.1720822248735557,
+                0.3826009617583872
+              ],
+              "R3": [
+                -0.14519228672677678,
+                -0.0859962362758874
+              ]
+            },
+            "index": 71,
+            "powers": {
+              "C0": 1.8522851093135698e-07,
+              "C1": 0.10771894833518085,
+              "C2": 0.02800924948681425,
+              "C3": 0.1725623849631074,
+              "R0": 0.203304689801721,
+              "R1": 0.28392756199339364,
+              "R2": 0.17599578805587585,
+              "R3": 0.028476152778568818
+            },
+            "prediction": 1,
+            "ray_casts": 56855,
+            "truth": 1
+          },
+          "status": "PASS",
+          "wall_seconds": 2.018770900031086
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "after": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2788735405408,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams": {
+                    "collection_pointer": 2788735407176,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor": {
+                    "collection_pointer": 2788735404936,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels": {
+                    "collection_pointer": 2788735407624,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Optics": {
+                    "collection_pointer": 2788735406728,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Stage": {
+                    "collection_pointer": 2788735408072,
+                    "exclude": false
+                  }
+                },
+                "before": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2788735405408,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams": {
+                    "collection_pointer": 2788735407176,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor": {
+                    "collection_pointer": 2788735404936,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels": {
+                    "collection_pointer": 2788735407624,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Optics": {
+                    "collection_pointer": 2788735406728,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Stage": {
+                    "collection_pointer": 2788735408072,
+                    "exclude": false
+                  }
+                }
+              },
+              "name": "exclude_flags_restored",
+              "passed": true
+            },
+            {
+              "details": {
+                "observed": [
+                  "C0",
+                  "C1",
+                  "C2",
+                  "C3",
+                  "R0",
+                  "R1",
+                  "R2",
+                  "R3"
+                ]
+              },
+              "name": "recognized_detector_ids",
+              "passed": true
+            },
+            {
+              "details": {
+                "total_detected_power": 0.9999969204958564
+              },
+              "name": "detectors_not_all_zero",
+              "passed": true
+            },
+            {
+              "name": "prediction_matches_model",
+              "passed": true
+            },
+            {
+              "name": "prediction_matches_returned_class_powers",
+              "passed": true
+            },
+            {
+              "name": "returned_class_powers_match_fields",
+              "passed": true
+            },
+            {
+              "name": "escape_nonnegative",
+              "passed": true
+            },
+            {
+              "name": "positive_ray_cast_count",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 6.672499395432176e-05,
+                "limit": 0.001
+              },
+              "name": "field_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 2.9867315669090955e-05,
+                "limit": 0.001
+              },
+              "name": "power_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 3.079504143577161e-06,
+                "limit": 0.0002
+              },
+              "name": "balance_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 1e-08
+              },
+              "name": "escape_within_limit",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 2.046875,
+          "name": "baseline_149",
+          "sample": {
+            "classify_cpu_seconds": 2.046875,
+            "classify_wall_seconds": 2.038240699970629,
+            "errors": {
+              "balance": 3.079504143577161e-06,
+              "escape": 0.0,
+              "field": 6.672499395432176e-05,
+              "power": 2.9867315669090955e-05
+            },
+            "escape": 0.0,
+            "fields": {
+              "C0": [
+                8.91432543193571e-05,
+                -0.00044917618581532333
+              ],
+              "C1": [
+                0.013503112457516911,
+                -0.3499645829616702
+              ],
+              "C2": [
+                -0.09876732821787779,
+                -0.14643203671574712
+              ],
+              "C3": [
+                0.1133136582133289,
+                0.36628344654100864
+              ],
+              "R0": [
+                0.31220861745705236,
+                0.20070741257358432
+              ],
+              "R1": [
+                0.30209688718146793,
+                -0.3836144019606504
+              ],
+              "R2": [
+                -0.19561028878578837,
+                0.4704506235711403
+              ],
+              "R3": [
+                -0.14922888573827497,
+                -0.2027353768340373
+              ]
+            },
+            "index": 149,
+            "powers": {
+              "C0": 2.0970576569424748e-07,
+              "C1": 0.12265754337357611,
+              "C2": 0.0311973265000199,
+              "C3": 0.14700354834764706,
+              "R0": 0.13775768627642707,
+              "R1": 0.23842253863636,
+              "R2": 0.2595871742973343,
+              "R3": 0.06337089335872625
+            },
+            "prediction": 2,
+            "ray_casts": 56855,
+            "truth": 2
+          },
+          "status": "PASS",
+          "wall_seconds": 2.0384640999836847
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "after": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2788735405408,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams": {
+                    "collection_pointer": 2788735407176,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor": {
+                    "collection_pointer": 2788735404936,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor/rebuild-nested-excluded": {
+                    "collection_pointer": 2788781777928,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Decor/rebuild-nested-visible": {
+                    "collection_pointer": 2788781777480,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels": {
+                    "collection_pointer": 2788735407624,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Optics": {
+                    "collection_pointer": 2788735406728,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Stage": {
+                    "collection_pointer": 2788735408072,
+                    "exclude": false
+                  }
+                },
+                "before": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2788735405408,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams": {
+                    "collection_pointer": 2788735407176,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor": {
+                    "collection_pointer": 2788735404936,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor/rebuild-nested-excluded": {
+                    "collection_pointer": 2788781777928,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Decor/rebuild-nested-visible": {
+                    "collection_pointer": 2788781777480,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels": {
+                    "collection_pointer": 2788735407624,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Optics": {
+                    "collection_pointer": 2788735406728,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Stage": {
+                    "collection_pointer": 2788735408072,
+                    "exclude": false
+                  }
+                }
+              },
+              "name": "exclude_flags_restored",
+              "passed": true
+            },
+            {
+              "details": {
+                "observed": []
+              },
+              "name": "recognized_detector_ids",
+              "passed": true
+            },
+            {
+              "details": {
+                "total_detected_power": 0.0
+              },
+              "name": "detectors_not_all_zero",
+              "passed": false
+            },
+            {
+              "name": "prediction_matches_model",
+              "passed": true
+            },
+            {
+              "name": "prediction_matches_returned_class_powers",
+              "passed": true
+            },
+            {
+              "name": "returned_class_powers_match_fields",
+              "passed": true
+            },
+            {
+              "name": "escape_nonnegative",
+              "passed": true
+            },
+            {
+              "name": "positive_ray_cast_count",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 0.599397938750383,
+                "limit": 0.001
+              },
+              "name": "field_within_limit",
+              "passed": false
+            },
+            {
+              "details": {
+                "error": 0.35927788897820795,
+                "limit": 0.001
+              },
+              "name": "power_within_limit",
+              "passed": false
+            },
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 0.0002
+              },
+              "name": "balance_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 1.0,
+                "limit": 1e-08
+              },
+              "name": "escape_within_limit",
+              "passed": false
+            }
+          ],
+          "cpu_seconds": 0.015625,
+          "name": "excluded_optics_and_nested_decor_0",
+          "sample": {
+            "classify_cpu_seconds": 0.015625,
+            "classify_wall_seconds": 0.006830900034401566,
+            "errors": {
+              "balance": 0.0,
+              "escape": 1.0,
+              "field": 0.599397938750383,
+              "power": 0.35927788897820795
+            },
+            "escape": 1.0,
+            "fields": {
+              "C0": [
+                0.0,
+                0.0
+              ],
+              "C1": [
+                0.0,
+                0.0
+              ],
+              "C2": [
+                0.0,
+                0.0
+              ],
+              "C3": [
+                0.0,
+                0.0
+              ],
+              "R0": [
+                0.0,
+                0.0
+              ],
+              "R1": [
+                0.0,
+                0.0
+              ],
+              "R2": [
+                0.0,
+                0.0
+              ],
+              "R3": [
+                0.0,
+                0.0
+              ]
+            },
+            "index": 0,
+            "powers": {
+              "C0": 0.0,
+              "C1": 0.0,
+              "C2": 0.0,
+              "C3": 0.0,
+              "R0": 0.0,
+              "R1": 0.0,
+              "R2": 0.0,
+              "R3": 0.0
+            },
+            "prediction": 0,
+            "ray_casts": 5,
+            "truth": 0
+          },
+          "status": "FAIL",
+          "wall_seconds": 0.007032100053038448
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "error": 0.5993902034615544,
+                "limit": 1e-08
+              },
+              "name": "same_geometry_field",
+              "passed": false
+            },
+            {
+              "details": {
+                "error": 0.35926861600568355,
+                "limit": 1e-08
+              },
+              "name": "same_geometry_power",
+              "passed": false
+            },
+            {
+              "details": {
+                "error": 1.0,
+                "limit": 1e-08
+              },
+              "name": "same_geometry_escape",
+              "passed": false
+            },
+            {
+              "name": "same_geometry_prediction",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 0.0,
+          "name": "same_geometry_after_exclusion_0",
+          "status": "FAIL",
+          "wall_seconds": 2.099998528137803e-05
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "after": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2788735405408,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams": {
+                    "collection_pointer": 2788735407176,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor": {
+                    "collection_pointer": 2788735404936,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor/rebuild-nested-excluded": {
+                    "collection_pointer": 2788781777928,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Decor/rebuild-nested-visible": {
+                    "collection_pointer": 2788781777480,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels": {
+                    "collection_pointer": 2788735407624,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Optics": {
+                    "collection_pointer": 2788735406728,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Stage": {
+                    "collection_pointer": 2788735408072,
+                    "exclude": false
+                  }
+                },
+                "before": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2788735405408,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams": {
+                    "collection_pointer": 2788735407176,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor": {
+                    "collection_pointer": 2788735404936,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor/rebuild-nested-excluded": {
+                    "collection_pointer": 2788781777928,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Decor/rebuild-nested-visible": {
+                    "collection_pointer": 2788781777480,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels": {
+                    "collection_pointer": 2788735407624,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Optics": {
+                    "collection_pointer": 2788735406728,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Stage": {
+                    "collection_pointer": 2788735408072,
+                    "exclude": false
+                  }
+                }
+              },
+              "name": "exclude_flags_restored",
+              "passed": true
+            },
+            {
+              "details": {
+                "observed": []
+              },
+              "name": "recognized_detector_ids",
+              "passed": true
+            },
+            {
+              "details": {
+                "total_detected_power": 0.0
+              },
+              "name": "detectors_not_all_zero",
+              "passed": false
+            },
+            {
+              "name": "prediction_matches_model",
+              "passed": false
+            },
+            {
+              "name": "prediction_matches_returned_class_powers",
+              "passed": true
+            },
+            {
+              "name": "returned_class_powers_match_fields",
+              "passed": true
+            },
+            {
+              "name": "escape_nonnegative",
+              "passed": true
+            },
+            {
+              "name": "positive_ray_cast_count",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 0.5328151733213533,
+                "limit": 0.001
+              },
+              "name": "field_within_limit",
+              "passed": false
+            },
+            {
+              "details": {
+                "error": 0.28389200892146377,
+                "limit": 0.001
+              },
+              "name": "power_within_limit",
+              "passed": false
+            },
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 0.0002
+              },
+              "name": "balance_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 1.0,
+                "limit": 1e-08
+              },
+              "name": "escape_within_limit",
+              "passed": false
+            }
+          ],
+          "cpu_seconds": 0.0,
+          "name": "excluded_optics_and_nested_decor_71",
+          "sample": {
+            "classify_cpu_seconds": 0.0,
+            "classify_wall_seconds": 0.0005064000142738223,
+            "errors": {
+              "balance": 0.0,
+              "escape": 1.0,
+              "field": 0.5328151733213533,
+              "power": 0.28389200892146377
+            },
+            "escape": 1.0,
+            "fields": {
+              "C0": [
+                0.0,
+                0.0
+              ],
+              "C1": [
+                0.0,
+                0.0
+              ],
+              "C2": [
+                0.0,
+                0.0
+              ],
+              "C3": [
+                0.0,
+                0.0
+              ],
+              "R0": [
+                0.0,
+                0.0
+              ],
+              "R1": [
+                0.0,
+                0.0
+              ],
+              "R2": [
+                0.0,
+                0.0
+              ],
+              "R3": [
+                0.0,
+                0.0
+              ]
+            },
+            "index": 71,
+            "powers": {
+              "C0": 0.0,
+              "C1": 0.0,
+              "C2": 0.0,
+              "C3": 0.0,
+              "R0": 0.0,
+              "R1": 0.0,
+              "R2": 0.0,
+              "R3": 0.0
+            },
+            "prediction": 0,
+            "ray_casts": 5,
+            "truth": 1
+          },
+          "status": "FAIL",
+          "wall_seconds": 0.0007265000022016466
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "error": 0.5328485356960209,
+                "limit": 1e-08
+              },
+              "name": "same_geometry_field",
+              "passed": false
+            },
+            {
+              "details": {
+                "error": 0.28392756199339364,
+                "limit": 1e-08
+              },
+              "name": "same_geometry_power",
+              "passed": false
+            },
+            {
+              "details": {
+                "error": 1.0,
+                "limit": 1e-08
+              },
+              "name": "same_geometry_escape",
+              "passed": false
+            },
+            {
+              "name": "same_geometry_prediction",
+              "passed": false
+            }
+          ],
+          "cpu_seconds": 0.0,
+          "name": "same_geometry_after_exclusion_71",
+          "status": "FAIL",
+          "wall_seconds": 2.0600040443241596e-05
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "after": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2788735405408,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams": {
+                    "collection_pointer": 2788735407176,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor": {
+                    "collection_pointer": 2788735404936,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor/rebuild-nested-excluded": {
+                    "collection_pointer": 2788781777928,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Decor/rebuild-nested-visible": {
+                    "collection_pointer": 2788781777480,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels": {
+                    "collection_pointer": 2788735407624,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Optics": {
+                    "collection_pointer": 2788735406728,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Stage": {
+                    "collection_pointer": 2788735408072,
+                    "exclude": false
+                  }
+                },
+                "before": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2788735405408,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams": {
+                    "collection_pointer": 2788735407176,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor": {
+                    "collection_pointer": 2788735404936,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor/rebuild-nested-excluded": {
+                    "collection_pointer": 2788781777928,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Decor/rebuild-nested-visible": {
+                    "collection_pointer": 2788781777480,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels": {
+                    "collection_pointer": 2788735407624,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Optics": {
+                    "collection_pointer": 2788735406728,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Stage": {
+                    "collection_pointer": 2788735408072,
+                    "exclude": false
+                  }
+                }
+              },
+              "name": "exclude_flags_restored",
+              "passed": true
+            },
+            {
+              "details": {
+                "observed": []
+              },
+              "name": "recognized_detector_ids",
+              "passed": true
+            },
+            {
+              "details": {
+                "total_detected_power": 0.0
+              },
+              "name": "detectors_not_all_zero",
+              "passed": false
+            },
+            {
+              "name": "prediction_matches_model",
+              "passed": false
+            },
+            {
+              "name": "prediction_matches_returned_class_powers",
+              "passed": true
+            },
+            {
+              "name": "returned_class_powers_match_fields",
+              "passed": true
+            },
+            {
+              "name": "escape_nonnegative",
+              "passed": true
+            },
+            {
+              "name": "positive_ray_cast_count",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 0.5094790926831336,
+                "limit": 0.001
+              },
+              "name": "field_within_limit",
+              "passed": false
+            },
+            {
+              "details": {
+                "error": 0.2595689458812291,
+                "limit": 0.001
+              },
+              "name": "power_within_limit",
+              "passed": false
+            },
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 0.0002
+              },
+              "name": "balance_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 1.0,
+                "limit": 1e-08
+              },
+              "name": "escape_within_limit",
+              "passed": false
+            }
+          ],
+          "cpu_seconds": 0.0,
+          "name": "excluded_optics_and_nested_decor_149",
+          "sample": {
+            "classify_cpu_seconds": 0.0,
+            "classify_wall_seconds": 0.0004453000146895647,
+            "errors": {
+              "balance": 0.0,
+              "escape": 1.0,
+              "field": 0.5094790926831336,
+              "power": 0.2595689458812291
+            },
+            "escape": 1.0,
+            "fields": {
+              "C0": [
+                0.0,
+                0.0
+              ],
+              "C1": [
+                0.0,
+                0.0
+              ],
+              "C2": [
+                0.0,
+                0.0
+              ],
+              "C3": [
+                0.0,
+                0.0
+              ],
+              "R0": [
+                0.0,
+                0.0
+              ],
+              "R1": [
+                0.0,
+                0.0
+              ],
+              "R2": [
+                0.0,
+                0.0
+              ],
+              "R3": [
+                0.0,
+                0.0
+              ]
+            },
+            "index": 149,
+            "powers": {
+              "C0": 0.0,
+              "C1": 0.0,
+              "C2": 0.0,
+              "C3": 0.0,
+              "R0": 0.0,
+              "R1": 0.0,
+              "R2": 0.0,
+              "R3": 0.0
+            },
+            "prediction": 0,
+            "ray_casts": 5,
+            "truth": 2
+          },
+          "status": "FAIL",
+          "wall_seconds": 0.0005810000002384186
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "error": 0.5094969816371185,
+                "limit": 1e-08
+              },
+              "name": "same_geometry_field",
+              "passed": false
+            },
+            {
+              "details": {
+                "error": 0.2595871742973343,
+                "limit": 1e-08
+              },
+              "name": "same_geometry_power",
+              "passed": false
+            },
+            {
+              "details": {
+                "error": 1.0,
+                "limit": 1e-08
+              },
+              "name": "same_geometry_escape",
+              "passed": false
+            },
+            {
+              "name": "same_geometry_prediction",
+              "passed": false
+            }
+          ],
+          "cpu_seconds": 0.0,
+          "name": "same_geometry_after_exclusion_149",
+          "status": "FAIL",
+          "wall_seconds": 1.9499973859637976e-05
+        }
+      ]
+    },
+    {
+      "name": "existing_user_optics_and_materials",
+      "status": "FAIL",
+      "steps": [
+        {
+          "active_scene": "Neuro3D Iris",
+          "checks": [
+            {
+              "name": "builder_returned_active_scene",
+              "passed": true
+            },
+            {
+              "name": "new_scene_created",
+              "passed": true
+            },
+            {
+              "name": "previous_scene_has_fake_user",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 3.6875,
+          "name": "build_reset_false_with_user_optics",
+          "reset_argument": false,
+          "status": "PASS",
+          "wall_seconds": 3.6869184999959543
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "e764712706591767a3683f02cfcaed2687958c334a3a722325e405824d9e4703",
+                "before_sha256": "5461a0f06dab52b0e13d1d2326f1deead66e47e52ade0a61576f8f92ef5b9488",
+                "changed": [
+                  "material:beamsplitter",
+                  "material:det_C0",
+                  "material:det_C1",
+                  "material:det_C2",
+                  "material:det_C3",
+                  "material:det_R0",
+                  "material:det_R1",
+                  "material:det_R2",
+                  "material:det_R3",
+                  "material:mirror",
+                  "material:plate_bs",
+                  "material:plate_mirror",
+                  "material:post",
+                  "material:stage"
+                ],
+                "changed_count": 14,
+                "materials_checked": 17,
+                "objects_checked": 1,
+                "scenes_checked": 1
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": false
+            }
+          ],
+          "cpu_seconds": 0.0,
+          "name": "preservation_after_build",
+          "status": "FAIL",
+          "wall_seconds": 0.003525500011164695
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "after": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2788735405384,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams.001": {
+                    "collection_pointer": 2788735403144,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor.001": {
+                    "collection_pointer": 2788799557704,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels.001": {
+                    "collection_pointer": 2788735408968,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Optics.001": {
+                    "collection_pointer": 2788735404040,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Stage.001": {
+                    "collection_pointer": 2788799545608,
+                    "exclude": false
+                  }
+                },
+                "before": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2788735405384,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams.001": {
+                    "collection_pointer": 2788735403144,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor.001": {
+                    "collection_pointer": 2788799557704,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels.001": {
+                    "collection_pointer": 2788735408968,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Optics.001": {
+                    "collection_pointer": 2788735404040,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Stage.001": {
+                    "collection_pointer": 2788799545608,
+                    "exclude": false
+                  }
+                }
+              },
+              "name": "exclude_flags_restored",
+              "passed": true
+            },
+            {
+              "details": {
+                "observed": []
+              },
+              "name": "recognized_detector_ids",
+              "passed": true
+            },
+            {
+              "details": {
+                "total_detected_power": 0.0
+              },
+              "name": "detectors_not_all_zero",
+              "passed": false
+            },
+            {
+              "name": "prediction_matches_model",
+              "passed": false
+            },
+            {
+              "name": "prediction_matches_returned_class_powers",
+              "passed": true
+            },
+            {
+              "name": "returned_class_powers_match_fields",
+              "passed": true
+            },
+            {
+              "name": "escape_nonnegative",
+              "passed": true
+            },
+            {
+              "name": "positive_ray_cast_count",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 0.5328151733213533,
+                "limit": 0.001
+              },
+              "name": "field_within_limit",
+              "passed": false
+            },
+            {
+              "details": {
+                "error": 0.28389200892146377,
+                "limit": 0.001
+              },
+              "name": "power_within_limit",
+              "passed": false
+            },
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 0.0002
+              },
+              "name": "balance_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 1.0,
+                "limit": 1e-08
+              },
+              "name": "escape_within_limit",
+              "passed": false
+            }
+          ],
+          "cpu_seconds": 0.015625,
+          "name": "numeric_with_colliding_global_names",
+          "sample": {
+            "classify_cpu_seconds": 0.015625,
+            "classify_wall_seconds": 0.005368900019675493,
+            "errors": {
+              "balance": 0.0,
+              "escape": 1.0,
+              "field": 0.5328151733213533,
+              "power": 0.28389200892146377
+            },
+            "escape": 1.0,
+            "fields": {
+              "C0": [
+                0.0,
+                0.0
+              ],
+              "C1": [
+                0.0,
+                0.0
+              ],
+              "C2": [
+                0.0,
+                0.0
+              ],
+              "C3": [
+                0.0,
+                0.0
+              ],
+              "R0": [
+                0.0,
+                0.0
+              ],
+              "R1": [
+                0.0,
+                0.0
+              ],
+              "R2": [
+                0.0,
+                0.0
+              ],
+              "R3": [
+                0.0,
+                0.0
+              ]
+            },
+            "index": 71,
+            "powers": {
+              "C0": 0.0,
+              "C1": 0.0,
+              "C2": 0.0,
+              "C3": 0.0,
+              "R0": 0.0,
+              "R1": 0.0,
+              "R2": 0.0,
+              "R3": 0.0
+            },
+            "prediction": 0,
+            "ray_casts": 5,
+            "truth": 1
+          },
+          "status": "FAIL",
+          "wall_seconds": 0.005666799959726632
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "0a1e882f978ab888fbb76d7ecfe8845badd46943ad8f4489d6342d58cf1252f5",
+                "before_sha256": "5461a0f06dab52b0e13d1d2326f1deead66e47e52ade0a61576f8f92ef5b9488",
+                "changed": [
+                  "material:bar_r0",
+                  "material:beam_0",
+                  "material:beamsplitter",
+                  "material:det_C0",
+                  "material:det_C1",
+                  "material:det_C2",
+                  "material:det_C3",
+                  "material:det_R0",
+                  "material:det_R1",
+                  "material:det_R2",
+                  "material:det_R3",
+                  "material:mirror",
+                  "material:plate_bs",
+                  "material:plate_mirror",
+                  "material:post",
+                  "material:stage",
+                  "material:txt_hud.title"
+                ],
+                "changed_count": 17,
+                "materials_checked": 17,
+                "objects_checked": 1,
+                "scenes_checked": 1
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": false
+            }
+          ],
+          "cpu_seconds": 0.34375,
+          "name": "show_preserves_previous_scenes",
+          "status": "FAIL",
+          "wall_seconds": 0.35664680000627413
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "0a1e882f978ab888fbb76d7ecfe8845badd46943ad8f4489d6342d58cf1252f5",
+                "before_sha256": "5461a0f06dab52b0e13d1d2326f1deead66e47e52ade0a61576f8f92ef5b9488",
+                "changed": [
+                  "material:bar_r0",
+                  "material:beam_0",
+                  "material:beamsplitter",
+                  "material:det_C0",
+                  "material:det_C1",
+                  "material:det_C2",
+                  "material:det_C3",
+                  "material:det_R0",
+                  "material:det_R1",
+                  "material:det_R2",
+                  "material:det_R3",
+                  "material:mirror",
+                  "material:plate_bs",
+                  "material:plate_mirror",
+                  "material:post",
+                  "material:stage",
+                  "material:txt_hud.title"
+                ],
+                "changed_count": 17,
+                "materials_checked": 17,
+                "objects_checked": 1,
+                "scenes_checked": 1
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": false
+            }
+          ],
+          "cpu_seconds": 0.015625,
+          "name": "preservation_after_show_even_on_error",
+          "status": "FAIL",
+          "wall_seconds": 0.0032798000029288232
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "0a1e882f978ab888fbb76d7ecfe8845badd46943ad8f4489d6342d58cf1252f5",
+                "before_sha256": "5461a0f06dab52b0e13d1d2326f1deead66e47e52ade0a61576f8f92ef5b9488",
+                "changed": [
+                  "material:bar_r0",
+                  "material:beam_0",
+                  "material:beamsplitter",
+                  "material:det_C0",
+                  "material:det_C1",
+                  "material:det_C2",
+                  "material:det_C3",
+                  "material:det_R0",
+                  "material:det_R1",
+                  "material:det_R2",
+                  "material:det_R3",
+                  "material:mirror",
+                  "material:plate_bs",
+                  "material:plate_mirror",
+                  "material:post",
+                  "material:stage",
+                  "material:txt_hud.title"
+                ],
+                "changed_count": 17,
+                "materials_checked": 17,
+                "objects_checked": 1,
+                "scenes_checked": 1
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": false
+            }
+          ],
+          "cpu_seconds": 0.0,
+          "name": "dim_detectors_preserves_previous_scenes",
+          "status": "FAIL",
+          "wall_seconds": 0.0032075000344775617
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "0a1e882f978ab888fbb76d7ecfe8845badd46943ad8f4489d6342d58cf1252f5",
+                "before_sha256": "5461a0f06dab52b0e13d1d2326f1deead66e47e52ade0a61576f8f92ef5b9488",
+                "changed": [
+                  "material:bar_r0",
+                  "material:beam_0",
+                  "material:beamsplitter",
+                  "material:det_C0",
+                  "material:det_C1",
+                  "material:det_C2",
+                  "material:det_C3",
+                  "material:det_R0",
+                  "material:det_R1",
+                  "material:det_R2",
+                  "material:det_R3",
+                  "material:mirror",
+                  "material:plate_bs",
+                  "material:plate_mirror",
+                  "material:post",
+                  "material:stage",
+                  "material:txt_hud.title"
+                ],
+                "changed_count": 17,
+                "materials_checked": 17,
+                "objects_checked": 1,
+                "scenes_checked": 1
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": false
+            }
+          ],
+          "cpu_seconds": 0.0,
+          "name": "preservation_after_dim_even_on_error",
+          "status": "FAIL",
+          "wall_seconds": 0.0031764000304974616
+        },
+        {
+          "checks": [
+            {
+              "name": "propagate_branch_completed",
+              "passed": true
+            },
+            {
+              "name": "manual_tick_returned_next_interval",
+              "passed": true
+            },
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "0a1e882f978ab888fbb76d7ecfe8845badd46943ad8f4489d6342d58cf1252f5",
+                "before_sha256": "5461a0f06dab52b0e13d1d2326f1deead66e47e52ade0a61576f8f92ef5b9488",
+                "changed": [
+                  "material:bar_r0",
+                  "material:beam_0",
+                  "material:beamsplitter",
+                  "material:det_C0",
+                  "material:det_C1",
+                  "material:det_C2",
+                  "material:det_C3",
+                  "material:det_R0",
+                  "material:det_R1",
+                  "material:det_R2",
+                  "material:det_R3",
+                  "material:mirror",
+                  "material:plate_bs",
+                  "material:plate_mirror",
+                  "material:post",
+                  "material:stage",
+                  "material:txt_hud.title"
+                ],
+                "changed_count": 17,
+                "materials_checked": 17,
+                "objects_checked": 1,
+                "scenes_checked": 1
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": false
+            }
+          ],
+          "cpu_seconds": 0.34375,
+          "name": "manual_live_propagate_preserves_previous_scenes",
+          "status": "FAIL",
+          "wall_seconds": 0.35170970001490787
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "0a1e882f978ab888fbb76d7ecfe8845badd46943ad8f4489d6342d58cf1252f5",
+                "before_sha256": "5461a0f06dab52b0e13d1d2326f1deead66e47e52ade0a61576f8f92ef5b9488",
+                "changed": [
+                  "material:bar_r0",
+                  "material:beam_0",
+                  "material:beamsplitter",
+                  "material:det_C0",
+                  "material:det_C1",
+                  "material:det_C2",
+                  "material:det_C3",
+                  "material:det_R0",
+                  "material:det_R1",
+                  "material:det_R2",
+                  "material:det_R3",
+                  "material:mirror",
+                  "material:plate_bs",
+                  "material:plate_mirror",
+                  "material:post",
+                  "material:stage",
+                  "material:txt_hud.title"
+                ],
+                "changed_count": 17,
+                "materials_checked": 17,
+                "objects_checked": 1,
+                "scenes_checked": 1
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": false
+            }
+          ],
+          "cpu_seconds": 0.015625,
+          "name": "preservation_after_live_even_on_error",
+          "status": "FAIL",
+          "wall_seconds": 0.0031491999980062246
+        }
+      ]
+    },
+    {
+      "name": "two_repeated_non_destructive_rebuilds",
+      "status": "FAIL",
+      "steps": [
+        {
+          "active_scene": "Scene",
+          "checks": [
+            {
+              "name": "builder_returned_active_scene",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 3.984375,
+          "name": "initial_build",
+          "reset_argument": true,
+          "status": "PASS",
+          "wall_seconds": 3.9754242000053637
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "after": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2788735404512,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams": {
+                    "collection_pointer": 2788735407624,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor": {
+                    "collection_pointer": 2788735408520,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels": {
+                    "collection_pointer": 2788735404936,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Optics": {
+                    "collection_pointer": 2788735406728,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Stage": {
+                    "collection_pointer": 2788735407176,
+                    "exclude": false
+                  }
+                },
+                "before": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2788735404512,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams": {
+                    "collection_pointer": 2788735407624,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor": {
+                    "collection_pointer": 2788735408520,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels": {
+                    "collection_pointer": 2788735404936,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Optics": {
+                    "collection_pointer": 2788735406728,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Stage": {
+                    "collection_pointer": 2788735407176,
+                    "exclude": false
+                  }
+                }
+              },
+              "name": "exclude_flags_restored",
+              "passed": true
+            },
+            {
+              "details": {
+                "observed": [
+                  "C0",
+                  "C1",
+                  "C2",
+                  "C3",
+                  "R0",
+                  "R1",
+                  "R2",
+                  "R3"
+                ]
+              },
+              "name": "recognized_detector_ids",
+              "passed": true
+            },
+            {
+              "details": {
+                "total_detected_power": 0.9999949606431727
+              },
+              "name": "detectors_not_all_zero",
+              "passed": true
+            },
+            {
+              "name": "prediction_matches_model",
+              "passed": true
+            },
+            {
+              "name": "prediction_matches_returned_class_powers",
+              "passed": true
+            },
+            {
+              "name": "returned_class_powers_match_fields",
+              "passed": true
+            },
+            {
+              "name": "escape_nonnegative",
+              "passed": true
+            },
+            {
+              "name": "positive_ray_cast_count",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 6.660998115115991e-05,
+                "limit": 0.001
+              },
+              "name": "field_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 3.555307192987245e-05,
+                "limit": 0.001
+              },
+              "name": "power_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 5.0393568272744105e-06,
+                "limit": 0.0002
+              },
+              "name": "balance_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 1e-08
+              },
+              "name": "escape_within_limit",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 2.046875,
+          "name": "initial_numeric",
+          "sample": {
+            "classify_cpu_seconds": 2.046875,
+            "classify_wall_seconds": 2.0620616999804042,
+            "errors": {
+              "balance": 5.0393568272744105e-06,
+              "escape": 0.0,
+              "field": 6.660998115115991e-05,
+              "power": 3.555307192987245e-05
+            },
+            "escape": 0.0,
+            "fields": {
+              "C0": [
+                8.360475883744528e-05,
+                -0.00042218331946097733
+              ],
+              "C1": [
+                0.015547531606024245,
+                -0.3278371891597116
+              ],
+              "C2": [
+                -0.08827241693271595,
+                -0.14218730567695212
+              ],
+              "C3": [
+                0.13844443343469848,
+                0.3916574061779666
+              ],
+              "R0": [
+                0.3711592001451412,
+                0.2560186281295562
+              ],
+              "R1": [
+                0.34434366542880207,
+                -0.4066386627860794
+              ],
+              "R2": [
+                -0.1720822248735557,
+                0.3826009617583872
+              ],
+              "R3": [
+                -0.14519228672677678,
+                -0.0859962362758874
+              ]
+            },
+            "index": 71,
+            "powers": {
+              "C0": 1.8522851093135698e-07,
+              "C1": 0.10771894833518085,
+              "C2": 0.02800924948681425,
+              "C3": 0.1725623849631074,
+              "R0": 0.203304689801721,
+              "R1": 0.28392756199339364,
+              "R2": 0.17599578805587585,
+              "R3": 0.028476152778568818
+            },
+            "prediction": 1,
+            "ray_casts": 56855,
+            "truth": 1
+          },
+          "status": "PASS",
+          "wall_seconds": 2.0622866000048816
+        },
+        {
+          "checks": [],
+          "cpu_seconds": 6.21875,
+          "name": "initial_show",
+          "status": "PASS",
+          "wall_seconds": 6.222485099977348
+        },
+        {
+          "checks": [],
+          "cpu_seconds": 3.4375,
+          "exception_message": "'bpy_prop_collection[key]: key \"det_R0.001\" not found'",
+          "exception_type": "KeyError",
+          "name": "rebuild_1",
+          "reset_argument": false,
+          "status": "FAIL",
+          "traceback": "Traceback (most recent call last):\n  File \"D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\demo_lattice_iris\\test_rebuild_blender.py\", line 94, in run_step\n    result = function(step)\n             ^^^^^^^^^^^^^^\n  File \"D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\demo_lattice_iris\\test_rebuild_blender.py\", line 450, in <lambda>\n    run_step(case, \"rebuild_\" + str(generation), lambda step: build(step, False))\n                                                              ^^^^^^^^^^^^^^^^^^\n  File \"D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\demo_lattice_iris\\test_rebuild_blender.py\", line 291, in build\n    scene = DEMO.build_scene(np.asarray(STATE[\"theta\"]).reshape(4, 4), STATE[\"ref\"], reset=reset)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\demo_lattice_iris\\neuro3d_iris_demo.py\", line 302, in build_scene\n    pl.data.materials.append(bpy.data.materials[f\"det_{ob.name[4:]}\"] if kind == \"det\" else (m_plate_b if kind == \"bs\" else m_plate_m))\n                             ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'bpy_prop_collection[key]: key \"det_R0.001\" not found'\n",
+          "wall_seconds": 3.4439283999963664
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "380a286b703e022759417c547afdf3c2d485b6dbbcf09e65e1bb9b6fe0f94531",
+                "before_sha256": "cb1fbab0eda9bc52ed0eefb97ab181aabfec737011990377b6771123099a6582",
+                "changed": [
+                  "material:beamsplitter",
+                  "material:det_C0",
+                  "material:det_C1",
+                  "material:det_C2",
+                  "material:det_C3",
+                  "material:det_R0",
+                  "material:det_R1",
+                  "material:det_R2",
+                  "material:det_R3",
+                  "material:mirror",
+                  "material:plate_bs",
+                  "material:plate_mirror",
+                  "material:post",
+                  "material:src_c0",
+                  "material:src_c1",
+                  "material:src_c2",
+                  "material:src_r0",
+                  "material:src_r1"
+                ],
+                "changed_count": 18,
+                "materials_checked": 161,
+                "objects_checked": 460,
+                "scenes_checked": 1
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": false
+            }
+          ],
+          "cpu_seconds": 0.09375,
+          "name": "preserve_after_rebuild_1",
+          "status": "FAIL",
+          "wall_seconds": 0.11645649996353313
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "after": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2788840737672,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams.001": {
+                    "collection_pointer": 2788840747080,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor.001": {
+                    "collection_pointer": 2788840740360,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels.001": {
+                    "collection_pointer": 2788840736776,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Optics.001": {
+                    "collection_pointer": 2788840742152,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Stage.001": {
+                    "collection_pointer": 2788840746184,
+                    "exclude": false
+                  }
+                },
+                "before": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2788840737672,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams.001": {
+                    "collection_pointer": 2788840747080,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor.001": {
+                    "collection_pointer": 2788840740360,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels.001": {
+                    "collection_pointer": 2788840736776,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Optics.001": {
+                    "collection_pointer": 2788840742152,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Stage.001": {
+                    "collection_pointer": 2788840746184,
+                    "exclude": false
+                  }
+                }
+              },
+              "name": "exclude_flags_restored",
+              "passed": true
+            },
+            {
+              "details": {
+                "observed": []
+              },
+              "name": "recognized_detector_ids",
+              "passed": true
+            },
+            {
+              "details": {
+                "total_detected_power": 0.0
+              },
+              "name": "detectors_not_all_zero",
+              "passed": false
+            },
+            {
+              "name": "prediction_matches_model",
+              "passed": false
+            },
+            {
+              "name": "prediction_matches_returned_class_powers",
+              "passed": true
+            },
+            {
+              "name": "returned_class_powers_match_fields",
+              "passed": true
+            },
+            {
+              "name": "escape_nonnegative",
+              "passed": true
+            },
+            {
+              "name": "positive_ray_cast_count",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 0.5328151733213533,
+                "limit": 0.001
+              },
+              "name": "field_within_limit",
+              "passed": false
+            },
+            {
+              "details": {
+                "error": 0.28389200892146377,
+                "limit": 0.001
+              },
+              "name": "power_within_limit",
+              "passed": false
+            },
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 0.0002
+              },
+              "name": "balance_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 1.0,
+                "limit": 1e-08
+              },
+              "name": "escape_within_limit",
+              "passed": false
+            }
+          ],
+          "cpu_seconds": 0.015625,
+          "name": "numeric_after_rebuild_1",
+          "sample": {
+            "classify_cpu_seconds": 0.015625,
+            "classify_wall_seconds": 0.006179799966048449,
+            "errors": {
+              "balance": 0.0,
+              "escape": 1.0,
+              "field": 0.5328151733213533,
+              "power": 0.28389200892146377
+            },
+            "escape": 1.0,
+            "fields": {
+              "C0": [
+                0.0,
+                0.0
+              ],
+              "C1": [
+                0.0,
+                0.0
+              ],
+              "C2": [
+                0.0,
+                0.0
+              ],
+              "C3": [
+                0.0,
+                0.0
+              ],
+              "R0": [
+                0.0,
+                0.0
+              ],
+              "R1": [
+                0.0,
+                0.0
+              ],
+              "R2": [
+                0.0,
+                0.0
+              ],
+              "R3": [
+                0.0,
+                0.0
+              ]
+            },
+            "index": 71,
+            "powers": {
+              "C0": 0.0,
+              "C1": 0.0,
+              "C2": 0.0,
+              "C3": 0.0,
+              "R0": 0.0,
+              "R1": 0.0,
+              "R2": 0.0,
+              "R3": 0.0
+            },
+            "prediction": 0,
+            "ray_casts": 5,
+            "truth": 1
+          },
+          "status": "FAIL",
+          "wall_seconds": 0.00651460001245141
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "error": 0.5328485356960209,
+                "limit": 1e-08
+              },
+              "name": "same_geometry_field",
+              "passed": false
+            },
+            {
+              "details": {
+                "error": 0.28392756199339364,
+                "limit": 1e-08
+              },
+              "name": "same_geometry_power",
+              "passed": false
+            },
+            {
+              "details": {
+                "error": 1.0,
+                "limit": 1e-08
+              },
+              "name": "same_geometry_escape",
+              "passed": false
+            },
+            {
+              "name": "same_geometry_prediction",
+              "passed": false
+            }
+          ],
+          "cpu_seconds": 0.0,
+          "name": "same_geometry_rebuild_1",
+          "status": "FAIL",
+          "wall_seconds": 1.9900035113096237e-05
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "ad3fba4a3d08093d707f0c8112f2391f3df53c84653adf8cde6926fc209403f3",
+                "before_sha256": "cb1fbab0eda9bc52ed0eefb97ab181aabfec737011990377b6771123099a6582",
+                "changed": [
+                  "material:bar_c0",
+                  "material:bar_c1",
+                  "material:bar_c2",
+                  "material:bar_r0",
+                  "material:bar_r1",
+                  "material:beam_0",
+                  "material:beam_1",
+                  "material:beam_2",
+                  "material:beam_3",
+                  "material:beam_4",
+                  "material:beamsplitter",
+                  "material:det_C0",
+                  "material:det_C1",
+                  "material:det_C2",
+                  "material:det_C3",
+                  "material:det_R0",
+                  "material:det_R1",
+                  "material:det_R2",
+                  "material:det_R3",
+                  "material:mirror",
+                  "material:plate_bs",
+                  "material:plate_mirror",
+                  "material:post",
+                  "material:src_c0",
+                  "material:src_c1",
+                  "material:src_c2",
+                  "material:src_r0",
+                  "material:src_r1",
+                  "material:txt_hud.det0",
+                  "material:txt_hud.det1",
+                  "material:txt_hud.det2",
+                  "material:txt_hud.foot",
+                  "material:txt_hud.in.c0",
+                  "material:txt_hud.in.c1",
+                  "material:txt_hud.in.c2",
+                  "material:txt_hud.in.r0",
+                  "material:txt_hud.in.r1",
+                  "material:txt_hud.pred",
+                  "material:txt_hud.predlbl",
+                  "material:txt_hud.sub"
+                ],
+                "changed_count": 41,
+                "materials_checked": 161,
+                "objects_checked": 460,
+                "scenes_checked": 1
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": false
+            }
+          ],
+          "cpu_seconds": 0.46875,
+          "name": "show_preserves_previous_scenes",
+          "status": "FAIL",
+          "wall_seconds": 0.4694801000296138
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "ad3fba4a3d08093d707f0c8112f2391f3df53c84653adf8cde6926fc209403f3",
+                "before_sha256": "cb1fbab0eda9bc52ed0eefb97ab181aabfec737011990377b6771123099a6582",
+                "changed": [
+                  "material:bar_c0",
+                  "material:bar_c1",
+                  "material:bar_c2",
+                  "material:bar_r0",
+                  "material:bar_r1",
+                  "material:beam_0",
+                  "material:beam_1",
+                  "material:beam_2",
+                  "material:beam_3",
+                  "material:beam_4",
+                  "material:beamsplitter",
+                  "material:det_C0",
+                  "material:det_C1",
+                  "material:det_C2",
+                  "material:det_C3",
+                  "material:det_R0",
+                  "material:det_R1",
+                  "material:det_R2",
+                  "material:det_R3",
+                  "material:mirror",
+                  "material:plate_bs",
+                  "material:plate_mirror",
+                  "material:post",
+                  "material:src_c0",
+                  "material:src_c1",
+                  "material:src_c2",
+                  "material:src_r0",
+                  "material:src_r1",
+                  "material:txt_hud.det0",
+                  "material:txt_hud.det1",
+                  "material:txt_hud.det2",
+                  "material:txt_hud.foot",
+                  "material:txt_hud.in.c0",
+                  "material:txt_hud.in.c1",
+                  "material:txt_hud.in.c2",
+                  "material:txt_hud.in.r0",
+                  "material:txt_hud.in.r1",
+                  "material:txt_hud.pred",
+                  "material:txt_hud.predlbl",
+                  "material:txt_hud.sub"
+                ],
+                "changed_count": 41,
+                "materials_checked": 161,
+                "objects_checked": 460,
+                "scenes_checked": 1
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": false
+            }
+          ],
+          "cpu_seconds": 0.109375,
+          "name": "preservation_after_show_even_on_error",
+          "status": "FAIL",
+          "wall_seconds": 0.10623849998228252
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "ad3fba4a3d08093d707f0c8112f2391f3df53c84653adf8cde6926fc209403f3",
+                "before_sha256": "cb1fbab0eda9bc52ed0eefb97ab181aabfec737011990377b6771123099a6582",
+                "changed": [
+                  "material:bar_c0",
+                  "material:bar_c1",
+                  "material:bar_c2",
+                  "material:bar_r0",
+                  "material:bar_r1",
+                  "material:beam_0",
+                  "material:beam_1",
+                  "material:beam_2",
+                  "material:beam_3",
+                  "material:beam_4",
+                  "material:beamsplitter",
+                  "material:det_C0",
+                  "material:det_C1",
+                  "material:det_C2",
+                  "material:det_C3",
+                  "material:det_R0",
+                  "material:det_R1",
+                  "material:det_R2",
+                  "material:det_R3",
+                  "material:mirror",
+                  "material:plate_bs",
+                  "material:plate_mirror",
+                  "material:post",
+                  "material:src_c0",
+                  "material:src_c1",
+                  "material:src_c2",
+                  "material:src_r0",
+                  "material:src_r1",
+                  "material:txt_hud.det0",
+                  "material:txt_hud.det1",
+                  "material:txt_hud.det2",
+                  "material:txt_hud.foot",
+                  "material:txt_hud.in.c0",
+                  "material:txt_hud.in.c1",
+                  "material:txt_hud.in.c2",
+                  "material:txt_hud.in.r0",
+                  "material:txt_hud.in.r1",
+                  "material:txt_hud.pred",
+                  "material:txt_hud.predlbl",
+                  "material:txt_hud.sub"
+                ],
+                "changed_count": 41,
+                "materials_checked": 161,
+                "objects_checked": 460,
+                "scenes_checked": 1
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": false
+            }
+          ],
+          "cpu_seconds": 0.09375,
+          "name": "dim_detectors_preserves_previous_scenes",
+          "status": "FAIL",
+          "wall_seconds": 0.10597239999333397
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "ad3fba4a3d08093d707f0c8112f2391f3df53c84653adf8cde6926fc209403f3",
+                "before_sha256": "cb1fbab0eda9bc52ed0eefb97ab181aabfec737011990377b6771123099a6582",
+                "changed": [
+                  "material:bar_c0",
+                  "material:bar_c1",
+                  "material:bar_c2",
+                  "material:bar_r0",
+                  "material:bar_r1",
+                  "material:beam_0",
+                  "material:beam_1",
+                  "material:beam_2",
+                  "material:beam_3",
+                  "material:beam_4",
+                  "material:beamsplitter",
+                  "material:det_C0",
+                  "material:det_C1",
+                  "material:det_C2",
+                  "material:det_C3",
+                  "material:det_R0",
+                  "material:det_R1",
+                  "material:det_R2",
+                  "material:det_R3",
+                  "material:mirror",
+                  "material:plate_bs",
+                  "material:plate_mirror",
+                  "material:post",
+                  "material:src_c0",
+                  "material:src_c1",
+                  "material:src_c2",
+                  "material:src_r0",
+                  "material:src_r1",
+                  "material:txt_hud.det0",
+                  "material:txt_hud.det1",
+                  "material:txt_hud.det2",
+                  "material:txt_hud.foot",
+                  "material:txt_hud.in.c0",
+                  "material:txt_hud.in.c1",
+                  "material:txt_hud.in.c2",
+                  "material:txt_hud.in.r0",
+                  "material:txt_hud.in.r1",
+                  "material:txt_hud.pred",
+                  "material:txt_hud.predlbl",
+                  "material:txt_hud.sub"
+                ],
+                "changed_count": 41,
+                "materials_checked": 161,
+                "objects_checked": 460,
+                "scenes_checked": 1
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": false
+            }
+          ],
+          "cpu_seconds": 0.109375,
+          "name": "preservation_after_dim_even_on_error",
+          "status": "FAIL",
+          "wall_seconds": 0.10718509997241199
+        },
+        {
+          "checks": [
+            {
+              "name": "propagate_branch_completed",
+              "passed": true
+            },
+            {
+              "name": "manual_tick_returned_next_interval",
+              "passed": true
+            },
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "ad3fba4a3d08093d707f0c8112f2391f3df53c84653adf8cde6926fc209403f3",
+                "before_sha256": "cb1fbab0eda9bc52ed0eefb97ab181aabfec737011990377b6771123099a6582",
+                "changed": [
+                  "material:bar_c0",
+                  "material:bar_c1",
+                  "material:bar_c2",
+                  "material:bar_r0",
+                  "material:bar_r1",
+                  "material:beam_0",
+                  "material:beam_1",
+                  "material:beam_2",
+                  "material:beam_3",
+                  "material:beam_4",
+                  "material:beamsplitter",
+                  "material:det_C0",
+                  "material:det_C1",
+                  "material:det_C2",
+                  "material:det_C3",
+                  "material:det_R0",
+                  "material:det_R1",
+                  "material:det_R2",
+                  "material:det_R3",
+                  "material:mirror",
+                  "material:plate_bs",
+                  "material:plate_mirror",
+                  "material:post",
+                  "material:src_c0",
+                  "material:src_c1",
+                  "material:src_c2",
+                  "material:src_r0",
+                  "material:src_r1",
+                  "material:txt_hud.det0",
+                  "material:txt_hud.det1",
+                  "material:txt_hud.det2",
+                  "material:txt_hud.foot",
+                  "material:txt_hud.in.c0",
+                  "material:txt_hud.in.c1",
+                  "material:txt_hud.in.c2",
+                  "material:txt_hud.in.r0",
+                  "material:txt_hud.in.r1",
+                  "material:txt_hud.pred",
+                  "material:txt_hud.predlbl",
+                  "material:txt_hud.sub"
+                ],
+                "changed_count": 41,
+                "materials_checked": 161,
+                "objects_checked": 460,
+                "scenes_checked": 1
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": false
+            }
+          ],
+          "cpu_seconds": 0.46875,
+          "name": "manual_live_propagate_preserves_previous_scenes",
+          "status": "FAIL",
+          "wall_seconds": 0.46171300002606586
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "ad3fba4a3d08093d707f0c8112f2391f3df53c84653adf8cde6926fc209403f3",
+                "before_sha256": "cb1fbab0eda9bc52ed0eefb97ab181aabfec737011990377b6771123099a6582",
+                "changed": [
+                  "material:bar_c0",
+                  "material:bar_c1",
+                  "material:bar_c2",
+                  "material:bar_r0",
+                  "material:bar_r1",
+                  "material:beam_0",
+                  "material:beam_1",
+                  "material:beam_2",
+                  "material:beam_3",
+                  "material:beam_4",
+                  "material:beamsplitter",
+                  "material:det_C0",
+                  "material:det_C1",
+                  "material:det_C2",
+                  "material:det_C3",
+                  "material:det_R0",
+                  "material:det_R1",
+                  "material:det_R2",
+                  "material:det_R3",
+                  "material:mirror",
+                  "material:plate_bs",
+                  "material:plate_mirror",
+                  "material:post",
+                  "material:src_c0",
+                  "material:src_c1",
+                  "material:src_c2",
+                  "material:src_r0",
+                  "material:src_r1",
+                  "material:txt_hud.det0",
+                  "material:txt_hud.det1",
+                  "material:txt_hud.det2",
+                  "material:txt_hud.foot",
+                  "material:txt_hud.in.c0",
+                  "material:txt_hud.in.c1",
+                  "material:txt_hud.in.c2",
+                  "material:txt_hud.in.r0",
+                  "material:txt_hud.in.r1",
+                  "material:txt_hud.pred",
+                  "material:txt_hud.predlbl",
+                  "material:txt_hud.sub"
+                ],
+                "changed_count": 41,
+                "materials_checked": 161,
+                "objects_checked": 460,
+                "scenes_checked": 1
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": false
+            }
+          ],
+          "cpu_seconds": 0.109375,
+          "name": "preservation_after_live_even_on_error",
+          "status": "FAIL",
+          "wall_seconds": 0.10511649999534711
+        },
+        {
+          "checks": [],
+          "cpu_seconds": 3.546875,
+          "exception_message": "'bpy_prop_collection[key]: key \"det_R0.002\" not found'",
+          "exception_type": "KeyError",
+          "name": "rebuild_2",
+          "reset_argument": false,
+          "status": "FAIL",
+          "traceback": "Traceback (most recent call last):\n  File \"D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\demo_lattice_iris\\test_rebuild_blender.py\", line 94, in run_step\n    result = function(step)\n             ^^^^^^^^^^^^^^\n  File \"D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\demo_lattice_iris\\test_rebuild_blender.py\", line 450, in <lambda>\n    run_step(case, \"rebuild_\" + str(generation), lambda step: build(step, False))\n                                                              ^^^^^^^^^^^^^^^^^^\n  File \"D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\demo_lattice_iris\\test_rebuild_blender.py\", line 291, in build\n    scene = DEMO.build_scene(np.asarray(STATE[\"theta\"]).reshape(4, 4), STATE[\"ref\"], reset=reset)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\demo_lattice_iris\\neuro3d_iris_demo.py\", line 302, in build_scene\n    pl.data.materials.append(bpy.data.materials[f\"det_{ob.name[4:]}\"] if kind == \"det\" else (m_plate_b if kind == \"bs\" else m_plate_m))\n                             ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'bpy_prop_collection[key]: key \"det_R0.002\" not found'\n",
+          "wall_seconds": 3.5421814000001177
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "972cc85eae0013c30f859877c248d436e1f242895feca9c146da8dab134619d1",
+                "before_sha256": "acf8aa43800e8f5bfc47e9e59577eca6eda79f317bd3218a2c2fc5fc431bfadd",
+                "changed": [
+                  "material:beamsplitter",
+                  "material:det_C0",
+                  "material:det_C1",
+                  "material:det_C2",
+                  "material:det_C3",
+                  "material:det_R0",
+                  "material:det_R1",
+                  "material:det_R2",
+                  "material:det_R3",
+                  "material:mirror",
+                  "material:plate_bs",
+                  "material:plate_mirror",
+                  "material:post",
+                  "material:src_c0",
+                  "material:src_c1",
+                  "material:src_c2",
+                  "material:src_r0",
+                  "material:src_r1"
+                ],
+                "changed_count": 18,
+                "materials_checked": 161,
+                "objects_checked": 785,
+                "scenes_checked": 2
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": false
+            }
+          ],
+          "cpu_seconds": 0.1875,
+          "name": "preserve_after_rebuild_2",
+          "status": "FAIL",
+          "wall_seconds": 0.19349789997795597
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "after": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2788855842824,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams.002": {
+                    "collection_pointer": 2788855846856,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor.002": {
+                    "collection_pointer": 2788864504328,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels.002": {
+                    "collection_pointer": 2788855850440,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Optics.002": {
+                    "collection_pointer": 2788855845064,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Stage.002": {
+                    "collection_pointer": 2788855849096,
+                    "exclude": false
+                  }
+                },
+                "before": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2788855842824,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams.002": {
+                    "collection_pointer": 2788855846856,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor.002": {
+                    "collection_pointer": 2788864504328,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels.002": {
+                    "collection_pointer": 2788855850440,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Optics.002": {
+                    "collection_pointer": 2788855845064,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Stage.002": {
+                    "collection_pointer": 2788855849096,
+                    "exclude": false
+                  }
+                }
+              },
+              "name": "exclude_flags_restored",
+              "passed": true
+            },
+            {
+              "details": {
+                "observed": []
+              },
+              "name": "recognized_detector_ids",
+              "passed": true
+            },
+            {
+              "details": {
+                "total_detected_power": 0.0
+              },
+              "name": "detectors_not_all_zero",
+              "passed": false
+            },
+            {
+              "name": "prediction_matches_model",
+              "passed": false
+            },
+            {
+              "name": "prediction_matches_returned_class_powers",
+              "passed": true
+            },
+            {
+              "name": "returned_class_powers_match_fields",
+              "passed": true
+            },
+            {
+              "name": "escape_nonnegative",
+              "passed": true
+            },
+            {
+              "name": "positive_ray_cast_count",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 0.5328151733213533,
+                "limit": 0.001
+              },
+              "name": "field_within_limit",
+              "passed": false
+            },
+            {
+              "details": {
+                "error": 0.28389200892146377,
+                "limit": 0.001
+              },
+              "name": "power_within_limit",
+              "passed": false
+            },
+            {
+              "details": {
+                "error": 0.0,
+                "limit": 0.0002
+              },
+              "name": "balance_within_limit",
+              "passed": true
+            },
+            {
+              "details": {
+                "error": 1.0,
+                "limit": 1e-08
+              },
+              "name": "escape_within_limit",
+              "passed": false
+            }
+          ],
+          "cpu_seconds": 0.0,
+          "name": "numeric_after_rebuild_2",
+          "sample": {
+            "classify_cpu_seconds": 0.0,
+            "classify_wall_seconds": 0.0062191999750211835,
+            "errors": {
+              "balance": 0.0,
+              "escape": 1.0,
+              "field": 0.5328151733213533,
+              "power": 0.28389200892146377
+            },
+            "escape": 1.0,
+            "fields": {
+              "C0": [
+                0.0,
+                0.0
+              ],
+              "C1": [
+                0.0,
+                0.0
+              ],
+              "C2": [
+                0.0,
+                0.0
+              ],
+              "C3": [
+                0.0,
+                0.0
+              ],
+              "R0": [
+                0.0,
+                0.0
+              ],
+              "R1": [
+                0.0,
+                0.0
+              ],
+              "R2": [
+                0.0,
+                0.0
+              ],
+              "R3": [
+                0.0,
+                0.0
+              ]
+            },
+            "index": 71,
+            "powers": {
+              "C0": 0.0,
+              "C1": 0.0,
+              "C2": 0.0,
+              "C3": 0.0,
+              "R0": 0.0,
+              "R1": 0.0,
+              "R2": 0.0,
+              "R3": 0.0
+            },
+            "prediction": 0,
+            "ray_casts": 5,
+            "truth": 1
+          },
+          "status": "FAIL",
+          "wall_seconds": 0.00659910001559183
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "error": 0.5328485356960209,
+                "limit": 1e-08
+              },
+              "name": "same_geometry_field",
+              "passed": false
+            },
+            {
+              "details": {
+                "error": 0.28392756199339364,
+                "limit": 1e-08
+              },
+              "name": "same_geometry_power",
+              "passed": false
+            },
+            {
+              "details": {
+                "error": 1.0,
+                "limit": 1e-08
+              },
+              "name": "same_geometry_escape",
+              "passed": false
+            },
+            {
+              "name": "same_geometry_prediction",
+              "passed": false
+            }
+          ],
+          "cpu_seconds": 0.0,
+          "name": "same_geometry_rebuild_2",
+          "status": "FAIL",
+          "wall_seconds": 2.0899984519928694e-05
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "9ab1440f57af70d52dfef1a7bb5cb3657df1b629eb0e89b16cffdddd5ddb7ed8",
+                "before_sha256": "acf8aa43800e8f5bfc47e9e59577eca6eda79f317bd3218a2c2fc5fc431bfadd",
+                "changed": [
+                  "material:bar_c0",
+                  "material:bar_c1",
+                  "material:bar_c2",
+                  "material:bar_r0",
+                  "material:bar_r1",
+                  "material:beam_0",
+                  "material:beam_1",
+                  "material:beam_2",
+                  "material:beam_3",
+                  "material:beam_4",
+                  "material:beamsplitter",
+                  "material:det_C0",
+                  "material:det_C1",
+                  "material:det_C2",
+                  "material:det_C3",
+                  "material:det_R0",
+                  "material:det_R1",
+                  "material:det_R2",
+                  "material:det_R3",
+                  "material:mirror",
+                  "material:plate_bs",
+                  "material:plate_mirror",
+                  "material:post",
+                  "material:src_c0",
+                  "material:src_c1",
+                  "material:src_c2",
+                  "material:src_r0",
+                  "material:src_r1",
+                  "material:txt_hud.det0",
+                  "material:txt_hud.det1",
+                  "material:txt_hud.det2",
+                  "material:txt_hud.foot",
+                  "material:txt_hud.in.c0",
+                  "material:txt_hud.in.c1",
+                  "material:txt_hud.in.c2",
+                  "material:txt_hud.in.r0",
+                  "material:txt_hud.in.r1",
+                  "material:txt_hud.pred",
+                  "material:txt_hud.predlbl",
+                  "material:txt_hud.sub"
+                ],
+                "changed_count": 41,
+                "materials_checked": 161,
+                "objects_checked": 785,
+                "scenes_checked": 2
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": false
+            }
+          ],
+          "cpu_seconds": 0.578125,
+          "name": "show_preserves_previous_scenes",
+          "status": "FAIL",
+          "wall_seconds": 0.572603499982506
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "9ab1440f57af70d52dfef1a7bb5cb3657df1b629eb0e89b16cffdddd5ddb7ed8",
+                "before_sha256": "acf8aa43800e8f5bfc47e9e59577eca6eda79f317bd3218a2c2fc5fc431bfadd",
+                "changed": [
+                  "material:bar_c0",
+                  "material:bar_c1",
+                  "material:bar_c2",
+                  "material:bar_r0",
+                  "material:bar_r1",
+                  "material:beam_0",
+                  "material:beam_1",
+                  "material:beam_2",
+                  "material:beam_3",
+                  "material:beam_4",
+                  "material:beamsplitter",
+                  "material:det_C0",
+                  "material:det_C1",
+                  "material:det_C2",
+                  "material:det_C3",
+                  "material:det_R0",
+                  "material:det_R1",
+                  "material:det_R2",
+                  "material:det_R3",
+                  "material:mirror",
+                  "material:plate_bs",
+                  "material:plate_mirror",
+                  "material:post",
+                  "material:src_c0",
+                  "material:src_c1",
+                  "material:src_c2",
+                  "material:src_r0",
+                  "material:src_r1",
+                  "material:txt_hud.det0",
+                  "material:txt_hud.det1",
+                  "material:txt_hud.det2",
+                  "material:txt_hud.foot",
+                  "material:txt_hud.in.c0",
+                  "material:txt_hud.in.c1",
+                  "material:txt_hud.in.c2",
+                  "material:txt_hud.in.r0",
+                  "material:txt_hud.in.r1",
+                  "material:txt_hud.pred",
+                  "material:txt_hud.predlbl",
+                  "material:txt_hud.sub"
+                ],
+                "changed_count": 41,
+                "materials_checked": 161,
+                "objects_checked": 785,
+                "scenes_checked": 2
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": false
+            }
+          ],
+          "cpu_seconds": 0.1875,
+          "name": "preservation_after_show_even_on_error",
+          "status": "FAIL",
+          "wall_seconds": 0.19408549997024238
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "9ab1440f57af70d52dfef1a7bb5cb3657df1b629eb0e89b16cffdddd5ddb7ed8",
+                "before_sha256": "acf8aa43800e8f5bfc47e9e59577eca6eda79f317bd3218a2c2fc5fc431bfadd",
+                "changed": [
+                  "material:bar_c0",
+                  "material:bar_c1",
+                  "material:bar_c2",
+                  "material:bar_r0",
+                  "material:bar_r1",
+                  "material:beam_0",
+                  "material:beam_1",
+                  "material:beam_2",
+                  "material:beam_3",
+                  "material:beam_4",
+                  "material:beamsplitter",
+                  "material:det_C0",
+                  "material:det_C1",
+                  "material:det_C2",
+                  "material:det_C3",
+                  "material:det_R0",
+                  "material:det_R1",
+                  "material:det_R2",
+                  "material:det_R3",
+                  "material:mirror",
+                  "material:plate_bs",
+                  "material:plate_mirror",
+                  "material:post",
+                  "material:src_c0",
+                  "material:src_c1",
+                  "material:src_c2",
+                  "material:src_r0",
+                  "material:src_r1",
+                  "material:txt_hud.det0",
+                  "material:txt_hud.det1",
+                  "material:txt_hud.det2",
+                  "material:txt_hud.foot",
+                  "material:txt_hud.in.c0",
+                  "material:txt_hud.in.c1",
+                  "material:txt_hud.in.c2",
+                  "material:txt_hud.in.r0",
+                  "material:txt_hud.in.r1",
+                  "material:txt_hud.pred",
+                  "material:txt_hud.predlbl",
+                  "material:txt_hud.sub"
+                ],
+                "changed_count": 41,
+                "materials_checked": 161,
+                "objects_checked": 785,
+                "scenes_checked": 2
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": false
+            }
+          ],
+          "cpu_seconds": 0.203125,
+          "name": "dim_detectors_preserves_previous_scenes",
+          "status": "FAIL",
+          "wall_seconds": 0.1947109999600798
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "9ab1440f57af70d52dfef1a7bb5cb3657df1b629eb0e89b16cffdddd5ddb7ed8",
+                "before_sha256": "acf8aa43800e8f5bfc47e9e59577eca6eda79f317bd3218a2c2fc5fc431bfadd",
+                "changed": [
+                  "material:bar_c0",
+                  "material:bar_c1",
+                  "material:bar_c2",
+                  "material:bar_r0",
+                  "material:bar_r1",
+                  "material:beam_0",
+                  "material:beam_1",
+                  "material:beam_2",
+                  "material:beam_3",
+                  "material:beam_4",
+                  "material:beamsplitter",
+                  "material:det_C0",
+                  "material:det_C1",
+                  "material:det_C2",
+                  "material:det_C3",
+                  "material:det_R0",
+                  "material:det_R1",
+                  "material:det_R2",
+                  "material:det_R3",
+                  "material:mirror",
+                  "material:plate_bs",
+                  "material:plate_mirror",
+                  "material:post",
+                  "material:src_c0",
+                  "material:src_c1",
+                  "material:src_c2",
+                  "material:src_r0",
+                  "material:src_r1",
+                  "material:txt_hud.det0",
+                  "material:txt_hud.det1",
+                  "material:txt_hud.det2",
+                  "material:txt_hud.foot",
+                  "material:txt_hud.in.c0",
+                  "material:txt_hud.in.c1",
+                  "material:txt_hud.in.c2",
+                  "material:txt_hud.in.r0",
+                  "material:txt_hud.in.r1",
+                  "material:txt_hud.pred",
+                  "material:txt_hud.predlbl",
+                  "material:txt_hud.sub"
+                ],
+                "changed_count": 41,
+                "materials_checked": 161,
+                "objects_checked": 785,
+                "scenes_checked": 2
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": false
+            }
+          ],
+          "cpu_seconds": 0.1875,
+          "name": "preservation_after_dim_even_on_error",
+          "status": "FAIL",
+          "wall_seconds": 0.19377880002139136
+        },
+        {
+          "checks": [
+            {
+              "name": "propagate_branch_completed",
+              "passed": true
+            },
+            {
+              "name": "manual_tick_returned_next_interval",
+              "passed": true
+            },
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "9ab1440f57af70d52dfef1a7bb5cb3657df1b629eb0e89b16cffdddd5ddb7ed8",
+                "before_sha256": "acf8aa43800e8f5bfc47e9e59577eca6eda79f317bd3218a2c2fc5fc431bfadd",
+                "changed": [
+                  "material:bar_c0",
+                  "material:bar_c1",
+                  "material:bar_c2",
+                  "material:bar_r0",
+                  "material:bar_r1",
+                  "material:beam_0",
+                  "material:beam_1",
+                  "material:beam_2",
+                  "material:beam_3",
+                  "material:beam_4",
+                  "material:beamsplitter",
+                  "material:det_C0",
+                  "material:det_C1",
+                  "material:det_C2",
+                  "material:det_C3",
+                  "material:det_R0",
+                  "material:det_R1",
+                  "material:det_R2",
+                  "material:det_R3",
+                  "material:mirror",
+                  "material:plate_bs",
+                  "material:plate_mirror",
+                  "material:post",
+                  "material:src_c0",
+                  "material:src_c1",
+                  "material:src_c2",
+                  "material:src_r0",
+                  "material:src_r1",
+                  "material:txt_hud.det0",
+                  "material:txt_hud.det1",
+                  "material:txt_hud.det2",
+                  "material:txt_hud.foot",
+                  "material:txt_hud.in.c0",
+                  "material:txt_hud.in.c1",
+                  "material:txt_hud.in.c2",
+                  "material:txt_hud.in.r0",
+                  "material:txt_hud.in.r1",
+                  "material:txt_hud.pred",
+                  "material:txt_hud.predlbl",
+                  "material:txt_hud.sub"
+                ],
+                "changed_count": 41,
+                "materials_checked": 161,
+                "objects_checked": 785,
+                "scenes_checked": 2
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": false
+            }
+          ],
+          "cpu_seconds": 0.5625,
+          "name": "manual_live_propagate_preserves_previous_scenes",
+          "status": "FAIL",
+          "wall_seconds": 0.5629715999821201
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "9ab1440f57af70d52dfef1a7bb5cb3657df1b629eb0e89b16cffdddd5ddb7ed8",
+                "before_sha256": "acf8aa43800e8f5bfc47e9e59577eca6eda79f317bd3218a2c2fc5fc431bfadd",
+                "changed": [
+                  "material:bar_c0",
+                  "material:bar_c1",
+                  "material:bar_c2",
+                  "material:bar_r0",
+                  "material:bar_r1",
+                  "material:beam_0",
+                  "material:beam_1",
+                  "material:beam_2",
+                  "material:beam_3",
+                  "material:beam_4",
+                  "material:beamsplitter",
+                  "material:det_C0",
+                  "material:det_C1",
+                  "material:det_C2",
+                  "material:det_C3",
+                  "material:det_R0",
+                  "material:det_R1",
+                  "material:det_R2",
+                  "material:det_R3",
+                  "material:mirror",
+                  "material:plate_bs",
+                  "material:plate_mirror",
+                  "material:post",
+                  "material:src_c0",
+                  "material:src_c1",
+                  "material:src_c2",
+                  "material:src_r0",
+                  "material:src_r1",
+                  "material:txt_hud.det0",
+                  "material:txt_hud.det1",
+                  "material:txt_hud.det2",
+                  "material:txt_hud.foot",
+                  "material:txt_hud.in.c0",
+                  "material:txt_hud.in.c1",
+                  "material:txt_hud.in.c2",
+                  "material:txt_hud.in.r0",
+                  "material:txt_hud.in.r1",
+                  "material:txt_hud.pred",
+                  "material:txt_hud.predlbl",
+                  "material:txt_hud.sub"
+                ],
+                "changed_count": 41,
+                "materials_checked": 161,
+                "objects_checked": 785,
+                "scenes_checked": 2
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": false
+            }
+          ],
+          "cpu_seconds": 0.203125,
+          "name": "preservation_after_live_even_on_error",
+          "status": "FAIL",
+          "wall_seconds": 0.1951524000032805
+        }
+      ]
+    },
+    {
+      "name": "legacy_empty_scene_without_optics",
+      "status": "PASS",
+      "steps": [
+        {
+          "checks": [
+            {
+              "name": "exclude_flags_restored",
+              "passed": true
+            },
+            {
+              "name": "empty_scene_detectors_empty",
+              "passed": true
+            },
+            {
+              "details": {
+                "expected": 4.0,
+                "observed": 4.0
+              },
+              "name": "escape_matches_coherent_reference",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 0.0,
+          "name": "coincident_constructive_escape",
+          "ray_casts": 2,
+          "status": "PASS",
+          "wall_seconds": 0.0001898000482469797
+        },
+        {
+          "checks": [
+            {
+              "name": "exclude_flags_restored",
+              "passed": true
+            },
+            {
+              "name": "empty_scene_detectors_empty",
+              "passed": true
+            },
+            {
+              "details": {
+                "expected": 0.0,
+                "observed": 0.0
+              },
+              "name": "escape_matches_coherent_reference",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 0.0,
+          "name": "coincident_destructive_escape",
+          "ray_casts": 2,
+          "status": "PASS",
+          "wall_seconds": 8.259998867288232e-05
+        },
+        {
+          "checks": [
+            {
+              "name": "exclude_flags_restored",
+              "passed": true
+            },
+            {
+              "name": "empty_scene_detectors_empty",
+              "passed": true
+            },
+            {
+              "details": {
+                "expected": 2.0,
+                "observed": 2.0
+              },
+              "name": "escape_matches_coherent_reference",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 0.0,
+          "name": "orthogonal_escape_modes",
+          "ray_casts": 2,
+          "status": "PASS",
+          "wall_seconds": 7.469998672604561e-05
+        }
+      ]
+    },
+    {
+      "name": "trace_exception_restores_exclusions",
+      "status": "FAIL",
+      "steps": [
+        {
+          "active_scene": "Scene",
+          "checks": [
+            {
+              "name": "builder_returned_active_scene",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 3.828125,
+          "name": "build_for_exception",
+          "reset_argument": true,
+          "status": "PASS",
+          "wall_seconds": 3.8319963000249118
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "after": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2788725551200,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams": {
+                    "collection_pointer": 2788725552968,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor": {
+                    "collection_pointer": 2788725549832,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor/rebuild-nested-excluded": {
+                    "collection_pointer": 2788910580872,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Decor/rebuild-nested-visible": {
+                    "collection_pointer": 2788910582664,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels": {
+                    "collection_pointer": 2788725547592,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Optics": {
+                    "collection_pointer": 2788725549384,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Stage": {
+                    "collection_pointer": 2788725553416,
+                    "exclude": false
+                  }
+                },
+                "before": {
+                  "ViewLayer/Scene Collection": {
+                    "collection_pointer": 2788725551200,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Beams": {
+                    "collection_pointer": 2788725552968,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor": {
+                    "collection_pointer": 2788725549832,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Decor/rebuild-nested-excluded": {
+                    "collection_pointer": 2788910580872,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Decor/rebuild-nested-visible": {
+                    "collection_pointer": 2788910582664,
+                    "exclude": false
+                  },
+                  "ViewLayer/Scene Collection/Labels": {
+                    "collection_pointer": 2788725547592,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Optics": {
+                    "collection_pointer": 2788725549384,
+                    "exclude": true
+                  },
+                  "ViewLayer/Scene Collection/Stage": {
+                    "collection_pointer": 2788725553416,
+                    "exclude": false
+                  }
+                }
+              },
+              "name": "all_exclude_flags_restored_after_exception",
+              "passed": true
+            },
+            {
+              "name": "controlled_non_optical_hit_raised",
+              "passed": false
+            }
+          ],
+          "cpu_seconds": 0.0,
+          "name": "trace_error_restores_optics_and_descendants",
+          "status": "FAIL",
+          "wall_seconds": 0.005929800041485578
+        }
+      ]
+    },
+    {
+      "name": "rebuild_clears_stale_live_state",
+      "status": "FAIL",
+      "steps": [
+        {
+          "active_scene": "Scene",
+          "checks": [
+            {
+              "name": "builder_returned_active_scene",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 3.71875,
+          "name": "initial_live_scene",
+          "reset_argument": true,
+          "status": "PASS",
+          "wall_seconds": 3.7202904999721795
+        },
+        {
+          "checks": [],
+          "cpu_seconds": 6.046875,
+          "name": "manual_first_live_tick",
+          "status": "PASS",
+          "wall_seconds": 6.073691800003871
+        },
+        {
+          "checks": [],
+          "cpu_seconds": 3.421875,
+          "exception_message": "'bpy_prop_collection[key]: key \"det_R0.001\" not found'",
+          "exception_type": "KeyError",
+          "name": "rebuild_with_stale_live_state",
+          "reset_argument": false,
+          "status": "FAIL",
+          "traceback": "Traceback (most recent call last):\n  File \"D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\demo_lattice_iris\\test_rebuild_blender.py\", line 94, in run_step\n    result = function(step)\n             ^^^^^^^^^^^^^^\n  File \"D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\demo_lattice_iris\\test_rebuild_blender.py\", line 513, in <lambda>\n    run_step(case, \"rebuild_with_stale_live_state\", lambda step: build(step, False))\n                                                                 ^^^^^^^^^^^^^^^^^^\n  File \"D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\demo_lattice_iris\\test_rebuild_blender.py\", line 291, in build\n    scene = DEMO.build_scene(np.asarray(STATE[\"theta\"]).reshape(4, 4), STATE[\"ref\"], reset=reset)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\demo_lattice_iris\\neuro3d_iris_demo.py\", line 302, in build_scene\n    pl.data.materials.append(bpy.data.materials[f\"det_{ob.name[4:]}\"] if kind == \"det\" else (m_plate_b if kind == \"bs\" else m_plate_m))\n                             ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'bpy_prop_collection[key]: key \"det_R0.001\" not found'\n",
+          "wall_seconds": 3.429878599999938
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "8f415f15f057c2d6f1ec6610efdf8682f247b3ce3fb117e57773f20f20a546fc",
+                "before_sha256": "3eb82cad224ba23c2c59e9c8b3c3d4971d6a6dbf4c1d81231672a9eb47bbaaaf",
+                "changed": [
+                  "material:det_R0",
+                  "material:det_R1",
+                  "material:det_R2"
+                ],
+                "changed_count": 3,
+                "materials_checked": 161,
+                "objects_checked": 460,
+                "scenes_checked": 1
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": false
+            }
+          ],
+          "cpu_seconds": 0.109375,
+          "name": "previous_scene_preserved",
+          "status": "FAIL",
+          "wall_seconds": 0.1076941000064835
+        },
+        {
+          "checks": [
+            {
+              "name": "live_stopped_by_rebuild",
+              "passed": false
+            },
+            {
+              "name": "stale_powers_cleared_by_rebuild",
+              "passed": false
+            },
+            {
+              "name": "stopped_tick_terminates",
+              "passed": false
+            },
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "203637fc7b30196ebcafd03b568c353218859d6da4515045fc745747cbf2b9c6",
+                "before_sha256": "b0d13b0f3c1e33e0ef7bfb690d805b0a6879cdad77321660a56ad5e9950de66e",
+                "changed": [
+                  "material:det_R0",
+                  "material:det_R1",
+                  "material:det_R2"
+                ],
+                "changed_count": 3,
+                "materials_checked": 161,
+                "objects_checked": 762,
+                "scenes_checked": 2
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": false
+            }
+          ],
+          "cpu_seconds": 0.28125,
+          "name": "new_scene_cannot_receive_stale_live_output",
+          "status": "FAIL",
+          "wall_seconds": 0.2818511000368744
+        }
+      ]
+    },
+    {
+      "name": "live_stops_on_scene_switch",
+      "status": "FAIL",
+      "steps": [
+        {
+          "active_scene": "Scene",
+          "checks": [
+            {
+              "name": "builder_returned_active_scene",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 3.75,
+          "name": "initial_live_scene",
+          "reset_argument": true,
+          "status": "PASS",
+          "wall_seconds": 3.7469358000089414
+        },
+        {
+          "checks": [
+            {
+              "name": "live_session_reached_propagate",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 6.1875,
+          "name": "bind_live_on_first_manual_trace_tick",
+          "status": "PASS",
+          "wall_seconds": 6.194036300003063
+        },
+        {
+          "checks": [],
+          "cpu_seconds": 0.0,
+          "exception_message": "'bpy_prop_collection[key]: key \"Beams\" not found'",
+          "exception_type": "KeyError",
+          "name": "live_aborts_after_scene_switch",
+          "status": "FAIL",
+          "traceback": "Traceback (most recent call last):\n  File \"D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\demo_lattice_iris\\test_rebuild_blender.py\", line 94, in run_step\n    result = function(step)\n             ^^^^^^^^^^^^^^\n  File \"D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\demo_lattice_iris\\test_rebuild_blender.py\", line 536, in switched\n    result = DEMO._live_tick()\n             ^^^^^^^^^^^^^^^^^\n  File \"D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\demo_lattice_iris\\neuro3d_iris_demo.py\", line 500, in _live_tick\n    for ob in scene_collection(\"Beams\").objects:\n              ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\demo_lattice_iris\\neuro3d_iris_demo.py\", line 237, in scene_collection\n    return bpy.context.scene.collection.children[mapping.get(name, name)]\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'bpy_prop_collection[key]: key \"Beams\" not found'\n",
+          "wall_seconds": 0.0017077999655157328
+        },
+        {
+          "checks": [
+            {
+              "details": {
+                "missing": []
+              },
+              "name": "previous_scenes_exist",
+              "passed": true
+            },
+            {
+              "details": {
+                "after_sha256": "cc7206b7b26918d9ae5fb32e45b8970ce4ed2365d16884547255eefa3f967ed3",
+                "before_sha256": "cc7206b7b26918d9ae5fb32e45b8970ce4ed2365d16884547255eefa3f967ed3",
+                "changed": [],
+                "changed_count": 0,
+                "materials_checked": 178,
+                "objects_checked": 461,
+                "scenes_checked": 2
+              },
+              "name": "previous_objects_transforms_materials_and_flags_unchanged",
+              "passed": true
+            }
+          ],
+          "cpu_seconds": 0.109375,
+          "name": "all_scenes_preserved_even_if_tick_raises",
+          "status": "PASS",
+          "wall_seconds": 0.10513690003426746
+        }
+      ]
+    }
+  ],
+  "finished_utc": "2026-10-06T21:55:08.806623+00:00",
+  "limits": {
+    "balance": 0.0002,
+    "escape": 1e-08,
+    "field": 0.001,
+    "power": 0.001,
+    "same_geometry": 1e-08
+  },
+  "pid": 41140,
+  "probe_indices": [
+    0,
+    71,
+    149
+  ],
+  "rendered": false,
+  "schema": "neuro3d-iris-rebuild-regression-v1",
+  "scope": "background reset=False API regressions, not GUI clicks",
+  "source_path": "D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\demo_lattice_iris\\neuro3d_iris_demo.py",
+  "source_sha256": "1893a2dbfbcb2738df46eb212e8dcbb021ac1ec73b838bef0696eb2a34ab5956",
+  "started_utc": "2026-10-06T21:54:02.618526+00:00",
+  "status": "FAIL",
+  "timers_registered": false,
+  "total_cpu_seconds": 65.71875,
+  "total_wall_seconds": 66.18752730003325,
+  "trained": false,
+  "verification_passed": false
+}

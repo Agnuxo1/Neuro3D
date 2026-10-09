@@ -1,0 +1,891 @@
+{
+  "schema": "neuro3d.scene_hilo.independent_native_readback_audit.cpu.v2",
+  "status": "PASS_CPU_AUDIT_OF_RETAINED_NATIVE_READBACK",
+  "verification_passed": true,
+  "auditor_GPU_executed": false,
+  "auditor_Blender_executed": false,
+  "implementation_imports": 0,
+  "retained_native_evidence_validated": true,
+  "physical_precision_certified": false,
+  "phase_certified": false,
+  "first_hit_certified": false,
+  "native_original_transport_joins": 0,
+  "cases": [
+    {
+      "case_id": "k3_baseline",
+      "packet_sha256": "5c1da53154bebdcc0fb2953777c06f19c5c20b3b9277ad7d8eecffa61c03806f",
+      "wire_sha256": "8da0e8bea709b44e2d0be9e4b28b3f282110de01da3469702e50690c0fe5bae5",
+      "input_scalar_count": 345,
+      "input_nonzero_lows": 0,
+      "ablation_changed_components": 0,
+      "modes": [
+        {
+          "mode": 0,
+          "rows": 444,
+          "components": 1332,
+          "nonzero_output_lows": 0,
+          "naive_loss_components": 0,
+          "negative_zero_output_words": 0,
+          "expected_rows_sha256": "1dbb842253182c54ce63b04d018d4c4f6af4cef04f3346226a21d3e5c3bcc9fd",
+          "native_readback_sha256": "2d61b572e611a8395b1332365bd8158ec9de1ca2e50f0dae602811333f8090c2",
+          "witnesses": [],
+          "critical": {
+            "one_minus_2pow_minus60": [],
+            "four_term_direction_width": []
+          }
+        },
+        {
+          "mode": 1,
+          "rows": 444,
+          "components": 1332,
+          "nonzero_output_lows": 0,
+          "naive_loss_components": 0,
+          "negative_zero_output_words": 0,
+          "expected_rows_sha256": "1dbb842253182c54ce63b04d018d4c4f6af4cef04f3346226a21d3e5c3bcc9fd",
+          "native_readback_sha256": "7cac9265d51e315ea128af41a12aa5062f5f852e9ad38d4b1c0263c6828c3e07",
+          "witnesses": [],
+          "critical": {
+            "one_minus_2pow_minus60": [],
+            "four_term_direction_width": []
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "k4_baseline",
+      "packet_sha256": "a284cfe711991327f234f122821b64e3ec77f6b8fda35bf18b53403b3ae9c55c",
+      "wire_sha256": "f9cdd1ca97f0c6455bf8e6049eafdcff01ccb234cfc0bc9c7798ba23938ab860",
+      "input_scalar_count": 449,
+      "input_nonzero_lows": 0,
+      "ablation_changed_components": 0,
+      "modes": [
+        {
+          "mode": 0,
+          "rows": 701,
+          "components": 2103,
+          "nonzero_output_lows": 0,
+          "naive_loss_components": 0,
+          "negative_zero_output_words": 0,
+          "expected_rows_sha256": "21013b491b6f83ccb10e3eb922643f11a085876c9772110dcc5e697affec2cc0",
+          "native_readback_sha256": "4356ab838c31fbfbf33ef3a165a1015641b2830770630ceca2ee7944690ff97f",
+          "witnesses": [],
+          "critical": {
+            "one_minus_2pow_minus60": [],
+            "four_term_direction_width": []
+          }
+        },
+        {
+          "mode": 1,
+          "rows": 701,
+          "components": 2103,
+          "nonzero_output_lows": 0,
+          "naive_loss_components": 0,
+          "negative_zero_output_words": 0,
+          "expected_rows_sha256": "21013b491b6f83ccb10e3eb922643f11a085876c9772110dcc5e697affec2cc0",
+          "native_readback_sha256": "958ff3978b3448c58d177f36c896b047679dee57e99209833f9864b601e85648",
+          "witnesses": [],
+          "critical": {
+            "one_minus_2pow_minus60": [],
+            "four_term_direction_width": []
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "controlled_numeric",
+      "packet_sha256": "04b4376bf96cafe8d22998480f42f3df26db757f4b13c3ff21274b93e25477cd",
+      "wire_sha256": "4275efe687bf7dae911e444ab6562fe12d7d37335a3bb6e535bf4947d4ae27b0",
+      "input_scalar_count": 53,
+      "input_nonzero_lows": 6,
+      "ablation_changed_components": 10,
+      "modes": [
+        {
+          "mode": 0,
+          "rows": 26,
+          "components": 78,
+          "nonzero_output_lows": 9,
+          "naive_loss_components": 9,
+          "negative_zero_output_words": 0,
+          "expected_rows_sha256": "5b6010a68b4d099f31bc7ab2a0ccea29f80201410a9432542aac109978389728",
+          "native_readback_sha256": "3512a3acc6f97bfc0d60e9e3a1baa22738ead339948e1f35dbdaeef49a5b3035",
+          "witnesses": [
+            {
+              "row": 0,
+              "identity": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "axis": 0,
+              "exact": [
+                1152921504606846975,
+                1152921504606846976
+              ],
+              "pair64_words": [
+                0,
+                1072693248,
+                0,
+                3157262336
+              ],
+              "naive_words": [
+                0,
+                1072693248
+              ],
+              "low_nonzero": true,
+              "naive_loss": true
+            },
+            {
+              "row": 1,
+              "identity": [
+                1,
+                0,
+                1,
+                0
+              ],
+              "axis": 0,
+              "exact": [
+                1152921504606846975,
+                1152921504606846976
+              ],
+              "pair64_words": [
+                0,
+                1072693248,
+                0,
+                3157262336
+              ],
+              "naive_words": [
+                0,
+                1072693248
+              ],
+              "low_nonzero": true,
+              "naive_loss": true
+            },
+            {
+              "row": 2,
+              "identity": [
+                1,
+                0,
+                2,
+                0
+              ],
+              "axis": 0,
+              "exact": [
+                1152921504606846975,
+                1152921504606846976
+              ],
+              "pair64_words": [
+                0,
+                1072693248,
+                0,
+                3157262336
+              ],
+              "naive_words": [
+                0,
+                1072693248
+              ],
+              "low_nonzero": true,
+              "naive_loss": true
+            },
+            {
+              "row": 3,
+              "identity": [
+                1,
+                0,
+                3,
+                0
+              ],
+              "axis": 0,
+              "exact": [
+                1152921504606846975,
+                1152921504606846976
+              ],
+              "pair64_words": [
+                0,
+                1072693248,
+                0,
+                3157262336
+              ],
+              "naive_words": [
+                0,
+                1072693248
+              ],
+              "low_nonzero": true,
+              "naive_loss": true
+            },
+            {
+              "row": 4,
+              "identity": [
+                1,
+                0,
+                4,
+                1
+              ],
+              "axis": 0,
+              "exact": [
+                2305843009213693951,
+                1152921504606846976
+              ],
+              "pair64_words": [
+                0,
+                1073741824,
+                0,
+                3157262336
+              ],
+              "naive_words": [
+                0,
+                1073741824
+              ],
+              "low_nonzero": true,
+              "naive_loss": true
+            },
+            {
+              "row": 5,
+              "identity": [
+                1,
+                0,
+                5,
+                1
+              ],
+              "axis": 0,
+              "exact": [
+                2305843009213693951,
+                1152921504606846976
+              ],
+              "pair64_words": [
+                0,
+                1073741824,
+                0,
+                3157262336
+              ],
+              "naive_words": [
+                0,
+                1073741824
+              ],
+              "low_nonzero": true,
+              "naive_loss": true
+            },
+            {
+              "row": 6,
+              "identity": [
+                1,
+                0,
+                6,
+                1
+              ],
+              "axis": 0,
+              "exact": [
+                2305843009213693951,
+                1152921504606846976
+              ],
+              "pair64_words": [
+                0,
+                1073741824,
+                0,
+                3157262336
+              ],
+              "naive_words": [
+                0,
+                1073741824
+              ],
+              "low_nonzero": true,
+              "naive_loss": true
+            },
+            {
+              "row": 7,
+              "identity": [
+                1,
+                0,
+                7,
+                1
+              ],
+              "axis": 0,
+              "exact": [
+                2305843009213693951,
+                1152921504606846976
+              ],
+              "pair64_words": [
+                0,
+                1073741824,
+                0,
+                3157262336
+              ],
+              "naive_words": [
+                0,
+                1073741824
+              ],
+              "low_nonzero": true,
+              "naive_loss": true
+            },
+            {
+              "row": 17,
+              "identity": [
+                2,
+                1,
+                4294967295,
+                4294967295
+              ],
+              "axis": 1,
+              "exact": [
+                1267650601408821021114602881023,
+                1267650600228229401496703205376
+              ],
+              "pair64_words": [
+                4194304,
+                1072693248,
+                4096,
+                3157262336
+              ],
+              "naive_words": [
+                4194304,
+                1072693248
+              ],
+              "low_nonzero": true,
+              "naive_loss": true
+            }
+          ],
+          "critical": {
+            "one_minus_2pow_minus60": [
+              {
+                "row": 0,
+                "identity": [
+                  1,
+                  0,
+                  0,
+                  0
+                ],
+                "axis": 0,
+                "exact": [
+                  1152921504606846975,
+                  1152921504606846976
+                ],
+                "pair64_words": [
+                  0,
+                  1072693248,
+                  0,
+                  3157262336
+                ],
+                "naive_words": [
+                  0,
+                  1072693248
+                ],
+                "low_nonzero": true,
+                "naive_loss": true
+              },
+              {
+                "row": 1,
+                "identity": [
+                  1,
+                  0,
+                  1,
+                  0
+                ],
+                "axis": 0,
+                "exact": [
+                  1152921504606846975,
+                  1152921504606846976
+                ],
+                "pair64_words": [
+                  0,
+                  1072693248,
+                  0,
+                  3157262336
+                ],
+                "naive_words": [
+                  0,
+                  1072693248
+                ],
+                "low_nonzero": true,
+                "naive_loss": true
+              },
+              {
+                "row": 2,
+                "identity": [
+                  1,
+                  0,
+                  2,
+                  0
+                ],
+                "axis": 0,
+                "exact": [
+                  1152921504606846975,
+                  1152921504606846976
+                ],
+                "pair64_words": [
+                  0,
+                  1072693248,
+                  0,
+                  3157262336
+                ],
+                "naive_words": [
+                  0,
+                  1072693248
+                ],
+                "low_nonzero": true,
+                "naive_loss": true
+              },
+              {
+                "row": 3,
+                "identity": [
+                  1,
+                  0,
+                  3,
+                  0
+                ],
+                "axis": 0,
+                "exact": [
+                  1152921504606846975,
+                  1152921504606846976
+                ],
+                "pair64_words": [
+                  0,
+                  1072693248,
+                  0,
+                  3157262336
+                ],
+                "naive_words": [
+                  0,
+                  1072693248
+                ],
+                "low_nonzero": true,
+                "naive_loss": true
+              }
+            ],
+            "four_term_direction_width": [
+              {
+                "row": 17,
+                "identity": [
+                  2,
+                  1,
+                  4294967295,
+                  4294967295
+                ],
+                "axis": 1,
+                "exact": [
+                  1267650601408821021114602881023,
+                  1267650600228229401496703205376
+                ],
+                "pair64_words": [
+                  4194304,
+                  1072693248,
+                  4096,
+                  3157262336
+                ],
+                "naive_words": [
+                  4194304,
+                  1072693248
+                ],
+                "low_nonzero": true,
+                "naive_loss": true
+              }
+            ]
+          }
+        },
+        {
+          "mode": 1,
+          "rows": 26,
+          "components": 78,
+          "nonzero_output_lows": 9,
+          "naive_loss_components": 9,
+          "negative_zero_output_words": 0,
+          "expected_rows_sha256": "e005d421441bc9cdc68090cf4c4d16345c4b0bb5472590ddd8f638ddb642a784",
+          "native_readback_sha256": "5b6d40166eefce1f9471942d21249ccadefae39f208aff5416a78e8654e05b1c",
+          "witnesses": [
+            {
+              "row": 0,
+              "identity": [
+                1,
+                0,
+                0,
+                0
+              ],
+              "axis": 0,
+              "exact": [
+                1152921504606846975,
+                1152921504606846976
+              ],
+              "pair64_words": [
+                0,
+                1072693248,
+                0,
+                3157262336
+              ],
+              "naive_words": [
+                0,
+                1072693248
+              ],
+              "low_nonzero": true,
+              "naive_loss": true
+            },
+            {
+              "row": 1,
+              "identity": [
+                1,
+                0,
+                1,
+                0
+              ],
+              "axis": 0,
+              "exact": [
+                1152921504606846975,
+                1152921504606846976
+              ],
+              "pair64_words": [
+                0,
+                1072693248,
+                0,
+                3157262336
+              ],
+              "naive_words": [
+                0,
+                1072693248
+              ],
+              "low_nonzero": true,
+              "naive_loss": true
+            },
+            {
+              "row": 2,
+              "identity": [
+                1,
+                0,
+                2,
+                0
+              ],
+              "axis": 0,
+              "exact": [
+                1152921504606846975,
+                1152921504606846976
+              ],
+              "pair64_words": [
+                0,
+                1072693248,
+                0,
+                3157262336
+              ],
+              "naive_words": [
+                0,
+                1072693248
+              ],
+              "low_nonzero": true,
+              "naive_loss": true
+            },
+            {
+              "row": 3,
+              "identity": [
+                1,
+                0,
+                3,
+                0
+              ],
+              "axis": 0,
+              "exact": [
+                1152921504606846975,
+                1152921504606846976
+              ],
+              "pair64_words": [
+                0,
+                1072693248,
+                0,
+                3157262336
+              ],
+              "naive_words": [
+                0,
+                1072693248
+              ],
+              "low_nonzero": true,
+              "naive_loss": true
+            },
+            {
+              "row": 4,
+              "identity": [
+                1,
+                0,
+                4,
+                1
+              ],
+              "axis": 0,
+              "exact": [
+                2305843009213693951,
+                1152921504606846976
+              ],
+              "pair64_words": [
+                0,
+                1073741824,
+                0,
+                3157262336
+              ],
+              "naive_words": [
+                0,
+                1073741824
+              ],
+              "low_nonzero": true,
+              "naive_loss": true
+            },
+            {
+              "row": 5,
+              "identity": [
+                1,
+                0,
+                5,
+                1
+              ],
+              "axis": 0,
+              "exact": [
+                2305843009213693951,
+                1152921504606846976
+              ],
+              "pair64_words": [
+                0,
+                1073741824,
+                0,
+                3157262336
+              ],
+              "naive_words": [
+                0,
+                1073741824
+              ],
+              "low_nonzero": true,
+              "naive_loss": true
+            },
+            {
+              "row": 6,
+              "identity": [
+                1,
+                0,
+                6,
+                1
+              ],
+              "axis": 0,
+              "exact": [
+                2305843009213693951,
+                1152921504606846976
+              ],
+              "pair64_words": [
+                0,
+                1073741824,
+                0,
+                3157262336
+              ],
+              "naive_words": [
+                0,
+                1073741824
+              ],
+              "low_nonzero": true,
+              "naive_loss": true
+            },
+            {
+              "row": 7,
+              "identity": [
+                1,
+                0,
+                7,
+                1
+              ],
+              "axis": 0,
+              "exact": [
+                2305843009213693951,
+                1152921504606846976
+              ],
+              "pair64_words": [
+                0,
+                1073741824,
+                0,
+                3157262336
+              ],
+              "naive_words": [
+                0,
+                1073741824
+              ],
+              "low_nonzero": true,
+              "naive_loss": true
+            },
+            {
+              "row": 17,
+              "identity": [
+                2,
+                1,
+                4294967295,
+                4294967295
+              ],
+              "axis": 1,
+              "exact": [
+                1152921504606846975,
+                1152921504606846976
+              ],
+              "pair64_words": [
+                0,
+                1072693248,
+                0,
+                3157262336
+              ],
+              "naive_words": [
+                0,
+                1072693248
+              ],
+              "low_nonzero": true,
+              "naive_loss": true
+            }
+          ],
+          "critical": {
+            "one_minus_2pow_minus60": [
+              {
+                "row": 0,
+                "identity": [
+                  1,
+                  0,
+                  0,
+                  0
+                ],
+                "axis": 0,
+                "exact": [
+                  1152921504606846975,
+                  1152921504606846976
+                ],
+                "pair64_words": [
+                  0,
+                  1072693248,
+                  0,
+                  3157262336
+                ],
+                "naive_words": [
+                  0,
+                  1072693248
+                ],
+                "low_nonzero": true,
+                "naive_loss": true
+              },
+              {
+                "row": 1,
+                "identity": [
+                  1,
+                  0,
+                  1,
+                  0
+                ],
+                "axis": 0,
+                "exact": [
+                  1152921504606846975,
+                  1152921504606846976
+                ],
+                "pair64_words": [
+                  0,
+                  1072693248,
+                  0,
+                  3157262336
+                ],
+                "naive_words": [
+                  0,
+                  1072693248
+                ],
+                "low_nonzero": true,
+                "naive_loss": true
+              },
+              {
+                "row": 2,
+                "identity": [
+                  1,
+                  0,
+                  2,
+                  0
+                ],
+                "axis": 0,
+                "exact": [
+                  1152921504606846975,
+                  1152921504606846976
+                ],
+                "pair64_words": [
+                  0,
+                  1072693248,
+                  0,
+                  3157262336
+                ],
+                "naive_words": [
+                  0,
+                  1072693248
+                ],
+                "low_nonzero": true,
+                "naive_loss": true
+              },
+              {
+                "row": 3,
+                "identity": [
+                  1,
+                  0,
+                  3,
+                  0
+                ],
+                "axis": 0,
+                "exact": [
+                  1152921504606846975,
+                  1152921504606846976
+                ],
+                "pair64_words": [
+                  0,
+                  1072693248,
+                  0,
+                  3157262336
+                ],
+                "naive_words": [
+                  0,
+                  1072693248
+                ],
+                "low_nonzero": true,
+                "naive_loss": true
+              }
+            ],
+            "four_term_direction_width": []
+          }
+        }
+      ]
+    }
+  ],
+  "artifacts": {
+    "worker": {
+      "path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\native05\\worker.json",
+      "sha256": "9b5017af874bd1b15dbb73518d7a3c5b9ea89d28e9153aa82f55f434b3a604d3"
+    },
+    "guard": {
+      "path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\native05\\guard.json",
+      "sha256": "ad3ee32decad465564e5ac25c4422af445bd228cdcc8fb67885e6aba68bc5552"
+    },
+    "input_manifest": {
+      "path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\inputs01\\input_manifest.json",
+      "sha256": "81daaf472db2e021fc6686976ab18dd75eac52cd65565a0d011689f215bc5dc1"
+    }
+  },
+  "guard_independent_checks": {
+    "worker_exit_code": 0,
+    "active_owned_processes_after_close": 0,
+    "samples_checked": 50,
+    "elapsed_seconds": 18.51876230002381,
+    "work_timeout_seconds": 100,
+    "cleanup_seconds": 10,
+    "min_ram_after_reserve_bytes": 4729544704,
+    "max_vram_after_reserve_bytes": 3236954112,
+    "max_temperature_c": 32.0,
+    "final_sample_stage": "after_worker_exit_before_job_close",
+    "final_sample_age_seconds": 0.413489,
+    "gpu_uuid": "GPU-b163fedb-dda0-d4f4-68b2-298b6975efe3"
+  },
+  "code_pins": {
+    "Blender\\tests\\scene_hilo_native_runtime_v1.py": "b033439597d989c13252dcc21e5ab007b3645fa8606f1385dd1cd483d4bbb414",
+    "Blender\\benchmarks\\capacity_audit\\scene_hilo_gpu_v1.py": "539179dfdd72f8cdd6c3f171526dbbf70c81bc9b7a568691c12c0071246bee7a",
+    "Blender\\shaders\\scene_hilo_transport_v1.glsl": "cd9eead03d96aca64ef5e6c5bce8b71a97f0f994a0656ceb9363a3894e634d31",
+    "Blender\\benchmarks\\capacity_audit\\scene_hilo_transport_v1.py": "4bd86b411208c8a676c8a2c97926ce001ac781568913d5312906c591e02ca5ad",
+    "Blender\\benchmarks\\capacity_audit\\oblique_exact_scalar_hilo32_CPU_v1.py": "775e48b3507aa5b86bd96818f50e208e92d72e03b99d8862f816247418867a97",
+    "Blender\\tests\\exp005_scene_readback.py": "cd7fb6bd208ac89bcc80bae89abd56c3d09dbfabbd650525d7c9dc20d2f7a2b1",
+    "Blender\\tests\\exp005_scene_properties.py": "9996efb2389df8bbac62a14dbdf999cf1a5a325572e1617f08a046f56092041a",
+    "Blender\\tests\\exp005_blender_gpu.py": "851f29f9b1fb9b22948f59597d40fa8a55828040673fe0050d24e077b57cf497"
+  },
+  "total_rows": 2342,
+  "total_components": 7026,
+  "readback_sha256": "f0116e1d3a99d3d1441bfc6c066688491bf3e6ca013c8726fbc0b5e4ee5a5c5c",
+  "job_id": "2c0de444-0083-4be4-9c84-6fad814a3941",
+  "guard_cleanup_verified": true,
+  "created_utc": "2026-10-07T09:19:48.099370+00:00",
+  "audit_wall_seconds": 0.3192752000177279,
+  "previous_auditor_sha256": "65e26c3c2724b4e16f908de871328f65386d8fd9f3f2dd0e83383a2d8b3f3d37",
+  "auditor_file_sha256": "20a2a604070b446c7845d480f8aabc2976b92138253d32a29a5a22191114f7a9",
+  "auditor_source_sha256": "20a2a604070b446c7845d480f8aabc2976b92138253d32a29a5a22191114f7a9",
+  "auditor_source": "\"\"\"Independent CPU audit of retained scene-hi/lo native outputs.\n\nOnly standard-library modules are imported. The host implementation, shader,\ncodec, Blender and GPU APIs are never imported or executed. Input hashes are\nprovided by the controller after the native job completes.\n\"\"\"\nimport argparse\nfrom fractions import Fraction as F\nimport hashlib\nimport json\nimport math\nimport os\nfrom pathlib import Path\nimport struct\nimport time\nimport traceback\nfrom datetime import datetime, timezone\n\nAUDITOR_BYTES = Path(__file__).read_bytes() if \"__file__\" in globals() and Path(__file__).is_file() else None\nAUDITOR_SOURCE = AUDITOR_BYTES.decode(\"utf-8\") if AUDITOR_BYTES is not None else None\nPREVIOUS_AUDITOR_SHA256 = \"65e26c3c2724b4e16f908de871328f65386d8fd9f3f2dd0e83383a2d8b3f3d37\"\nEXPECTED_CODE_PATHS = {\n    \"Blender/tests/scene_hilo_native_runtime_v1.py\",\n    \"Blender/benchmarks/capacity_audit/scene_hilo_gpu_v1.py\",\n    \"Blender/shaders/scene_hilo_transport_v1.glsl\",\n    \"Blender/benchmarks/capacity_audit/scene_hilo_transport_v1.py\",\n    \"Blender/benchmarks/capacity_audit/oblique_exact_scalar_hilo32_CPU_v1.py\",\n    \"Blender/tests/exp005_scene_readback.py\",\n    \"Blender/tests/exp005_scene_properties.py\",\n    \"Blender/tests/exp005_blender_gpu.py\",\n}\n\nPOISON = 0x5A5A5A5A\nABSENT = 0xFFFFFFFF\nROLE = {\"origin\":1,\"raw_direction\":2,\"direction_bound\":3,\"field\":4,\n        \"vertex\":5,\"mode_origin\":8,\"mode_direction\":9,\"wavelength\":10}\nKIND = {\"bs\":0,\"mirror\":1,\"det\":2,\"escape\":3}\nORDER = [\"k3_baseline\", \"k4_baseline\", \"controlled_numeric\"]\n\n\ndef need(value, message):\n    if not value:\n        raise ValueError(message)\n\n\ndef sha(raw):\n    return hashlib.sha256(raw).hexdigest()\n\n\ndef canonical(value):\n    return json.dumps(value, sort_keys=True, separators=(\",\", \":\"), allow_nan=False, ensure_ascii=True)\n\n\ndef read_json(path, expected_sha=None):\n    raw = Path(path).read_bytes()\n    need(len(raw) <= 16 * 1024 * 1024, \"JSON byte cap\")\n    if expected_sha is not None:\n        need(sha(raw) == expected_sha, \"SHA mismatch: \" + str(path))\n    def pairs(items):\n        value = {}\n        for key, item in items:\n            need(key not in value, \"duplicate JSON key\")\n            value[key] = item\n        return value\n    def bad_constant(value):\n        raise ValueError(\"nonfinite JSON constant: \" + value)\n    return json.loads(raw, object_pairs_hook=pairs, parse_constant=bad_constant), raw\n\n\ndef binary32(word):\n    need(type(word) is int and 0 <= word <= 0xFFFFFFFF, \"uint32 word required\")\n    value = struct.unpack(\"<f\", struct.pack(\"<I\", word))[0]\n    need(math.isfinite(value), \"nonfinite binary32\")\n    return F.from_float(value)\n\n\ndef binary64(words):\n    \"\"\"Integer IEEE decoder, exact even for subnormals; zero sign stays in raw words.\"\"\"\n    need(len(words) == 2 and all(type(w) is int and 0 <= w <= 0xFFFFFFFF for w in words),\n         \"two uint32 words required\")\n    word = words[0] | words[1] << 32\n    exponent, mantissa = (word >> 52) & 0x7FF, word & ((1 << 52) - 1)\n    need(exponent != 0x7FF, \"nonfinite binary64 output\")\n    significand = mantissa if exponent == 0 else mantissa + (1 << 52)\n    power = -1074 if exponent == 0 else exponent - 1075\n    value = F(significand * (-1 if word >> 63 else 1))\n    return value * (1 << power) if power >= 0 else value / (1 << -power)\n\n\ndef float32(value):\n    result = struct.unpack(\"<f\", struct.pack(\"<f\", float(value)))[0]\n    need(math.isfinite(result), \"nonfinite reference high limb\")\n    return result\n\n\ndef observed(value, mode=0):\n    need(type(value) in (float, int) and math.isfinite(value), \"finite observed scalar required\")\n    return F.from_float(float32(value) if mode else float(value))\n\n\ndef unpack(raw):\n    need(type(raw) is bytes and len(raw) % 4 == 0, \"word-aligned bytes required\")\n    return list(struct.unpack(\"<%dI\" % (len(raw) // 4), raw))\n\n\ndef hex_bytes(value):\n    need(type(value) is str and len(value) % 2 == 0 and\n         all(c in \"0123456789abcdef\" for c in value), \"canonical lowercase hex required\")\n    return bytes.fromhex(value)\n\n\ndef padded(count):\n    return ((count + 63) // 64) * 64\n\n\ndef audit_packet(case):\n    packet, packet_raw = read_json(case[\"packet_path\"], case[\"packet_sha256\"])\n    blend = Path(case[\"blend_path\"]).read_bytes()\n    need(sha(blend) == case[\"blend_sha256\"], \"saved scene SHA mismatch\")\n    need(packet[\"schema\"] == \"neuro3d-scene-hilo-transport-v1\", \"packet schema\")\n    manifest, wire = packet[\"manifest\"], hex_bytes(packet[\"wire_hex\"])\n    need(manifest[\"wire_sha256\"] == sha(wire) and manifest[\"wire_bytes\"] == len(wire), \"packet wire binding\")\n    snapshot = manifest[\"snapshot\"]\n    need(manifest[\"snapshot_sha256\"] == sha(canonical(snapshot).encode()), \"snapshot canonical hash\")\n    need(manifest[\"provenance\"][\"blend_sha256\"] == case[\"blend_sha256\"] and\n         manifest[\"provenance\"][\"input_class\"] == case[\"input_class\"], \"scene provenance binding\")\n    objects, sources = snapshot[\"objects\"], snapshot[\"sources\"]\n    names, bounds = sorted(objects), snapshot.get(\"neuro3d_direction_bounds\", {})\n    need(snapshot[\"evaluated_optics_checked\"] is True and snapshot[\"evaluated_optical_ids\"] == names and\n         snapshot[\"undeclared_meshes\"] == [], \"evaluated complete geometry required\")\n    if bounds:\n        raw_bounds = manifest[\"provenance\"][\"direction_bounds_json\"]\n        need(json.loads(raw_bounds) == bounds, \"persisted interval values\")\n        need(sha(raw_bounds.encode()) == manifest[\"direction_bounds_provenance\"][\"stored_json_sha256\"],\n             \"persisted interval hash\")\n    scalars, source_records, vertex_records, triangle_records = [], [], [], []\n    for si, source in enumerate(sources):\n        first = len(scalars)\n        intervals = bounds.get(source[\"id\"], [[x, x] for x in source[\"direction\"]])\n        for role, values, endpoint in (\n            (\"origin\", source[\"position_BU\"], 0), (\"raw_direction\", source[\"direction\"], 0),\n            (\"direction_bound\", [v[0] for v in intervals], 0),\n            (\"direction_bound\", [v[1] for v in intervals], 1), (\"field\", source[\"field_reim\"], 0)):\n            for axis, value in enumerate(values):\n                scalars.append((role, si, 0, axis, endpoint, float(value)))\n        source_records.append([si, ABSENT] + list(range(first, first + 14)) + [0] * 16)\n    for oi, name in enumerate(names):\n        obj = objects[name]\n        start_vertex = len(vertex_records)\n        for vi, vertex in enumerate(obj[\"vertices_world_BU\"]):\n            indices = []\n            for axis, value in enumerate(vertex):\n                indices.append(len(scalars))\n                scalars.append((\"vertex\", oi, vi, axis, 0, float(value)))\n            vertex_records.append([len(vertex_records), oi, vi] + indices + [0, 0])\n        for fi, face in enumerate(obj[\"faces\"]):\n            need(len(face) == 3 and len(set(face)) == 3 and\n                 all(type(i) is int and 0 <= i < len(obj[\"vertices_world_BU\"]) for i in face),\n                 \"actual triangle connectivity required\")\n            triangle_records.append([len(triangle_records), oi, fi] +\n                                    [start_vertex + i for i in face] + [KIND[obj[\"kind\"]], 0])\n        if obj[\"kind\"] in (\"det\", \"escape\"):\n            for key, role in ((\"mode_origin_BU\", \"mode_origin\"), (\"mode_direction\", \"mode_direction\")):\n                for axis, value in enumerate(obj[key]):\n                    scalars.append((role, oi, 0, axis, 0, float(value)))\n        metadata = manifest[\"material_binary64_metadata\"][oi]\n        need(metadata[\"object_id\"] == name and metadata[\"object_ordinal\"] == oi, \"material identity\")\n        for key in (\"phase_rad\", \"power_transmittance\"):\n            if key in obj:\n                words = list(struct.unpack(\"<II\", struct.pack(\"<d\", float(obj[key]))))\n                need(metadata[\"parameters\"][key] == {\"binary64_words\": words, \"numeric_ABI\": False},\n                     \"material raw64 metadata changed\")\n    scalars.append((\"wavelength\", ABSENT, 0, 0, 0, float(snapshot[\"lambda_BU\"])))\n    n, ns, nv, nt, no = len(scalars), len(sources), len(vertex_records), len(triangle_records), len(names)\n    so, vo = 32 + 8 * n, 32 + 8 * n + 32 * ns\n    to, total = vo + 8 * nv, vo + 8 * nv + 8 * nt\n    header = [0x4E33484C,1,32,total,n,32,8,ns,so,32,nv,vo,8,nt,to,8,no,n-1,0]+[0]*13\n    words = unpack(wire)\n    need(words[:32] == header and len(words) == total, \"independent full packet header\")\n    need(manifest[\"source_order\"] == [s[\"id\"] for s in sources] and manifest[\"object_order\"] == names,\n         \"independent source/object ordering\")\n    need(manifest[\"source_records\"] == source_records and manifest[\"vertex_records\"] == vertex_records and\n         manifest[\"triangle_records\"] == triangle_records, \"independent geometry/source tables\")\n    need(words[so:vo] == sum(source_records, []) and words[vo:to] == sum(vertex_records, []) and\n         words[to:] == sum(triangle_records, []), \"native table words\")\n    nonzero_lows = 0\n    for i, (role, owner, element, component, endpoint, value) in enumerate(scalars):\n        record = words[32 + i*8:40 + i*8]\n        need(record[2:] == [ROLE[role], owner, element, component, endpoint, 0], \"scalar metadata\")\n        expected = observed(value)\n        need(binary32(record[0]) + binary32(record[1]) == expected, \"exact scalar transport\")\n        hi_word = struct.unpack(\"<I\", struct.pack(\"<f\", value))[0]\n        residual = expected - binary32(hi_word)\n        need(F.from_float(float(residual)) == residual, \"reference residual is not exactly binary64\")\n        lo_word = struct.unpack(\"<I\", struct.pack(\"<f\", float(residual)))[0]\n        need(record[:2] == [hi_word, lo_word], \"independent RN32 limbs\")\n        audit = manifest[\"scalars\"][i]\n        need(audit[\"observed_binary64_words\"] == list(struct.unpack(\"<II\", struct.pack(\"<d\", value))) and\n             F(*audit[\"exact_input\"]) == expected and audit[\"residual_exact\"] == [0,1],\n             \"scalar retained IEEE metadata\")\n        nonzero_lows += (record[1] & 0x7FFFFFFF) != 0\n    need(len(manifest[\"scalars\"]) == n, \"complete scalar metadata\")\n    return {\"snapshot\":snapshot,\"wire\":wire,\"input_words\":total,\"scalars\":n,\"sources\":ns,\n            \"vertices\":nv,\"triangles\":nt,\"objects\":no,\"nonzero_lows\":nonzero_lows,\n            \"rows\":ns*nv+ns+2*nt,\"packet_sha256\":sha(packet_raw),\n            \"wire_sha256\":sha(wire),\"blend_sha256\":sha(blend)}\n\n\ndef reference_rows(snapshot, mode):\n    vertices, triangles = [], []\n    for oi, name in enumerate(sorted(snapshot[\"objects\"])):\n        obj = snapshot[\"objects\"][name]\n        first = len(vertices)\n        vertices.extend((oi, point) for point in obj[\"vertices_world_BU\"])\n        triangles.extend((oi, [first + x for x in face]) for face in obj[\"faces\"])\n    def row(identity, a, b):\n        lhs, rhs = [observed(v, mode) for v in a], [observed(v, mode) for v in b]\n        return identity, [x-y for x,y in zip(lhs,rhs)], [float(x)-float(y) for x,y in zip(lhs,rhs)]\n    for si, source in enumerate(snapshot[\"sources\"]):\n        for vi, (oi, vertex) in enumerate(vertices):\n            yield row([1,si,vi,oi], vertex, source[\"position_BU\"])\n    bounds = snapshot.get(\"neuro3d_direction_bounds\", {})\n    for si, source in enumerate(snapshot[\"sources\"]):\n        intervals = bounds.get(source[\"id\"], [[v,v] for v in source[\"direction\"]])\n        yield row([2,si,ABSENT,ABSENT], [x[1] for x in intervals], [x[0] for x in intervals])\n    for edge in (1,2):\n        for ti, (oi, indices) in enumerate(triangles):\n            yield row([2+edge,ABSENT,ti,oi], vertices[indices[edge]][1], vertices[indices[0]][1])\n\n\ndef audit_readback(data, record, mode_report, mode, nonce):\n    echo, computed = hex_bytes(record[\"input_echo_hex\"]), hex_bytes(record[\"computed_rows_hex\"])\n    ne, nc = padded(data[\"input_words\"]), padded(32 + 24*data[\"rows\"])\n    need(echo == data[\"wire\"] + struct.pack(\"<I\", POISON)*(ne-data[\"input_words\"]), \"all input echo and padding\")\n    words = unpack(computed)\n    need(len(words) == nc, \"physical computed length\")\n    expected_header = [0x4E33484F,1,32,32+24*data[\"rows\"],data[\"input_words\"],data[\"rows\"],\n                       data[\"sources\"],data[\"vertices\"],data[\"triangles\"],data[\"scalars\"],\n                       data[\"objects\"],mode,0,1,nonce,nonce^0xFFFFFFFF]+[0]*16\n    need(words[:32] == expected_header, \"native header/status/nonce/coverage\")\n    need(words[32+24*data[\"rows\"]:] == [POISON]*(nc-32-24*data[\"rows\"]), \"computed padding\")\n    need(mode_report[\"zero_low\"] == mode and mode_report[\"dispatch_nonce\"] == nonce and\n         mode_report[\"readback_sha256\"] == sha(echo+computed), \"per-dispatch identity/hash\")\n    sync = mode_report[\"synchronization\"]\n    need(sync[\"barrier_mask\"] == 0x120 and sync[\"same_context_verified\"] is True and\n         sync[\"fence_status\"] in (0x911A,0x911C) and sync[\"fence_deadline_seconds\"] == 5.0 and\n         type(sync[\"fence_polls\"]) is int and sync[\"fence_polls\"] > 0, \"readback synchronization record\")\n    payload = mode_report[\"gpu_resource_payload_bytes\"]\n    need(payload == {\"source_ubo\":32768,\"echo\":ne*4,\"computed\":nc*4,\"total\":32768+(ne+nc)*4},\n         \"native payload accounting\")\n    refs = list(reference_rows(data[\"snapshot\"], mode))\n    need(len(refs) == data[\"rows\"], \"independent complete row count\")\n    exact_values, witnesses = [], []\n    nonzero_low = lost = checked = negative_zero_words = 0\n    expected_hasher = hashlib.sha256()\n    targets = {\"one_minus_2pow_minus60\": F(1)-F(1,2**60),\n               \"four_term_direction_width\": F(1)+F(1,2**30)-F(1,2**60)-F(1,2**100)}\n    critical = {name: [] for name in targets}\n    for ri, (identity, expected, naive) in enumerate(refs):\n        row = words[32+ri*24:56+ri*24]\n        need(row[:4] == identity and row[22:] == [0,0], \"row identity/order/reserved\")\n        expected_hasher.update((canonical([identity,[[x.numerator,x.denominator] for x in expected]])+\"\\n\").encode())\n        current = []\n        for axis,target in enumerate(expected):\n            pair_words = row[4+axis*4:8+axis*4]\n            high, low = binary64(pair_words[:2]), binary64(pair_words[2:])\n            naive_words = row[16+axis*2:18+axis*2]\n            native_naive = binary64(naive_words)\n            need(high+low == target, \"exact output mismatch row=%d axis=%d\"%(ri,axis))\n            need(native_naive == F.from_float(naive[axis]), \"naive binary64 diagnostic mismatch\")\n            checked += 1\n            nonzero_low += low != 0\n            lost_here = native_naive != target\n            lost += lost_here\n            for lo_word,hi_word in ((pair_words[0],pair_words[1]),(pair_words[2],pair_words[3])):\n                negative_zero_words += lo_word == 0 and hi_word == 0x80000000\n            current.append(high+low)\n            witness = {\"row\":ri,\"identity\":identity,\"axis\":axis,\n                       \"exact\":[target.numerator,target.denominator],\"pair64_words\":pair_words,\n                       \"naive_words\":naive_words,\"low_nonzero\":low!=0,\"naive_loss\":lost_here}\n            if (low != 0 or lost_here) and len(witnesses)<12:\n                witnesses.append(witness)\n            if identity[0] == 1 and axis == 0 and target == targets[\"one_minus_2pow_minus60\"]:\n                critical[\"one_minus_2pow_minus60\"].append(witness)\n            if identity[0] == 2 and target == targets[\"four_term_direction_width\"]:\n                critical[\"four_term_direction_width\"].append(witness)\n        exact_values.append(current)\n    claimed = mode_report[\"audit\"]\n    need(claimed[\"status\"] == \"PASS\" and claimed[\"all_rows_checked\"] == len(refs) and\n         claimed[\"exact_components_checked\"] == checked and claimed[\"zero_tolerance_exact_comparison\"] is True and\n         claimed[\"nonzero_output_low_components\"] == nonzero_low and\n         claimed[\"collapsed_binary64_loss_components\"] == lost and\n         claimed[\"expected_rows_sha256\"] == expected_hasher.hexdigest(), \"worker audit summary disagreement\")\n    return {\"mode\":mode,\"rows\":len(refs),\"components\":checked,\"nonzero_output_lows\":nonzero_low,\n            \"naive_loss_components\":lost,\"negative_zero_output_words\":negative_zero_words,\n            \"expected_rows_sha256\":expected_hasher.hexdigest(),\n            \"native_readback_sha256\":sha(echo+computed),\"witnesses\":witnesses,\n            \"critical\":critical}, exact_values, echo+computed\n\n\n\ndef audit_guard_resources(guard):\n    \"\"\"Check retained supervisor facts independently, without polling the machine.\"\"\"\n    def integer(value, label, minimum=0, maximum=2**63-1):\n        need(type(value) is int and minimum <= value <= maximum, label)\n        return value\n    def finite(value, label, minimum=0, maximum=float(\"inf\")):\n        need(type(value) in (int, float) and math.isfinite(value) and minimum <= value <= maximum, label)\n        return value\n    def utc(value):\n        need(type(value) is str, \"guard timestamp string required\")\n        parsed = datetime.fromisoformat(value.replace(\"Z\", \"+00:00\"))\n        need(parsed.tzinfo is not None and parsed.utcoffset().total_seconds() == 0,\n             \"guard timestamp must be UTC\")\n        return parsed\n    gib = 2**30\n    need(guard[\"schema\"] == \"scene-hilo-gpu-guard-v1\" and guard[\"synthetic_CPU_control\"] is False,\n         \"real native guard contract required\")\n    need(type(guard[\"worker_exit_code\"]) is int and guard[\"worker_exit_code\"] == 0,\n         \"guard worker must exit rc0\")\n    closed = guard[\"accounting_after_close\"]\n    need(type(closed) is dict and type(closed[\"active_processes\"]) is int and\n         closed[\"active_processes\"] == 0 and guard[\"cleanup_errors\"] == [],\n         \"guard has active owned processes or cleanup errors\")\n    timeout = finite(guard[\"timeout_seconds\"], \"bounded guard work timeout\", .05, 100)\n    cleanup = finite(guard[\"cleanup_seconds\"], \"bounded guard cleanup timeout\", 1, 10)\n    elapsed = finite(guard[\"elapsed_seconds\"], \"finite guard elapsed\")\n    need(elapsed < timeout + cleanup, \"guard exceeded work plus cleanup\")\n    host = integer(guard[\"host_budget_bytes\"], \"bounded host reserve\", 256*2**20, 2*gib)\n    device = integer(guard[\"device_budget_bytes\"], \"bounded device reserve\", 16*2**20, 2*gib)\n    need(guard[\"ram_floor_bytes\"] == 4*gib and guard[\"vram_cap_bytes\"] == 18*gib and\n         guard[\"temperature_cap_c\"] == 80 and\n         guard[\"reserve_allowance_applies_during_runtime\"] is True,\n         \"guard resource policy changed\")\n    started, finished, deadline = (utc(guard[key]) for key in\n                                   (\"started_utc\", \"finished_utc\", \"deadline_utc\"))\n    need(started <= finished < deadline, \"guard UTC timing/deadline\")\n    samples = guard[\"samples\"]\n    need(type(samples) is list and len(samples) >= 3, \"admission/running/post-exit samples required\")\n    need(samples[-1].get(\"stage\") == \"after_worker_exit_before_job_close\",\n         \"last guard sample is not after worker exit\")\n    previous_time = started\n    gpu_uuid = samples[0][\"gpu_uuid\"]\n    need(type(gpu_uuid) is str and gpu_uuid.startswith(\"GPU-\"), \"recorded GPU UUID required\")\n    remaining_ram, projected_vram, temperatures = [], [], []\n    for sample in samples:\n        sampled = utc(sample[\"sampled_utc\"])\n        need(previous_time <= sampled <= finished, \"guard sample chronology\")\n        previous_time = sampled\n        need(integer(sample[\"gpu_count\"], \"single physical GPU\", 1, 1) == 1 and\n             sample[\"gpu_uuid\"] == gpu_uuid and \"RTX 3090\" in sample[\"name\"],\n             \"guard physical GPU identity changed\")\n        available = integer(sample[\"ram_available_bytes\"], \"RAM telemetry\")\n        used = integer(sample[\"device_used_bytes\"], \"used device telemetry\")\n        total = integer(sample[\"device_total_bytes\"], \"total device telemetry\", 1)\n        temperature = finite(sample[\"temperature_c\"], \"temperature telemetry\", 0, 80)\n        finite(sample[\"utilization_percent\"], \"utilization telemetry\", 0, 100)\n        need(available - host >= 4*gib, \"sample RAM floor after host reserve\")\n        need(used + device <= 18*gib and used + device <= total,\n             \"sample VRAM cap after device reserve\")\n        remaining_ram.append(available-host)\n        projected_vram.append(used+device)\n        temperatures.append(temperature)\n    age = (finished - previous_time).total_seconds()\n    need(0 <= age <= 5, \"final guard telemetry is stale at receipt finalization\")\n    return {\"worker_exit_code\":0, \"active_owned_processes_after_close\":0,\n            \"samples_checked\":len(samples), \"elapsed_seconds\":elapsed,\n            \"work_timeout_seconds\":timeout, \"cleanup_seconds\":cleanup,\n            \"min_ram_after_reserve_bytes\":min(remaining_ram),\n            \"max_vram_after_reserve_bytes\":max(projected_vram),\n            \"max_temperature_c\":max(temperatures),\n            \"final_sample_stage\":samples[-1][\"stage\"], \"final_sample_age_seconds\":age,\n            \"gpu_uuid\":gpu_uuid}\n\n\ndef main():\n    p=argparse.ArgumentParser()\n    for name in (\"worker-report\",\"worker-sha256\",\"guard-receipt\",\"guard-sha256\",\n                 \"input-manifest\",\"input-sha256\",\"repo\",\"out\"):\n        p.add_argument(\"--\"+name,required=True)\n    args=p.parse_args()\n    out=Path(args.out).resolve()\n    need(out.parent.is_dir() and not out.exists(), \"fresh audit output required\")\n    inputs=[Path(args.worker_report).resolve(),Path(args.guard_receipt).resolve(),Path(args.input_manifest).resolve()]\n    need(out not in inputs, \"audit output overlaps input\")\n    started=time.perf_counter()\n    report={\"schema\":\"neuro3d.scene_hilo.independent_native_readback_audit.cpu.v2\",\n            \"status\":\"FAIL_CPU_AUDIT_OF_RETAINED_NATIVE_READBACK\",\"verification_passed\":False,\n            \"auditor_GPU_executed\":False,\"auditor_Blender_executed\":False,\n            \"implementation_imports\":0,\"retained_native_evidence_validated\":False,\n            \"physical_precision_certified\":False,\"phase_certified\":False,\"first_hit_certified\":False,\n            \"native_original_transport_joins\":0,\"cases\":[]}\n    try:\n        worker,worker_raw=read_json(inputs[0],args.worker_sha256)\n        guard,guard_raw=read_json(inputs[1],args.guard_sha256)\n        job,job_raw=read_json(inputs[2],args.input_sha256)\n        report[\"artifacts\"]={\"worker\":{\"path\":str(inputs[0]),\"sha256\":sha(worker_raw)},\n                             \"guard\":{\"path\":str(inputs[1]),\"sha256\":sha(guard_raw)},\n                             \"input_manifest\":{\"path\":str(inputs[2]),\"sha256\":sha(job_raw)}}\n        need(guard[\"status\"]==\"PASS\" and guard[\"cleanup_confirmed\"] is True and\n             guard[\"native_gpu_execution_verified\"] is True and guard[\"GPU_job_admission\"] is True,\n             \"native guard did not pass\")\n        need(guard[\"worker_report_sha256\"]==sha(worker_raw) and\n             guard[\"job_id\"]==worker[\"job_id\"], \"guard/worker evidence binding\")\n        need(guard[\"pins_entry\"]==guard[\"pins_exit\"], \"guard dependency closure changed\")\n        report[\"guard_independent_checks\"]=audit_guard_resources(guard)\n        for name in (\"physical_precision_certified\",\"native_precision_certified\",\n                     \"global_machine_safety_certified\",\"foreign_processes_terminated\"):\n            need(guard[name] is False, \"guard scope inflation: \"+name)\n        need(worker[\"schema\"]==\"neuro3d.scene_hilo.native_report.v1\" and worker[\"status\"]==\"PASS\" and\n             worker[\"verification_passed\"] is True and worker[\"native_gpu_executed\"] is True and\n             worker[\"native_gpu_execution_attempted\"] is True and\n             type(worker[\"completed_readbacks\"]) is int and worker[\"completed_readbacks\"] == 6,\n             \"native worker did not complete all six attempted readbacks\")\n        need(worker[\"input_manifest_sha256\"]==sha(job_raw) and\n             worker[\"backend\"]==\"OPENGL\" and worker[\"background\"] is False and\n             \"NVIDIA\" in worker[\"vendor\"].upper() and \"RTX 3090\" in worker[\"renderer\"].upper(),\n             \"native input/device binding\")\n        for name in (\"physical_uncertainty_certified\",\"full_intersection_integration\",\"phase_certified\",\n                     \"full_Iris_GPU\",\"hardware_RT_or_BVH\",\"speed_advantage_claimed\"):\n            need(worker[\"scope\"][name] is False, \"worker scope inflation: \"+name)\n        need(job[\"schema\"]==\"neuro3d.scene_hilo.native_job.v1\" and\n             job[\"limits\"]=={\"max_sources\":5,\"max_triangles\":64,\"max_dispatches\":6} and\n             [c[\"case_id\"] for c in job[\"cases\"]]==ORDER, \"pinned native job profile\")\n        need([c[\"case_id\"] for c in worker[\"cases\"]]==ORDER, \"case coverage/order\")\n        records=worker[\"gpu_readback_records\"]\n        need(worker[\"gpu_dispatch_count\"]==guard[\"gpu_dispatch_count\"]==len(records)==6,\n             \"six dispatch/readback records required\")\n        code_pins={}\n        declared_code = worker[\"code_sha256\"]\n        need(type(declared_code) is dict and len(declared_code) == len(EXPECTED_CODE_PATHS) and\n             all(type(relative) is str for relative in declared_code) and\n             {relative.replace(\"\\\\\", \"/\") for relative in declared_code} == EXPECTED_CODE_PATHS,\n             \"exact eight worker dependencies required\")\n        for relative,expected in declared_code.items():\n            path=Path(args.repo)/relative\n            actual=sha(path.read_bytes())\n            need(actual==expected, \"worker source changed after native run: \"+relative)\n            norm=os.path.normcase(str(path.resolve()))\n            need(guard[\"pins_entry\"].get(norm)==actual, \"worker code is outside guard pins: \"+relative)\n            code_pins[relative]=actual\n        report[\"code_pins\"]=code_pins\n        all_raw=hashlib.sha256(); total_components=total_rows=0; seen_nonces=set()\n        for ci,(case,case_report) in enumerate(zip(job[\"cases\"],worker[\"cases\"])):\n            data=audit_packet(case)\n            need(canonical(case_report[\"snapshot\"])==canonical(data[\"snapshot\"]) and\n                 case_report[\"reopened_snapshot_equal\"] is True and\n                 case_report[\"wire_sha256\"]==data[\"wire_sha256\"] and\n                 case_report[\"native_input_nonzero_low_limbs\"]==data[\"nonzero_lows\"],\n                 \"case snapshot/transport summary\")\n            need(len(case_report[\"modes\"])==2,\"both modes required\")\n            audits=[]; values=[]\n            for mode in (0,1):\n                index=ci*2+mode; record=records[index]; mode_report=case_report[\"modes\"][mode]\n                need(record[\"case_id\"]==case[\"case_id\"] and type(record[\"zero_low\"]) is int and\n                     record[\"zero_low\"]==mode and mode_report[\"raw_record_index\"]==index,\n                     \"case/mode/raw-record order\")\n                seed=(worker[\"job_id\"]+\"/\"+case[\"case_id\"]+\"/\"+str(mode)).encode()\n                nonce=int.from_bytes(hashlib.sha256(seed).digest()[:4],\"little\")&0x7FFFFFFF\n                need(nonce and nonce not in seen_nonces,\"fresh unique dispatch nonce\")\n                seen_nonces.add(nonce)\n                audit,exact,raw=audit_readback(data,record,mode_report,mode,nonce)\n                audits.append(audit); values.append(exact); all_raw.update(raw)\n                total_rows+=audit[\"rows\"]; total_components+=audit[\"components\"]\n            changed=sum(a!=b for r0,r1 in zip(values[0],values[1]) for a,b in zip(r0,r1))\n            need(changed==case_report[\"low_zero_ablation_changed_components\"],\"ablation summary\")\n            if case[\"input_class\"]==\"real_reopened_baseline\":\n                need(data[\"nonzero_lows\"]==0 and changed==0,\"baseline low-zero sham\")\n            else:\n                need(data[\"nonzero_lows\"]>0 and changed>0,\"controlled informative low limbs\")\n                need(all(audits[0][\"critical\"].values()),\"both critical witnesses required\")\n                need(all(w[\"low_nonzero\"] and w[\"naive_loss\"] for group in audits[0][\"critical\"].values() for w in group),\n                     \"critical exact pair/naive-loss witness\")\n            report[\"cases\"].append({\"case_id\":case[\"case_id\"],\"packet_sha256\":data[\"packet_sha256\"],\n                                    \"wire_sha256\":data[\"wire_sha256\"],\"input_scalar_count\":data[\"scalars\"],\n                                    \"input_nonzero_lows\":data[\"nonzero_lows\"],\"ablation_changed_components\":changed,\n                                    \"modes\":audits})\n        need(total_rows==2342 and total_components==7026,\"full preregistered output coverage\")\n        need(all_raw.hexdigest()==worker[\"gpu_readback_sha256\"]==guard[\"gpu_readback_sha256\"],\n             \"complete worker/guard readback hash\")\n        report.update(status=\"PASS_CPU_AUDIT_OF_RETAINED_NATIVE_READBACK\",verification_passed=True,\n                      retained_native_evidence_validated=True,total_rows=total_rows,total_components=total_components,\n                      readback_sha256=all_raw.hexdigest(),job_id=worker[\"job_id\"],guard_cleanup_verified=True)\n        for path,expected in zip(inputs,(args.worker_sha256,args.guard_sha256,args.input_sha256)):\n            need(sha(path.read_bytes())==expected,\"audit input mutated during read\")\n    except BaseException as error:\n        report.update(status=\"FAIL_CPU_AUDIT_OF_RETAINED_NATIVE_READBACK\",verification_passed=False,\n                      retained_native_evidence_validated=False,error=type(error).__name__+\": \"+str(error),\n                      traceback=traceback.format_exc())\n    report[\"created_utc\"]=datetime.now(timezone.utc).isoformat()\n    report[\"audit_wall_seconds\"]=time.perf_counter()-started\n    report[\"previous_auditor_sha256\"]=PREVIOUS_AUDITOR_SHA256\n    if AUDITOR_BYTES is not None:\n        report[\"auditor_file_sha256\"]=sha(AUDITOR_BYTES)\n    if isinstance(AUDITOR_SOURCE, str):\n        report[\"auditor_source_sha256\"]=sha(AUDITOR_SOURCE.encode())\n        report[\"auditor_source\"]=AUDITOR_SOURCE\n    raw=(json.dumps(report,indent=2,allow_nan=False)+\"\\n\").encode()\n    temporary=out.with_name(out.name+\".tmp\")\n    with temporary.open(\"xb\") as stream:\n        stream.write(raw);stream.flush();os.fsync(stream.fileno())\n    os.rename(temporary,out)\n    print(json.dumps({\"path\":str(out),\"sha256\":sha(raw),\"bytes\":len(raw),\n                      \"status\":report[\"status\"],\"components\":report.get(\"total_components\"),\n                      \"error\":report.get(\"error\")},sort_keys=True))\n    return 0 if report[\"verification_passed\"] else 1\n\n\nif __name__==\"__main__\":\n    raise SystemExit(main())\n"
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "neuro3d.unreal.shader_reference_tests.v1",
+  "status": "PASS",
+  "tests": 5,
+  "errors": 0,
+  "failures": 0,
+  "GPU_executed": false,
+  "scope": "CPU semantic/analytic controls; no Unreal compilation/readback parity/native binary32 certificate",
+  "source_sha256": {
+    "Tools/verify_unreal_shader_reference_v1.py": "407f0715ed613748c9c7255887cd1a6e0c78ef3c08fa9b675cf6bb2a759f2bb2",
+    "Plugins/SantoGrialPhotonic/Tests/photonic_shader_reference_v1.py": "8f58ed3577df1f606c49761d9d3e83c20cd4c8319e81dc807c64ae6de143335f",
+    "Plugins/SantoGrialPhotonic/Shaders/SantoGrialPhotonic.usf": "f0760093d51aac98e2e485ee3a3eea6c0b1ce05f9b034945c238ff4959c3647c"
+  }
+}

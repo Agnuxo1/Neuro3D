@@ -1,0 +1,90 @@
+{
+  "schema": "neuro3d-complete-error-certificate-v1",
+  "backend": "CPU_RATIONAL_OUTWARD_INTERVALS",
+  "interval_bits": 128,
+  "scene_sha256": "06185cca8539ff5ef9df61fee752579105d3c1ef6f26ac10d8932d0d55b347e1",
+  "status": "UNKNOWN",
+  "physical_input_bounds": "UNKNOWN_NOT_ZERO",
+  "native_full_kernel_certified": false,
+  "scope": "explicit supplied scalar-model input box",
+  "paths": [],
+  "ports": null,
+  "input_radii": {
+    "vertex_radius": [
+      0,
+      1
+    ],
+    "object_translation": {
+      "bs": [
+        [
+          1,
+          17592186044416
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "out": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    "source_position": [
+      0,
+      1
+    ],
+    "source_direction": {
+      "input": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    "source_field": [
+      0,
+      1
+    ],
+    "wavelength": [
+      0,
+      1
+    ],
+    "mirror_phase": [
+      0,
+      1
+    ],
+    "transmittance": [
+      0,
+      1
+    ],
+    "reference": [
+      0,
+      1
+    ]
+  },
+  "reason": "UNKNOWN_HIT_ORDER",
+  "topology_certified": false
+}

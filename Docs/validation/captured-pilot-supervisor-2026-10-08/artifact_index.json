@@ -1,0 +1,77 @@
+{
+  "schema": "optic_neuro_blender.pilot_supervisor_artifact_index.v1",
+  "file_count": 14,
+  "files": [
+    {
+      "path": "archive_evidence_source.py",
+      "bytes": 3831,
+      "sha256": "3d200668f440359f75b52176691519e21cd676adcbe654295f2b34f988f67b31"
+    },
+    {
+      "path": "captured-pilot-supervisor-missing-registration01/supervisor.json",
+      "bytes": 1841,
+      "sha256": "1d1c7643d8b7012ca4a4da6b3b50c1b089b3a9ab88a966c0f58944234ad0b1c4"
+    },
+    {
+      "path": "captured-pilot-supervisor-missing-registration01/supervisor_source.py",
+      "bytes": 10404,
+      "sha256": "02c43bb66f9407d46a2876979a863c60f115e981f06df7e2e6fd53f0199d5743"
+    },
+    {
+      "path": "captured-pilot-supervisor-preflight01/supervisor.json",
+      "bytes": 1830,
+      "sha256": "5cb8622cf00ba7400c12604eccc7605dbb81e80b8b183e424671dddf5df36187"
+    },
+    {
+      "path": "captured-pilot-supervisor-preflight01/supervisor_source.py",
+      "bytes": 10404,
+      "sha256": "02c43bb66f9407d46a2876979a863c60f115e981f06df7e2e6fd53f0199d5743"
+    },
+    {
+      "path": "captured-pilot-supervisor-preflight02/supervisor.json",
+      "bytes": 1871,
+      "sha256": "7d0eae6459ba2f95431e4a9fce48e740db17e2dfd5bb3226073fdfbfa8006b5b"
+    },
+    {
+      "path": "captured-pilot-supervisor-preflight02/supervisor_source.py",
+      "bytes": 10897,
+      "sha256": "dc12e5c631e9e7db2c6ce84460d4467862162093826de0b2ee3801cbe920df02"
+    },
+    {
+      "path": "software-controls-receipt.json",
+      "bytes": 1252,
+      "sha256": "1724d15380fc1bfe99aae306dd6b4dee30715d825a89534548a22ab7fe32228a"
+    },
+    {
+      "path": "software-controls.stderr",
+      "bytes": 11107,
+      "sha256": "46a6ca387fafe183809364baee3935ae0ef9bc30aafa66bcadbf99b4ca184278"
+    },
+    {
+      "path": "software-controls.stdout",
+      "bytes": 397,
+      "sha256": "1124553a36b842091b807d7a1f03f57d4be77a25ab1a27f0bb0194963c8234b7"
+    },
+    {
+      "path": "source/Blender/tests/test_captured_pilot_supervision_v1.py",
+      "bytes": 10672,
+      "sha256": "05cf7a8db77c024e04c6f9c48dd67e73f63390586405506858b9407e6c914eb1"
+    },
+    {
+      "path": "source/Tools/audit_captured_pilot_result_v1.py",
+      "bytes": 9836,
+      "sha256": "a3f683ab11aa07eb52aefb4046ba89516321bb175ef01697c39131234b3ac686"
+    },
+    {
+      "path": "source/Tools/bind_network_capture_v1.py",
+      "bytes": 2085,
+      "sha256": "af3bdbc41636214f01c2078ce26bd271794fa763ccefecd2a006f1014d2f117b"
+    },
+    {
+      "path": "source/Tools/run_captured_scalar_pilot_v1.py",
+      "bytes": 10897,
+      "sha256": "dc12e5c631e9e7db2c6ce84460d4467862162093826de0b2ee3801cbe920df02"
+    }
+  ],
+  "frozen_pilot_executed": false
+}

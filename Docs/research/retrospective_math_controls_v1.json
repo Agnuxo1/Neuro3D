@@ -1,0 +1,27 @@
+{
+  "status": "PASS_CPU_MATH_CONTROLS",
+  "checks": 14,
+  "controls": [
+    "cardinal_0",
+    "cardinal_1/2",
+    "cardinal_1",
+    "cardinal_2",
+    "positive_tail_reciprocal_1",
+    "positive_tail_reciprocal_5",
+    "positive_tail_reciprocal_32",
+    "direct_splitter_mirror_cardinal_control",
+    "direct_splitter_mirror_cardinal_control",
+    "reject_outside_exponent_domain",
+    "reject_outside_exponent_domain",
+    "exact_distance_to_reference_interval",
+    "exact_distance_to_reference_interval",
+    "exact_distance_to_reference_interval"
+  ],
+  "GPU_executed": false,
+  "H1_confirmatory": false,
+  "source_hashes": {
+    "control": "dd089a6068eb46a6092705c8b828030dfd8115fcff2ff362024aa1e622ff8953",
+    "checker": "c8b5c0f85fe13371438e29fb1f1d8aa39950fc37a4d3ee3b9e29596e04675012",
+    "interval_math": "34ae4b0ea08a7bd9a3cd35c599f1d6277539dd7e5e936fe56c71254d3858b53d"
+  }
+}

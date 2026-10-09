@@ -1,0 +1,112 @@
+{
+ "task_id": "PHASE-COMPENSATED-CRITIQUE-CLAUDE-001",
+ "status": "complete_no_omission_found_in_domain",
+ "timestamp_utc": "2026-09-30T17:41:36+00:00",
+ "requested_by": "tablon 17:27/17:40 (MISMA critica CPU opcional PHASE-COMPENSATED, una omision del contraste)",
+ "scope": "CPU, un hilo, 0,8 s, solo lectura (sys.dont_write_bytecode) de phase_compensated_cpu_v1.compensated_angle; referencia racional exacta; sin GPU/shader/libm; sin cambios de gates; sin tocar 006",
+ "input_sha256": {
+  "Blender/benchmarks/capacity_audit/phase_compensated_cpu_v1.py": "32c0ceb114e6cd0bee8886dcec142c0b68a89091b7b0481440a7cd2b05b6c577",
+  "Docs/EXP-005-PHASE-COMPENSATED-CPU-PREPARACION.md": "560981ea40356f00883768c40d711669c41f35bf8873c55ab1a6ab58206f8a52"
+ },
+ "artifacts": {
+  "c_fma_fuzz.py": "D:/PROJECTS/.cognition/neuro3d/precision006_claude/c_fma_fuzz.py",
+  "c_fma_fuzz.json": "D:/PROJECTS/.cognition/neuro3d/precision006_claude/c_fma_fuzz.json"
+ },
+ "artifact_sha256": {
+  "c_fma_fuzz.py": "4860174f9d5304c0f9f8c9d7cb689aeb912f1c5a4b24dc1a30f3de75e8871859",
+  "c_fma_fuzz.json": "7c02967461712cfadac64e44f4c600f9eb9a1264e74423330f85f6c733edcaea"
+ },
+ "method": "60 000 entradas en seis familias: lambda y L generales log-uniformes, lambda diadica no potencia de 2 (3,5,7,9,15 x 2^k), L cerca de ciclos enteros (+-1e-16 relativo), L en media vuelta exacta (frontera +-pi), q cerca del tope 2^52, lambda float32 exacta. Error unitario |e^{i a} - e^{i a_ref}| con a_ref de la fraccion racional exacta de L/lambda.",
+ "results": {
+  "accepted": 59137,
+  "rejected": 863,
+  "reject_reasons": {
+   "quotient outside prototype domain": 863
+  },
+  "negative_L_rejected": [
+   [
+    -1e-09,
+    "nonnegative length and positive wavelength required"
+   ],
+   [
+    -0.5,
+    "nonnegative length and positive wavelength required"
+   ],
+   [
+    -1000.0,
+    "nonnegative length and positive wavelength required"
+   ]
+  ],
+  "seconds": 0.7966299057006836
+ },
+ "worst_cases": [
+  {
+   "unit_err": 1.1920535936127401e-07,
+   "L": 1.6246458094066452,
+   "lambda": 9.1552734375e-05,
+   "q": 17745.46462754565,
+   "kind": "diadica"
+  },
+  {
+   "unit_err": 1.1920168185852724e-07,
+   "L": 18.295135000892422,
+   "lambda": 1.8577251202825858e-10,
+   "q": 98481388883.35362,
+   "kind": "gen"
+  },
+  {
+   "unit_err": 1.1920100240203617e-07,
+   "L": 16759135820.029455,
+   "lambda": 0.022785550494225985,
+   "q": 735515950087.5933,
+   "kind": "q_cerca_2^52"
+  },
+  {
+   "unit_err": 1.1920006670607102e-07,
+   "L": 2156148.8899444086,
+   "lambda": 1.3468271193765227e-09,
+   "q": 1600909915552145.5,
+   "kind": "ciclos_enteros"
+  },
+  {
+   "unit_err": 1.1919710773966579e-07,
+   "L": 273596387579.71622,
+   "lambda": 0.00013819516532622764,
+   "q": 1979782627951248.5,
+   "kind": "q_cerca_2^52"
+  },
+  {
+   "unit_err": 1.1919620002132085e-07,
+   "L": 23745.705353516314,
+   "lambda": 0.10864388942718506,
+   "q": 218564.57347682753,
+   "kind": "f32_exacta"
+  },
+  {
+   "unit_err": 1.1919484155242792e-07,
+   "L": 15145.179104909645,
+   "lambda": 0.3223104774951935,
+   "q": 46989.409784655545,
+   "kind": "f32_exacta"
+  },
+  {
+   "unit_err": 1.1919181952535489e-07,
+   "L": 53.00991247641902,
+   "lambda": 1.1310058653180022e-05,
+   "q": 4686970.607487907,
+   "kind": "f32_exacta"
+  }
+ ],
+ "finding": "NINGUNA omision dentro del dominio aceptado: 59 137 entradas aceptadas, error unitario maximo 1,192e-7 (= piso del redondeo float32 del angulo) en todas las familias, incluidas ciclos enteros, medias vueltas y q hasta ~2e15; 863 rechazadas, todas por \"quotient outside prototype domain\" (q >= 2^52 o fuera de rango), ninguna aceptada con error. Consistente con el analisis: el residuo de FMA es exacto, q-floor(q) exacto para q<2^52, el error restante lo fija float32(TAU*reduced).",
+ "gaps_not_errors": [
+  "L efectiva NEGATIVA se rechaza (-1e-9, -0,5, -1000 rechazadas): en las escenas L_eff = camino + desplazamiento de referencia puede ser negativo si la referencia queda detras del origen; es un hueco de capacidad (falso rechazo), no de exactitud; habria que extender el dominio con signo (reducir |L| y conservar el signo del angulo) antes de integrarlo con referencias arbitrarias",
+  "requiere math.fma correctamente redondeado y sin FTZ: es un supuesto del CPU (Python 3.13); la equivalencia con fma del shader/driver GPU no esta probada ni se prueba aqui",
+  "el piso ~1,2e-7 lo fija el angulo float32; no hay margen de error de geometria ni coeficientes (declarado por Codex)"
+ ],
+ "limits": [
+  "fuzz dirigido, no prueba exhaustiva ni formal",
+  "proxy CPU; no GPU/driver/libm",
+  "un solo seed (11)"
+ ],
+ "no_jev_aval": true
+}

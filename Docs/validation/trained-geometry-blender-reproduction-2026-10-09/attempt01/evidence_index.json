@@ -1,0 +1,174 @@
+{
+  "archive_and_audit.py": {
+    "sha256": "0910e4cc2856454f7d6691cc49cc97f21c51ed17de914af7f411590f62290704",
+    "bytes": 3919
+  },
+  "blender.log": {
+    "sha256": "e43773c8ef712fbeec7aaaa5d92838e9089245598e2f2546a203ef99446dcb32",
+    "bytes": 537
+  },
+  "independent_recaptured_geometry_audit.json": {
+    "sha256": "7e11d836798ff6b3eb823a230312da58dc77cfa57f9fd524c06f1ed4a1d99041",
+    "bytes": 47935
+  },
+  "profile.json": {
+    "sha256": "987e22e4345344d800ead8369a6266f5addcc14906de0dc3c67c2ca467da09a3",
+    "bytes": 5473
+  },
+  "registration.json": {
+    "sha256": "c1b6be79c82a870397f07e0635ea1ad467ec50a6c83737b8f8a601dd58e858ba",
+    "bytes": 737
+  },
+  "supervisor.json": {
+    "sha256": "d8ca051be7495de2e7a234579226aaa52c322e435bc03f528c27913b357166e4",
+    "bytes": 6392
+  },
+  "worker/capture_after_reopen.json": {
+    "sha256": "50418a7546f9b0029ddc2cba8a679eba6637ed37e7055965c31ef4cdb33aa36e",
+    "bytes": 4533089
+  },
+  "worker/capture_before_save.json": {
+    "sha256": "fd09f2cf5a32c8503b6426bf153a93ca57ba2071ce65a4883139ef57d745a5c6",
+    "bytes": 4533056
+  },
+  "worker/contract.json": {
+    "sha256": "9d045d2796ae1d81472f1e53aa6d45702c007fefe3b43299257c4ab14cf5d676",
+    "bytes": 3367
+  },
+  "worker/graph.json": {
+    "sha256": "b344145ca3df61093be1708cd69f44f60edcb1f90958c33391e964d521f51b55",
+    "bytes": 159663
+  },
+  "worker/result.json": {
+    "sha256": "fd660684755a2bb4554ce1ceaa2e66bb5786aeedea71813202006a398f61f918",
+    "bytes": 36654
+  },
+  "worker/scene.json": {
+    "sha256": "68ab482255cfcfcc0c66de9c0da33af18803a40f47bbb6ce1be943cc4a47f1b1",
+    "bytes": 1184894
+  },
+  "worker/semantics.json": {
+    "sha256": "25c397be60e131c0dad1427b503b2bf41d1756730071d93eef737bb04d1a666d",
+    "bytes": 7819
+  },
+  "worker/trained_geometry.blend": {
+    "sha256": "7d800f4c598674c21e4ce5d39db5d02d59cadec0ba8458304622f69e020e8f04",
+    "bytes": 7922480
+  },
+  "source/Tools/audit_captured_pilot_result_v1.py": {
+    "sha256": "a3f683ab11aa07eb52aefb4046ba89516321bb175ef01697c39131234b3ac686",
+    "bytes": 9836
+  },
+  "source/Tools/audit_coherent_state_graph_v1.py": {
+    "sha256": "2bb9bb285ec93922fd96cc1eec98fa1fc2c73d20856140536ba5adfe50d4519d",
+    "bytes": 9570
+  },
+  "source/Tools/audit_graph_neighborhood_v1.py": {
+    "sha256": "a5186cabf4ae3e7b0ea3995f66b315709e64751d3e4636b37d2172a7fad02ef2",
+    "bytes": 4025
+  },
+  "source/Tools/bind_network_capture_v1.py": {
+    "sha256": "af3bdbc41636214f01c2078ce26bd271794fa763ccefecd2a006f1014d2f117b",
+    "bytes": 2085
+  },
+  "source/Tools/restore_trained_geometry_in_blender_v1.py": {
+    "sha256": "76471725f1f304fdf59db81d813ff0c028d426ed8e9fa20ff75edab931cb1101",
+    "bytes": 6158
+  },
+  "source/Tools/run_frozen_blender_reproduction_v1.py": {
+    "sha256": "79fdc9b3d03320d833f95d343902234e1ff96e81ddc42728a5e4d0e7265854ba",
+    "bytes": 5734
+  },
+  "source/Tools/run_frozen_geometry_training_v1.py": {
+    "sha256": "d813e5bcce102be8517cb165195f4dece7edbea0d290901dab598bfadadbded4",
+    "bytes": 5497
+  },
+  "source/Tools/run_frozen_state_graph_profile_v1.py": {
+    "sha256": "9f234e7214e7c740f18ae9e9cf880de98f28f6caf532938a4fbaf1dcd1470895",
+    "bytes": 8165
+  },
+  "source/Tools/trace_indexed_scene_v1.py": {
+    "sha256": "e1ce3a4cf1c83234897de221cc28833017e76863c4ac88e2ead3957f1bac13ac",
+    "bytes": 1732
+  },
+  "source/Tools/train_captured_geometry_v1.py": {
+    "sha256": "5700e71eed99d398239603f35c6c449814be0926d477df4944ff999a8e9b9dba",
+    "bytes": 9575
+  },
+  "source/Docs/research/captured_geometry_training_profile_2026-10-09.json": {
+    "sha256": "0eba46caad4b11a4405910d80d6d52c802e7db743e5b267004612d563f971914",
+    "bytes": 5909
+  },
+  "source/Docs/research/iris_coherent_contract_v1.json": {
+    "sha256": "72cd57ad26e9becfccab6304ccd62dc9afea21efd651ffbae1aefdfef337dd0b",
+    "bytes": 4662
+  },
+  "source/Docs/research/iris_scene_coordinate_bindings_v1.json": {
+    "sha256": "85d7b5dd77589b5c1b11b19b1de082be4fb8e4cb7ddceafa50f35cdd4767b515",
+    "bytes": 7872
+  },
+  "source/Docs/validation/captured-scalar-ingress-2026-10-08/fields_admission_only.json": {
+    "sha256": "ef8dfdcd26a9ad01afd20ca3ebbaab75d5f74ebcee1572c308a959f081849589",
+    "bytes": 143
+  },
+  "source/Docs/validation/captured-scalar-ingress-2026-10-08/scene.json": {
+    "sha256": "59963192f88df24bf5b1d7fd2f8119a81a0ecad353f62ee16831ccfb98627097",
+    "bytes": 1184286
+  },
+  "source/Docs/validation/captured-scalar-ingress-2026-10-08/semantics.json": {
+    "sha256": "bcd17460a49dbbe244997638b056dc5dfcf544f2bc2b59c3f18ce9edb2569336",
+    "bytes": 11610
+  },
+  "source/Docs/validation/coherent-state-graph-capture-2026-10-09/attempt01/result.json": {
+    "sha256": "a35a1213a5b4cccf9487d257069848550c5d3ff8b2060b9e1004f98e5aa7d448",
+    "bytes": 432304
+  },
+  "source/Docs/validation/captured-geometry-training-2026-10-09/attempt01/worker/final_virtual_scene.json": {
+    "sha256": "675dec91b5d07a2784de6b9ad1603b145e8dc546a24b76c4ce1ebf093cb5239f",
+    "bytes": 2680956
+  },
+  "source/Docs/validation/captured-geometry-training-2026-10-09/attempt01/worker/result.json": {
+    "sha256": "cd15f461839d9e7863079e60cedbfcbad040f77a18b6f1cec4d7594d03b3df3a",
+    "bytes": 44267
+  },
+  "source/Docs/validation/blender-lab-capture-2026-10-08/resume01/iris/capture.json": {
+    "sha256": "458ca5e3e09bc25e5f7174f38c87e1cbd2049f7534ef0e73d9ea03d266454d93",
+    "bytes": 4532023
+  },
+  "source/Blender/blender_lab/affine_geometry_network_v1.py": {
+    "sha256": "3f163e622e645a706b903ab3f714f3a695605463d2de51b9cd7218b02023696c",
+    "bytes": 9264
+  },
+  "source/Blender/blender_lab/coherent_contract_v1.py": {
+    "sha256": "4339ff387837932c71ffdd0a7107146fd378878a7ad38d5a8b773b56c71316f2",
+    "bytes": 10178
+  },
+  "source/Blender/blender_lab/coherent_state_graph_v1.py": {
+    "sha256": "d67c389be8a48d9aebe563fd3333af8c962c28d5f5942ea092bf448af403e439",
+    "bytes": 8421
+  },
+  "source/Blender/blender_lab/scalar_scene_ingress_v1.py": {
+    "sha256": "a2f53daa2f34ea71585bc9e9c3d742a02e66651cff2dee450dba09274b30d3d3",
+    "bytes": 10227
+  },
+  "source/Blender/blender_lab/scene_capture_v1.py": {
+    "sha256": "fe676b61a9e743277d69b54890688555a604f659c7f23ee223703b907ad8a2d0",
+    "bytes": 13990
+  },
+  "source/Blender/demo_lattice_iris/iris.csv": {
+    "sha256": "9cc1c345c71bcc9b486b74cbf6063fa66f4bb5e0f603a4b3c3471ec2e5e8e355",
+    "bytes": 3858
+  },
+  "source/Blender/demo_lattice_iris/renders/neuro3d_iris_lattice.blend": {
+    "sha256": "5884c6fa4cc8cee22dd99e2f4aeaf8f0e44ae44dba85d4f2447868d3d4d58c22",
+    "bytes": 7922881
+  },
+  "source/Blender/benchmarks/capacity_audit/exact_object_index_v1.py": {
+    "sha256": "ce7313f7702b46ed987943a2808957e0da4fb313a09e54a7f77a9c1b2b5126d2",
+    "bytes": 3618
+  },
+  "source/Blender/benchmarks/capacity_audit/robust_multipath_v1.py": {
+    "sha256": "26dcbe7bb61dbf98430cd481292970d5631e79aec9fc9794ba672611f559d4d8",
+    "bytes": 16867
+  }
+}

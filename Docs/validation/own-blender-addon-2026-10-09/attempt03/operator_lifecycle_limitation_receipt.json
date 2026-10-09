@@ -1,0 +1,11 @@
+{
+  "scope": "Factual operator receipt, not raw stdout",
+  "all_nine_frozen_native_controls_passed": true,
+  "metric": 1,
+  "shutdown_log_contains_double_unregister_RuntimeError": true,
+  "shutdown_issue_affects_declared_numeric_or_training_result": false,
+  "shutdown_lifecycle_closed": false,
+  "next_action": "Separate versioned package idempotent registration/unregistration and short actual lifecycle audit; preserve original metric and raw log",
+  "training_job_relative": "worker/jobs/optic-neuro-326edc59834b425d92ea2a99f43faa61",
+  "inference_job_relative": "worker/jobs/optic-neuro-3d446b08c6d243e0847e9bbbb47b3dcd"
+}

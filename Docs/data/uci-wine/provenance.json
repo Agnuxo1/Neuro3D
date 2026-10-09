@@ -1,0 +1,28 @@
+{
+  "schema": "optic_neuro_blender.dataset_provenance.v1",
+  "retrieved_utc": "2026-10-09T03:38:26.576356+00:00",
+  "dataset": "Wine",
+  "creators": [
+    "Stefan Aeberhard",
+    "M. Forina"
+  ],
+  "citation": "Aeberhard, S. & Forina, M. (1992). Wine [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5PC7J.",
+  "primary_metadata": "https://archive.ics.uci.edu/dataset/109/wine",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "data_modified": false,
+  "files": [
+    {
+      "file": "wine.data",
+      "url": "https://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data",
+      "sha256": "6be6b1203f3d51df0b553a70e57b8a723cd405683958204f96d23d7cd6aea659",
+      "bytes": 10782
+    },
+    {
+      "file": "wine.names",
+      "url": "https://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.names",
+      "sha256": "f1b84f2ef845e0bdebf13e14fa7a213e56de4f1baa40c5974dbd1ee51c5ae710",
+      "bytes": 3036
+    }
+  ]
+}

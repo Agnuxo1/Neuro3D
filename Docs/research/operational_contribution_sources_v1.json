@@ -1,0 +1,52 @@
+{
+  "schema": "optic_neuro_blender.operational_sources.v1",
+  "date": "2026-10-08",
+  "inspection": "Directed primary method and limitation passages, not full code audit or execution",
+  "sources": [
+    {
+      "name": "optibench-readme.md",
+      "url": "https://raw.githubusercontent.com/thepacket/optibench/bceb97b640bc4cd70780f9a3fcc8dcd2c3fcd5c7/README.md",
+      "retrieved_at": "2026-10-08T21:40:08.101425+00:00",
+      "http_status": 200,
+      "resolved_url": "https://raw.githubusercontent.com/thepacket/optibench/bceb97b640bc4cd70780f9a3fcc8dcd2c3fcd5c7/README.md",
+      "sha256": "b46098045d390dbf0f4f8da3ada760eb5dd4bba6885d537804768687fbd02fcb",
+      "bytes": 76850
+    },
+    {
+      "name": "optibench-validation.md",
+      "url": "https://raw.githubusercontent.com/thepacket/optibench/bceb97b640bc4cd70780f9a3fcc8dcd2c3fcd5c7/docs/validation.md",
+      "retrieved_at": "2026-10-08T21:40:08.445284+00:00",
+      "error_type": "HTTPError"
+    },
+    {
+      "name": "pbrt-rounding.html",
+      "url": "https://pbr-book.org/4ed/Shapes/Managing_Rounding_Error",
+      "retrieved_at": "2026-10-08T21:40:08.677701+00:00",
+      "http_status": 200,
+      "resolved_url": "https://pbr-book.org/4ed/Shapes/Managing_Rounding_Error",
+      "sha256": "d4ff5033dfc47d3e236394040dea7c9c81071cdcda557aff94d2b9669dc4fa5e",
+      "bytes": 1480200
+    },
+    {
+      "name": "sionna-concepts.html",
+      "url": "https://nvlabs.github.io/sionna/rt/tech-report/S2.html",
+      "retrieved_at": "2026-10-08T21:40:08.833989+00:00",
+      "http_status": 200,
+      "resolved_url": "https://nvlabs.github.io/sionna/rt/tech-report/S2.html",
+      "sha256": "912a07bf517f6e4bc8d98e46fbde5509cd83950b800656d0e61837dcf5eab014",
+      "bytes": 43207
+    },
+    {
+      "name": "bos-scope.md",
+      "url": "https://raw.githubusercontent.com/emircbngl/blender-optics-simulator/2b488e2e99dff4f56d67f57f9674bd00f812dda1/docs/OPTICS_SCOPE.md",
+      "retrieved_at": "2026-10-08T21:40:09.047675+00:00",
+      "http_status": 200,
+      "resolved_url": "https://raw.githubusercontent.com/emircbngl/blender-optics-simulator/2b488e2e99dff4f56d67f57f9674bd00f812dda1/docs/OPTICS_SCOPE.md",
+      "sha256": "23315a235400986a4a4c597062a4882c96195b765611fd78780ed5c167774caf",
+      "bytes": 8679
+    }
+  ],
+  "optibench_commit": "bceb97b640bc4cd70780f9a3fcc8dcd2c3fcd5c7",
+  "upstream_executed": false,
+  "originality_established": false
+}

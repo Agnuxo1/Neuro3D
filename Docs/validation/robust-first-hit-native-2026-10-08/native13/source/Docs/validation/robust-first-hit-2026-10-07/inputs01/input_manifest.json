@@ -1,0 +1,515 @@
+{
+  "schema": "neuro3d.robust_first_hit.native_job.v1",
+  "expected_backend": "OPENGL",
+  "expected_renderer_contains": "RTX 3090",
+  "limits": {
+    "max_triangles": 64,
+    "max_dispatches": 20
+  },
+  "cases": [
+    {
+      "case_id": "k3_real",
+      "input_class": "real_reopened_baseline",
+      "packet_path": "Docs/validation/scene-hilo-native-2026-10-06/inputs01/k3_baseline.packet.json",
+      "packet_sha256": "5c1da53154bebdcc0fb2953777c06f19c5c20b3b9277ad7d8eecffa61c03806f",
+      "queries": [
+        {
+          "source_index": 0,
+          "previous_primitive": null,
+          "departure_event": null,
+          "expected": {
+            "status": "SELECT",
+            "status_code": 1,
+            "selected_primitive": 2,
+            "selected_object": 1,
+            "tie_primitive_ids": [
+              2,
+              3
+            ],
+            "equivalent_surface_tie": true,
+            "excluded_previous_contacts": 0,
+            "t": [
+              22713710134237715329666368996500141698551292521478689383796568724394977753543685103943470334805111423773828800195818060422956300894208,
+              22713710134237715329666368996500141698551292521478689383796568724394977753543685103943470334805111423773828800195818060422956300894208
+            ]
+          }
+        },
+        {
+          "source_index": 1,
+          "previous_primitive": null,
+          "departure_event": null,
+          "expected": {
+            "status": "SELECT",
+            "status_code": 1,
+            "selected_primitive": 2,
+            "selected_object": 1,
+            "tie_primitive_ids": [
+              2,
+              3
+            ],
+            "equivalent_surface_tie": true,
+            "excluded_previous_contacts": 0,
+            "t": [
+              22713710134237715329666368996500141698551292521478689383796568724394977753543685103943470334805111423773828800195818060422956300894208,
+              22713710134237715329666368996500141698551292521478689383796568724394977753543685103943470334805111423773828800195818060422956300894208
+            ]
+          }
+        },
+        {
+          "source_index": 2,
+          "previous_primitive": null,
+          "departure_event": null,
+          "expected": {
+            "status": "SELECT",
+            "status_code": 1,
+            "selected_primitive": 16,
+            "selected_object": 8,
+            "tie_primitive_ids": [
+              16,
+              17
+            ],
+            "equivalent_surface_tie": true,
+            "excluded_previous_contacts": 0,
+            "t": [
+              22713710134237715329666368996500141698551292521478689383796568724394977753543685103943470334805111423773828800195818060422956300894208,
+              22713710134237715329666368996500141698551292521478689383796568724394977753543685103943470334805111423773828800195818060422956300894208
+            ]
+          }
+        },
+        {
+          "source_index": 3,
+          "previous_primitive": null,
+          "departure_event": null,
+          "expected": {
+            "status": "SELECT",
+            "status_code": 1,
+            "selected_primitive": 30,
+            "selected_object": 15,
+            "tie_primitive_ids": [
+              30,
+              31
+            ],
+            "equivalent_surface_tie": true,
+            "excluded_previous_contacts": 0,
+            "t": [
+              22713710134237715329666368996500141698551292521478689383796568724394977753543685103943470334805111423773828800195818060422956300894208,
+              22713710134237715329666368996500141698551292521478689383796568724394977753543685103943470334805111423773828800195818060422956300894208
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "k4_real",
+      "input_class": "real_reopened_baseline",
+      "packet_path": "Docs/validation/scene-hilo-native-2026-10-06/inputs01/k4_baseline.packet.json",
+      "packet_sha256": "a284cfe711991327f234f122821b64e3ec77f6b8fda35bf18b53403b3ae9c55c",
+      "queries": [
+        {
+          "source_index": 0,
+          "previous_primitive": null,
+          "departure_event": null,
+          "expected": {
+            "status": "SELECT",
+            "status_code": 1,
+            "selected_primitive": 2,
+            "selected_object": 1,
+            "tie_primitive_ids": [
+              2,
+              3
+            ],
+            "equivalent_surface_tie": true,
+            "excluded_previous_contacts": 0,
+            "t": [
+              22713710134237715329666368996500141698551292521478689383796568724394977753543685103943470334805111423773828800195818060422956300894208,
+              22713710134237715329666368996500141698551292521478689383796568724394977753543685103943470334805111423773828800195818060422956300894208
+            ]
+          }
+        },
+        {
+          "source_index": 1,
+          "previous_primitive": null,
+          "departure_event": null,
+          "expected": {
+            "status": "SELECT",
+            "status_code": 1,
+            "selected_primitive": 2,
+            "selected_object": 1,
+            "tie_primitive_ids": [
+              2,
+              3
+            ],
+            "equivalent_surface_tie": true,
+            "excluded_previous_contacts": 0,
+            "t": [
+              22713710134237715329666368996500141698551292521478689383796568724394977753543685103943470334805111423773828800195818060422956300894208,
+              22713710134237715329666368996500141698551292521478689383796568724394977753543685103943470334805111423773828800195818060422956300894208
+            ]
+          }
+        },
+        {
+          "source_index": 2,
+          "previous_primitive": null,
+          "departure_event": null,
+          "expected": {
+            "status": "SELECT",
+            "status_code": 1,
+            "selected_primitive": 16,
+            "selected_object": 8,
+            "tie_primitive_ids": [
+              16,
+              17
+            ],
+            "equivalent_surface_tie": true,
+            "excluded_previous_contacts": 0,
+            "t": [
+              22713710134237715329666368996500141698551292521478689383796568724394977753543685103943470334805111423773828800195818060422956300894208,
+              22713710134237715329666368996500141698551292521478689383796568724394977753543685103943470334805111423773828800195818060422956300894208
+            ]
+          }
+        },
+        {
+          "source_index": 3,
+          "previous_primitive": null,
+          "departure_event": null,
+          "expected": {
+            "status": "SELECT",
+            "status_code": 1,
+            "selected_primitive": 30,
+            "selected_object": 15,
+            "tie_primitive_ids": [
+              30,
+              31
+            ],
+            "equivalent_surface_tie": true,
+            "excluded_previous_contacts": 0,
+            "t": [
+              22713710134237715329666368996500141698551292521478689383796568724394977753543685103943470334805111423773828800195818060422956300894208,
+              22713710134237715329666368996500141698551292521478689383796568724394977753543685103943470334805111423773828800195818060422956300894208
+            ]
+          }
+        },
+        {
+          "source_index": 4,
+          "previous_primitive": null,
+          "departure_event": null,
+          "expected": {
+            "status": "SELECT",
+            "status_code": 1,
+            "selected_primitive": 44,
+            "selected_object": 22,
+            "tie_primitive_ids": [
+              44,
+              45
+            ],
+            "equivalent_surface_tie": true,
+            "excluded_previous_contacts": 0,
+            "t": [
+              22713710134237715329666368996500141698551292521478689383796568724394977753543685103943470334805111423773828800195818060422956300894208,
+              22713710134237715329666368996500141698551292521478689383796568724394977753543685103943470334805111423773828800195818060422956300894208
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "thin_gap_2m53",
+      "input_class": "synthetic_adversarial",
+      "packet_path": "Docs/validation/robust-first-hit-2026-10-07/inputs01/thin_gap_2m53.packet.json",
+      "packet_sha256": "23e73deda7611f15fc5eed21e07f2a35b71f12ffe8bf244db4fc84f09f606459",
+      "queries": [
+        {
+          "source_index": 0,
+          "previous_primitive": null,
+          "departure_event": null,
+          "expected": {
+            "status": "SELECT",
+            "status_code": 1,
+            "selected_primitive": 1,
+            "selected_object": 1,
+            "tie_primitive_ids": [
+              1
+            ],
+            "equivalent_surface_tie": false,
+            "excluded_previous_contacts": 0,
+            "t": [
+              5814709794364854478832120941376888860849337884745575899825473386139236097242344251447622901499809867074761852815671564492483819842043904,
+              5814709794364855124394590463104036274829130885498544482251921593445114304907183386609528405710108524486100172850129423468276813028917248
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "thin_gap_2m54",
+      "input_class": "synthetic_adversarial",
+      "packet_path": "Docs/validation/robust-first-hit-2026-10-07/inputs01/thin_gap_2m54.packet.json",
+      "packet_sha256": "c5bf3b959ccf1c4795574c53d6e5175b450e593757e8b866656c6098970e52ac",
+      "queries": [
+        {
+          "source_index": 0,
+          "previous_primitive": null,
+          "departure_event": null,
+          "expected": {
+            "status": "SELECT",
+            "status_code": 1,
+            "selected_primitive": 1,
+            "selected_object": 1,
+            "tie_primitive_ids": [
+              1
+            ],
+            "equivalent_surface_tie": false,
+            "excluded_previous_contacts": 0,
+            "t": [
+              5814709794364854801613355702240462567839234385122060191038697489792175201074763819028575653604959195780431012832900493980380316435480576,
+              5814709794364855124394590463104036274829130885498544482251921593445114304907183386609528405710108524486100172850129423468276813028917248
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "thin_gap_2m60",
+      "input_class": "synthetic_adversarial",
+      "packet_path": "Docs/validation/robust-first-hit-2026-10-07/inputs01/thin_gap_2m60.packet.json",
+      "packet_sha256": "55662a2394511779fa0347a5834890955f28e950deae4987cea9a1ec80cee6a0",
+      "queries": [
+        {
+          "source_index": 0,
+          "previous_primitive": null,
+          "departure_event": null,
+          "expected": {
+            "status": "SELECT",
+            "status_code": 1,
+            "selected_primitive": 1,
+            "selected_object": 1,
+            "tie_primitive_ids": [
+              1
+            ],
+            "equivalent_surface_tie": false,
+            "excluded_previous_contacts": 0,
+            "t": [
+              5814709794364855119351133669965542935657413752680161915201714966825537131409801830866076018958465566225074092224860221445028430269644800,
+              5814709794364855124394590463104036274829130885498544482251921593445114304907183386609528405710108524486100172850129423468276813028917248
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "true_coincident_objects",
+      "input_class": "synthetic_adversarial",
+      "packet_path": "Docs/validation/robust-first-hit-2026-10-07/inputs01/true_coincident_objects.packet.json",
+      "packet_sha256": "75052ed93ec98936721f58a699fdf18ad45a1acf82d8d38faebd44374a0c724f",
+      "queries": [
+        {
+          "source_index": 0,
+          "previous_primitive": null,
+          "departure_event": null,
+          "expected": {
+            "status": "TRUE_TIE",
+            "status_code": 3,
+            "selected_primitive": 0,
+            "selected_object": 0,
+            "tie_primitive_ids": [
+              0,
+              1
+            ],
+            "equivalent_surface_tie": false,
+            "excluded_previous_contacts": 0,
+            "t": [
+              5814709794364855124394590463104036274829130885498544482251921593445114304907183386609528405710108524486100172850129423468276813028917248,
+              5814709794364855124394590463104036274829130885498544482251921593445114304907183386609528405710108524486100172850129423468276813028917248
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "previous_exact_contact_then_2m60_gap",
+      "input_class": "synthetic_adversarial",
+      "packet_path": "Docs/validation/robust-first-hit-2026-10-07/inputs01/previous_exact_contact_then_2m60_gap.packet.json",
+      "packet_sha256": "4fc9f92527067cf12d9dc58c078f40550192bfa033d7026ea4e49db32678ce93",
+      "queries": [
+        {
+          "source_index": 0,
+          "previous_primitive": 1,
+          "departure_event": "mirror",
+          "expected": {
+            "status": "SELECT",
+            "status_code": 1,
+            "selected_primitive": 0,
+            "selected_object": 0,
+            "tie_primitive_ids": [
+              0
+            ],
+            "equivalent_surface_tie": false,
+            "excluded_previous_contacts": 1,
+            "t": [
+              5043456793138493339171717132818382567050206626619577173497381555743452386751642958261026080625269202023248382759272448,
+              5814709794364855124394590463104036274829130885498544482251921593445114304907183386609528405710108524486100172850129423468276813028917248
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "legitimate_later_return_same_primitive",
+      "input_class": "synthetic_adversarial",
+      "packet_path": "Docs/validation/robust-first-hit-2026-10-07/inputs01/legitimate_later_return_same_primitive.packet.json",
+      "packet_sha256": "2caf1074556accac31e24ecc1cf9bff09d3035c61202a28ec6c710e968f503b8",
+      "queries": [
+        {
+          "source_index": 0,
+          "previous_primitive": 0,
+          "departure_event": "r",
+          "expected": {
+            "status": "SELECT",
+            "status_code": 1,
+            "selected_primitive": 0,
+            "selected_object": 0,
+            "tie_primitive_ids": [
+              0
+            ],
+            "equivalent_surface_tie": false,
+            "excluded_previous_contacts": 0,
+            "t": [
+              5814709794364855124394590463104036274829130885498544482251921593445114304907183386609528405710108524486100172850129423468276813028917248,
+              5814709794364855124394590463104036274829130885498544482251921593445114304907183386609528405710108524486100172850129423468276813028917248
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "outer_boundary",
+      "input_class": "synthetic_adversarial",
+      "packet_path": "Docs/validation/robust-first-hit-2026-10-07/inputs01/outer_boundary.packet.json",
+      "packet_sha256": "8ca96a26a5677c476bdb3b54ad85c4f7e666104b221263efdd57c6b1a3a943a8",
+      "queries": [
+        {
+          "source_index": 0,
+          "previous_primitive": null,
+          "departure_event": null,
+          "expected": {
+            "status": "BOUNDARY",
+            "status_code": 4,
+            "selected_primitive": 0,
+            "selected_object": 0,
+            "tie_primitive_ids": [
+              0
+            ],
+            "equivalent_surface_tie": false,
+            "excluded_previous_contacts": 0,
+            "t": [
+              1453677448591213781098647615776009068707282721374636120562980398361278576226795846652382101427527131121525043212532355867069203257229312,
+              1453677448591213781098647615776009068707282721374636120562980398361278576226795846652382101427527131121525043212532355867069203257229312
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "coplanar",
+      "input_class": "synthetic_adversarial",
+      "packet_path": "Docs/validation/robust-first-hit-2026-10-07/inputs01/coplanar.packet.json",
+      "packet_sha256": "a7d21d1fe92c5919b4ecbc8b199e17f100c6a40b355a11da7afa46b3c2c97035",
+      "queries": [
+        {
+          "source_index": 0,
+          "previous_primitive": null,
+          "departure_event": null,
+          "expected": {
+            "status": "COPLANAR",
+            "status_code": 6,
+            "selected_primitive": null,
+            "selected_object": null,
+            "tie_primitive_ids": [],
+            "equivalent_surface_tie": false,
+            "excluded_previous_contacts": 0,
+            "t": null
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "degenerate",
+      "input_class": "synthetic_adversarial",
+      "packet_path": "Docs/validation/robust-first-hit-2026-10-07/inputs01/degenerate.packet.json",
+      "packet_sha256": "86f3ed7c3ae13b40c790642cb5150ff133258fbe48c34d57f5654c6e29493df8",
+      "queries": [
+        {
+          "source_index": 0,
+          "previous_primitive": null,
+          "departure_event": null,
+          "expected": {
+            "status": "INVALID_GEOMETRY",
+            "status_code": 7,
+            "selected_primitive": null,
+            "selected_object": null,
+            "tie_primitive_ids": [],
+            "equivalent_surface_tie": false,
+            "excluded_previous_contacts": 0,
+            "t": null
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "near_parallel_2m100",
+      "input_class": "synthetic_adversarial",
+      "packet_path": "Docs/validation/robust-first-hit-2026-10-07/inputs01/near_parallel_2m100.packet.json",
+      "packet_sha256": "ab6d78052a0ee2f2a81c2bec1327355849c85c6e1b24fd6f89e7ad0c25d2fc7c",
+      "queries": [
+        {
+          "source_index": 0,
+          "previous_primitive": null,
+          "departure_event": null,
+          "expected": {
+            "status": "SELECT",
+            "status_code": 1,
+            "selected_primitive": 0,
+            "selected_object": 0,
+            "tie_primitive_ids": [
+              0
+            ],
+            "equivalent_surface_tie": false,
+            "excluded_previous_contacts": 0,
+            "t": [
+              5814709794364855124394590463104036274829130885498544482251921593445114304907183386609528405710108524486100172850129423468276813028917248,
+              4586997231980143023221641790604173881593129978336562247475177678773845752176969616140037106220251373109248
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "case_id": "extreme_coordinate",
+      "input_class": "synthetic_adversarial",
+      "packet_path": "Docs/validation/robust-first-hit-2026-10-07/inputs01/extreme_coordinate.packet.json",
+      "packet_sha256": "d802827410e0199608f26c06ef2fd978e06e20219667b43dec92a88a31c9c586",
+      "queries": [
+        {
+          "source_index": 0,
+          "previous_primitive": null,
+          "departure_event": null,
+          "expected": {
+            "status": "SELECT",
+            "status_code": 1,
+            "selected_primitive": 0,
+            "selected_object": 0,
+            "tie_primitive_ids": [
+              0
+            ],
+            "equivalent_surface_tie": false,
+            "excluded_previous_contacts": 0,
+            "t": [
+              5814709794364855124394590463104036274829130885498544482251921593445114304907183386609528405710108524486100172850129423468276813028917248,
+              5814709794364855124394590463104036274829130885498544482251921593445114304907183386609528405710108524486100172850129423468276813028917248
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

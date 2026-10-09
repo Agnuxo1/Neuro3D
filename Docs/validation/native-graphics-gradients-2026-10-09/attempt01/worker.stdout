@@ -1,0 +1,24 @@
+addon_utils.disable: optic_neuro_blender not loaded
+Modules Installed (optic_neuro_blender) from 'D:\\PROJECTS\\Neuro3D-Scientific-20261008\\Blender\\releases\\optic-neuro-blender-0.1.2.zip' into 'D:\\PROJECTS\\.cognition\\neuro3d-sequential-20261008\\native-graphics-gradient-attempt01-20261009\\isolated_scripts\\addons'
+Info: Modules Installed (optic_neuro_blender) from 'D:\\PROJECTS\\Neuro3D-Scientific-20261008\\Blender\\releases\\optic-neuro-blender-0.1.2.zip' into 'D:\\PROJECTS\\.cognition\\neuro3d-sequential-20261008\\native-graphics-gradient-attempt01-20261009\\isolated_scripts\\addons'
+{"native_parameter": 0, "seconds": 0.3573638000016217}
+{"native_parameter": 1, "seconds": 0.42793620000156807}
+{"native_parameter": 2, "seconds": 0.5202654000022449}
+{"native_parameter": 3, "seconds": 0.5903016000011121}
+{"native_parameter": 4, "seconds": 0.6815229000058025}
+{"native_parameter": 5, "seconds": 0.760689499998989}
+{"native_parameter": 6, "seconds": 0.8143621999988682}
+{"native_parameter": 7, "seconds": 0.927115500002401}
+{"native_parameter": 8, "seconds": 0.9863093000021763}
+{"native_parameter": 9, "seconds": 1.0522251000002143}
+{"native_parameter": 10, "seconds": 1.1530626000021584}
+{"native_parameter": 11, "seconds": 1.229955599999812}
+{"native_parameter": 12, "seconds": 1.2353587000034167}
+{"native_parameter": 13, "seconds": 1.2895048999998835}
+{"native_parameter": 14, "seconds": 1.3849461999998312}
+{"native_parameter": 15, "seconds": 1.4468000999986543}
+{"status": "VALID_NATIVE_GRAPHICS_GRADIENT_AUDIT", "primary_metric": 1, "seconds": 334.14330789999804}
+Read blend: "D:\PROJECTS\Neuro3D-Scientific-20261008\Docs\validation\own-blender-addon-2026-10-09\attempt03\worker\jobs\optic-neuro-326edc59834b425d92ea2a99f43faa61\trained_geometry.blend"
+Saved session recovery to "D:\PROJECTS\.cognition\neuro3d-sequential-20261008\native-graphics-gradient-attempt01-20261009\temporary\quit.blend"
+
+Blender quit

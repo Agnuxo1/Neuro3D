@@ -1,0 +1,1831 @@
+{
+  "schema": "optic_neuro_blender.native_graphics_compact_stage_audit.v1",
+  "preexisting_errors_before_owned_field_kernel": [],
+  "stages": [],
+  "same_context_verified": true,
+  "checked_stage_count": 1030023,
+  "per_stage_counts": {
+    "owned_synchronous_debug_callback_install": 1,
+    "object_UBO_creation": 1,
+    "shader_creation": 1,
+    "captured_triangle_VBO_creation": 1,
+    "deferred_FP64_optical_shader_creation": 1,
+    "deferred_fullscreen_triangle_creation": 1,
+    "actual_native_geometry_VBO_and_object_UBO_update": 62,
+    "deferred_actual_geometry_cache_invalidation": 62,
+    "parameter_displacement_object_UBO_creation": 977,
+    "ray_UBO_creation": 73494,
+    "ray_textures_and_framebuffer_creation": 73494,
+    "framebuffer_bind": 73494,
+    "float_geometry_texture_clear": 73494,
+    "depth_only_clear": 73494,
+    "graphics_draw_state": 73494,
+    "field_shader_bind": 73494,
+    "sampler_and_UBO_binding": 73494,
+    "scalar_uniform_binding": 73494,
+    "instanced_triangle_draw": 4100,
+    "exact_integer_and_float_readback": 73494,
+    "derivative_echo_depth_reset": 73494,
+    "derivative_echo_triangle_draw": 4100,
+    "derivative_echo_exact_readback": 73494,
+    "deferred_fullscreen_optical_draw": 69394,
+    "deferred_fullscreen_derivative_echo_draw": 69394
+  },
+  "ordered_stage_stream_sha256": "d15696097f44b3e67cca7192ab5ce30d28e7fe671095491ecec93d1fc9f23ad3",
+  "owned_stage_errors": [],
+  "all_owned_stages_checked_synchronously": true,
+  "driver_messages": [
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 15 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 15 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 17 (bound to GL_ARRAY_BUFFER_ARB, usage hint is GL_STATIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 15 (bound to GL_UNIFORM_BUFFER (1), and GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 15 (bound to GL_UNIFORM_BUFFER (1), and GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33360,
+      "id": 131218,
+      "severity": 37191,
+      "message": "Program/shader state performance warning: Vertex shader in program 1 is being recompiled based on GL state."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 18 (bound to GL_ARRAY_BUFFER_ARB, usage hint is GL_STATIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33360,
+      "id": 131218,
+      "severity": 37191,
+      "message": "Program/shader state performance warning: Vertex shader in program 13 is being recompiled based on GL state."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER (0), usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    },
+    {
+      "source": 33350,
+      "type": 33361,
+      "id": 131185,
+      "severity": 33387,
+      "message": "Buffer detailed info: Buffer object 16 (bound to GL_UNIFORM_BUFFER_EXT, usage hint is GL_DYNAMIC_DRAW) will use VIDEO memory as the source for buffer object operations."
+    }
+  ]
+}

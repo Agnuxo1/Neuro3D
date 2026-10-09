@@ -1,0 +1,14 @@
+{
+  "schema": "neuro3d.iris_lattice.cpu_admission_tests.v1",
+  "status": "PASS",
+  "tests": 9,
+  "errors": 0,
+  "failures": 0,
+  "native_gpu_execution_verified": false,
+  "scope": "CPU synthetic admission/rejection tests; zero GPU dispatches",
+  "source_sha256": {
+    "Blender/tests/test_iris_native_admission_v1.py": "c4e481fb7760acc6dbfeed2ac739050c6ccbb4500d1c07dc86d94b0f2e8cb834",
+    "Blender/benchmarks/capacity_audit/iris_native_packet_v1.py": "64ad5e173398a3da2c382860174e7025b3bd0052b353b4d5e0e7a1308cacc180",
+    "Blender/benchmarks/capacity_audit/iris_native_gpu_guard_v1.py": "8b22d8120012d3c9f2aa1aaa49cf45a7d20f139f29ba662087ac8b3ee8bdfbc3"
+  }
+}

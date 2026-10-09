@@ -1,0 +1,86 @@
+{
+  "schema": "optic_neuro_blender.bounded_primary_graphics_prior_review.v1",
+  "recorded_utc": "2026-10-09T08:18:54.941824+00:00",
+  "status": "NOVELTY_NOT_ESTABLISHED",
+  "historical_catalog_counts_unmodified": {
+    "unique": 175,
+    "completed_extractions": 30,
+    "pending_requested_extractions": 106
+  },
+  "scope": "Targeted primary website/abstract and2023HTMLmethod review. Not literature completeness or benchmark reproduction. Raw retrieved pages private; own summaries and metadata only published. No external code integrated.",
+  "sources": [
+    {
+      "identity": "purcell2002",
+      "requested_url": "https://graphics.stanford.edu/papers/rtongfx/",
+      "final_url": "https://graphics.stanford.edu/papers/rtongfx/",
+      "http_status": 200,
+      "bytes": 2797,
+      "sha256": "8b683f5f1b1ff3cee13548c89937510dba4746f8ba9c568281d5511e0c31f7ab",
+      "raw_material_private": true,
+      "recorded_utc": "2026-10-09T08:18:54.387876+00:00"
+    },
+    {
+      "identity": "mauch2014",
+      "requested_url": "https://opg.optica.org/abstract.cfm?URI=IODC-2014-IW1A.4",
+      "final_url": "https://opg.optica.org/abstract.cfm?URI=IODC-2014-IW1A.4",
+      "http_status": 200,
+      "bytes": 95202,
+      "sha256": "f23d22f8dd0d137608df0cc845be2c0f40006e42684ad8c11f04f23643e42a53",
+      "raw_material_private": true,
+      "recorded_utc": "2026-10-09T08:18:54.939093+00:00"
+    },
+    {
+      "identity": "macrosim",
+      "requested_url": "https://www.ito.uni-stuttgart.de/en/research/group-3do/macrosim/",
+      "final_url": "https://www.ito.uni-stuttgart.de/en/research/group-3do/macrosim/",
+      "http_status": 200,
+      "bytes": 43924,
+      "sha256": "7d357ad981c46bd045fad7ac66881fe25a56ea597aca8d15ed6d233f03e23081",
+      "raw_material_private": true,
+      "recorded_utc": "2026-10-09T08:18:54.144763+00:00"
+    },
+    {
+      "identity": "keksel2023",
+      "requested_url": "https://arxiv.org/html/2308.04816v1",
+      "final_url": "https://arxiv.org/html/2308.04816v1",
+      "http_status": 200,
+      "bytes": 84163,
+      "sha256": "85a39f620942bd1996657978c4f97c1855f58b7f19cfab8737e739769c0332bb",
+      "raw_material_private": true,
+      "recorded_utc": "2026-10-09T08:18:54.053522+00:00"
+    },
+    {
+      "identity": "macrosim2013_crossref",
+      "requested_url": "https://api.crossref.org/works/10.1117/1.OE.52.5.053004",
+      "final_url": "https://api.crossref.org/works/10.1117/1.OE.52.5.053004",
+      "http_status": 200,
+      "bytes": 4100,
+      "sha256": "79d3c50c4e8c7ef9ede257e9d2d209bfe10bd6ab22037e3998c461068974672b",
+      "raw_material_private": true,
+      "recorded_utc": "2026-10-09T08:18:54.122410+00:00",
+      "verified_doi_metadata": {
+        "DOI": "10.1117/1.oe.52.5.053004",
+        "title": [
+          "Open-source graphics processing unit\u2013accelerated ray tracer for optical simulation"
+        ],
+        "publisher": "SPIE-Intl Soc Optical Eng",
+        "published": {
+          "date-parts": [
+            [
+              2013,
+              5,
+              9
+            ]
+          ]
+        },
+        "container-title": [
+          "Optical Engineering"
+        ],
+        "volume": "52",
+        "issue": "05",
+        "article-number": null,
+        "URL": "https://doi.org/10.1117/1.oe.52.5.053004"
+      }
+    }
+  ]
+}

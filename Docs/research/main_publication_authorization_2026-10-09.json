@@ -1,0 +1,13 @@
+{
+  "schema": "optic_neuro_blender.main_publication_authorization.v1",
+  "recorded_utc": "2026-10-09T09:26:36.589531+00:00",
+  "source": "Explicit human message in the current development conversation",
+  "authorization": "recuerda utilizar las tecnolog\u00edas de aceleraci\u00f3n gr\u00e1fica m\u00e1s avanzadas que se puedan aplicar a nuestro proyecto. Todos los resultados se deben publicar en el repositorio de Github en el main principal y a\u00f1adiendo Gif animados de gr\u00e1ficas, funcionamiento de la red neuronal, etc... de forma profesional dentro del readme.",
+  "publication_target": "main",
+  "prior_visibility_only_policy_superseded": true,
+  "preserve_history_and_other_work": true,
+  "previous_remote_main": "dafc539a0ff558b9f4b3046d29bb65629413210f",
+  "preserved_previous_main_readme_sha256": "8b6874e90985645316c5bda1e65e5f5e62b73d72fb860fc9f03a388549bde299",
+  "status": "AUTHORIZED_PREPARED_NOT_YET_PUSH_VERIFIED",
+  "scientific_completion_claim": false
+}

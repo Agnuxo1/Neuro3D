@@ -1,0 +1,29 @@
+{
+  "schema": "neuro3d.blender_lab.ingress_selector_software_controls.v1",
+  "status": "PASS",
+  "ingress_unit_tests": 13,
+  "surface_union_unit_tests": 8,
+  "historical_multipath_tests": 17,
+  "historical_suite_elapsed_seconds": 17.571,
+  "historical_suite_command": "python Blender/tests/test_robust_multipath_v1.py -v",
+  "historical_suite_result_source": "observed exec stdout/stderr; no new historical experiment ledger generated",
+  "harness_import_error_resolved": "module-mode invocation lacked fixtures on sys.path; script-mode is the existing runner convention",
+  "new_Iris_optical_forward_executed": false,
+  "new_Iris_training_executed": false,
+  "GPU_executed": false,
+  "source_sha256": {
+    "Blender/blender_lab/scalar_scene_ingress_v1.py": "a2f53daa2f34ea71585bc9e9c3d742a02e66651cff2dee450dba09274b30d3d3",
+    "Blender/blender_lab/scene_capture_v1.py": "fe676b61a9e743277d69b54890688555a604f659c7f23ee223703b907ad8a2d0",
+    "Blender/benchmarks/capacity_audit/robust_multipath_v1.py": "7339cdbedf2838607f132c806b22a3c79cb00f64531129efbf2914c957c9e1e0",
+    "Blender/tests/test_scalar_scene_ingress_v1.py": "1fa3331f7840d3d0c4008f2ce436d6d707064c164ed1cdd9413dc59bde1b14a7",
+    "Blender/tests/test_surface_union_interior_v1.py": "7752789d558a8b8f40e399a3fa67e691fbcf7f8d8a179391d8c98a1b1d3fbd71",
+    "Blender/tests/test_robust_multipath_v1.py": "7c88058d583285b79f810eb153af93ffe29dfc8a0287c0a73d3731578941b7bb",
+    "Blender/tests/exp005_chain_fixture.py": "42d871b0007dff877049ae8c72481fbcc92aa5a04056cbc6f4f1f8663fb867c3",
+    "Blender/tests/exp005_cascade_fixture.py": "c1954527ff4d3ec67a65c43547da10dbf7923d7225cdbe4ce705ced1d0099d2e",
+    "Blender/tests/exp005_escape_fixture.py": "35bf16ccf35d2db54aa0c65137f4bde43a4ddd6800f3a8d004a172f9f4283649",
+    "Tools/prepare_captured_scalar_scene_v1.py": "aeaecb787df1fe1ca27dbd6b7dacee85393d9853aa781fdd8b4f59df35d8c8d7",
+    "Tools/audit_captured_scalar_ingress_v1.py": "e87ae07d5e4f54643217a980ddf41e369817bbba799fe142a3db6dcf8d17946e",
+    "Tools/bind_network_capture_v1.py": "af3bdbc41636214f01c2078ce26bd271794fa763ccefecd2a006f1014d2f117b",
+    "Blender/benchmarks/capacity_audit/trace_exact_scene_v1.py": "add601f017eb42e1ca4e4a5349f5d6d24dc38e7f896f139f237c520cb492f2d5"
+  }
+}

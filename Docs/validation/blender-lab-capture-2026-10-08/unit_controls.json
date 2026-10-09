@@ -1,0 +1,15 @@
+{
+  "schema": "neuro3d.blender_lab.capture_unit_controls.v1",
+  "status": "PASS",
+  "tests": 11,
+  "failures": 0,
+  "errors": 0,
+  "optical_forward_executed": false,
+  "training_executed": false,
+  "gpu_executed": false,
+  "source_sha256": {
+    "Blender/blender_lab/scene_capture_v1.py": "fe676b61a9e743277d69b54890688555a604f659c7f23ee223703b907ad8a2d0",
+    "Blender/blender_lab/bos_adapter_v1.py": "83409838de0f7d71c623be729f0d4b8f754705f271161c2b429fbbd2ccf770e5",
+    "Blender/tests/test_blender_lab_capture_v1.py": "1378808a6b837edd1f8895805a1322c45d375846dbbc4f0ddfd03859caad82b2"
+  }
+}

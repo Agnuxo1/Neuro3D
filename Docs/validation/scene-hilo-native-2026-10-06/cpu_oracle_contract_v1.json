@@ -1,0 +1,203 @@
+{
+  "schema": "neuro3d.scene_hilo.cpu_oracle_contract.v1",
+  "status": "PASS",
+  "scope": "CPU validation of admission, independent Fraction oracle and parser rejection using generated reference words; NO native compilation/dispatch/readback",
+  "native_gpu_executed": false,
+  "generated_reference_readbacks_retained": false,
+  "created_at_utc": "2026-10-06T22:31:09.785065+00:00",
+  "input_manifest_sha256": "81daaf472db2e021fc6686976ab18dd75eac52cd65565a0d011689f215bc5dc1",
+  "cases": [
+    {
+      "case": "k3_baseline",
+      "mode": 0,
+      "rows": 444,
+      "exact_components": 1332,
+      "nonzero_expected_output_lows": 0,
+      "expected_naive_losses": 0,
+      "reference_rows_sha256": "1dbb842253182c54ce63b04d018d4c4f6af4cef04f3346226a21d3e5c3bcc9fd",
+      "input_wire_bytes": 15904,
+      "echo_physical_words": 4032,
+      "result_physical_words": 10688
+    },
+    {
+      "case": "k3_baseline",
+      "mode": 1,
+      "rows": 444,
+      "exact_components": 1332,
+      "nonzero_expected_output_lows": 0,
+      "expected_naive_losses": 0,
+      "reference_rows_sha256": "1dbb842253182c54ce63b04d018d4c4f6af4cef04f3346226a21d3e5c3bcc9fd",
+      "input_wire_bytes": 15904,
+      "echo_physical_words": 4032,
+      "result_physical_words": 10688
+    },
+    {
+      "case": "k4_baseline",
+      "mode": 0,
+      "rows": 701,
+      "exact_components": 2103,
+      "nonzero_expected_output_lows": 0,
+      "expected_naive_losses": 0,
+      "reference_rows_sha256": "21013b491b6f83ccb10e3eb922643f11a085876c9772110dcc5e697affec2cc0",
+      "input_wire_bytes": 20704,
+      "echo_physical_words": 5184,
+      "result_physical_words": 16896
+    },
+    {
+      "case": "k4_baseline",
+      "mode": 1,
+      "rows": 701,
+      "exact_components": 2103,
+      "nonzero_expected_output_lows": 0,
+      "expected_naive_losses": 0,
+      "reference_rows_sha256": "21013b491b6f83ccb10e3eb922643f11a085876c9772110dcc5e697affec2cc0",
+      "input_wire_bytes": 20704,
+      "echo_physical_words": 5184,
+      "result_physical_words": 16896
+    },
+    {
+      "case": "controlled_numeric",
+      "mode": 0,
+      "rows": 26,
+      "exact_components": 78,
+      "nonzero_expected_output_lows": 9,
+      "expected_naive_losses": 9,
+      "reference_rows_sha256": "5b6010a68b4d099f31bc7ab2a0ccea29f80201410a9432542aac109978389728",
+      "input_wire_bytes": 2464,
+      "echo_physical_words": 640,
+      "result_physical_words": 704
+    },
+    {
+      "case": "controlled_numeric",
+      "mode": 1,
+      "rows": 26,
+      "exact_components": 78,
+      "nonzero_expected_output_lows": 9,
+      "expected_naive_losses": 9,
+      "reference_rows_sha256": "e005d421441bc9cdc68090cf4c4d16345c4b0bb5472590ddd8f638ddb642a784",
+      "input_wire_bytes": 2464,
+      "echo_physical_words": 640,
+      "result_physical_words": 704
+    }
+  ],
+  "negative_checks": 18,
+  "rejections": [
+    {
+      "case": "k3_baseline",
+      "mode": 0,
+      "mutation": "numeric output word",
+      "rejected": "exact Fraction mismatch at row 0 axis 0"
+    },
+    {
+      "case": "k3_baseline",
+      "mode": 0,
+      "mutation": "dispatch nonce",
+      "rejected": "native result header, nonce, mode or completed status mismatch"
+    },
+    {
+      "case": "k3_baseline",
+      "mode": 0,
+      "mutation": "echo physical padding",
+      "rejected": "native integer echo is not bit-for-bit exact"
+    },
+    {
+      "case": "k3_baseline",
+      "mode": 1,
+      "mutation": "numeric output word",
+      "rejected": "exact Fraction mismatch at row 0 axis 0"
+    },
+    {
+      "case": "k3_baseline",
+      "mode": 1,
+      "mutation": "dispatch nonce",
+      "rejected": "native result header, nonce, mode or completed status mismatch"
+    },
+    {
+      "case": "k3_baseline",
+      "mode": 1,
+      "mutation": "echo physical padding",
+      "rejected": "native integer echo is not bit-for-bit exact"
+    },
+    {
+      "case": "k4_baseline",
+      "mode": 0,
+      "mutation": "numeric output word",
+      "rejected": "exact Fraction mismatch at row 0 axis 0"
+    },
+    {
+      "case": "k4_baseline",
+      "mode": 0,
+      "mutation": "dispatch nonce",
+      "rejected": "native result header, nonce, mode or completed status mismatch"
+    },
+    {
+      "case": "k4_baseline",
+      "mode": 0,
+      "mutation": "echo physical padding",
+      "rejected": "native integer echo is not bit-for-bit exact"
+    },
+    {
+      "case": "k4_baseline",
+      "mode": 1,
+      "mutation": "numeric output word",
+      "rejected": "exact Fraction mismatch at row 0 axis 0"
+    },
+    {
+      "case": "k4_baseline",
+      "mode": 1,
+      "mutation": "dispatch nonce",
+      "rejected": "native result header, nonce, mode or completed status mismatch"
+    },
+    {
+      "case": "k4_baseline",
+      "mode": 1,
+      "mutation": "echo physical padding",
+      "rejected": "native integer echo is not bit-for-bit exact"
+    },
+    {
+      "case": "controlled_numeric",
+      "mode": 0,
+      "mutation": "numeric output word",
+      "rejected": "exact Fraction mismatch at row 0 axis 0"
+    },
+    {
+      "case": "controlled_numeric",
+      "mode": 0,
+      "mutation": "dispatch nonce",
+      "rejected": "native result header, nonce, mode or completed status mismatch"
+    },
+    {
+      "case": "controlled_numeric",
+      "mode": 0,
+      "mutation": "echo physical padding",
+      "rejected": "native integer echo is not bit-for-bit exact"
+    },
+    {
+      "case": "controlled_numeric",
+      "mode": 1,
+      "mutation": "numeric output word",
+      "rejected": "exact Fraction mismatch at row 0 axis 0"
+    },
+    {
+      "case": "controlled_numeric",
+      "mode": 1,
+      "mutation": "dispatch nonce",
+      "rejected": "native result header, nonce, mode or completed status mismatch"
+    },
+    {
+      "case": "controlled_numeric",
+      "mode": 1,
+      "mutation": "echo physical padding",
+      "rejected": "native integer echo is not bit-for-bit exact"
+    }
+  ],
+  "input_UBO_overflow_rejected": "bounded native input bytes required",
+  "sha256": {
+    "Blender\\shaders\\scene_hilo_transport_v1.glsl": "cd9eead03d96aca64ef5e6c5bce8b71a97f0f994a0656ceb9363a3894e634d31",
+    "Blender\\benchmarks\\capacity_audit\\scene_hilo_gpu_v1.py": "539179dfdd72f8cdd6c3f171526dbbf70c81bc9b7a568691c12c0071246bee7a",
+    "Blender\\tests\\scene_hilo_native_runtime_v1.py": "b940ed9877c3b622e6fa1df8cd94f7e625e4c8fbe8e7f2bcd662619ae4dbc137",
+    "Blender\\benchmarks\\capacity_audit\\scene_hilo_transport_v1.py": "4bd86b411208c8a676c8a2c97926ce001ac781568913d5312906c591e02ca5ad",
+    "Blender\\benchmarks\\capacity_audit\\oblique_exact_scalar_hilo32_CPU_v1.py": "775e48b3507aa5b86bd96818f50e208e92d72e03b99d8862f816247418867a97"
+  },
+  "AST_passed": true
+}

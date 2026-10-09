@@ -1,0 +1,64 @@
+{
+ "task_id": "PHASE-SIGNED-CAPTURE-010-CLAUDE",
+ "status": "complete_static_review_no_execution",
+ "timestamp_utc": "2026-09-30T19:45:09+00:00",
+ "ack": {
+  "P0-FUSION-POLICY-009-CODEX": {
+   "path": "coordinacion/respuestas/P0-FUSION-POLICY-009-CODEX.json",
+   "sha256": "e9ce53b7e393e5c69002dd7ff540c2c0d5214edfbdfc46935b4943e4f90dff32"
+  },
+  "task_input": {
+   "path": "coordinacion/tareas/PHASE-SIGNED-CAPTURE-010-CLAUDE.md",
+   "sha256": "bf0ff39261ea612d43b8d53b746a901b623cfb6da6aa61e5fa776a953a53f9e5"
+  },
+  "P0-FUSION-POLICY-008-CLAUDE": "f3cbb04d7e8dfc4810ed61414e3718a113a627e5b90989ae5d9164f0e031380e",
+  "read": "control v4 sin fallos y quant x1e6 rechazado: reparacion del tamper de datos confirmada por Codex; no autentica ejecucion GPU ni demuestra uso runtime de dquant/cota acumulada (de acuerdo)"
+ },
+ "scope_inspected": {
+  "file": "Blender/benchmarks/capacity_audit/phase_signed_native_capture_v1.py",
+  "sha256": "be70ede6795913a5a820cce0519e46c8c5e94f4dbda54946536ac739a0099796",
+  "review_sha256_of_codex_report": "e909de4974b6220063c0c8a37f73c2817bb21aef54cbf872b8ffd9f887822752",
+  "method": "LECTURA estatica de las 87 lineas (manifest, validate_manifest, run_private_capture); no ejecute escritores, no repeti suites ni barridos, no cargue GPU",
+  "not_inspected": [
+   "cuerpos de dispatch_signed_probe, reject_admission y fresh_deadline (importados, fijados por SHA): sin certificar su comportamiento",
+   "compilacion GLSL, GPU, Blender"
+  ],
+  "not_a_gpu_certification": true
+ },
+ "no_counterexample_found_for": [
+  "sobrescritura de evidencia: folder.mkdir(exist_ok=False) (l.60) y open(\"x\") para manifest.json (l.61), result.json (l.68) y raw_uint32.json (l.73): ningun camino sobrescribe",
+  "GPU admitida por defecto: admit=reject_admission (l.54) por defecto; requiere adaptadores check/admit explicitos invocables (l.56); una admision explicita (admit=lambda: None) o un check vacio son decision del llamador, no un valor por defecto",
+  "readback perdido por fallo del decoder en el camino normal: retain(output) escribe raw_uint32.json con \"x\" y registra sha ANTES de que dispatch_signed_probe decodifique (l.72-78, suponiendo que dispatch llama a retain antes de decodificar; no leido), y el result.json se escribe en el finally (l.85-87) aunque haya excepcion"
+ ],
+ "concrete_weaknesses_by_reading": [
+  {
+   "id": "W1",
+   "lines": "68, 85-87",
+   "what": "result.json se abre con \"x\" al principio (l.68) pero SOLO se escribe en el finally (l.86). Si el proceso muere sin ejecutar el finally (timeout duro del supervisor, TerminateProcess, corte de energia), result.json queda de 0 bytes aunque raw_uint32.json ya exista (l.73-76): evidencia de readback sin sha registrado y SIN estado \"failed\" escrito; el valor por defecto status=failed (l.63) nunca llega a disco.",
+   "how_to_reproduce_without_running_writer": "lectura: no hay ninguna escritura de result.json entre l.68 y l.86; cualquier muerte entre ambas deja un archivo vacio",
+   "condition": "solo con terminacion dura del proceso (no con excepciones Python)"
+  },
+  {
+   "id": "W2",
+   "lines": "78, 86",
+   "what": "Si dispatch_signed_probe devuelve un resultado decodificado con un valor no finito sin lanzar, result[\"decoded\"] lo contiene y json.dumps(result, allow_nan=False) en el finally (l.86) lanza ValueError: result.json queda vacio (se abrio con \"x\" y nada se escribio), error_type/readback_retained/raw_sha256 no se registran y la excepcion de volcado sustituye a la original. raw_uint32.json puede seguir en disco.",
+   "not_verified": "depende de que el decoder pueda devolver no finitos sin abortar (dispatch_signed_probe no leido); por eso es hipotesis por lectura, no contraejemplo ejecutado"
+  },
+  {
+   "id": "W3",
+   "lines": "87",
+   "what": "solo flush(), sin os.fsync ni reemplazo atomico: un corte de energia tras el return puede perder result.json o raw_uint32.json aunque el proceso \"haya terminado bien\"."
+  }
+ ],
+ "proposed_contract_changes_not_implemented": [
+  "escribir result.json al principio con status=\"in_progress\" (manifest SHA, ruta, hora UTC) y fsync; finalizar con escritura a fichero temporal + os.replace (mismo directorio) y fsync, tanto en exito como en error",
+  "volcar el resultado con un sanitizador: valores no finitos -> cadenas tagged y status failed, nunca dejar el archivo vacio",
+  "el checker externo debe tratar result.json vacio, in_progress o sin raw_sha256 verificado como FALLO",
+  "registrar el sha de raw_uint32.json solo tras fsync del fichero"
+ ],
+ "not_done": [
+  "no he ejecutado ni importado el modulo de Codex; los W1-W3 son por lectura y no se certifican como reproducidos",
+  "no hay contraejemplo demostrado de perdida de readback tras fallo del decoder en el camino normal"
+ ],
+ "no_jev_aval": false
+}

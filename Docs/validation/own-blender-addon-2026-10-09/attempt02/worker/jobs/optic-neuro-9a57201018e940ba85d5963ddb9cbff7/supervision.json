@@ -1,0 +1,1 @@
+{"exit_code":3,"owned_pid":33260,"owned_process_terminated":true,"peak_rss_mib":252.48046875,"reason":"WORKER_FAILED","result_collected":false,"schema":"optic_neuro_blender.owned_job.v1","seconds":37.68699999999808,"state":"FAILED"}

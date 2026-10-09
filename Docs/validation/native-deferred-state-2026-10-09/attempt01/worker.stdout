@@ -1,0 +1,11 @@
+addon_utils.disable: optic_neuro_blender not loaded
+Modules Installed (optic_neuro_blender) from 'D:\\PROJECTS\\Neuro3D-Scientific-20261008\\Blender\\releases\\optic-neuro-blender-0.1.2.zip' into 'D:\\PROJECTS\\.cognition\\neuro3d-sequential-20261008\\native-deferred-state-attempt01-20261009\\isolated_scripts\\addons'
+Info: Modules Installed (optic_neuro_blender) from 'D:\\PROJECTS\\Neuro3D-Scientific-20261008\\Blender\\releases\\optic-neuro-blender-0.1.2.zip' into 'D:\\PROJECTS\\.cognition\\neuro3d-sequential-20261008\\native-deferred-state-attempt01-20261009\\isolated_scripts\\addons'
+{"native_graphics_step": 0, "train_loss": 6.255440538348442, "field_max_difference": 6.772587951110447e-14, "loss_gradient_max_difference": 8.640199666842818e-12}
+Info: Saved copy as "probe_geometry.blend"
+{"status": "VALID_NATIVE_DEFERRED_GRAPHICS_TRAINING_STATE_PILOT", "primary_metric": 1, "seconds": 266.9332910000012, "train_correct": 40, "test_correct": 10}
+Read blend: "D:\PROJECTS\Neuro3D-Scientific-20261008\Docs\validation\own-blender-addon-2026-10-09\attempt03\worker\jobs\optic-neuro-326edc59834b425d92ea2a99f43faa61\trained_geometry.blend"
+Read blend: "D:\PROJECTS\.cognition\neuro3d-sequential-20261008\native-deferred-state-attempt01-20261009\worker\probe_geometry.blend"
+Saved session recovery to "D:\PROJECTS\.cognition\neuro3d-sequential-20261008\native-deferred-state-attempt01-20261009\temporary\quit.blend"
+
+Blender quit

@@ -1,0 +1,10 @@
+{
+  "builds_equal": true,
+  "receipt": {
+    "archive_sha256": "46f16976f9401d8ff226b8136ccb08dc348967dece726fb3e2c9424238851341",
+    "archive_bytes": 639662,
+    "files": 40,
+    "manifest_sha256": "cf781691d6978bdd9537afac6a93e0091ecc475c609cbf2082c1adfbaf21bc29"
+  },
+  "old_stable_012_preserved": true
+}

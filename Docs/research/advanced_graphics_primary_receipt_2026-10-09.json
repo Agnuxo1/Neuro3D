@@ -1,0 +1,33 @@
+{
+  "checked_utc": "2026-10-09T09:32:28.313637+00:00",
+  "primary_pages": [
+    {
+      "name": "blender-eevee-vulkan.html",
+      "url": "https://developer.blender.org/docs/release_notes/4.5/eevee/",
+      "http_status": 200,
+      "sha256": "0fe038fcbe016cc1b8c0b7a7ce5bb931aa5694263bbea1484876e6860955e923",
+      "bytes": 451190
+    },
+    {
+      "name": "cycles-gpu-official.html",
+      "url": "https://docs.blender.org/manual/en/4.5/render/cycles/gpu_rendering.html",
+      "http_status": 200,
+      "sha256": "7a1d0406f8e6860acd96b6d6a3e54aae6323fde2e551dcd4f546130682085ce7",
+      "bytes": 423408
+    },
+    {
+      "name": "hiprt-official.html",
+      "url": "https://gpuopen.com/hiprt/",
+      "http_status": 200,
+      "sha256": "9180b281c7a157d589e6dea67de97400237e57958cb9954ea96ef6f6d7a2c0bf",
+      "bytes": 247310
+    },
+    {
+      "name": "optix-official.html",
+      "url": "https://developer.nvidia.com/rtx/ray-tracing/optix",
+      "http_status": 200,
+      "sha256": "86a917ca1757347de301363e4f7fc71b4c0a1fcf30def77f4345b69728904970",
+      "bytes": 85975
+    }
+  ]
+}

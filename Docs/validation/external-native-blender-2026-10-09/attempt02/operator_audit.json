@@ -1,0 +1,50 @@
+{
+  "schema": "optic_neuro_blender.external_native_operator_audit.v1",
+  "recorded_utc": "2026-10-09T06:13:16.468606+00:00",
+  "published_commit": "c1642ca090e8ba40bcd64f875b0d9ec39b4208ae",
+  "run_id": 37891059818,
+  "job_id": 113691864448,
+  "artifact_id": 11598995624,
+  "artifact_sha256": "896ca54828ff09505997e559c544115aed30ea12834a662c52402a751266d293",
+  "raw_files_verified": 114,
+  "preexecution_publication_verification": "Authoritative runner independently verified42blobs before preparation/execution",
+  "status": "VALID_EXTERNAL_NATIVE_BLENDER_REPRODUCTION",
+  "metric": 1,
+  "native_scientific_trial_completed": true,
+  "post_exit_full_log_clean": true,
+  "owncleanup": true,
+  "seconds": 685.7705474259999,
+  "stages": [
+    {
+      "name": "preparation",
+      "seconds": 21.092119628000034,
+      "exit_code": 0,
+      "stopped": null
+    },
+    {
+      "name": "native",
+      "seconds": 663.686635262,
+      "exit_code": 0,
+      "stopped": null
+    }
+  ],
+  "rss_mib": 756.3359375,
+  "native_runtime": {
+    "python": "3.11.15 (main, Apr 25 2025, 12:39:20) [GCC 11.2.1 20220127 (Red Hat 11.2.1-9)]",
+    "numpy": "1.26.4",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "blender_version": "4.5.14 LTS",
+    "blender_version_numeric": [
+      4,
+      5,
+      14
+    ],
+    "build_hash": "62c1db4208e8",
+    "binary_path": "/tmp/optic-neuro-native-0ibhk5n6/official/blender-4.5.14-linux-x64/blender"
+  },
+  "outside_specialist_replication": false,
+  "external_registration_ids": null,
+  "original_example_preserved": true,
+  "pycache_files_preserved_only_in_original_zip": true
+}

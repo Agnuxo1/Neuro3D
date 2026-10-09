@@ -1,0 +1,94 @@
+{
+  "scope": "CPU exact full-path public CLI, adverse outcomes retained",
+  "cases": [
+    {
+      "name": "tiny_gap",
+      "expected": "COMPLETE",
+      "exit_code": 0,
+      "pass": true,
+      "stdout": "{\"status\": \"COMPLETE\", \"backend\": \"CPU_FRACTION\", \"paths\": 1, \"unresolved\": 0, \"field_certified\": false}\r\n",
+      "stderr": ""
+    },
+    {
+      "name": "interior_seam",
+      "expected": "COMPLETE",
+      "exit_code": 0,
+      "pass": true,
+      "stdout": "{\"status\": \"COMPLETE\", \"backend\": \"CPU_FRACTION\", \"paths\": 1, \"unresolved\": 0, \"field_certified\": false}\r\n",
+      "stderr": ""
+    },
+    {
+      "name": "contact",
+      "expected": "CONTACT",
+      "exit_code": 2,
+      "pass": true,
+      "stdout": "{\"status\": \"INCOMPLETE\", \"backend\": \"CPU_FRACTION\", \"paths\": 0, \"unresolved\": 1, \"field_certified\": false}\r\n",
+      "stderr": ""
+    },
+    {
+      "name": "tie",
+      "expected": "TRUE_TIE",
+      "exit_code": 2,
+      "pass": true,
+      "stdout": "{\"status\": \"INCOMPLETE\", \"backend\": \"CPU_FRACTION\", \"paths\": 0, \"unresolved\": 1, \"field_certified\": false}\r\n",
+      "stderr": ""
+    },
+    {
+      "name": "boundary",
+      "expected": "BOUNDARY",
+      "exit_code": 2,
+      "pass": true,
+      "stdout": "{\"status\": \"INCOMPLETE\", \"backend\": \"CPU_FRACTION\", \"paths\": 0, \"unresolved\": 1, \"field_certified\": false}\r\n",
+      "stderr": ""
+    },
+    {
+      "name": "return_loop",
+      "expected": "RESOURCE_LIMIT",
+      "exit_code": 2,
+      "pass": true,
+      "stdout": "{\"status\": \"INCOMPLETE\", \"backend\": \"CPU_FRACTION\", \"paths\": 0, \"unresolved\": 1, \"field_certified\": false}\r\n",
+      "stderr": ""
+    },
+    {
+      "name": "lost",
+      "expected": "MISS",
+      "exit_code": 2,
+      "pass": true,
+      "stdout": "{\"status\": \"INCOMPLETE\", \"backend\": \"CPU_FRACTION\", \"paths\": 0, \"unresolved\": 1, \"field_certified\": false}\r\n",
+      "stderr": ""
+    },
+    {
+      "name": "mode",
+      "expected": "MODE_MISMATCH",
+      "exit_code": 2,
+      "pass": true,
+      "stdout": "{\"status\": \"INCOMPLETE\", \"backend\": \"CPU_FRACTION\", \"paths\": 0, \"unresolved\": 1, \"field_certified\": false}\r\n",
+      "stderr": ""
+    }
+  ],
+  "status": "PASS",
+  "source_sha256": {
+    "Blender/tests/record_multipath_adverse_v1.py": "0eeba5e8b32a571dee4cb470bf79070f505cac5368876369e6fd9b08b943992e",
+    "Blender/benchmarks/capacity_audit/trace_exact_scene_v1.py": "add601f017eb42e1ca4e4a5349f5d6d24dc38e7f896f139f237c520cb492f2d5",
+    "Blender/benchmarks/capacity_audit/robust_multipath_v1.py": "f4225b2f3f08fa675e72cba79460c815c5e91282fed9cdafbd8460d3fc16dce2",
+    "Blender/tests/test_robust_multipath_v1.py": "7c88058d583285b79f810eb153af93ffe29dfc8a0287c0a73d3731578941b7bb"
+  },
+  "files_sha256": {
+    "boundary.scene.json": "f35fdadc7c30c575a5b12d7c73d477d961b9c711308fdc41c0f7e765e726ed26",
+    "boundary.trace.json": "9942637b7822a4c31820db7a4220c154ddbf82a18a581be28ee0ac9ffeab353a",
+    "contact.scene.json": "fa1ff1a8485fcddcbf5b3a46c3f2429ed681a1786700d48f5f1d53e85e215638",
+    "contact.trace.json": "19ab9f0304fc79726d3d53c246f8354456a50e4ce9be4b4297465d7dfd50075a",
+    "interior_seam.scene.json": "cec19d9c56224d01bc4f2605ae25e869d0c1e695081da6b257d9929bf5163813",
+    "interior_seam.trace.json": "fde4529a426b8ec2fa20ff6167285441ad381432b3e1401a2b47a8b6ff0cf7b0",
+    "lost.scene.json": "40ef59c6568ac8bf6f614be21e3f0fb03a06074b9f8cf842deba3e5aed5db138",
+    "lost.trace.json": "babad22d77f2f3a1980082a3561e197aab46037fead1da9ec882a65b143c8d8b",
+    "mode.scene.json": "d0d02ba1f82b908b95c107a4cf2a11e08ee050ec80a4249a800b48141fed4a45",
+    "mode.trace.json": "3992ee1d01489f3894bad44f1b90d13b9639c3c4bbe58c6e1efc2dd6239575c6",
+    "return_loop.scene.json": "6b41da9621ba7a189c777d045888927b2034432848065a7b2efb20aff3977bbf",
+    "return_loop.trace.json": "f0d0dea2eb0ec23dc2833421c84a7f5560ee8a929c36efafa5ec6e702bb2eb4f",
+    "tie.scene.json": "7863a367d4eb488e48711cb10a977e3b63ccdd63038666f5be26e4130209a3f8",
+    "tie.trace.json": "f27ae3ccfaa4ab0c569c4d507f01506805abf5436d7b0124ce1cd54d9e4d979b",
+    "tiny_gap.scene.json": "0067b854da0acd5762e8397ece32c149f145d7a334aaa4a94968b2e4e7ad02e6",
+    "tiny_gap.trace.json": "d50280c5728bff2f675dd82e26a8bc00ae3d1b27cd843c729aa3a822b07da9c1"
+  }
+}

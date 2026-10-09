@@ -1,0 +1,2547 @@
+{
+  "primary_metric": 1,
+  "status": "VALID_COMPLETE_GRAPH",
+  "states": 133,
+  "sources": 5,
+  "nearest_hits_independently_verified": true,
+  "nonzero_branch_coverage_verified": true,
+  "boundary_neighborhood_independently_verified": true,
+  "field_certified": false,
+  "physical_optics_certified": false,
+  "neighborhood_witnesses": [
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 0,
+      "object_id": "c00.bs1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 1,
+      "object_id": "c01.bs1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 2,
+      "object_id": "c00.bs1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 3,
+      "object_id": "c10.bs1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 4,
+      "object_id": "c20.bs1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 5,
+      "object_id": "c00.r1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 6,
+      "object_id": "c00.m2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 7,
+      "object_id": "c01.r1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 8,
+      "object_id": "c01.m2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 9,
+      "object_id": "c10.m2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 10,
+      "object_id": "c10.r1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 11,
+      "object_id": "c20.m2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 12,
+      "object_id": "c20.r1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 13,
+      "object_id": "c00.r2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 14,
+      "object_id": "c00.bs2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 15,
+      "object_id": "c01.r2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 16,
+      "object_id": "c01.bs2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 17,
+      "object_id": "c10.bs2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 18,
+      "object_id": "c10.r2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 19,
+      "object_id": "c20.bs2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 20,
+      "object_id": "c20.r2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 21,
+      "object_id": "c00.f1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 22,
+      "object_id": "c10.bs1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 23,
+      "object_id": "c01.bs1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 24,
+      "object_id": "c01.f1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 25,
+      "object_id": "c11.bs1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 26,
+      "object_id": "c02.bs1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 27,
+      "object_id": "c20.bs1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 28,
+      "object_id": "c11.bs1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 29,
+      "object_id": "c10.f1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 30,
+      "object_id": "c30.bs1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 31,
+      "object_id": "c21.bs1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 32,
+      "object_id": "c20.f1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 33,
+      "object_id": "c00.bs2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 34,
+      "object_id": "c01.bs2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 35,
+      "object_id": "c11.r1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 36,
+      "object_id": "c11.m2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 37,
+      "object_id": "c02.m2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 38,
+      "object_id": "c02.r1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 39,
+      "object_id": "c10.bs2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 40,
+      "object_id": "c30.r1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 41,
+      "object_id": "c30.m2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 42,
+      "object_id": "c21.m2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 43,
+      "object_id": "c21.r1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 44,
+      "object_id": "c20.bs2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 45,
+      "object_id": "c11.r2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 46,
+      "object_id": "c11.bs2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 47,
+      "object_id": "c02.bs2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 48,
+      "object_id": "c02.r2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 49,
+      "object_id": "c30.r2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 50,
+      "object_id": "c30.bs2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 51,
+      "object_id": "c21.bs2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 52,
+      "object_id": "c21.r2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 53,
+      "object_id": "c11.f1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 54,
+      "object_id": "c21.bs1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 55,
+      "object_id": "c12.bs1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 56,
+      "object_id": "c12.bs1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 57,
+      "object_id": "c03.bs1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 58,
+      "object_id": "c02.f1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 59,
+      "object_id": "c30.f1"
+    },
+    {
+      "projected_radius": [
+        3558985,
+        67108864
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        18,
+        18,
+        18,
+        18
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 60,
+      "object_id": "det.R0"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 61,
+      "object_id": "c31.bs1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 62,
+      "object_id": "c31.bs1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 63,
+      "object_id": "c22.bs1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 64,
+      "object_id": "c21.f1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 65,
+      "object_id": "c11.bs2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 66,
+      "object_id": "c12.m2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 67,
+      "object_id": "c12.r1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 68,
+      "object_id": "c03.m2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 69,
+      "object_id": "c03.r1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 70,
+      "object_id": "c02.bs2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 71,
+      "object_id": "c30.bs2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 72,
+      "object_id": "c31.m2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 73,
+      "object_id": "c31.r1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 74,
+      "object_id": "c22.m2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 75,
+      "object_id": "c22.r1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 76,
+      "object_id": "c21.bs2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 77,
+      "object_id": "c12.bs2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 78,
+      "object_id": "c12.r2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 79,
+      "object_id": "c03.bs2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 80,
+      "object_id": "c03.r2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 81,
+      "object_id": "c31.bs2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 82,
+      "object_id": "c31.r2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 83,
+      "object_id": "c22.bs2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 84,
+      "object_id": "c22.r2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 85,
+      "object_id": "c22.bs1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 86,
+      "object_id": "c13.bs1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 87,
+      "object_id": "c12.f1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 88,
+      "object_id": "c13.bs1"
+    },
+    {
+      "projected_radius": [
+        3558985,
+        67108864
+      ],
+      "projection_keeps": [
+        0,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        18,
+        18,
+        18,
+        18
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 89,
+      "object_id": "det.C0"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 90,
+      "object_id": "c03.f1"
+    },
+    {
+      "projected_radius": [
+        3558985,
+        67108864
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        18,
+        18,
+        18,
+        18
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 91,
+      "object_id": "det.R1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 92,
+      "object_id": "c32.bs1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 93,
+      "object_id": "c31.f1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 94,
+      "object_id": "c32.bs1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 95,
+      "object_id": "c23.bs1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 96,
+      "object_id": "c22.f1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 97,
+      "object_id": "c13.m2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 98,
+      "object_id": "c13.r1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 99,
+      "object_id": "c12.bs2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 100,
+      "object_id": "c03.bs2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 101,
+      "object_id": "c32.m2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 102,
+      "object_id": "c32.r1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 103,
+      "object_id": "c31.bs2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 104,
+      "object_id": "c23.m2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 105,
+      "object_id": "c23.r1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 106,
+      "object_id": "c22.bs2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 107,
+      "object_id": "c13.bs2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 108,
+      "object_id": "c13.r2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 109,
+      "object_id": "c32.bs2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 110,
+      "object_id": "c32.r2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 111,
+      "object_id": "c23.bs2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 112,
+      "object_id": "c23.r2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 113,
+      "object_id": "c23.bs1"
+    },
+    {
+      "projected_radius": [
+        3558985,
+        67108864
+      ],
+      "projection_keeps": [
+        0,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        18,
+        18,
+        18,
+        18
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 114,
+      "object_id": "det.C1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 115,
+      "object_id": "c13.f1"
+    },
+    {
+      "projected_radius": [
+        3558985,
+        67108864
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        18,
+        18,
+        18,
+        18
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 116,
+      "object_id": "det.R2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 117,
+      "object_id": "c33.bs1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 118,
+      "object_id": "c32.f1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 119,
+      "object_id": "c33.bs1"
+    },
+    {
+      "projected_radius": [
+        3558985,
+        67108864
+      ],
+      "projection_keeps": [
+        0,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        18,
+        18,
+        18,
+        18
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 120,
+      "object_id": "det.C2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 121,
+      "object_id": "c23.f1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 122,
+      "object_id": "c13.bs2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 123,
+      "object_id": "c33.m2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 124,
+      "object_id": "c33.r1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 125,
+      "object_id": "c32.bs2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 126,
+      "object_id": "c23.bs2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 127,
+      "object_id": "c33.bs2"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 128,
+      "object_id": "c33.r2"
+    },
+    {
+      "projected_radius": [
+        3558985,
+        67108864
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        18,
+        18,
+        18,
+        18
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 129,
+      "object_id": "det.R3"
+    },
+    {
+      "projected_radius": [
+        3558985,
+        67108864
+      ],
+      "projection_keeps": [
+        0,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        18,
+        18,
+        18,
+        18
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 130,
+      "object_id": "det.C3"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 131,
+      "object_id": "c33.f1"
+    },
+    {
+      "projected_radius": [
+        209472361100400143961,
+        3631610989002448961536
+      ],
+      "projection_keeps": [
+        1,
+        2
+      ],
+      "perimeter_closed_interval_counts": [
+        20,
+        14,
+        20,
+        14
+      ],
+      "all_four_edges_covered": true,
+      "node_id": 132,
+      "object_id": "c33.bs2"
+    }
+  ],
+  "neighborhood_method": "EXACT_PROJECTED_SQUARE_PERIMETER_CONVEX_RADIAL_COVERAGE",
+  "scope": "Represented planar geometry only; no intended geometry or physical error bound",
+  "scene_sha256": "59963192f88df24bf5b1d7fd2f8119a81a0ecad353f62ee16831ccfb98627097",
+  "result_sha256": "a35a1213a5b4cccf9487d257069848550c5d3ff8b2060b9e1004f98e5aa7d448",
+  "elapsed_seconds": 5.538153900000907,
+  "analysis_scope": "Deterministic secondary independent audit of previously published observed graph; no new experimental data",
+  "method_published_commit": "8fbfd5cc5672718bf8ca81ddb9638999d6c85497"
+}

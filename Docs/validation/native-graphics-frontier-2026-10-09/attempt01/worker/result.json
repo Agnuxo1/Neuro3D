@@ -1,0 +1,120 @@
+{
+  "schema": "optic_neuro_blender.native_graphics_frontier_audit.v1",
+  "status": "VALID_NATIVE_GRAPHICS_FRONTIER_AUDIT",
+  "primary_metric": 1,
+  "native_gpu_executed": true,
+  "gpu_geometry_readback": true,
+  "gpu_fields_executed": false,
+  "hardware_RT_executed": false,
+  "blender_version": "4.5.14 LTS",
+  "blender_build_hash": "62c1db4208e8",
+  "backend": "OPENGL",
+  "vendor": "NVIDIA Corporation",
+  "renderer": "NVIDIA GeForce RTX 3090/PCIe/SSE2",
+  "driver": "4.6.0 NVIDIA 581.29",
+  "independent_audit": {
+    "primary_metric": 1,
+    "status": "VALID_COMPLETE_GRAPH",
+    "states": 133,
+    "sources": 5,
+    "nearest_hits_independently_verified": true,
+    "nonzero_branch_coverage_verified": true,
+    "boundary_neighborhood_independently_verified": false,
+    "field_certified": false,
+    "physical_optics_certified": false
+  },
+  "represented_terminal_paths": 17060,
+  "edges": 186,
+  "field_max_difference": 5.117875266520903e-16,
+  "power_max_difference": 5.551115123125783e-16,
+  "all150_predictions_same": true,
+  "cost_seconds": {
+    "capture_and_admission": 1.7349205999998958,
+    "independent_full_graph_and_field_audit": 6.003265800005465,
+    "all150_coherent_inference": 0.49538339999708114
+  },
+  "profile_sha256": "19bd4e0c78952d1bd17526ceaa4256638318e5e612dd27d9af4d39c4a7472f3b",
+  "triangles": 6656,
+  "source_driven_frontier": true,
+  "cpu_runs": [
+    {
+      "repetition": 0,
+      "build_seconds": 30.76600750000216,
+      "selection_statistics": {
+        "queries": 133,
+        "object_boxes_tested": 13832,
+        "triangles_submitted": 33920,
+        "exhaustive_triangle_opportunities": 885248
+      }
+    },
+    {
+      "repetition": 1,
+      "build_seconds": 30.424590399998124,
+      "selection_statistics": {
+        "queries": 133,
+        "object_boxes_tested": 13832,
+        "triangles_submitted": 33920,
+        "exhaustive_triangle_opportunities": 885248
+      }
+    },
+    {
+      "repetition": 2,
+      "build_seconds": 29.865846799999417,
+      "selection_statistics": {
+        "queries": 133,
+        "object_boxes_tested": 13832,
+        "triangles_submitted": 33920,
+        "exhaustive_triangle_opportunities": 885248
+      }
+    }
+  ],
+  "graphics_runs": [
+    {
+      "repetition": 0,
+      "pack_compile_upload_and_build_seconds": 31.534975599999598,
+      "pack_compile_upload_seconds": 0.05228170000191312,
+      "status": "COMPLETE",
+      "states": 133,
+      "frontier_batches": 17,
+      "selection_statistics": {
+        "queries": 133,
+        "verified_candidates": 133,
+        "rejected_candidates": 0,
+        "exact_verification_seconds": 30.54999270006374
+      },
+      "candidate_fallback": false
+    },
+    {
+      "repetition": 1,
+      "pack_compile_upload_and_build_seconds": 32.1433915000016,
+      "pack_compile_upload_seconds": 0.04782410000188975,
+      "status": "COMPLETE",
+      "states": 133,
+      "frontier_batches": 17,
+      "selection_statistics": {
+        "queries": 133,
+        "verified_candidates": 133,
+        "rejected_candidates": 0,
+        "exact_verification_seconds": 31.175279200004297
+      },
+      "candidate_fallback": false
+    },
+    {
+      "repetition": 2,
+      "pack_compile_upload_and_build_seconds": 33.008446200001345,
+      "pack_compile_upload_seconds": 0.05021860000124434,
+      "status": "COMPLETE",
+      "states": 133,
+      "frontier_batches": 17,
+      "selection_statistics": {
+        "queries": 133,
+        "verified_candidates": 133,
+        "rejected_candidates": 0,
+        "exact_verification_seconds": 32.01835190005659
+      },
+      "candidate_fallback": false
+    }
+  ],
+  "scope": "Actual GPU vertex/fragment raster/depth candidates generate own frontier from source rays and optical branches. Each candidate independently verified by CPU exact predicates before phase; no CPU candidate replacement. All paths retained, coherent arithmetic CPU, graph reuse for150inputs. Paired CPU exact builders and GPU+exact verification include their full construction costs. Three repetitions on shared host are exploratory; no physical/RTcore/AMD/energy claim.",
+  "seconds": 198.71259160000045
+}

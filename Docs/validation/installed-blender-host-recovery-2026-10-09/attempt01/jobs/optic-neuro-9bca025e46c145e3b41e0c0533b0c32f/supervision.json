@@ -1,0 +1,1 @@
+{"exit_code":0,"owned_pid":32172,"owned_process_terminated":true,"peak_rss_mib":292.43359375,"reason":null,"result_collected":true,"result_sha256":"a4cdcd8b4a1bea73c5fe28172142f9c2fa734eee666a81f36cd1768b120bedbf","schema":"optic_neuro_blender.owned_job.v1","seconds":253.18800000000192,"state":"COMPLETED"}

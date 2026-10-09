@@ -1,0 +1,22 @@
+Blender 4.5.14 LTS (hash 62c1db4208e8 built 2026-09-15 01:33:49)
+Read blend: "D:\PROJECTS\.cognition\neuro3d-sequential-20261008\own-blender-addon-20261009-run02\worker\jobs\optic-neuro-9a57201018e940ba85d5963ddb9cbff7\snapshot.blend"
+Traceback (most recent call last):
+  File "D:\PROJECTS\.cognition\neuro3d-sequential-20261008\own-blender-addon-20261009-run02\isolated\scripts\addons\optic_neuro_blender\worker.py", line 117, in <module>
+    main()
+  File "D:\PROJECTS\.cognition\neuro3d-sequential-20261008\own-blender-addon-20261009-run02\isolated\scripts\addons\optic_neuro_blender\worker.py", line 51, in main
+    scene, graph, net, bases, audit = compiled(capture, fields, out, 'initial')
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PROJECTS\.cognition\neuro3d-sequential-20261008\own-blender-addon-20261009-run02\isolated\scripts\addons\optic_neuro_blender\worker.py", line 31, in compiled
+    audit = audit_graph_neighborhood(rational_wire(scene), rational_wire({'graph': graph, **propagated}))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PROJECTS\.cognition\neuro3d-sequential-20261008\own-blender-addon-20261009-run02\isolated\scripts\addons\optic_neuro_blender\_vendor\Tools\audit_graph_neighborhood_v1.py", line 69, in audit_graph_neighborhood
+    audit=audit_graph_result(scene_wire,result_wire)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PROJECTS\.cognition\neuro3d-sequential-20261008\own-blender-addon-20261009-run02\isolated\scripts\addons\optic_neuro_blender\_vendor\Tools\audit_coherent_state_graph_v1.py", line 184, in audit_graph_result
+    need(set(value)=={'real','imag'} and finite(value['real']) and finite(value['imag']) and finite(result['powers'][p])
+         ^^^^^^^^^^
+TypeError: 'complex' object is not iterable
+
+Error: script failed, file: 'D:\PROJECTS\.cognition\neuro3d-sequential-20261008\own-blender-addon-20261009-run02\isolated\scripts\addons\optic_neuro_blender\worker.py', exiting.
+
+Blender quit

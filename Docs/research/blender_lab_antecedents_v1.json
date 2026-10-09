@@ -1,0 +1,187 @@
+{
+  "schema": "neuro3d.blender_lab.supplementary_antecedents.v1",
+  "date": "2026-10-08",
+  "retrieved_at_utc": "2026-10-08T15:15:13.704586+00:00",
+  "scope": "Targeted supplementary review after owner scope clarification. Four entries counted separately, not deduplicated into historical194/175/30 pool.",
+  "search_queries": [
+    "Blender coherent optical ray tracing simulation complex amplitude interference addon",
+    "Blender optical simulation ray optics research addon optics laboratory",
+    "BlenderPhotonics 2022 software github authors Yan Fang",
+    "OptiCore Blender optical simulation github conference 2025",
+    "Blender coherent optical neural network simulator",
+    "OptiCore Johannes Hinrichs github",
+    "Blender optical neural network OptiCore Blender-Lab coherent training simulation"
+  ],
+  "primary_documents": [
+    {
+      "url": "https://api.github.com/repos/emircbngl/blender-optics-simulator",
+      "file": "optics_repository.json",
+      "http_status": 200,
+      "bytes": 6390,
+      "sha256": "4002d86bea204ef84303a8c7edbafd0061030cd0f243513bd3c11eb9023f00c0"
+    },
+    {
+      "url": "https://api.github.com/repos/emircbngl/blender-optics-simulator/commits/2b488e2e99dff4f56d67f57f9674bd00f812dda1",
+      "file": "optics_commit.json",
+      "http_status": 200,
+      "bytes": 37826,
+      "sha256": "b34dabda96772bdf56191376d63423112ba9769c93030fd657fcf6b7e67b0943"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/emircbngl/blender-optics-simulator/2b488e2e99dff4f56d67f57f9674bd00f812dda1/README.md",
+      "file": "optics_README.md",
+      "http_status": 200,
+      "bytes": 9996,
+      "sha256": "36856a5c662adce6d29e01be2fe37580dd4676ca0a7bdeffabe17811948b8864"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/emircbngl/blender-optics-simulator/2b488e2e99dff4f56d67f57f9674bd00f812dda1/docs/OPTICS_SCOPE.md",
+      "file": "optics_docs_OPTICS_SCOPE.md",
+      "http_status": 200,
+      "bytes": 8679,
+      "sha256": "23315a235400986a4a4c597062a4882c96195b765611fd78780ed5c167774caf"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/emircbngl/blender-optics-simulator/2b488e2e99dff4f56d67f57f9674bd00f812dda1/CITATION.cff",
+      "file": "optics_CITATION.cff",
+      "http_status": 200,
+      "bytes": 3584,
+      "sha256": "ac9956b5176dcd3b5c56a66dc70ef664dc59474755ff7b75ecfc16bf99b7e08b"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/emircbngl/blender-optics-simulator/2b488e2e99dff4f56d67f57f9674bd00f812dda1/docs/CAPABILITIES.md",
+      "file": "optics_docs_CAPABILITIES.md",
+      "http_status": 200,
+      "bytes": 10826,
+      "sha256": "270b36e6059008b4310ffa43354353518cbcff1272c60bba1e0f983f0564b9be"
+    },
+    {
+      "url": "https://api.github.com/repos/NeuroJSON/BlenderPhotonics",
+      "file": "photonics_repository.json",
+      "http_status": 200,
+      "bytes": 6615,
+      "sha256": "9f6410a0841adb2af6b32f2be596e34f48b064ae8c2dc214409b6a01e3d0a363"
+    },
+    {
+      "url": "https://api.github.com/repos/NeuroJSON/BlenderPhotonics/commits/master",
+      "file": "photonics_commit.json",
+      "http_status": 200,
+      "bytes": 337861,
+      "sha256": "076bc763597691379dc743e3ac4ce9a6eea8fa145ab4fdb0ecdd02aa2406c3cb"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NeuroJSON/BlenderPhotonics/732799f9e3ebe10e013e316b8a21d88452755dc8/README.md",
+      "file": "photonics_README.md",
+      "http_status": 200,
+      "bytes": 4542,
+      "sha256": "692a0551b4e682bc953c393247da9b6a89768fbde3d5ac6408b435a0fb7a50bc"
+    },
+    {
+      "url": "https://api.github.com/repos/CodeFHD/OptiCore",
+      "file": "opticore_repository.json",
+      "http_status": 200,
+      "bytes": 5130,
+      "sha256": "5e515abe7eaa22388708667d3ef8afad28aef6eb6baf117031301cb7f274f52a"
+    },
+    {
+      "url": "https://api.github.com/repos/CodeFHD/OptiCore/commits/master",
+      "file": "opticore_commit.json",
+      "http_status": 200,
+      "bytes": 7351,
+      "sha256": "39e6fe11e9893da71087d3838c024531b3c8217ddb6e65378612120a6d660f6a"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/CodeFHD/OptiCore/f9b0029009846abbf34a0947971dc4c6ba1a21f6/README.md",
+      "file": "opticore_README.md",
+      "http_status": 200,
+      "bytes": 8155,
+      "sha256": "8ac382b7b031a5cf375be6b8c70853628a2e68c06e537fca123f214625590d1d"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2302.12705v1",
+      "file": "crowley_gordon2023.pdf",
+      "http_status": 200,
+      "bytes": 3044905,
+      "sha256": "23795a1e52ccad4f74a722f76e8b81f7894db77002d93792f72e5c2ff513613c"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9010662/fullTextXML",
+      "file": "blenderphotonics2022.xml",
+      "http_status": 200,
+      "bytes": 156720,
+      "sha256": "3fe108aeef523d414220d3719d1580c67adaf927003ff838d3eef6dde6109c20"
+    },
+    {
+      "url": "https://conference.blender.org/2025/presentations/3985/",
+      "file": "opticore_conference2025.html",
+      "http_status": 200,
+      "bytes": 22232,
+      "sha256": "a79946facc323e1f5ecbdbafa0a183992c8d9501aa57a39734c59043e2f69b1a"
+    }
+  ],
+  "entries": [
+    {
+      "id": "BlenderPhotonics2022",
+      "type": "peer_reviewed_article_and_author_software",
+      "title": "BlenderPhotonics: an integrated open-source software environment for three-dimensional meshing and photon simulations in complex tissues",
+      "year": 2022,
+      "doi": "10.1117/1.JBO.27.8.083014",
+      "repository": "NeuroJSON/BlenderPhotonics",
+      "commit": "732799f9e3ebe10e013e316b8a21d88452755dc8",
+      "source_files": [
+        "photonics_README.md",
+        "blenderphotonics2022.xml"
+      ],
+      "inspected": "article abstract, interface workflow, installation, MC input/output and selected examples; author README",
+      "finding": "Open Blender light-simulation laboratory is prior art. Optical-neural complete-field native certificate not established by inspected passages."
+    },
+    {
+      "id": "BlenderOpticsSimulator2026",
+      "type": "author_software_documentation",
+      "title": "Blender Optics Simulator",
+      "year": 2026,
+      "version": "0.31.0",
+      "repository": "emircbngl/blender-optics-simulator",
+      "commit": "2b488e2e99dff4f56d67f57f9674bd00f812dda1",
+      "source_files": [
+        "optics_README.md",
+        "optics_docs_OPTICS_SCOPE.md",
+        "optics_CITATION.cff",
+        "optics_docs_CAPABILITIES.md"
+      ],
+      "inspected": "README, scope/limits, CFF and capability descriptions",
+      "finding": "Editable optical bench, Jones coherent interference and quantitative detectors already documented. Author validation claims not independently executed."
+    },
+    {
+      "id": "OptiCore",
+      "type": "author_software_and_conference_description",
+      "title": "OptiCore / Simulation and Visualisation of Optical Systems",
+      "year": 2025,
+      "repository": "CodeFHD/OptiCore",
+      "commit": "f9b0029009846abbf34a0947971dc4c6ba1a21f6",
+      "source_files": [
+        "opticore_README.md",
+        "opticore_conference2025.html"
+      ],
+      "inspected": "author README and conference description; no software execution",
+      "finding": "Parametric optical geometry and internal sequential ray tracing in Blender are prior art; internal binary64 is not a captured-scene error bound."
+    },
+    {
+      "id": "CrowleyGordon2023",
+      "type": "author_paper_preprint",
+      "title": "Designing and simulating realistic spatial frequency domain imaging systems using open-source 3D rendering software",
+      "year": 2023,
+      "arxiv": "2302.12705v1",
+      "source_files": [
+        "crowley_gordon2023.pdf"
+      ],
+      "inspected": "abstract and methods/results PDF passages, including sections 2.1, calibration and MC comparison",
+      "finding": "Quantitative scientific optical imaging simulation using Blender/Cycles is prior art. Structured illumination phase is not proof of optical-carrier coherent neural computation."
+    }
+  ],
+  "external_software_installed_or_executed": false,
+  "author_validation_independently_reproduced": false,
+  "equivalent_joint_native_certificate": "UNKNOWN_NOT_ESTABLISHED_IN_REVIEWED_PASSAGES",
+  "novelty_demonstrated": false,
+  "exhaustive_review": false
+}

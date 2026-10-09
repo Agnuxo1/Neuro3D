@@ -1,0 +1,47 @@
+{
+  "schema": "optic_neuro_blender.exact_readout_controls.v1",
+  "controls": [
+    {
+      "name": "Constructiva",
+      "input_a_reim": [
+        1,
+        0
+      ],
+      "input_b_reim": [
+        1,
+        0
+      ],
+      "coherent_normalized_power": 4,
+      "independent_normalized_power": 2
+    },
+    {
+      "name": "Destructiva",
+      "input_a_reim": [
+        1,
+        0
+      ],
+      "input_b_reim": [
+        -1,
+        0
+      ],
+      "coherent_normalized_power": 0,
+      "independent_normalized_power": 2
+    },
+    {
+      "name": "Cuadratura",
+      "input_a_reim": [
+        1,
+        0
+      ],
+      "input_b_reim": [
+        0,
+        1
+      ],
+      "coherent_normalized_power": 2,
+      "independent_normalized_power": 2
+    }
+  ],
+  "optical_forward_executed": false,
+  "gpu_executed": false,
+  "physical_measurement": false
+}

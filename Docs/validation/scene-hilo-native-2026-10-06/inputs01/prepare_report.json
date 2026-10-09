@@ -1,0 +1,141 @@
+{
+  "schema": "neuro3d.scene_hilo.prepare.v1",
+  "status": "PASS",
+  "verification_passed": true,
+  "scope": "CPU saved/reopened scene extraction and packet admission only",
+  "native_gpu_executed": false,
+  "blender_version": "4.5.14 LTS",
+  "frozen_manifest_sha256": "c101286137e59ceb47918e0913f112c3ca1a0e9733610b662be7d2d63dd961f4",
+  "code_sha256": {
+    "Blender\\tests\\scene_hilo_prepare_inputs_v1.py": "d4d23e3b381867f0d4ea2f6cc61028f20f2d0b27c2a17e0f9d6a25dfefba27ef",
+    "Blender\\tests\\exp005_scene_readback.py": "cd7fb6bd208ac89bcc80bae89abd56c3d09dbfabbd650525d7c9dc20d2f7a2b1",
+    "Blender\\tests\\exp005_scene_properties.py": "9996efb2389df8bbac62a14dbdf999cf1a5a325572e1617f08a046f56092041a",
+    "Blender\\benchmarks\\capacity_audit\\scene_hilo_transport_v1.py": "4bd86b411208c8a676c8a2c97926ce001ac781568913d5312906c591e02ca5ad",
+    "Blender\\benchmarks\\capacity_audit\\oblique_exact_scalar_hilo32_CPU_v1.py": "775e48b3507aa5b86bd96818f50e208e92d72e03b99d8862f816247418867a97"
+  },
+  "cases": [
+    {
+      "case_id": "k3_baseline",
+      "snapshot_path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\inputs01\\k3_baseline.snapshot.json",
+      "snapshot_sha256": "4e7ff61c43b657f581deeaba54b24effb825c9d209f843c8e6902cc8b49604c3",
+      "wire_path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\inputs01\\k3_baseline.wire.bin",
+      "wire_sha256": "8da0e8bea709b44e2d0be9e4b28b3f282110de01da3469702e50690c0fe5bae5",
+      "wire_bytes": 15904,
+      "build_and_admission_seconds": 0.041208399983588606,
+      "object_count": 22,
+      "source_count": 4,
+      "face_count": 44,
+      "evaluated_optics_checked": true,
+      "direction_bounds_property": null,
+      "material_parameters_preserved_without_hi_lo32_conversion": true,
+      "retained_snapshot_sha256": "1cf04093c7312401be1cfdc7cde683f9f557937549d9c73cf4e1cb2014cca009",
+      "frozen_snapshot_equal": true
+    },
+    {
+      "case_id": "k4_baseline",
+      "snapshot_path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\inputs01\\k4_baseline.snapshot.json",
+      "snapshot_sha256": "810d80d8cf61be03d26f8e5ca011cf4449e8ea29867a8d33ae5bb2bdf75beea4",
+      "wire_path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\inputs01\\k4_baseline.wire.bin",
+      "wire_sha256": "f9cdd1ca97f0c6455bf8e6049eafdcff01ccb234cfc0bc9c7798ba23938ab860",
+      "wire_bytes": 20704,
+      "build_and_admission_seconds": 0.04974370001582429,
+      "object_count": 29,
+      "source_count": 5,
+      "face_count": 58,
+      "evaluated_optics_checked": true,
+      "direction_bounds_property": null,
+      "material_parameters_preserved_without_hi_lo32_conversion": true,
+      "retained_snapshot_sha256": "2946683ad8089b48fee6e002e17bf34ee064d5b3856d8d8c4bac21ac5d437962",
+      "frozen_snapshot_equal": true
+    },
+    {
+      "case_id": "controlled_numeric",
+      "snapshot_path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\inputs01\\controlled_numeric.snapshot.json",
+      "snapshot_sha256": "b475d619944ea62872a5532f4f02dd87d33a064dd22de8dcef552900c98a2651",
+      "wire_path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\inputs01\\controlled_numeric.wire.bin",
+      "wire_sha256": "4275efe687bf7dae911e444ab6562fe12d7d37335a3bb6e535bf4947d4ae27b0",
+      "wire_bytes": 2464,
+      "build_and_admission_seconds": 0.011408799968194216,
+      "object_count": 2,
+      "source_count": 2,
+      "face_count": 4,
+      "evaluated_optics_checked": true,
+      "direction_bounds_property": "neuro3d_direction_bounds",
+      "material_parameters_preserved_without_hi_lo32_conversion": true,
+      "saved_reopened_exact": true,
+      "expected_tiny_difference": [
+        1152921504606846975,
+        1152921504606846976
+      ],
+      "explicit_test_sources": [
+        {
+          "id": "tiny",
+          "position_BU": [
+            8.673617379884035e-19,
+            0.0,
+            0.0
+          ],
+          "direction": [
+            1.0000000009313226,
+            0.0,
+            0.0
+          ],
+          "field_reim": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "id": "low",
+          "position_BU": [
+            1.0000000009313226,
+            9.094947017729282e-13,
+            -2.842170943040401e-14
+          ],
+          "direction": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "field_reim": [
+            0.5,
+            0.25
+          ]
+        }
+      ],
+      "explicit_direction_bounds": {
+        "tiny": [
+          [
+            1.0000000009313217,
+            1.0000000009313235
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "low": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            8.673617379891924e-19,
+            1.0000000009313226
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      }
+    }
+  ],
+  "input_manifest_path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\inputs01\\input_manifest.json",
+  "input_manifest_sha256": "81daaf472db2e021fc6686976ab18dd75eac52cd65565a0d011689f215bc5dc1",
+  "total_seconds": 0.4891118999803439
+}

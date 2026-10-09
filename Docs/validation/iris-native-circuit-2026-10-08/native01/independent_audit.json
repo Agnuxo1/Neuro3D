@@ -1,0 +1,8 @@
+{
+  "schema": "neuro3d.iris_lattice.independent_audit.v1",
+  "status": "FAIL",
+  "error": "ValueError: prospective numeric acceptance at sample 0 in baseline",
+  "auditor_sha256": "43aa687bfa8bd5421f541e77cd1e68eec7388b9495b340557e38572ebfc88f1a",
+  "worker_report_sha256": "b415c0c5d501444335e6cd0a695a6d7b0130223e4cc3ee81bae9f8fed5bacbe7",
+  "guard_report_sha256": "fcce18b5e9247c716c4ca597b8ad5a733b07197ce7bd679088ed394f34d62451"
+}

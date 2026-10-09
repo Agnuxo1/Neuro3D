@@ -1,0 +1,89 @@
+# Prospective native graphics coherent field transport
+
+This [profile](research/native_graphics_field_profile_2026-10-09.json), [authorized prospectively in GitHub](research/native_graphics_field_registration_2026-10-09.json), advances beyond selecting geometry: the actual native fragment shader recomputes the intersection of the depth-selected captured planar object with the current ray, optical distance and wavelength phase, beam-splitter/mirror complex branches, and terminal-reference phase. Captured plane/material/reference data and current geometric rays with incoming coherent fields are uploaded as binary64 bit patterns. The shader receives no expected hits, precomputed phase weights or transfer matrix. The own historical scalar GLSL complex multiplication/Taylor phase implementation is adapted from `Blender/shaders/iris_lattice_native_circuit_v1.glsl`; its previous analytic lattice is not used as the current scene model or reference.
+
+First build the source-driven native GPU candidate graph and run unchanged exact CPU plane/Gram/interior/nearest admission and independent full audit. Every actual transport query must reselect the same independently admitted surface/closed primitive; incorrect selections are rejected before their fields propagate. Unsupported nonplanar or non-binary64-exact plane/ray/material inputs are rejected. No positive-distance epsilon, source intensity grouping or phase reconstruction from fluence is allowed.
+
+Three complete150input transport runs execute every one of133states (19,950actual geometric ray queries per run). Both nonzero splitter branches and all17,060represented terminal paths are retained through the exact acyclic quotient. CPU `math.fsum` merges incoming complex fields; scheduling/topology and exact geometry admission remain CPU. This is explicitly a hybrid pipeline. It does not imply GPU gradients/training, RT-core execution, Maxwell/diffraction fidelity or rigorous GPU floating-point rounding bounds.
+
+Frozen gates: every150prediction identical to the trained native scene; maximum complex field, power and local segment/branch difference at most1e-11. Four additional native inputs check common phase covariance and unchanged power, coherent destructive superposition and separate source bases. Their complex fields must match the CPU reference within1e-11, with a coherent-versus-intensity-sum difference greater than1e-4. Binary64 bit preservation, unsupported geometry rejection and nonfinite-output rejection have four passing software controls; they are not GPU execution evidence.
+
+Full costs retain capture, source-driven exact-verified graph construction, independent audit, shader compilation/geometry/material upload, per-frontier setup/draw/readback, CPU coherent merging and reference comparisons. CPU comparison uses phase-only reuse of the already built graph whereas GPU additionally reselects each input's surfaces: these costs are not an equivalent speed benchmark, and no acceleration is assumed. The existing300second deadline/4,000MiB free-RAM preflight/2,000MiB owned-RSS guard/128MiB evidence cap/shared GPU FIFO remain fixed. All profile/source/authorization bytes must be published and remotely verified before execution. Earlier unsuccessful GPU claims and all observed failures remain preserved.
+
+## Attempt01: null before native field execution; prospective v2 raw-byte upload
+
+Frozen `fb6e50bd7a19e906947719ca6ed43290f8ff3e69`, profile195c911d/source56 verified before actual FIFO. The GPU geometry graph and independent audit completed, but native `GPUTexture` construction rejected the `UINT` Buffer before compiling or executing the coherent field shader. Full process22.084891seconds/RSS351.71875MiB; metricnull, GPU field executionfalse. [Preserved raw evidence](validation/native-graphics-field-2026-10-09/attempt01/evidence_index.json). This is an API ingress failure, not an optical or precision result.
+
+The [v2 profile](research/native_graphics_field_profile_v2_2026-10-09.json) replaces only binary64 input transport with raw `GPUUniformBuf` byte buffers (`uvec4` std140 words), following the established own `scene_hilo_gpu_v1.py` transport and the [official Blender API](https://docs.blender.org/api/4.5/gpu.types.html). Each draw handles at most256queries; larger optical frontiers are partitioned without dropping states or branches. Geometry, field arithmetic, three150input trials, four coherence controls,1e-11gates, full costs and limits remain unchanged. Five software controls additionally verify exact byte/stride preservation. This is a new prospective API correction; no v2 field result exists before publication and execution.
+
+## Attempt02: no admitted field readback; prospective v3 explicit unsigned readback
+
+Frozen `d5efc5cca7e1ab683eba2ce703cbb32d977c540c`, profile7e4c123c/source60verified. Raw UBO construction and native field shader compilation/draw progressed, but default `RGBA32UI` texture readback failed the strict four unsigned-word gate. No complete field result was admitted and metric remainsnull. Full23.045606seconds/RSS373.222656MiB. [Preserved evidence](validation/native-graphics-field-2026-10-09/attempt02/evidence_index.json). The false `gpu_fields_executed` report flag denotes unverified complete field transport; the source/error trace shows that shader compilation and a draw were reached.
+
+The [v3 profile](research/native_graphics_field_profile_v3_2026-10-09.json) requests explicit framebuffer `UINT` readback and adds a fifth attachment echoing each incoming complex field. Every native echo must preserve the exact uploaded binary64 bits, before field outputs are admitted. All optics, output tolerances, sample counts and bounded raw-byte buffers remain unchanged. Previous v1/v2 sources and null attempts remain intact. This is a prospective readback correction, not a relaxed numerical acceptance gate.
+
+## Attempt03: exact input-echo failure; prospective v4 diagnostic
+
+Frozen40f74074c335dfd0747c2b655a490f91300d9504/profile86593ade/source63verified. Explicit framebufferUINTreadback passed its word-type gate, but the exact incoming binary64 echo differed from uploaded inputs. Full22.625684seconds/RSS377.109375MiB, metricnull and complete field transport unverified. [Raw failure](validation/native-graphics-field-2026-10-09/attempt03/evidence_index.json).
+
+The separately frozen [v4 diagnostic profile](research/native_graphics_field_profile_v4_2026-10-09.json) retains all gates and adds raw unsigned UBO input-word echo alongside the double-converted echo, recording the first eight input/readback word arrays before validation. This distinguishes ingress, binary64 conversion and integer readback failures without accepting any mismatch or relaxing phase tolerance. It is diagnostic evidence, not a pre-assumed successful optical run.
+
+## Attempt04 word diagnostic and prospective native MRT diagnosis
+
+Frozen961930d/profile734f2919/source66verified, full22.693901seconds/RSS377.902344MiB/null. First8rays retain valid captured geometry readback while all five integer attachments, including raw UBO echo, read zero. [Actual word diagnostic](validation/native-graphics-field-2026-10-09/attempt04/worker/native_binary64_diagnostic.json). This does not identify a phase arithmetic error; it rejects the current graphics transport boundary.
+
+The [v5 profile](research/native_graphics_field_profile_v5_2026-10-09.json) adds constant floating/unsigned attachment probes and reads native GL draw-buffer/capability/error state in the same verified context. It preserves every original field gate. Its purpose is to distinguish a missing draw target or unsigned attachment/readback fault from packet interpretation. It does not accept zero outputs as valid fields. All previous sources and diagnostics remain intact.
+
+## Attempt05 native API cap and prospective six-target diagnostic
+
+Frozeneed2d61185238ade87544a9c1e162deee0c7657c/profile2129ae5e/source69verified. Blender's framebuffer API rejects eight color attachments; its exposed maximum is six. Full22.555377seconds/RSS374.289063MiB, null metric; no v5 diagnostic draw. [Preserved API failure](validation/native-graphics-field-2026-10-09/attempt05/evidence_index.json).
+
+The [v6 diagnostic profile](research/native_graphics_field_profile_v6_2026-10-09.json) fits six targets: actual geometry, constant unsigned words, first branch, constant floats, converted input echo and raw UBO echo. It records native GL draw-buffer/capability/error state on the first five geometric source rays of one input. It deliberately stops after recording diagnosis and cannot publish an optical field or numerical success. This bounded API diagnostic changes no optical acceptance tolerance and is distinct from the pending three150input validation.
+
+## Native six-target diagnostic result and prospective integer API correction
+
+Frozen270374132210ffdce4c075f93a37ba895936f012/profile1343edc6/source71verified. Diagnostic-only stop after22.705969seconds/RSS377.359375MiB, no field metric. All six draw buffers are enabled; native driver advertises8targets. The floating constant is exactly recovered at attachment3, while the unsigned constant, converted input echo and raw UBO echo read zero. NativeGLreports1281afterdraw and1282afterread. [Actual diagnosis](validation/native-graphics-field-2026-10-09/attempt06/worker/native_binary64_diagnostic.json). This localizes a mixed integer API boundary rather than a missing draw target; it does not establish a physical/phase error.
+
+The [v7 profile](research/native_graphics_field_profile_v7_2026-10-09.json) restores the full three150input optical trials with the original shader arithmetic and all unchanged1e-11gates. It clears only the floating geometry target and depth (every admitted ray must have a written hit), and reads integer targets using documented native `glReadPixels(GL_RGBA_INTEGER,GL_UNSIGNED_INT)` in the same verified WGLcontext, following the [Khronos API contract](https://wikis.khronos.org/opengl/GLAPI/glReadPixels). Read-buffer and pixel-pack state are checked/restored, native errors reject execution, no context or GLresources are created through this reader, and the exact binary64 input echo remains mandatory. This corrects integer ingress/readback semantics without accepting approximate bits or relaxing optics. Previous failures remain archived.
+
+## Attempt07 strict GL-state rejection and prospective per-stage audit
+
+Frozenf062b0761a305a1076d4b3bd8cc71bbde9d81bd6/profileaf503e75/source70verified. The native integer reader correctly rejects GL_INVALID_VALUE0x501 before reading; no field result. Full22.523154seconds/RSS358.816406MiB. [Retained failure](validation/native-graphics-field-2026-10-09/attempt07/evidence_index.json).
+
+The [v8 profile](research/native_graphics_field_profile_v8_2026-10-09.json) records/drains any pre-existing GLerrors once before constructing the owned field kernel, without claiming the preceding geometry/context was error-free. It then records each owned object/rayUBO,shader,VBO,texture,framebuffer,clear,state,binding,draw and readback stage and rejects every newly raised error. This distinguishes stale context errors from faults in this kernel; none of its own errors are ignored. Optical arithmetic, binary64 echo, native integer reading and all150validation gates remain unchanged. The recorded stage audit is retained even if initialization fails.
+
+## Attempt08 localization and prospective native driver messages
+
+Frozen 1c35254d2383a190425fe30c8cfa030676db8201, profile 771d626f, 74 pinned files. No pre-existing GL errors were found. Object UBO creation passes; shader creation introduces GL_INVALID_VALUE 0x501. Transport is rejected before accepting any optical result. Full 22.146367 seconds; peak owned RSS 361.0625 MiB. [Retained stage audit and failure](validation/native-graphics-field-2026-10-09/attempt08/evidence_index.json).
+
+The [v9 profile](research/native_graphics_field_profile_v9_2026-10-09.json) adds a bounded synchronous Khronos debug callback in the owned disposable factory context. It retains the native driver's diagnostic messages around shader creation. Arithmetic, binary64 echo, raw integer readback and all numerical gates remain unchanged. Every newly raised GL error still rejects the trial. No error is waived.
+
+## Attempt09 driver message and prospective lifecycle correction
+
+Frozen dc6f924b111e71a774633ab748aaf29a279d1da6, profile e0067e7a, 78 pinned files. Native driver messages identify an invalid/deleted program handle during shader creation. No optical fields are accepted. Full 22.127184 seconds; peak owned RSS 358.792969 MiB. [Retained diagnostic](validation/native-graphics-field-2026-10-09/attempt09/evidence_index.json).
+
+The [v10 profile](research/native_graphics_field_profile_v10_2026-10-09.json) unbinds the previous owned geometry shader through `gpu.shader.unbind()` before releasing that backend. Blender 4.5.14 source `gl_shader_interface.cc` saves the current program, binds the new program and restores the previous handle; deleting a still-bound old program can invalidate that saved handle when the new one is bound. This explains the observed error but remains a hypothesis until the next trial. FP64 field code, bit echo, strict GL stage checks, integer readback and all numerical gates remain unchanged.
+
+## Attempt10 release-build unbind and prospective actual binding verification
+
+Frozen 713dc69f840ae3282cae88d16c81f649a8eafabb, profile b7951e03, 79 pinned files. Calling `gpu.shader.unbind()` alone leaves the same invalid previous-program restoration error. No fields. Full 21.917312 seconds; peak owned RSS 350.75 MiB. [Retained failure](validation/native-graphics-field-2026-10-09/attempt10/evidence_index.json).
+
+Inspection of the exact [Blender 4.5.14 primary source](https://github.com/blender/blender/blob/v4.5.14/source/blender/gpu/opengl/gl_shader.cc) reveals `GLShader::unbind()` calls `glUseProgram(0)` only under `#ifndef NDEBUG`. The [v11 profile](research/native_graphics_field_profile_v11_2026-10-09.json) therefore resets Blender's shader state and calls documented `glUseProgram(0)` in the same owned factory context, verifies actual `GL_CURRENT_PROGRAM == 0`, then destroys the previous owned backend. It records the old/new binding and every GL error. Arithmetic and all original numerical gates remain unchanged.
+
+## Result: actual captured-surface FP64 fragment transport passes
+
+Frozen `95f58608afc308c4b2bcc53985d866064b8d3b9d`, profile SHA `90f7701c9d5a748a4fc53067f749dc1442fd2d6a54dbd096e721b6a69510df18`, 81 pinned files, publication and byte identity verified before execution. The lifecycle correction verifies the old owned program is genuinely unbound before destruction. No new GL error occurs during shader creation, triangle draws, buffer binding or exact integer reading; every recorded input binary64 echo matches uploaded bits.
+
+Actual RTX 3090/OpenGL fragment shaders reselect the captured triangle surface for every state and input, derive ray-plane distance and optical phase from captured planes and wavelength, and compute propagated/splitter/mirror/terminal complex fields in FP64. No precomputed transfer matrix, expected surface IDs or precomputed edge phase weights are fed to this field shader. All three 150-input repetitions pass: 19,950 actual geometric queries each, 133 states, 186 graph edges, 17,060 represented path occurrences, identical 150 predictions and 27/30 held-out correct. Maximum observed complex field difference is **7.501049965432943e-14**, power difference **7.216449660063518e-15** and local transport discrepancy **7.701387660778206e-15**, all below the unchanged 1e-11 gates.
+
+Four actual GPU controls verify common phase, separate source bases and destructive coherent superposition. Maximum control complex discrepancy is 1.2621282740001445e-13. Coherent power differs from an independent-source intensity sum by up to 0.273758785263555, so intensity-only accumulation would implement a different network.
+
+Exact CPU admission/topology and compensated coherent merging remain explicit. GPU transport plus CPU merging costs 2.507488/3.233202/3.480322 seconds per 150-input repetition. CPU phase-only reuse costs 0.458412/0.455869/0.460876 seconds and does not reselect geometry, so these timings are not an equivalent speed comparison. Fresh exact-verified GPU geometry costs 10.051819 seconds, independent graph audit 5.597693 seconds, capture 1.641456 seconds and field pack/compile/upload 0.389907 seconds. The full supervised process costs **36.618470 seconds**, peak owned RSS **403.04 MiB**, sampled whole-device memory at most 599 MiB and sampled utilization at most 17%; these samples are not energy or kernel occupancy measurements.
+
+This result demonstrates actual graphical geometry and coherent field execution, rather than substituting dense-matrix multiplication. It does not demonstrate hardware RT cores, GPU training gradients, AMD, physical fidelity, rigorous bounds on unobserved GPU rounding or superiority over equivalent baselines. Secondary certificates for these newly observed fields remain pending at publication of this result. Earlier null trials and their API diagnostics are retained.
+
+[Evidence index](validation/native-graphics-field-2026-10-09/attempt11/evidence_index.json), [result](validation/native-graphics-field-2026-10-09/attempt11/worker/result.json), [supervision](validation/native-graphics-field-2026-10-09/attempt11/supervisor.json).
+
+![Actual coherent graphics transport](assets/native-graphics-coherent-fields-2026-10-09.png)
+
+The separately frozen [secondary interval study](NATIVE_GRAPHICS_FIELD_CERTIFICATE_PROTOCOL_2026-10-09.md) now bounds all 450 recorded graphical outputs and all four coherence controls within the unchanged budgets. Its scope remains observed execution against the exact represented scalar model.

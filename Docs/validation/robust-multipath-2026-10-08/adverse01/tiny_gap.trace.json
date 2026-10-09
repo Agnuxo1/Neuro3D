@@ -1,0 +1,155 @@
+{
+  "schema": "neuro3d-exact-multipath-v1",
+  "backend": "CPU_FRACTION",
+  "status": "COMPLETE",
+  "fields": {
+    "out": {
+      "real": 1.0,
+      "imag": 2.854422362876967e-12
+    }
+  },
+  "powers": {
+    "out": 1.0
+  },
+  "paths": [
+    {
+      "source_id": "input",
+      "terminal": "out",
+      "source_reim": [
+        {
+          "numerator": 1,
+          "denominator": 1
+        },
+        {
+          "numerator": 0,
+          "denominator": 1
+        }
+      ],
+      "direction_norm_squared": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "parameter_length": {
+        "numerator": 17592186044417,
+        "denominator": 17592186044416
+      },
+      "phase_length_numerator": {
+        "numerator": 17592186044417,
+        "denominator": 17592186044416
+      },
+      "power_factor": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "mirror_phase": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "quarter_turns": 0,
+      "hits": [
+        {
+          "object_id": "bs",
+          "primitive_id": 0,
+          "coincident_primitives": [
+            0
+          ],
+          "parameter": {
+            "numerator": 1,
+            "denominator": 1
+          },
+          "point": [
+            {
+              "numerator": 1,
+              "denominator": 1
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            }
+          ],
+          "direction": [
+            {
+              "numerator": 1,
+              "denominator": 1
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            }
+          ],
+          "event": "t",
+          "coefficient_power": {
+            "numerator": 1,
+            "denominator": 1
+          }
+        },
+        {
+          "object_id": "out",
+          "primitive_id": 1,
+          "coincident_primitives": [
+            1
+          ],
+          "parameter": {
+            "numerator": 1,
+            "denominator": 17592186044416
+          },
+          "point": [
+            {
+              "numerator": 17592186044417,
+              "denominator": 17592186044416
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            }
+          ],
+          "direction": [
+            {
+              "numerator": 1,
+              "denominator": 1
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            },
+            {
+              "numerator": 0,
+              "denominator": 1
+            }
+          ],
+          "event": "det"
+        }
+      ]
+    }
+  ],
+  "unresolved": [],
+  "rays": 2,
+  "input_power_exact": {
+    "numerator": 1,
+    "denominator": 1
+  },
+  "input_power": 1.0,
+  "output_power": 1.0,
+  "exact_zero_branches": 1,
+  "departure_exclusions": 1,
+  "wavelength": {
+    "numerator": 1,
+    "denominator": 8
+  },
+  "ports": [
+    "out"
+  ],
+  "field_certified": false
+}

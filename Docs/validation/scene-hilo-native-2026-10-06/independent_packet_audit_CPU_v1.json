@@ -1,0 +1,186 @@
+{
+  "schema": "neuro3d.scene_hilo.independent_packet_audit.cpu.v1",
+  "status": "PASS_CPU_PACKET_AUDIT",
+  "verification_passed": true,
+  "created_utc": "2026-10-06T22:29:40.568784+00:00",
+  "scope": "Independent read-only audit of prepared scene packets; no Blender or GPU execution by this auditor",
+  "native_gpu_executed": false,
+  "Blender_executed_by_auditor": false,
+  "codec_or_producer_imports": 0,
+  "native_original_transport_joins": 0,
+  "physical_precision_certified": false,
+  "phase_certified": false,
+  "first_hit_certified": false,
+  "input_manifest": {
+    "path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\inputs01\\input_manifest.json",
+    "sha256": "81daaf472db2e021fc6686976ab18dd75eac52cd65565a0d011689f215bc5dc1"
+  },
+  "prepare_report": {
+    "path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\inputs01\\prepare_report.json",
+    "sha256": "e552df4022f66869b084bde11c208ff566b2a25ba6fede5601c987bfb44c0726"
+  },
+  "code_pins": {
+    "Blender\\tests\\scene_hilo_prepare_inputs_v1.py": "d4d23e3b381867f0d4ea2f6cc61028f20f2d0b27c2a17e0f9d6a25dfefba27ef",
+    "Blender\\tests\\exp005_scene_readback.py": "cd7fb6bd208ac89bcc80bae89abd56c3d09dbfabbd650525d7c9dc20d2f7a2b1",
+    "Blender\\tests\\exp005_scene_properties.py": "9996efb2389df8bbac62a14dbdf999cf1a5a325572e1617f08a046f56092041a",
+    "Blender\\benchmarks\\capacity_audit\\scene_hilo_transport_v1.py": "4bd86b411208c8a676c8a2c97926ce001ac781568913d5312906c591e02ca5ad",
+    "Blender\\benchmarks\\capacity_audit\\oblique_exact_scalar_hilo32_CPU_v1.py": "775e48b3507aa5b86bd96818f50e208e92d72e03b99d8862f816247418867a97"
+  },
+  "artifact_pins": [
+    {
+      "case_id": "k3_baseline",
+      "files": {
+        "blend": {
+          "path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\inputs01\\K3_base.blend",
+          "sha256": "9ae126a748a4440712847a63c9f46abd4ec121d721ec6535fc160b4f9dd141e1",
+          "bytes": 583988
+        },
+        "packet": {
+          "path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\inputs01\\k3_baseline.packet.json",
+          "sha256": "5c1da53154bebdcc0fb2953777c06f19c5c20b3b9277ad7d8eecffa61c03806f",
+          "bytes": 256021
+        },
+        "snapshot": {
+          "path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\inputs01\\k3_baseline.snapshot.json",
+          "sha256": "4e7ff61c43b657f581deeaba54b24effb825c9d209f843c8e6902cc8b49604c3",
+          "bytes": 13750
+        },
+        "wire": {
+          "path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\inputs01\\k3_baseline.wire.bin",
+          "sha256": "8da0e8bea709b44e2d0be9e4b28b3f282110de01da3469702e50690c0fe5bae5",
+          "bytes": 15904
+        }
+      }
+    },
+    {
+      "case_id": "k4_baseline",
+      "files": {
+        "blend": {
+          "path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\inputs01\\K4_base.blend",
+          "sha256": "000796d5e01ca8f6ae411b2e2ec2d52f628ef4dc3b6e0924da7cf8f0dc245d55",
+          "bytes": 542014
+        },
+        "packet": {
+          "path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\inputs01\\k4_baseline.packet.json",
+          "sha256": "a284cfe711991327f234f122821b64e3ec77f6b8fda35bf18b53403b3ae9c55c",
+          "bytes": 333252
+        },
+        "snapshot": {
+          "path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\inputs01\\k4_baseline.snapshot.json",
+          "sha256": "810d80d8cf61be03d26f8e5ca011cf4449e8ea29867a8d33ae5bb2bdf75beea4",
+          "bytes": 17968
+        },
+        "wire": {
+          "path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\inputs01\\k4_baseline.wire.bin",
+          "sha256": "f9cdd1ca97f0c6455bf8e6049eafdcff01ccb234cfc0bc9c7798ba23938ab860",
+          "bytes": 20704
+        }
+      }
+    },
+    {
+      "case_id": "controlled_numeric",
+      "files": {
+        "blend": {
+          "path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\inputs01\\controlled_numeric.blend",
+          "sha256": "7b70f8eb4bbd4bc62082620ff6eeb21294370d672f7557aa66390f3795e23b9a",
+          "bytes": 383968
+        },
+        "packet": {
+          "path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\inputs01\\controlled_numeric.packet.json",
+          "sha256": "04b4376bf96cafe8d22998480f42f3df26db757f4b13c3ff21274b93e25477cd",
+          "bytes": 41340
+        },
+        "snapshot": {
+          "path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\inputs01\\controlled_numeric.snapshot.json",
+          "sha256": "b475d619944ea62872a5532f4f02dd87d33a064dd22de8dcef552900c98a2651",
+          "bytes": 2264
+        },
+        "wire": {
+          "path": "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\inputs01\\controlled_numeric.wire.bin",
+          "sha256": "4275efe687bf7dae911e444ab6562fe12d7d37335a3bb6e535bf4947d4ae27b0",
+          "bytes": 2464
+        }
+      }
+    }
+  ],
+  "auditor_source_sha256": "2dd14bbceb8db9782c28376ffc2f2a1276ef0b2d207985daeb85ac94554ddb67",
+  "auditor_source": "from pathlib import Path\nfrom fractions import Fraction as F\nimport json,struct,hashlib,math\nbase=Path(r\"D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point04\\inputs01\")\nsh=lambda b:hashlib.sha256(b).hexdigest()\nraw=(base/\"input_manifest.json\").read_bytes()\nassert sh(raw)==\"81daaf472db2e021fc6686976ab18dd75eac52cd65565a0d011689f215bc5dc1\"\njob=json.loads(raw); prep=json.loads((base/\"prepare_report.json\").read_bytes())\nreports=[]\nroles={\"origin\":1,\"raw_direction\":2,\"direction_bound\":3,\"field\":4,\"vertex\":5,\"mode_origin\":8,\"mode_direction\":9,\"wavelength\":10}\nkinds={\"bs\":0,\"mirror\":1,\"det\":2,\"escape\":3}\nd32=lambda w:F.from_float(struct.unpack(\"<f\",struct.pack(\"<I\",w))[0])\nfor case,evidence in zip(job[\"cases\"],prep[\"cases\"]):\n    packet_raw=Path(case[\"packet_path\"]).read_bytes(); assert sh(packet_raw)==case[\"packet_sha256\"]\n    assert sh(Path(case[\"blend_path\"]).read_bytes())==case[\"blend_sha256\"]\n    packet=json.loads(packet_raw); m=packet[\"manifest\"]; s=m[\"snapshot\"]; bounds=m[\"direction_bounds\"] or {}\n    wire=bytes.fromhex(packet[\"wire_hex\"]); w=list(struct.unpack(\"<%dI\"%(len(wire)//4),wire))\n    assert wire==Path(evidence[\"wire_path\"]).read_bytes()\n    assert sh(wire)==m[\"wire_sha256\"]==evidence[\"wire_sha256\"]\n    assert s==json.loads(Path(evidence[\"snapshot_path\"]).read_bytes())\n    assert sh(Path(evidence[\"snapshot_path\"]).read_bytes())==evidence[\"snapshot_sha256\"]\n    expected=[]; sr=[]; vr=[]; tr=[]; obj_names=sorted(s[\"objects\"])\n    for si,source in enumerate(s[\"sources\"]):\n        first=len(expected); intervals=bounds.get(source[\"id\"],[[v,v] for v in source[\"direction\"]])\n        for role,values,endpoint in ((\"origin\",source[\"position_BU\"],0),(\"raw_direction\",source[\"direction\"],0),\n            (\"direction_bound\",[v[0] for v in intervals],0),(\"direction_bound\",[v[1] for v in intervals],1),\n            (\"field\",source[\"field_reim\"],0)):\n            for axis,value in enumerate(values): expected.append((role,si,0,axis,endpoint,float(value)))\n        sr.append([si,0xffffffff]+list(range(first,first+14))+[0]*16)\n    for oi,name in enumerate(obj_names):\n        obj=s[\"objects\"][name]; start_vertex=len(vr)\n        for vi,position in enumerate(obj[\"vertices_world_BU\"]):\n            indices=[]\n            for axis,value in enumerate(position):\n                indices.append(len(expected)); expected.append((\"vertex\",oi,vi,axis,0,float(value)))\n            vr.append([len(vr),oi,vi]+indices+[0,0])\n        for fi,face in enumerate(obj[\"faces\"]):\n            assert len(face)==3 and len(set(face))==3\n            tr.append([len(tr),oi,fi]+[start_vertex+i for i in face]+[kinds[obj[\"kind\"]],0])\n        if obj[\"kind\"] in (\"det\",\"escape\"):\n            for key,role in ((\"mode_origin_BU\",\"mode_origin\"),(\"mode_direction\",\"mode_direction\")):\n                for axis,value in enumerate(obj[key]): expected.append((role,oi,0,axis,0,float(value)))\n        mm=m[\"material_binary64_metadata\"][oi]; assert mm[\"object_id\"]==name\n        for key,value in obj.items():\n            if key in (\"phase_rad\",\"power_transmittance\"):\n                assert mm[\"parameters\"][key][\"binary64_words\"]==list(struct.unpack(\"<II\",struct.pack(\"<d\",float(value))))\n                assert mm[\"parameters\"][key][\"numeric_ABI\"] is False\n    expected.append((\"wavelength\",0xffffffff,0,0,0,float(s[\"lambda_BU\"])))\n    assert len(expected)==w[4]==len(m[\"scalars\"])\n    assert sr==m[\"source_records\"] and vr==m[\"vertex_records\"] and tr==m[\"triangle_records\"]\n    lows=0\n    for i,(role,owner,element,component,endpoint,value) in enumerate(expected):\n        record=w[32+i*8:40+i*8]\n        assert record[2:]==[roles[role],owner,element,component,endpoint,0]\n        assert math.isfinite(value) and d32(record[0])+d32(record[1])==F.from_float(value)\n        assert m[\"scalars\"][i][\"observed_binary64_words\"]==list(struct.unpack(\"<II\",struct.pack(\"<d\",value)))\n        assert F(*m[\"scalars\"][i][\"exact_input\"])==F.from_float(value)\n        assert m[\"scalars\"][i][\"residual_exact\"]==[0,1]\n        lows+=(record[1]&0x7fffffff)!=0\n    so=32+len(expected)*8; vo=so+len(sr)*32; to=vo+len(vr)*8; total=to+len(tr)*8\n    header=[0x4e33484c,1,32,total,len(expected),32,8,len(sr),so,32,len(vr),vo,8,len(tr),to,8,len(obj_names),len(expected)-1,0]+[0]*13\n    assert w[:32]==header\n    expected_words=header+w[32:32+len(expected)*8]+sum(sr,[])+sum(vr,[])+sum(tr,[])\n    assert w==expected_words\n    assert m[\"source_order\"]==[x[\"id\"] for x in s[\"sources\"]] and m[\"object_order\"]==obj_names\n    assert len(sr)==w[7] and len(vr)==w[10] and len(tr)==w[13]\n    rows=len(sr)*len(vr)+len(sr)+2*len(tr)\n    reports.append(dict(case=case[\"case_id\"],objects=len(obj_names),sources=len(sr),vertices=len(vr),triangles=len(tr),scalars=len(expected),nonzero_lows=lows,wire_bytes=len(wire),rows_per_mode=rows,components_per_mode=3*rows))\nassert prep[\"native_gpu_executed\"] is False\nprint(json.dumps(dict(status=\"PASS_CPU_INDEPENDENT_SAVED_PACKET_AUDIT\",cases=reports,native_executed=False,codec_or_producer_imports=0),sort_keys=True))\n",
+  "checks": [
+    "Pinned input/packet/blend/snapshot/wire SHA256 and byte equality",
+    "Independent struct IEEE32 decoding plus exact Fraction sum against observed binary64",
+    "Independent complete ABI header, offsets, counts, strides and reserved words",
+    "Complete source/vertex/triangle tables, source and object identity ordering",
+    "Retained scalar original binary64 words and zero rational residual",
+    "Material phase/transmittance retained as raw binary64 metadata outside numeric ABI"
+  ],
+  "cases": [
+    {
+      "case": "k3_baseline",
+      "objects": 22,
+      "sources": 4,
+      "vertices": 88,
+      "triangles": 44,
+      "scalars": 345,
+      "nonzero_lows": 0,
+      "wire_bytes": 15904,
+      "rows_per_mode": 444,
+      "components_per_mode": 1332
+    },
+    {
+      "case": "k4_baseline",
+      "objects": 29,
+      "sources": 5,
+      "vertices": 116,
+      "triangles": 58,
+      "scalars": 449,
+      "nonzero_lows": 0,
+      "wire_bytes": 20704,
+      "rows_per_mode": 701,
+      "components_per_mode": 2103
+    },
+    {
+      "case": "controlled_numeric",
+      "objects": 2,
+      "sources": 2,
+      "vertices": 8,
+      "triangles": 4,
+      "scalars": 53,
+      "nonzero_lows": 6,
+      "wire_bytes": 2464,
+      "rows_per_mode": 26,
+      "components_per_mode": 78
+    }
+  ],
+  "totals": {
+    "numeric_scalars": 847,
+    "sources": 11,
+    "vertices": 212,
+    "triangles": 106,
+    "wire_bytes": 39072,
+    "nonzero_input_low_limbs": 6,
+    "expected_rows_per_native_mode": 1171,
+    "expected_components_per_native_mode": 3513,
+    "native_dispatches_executed_by_auditor": 0
+  },
+  "review_findings": [
+    {
+      "area": "guard worker evidence acceptance",
+      "severity": "must_fix_before_launch",
+      "finding": "Read guard draft allowed dispatch_count up to 100000 without matching readback record count or pinned max_dispatches=6.",
+      "owner": "consolidation_review",
+      "state_at_audit": "Owner acknowledged; correction in progress. This artifact does not certify the revised guard."
+    },
+    {
+      "area": "native UINT texture API",
+      "severity": "blocked_before_GPU",
+      "finding": "Root/native agent reported pinned Blender texture construction/read paths use FLOAT and do not preserve the proposed UINT word route.",
+      "source": "Root message during review; independent packet arithmetic remains valid.",
+      "state_at_audit": "Native host path being revised; no native API PASS claimed."
+    },
+    {
+      "area": "numeric/output scope",
+      "severity": "scope_limit",
+      "finding": "Review of draft shader/runtime covers all source-by-vertex deltas, direction widths and both triangle edges; exactness must still be established on actual revised native output. No first-hit, full-tracer, phase or physical precision claim."
+    }
+  ]
+}

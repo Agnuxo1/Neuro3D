@@ -1,0 +1,142 @@
+#include "/Engine/Public/Platform.ush"
+
+#define THREADGROUP_SIZE 64
+#define PI 3.14159265359
+#define TWO_PI 6.28318530718
+
+// Layout is three float4 records per neuron:
+//   0: position.xyz, intensity
+//   1: phase, frequency, activation, energy
+//   2: color.rgb, unused
+// Edges are one float4: source, target, weight, delay.
+// Signals are three float4 records per edge:
+//   0: source, target, intensity, phase
+//   1: frequency, unused, unused, unused
+//   2: color.rgb, unused
+
+StructuredBuffer<float4> NeuronBuffer;
+StructuredBuffer<float4> EdgeBuffer;
+RWStructuredBuffer<float4> SignalBuffer;
+RWStructuredBuffer<float4> AccumulationBuffer;
+RWStructuredBuffer<float4> NeuronOutput;
+StructuredBuffer<float4> NeuronInput;
+
+uint NumNeurons;
+uint NumEdges;
+float DeltaSeconds;
+float Attenuation;
+float ActivationThreshold;
+
+float3 SafeNormalizeColor(float3 Value)
+{
+    const float LengthSquared = dot(Value, Value);
+    return LengthSquared > 1e-8 ? Value * rsqrt(LengthSquared) : float3(1.0, 1.0, 1.0);
+}
+
+[numthreads(THREADGROUP_SIZE, 1, 1)]
+void EmitSignalsCS(uint3 DispatchThreadId : SV_DispatchThreadID)
+{
+    const uint EdgeId = DispatchThreadId.x;
+    if (EdgeId >= NumEdges)
+    {
+        return;
+    }
+
+    const uint EdgeBase = EdgeId;
+    const uint SourceId = (uint)EdgeBuffer[EdgeBase].x;
+    const uint TargetId = (uint)EdgeBuffer[EdgeBase].y;
+    const float Weight = max(0.0, EdgeBuffer[EdgeBase].z);
+    const float Delay = max(0.0, EdgeBuffer[EdgeBase].w);
+    const uint SourceBase = SourceId * 3;
+    const float4 PositionIntensity = NeuronBuffer[SourceBase + 0];
+    const float4 OpticalState = NeuronBuffer[SourceBase + 1];
+    const float4 SourceColor = NeuronBuffer[SourceBase + 2];
+
+    const float TravelAttenuation = exp(-Attenuation * Delay);
+    const float Intensity = max(0.0, PositionIntensity.w) * max(0.0, OpticalState.z) * Weight * TravelAttenuation;
+    const float Phase = OpticalState.x + TWO_PI * OpticalState.y * (DeltaSeconds - Delay);
+    const uint SignalBase = EdgeId * 3;
+
+    SignalBuffer[SignalBase + 0] = float4((float)SourceId, (float)TargetId, Intensity, Phase);
+    SignalBuffer[SignalBase + 1] = float4(OpticalState.y, 0.0, 0.0, 0.0);
+    SignalBuffer[SignalBase + 2] = float4(SafeNormalizeColor(SourceColor.xyz), 0.0);
+}
+
+[numthreads(THREADGROUP_SIZE, 1, 1)]
+void AccumulateFieldsCS(uint3 DispatchThreadId : SV_DispatchThreadID)
+{
+    const uint NeuronId = DispatchThreadId.x;
+    if (NeuronId >= NumNeurons)
+    {
+        return;
+    }
+
+    float3 RealField = 0.0;
+    float3 ImaginaryField = 0.0;
+    float WeightedFrequency = 0.0;
+    float TotalWeight = 0.0;
+
+    // The first slice intentionally uses a deterministic scan. A tiled edge
+    // index will replace this O(N*E) path after the parity test is in place.
+    for (uint EdgeId = 0; EdgeId < NumEdges; ++EdgeId)
+    {
+        const uint SignalBase = EdgeId * 3;
+        const float4 SignalHeader = SignalBuffer[SignalBase + 0];
+        if ((uint)SignalHeader.y != NeuronId)
+        {
+            continue;
+        }
+
+        const float Intensity = max(0.0, SignalHeader.z);
+        const float Phase = SignalHeader.w;
+        const float2 PhaseVector = float2(cos(Phase), sin(Phase));
+        const float3 Color = max(0.0, SignalBuffer[SignalBase + 2].xyz);
+        const float Frequency = max(0.0, SignalBuffer[SignalBase + 1].x);
+
+        RealField += Color * (Intensity * PhaseVector.x);
+        ImaginaryField += Color * (Intensity * PhaseVector.y);
+        WeightedFrequency += Frequency * Intensity;
+        TotalWeight += Intensity;
+    }
+
+    const uint AccumulationBase = NeuronId * 2;
+    AccumulationBuffer[AccumulationBase + 0] =
+        float4(RealField.r, RealField.g, RealField.b, ImaginaryField.r);
+    AccumulationBuffer[AccumulationBase + 1] =
+        float4(ImaginaryField.g, ImaginaryField.b, WeightedFrequency, TotalWeight);
+}
+
+[numthreads(THREADGROUP_SIZE, 1, 1)]
+void UpdateNeuronsCS(uint3 DispatchThreadId : SV_DispatchThreadID)
+{
+    const uint NeuronId = DispatchThreadId.x;
+    if (NeuronId >= NumNeurons)
+    {
+        return;
+    }
+
+    const uint NeuronBase = NeuronId * 3;
+    const uint AccumulationBase = NeuronId * 2;
+    const float4 PositionIntensity = NeuronInput[NeuronBase + 0];
+    const float4 OpticalState = NeuronInput[NeuronBase + 1];
+    const float4 PreviousColor = max(0.0, NeuronInput[NeuronBase + 2]);
+    const float4 RealAndImaginaryR = AccumulationBuffer[AccumulationBase + 0];
+    const float4 ImaginaryGAndB = AccumulationBuffer[AccumulationBase + 1];
+
+    const float3 RealField = RealAndImaginaryR.xyz;
+    const float3 ImaginaryField = float3(RealAndImaginaryR.w, ImaginaryGAndB.x, ImaginaryGAndB.y);
+    const float3 FieldPower = RealField * RealField + ImaginaryField * ImaginaryField;
+    const float TotalPower = dot(FieldPower, float3(1.0, 1.0, 1.0));
+    const float Response = saturate(1.0 - exp(-TotalPower / max(ActivationThreshold, 1e-5)));
+    const float3 FieldColor = SafeNormalizeColor(sqrt(max(FieldPower, 0.0)));
+    const float Frequency = ImaginaryGAndB.z / max(ImaginaryGAndB.w, 1e-5);
+    const float Phase = atan2(dot(ImaginaryField, FieldColor), dot(RealField, FieldColor));
+
+    const float NewIntensity = lerp(PositionIntensity.w * 0.985, sqrt(max(TotalPower, 0.0)), saturate(DeltaSeconds * 8.0));
+    const float NewEnergy = saturate(OpticalState.w - NewIntensity * DeltaSeconds * 0.01 + Response * DeltaSeconds * 0.03);
+    const float3 NewColor = lerp(SafeNormalizeColor(PreviousColor.xyz), FieldColor, saturate(DeltaSeconds * 10.0));
+
+    NeuronOutput[NeuronBase + 0] = float4(PositionIntensity.xyz, NewIntensity);
+    NeuronOutput[NeuronBase + 1] = float4(Phase, max(Frequency, OpticalState.y), Response, NewEnergy);
+    NeuronOutput[NeuronBase + 2] = float4(NewColor, 0.0);
+}

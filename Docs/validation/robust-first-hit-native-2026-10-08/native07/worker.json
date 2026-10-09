@@ -1,0 +1,64 @@
+{
+  "schema": "neuro3d.robust_first_hit.native_report.v1",
+  "status": "FAIL",
+  "verification_passed": false,
+  "job_id": "fe014e9d-da13-445b-a2ef-c7ddd9cfd6a7",
+  "input_manifest_sha256": "1ba451212cc136442ea34a1ec9a7cefd44fdf366211f28813590f21b732ba800",
+  "native_gpu_executed": false,
+  "native_gpu_execution_attempted": false,
+  "gpu_dispatch_count": 0,
+  "completed_readbacks": 0,
+  "gpu_readback_records": [],
+  "gpu_readback_sha256": null,
+  "scope": {
+    "numeric_domain": "exact signed512 Moller-Trumbore over admitted hi/lo scene packet",
+    "fixed_origin_bias": false,
+    "epsilon_hit_band": false,
+    "previous_primitive_global_exclusion": false,
+    "exact_zero_departure_exclusion": true,
+    "same_surface_triangulation_equivalence": true,
+    "phase_certified": false,
+    "full_path_visibility_certified": false,
+    "physical_uncertainty_certified": false,
+    "hardware_RT_or_BVH": false,
+    "speed_advantage_claimed": false
+  },
+  "cases": [],
+  "backend": "OPENGL",
+  "vendor": "NVIDIA Corporation",
+  "renderer": "NVIDIA GeForce RTX 3090/PCIe/SSE2",
+  "driver_version": "4.6.0 NVIDIA 581.29",
+  "background": false,
+  "blender_version": "4.5.14 LTS",
+  "blender_build_hash": "62c1db4208e8",
+  "private_exit_settings": {
+    "save_user_preferences": false,
+    "save_prompt": false,
+    "temporary_autosave": false
+  },
+  "code_sha256": {
+    "Blender\\tests\\robust_first_hit_native_v1.py": "5448d2bf5011b3adfe1621cc7b5fe9baf650010cbacfe1be0aa2741b9921e6b4",
+    "Blender\\benchmarks\\capacity_audit\\scene_hilo_gpu_v1.py": "539179dfdd72f8cdd6c3f171526dbbf70c81bc9b7a568691c12c0071246bee7a",
+    "Blender\\shaders\\scene_hilo_transport_v1.glsl": "cd9eead03d96aca64ef5e6c5bce8b71a97f0f994a0656ceb9363a3894e634d31",
+    "Blender\\benchmarks\\capacity_audit\\scene_hilo_transport_v1.py": "4bd86b411208c8a676c8a2c97926ce001ac781568913d5312906c591e02ca5ad",
+    "Blender\\benchmarks\\capacity_audit\\oblique_exact_scalar_hilo32_CPU_v1.py": "775e48b3507aa5b86bd96818f50e208e92d72e03b99d8862f816247418867a97",
+    "Blender\\shaders\\robust_first_hit_exact_v1.glsl": "c2a9239fce76e308685be26e23ef371d63208ca75297a77b02e11d8655a96e19",
+    "Blender\\benchmarks\\capacity_audit\\axial_native_signed512_v1.glsl": "e1f2ff0ca905ee29e8afa0440e9abdaa4a4127be23fe20d29e29c25af68f236f",
+    "Blender\\tests\\exp005_blender_gpu.py": "851f29f9b1fb9b22948f59597d40fa8a55828040673fe0050d24e077b57cf497"
+  },
+  "compile_options": [
+    "#pragma optionNV(unroll none)",
+    "#pragma optionNV(inline 0)"
+  ],
+  "compile_diagnostic": {
+    "dispatches": 0,
+    "source_sha256": "35c124e4924f01c5450dadc4f290e21c1cbb03223eec23bd8afd7281a0fecc0b",
+    "stage_compiled": true,
+    "stage_log": "",
+    "program_linked": false,
+    "program_log": "Compute info\n------------\n0(308) : warning C7050: \"origin.x.w[0]\" might be used before being initialized\n0(308) : warning C7050: \"origin.x.w[1]\" might be used before being initialized\n0(308) : warning C7050: \"origin.x.w[2]\" might be used before being initialized\n0(308) : warning C7050: \"origin.x.w[3]\" might be used before being initialized\n0(308) : warning C7050: \"origin.x.w[4]\" might be used before being initialized\n0(308) : warning C7050: \"origin.x.w[5]\" might be used before being initialized\n0(308) : warning C7050: \"origin.x.w[6]\" might be used before being initialized\n0(308) : warning C7050: \"origin.x.w[7]\" might be used before being initialized\n0(308) : warning C7050: \"origin.x.w[8]\" might be used before being initialized\n0(308) : warning C7050: \"origin.x.w[9]\" might be used before being initialized\n0(308) : warning C7050: \"origin.x.w[10]\" might be used before being initialized\n0(308) : warning C7050: \"origin.x.w[11]\" might be used before being initialized\n0(308) : warning C7050: \"origin.x.w[12]\" might be used before being initialized\n0(308) : warning C7050: \"origin.x.w[13]\" might be used before being initialized\n0(308) : warning C7050: \"origin.x.w[14]\" might be used before being initialized\n0(308) : warning C7050: \"origin.x.w[15]\" might be used before being initialized\n0(308) : warning C7050: \"origin.y.w[0]\" might be used before being initialized\n0(308) : warning C7050: \"origin.y.w[1]\" might be used before being initialized\n0(308) : warning C7050: \"origin.y.w[2]\" might be used before being initialized\n0(308) : warning C7050: \"origin.y.w[3]\" might be used before being initialized\n0(308) : warning C7050: \"origin.y.w[4]\" might be used before being initialized\n0(308) : warning C7050: \"origin.y.w[5]\" might be used before being initialized\n0(308) : warning C7050: \"origin.y.w[6]\" might be used before being initialized\n0(308) : warning C7050: \"origin.y.w[7]\" might be used before being initialized\n0(308) : warning C7050: \"origin.y.w[8]\" might be used before being initialized\n0(308) : warning C7050: \"origin.y.w[9]\" might be used before being initialized\n0(308) : warning C7050: \"origin.y.w[10]\" might be used before being initialized\n0(308) : warning C7050: \"origin.y.w[11]\" might be used before being initialized\n0(308) : warning C7050: \"origin.y.w[12]\" might be used before being initialized\n0(308) : warning C7050: \"origin.y.w[13]\" might be used before being initialized\n0(308) : warning C7050: \"origin.y.w[14]\" might be used before being initialized\n0(308) : warning C7050: \"origin.y.w[15]\" might be used before being initialized\n0(308) : warning C7050: \"origin.z.w[0]\" might be used before being initialized\n0(308) : warning C7050: \"origin.z.w[1]\" might be used before being initialized\n0(308) : warning C7050: \"origin.z.w[2]\" might be used before being initialized\n0(308) : warning C7050: \"origin.z.w[3]\" might be used before being initialized\n0(308) : warning C7050: \"origin.z.w[4]\" might be used before being initialized\n0(308) : warning C7050: \"origin.z.w[5]\" might be used before being initialized\n0(308) : warning C7050: \"origin.z.w[6]\" might be used before being initialized\n0(308) : warning C7050: \"origin.z.w[7]\" might be used before being initialized\n0(308) : warning C7050: \"origin.z.w[8]\" might be used before being initialized\n0(308) : warning C7050: \"origin.z.w[9]\" might be used before being initialized\n0(308) : warning C7050: \"origin.z.w[10]\" might be used before being initialized\n0(308) : warning C7050: \"origin.z.w[11]\" might be used before being initialized\n0(308) : warning C7050: \"origin.z.w[12]\" might be used before being initialized\n0(308) : warning C7050: \"origin.z.w[13]\" might be used before being initialized\n0(308) : warning C7050: \"origin.z.w[14]\" might be used before being initialized\n0(308) : warning C7050: \"origin.z.w[15]\" might be used before being initialized\n0(308) : warning C7050: \"direction.x.w[0]\" might be used before being initialized\n0(308) : warning C7050: \"direction.x.w[1]\" might be used before being initialized\n0(308) : warning C7050: \"direction.x.w[2]\" might be used before being initialized\n0(308) : warning C7050: \"direction.x.w[3]\" might be used before being initialized\n0(308) : warning C7050: \"direction.x.w[4]\" might be used before being initialized\n0(308) : warning C7050: \"direction.x.w[5]\" might be used before being initialized\n0(308) : warning C7050: \"direction.x.w[6]\" might be used before being initialized\n0(308) : warning C7050: \"direction.x.w[7]\" might be used before being initialized\n0(308) : warning C7050: \"direction.x.w[8]\" might be used before being initialized\n0(308) : warning C7050: \"direction.x.w[9]\" might be used before being initialized\n0(308) : warning C7050: \"direction.x.w[10]\" might be used before being initialized\n0(308) : warning C7050: \"direction.x.w[11]\" might be used before being initialized\n0(308) : warning C7050: \"direction.x.w[12]\" might be used before being initialized\n0(308) : warning C7050: \"direction.x.w[13]\" might be used before being initialized\n0(308) : warning C7050: \"direction.x.w[14]\" might be used before being initialized\n0(308) : warning C7050: \"direction.x.w[15]\" might be used before being initialized\n0(308) : warning C7050: \"direction.y.w[0]\" might be used before being initialized\n0(308) : warning C7050: \"direction.y.w[1]\" might be used before being initialized\n0(308) : warning C7050: \"direction.y.w[2]\" might be used before being initialized\n0(308) : warning C7050: \"direction.y.w[3]\" might be used before being initialized\n0(308) : warning C7050: \"direction.y.w[4]\" might be used before being initialized\n0(308) : warning C7050: \"direction.y.w[5]\" might be used before being initialized\n0(308) : warning C7050: \"direction.y.w[6]\" might be used before being initialized\n0(308) : warning C7050: \"direction.y.w[7]\" might be used before being initialized\n0(308) : warning C7050: \"direction.y.w[8]\" might be used before being initialized\n0(308) : warning C7050: \"direction.y.w[9]\" might be used before being initialized\n0(308) : warning C7050: \"direction.y.w[10]\" might be used before being initialized\n0(308) : warning C7050: \"direction.y.w[11]\" might be used before being initialized\n0(308) : warning C7050: \"direction.y.w[12]\" might be used before being initialized\n0(308) : warning C7050: \"direction.y.w[13]\" might be used before being initialized\n0(308) : warning C7050: \"direction.y.w[14]\" might be used before being initialized\n0(308) : warning C7050: \"direction.y.w[15]\" might be used before being initialized\n0(308) : warning C7050: \"direction.z.w[0]\" might be used before being initialized\n0(308) : warning C7050: \"direction.z.w[1]\" might be used before being initialized\n0(308) : warning C7050: \"direction.z.w[2]\" might be used before being initialized\n0(308) : warning C7050: \"direction.z.w[3]\" might be used before being initialized\n0(308) : warning C7050: \"direction.z.w[4]\" might be used before being initialized\n0(308) : warning C7050: \"direction.z.w[5]\" might be used before being initialized\n0(308) : warning C7050: \"direction.z.w[6]\" might be used before being initialized\n0(308) : warning C7050: \"direction.z.w[7]\" might be used before being initialized\n0(308) : warning C7050: \"direction.z.w[8]\" might be used before being initialized\n0(308) : warning C7050: \"direction.z.w[9]\" might be used before being initialized\n0(308) : warning C7050: \"direction.z.w[10]\" might be used before being initialized\n0(308) : warning C7050: \"direction.z.w[11]\" might be used before being initialized\n0(308) : warning C7050: \"direction.z.w[12]\" might be used before being initialized\n0(308) : warning C7050: \"direction.z.w[13]\" might be used before being initialized\n0(308) : warning C7050: \"direction.z.w[14]\" might be used before being initialized\n0(308) : warning C7050: \"direction.z.w[15]\" might be used before being initialized\n(0) : fatal error C9999: out of memory - internal malloc failed\n"
+  },
+  "error": "Exception: Shader Compile Error, see console for more details",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\PROJECTS\\Neuro3D-Scientific-20261008\\Blender\\tests\\robust_first_hit_native_v1.py\", line 420, in main\n    shader = compile_shader(gpu, report)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\PROJECTS\\Neuro3D-Scientific-20261008\\Blender\\tests\\robust_first_hit_native_v1.py\", line 293, in compile_shader\n    return gpu.shader.create_from_info(info)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: Shader Compile Error, see console for more details\n",
+  "total_seconds": 5.570622999977786
+}

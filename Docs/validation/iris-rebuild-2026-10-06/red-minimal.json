@@ -1,0 +1,121 @@
+{
+  "schema": "neuro3d-rebuild-prefixed-v1",
+  "status": "FAIL",
+  "source_sha256": "e86f6ebe82d941a6da58ec384de3086afdd2b03cc2dd55a394e6a3b7a01f205a",
+  "sample": 71,
+  "cases": [
+    {
+      "case": "clean_baseline",
+      "status": "PASS",
+      "prediction": 1,
+      "ports": [
+        "C0",
+        "C1",
+        "C2",
+        "C3",
+        "R0",
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "ray_casts": 56855,
+      "field_max_diff": 6.660998115115991e-05,
+      "all_output_power": 0.9999949606431727,
+      "escape": 0.0,
+      "fields": {
+        "R0": [
+          0.3711592001451412,
+          0.2560186281295562
+        ],
+        "R1": [
+          0.34434366542880207,
+          -0.4066386627860794
+        ],
+        "R2": [
+          -0.1720822248735557,
+          0.3826009617583872
+        ],
+        "R3": [
+          -0.14519228672677678,
+          -0.0859962362758874
+        ],
+        "C0": [
+          8.360475883744528e-05,
+          -0.00042218331946097733
+        ],
+        "C1": [
+          0.015547531606024245,
+          -0.3278371891597116
+        ],
+        "C2": [
+          -0.08827241693271595,
+          -0.14218730567695212
+        ],
+        "C3": [
+          0.13844443343469848,
+          0.3916574061779666
+        ]
+      },
+      "seconds": 5.866865399992093
+    },
+    {
+      "case": "prior_optics_collection",
+      "status": "FAIL",
+      "actual_optics_name": "Optics.001",
+      "prior_sentinel_preserved": true,
+      "prediction": 0,
+      "ports": [],
+      "ray_casts": 5,
+      "field_max_diff": 0.5328151733213533,
+      "all_output_power": 0.0,
+      "escape": 1.0,
+      "fields": {
+        "R0": [
+          0.0,
+          0.0
+        ],
+        "R1": [
+          0.0,
+          0.0
+        ],
+        "R2": [
+          0.0,
+          0.0
+        ],
+        "R3": [
+          0.0,
+          0.0
+        ],
+        "C0": [
+          0.0,
+          0.0
+        ],
+        "C1": [
+          0.0,
+          0.0
+        ],
+        "C2": [
+          0.0,
+          0.0
+        ],
+        "C3": [
+          0.0,
+          0.0
+        ]
+      },
+      "error": "AssertionError: The eight logical output ports were not preserved",
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point03\\probe_rebuild_red.py\", line 64, in <module>\n    case(row);row[\"status\"]=\"PASS\"\n    ^^^^^^^^^\n  File \"D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point03\\probe_rebuild_red.py\", line 52, in prior_collection\n    measure(row)\n  File \"D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point03\\probe_rebuild_red.py\", line 35, in measure\n    assert set(det)==set(ports), \"The eight logical output ports were not preserved\"\n           ^^^^^^^^^^^^^^^^^^^^\nAssertionError: The eight logical output ports were not preserved\n",
+      "seconds": 3.795055599999614
+    },
+    {
+      "case": "second_full_rebuild",
+      "status": "FAIL",
+      "error": "KeyError: 'bpy_prop_collection[key]: key \"det_R0.001\" not found'",
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point03\\probe_rebuild_red.py\", line 64, in <module>\n    case(row);row[\"status\"]=\"PASS\"\n    ^^^^^^^^^\n  File \"D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point03\\probe_rebuild_red.py\", line 56, in repeated\n    demo.build_scene(theta,state[\"ref\"],reset=False)\n  File \"D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\demo_lattice_iris\\neuro3d_iris_demo.py\", line 302, in build_scene\n    pl.data.materials.append(bpy.data.materials[f\"det_{ob.name[4:]}\"] if kind == \"det\" else (m_plate_b if kind == \"bs\" else m_plate_m))\n                             ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'bpy_prop_collection[key]: key \"det_R0.001\" not found'\n",
+      "seconds": 7.091603100008797
+    }
+  ],
+  "background": true,
+  "render": false,
+  "gpu_workload_requested": false
+}

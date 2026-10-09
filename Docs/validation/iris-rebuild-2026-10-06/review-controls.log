@@ -1,0 +1,10 @@
+Info: Saved as "scene.blend"
+TRAINED 0.1
+NEURO3D_IRIS_DONE
+TRAINED 0.16666666666666666
+NEURO3D_IRIS_DONE
+IRIS_REVIEW_CONTROLS {"coherent_escape_controls": "PASS", "portable_saved_rebuilt_scene": "PASS", "scene_reference_intervention": "PASS", "missing_embedded_asset_fails": "PASS", "interactive_rebuild_preserves_user_scene": "PASS", "train_bootstrap_and_bundle_refresh": "PASS (trainer fixture, no optimization run)", "failed_trace_overwrites_stale_report": "PASS"}
+Blender 4.5.14 LTS (hash 62c1db4208e8 built 2026-09-15 01:33:49)
+Read blend: "D:\PROJECTS\Neuro3D-Integration-20261006\Blender\demo_lattice_iris\.neuro3d-test-ov8wwcuk\elsewhere\scene.blend"
+
+Blender quit

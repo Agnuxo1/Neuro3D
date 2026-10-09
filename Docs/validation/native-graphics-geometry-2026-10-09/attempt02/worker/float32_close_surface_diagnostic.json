@@ -1,0 +1,29 @@
+{
+  "exact_nearest_object": "near",
+  "exact_separation_BU": [
+    1,
+    33554432
+  ],
+  "readback": {
+    "rows": [
+      {
+        "status": "GRAPHICS_SURFACE_CANDIDATE",
+        "object": "far",
+        "distance_BU": 1.0,
+        "primitive_id": 0,
+        "raw_rgba": [
+          0.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      }
+    ],
+    "setup_seconds": 8.399999933317304e-05,
+    "draw_sync_readback_seconds": 0.0053836999941268004,
+    "total_query_seconds": 0.005479799998283852,
+    "vertex_instances": 12
+  },
+  "exact_nearest_agreement": false,
+  "scope": "Diagnostic precision challenge; not a universal candidate certificate. A wrong candidate requires exact refinement, never physical zero."
+}

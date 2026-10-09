@@ -1,147 +1,102 @@
-# Neuro3D
+# OpticNeuroBlender · Neuro3D
 
-![Neuro3D](Docs/assets/neuro3d-hero.png)
+Red óptica escalar entrenable que calcula desde la **geometría evaluada de Blender**: entradas complejas coherentes, propagación, detectores y decisiones. Blender-Lab es el instrumento computacional de investigación.
 
-> Arquitectura experimental en la que la geometría 3D y las propiedades ópticas de la escena determinan la propagación y transformación de señales entre neuronas. La apariencia visual es secundaria al cómputo.
+**El motor gráfico ya participa en el aprendizaje:** la RTX 3090 selecciona triángulos capturados y calcula distancia, fase y derivadas ópticas en shaders FP64. La topología exacta, las fusiones coherentes, la pérdida y Adam se calculan en CPU. Todos los resultados, protocolos, código y fallos se publican en `main`, conservando las versiones anteriores.
 
-![Estado del proyecto](https://img.shields.io/badge/estado-experimental%20%7C%20render%20verificado-6f42c1)
-![Blender](https://img.shields.io/badge/Blender-4.5%20LTS-e87d0d)
-![Unreal Engine](https://img.shields.io/badge/Unreal%20Engine-5.6%20plugin%20preparado-6e4c9b)
-![Licencia](https://img.shields.io/badge/licencia-MIT-2ea44f)
+[Instalar y usar](Docs/OPTIC_NEURO_BLENDER_USER_GUIDE_2026-10-09.md) · [Complemento 0.1.3](Blender/releases/optic-neuro-blender-0.1.3.zip) · [Artículo PDF](Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.pdf) · [Fuentes del artículo](Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.md) · [Estado de los diez objetivos](Docs/research/optic_neuro_blender_acceptance_v1.json)
 
-## Qué es
+## Resultados comprobados
 
-Neuro3D explora una red neuronal digital donde posición, orientación y respuesta
-óptica de los objetos determinan la información que recibe cada neurona. El
-primer circuito usa óptica geométrica simulada en CPU y mide intensidad, color,
-frecuencia y fase. La ambición posterior es escalarlo y aprovechar la GPU, sin
-confundir este prototipo con hardware fotónico real o un solucionador de Maxwell.
+| Evidencia | Resultado y alcance |
+|---|---|
+| Escena capturada | 104 objetos, 6.656 triángulos, cinco fuentes, ocho modos |
+| Recorrido completo | 133 estados, 186 aristas, 17.060 caminos; auditor geométrico independiente |
+| Aprendizaje en el motor gráfico | 16 parámetros, 60 actualizaciones, 61 capturas reales; nueva escena guardada y reabierta |
+| Iris: división fija 120/30 | Pérdida 6.255441 → 0.309707; train 110/120, test **27/30** |
+| Control del entrenamiento GPU | Posiciones cuantizadas idénticas a la referencia CPU; 150 decisiones finales iguales |
+| Derivadas gráficas | 16 parámetros y 32 perturbaciones del modelo geométrico; controles de diferencias finitas pasan |
+| Generalización Wine | Tres semillas: 33/37, 30/37, 28/37; baselines 32/37; sin superioridad demostrada |
+| Recuperación instalada 0.1.3 | Interrupción real en checkpoint12; 61 estados y 150 potencias idénticos al baseline, en Windows y Linux externo |
 
-## Demostrador ejecutable dentro de Blender
+La [certificación independiente del modelo gráfico final](Docs/NATIVE_DEFERRED_TRAINING_FIELD_CERTIFICATE_PROTOCOL_2026-10-09.md) registra cota de campo L1 **9.97e-14** y potencia **7.09e-15** frente al codificador ideal: **150/150 decisiones separadas**, 137 etiquetas correctas y 13 incorrectas. El cumplimiento de los presupuestos fijados es positivo; certificar el cálculo y acertar la clase son resultados distintos.
 
-![Neurona coherente calculada durante el render](Docs/assets/neuro3d-render-network.png)
+[Entrenamiento gráfico completo y todos los estados](Docs/NATIVE_DEFERRED_GRAPHICS_TRAINING_PROTOCOL_2026-10-09.md), [derivadas y controles](Docs/NATIVE_GRAPHICS_GEOMETRY_GRADIENT_PROTOCOL_2026-10-09.md), [comparación Wine](Docs/WINE_GENERALIZATION_COMPARISON_2026-10-09.md). Iris ya se había utilizado en el proyecto; este ensayo no es una nueva prueba ciega de generalización.
 
-Abre [Neuro3D_Render_Network.blend](Blender/render_network_demo/Neuro3D_Render_Network.blend)
-en Blender 4.5 y pulsa **F12**. Sus nodos de material calculan interferencia,
-fotodetección y activación durante el render EEVEE; Python no suma campos durante
-esa inferencia. Las posiciones X de los codificadores y las propiedades de escena
-controlan fase, longitud de onda, potencia y umbral. Cuatro copias de una neurona
-coherente mínima muestran XOR, con una presentación lista para inspeccionar.
+## Funcionamiento y aprendizaje observados
 
-Es un **modelo digital ideal de shader con offsets simbólicos**, no una red
-entrenada general, trazado geométrico de esos haces ni computación óptica física.
-Los drivers suministran parámetros desde CPU y el render sigue haciendo aritmética.
-No hay ventaja de velocidad o eficiencia demostrada. Pruebas por readback EXR,
-instrucciones y límites en [la guía del demostrador](Blender/render_network_demo/README.md).
+![Propagación coherente desde la geometría capturada](Docs/assets/captured-gpu-coherent-network-2026-10-09.gif)
 
-## Rutas de implementación
+Una entrada real de Iris: color = fase; barras = acumulación coherente parcial. Las etapas pertenecen al cálculo del grafo y **no representan tiempo físico ni movimiento de fotones**. [Datos y hashes](Docs/assets/verified-animation-manifest-2026-10-09.json).
 
-La reconstrucción actual contiene:
+![Entrenamiento propio desde geometría con el motor gráfico](Docs/assets/native-gpu-geometry-learning-2026-10-09.gif)
 
-- **Oracle CPU**: referencia determinista, reproducible y ejecutable sin GPU.
-- **Blender**: gates híbridos de raycast y campos, más el demostrador EEVEE
-  ejecutado en GPU. La vista previa CPU y el contrato GPU antiguo se conservan.
-- **Unreal Engine**: plugin `SantoGrialPhotonic` con ciclo RDG y compute shaders;
-  su compilación real queda pendiente de disponer de UE 5.6.
+Replay de los 61 estados reales: posiciones capturadas, pérdida y campos GPU después de la fusión CPU. El test se evalúa al terminar. [Procedencia y hashes](Docs/assets/verified-native-gpu-training-animation-manifest-2026-10-09.json).
 
-## Vista de arquitectura
-
-![Capas de la arquitectura](Docs/assets/architecture-layers.png)
-
-En el nuevo circuito Blender, los objetos de la escena son la fuente de verdad:
-sus transformaciones y propiedades ópticas alimentan el trazado, y el resultado
-se escribe en el receptor. Lee [la arquitectura óptica](Docs/BLENDER_ARCHITECTURE.md)
-para las ecuaciones, el alcance físico y los límites actuales.
-
-## Cómo viaja una señal
-
-![Propagación de señales ópticas](Docs/assets/optical-signal-propagation.png)
-
-Cada arista tiene origen, destino, peso y retardo. La señal conserva una fase y una
-frecuencia, transporta color RGB y pierde amplitud mediante atenuación. La
-acumulación coherente modifica la activación, energía, fase y color del nodo destino.
-
-## Validación
-
-![Bucle de validación CPU y GPU](Docs/assets/validation-loop.png)
-
-La GPU no se considera validada por compilar un shader: debe producir un readback
-comparable con el oracle CPU, con error por campo, checksum y métricas de latencia.
-
-## Inicio rápido sin ocupar la GPU
-
-Desde la raíz del repositorio:
-
-```powershell
-python Blender/tests/test_photonic_model.py
-python Blender/tests/test_scene_optics.py
-python Blender/tests/test_static_contract.py
+```mermaid
+flowchart LR
+  E[Entradas complejas coherentes] --> G[Geometría capturada en Blender]
+  G --> R[GPU: triángulos y superficie]
+  R --> F[GPU FP64: distancia, fase y derivadas]
+  F --> C[CPU: suma coherente y detectores]
+  C --> D[Decisión y pérdida]
+  D --> A[CPU: Adam y posiciones]
+  A --> G
+  G --> P[Auditoría exacta independiente]
+  C --> I[Intervalos y margen certificado]
 ```
 
-Estas pruebas no importan `bpy`, no inicializan un contexto GPU, no lanzan Blender y
-no ejecutan shaders.
+La fase relativa cambia la función de la red: sumar intensidades de fuentes independientes elimina interferencias. Las potencias son modales normalizadas; longitud de onda **0,1 BU**, sin calibración física en metros o vatios. El modelo pasivo tiene capacidad cuadrática restringida; no se presenta como aproximador universal.
 
-## Versión Blender
+## Aceleración gráfica y coste completo
 
-Consulta [Blender/README.md](Blender/README.md) y el [plan completo de pruebas](Docs/BLENDER_TEST_PLAN.md).
-
-El addon original sigue siendo un circuito CPU; la demo EEVEE anterior es una
-ruta separada, ahora ejecutada y verificada. El addon crea
-un circuito de tres objetos y calcula un pulso óptico con un rayo reflejado en
-CPU. El circuito se ejecutó realmente en Blender 4.5.14 LTS en background, se
-guardó y se reabrió con el mismo estado. Consulta el
-[informe de ejecución](Docs/BLENDER_RUNTIME_REPORT.md). La antigua vista previa
-visual se conserva aparte. El shader experimental está en
-`Blender/shaders/nebula_photonic_compute.glsl`.
-
-Las validaciones posteriores de una celda y una malla de 16 interferómetros
-(8 modos) superaron gates locales híbridos: Blender determina geometría y
-longitudes por raycast, mientras Python suma los campos complejos. El fallo
-histórico de referencia de fase y el primer fixture multicelda fallido se
-conservan en el historial, sin convertirlos retrospectivamente en éxitos.
-Consulta [la auditoría independiente de EXP-004 conf1](Docs/EXP-004-CONF1-INDEPENDENT-AUDIT-2026-09-29.md).
-Estos gates no validan óptica física ni el transporte geométrico del nuevo shader.
-
-## Versión Unreal Engine
-
-El plugin está en `Plugins/SantoGrialPhotonic`. Implementa una primera rebanada
-vertical con:
-
-1. `EmitSignalsCS`.
-2. `AccumulateFieldsCS`.
-3. `UpdateNeuronsCS`.
-4. Readback periódico para checksum y energía.
-
-Lee [las decisiones de reconstrucción](Plugins/SantoGrialPhotonic/Docs/DECISIONS.md)
-antes de modificar el pipeline. No se debe añadir OptiX ni convertir Niagara en el
-núcleo computacional antes de pasar compilación UE, readback y paridad.
-
-## Versiones antiguas y compatibilidad
-
-Las fuentes y documentos previos se conservan en el árbol existente para mantener
-trazabilidad. No se borran ni se presentan como parte validada del nuevo corte. Los
-artefactos generados —`Binaries`, `Intermediate`, `Saved`, cachés, binarios y
-credenciales— permanecen fuera del release mediante `.gitignore`.
-
-## Estado de verificación
-
-| Compuerta | Estado |
+| Tecnología ejecutada | Resultado medido |
 |---|---|
-| Oracle CPU y checksums | Validado |
-| Pruebas CPU y estáticas Blender | 28/28; incluye 10 del prototipo MZ, sin prueba Blender del MZ |
-| Circuito guardado/reabierto en Blender | Verificado en 4.5.14 LTS, background CPU |
-| Panel interactivo del addon | Pendiente de comprobación visual |
-| Contrato estático addon/shader | Verificado sin Blender |
-| Shader GPU Blender | No ejecutado por decisión de seguridad |
-| Paridad CPU/GPU Blender | Pendiente de autorización y GPU libre |
-| Compilación Unreal 5.6 | Pendiente de instalar/restaurar UE |
+| Rasterización instanciada + shaders FP64 | Superficies, campo coherente y gradientes desde triángulos; aprendizaje completo validado |
+| Sombreado diferido con candidatos GPU | Campos y Jacobianos idénticos al control directo; estado equivalente 42,974 s frente a 38,273 s, sin mejora |
+| Cycles OptiX sobre RTX 3090 | Grafo completo y decisiones iguales a la referencia; candidatos + prueba 41,008 s frente a BVH CPU 10,331 s |
+| CUDA complex128 como referencia adicional | Inferencia, gradientes y aprendizaje propios comprobados; no demuestra ventaja global |
 
-## Investigación y continuidad
+La supervisión del aprendizaje gráfico completo cuesta **3066.60 s**, incluyendo capturas, prueba geométrica y referencia CPU; RSS propio máximo 499.45 MiB. Las fases del coste permanecen en el [resultado completo](Docs/validation/native-deferred-training-2026-10-09/attempt01/worker/result.json). Los ensayos anteriores cancelados y los resultados negativos están conservados.
 
-La colaboración Codex–Claude–JEV y la agenda actual están documentadas en
-[`coordinacion/PROTOCOLO.md`](coordinacion/PROTOCOLO.md) y
-[`coordinacion/CHECKPOINT.md`](coordinacion/CHECKPOINT.md).
+[Escalado nativo por lotes y datos completos](Docs/NATIVE_GRAPHICS_SCALING_PROTOCOL_2026-10-09.md): dos órdenes CPU/GPU alternados para cada tamaño, con campos, potencias y decisiones equivalentes. Las entradas repetidas miden coste; no son datos nuevos de generalización.
 
-## Licencia
+| Entradas | CPU: primera / segunda (s) | GPU + fusión CPU: fría / caliente (s) |
+|---|---|---|
+| 1 | 0.0268 / 0.0209 | 0.5929 / 0.3353 |
+| 150 | 0.0202 / 0.0319 | 4.0279 / 3.4584 |
+| 4096 | 0.0243 / 0.0264 | 98.0069 / 97.7203 |
 
-MIT. Consulta [LICENSE](LICENSE).
+![Coste real por lote y potencia muestreada](Docs/assets/native-graphics-batch-cost-2026-10-09.gif)
+
+[Hashes y procedencia del GIF](Docs/assets/verified-native-scaling-animation-manifest-2026-10-09.json). La potencia muestreada incluye toda la GPU y la pantalla; no mide aisladamente un kernel ni eficiencia fotónica.
+
+[Selección técnica y límites de hardware](Docs/ADVANCED_GRAPHICS_TECHNOLOGY_SELECTION_2026-10-09.md), [OptiX real](Docs/NATIVE_CYCLES_OPTIX_COMPONENT_V2_PROTOCOL_2026-10-09.md), [comparación directa/diferida](Docs/NATIVE_DEFERRED_GRAPHICS_STATE_PROTOCOL_2026-10-09.md). SER, Vulkan e HIP/AMD no se etiquetan como ejecutados por disponer de una API o documentación.
+
+## Instalación, recuperación y reproducción
+
+Usa **Blender 4.5.14 LTS**, instala el ZIP 0.1.3 y abre el panel **OpticNeuro**. El paquete contiene el modelo propio, el ejemplo, datos y manifiesto; usa Python y NumPy incluidos en Blender. [Guía paso a paso](Docs/OPTIC_NEURO_BLENDER_USER_GUIDE_2026-10-09.md).
+
+El complemento distribuido utiliza **CPU**. La ruta gráfica validada es un ejecutor científico separado, con hardware, fuentes, recursos y protocolos congelados. La integración de esa ruta en la interfaz aún está pendiente. Cada reproducción científica debe comprobar los hashes y el perfil correspondiente; no sustituir fuentes históricas silenciosamente.
+
+![Recuperación instalada: estados y potencias exactos](Docs/assets/installed-blender-exact-resume-2026-10-09.gif)
+
+El Blender propietario se interrumpe en checkpoint12; un Blender nuevo reanuda con prueba de la familia geométrica y replay exacto. El trabajador huérfano se detiene solo. [Windows: todos los controles](Docs/INSTALLED_BLENDER_HOST_RECOVERY_PROTOCOL_2026-10-09.md), [Linux externo: instalación limpia y recuperación](Docs/EXTERNAL_INSTALLED_BLENDER_RECOVERY_PROTOCOL_2026-10-09.md), [hashes del GIF](Docs/assets/verified-recovery-animation-manifest-2026-10-09.json). No establece recuperación tras pérdida de alimentación ni interrupciones repetidas de un trabajo ya reanudado.
+
+## Límites científicos y trabajo pendiente
+
+- Hardware AMD real y reproducción gráfica en otro entorno; integración GPU en la interfaz distribuida.
+- Familias geométricas, datasets y pruebas ciegas más amplias; comparaciones y energía aislada del proceso.
+- Cotas de incertidumbre más allá del modelo representado: transformaciones nativas, medidas y todos los gradientes.
+- Fidelidad de la red completa frente a un modelo de ondas; calibración y mediciones si se afirma un dispositivo físico.
+- Reproducción e interpretación por investigadores independientes y crítica especializada del artículo.
+- Registro externo/IPFS: ruta conservada, **sin identificadores emitidos**. Los protocolos ejecutados usaron autorización GitHub publicada.
+- La novedad excepcional, importancia e impacto duradero requieren evidencia adicional. No están demostrados por estos ensayos.
+
+La fabricación es opcional para el simulador. El artículo es un borrador reproducible, sin envío a revista ni revisión especializada. Una cota numérica, un test de software y un acierto neuronal son evidencias diferentes.
+
+## Evidencia, licencias e historia
+
+[Checkpoint científico público](Docs/SEQUENTIAL_RESEARCH_PROGRESS_2026-10-08.md) · [Aceptación por objetivo](Docs/research/optic_neuro_blender_acceptance_v1.json) · [Revisión de antecedentes](Docs/LITERATURE_AND_NOVELTY_AUDIT_2026-10-08.md) · [Técnicas externas y licencias](Docs/OPTIC_NEURO_BLENDER_COMPONENT_SELECTION_2026-10-08.md) · [Recibo de compilación del artículo](Docs/paper/scientific_article_build_receipt_2026-10-09.json)
+
+Las portadas [original de main](Docs/HISTORICAL_MAIN_README_BEFORE_INTEGRATION_2026-10-09.md) y [científica anterior](Docs/HISTORICAL_SCIENTIFIC_README_BEFORE_FINAL_PUBLICATION_2026-10-09.md), versiones previas, protocolos y fallos se conservan. La [animación histórica del entrenamiento CPU](Docs/assets/native-blender-geometry-training-2026-10-09.gif) mantiene su procedencia original. Código propio bajo [MIT](LICENSE); atribuciones y licencias de datos en los protocolos. [Historia de la PR6](https://github.com/Agnuxo1/Neuro3D/pull/6). [Política de diff de registros crudos](Docs/RAW_EVIDENCE_DIFF_POLICY_2026-10-09.md).

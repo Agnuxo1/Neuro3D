@@ -1,0 +1,26 @@
+{
+  "schema": "neuro3d-error-certification-validation-v1",
+  "time_utc": "2026-10-08T08:53:08.806420+00:00",
+  "status": "PASS",
+  "tests": 11,
+  "failures": 0,
+  "errors": 0,
+  "test_output": "test_all_41_k3_k4_probes (test_multipath_error_certificate_v1.CompleteErrorPipeline.test_all_41_k3_k4_probes) ... ok\ntest_angular_uncertainty_is_not_common_mode_certified (test_multipath_error_certificate_v1.CompleteErrorPipeline.test_angular_uncertainty_is_not_common_mode_certified) ... ok\ntest_incomplete_trace_remains_unknown (test_multipath_error_certificate_v1.CompleteErrorPipeline.test_incomplete_trace_remains_unknown) ... ok\ntest_nonzero_stable_geometry_origin_and_direction_box (test_multipath_error_certificate_v1.CompleteErrorPipeline.test_nonzero_stable_geometry_origin_and_direction_box) ... ok\ntest_reflected_path_box_and_source_coefficient_errors (test_multipath_error_certificate_v1.CompleteErrorPipeline.test_reflected_path_box_and_source_coefficient_errors) ... ok\ntest_tiny_gap_order_uncertainty_rejected (test_multipath_error_certificate_v1.CompleteErrorPipeline.test_tiny_gap_order_uncertainty_rejected) ... ok\ntest_unknown_physical_bound_never_defaults_zero (test_multipath_error_certificate_v1.CompleteErrorPipeline.test_unknown_physical_bound_never_defaults_zero) ... ok\ntest_zero_source_or_branch_support_change_rejected (test_multipath_error_certificate_v1.CompleteErrorPipeline.test_zero_source_or_branch_support_change_rejected) ... ok\ntest_pi_and_trig_independent_high_precision_diagnostic (test_multipath_error_certificate_v1.MathematicalEnclosures.test_pi_and_trig_independent_high_precision_diagnostic) ... ok\ntest_sqrt_integer_certificate (test_multipath_error_certificate_v1.MathematicalEnclosures.test_sqrt_integer_certificate) ... ok\ntest_wide_trig_and_singular_denominator (test_multipath_error_certificate_v1.MathematicalEnclosures.test_wide_trig_and_singular_denominator) ... ok\n\n----------------------------------------------------------------------\nRan 11 tests in 19.648s\n\nOK\n",
+  "scope": "CPU complete scalar model; external input radii supplied, physical bounds unknown",
+  "analytic_certificates": 41,
+  "max_field_error_upper": 1.5497924655618002e-13,
+  "max_intensity_error_upper": 1.4173374295662366e-13,
+  "source_sha256": {
+    "Blender/tests/run_multipath_error_validation_v1.py": "9716efaf2ce688fe327108025864e25bacafeabf9fb39c946fe176e2ed6d5161",
+    "Blender/tests/test_multipath_error_certificate_v1.py": "b05869d44714825341972a2e1465b00281fd8f5913ad591857ef780398168e55",
+    "Blender/benchmarks/capacity_audit/rational_interval_v1.py": "aed38e0a12217bf78406af4c9acf625af279867d5e5fbd3f9820dc9468455fc8",
+    "Blender/benchmarks/capacity_audit/multipath_error_certificate_v1.py": "efd63b82f97251855aaf98761acbffcc898ee14ab7efdef774f5e4d571fd40ec",
+    "Blender/benchmarks/capacity_audit/robust_multipath_v1.py": "f4225b2f3f08fa675e72cba79460c815c5e91282fed9cdafbd8460d3fc16dce2",
+    "Blender/tests/exp005_chain_fixture.py": "42d871b0007dff877049ae8c72481fbcc92aa5a04056cbc6f4f1f8663fb867c3",
+    "Docs/ERROR_CERTIFICATE_PREREGISTRATION_2026-10-08.md": "7641d01fbfdc874bbac4fa8b1f90c05b915e8468fdac674c7714fe1706a26c6c"
+  },
+  "evidence_sha256": {
+    "certificates.json": "994e8603992adde0e81a5e1cf4699c1470ac9e62574be5ba7b75fe084512253f",
+    "input_boxes.json": "0bcbaec7f52f2185896e74624bcf043580c769e3635844568532871765323e72"
+  }
+}

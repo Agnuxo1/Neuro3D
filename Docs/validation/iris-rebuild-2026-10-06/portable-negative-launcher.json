@@ -1,0 +1,46 @@
+{
+  "command": [
+    "D:\\TOOLS\\Blender\\blender-4.5.14-windows-x64\\blender.exe",
+    "--background",
+    "--factory-startup",
+    "--disable-autoexec",
+    "--threads",
+    "1",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "D:\\PROJECTS\\Neuro3D-Integration-20261006\\Blender\\demo_lattice_iris\\test_portable_failure_blender.py",
+    "--",
+    "--blend",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point03\\independent\\neuro3d_iris_lattice.blend",
+    "--manifest",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point03\\independent\\portable_manifest.json",
+    "--output-dir",
+    "D:\\PROJECTS\\.cognition\\neuro3d\\execution-20261006\\point03\\negative-evidence"
+  ],
+  "status": "PASS",
+  "ram_floor_bytes": 4294967296,
+  "cpu_process_budget_bytes": 2147483648,
+  "ram_available_before_bytes": 10937810944,
+  "timeout_seconds": 120.0,
+  "threads": 1,
+  "affinity_mask": 1,
+  "gpu_supervisor": false,
+  "telemetry": [
+    {
+      "seconds": 0.005509200040251017,
+      "ram_available_bytes": 10934771712,
+      "process_peak_working_set_bytes": 1789952,
+      "process_peak_commit_bytes": 15302656
+    },
+    {
+      "seconds": 1.0064587999950163,
+      "ram_available_bytes": 10717294592,
+      "process_peak_working_set_bytes": 190668800,
+      "process_peak_commit_bytes": 202649600
+    }
+  ],
+  "pid": 35708,
+  "exit_code": 0,
+  "elapsed_seconds": 2.0077134000021033
+}

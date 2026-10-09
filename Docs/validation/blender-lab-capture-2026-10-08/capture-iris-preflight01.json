@@ -1,0 +1,10 @@
+{
+  "schema": "neuro3d.blender_lab.capture_preflight.v1",
+  "timestamp_utc": "2026-10-08T17:05:10.885206+00:00",
+  "status": "NOT_EXECUTED",
+  "reason": "available RAM below the 4000 MiB preflight guard",
+  "scene": "Blender/demo_lattice_iris/renders/neuro3d_iris_lattice.blend",
+  "gpu_executed": false,
+  "optical_forward_executed": false,
+  "memory_read_later_mib": 5596.03515625
+}

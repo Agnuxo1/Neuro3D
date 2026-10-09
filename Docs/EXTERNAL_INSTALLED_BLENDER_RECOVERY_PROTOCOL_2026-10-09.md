@@ -1,0 +1,19 @@
+# Prospective fresh Linux installed Blender interruption and exact resume
+
+Windows installed0.1.3 recovery is observed and archived. This separate external environment must verify source Git blobs and authorization before installing fixed hashed supervisor dependencies or preparing official Blender4.5.14. The archive and native binary hashes are the same already verified official Linux distribution; the0.1.3 ZIP and its original standalone source remain unchanged.
+
+An actual Linux controller uses a process-local child-subreaper setting to adopt only its own orphaned worker after killing only its Blender owner at checkpoint12. It must observe actual worker exit9, retain the atomic checkpoint unchanged, and invoke the installed Resume operator in a fresh native Blender. The uninterrupted baseline and resumed run must match all61 optimizer coordinates/loss values and150 native powers/predictions exactly. Original family proof, exact prefix replay, changed-input/geometry/truncated-checkpoint rejection, four optimizer adversaries and apply/new-save/reopen checks remain mandatory. The original installed example is preserved.
+
+Limits are1500s for the entire native controller and2200s including official preparation,4,000MiB RAM before start and2,500MiB floor,2,500MiB owned aggregate RSS,256MiB native evidence/384MiB complete external evidence,one CPU core. Archive preparation has600s/1024MiB. No GPU is used. Failures and raw logs are uploaded and then permanently archived. The continuing GitHub authorization applies prospectively; external/IPFS IDs remain pending.
+
+This is automated external runtime reproduction. It is not independent human review, AMD/graphics execution, machine power-loss durability or a new generalization dataset. Native baseline/resume log review occurs after process exit.
+
+[Profile](research/external_installed_resume_profile_2026-10-09.json), [receipt](research/external_installed_resume_registration_2026-10-09.json), [workflow](../.github/workflows/external-installed-resume-20261009.yml), [Windows installed result](INSTALLED_BLENDER_HOST_RECOVERY_PROTOCOL_2026-10-09.md).
+
+## Actual fresh Linux native recovery: accepted
+
+[Run37919893102](https://github.com/Agnuxo1/Neuro3D/actions/runs/37919893102), sourcefb690dae/profile9ff0569c, independently verified49 Git blobs before dependency/preparation/native execution. Official checksum-pinned Blender4.5.14 and unchanged standalone0.1.3 actually completed the baseline, owned Blender interruption at checkpoint12, worker self-exit9 and fresh registered Resume operator. The Linux controller adopted only its own orphan worker and observed its actual exit status. All61 optimizer coordinates/loss values and150 modal powers match the uninterrupted Linux baseline exactly, with27/30 held out. All stale/corrupt/replay/apply/new-save/reopen gates pass; post-exit baseline/resume logs are clean.
+
+Complete outer control652.831612s: official preparation20.980969s and native control630.903356s; peak aggregate owned RSS787.05MiB. Inner native supervision630.555093s/RSS752.52MiB. Checkout, supervisor installation and artifact upload durations are retained separately in primary job metadata. Original artifact ZIP11,702,543bytes/SHAe46daecc was verified against GitHub's digest, then every outer/native raw hash was checked and permanently archived. This external automated CPU result is not independent human review, graphical GPU/AMD reproduction, electrical power-loss durability or a new dataset.
+
+[Permanent original ZIP, metadata and all hashes](validation/external-installed-blender-recovery-2026-10-09/attempt01/evidence_index.json), [outer result](validation/external-installed-blender-recovery-2026-10-09/attempt01/artifact/result.json), [native baseline/interruption/resume results](validation/external-installed-blender-recovery-2026-10-09/attempt01/artifact/native/supervisor.json).

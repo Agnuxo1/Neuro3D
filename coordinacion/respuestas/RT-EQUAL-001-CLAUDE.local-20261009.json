@@ -1,0 +1,61 @@
+{
+ "task_id": "RT-EQUAL-001",
+ "status": "accepted_capability_gaps",
+ "timestamp_utc": "2026-09-30T10:41:25+00:00",
+ "ack": [
+  "RT-AUD-001 acusado (tablon 10:28; aqui se retiene como respuesta): mediciones directas = 5 pares de T; cruces extrapolados; razon T=1e3 entre 1,24 (mediana caliente) y 2,64 (minimo menos base), no intervalo de confianza.",
+  "RT-EQUAL-001 acusado: CPU/lectura, sin renders nuevos por esta tarea, sin instalaciones."
+ ],
+ "input_sha256": {
+  "coordinacion/experimentos/RT-EQUAL-001-PREPARACION.md": "411342ea9fa685c05d35e321a1c4d0a550453014b45c1927e914925c478588f0",
+  "coordinacion/tareas/RT-EQUAL-001-CLAUDE.md": "1b5a3eb16b621271ce017a05ecbc4844f6619c575d0b160ae78b94a5163d1536",
+  "Docs/EXP-005-SCENE-LENGTH-CPU-2026-09-30.md": "ac8ce20ecacb50fe82c69cbefc34a8a8c76a6cfc17bb537b9ca28482ef135b3e",
+  "Blender/benchmarks/capacity_audit/scene_length_bound_v1.py": "c6df43179c165d8e1ce19e68cd501de4dd8deff0b0c41b1c1a57bafc6ac21a1e"
+ },
+ "existing_evidence_sha256": {
+  "D:/PROJECTS/.cognition/neuro3d/rt/rt_cycles.py": "c600f2d3ede1d0fba428e752cb931165c8dd1a512f4c1920f9134bce51f09ba0",
+  "D:/PROJECTS/.cognition/neuro3d/rt/brute_same.py": "a3fbdc9d8f5e35b2c56223ae4a5ffde83b969ef1b5b34864195d9fdc79efcf3b",
+  "D:/PROJECTS/.cognition/neuro3d/rt/rt_final.json": "750accb3fdc1cb0383769f7f5b1c0d9f4aa8295bbb5f94c3406cd3092f48eb61",
+  "D:/PROJECTS/.cognition/neuro3d/rt/brute_same.json": "ec8caa8dd2986aca85e730ba91444b1b8356a66f25c07b47c70cb9f6b611edfd",
+  "D:/PROJECTS/9_NEBULA_NEW/coordinacion/respuestas/RT-CYCLES-VS-BRUTA-CLAUDE-2026-09-30.md": "c56e4d52fcd0ce18dea55ff8e487b80fef23cd89880c56017b874876cfde1c7f",
+  "D:/PROJECTS/.cognition/neuro3d/capacity/sweep.py": "55b126e25b03124e7cb702587f57b5000ca46bc98c348e35d72fc9e13cbc798f",
+  "D:/PROJECTS/.cognition/neuro3d/capacity/cycles_matvec.py": "6fbee6b21ad86ecf899c2da4284fc432ede62e97644a10a9e08297d53643e72a"
+ },
+ "existing_backend_guard": {
+  "backend": "Blender 4.5.14 Cycles OptiX, RTX 3090, driver 581.29 (nvidia-smi); evidencia por rt_final.json (blender) y gpuq tickets rt-smoke..rt-final; OPTIX solo por preferencias: NO hay contador de RT hardware retenido",
+  "guard_actual_rt_cycles.py": "RAM libre >= 2,5 GiB (saltar si menos); sin guard de VRAM/temperatura/deadline",
+  "guard_existente_sweep.py": "capacity/sweep.py: RAM >= 4 GiB, VRAM <= 18 GiB, temperatura <= 80 C, plazo 600 s: base reutilizable; adaptar plazo a 120 s por hijo"
+ },
+ "per_ray_outputs": {
+  "brute_backend": {
+   "rays": "explicitos (origen, direccion unitaria) desde manifiesto, no derivados de indices",
+   "ID_t": "brute_same.py hoy solo guarda z mas cercano y cobertura: falta escribir ID de triangulo y t; cambio de kernel trivial, sin capability nueva",
+   "ties": "etiquetados ambiguos por referencia racional CPU antes de comparar"
+  },
+  "cycles_backend": {
+   "status": "NO DEMOSTRADO. Capability pendiente (no se sustituye por cobertura)",
+   "id_plan": "una malla; atributo por cara float32 tid=indice del manifiesto (exacto hasta 2^24) leido con nodo Attribute (GEOMETRY) hacia AOV; NO usar el orden de poligonos ni Object Index",
+   "t_plan": "camara ortografica, direccion fija (0,0,-1): t = pase Z (distancia desde el plano de camara); clip_start ajustado por debajo de la geometria; comprobar contra Position",
+   "effective_ray_plan": "pase Position (float32): origen xy efectivo = P.xy (ortografica) y direccion fija; NO se supone centro de pixel: filtro BOX de ancho minimo 0,01 px permite desplazamiento hasta 0,005 px (4,9e-6 BU con RES 1024; 7,8e-5 BU con RES 64 en 1 BU). El backend bruta debe trazar los rayos EFECTIVOS derivados de P.xy, o el checker debe demostrar desplazamiento <= tolerancia",
+   "must_use": "samples=1 (con varias muestras los pases se promedian), sin denoiser, film sin transformacion de vista, pases en float32 Non-Color"
+  }
+ },
+ "missing_capabilities_exact": [
+  "C1 AOV de ID por cara desde atributo (no probado en Cycles/OptiX 4.5.14)",
+  "C2 lectura de pases float32 sin transformacion de visualizacion: Render Result.pixels devolvio tamano 0 en background (medido hoy, foreach_get); ruta EXR multicapa o File Output del compositor no probada",
+  "C3 demostracion de rayo efectivo por P.xy (desplazamiento respecto al centro) y de t=Z frente a P",
+  "C4 guard VRAM/temperatura/plazo 120 s en el lanzador de RT (existe en sweep.py, no en rt_cycles.py)",
+  "C5 presupuesto de RAM: sonda de Codex 4,3 GiB libres < 4 GiB + Blender (~0,65 GiB en sesion vacia): guard fail-closed bloquea el piloto hasta que haya memoria libre; no toco procesos ajenos"
+ ],
+ "shared_triangle_mapping": "manifiesto JSON: triangulos como 9 float32 en bits (hex) en orden de manifiesto; tid = posicion; permutacion de fixtures = permutar el manifiesto y la malla y comparar por tid; hashes de manifiesto y de rayos comprobados por CPU; resultado por rayo = estado, tid, t, origen/direccion efectivos",
+ "not_done": [
+  "ningun render ni ejecucion GPU en esta tarea",
+  "no se ha demostrado C1-C3; Claude las probara con T=2 y 32 (CPU device de Cycles si el checker lo admite, o GPU con gpuq y guard) solo tras vuestro OK del contrato"
+ ],
+ "length_001_critique": [
+  "P1 profundidad: scene_length_bound_v1 exige max_depth en [1,32]; mi bounds.json de conf1 da profundidad_max K3=26, K4=36, K5=46: el helper rechazaria conf1 K4 tal cual (conflicto de capability, no error de la cota).",
+  "P2 holgura: H*D cuenta cada tramo como el diametro L1 completo del AABB; con H=32 da 638 y 836 BU frente a maximos observados 23 y 31 BU (20-30x) y L_max de conf1 K4 = 52,6 BU (mi DP). Sigue siendo valida pero sobre-rechazara lambdas pequenas; una cota valida mas ajustada usa la distancia maxima entre AABB de pares de objetos.",
+  "P3 campo vs camino: el presupuesto de fase por camino no acota el error del campo suma: error de campo <= delta_fase_max * suma_p |a_p| (norma l1 de amplitudes), y K4 tiene 17 492 caminos terminales; la norma l1 puede superar en mucho la l2 del campo. El presupuesto debe declararse sobre esa suma (o probar cancelacion).",
+  "P4 direccion unitaria: la premisa de direccion unitaria exacta no se cumple en float32 (norma con error ~6e-8 relativo): cota lineal de peor caso L*6e-8 = 3,1e-6 BU a L=52,6 BU, es decir 1,6e-4 rad a lambda 0,125, por encima del presupuesto 1e-4. Es estimacion de peor caso, no medicion; Codex midio 4,5e-7 de campo en 246 sondas, asi que la acumulacion real es menor; ninguna de las dos cifras es certificado."
+ ]
+}

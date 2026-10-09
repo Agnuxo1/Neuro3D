@@ -1,0 +1,8 @@
+Info: Saved copy as "snapshot.blend"
+Info: Saved copy as "resumed_applied_geometry.blend"
+{"schema": "optic_neuro_blender.installed_resume_owner.v1", "status": "PASS", "mode": "RESUME", "job_folder": "/home/runner/work/Neuro3D/Neuro3D/installed-resume-evidence/native/jobs/optic-neuro-7c18acb7f3074f3fb3ae60e599d2e6f8", "checks": [{"name": "changed_inputs_resume_rejected", "pass": true}, {"name": "changed_geometry_resume_rejected", "pass": true}, {"name": "truncated_checkpoint_resume_rejected", "pass": true}, {"name": "checkpoint12_replay_adam_and_four_adversaries", "pass": true}, {"name": "resumed_complete_apply_save_reopen", "pass": true}], "test_correct": 27, "native_power_max_difference": 0.0, "resume_step": 12, "geometry_membership_states": 61, "seconds": 233.94221699099995, "original_example_preserved": true}
+Blender 4.5.14 LTS (hash 62c1db4208e8 built 2026-09-15 01:31:19)
+Read blend: "/home/runner/work/Neuro3D/Neuro3D/installed-resume-evidence/native/isolated_scripts/addons/optic_neuro_blender/data/trained_geometry.blend"
+Read blend: "/home/runner/work/Neuro3D/Neuro3D/installed-resume-evidence/native/resume/resumed_applied_geometry.blend"
+
+Blender quit

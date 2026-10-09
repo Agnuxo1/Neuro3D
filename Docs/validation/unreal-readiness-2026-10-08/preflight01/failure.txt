@@ -1,0 +1,1 @@
+CPU-only metadata preflight failed before receipt: vswhere emitted system-codepage JSON; json.loads(bytes) assumed UTF8. No compilation, child engine or GPU execution.

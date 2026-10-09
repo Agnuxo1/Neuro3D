@@ -1,0 +1,25 @@
+Read blend: "D:\PROJECTS\Neuro3D-Scientific-20261008\Docs\validation\own-blender-addon-2026-10-09\attempt03\worker\jobs\optic-neuro-326edc59834b425d92ea2a99f43faa61\trained_geometry.blend"
+Traceback (most recent call last):
+  File "D:\PROJECTS\Neuro3D-Scientific-20261008\Tools\audit_native_graphics_field_v9.py", line 103, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\PROJECTS\Neuro3D-Scientific-20261008\Tools\audit_native_graphics_field_v9.py", line 91, in main
+    if failure is not None:raise failure
+                           ^^^^^^^^^^^^^
+  File "D:\PROJECTS\Neuro3D-Scientific-20261008\Tools\audit_native_graphics_field_v9.py", line 55, in main
+    t=time.perf_counter();transport=NativeGraphicsFieldTransport(gpu,scene,pixel_BU=profile['pixel_BU'],far_BU=profile['far_BU'],stage_audit_path=args.out/'native_field_GL_stage_audit.json');prepare_seconds=time.perf_counter()-t
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PROJECTS\Neuro3D-Scientific-20261008\Blender\blender_lab\native_graphics_field_v9.py", line 122, in __init__
+    self.shader=gpu.shader.create_from_info(info);self.stage_audit.after('shader_creation');self.batch=batch_for_shader(self.shader,'TRIS',data);self.stage_audit.after('captured_triangle_VBO_creation')
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PROJECTS\Neuro3D-Scientific-20261008\Blender\blender_lab\native_graphics_stage_audit_v1.py", line 19, in after
+    if value:self.save();raise ValueError('Owned native field graphics stage '+name+' OpenGL error '+hex(value))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Owned native field graphics stage shader_creation OpenGL error 0x501
+addon_utils.disable: optic_neuro_blender not loaded
+Modules Installed (optic_neuro_blender) from 'D:\\PROJECTS\\Neuro3D-Scientific-20261008\\Blender\\releases\\optic-neuro-blender-0.1.2.zip' into 'D:\\PROJECTS\\.cognition\\neuro3d-sequential-20261008\\native-graphics-field-attempt09-20261009\\isolated_scripts\\addons'
+Info: Modules Installed (optic_neuro_blender) from 'D:\\PROJECTS\\Neuro3D-Scientific-20261008\\Blender\\releases\\optic-neuro-blender-0.1.2.zip' into 'D:\\PROJECTS\\.cognition\\neuro3d-sequential-20261008\\native-graphics-field-attempt09-20261009\\isolated_scripts\\addons'
+
+Error: script failed, file: 'D:\PROJECTS\Neuro3D-Scientific-20261008\Tools\audit_native_graphics_field_v9.py', exiting.
+
+Blender quit

@@ -1,0 +1,14 @@
+{"continuous_family_proved": true, "resume_step": 0, "prefix_replay_seconds": 0}
+{"step": 0, "train_loss": 6.255440538348521, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 1, "train_loss": 4.757272827018384, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 2, "train_loss": 3.267679552335506, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 3, "train_loss": 2.0562786280459324, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 4, "train_loss": 1.3033543819175557, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 5, "train_loss": 0.9602861054411652, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 6, "train_loss": 0.8919869747362533, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 7, "train_loss": 0.9309577345656839, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 8, "train_loss": 0.9824975794799035, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 9, "train_loss": 1.013747849312524, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 10, "train_loss": 1.0155566892814671, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 11, "train_loss": 0.9900723296682724, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"crash_point_ready": 12}

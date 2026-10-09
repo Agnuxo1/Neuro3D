@@ -1,0 +1,74 @@
+{
+  "schema": "optic_neuro_blender.installed_native_audit.v1",
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "actual_isolated_zip_install_and_registration",
+      "pass": true,
+      "manifest_files": 33
+    },
+    {
+      "name": "actual_background_blender_inference_all150",
+      "pass": true,
+      "power_max_difference": 3.885780586188048e-16,
+      "worker_blender_version": "4.5.14 LTS"
+    },
+    {
+      "name": "changed_input_stale_rejected",
+      "pass": true
+    },
+    {
+      "name": "changed_scene_stale_rejected",
+      "pass": true
+    },
+    {
+      "name": "actual_blender_owned_cancel_and_evidence",
+      "pass": true,
+      "result_collected": false
+    },
+    {
+      "name": "actual_training_inside_background_blender",
+      "pass": true,
+      "states": 61,
+      "initial_loss": 6.255440538348521,
+      "final_loss": 0.309706672111991,
+      "test_correct": 27,
+      "power_difference_from_earlier_runtime": 3.885780586188048e-16,
+      "native_power_difference": 0.0
+    },
+    {
+      "name": "completed_training_recovery_and_atomic_apply",
+      "pass": true
+    },
+    {
+      "name": "new_copy_reopen_and_original_preserved",
+      "pass": true
+    },
+    {
+      "name": "modified_result_receipt_rejected",
+      "pass": true
+    }
+  ],
+  "profile_sha256": "2a7e95ebc847e301ca59b87d17d27ef832fd7625c0897da1c7f2c7d0cfe8acb3",
+  "archive_sha256": "7b1b747ea6148f6f924a55d7b24a5d065db696295297563f5309904962d9f65f",
+  "manifest_sha256": "55e4109df77d94003d658679d31429a79bff709dc791738f06e69791047f8e86",
+  "blender_version": "4.5.14 LTS",
+  "seconds": 663.0802559029999,
+  "original_example_preserved": true,
+  "scope": "Actual GitHub-hosted Linux Blender nine-control standalone addon repetition with unchanged scientific worker. External environment, not independent specialist interpretation, GPU execution or physical fidelity.",
+  "external_runtime": {
+    "python": "3.11.15 (main, Apr 25 2025, 12:39:20) [GCC 11.2.1 20220127 (Red Hat 11.2.1-9)]",
+    "numpy": "1.26.4",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "blender_version": "4.5.14 LTS",
+    "blender_version_numeric": [
+      4,
+      5,
+      14
+    ],
+    "build_hash": "62c1db4208e8",
+    "binary_path": "/tmp/optic-neuro-native-0ibhk5n6/official/blender-4.5.14-linux-x64/blender"
+  },
+  "independent_human_replication": false
+}

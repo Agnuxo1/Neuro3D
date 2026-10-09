@@ -1,0 +1,91 @@
+{
+ "task_id": "PRECISION-004",
+ "status": "complete",
+ "timestamp_utc": "2026-09-30T07:19:56Z",
+ "input_sha256": {
+  "coordinacion/tareas/PRECISION-004-CLAUDE.md": "6abdfc21139ea3a5b4e72cf48ad658b41ae24cfa00f1c4b91d48bfb4835c797e",
+  "coordinacion/experimentos/EXP-005-PRECISION-GPU-V3.md": "26d4099de0a281047539bba108c41bf503f98b1b60c8ca08bd752bdfc8c89eb8",
+  "Blender/benchmarks/capacity_audit/precision_v3.py": "fbfc2379352c3f2161a8bd8af36f1897ccd9a9a5e581c8caad1c1c2d1ffc1ac1"
+ },
+ "scope": "Revision independiente en CPU (un hilo, <=60 s por script, numpy float64) de PrecisionV3 e4b2705. No se ejecuto GPU, Blender ni instalaciones. No se declara ningun gate PASS/FAIL de runtime: V3 no tiene runtime GPU.",
+ "valid_controls": [
+  {
+   "tipo": "autointerseccion con BIAS=0 y angulo rasante moderado",
+   "evidencia": "a_selfhit.py: L=1 con phi>=1e-6 rad y L=100 con phi>=1e-5 rad dan 0/250 reimpactos espurios (T_MIN=1e-9)",
+   "limite": "planos sinteticos float64, 2 triangulos"
+  },
+  {
+   "tipo": "lecturas reales K3/K4 (12 escenas, <=58 triangulos, fuente unica)",
+   "evidencia": "b_terminal_real.py: desviacion terminal 1-cos = 0 en todos los terminales (coordenadas <=14.2 BU, quads diadicos exactos en float32)",
+   "limite": "las escenas reales son diadicas; no prueban nada sobre posiciones no diadicas ni coordenadas grandes"
+  }
+ ],
+ "findings": [
+  {
+   "id": "F1",
+   "tipo": "autointerseccion: margen rasante reducido por quitar el BIAS (reproducido en sintetico; riesgo teorico para K3/K4 reales)",
+   "evidencia": "a_selfhit.py (250 ensayos por celda; espejo de 2 triangulos; reimpacto sobre el propio espejo con t>1e-9). BIAS=0 (V3): reimpactos espurios con angulo rasante phi: L=1 phi=1e-7 (31/250); L=100 phi<=1e-6 (126/250 y 84/250); L=1e4 phi<=1e-4 (79/250); L=1e6 phi<=1e-2 (82/250). BIAS=1e-6 (V2): 0/250 con L<=100 (phi>=1e-7); L=1e4 solo phi<=1e-6 (100/250 y 6/250); L=1e6 phi<=1e-4 (4/250). Angulo critico ~1e-7*L rad con V3, unas 100 veces menor con BIAS=1e-6.",
+   "limite": "Solo se dispara con rayos casi paralelos al espejo o coordenadas >=1e4 BU; con espejos a 45 grados y L<=14 (K3/K4 reales) no se reproduce. Geometria sintetica float64, no GPU ni Blender.",
+   "propuesta": "No quitar el BIAS sin sustituirlo: (a) excluir por identidad los triangulos del objeto plano recien golpeado (exacto para discos y quads planos, sin umbral de distancia; resuelve tambien CE1); o (b) mantener BIAS y anadir bandera de ambiguedad para otro objeto a <=BIAS por delante. Anadir negativos: L=100 con phi=1e-5 rad y L=1e4 con phi=1e-3 rad."
+  },
+  {
+   "id": "F2",
+   "tipo": "tolerancia terminal 1e-9 frente al ruido float32 de vertices (reproducido en sintetico; no ocurre en K3/K4 reales)",
+   "evidencia": "c_mirror_tilt.py: un quad diadico de semilado 0.125 no se inclina por el redondeo a float32 salvo que sus vertices crucen una potencia de dos; entonces la normal se inclina ulp(L): 1.9e-6 rad a L=16, 7.6e-6 a 64, 3.1e-5 a 256. N espejos encadenados a caballo agotan la tolerancia de V3 (4.47e-5 rad): 272 a L=16, 17 a L=64, 4 a L=128, 1 a L=256. b3_scale_tilt.py (rejillas EXP-004 sin chicanes con vertices float32 y desfases no diadicos): desviacion angular maxima de una direccion de estado 1.9e-6 rad (K=2, 56 triangulos), 3.8e-6 (K=4), 1.1e-5 (K=8), 4.6e-5 (K=16, coordenadas ~100 BU): en K=16 el 11.5% de los estados supera la tolerancia de V3 y ninguno la de V1 (1.41e-3 rad).",
+   "limite": "Reproduccion acotada (<=64 triangulos): K=2 (1.9e-6 rad) y c_mirror_tilt. K=8 y K=16 son contexto (800 y 3136 triangulos). Se mide la direccion de los ESTADOS, no el status 3 real de un kernel V3 compilado. En K3/K4 reales la desviacion es 0.",
+   "propuesta": "Ligar la tolerancia terminal a la cuantizacion del readback (aprox. ulp(Lmax)/borde*sqrt(n_espejos)) o declarar en el contrato que V3 solo vale para escenas float32 con coordenadas <=~32 BU; anadir un control positivo con una cadena de quads no diadicos que crucen 2^k y verifique aceptacion."
+  },
+  {
+   "id": "F3",
+   "tipo": "defecto sobreviviente en las puertas (cobertura, reproducido con la propia especificacion de Codex)",
+   "evidencia": "d_terminal_tol.py con precision_v3.terminal_accept: cualquier tolerancia 1-cos en [2e-10, 1e-8] (un factor 50) acepta mode_match y mode_inside(2e-5) y rechaza mode_mismatch(2e-4) y mode_reverse(pi), es decir pasa los cuatro fixtures de modo. Solo 1e-10 y 5e-8 los fallan.",
+   "limite": "Analisis de la especificacion CPU; el kernel GLSL V3 no se ha ejecutado.",
+   "propuesta": "Anadir dos fixtures de modo: theta=3.0e-5 rad (1-cos=4.5e-10, debe aceptarse) y theta=6.3e-5 rad (1-cos=2.0e-9, debe rechazarse); acotan la tolerancia entre 4.5e-10 y 2e-9 y matan los mutantes 4e-10 y 1e-8 (comprobado con terminal_accept)."
+  },
+  {
+   "id": "F4",
+   "tipo": "hi-lo y fase (riesgo de alcance, no defecto de V3)",
+   "evidencia": "En las lecturas reales de Blender los vertices son float32: lo=0, luego la reconstruccion hi+lo no anade precision (mismo hallazgo que coverage_frozen.json de mi auditoria previa). Con vertices float32 el error de U medido en Blender es 2.6e-4 a 6.4e-4 (MI-EN-ESCENA). La rotacion de fase en float32 del kernel es <=1.9e-8 rad hasta L=1e5 (ce11 de mi auditoria previa).",
+   "limite": "Datos de mi auditoria previa (emulador y Blender ray_cast), no de V3 en GPU.",
+   "propuesta": "Etiquetar los gaps de 1e-8 BU como escenas float64 sinteticas (ya lo hace el contrato); no extrapolar a mallas Blender float32. La fase en escenas reales queda limitada por la cuantizacion del readback, no por el doble del shader."
+  },
+  {
+   "id": "F5",
+   "tipo": "resolucion residual (riesgo teorico)",
+   "evidencia": "Con BIAS=0 y T_MIN=1e-9, una segunda superficie a una distancia en (0, 1e-9] por delante del punto de impacto se sigue omitiendo sin bandera (fail-open); la ventana pasa de 1e-6 (V2) a 1e-9 (V3).",
+   "limite": "No reproducido por script; deriva del codigo (t<=1e-9 continue) y del contrato.",
+   "propuesta": "Marcar ambiguo cualquier otro objeto con t en (0, T_MIN] tras el impacto, o documentar el limite como parte del dominio de validez de V3."
+  }
+ ],
+ "commands": [
+  "cd D:/PROJECTS/.cognition/neuro3d/precision004_claude && OMP_NUM_THREADS=1 PYTHONIOENCODING=utf-8 python a_selfhit.py",
+  "cd D:/PROJECTS/.cognition/neuro3d/precision004_claude && OMP_NUM_THREADS=1 PYTHONIOENCODING=utf-8 python b_terminal_real.py",
+  "cd D:/PROJECTS/.cognition/neuro3d/precision004_claude && OMP_NUM_THREADS=1 PYTHONIOENCODING=utf-8 python b2_terminal_nondyadic.py",
+  "cd D:/PROJECTS/.cognition/neuro3d/precision004_claude && OMP_NUM_THREADS=1 PYTHONIOENCODING=utf-8 python b3_scale_tilt.py",
+  "cd D:/PROJECTS/.cognition/neuro3d/precision004_claude && OMP_NUM_THREADS=1 PYTHONIOENCODING=utf-8 python c_mirror_tilt.py",
+  "cd D:/PROJECTS/.cognition/neuro3d/precision004_claude && OMP_NUM_THREADS=1 PYTHONIOENCODING=utf-8 python d_terminal_tol.py"
+ ],
+ "artifact_paths": [
+  "D:/PROJECTS/.cognition/neuro3d/precision004_claude/a_selfhit.py",
+  "D:/PROJECTS/.cognition/neuro3d/precision004_claude/b_terminal_real.py",
+  "D:/PROJECTS/.cognition/neuro3d/precision004_claude/b2_terminal_nondyadic.py",
+  "D:/PROJECTS/.cognition/neuro3d/precision004_claude/b3_scale_tilt.py",
+  "D:/PROJECTS/.cognition/neuro3d/precision004_claude/c_mirror_tilt.py",
+  "D:/PROJECTS/.cognition/neuro3d/precision004_claude/d_terminal_tol.py",
+  "D:/PROJECTS/.cognition/neuro3d/precision004_claude/a_selfhit.json",
+  "D:/PROJECTS/.cognition/neuro3d/precision004_claude/b_terminal_real.json",
+  "D:/PROJECTS/.cognition/neuro3d/precision004_claude/b2_terminal_nondyadic.json",
+  "D:/PROJECTS/.cognition/neuro3d/precision004_claude/b3_scale_tilt.json",
+  "D:/PROJECTS/.cognition/neuro3d/precision004_claude/c_mirror_tilt.json",
+  "D:/PROJECTS/.cognition/neuro3d/precision004_claude/d_terminal_tol.json"
+ ],
+ "script_sha256": {
+  "a_selfhit.py": "ea6190fc69fbb6c45f754e6e2978ec5ccbab7d1972ee7537a60152ae4dd3bc9c",
+  "b_terminal_real.py": "c519f9c08a379a8882bb5bb66562a245c886c2f6147b97e2e5c11a8ef443fa2e",
+  "b2_terminal_nondyadic.py": "e9090810c733fcbb98ad14dc1278b7e5bfbb1512a4d8a48df884dc70c2ac5eae",
+  "b3_scale_tilt.py": "2c78508dd92ce6349cadf2b0a773d09109c10d957f0fa8d01eb5f6572b103f5f",
+  "c_mirror_tilt.py": "e251a574f31ff8c540f4a8192d0c1f36d8b79b861a5ba7dfccf024c8fc368d5a",
+  "d_terminal_tol.py": "9fe8bcd54391cdbc9ba48eb2375f5f071cac97e0656bbacb6a7dbb85290bc57d"
+ },
+ "notes": "Se corrigieron dos defectos de mi propia medida antes de publicar (suelo de acos de 1.5e-8 rad en la inclinacion y criterio de reimpacto con BIAS); las cifras son las de los scripts finales. Sin credenciales, sin razonamiento privado y sin atribuir aval de JEV."
+}
