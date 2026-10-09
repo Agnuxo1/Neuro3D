@@ -108,3 +108,7 @@ Docs/validation/wine-comparison-2026-10-09/**/wine.names -whitespace
 Docs/research/gaussian_wave_profile_2026-10-09.json -text !eol whitespace=cr-at-eol
 Docs/research/gaussian_wave_registration_2026-10-09.json -text !eol whitespace=cr-at-eol
 Docs/validation/gaussian-wave-reference-2026-10-09/** -text !eol whitespace=cr-at-eol
+
+Docs/research/gaussian_wave_remedial_profile_2026-10-09.json -text !eol whitespace=cr-at-eol
+Docs/research/gaussian_wave_remedial_registration_2026-10-09.json -text !eol whitespace=cr-at-eol
+Docs/validation/gaussian-wave-remedial-2026-10-09/** -text !eol whitespace=cr-at-eol
