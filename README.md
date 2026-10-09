@@ -99,6 +99,8 @@ El [paquete de revisión externa](Docs/EXTERNAL_REVIEW_PACKET_2026-10-09.md) fij
 
 ## Evidencia, licencias e historia
 
+Fuente única del estado de los objetivos: [acceptance_v1.json](Docs/research/optic_neuro_blender_acceptance_v1.json). Reglas de gobierno, criterio de parada y cierre de la cadena EXP-005: [GOVERNANCE.md](Docs/GOVERNANCE.md) y [EXP-005-CIERRE.md](Docs/EXP-005-CIERRE.md).
+
 [Checkpoint científico público](Docs/SEQUENTIAL_RESEARCH_PROGRESS_2026-10-08.md) · [Aceptación por objetivo](Docs/research/optic_neuro_blender_acceptance_v1.json) · [Revisión de antecedentes](Docs/LITERATURE_AND_NOVELTY_AUDIT_2026-10-08.md) · [Técnicas externas y licencias](Docs/OPTIC_NEURO_BLENDER_COMPONENT_SELECTION_2026-10-08.md) · [Recibo de compilación del artículo](Docs/paper/scientific_article_build_receipt_2026-10-09.json)
 
 Las portadas [original de main](Docs/HISTORICAL_MAIN_README_BEFORE_INTEGRATION_2026-10-09.md) y [científica anterior](Docs/HISTORICAL_SCIENTIFIC_README_BEFORE_FINAL_PUBLICATION_2026-10-09.md), versiones previas, protocolos y fallos se conservan. La [animación histórica del entrenamiento CPU](Docs/assets/native-blender-geometry-training-2026-10-09.gif) mantiene su procedencia original. Código propio bajo [MIT](LICENSE); atribuciones y licencias de datos en los protocolos. [Historia de la PR6](https://github.com/Agnuxo1/Neuro3D/pull/6). [Política de diff de registros crudos](Docs/RAW_EVIDENCE_DIFF_POLICY_2026-10-09.md).
