@@ -46,12 +46,14 @@ el [plan completo](Docs/BLENDER_SCIENTIFIC_ROADMAP_2026-10-08.md) y la
 
 El [ejecutor y auditor del piloto](Docs/CAPTURED_PILOT_SUPERVISOR_2026-10-08.md)
 están preparados con fuentes/inputs fijados, límites de recursos y negativa por
-registro ausente. Pasan 66 controles conjuntos de software. El piloto permanece
-**sin ejecutar**. El propietario ha [autorizado el protocolo congelado en GitHub](Docs/PILOT_REGISTRATION_DUAL_ROUTE_2026-10-09.md)
+registro ausente. Pasan 66 controles conjuntos de software. El piloto se ejecutó
+**con resultado inconcluso**: el límite original de 90 segundos interrumpió el
+worker antes de producir un resultado. El propietario ha [autorizado el protocolo congelado en GitHub](Docs/PILOT_REGISTRATION_DUAL_ROUTE_2026-10-09.md)
 y mantiene la vía externa/IPFS adicional; no hay registro externo emitido todavía.
 El [primer intento autorizado](Docs/CAPTURED_PILOT_EXECUTION_2026-10-09.md)
 verificó todos los hashes pero no inició el cálculo: 3.652 MiB libres frente al
-umbral fijo de 4.000 MiB. La métrica permanece nula; este rechazo no es un resultado geométrico.
+umbral fijo de 4.000 MiB. El segundo inició el cálculo y agotó 90 segundos;
+la métrica permanece nula. Ambos recibos y las fuentes exactas están archivados.
 
 El [contrato coherente ejecutable](Docs/OPTIC_NEURO_BLENDER_COHERENT_CONTRACT_2026-10-08.md)
 fija unidades, portadora/referencia común, fases, parámetros y potencia modal.

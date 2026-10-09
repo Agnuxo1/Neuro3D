@@ -1,4 +1,12 @@
-# Piloto autorizado: primer intento de ejecución
+# Piloto autorizado: ejecución y desenlace inconcluso
+
+**Resultado actual:** el segundo intento inició el worker con 4.877,727 MiB de RAM libre. Agotó el presupuesto original de 90 segundos sin escribir resultado; el supervisor detuvo únicamente ese proceso y verificó su limpieza. Duración supervisada 90,040895 s, pico de RSS propio 23,742188 MiB. El [recibo completo](validation/captured-pilot-execution-2026-10-09/attempt02/supervisor.json) registra `WORKER_DEADLINE`, `result_collected=false`, `primary_metric=null`.
+
+El piloto se ejecutó una vez; el primer intento previo no arrancó. La hipótesis de viabilidad permanece **inconclusa bajo este perfil**, no confirmada ni refutada por una métrica geométrica. No existe un campo que auditar: se auditaron hashes de inputs/fuentes, autorización, límite temporal y limpieza. El log del worker está vacío y se conserva como tal. No se conoce cuántos caminos había completado al ser interrumpido.
+
+Se preservan todos los bytes y fuentes previos al cálculo, y se verificaron los once hashes del manifiesto del supervisor. No se extiende el presupuesto ni se sustituye el trazador dentro del mismo protocolo. La selección espacial exacta en desarrollo y cualquier nuevo recorrido serán ensayos separados con alcance explícito.
+
+## Primer intento conservado
 
 El 9 de octubre se verificaron el protocolo congelado, sus cinco hashes de inputs/fuentes y la autorización humana publicada. El supervisor rechazó el arranque: RAM libre **3.652,15625 MiB**, por debajo del umbral prospectivo de **4.000 MiB**.
 
