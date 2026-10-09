@@ -1,0 +1,22 @@
+test_chain_all_sources_against_exhaustive_and_analytic (Blender.tests.test_coherent_state_graph_v1.StateGraphTests.test_chain_all_sources_against_exhaustive_and_analytic) ... ok
+test_cycle_is_unknown_not_pruned (Blender.tests.test_coherent_state_graph_v1.StateGraphTests.test_cycle_is_unknown_not_pruned) ... ok
+test_exact_zero_branch_and_both_nonzero_branches (Blender.tests.test_coherent_state_graph_v1.StateGraphTests.test_exact_zero_branch_and_both_nonzero_branches) ... ok
+test_forged_farther_hit_rejected (Blender.tests.test_coherent_state_graph_v1.StateGraphTests.test_forged_farther_hit_rejected) ... ok
+test_missing_branch_rejected (Blender.tests.test_coherent_state_graph_v1.StateGraphTests.test_missing_branch_rejected) ... ok
+test_mode_mismatch_miss_boundary_contact_remain_unresolved (Blender.tests.test_coherent_state_graph_v1.StateGraphTests.test_mode_mismatch_miss_boundary_contact_remain_unresolved) ... ok
+test_same_state_sources_cancel_fields_before_future_operator (Blender.tests.test_coherent_state_graph_v1.StateGraphTests.test_same_state_sources_cancel_fields_before_future_operator) ... ok
+test_state_cap_preserves_null_fields (Blender.tests.test_coherent_state_graph_v1.StateGraphTests.test_state_cap_preserves_null_fields) ... ok
+test_all_sources_compiled_and_independent_analytic_fields (Blender.tests.test_geometric_network_v1.GeometricNetworkTests.test_all_sources_compiled_and_independent_analytic_fields) ... ok
+test_constructor_preserves_supplied_fields_and_scene (Blender.tests.test_geometric_network_v1.GeometricNetworkTests.test_constructor_preserves_supplied_fields_and_scene) ... ok
+test_detector_mse_gradient_against_difference (Blender.tests.test_geometric_network_v1.GeometricNetworkTests.test_detector_mse_gradient_against_difference) ... ok
+test_exact_large_cycle_reduction (Blender.tests.test_geometric_network_v1.GeometricNetworkTests.test_exact_large_cycle_reduction) ... ok
+test_incomplete_geometry_rejected (Blender.tests.test_geometric_network_v1.GeometricNetworkTests.test_incomplete_geometry_rejected) ... ok
+test_invalid_fields_parameters_and_branch_support_rejected (Blender.tests.test_geometric_network_v1.GeometricNetworkTests.test_invalid_fields_parameters_and_branch_support_rejected) ... ok
+test_phase_and_tau_jacobians_against_centered_differences (Blender.tests.test_geometric_network_v1.GeometricNetworkTests.test_phase_and_tau_jacobians_against_centered_differences) ... ok
+test_updated_controls_agree_with_fresh_geometric_trace (Blender.tests.test_geometric_network_v1.GeometricNetworkTests.test_updated_controls_agree_with_fresh_geometric_trace) ... ok
+test_zero_inputs_are_explicit_and_constructive_interference_kept (Blender.tests.test_geometric_network_v1.GeometricNetworkTests.test_zero_inputs_are_explicit_and_constructive_interference_kept) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.414s
+
+OK
