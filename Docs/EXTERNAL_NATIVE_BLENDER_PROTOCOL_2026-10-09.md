@@ -21,3 +21,7 @@ Se exige diferencia de potencia ≤10⁻¹¹ entre el resultado entrenado y su r
 Perfil: [JSON congelado](research/external_native_blender_profile_2026-10-09.json); [autorización](research/external_native_blender_registration_2026-10-09.json); [recibo oficial](research/external_native_blender_official_receipt_2026-10-09.json); [workflow](../.github/workflows/external-native-blender-20261009.yml).
 
 Este ensayo prueba una ejecución nativa en otro entorno. No constituye interpretación de investigadores independientes, prueba de usabilidad humana, calibración física, ejecución AMD, registro externo ni validación de un procesador fotónico.
+
+## Intento 01: fallo de descarga, resultado científico nulo
+
+Perfil `845cf2135b36ee8516daa654ea182f8f963f1063c24cf6e65097ffca1dc28792`, publicado en `09ff4861ff398de1ee8b9f7d135db98ff64f639d`. El [run37890682207](https://github.com/Agnuxo1/Neuro3D/actions/runs/37890682207) verificó los42blobs antes de preparar Blender. El host respondió HTTP403 a la descarga mediante urllib; el controlador terminó en0,428s, sin iniciar Blender nativo, con métrica nula y limpieza propia confirmada. El artefacto y sus41archivos internos se verificaron por hash y se conservaron en [attempt01](validation/external-native-blender-2026-10-09/attempt01/evidence_index.json). No se cuenta como fallo científico del modelo ni como reproducción Blender. Se preparará un protocolo de transporte separado manteniendo los mismos hashes y controles.
