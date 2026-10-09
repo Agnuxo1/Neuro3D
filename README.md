@@ -55,6 +55,11 @@ verificó todos los hashes pero no inició el cálculo: 3.652 MiB libres frente 
 umbral fijo de 4.000 MiB. El segundo inició el cálculo y agotó 90 segundos;
 la métrica permanece nula. Ambos recibos y las fuentes exactas están archivados.
 
+La [selección espacial exacta](Docs/EXACT_OBJECT_INDEX_2026-10-09.md) añade cajas
+racionales conservadoras por objeto. Pasan 74 controles de software, incluidos
+160 consultas comparadas con el selector exhaustivo. El recorrido completo de
+la captura y el coste de esta optimización todavía no están validados.
+
 El [contrato coherente ejecutable](Docs/OPTIC_NEURO_BLENDER_COHERENT_CONTRACT_2026-10-08.md)
 fija unidades, portadora/referencia común, fases, parámetros y potencia modal.
 Pasan 50 controles CPU y la admisión dentro de Blender del `.blend` Iris real:

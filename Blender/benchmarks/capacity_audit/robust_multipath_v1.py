@@ -220,7 +220,7 @@ def estimate_path_field(path, wavelength):
     return source*math.sqrt(float(path['power_factor']))*cmath.exp(1j*phase)
 
 
-def trace_scene(snapshot, *, max_rays=4096, max_depth=64):
+def trace_scene(snapshot, *, max_rays=4096, max_depth=64, _selection_factory=None):
     """Enumerate all nonzero branches, preserving exact path provenance.
 
     COMPLETE certifies finite traversal/topology only. It does not certify float
@@ -229,6 +229,8 @@ def trace_scene(snapshot, *, max_rays=4096, max_depth=64):
     if type(max_rays) is not int or max_rays < 1 or type(max_depth) is not int or max_depth < 1:
         raise ValueError('positive resource bounds required')
     wavelength, objects, triangles = geometry(snapshot)
+    # Opt-in exact selection backends; the archived frozen pilot does not use this hook.
+    selection = select if _selection_factory is None else _selection_factory(triangles)
     ports = [n for n, o in objects.items() if o['kind'] in ('det', 'escape')]
     if not ports: raise ValueError('declared terminal required')
     paths, unresolved, stack, names = [], [], [], set()
@@ -255,7 +257,7 @@ def trace_scene(snapshot, *, max_rays=4096, max_depth=64):
         if len(ray['history']) >= max_depth:
             unresolved.append({'status': 'RESOURCE_LIMIT', 'ray': ray}); continue
         casts += 1
-        hit = select(ray['origin'], ray['direction'], triangles, ray['previous'])
+        hit = selection(ray['origin'], ray['direction'], triangles, ray['previous'])
         departure_exclusions += len(hit['excluded'])
         if hit['status'] != 'SELECT':
             unresolved.append({'status': hit['status'], 'ray': ray, 'selection': hit}); continue

@@ -75,5 +75,6 @@ Docs/research/iris_coherent_contract_v1.json -text !eol whitespace=cr-at-eol
 Docs/validation/coherent-contract-2026-10-08/** -text !eol whitespace=cr-at-eol
 Docs/validation/captured-pilot-supervisor-2026-10-08/** -text !eol whitespace=cr-at-eol
 Docs/validation/captured-pilot-execution-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/exact-object-index-2026-10-09/** -text !eol whitespace=cr-at-eol
 # Immutable legacy preimages retain their original blank-line spaces.
 Docs/validation/unreal-readiness-2026-10-08/*/source/Source/OptiXRayTracing.cu -text !eol -whitespace
