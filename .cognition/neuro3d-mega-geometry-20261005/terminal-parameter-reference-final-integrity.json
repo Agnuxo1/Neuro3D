@@ -1,0 +1,44 @@
+{
+  "rc": 0,
+  "timed_out": false,
+  "before_deadline": true,
+  "started_utc": "2026-10-07T10:28:16.175956+00:00",
+  "ended_utc": "2026-10-07T10:28:16.840647+00:00",
+  "deadline_utc": "2026-10-07T10:28:51.175956+00:00",
+  "elapsed_QA_seconds": 0.664691,
+  "timeout_seconds": 30,
+  "affinity_mask": 1,
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "RAM_available_before_bytes": 8011100160,
+  "RAM_budget_bytes": 134217728,
+  "RAM_reserve_after_budget_bytes": 7876882432,
+  "command": [
+    "C:/Python313/python.exe",
+    "-B",
+    ".cognition/neuro3d-mega-geometry-20261005/terminal_parameter_reference_final_integrity.py"
+  ],
+  "stdout_bytes": 541,
+  "stdout_sha256": "8cc96d55549a29d9f2cdb9046dbe636f01d7ccde966ebb7693b192d0185bfa72",
+  "stdout_zlib_base64": "eNplkUFr3EAMhe+F/ofgc9NKM57xTG9OsrDpht3Q+G40IwlMEzv1epu0If+9s7AQQtBJT+J9euil2i+0HPbV97Pqtr27q76cVTM99etVe9XL7wPd73se9r/KfJkPUqbT09jne6HxTRpGludeHh6Xv2+iztM/GfvHYTya1x6Lliaa+di+VHmaZh5GysM0frtcry43t7vrbff1gY+n1E1kAhDDzMlxMtjUPsRGAwBg8N5ghkYkWlDDhjI7RUyNCtY5YDzGeE/Y3bTnV6vz7md70f7YnTAGwThXfB1JDMg2BBvJWCUSsAkVTYyNz8ZH49G6SDEFagI5dqJkP2C69fV207XbzQngGyoBbLQBawOa0VrJoFadUG2dxETGWFL0ggCBoVRumAhIvA0fc3Ttxc1ue3K3GAKUNU6UnWSkLOWuOiobywqRFLyrFTUHjykWdjDgEpQkZZF99VrsR1qGP9LLs+TDUhDFWMvX5fXzp/+Ej6A5",
+  "stderr_utf8": "",
+  "GPU_used": false,
+  "summary": {
+    "status": "PASS",
+    "raw_HEAD_equals_disk": true,
+    "own_clean": true,
+    "index_empty": true,
+    "frozen_pins": 461,
+    "boards": {
+      "coordinacion/CHECKPOINT.md": "479da00e2dddb5db21746897f8000186621c07ee930f2d2acd5f11b7fe14c819",
+      "coordinacion/COLA-DE-TRABAJO.md": "2102558975ae981d38839a23faae03b1f129976c269261359a9b8a78a5d5efa3",
+      "coordinacion/THINKTANK.md": "67addb39381420fc133ec0f3f5ea435e9ba223af16e1008d0d0dc7daa0ae6389",
+      "coordinacion/TABLON.md": "31880638dbac5ec1aced5e49fd23df09af0654f1fc861b933e8205b0135ed5d6"
+    },
+    "native_execution": false
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "initial_timestamp_capture": {
+    "rc": 0,
+    "timed_out": false,
+    "before_deadline": true,
+    "started_utc": "2026-10-07T11:02:37.424671+00:00",
+    "ended_utc": "2026-10-07T11:02:38.009995+00:00",
+    "deadline_utc": "2026-10-07T11:03:12.424671+00:00",
+    "elapsed_QA_seconds": 0.585324,
+    "timeout_seconds": 30,
+    "affinity_mask": 1,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "RAM_available_before_bytes": 8336244736,
+    "RAM_budget_bytes": 134217728,
+    "RAM_reserve_after_budget_bytes": 8202027008,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      ".cognition/neuro3d-mega-geometry-20261005/existing-p03-scene-invariants-final-integrity.py"
+    ],
+    "stdout_bytes": 545,
+    "stdout_sha256": "6061872a91f19a6bb0466be7d54d9e616d95bd19fdfd80be4156171866baf29c",
+    "stdout_zlib_base64": "eNplkM1O20AUhfeV+g7I69LO/3jYGYgaGpREJV1b928kC7DTxBZtEe/eMUqFKpb3u1ffmTPP1XGEcTpWF2fVtrm7qz6dVcNT3+67fmaujF2/n8Z/oC4gH4Y/8nYSdGEHeGqXi+a6lZ8TPLTcHe/LbjxM8mpg+dXK4378/QZxgAPPgueKhuHAXQ/UDf2Xq+XiarXd3Kx3nx95fpYHTTZHCylZMolzjmBDNjZqMeCdY8IAiiR57RLmsgIq1y6owFrZudL/CZvb5vx6cb773lw23zanmIRKdNKkMXJSjkzABDGIYVYqJQ5aJLBxyTqwrDF4J6SVC5Ask/fvYnbLm/Vq16xXpwDUbLyPhKpmhz6yIZJgpJSiDCZnUF5pn8tsFWZHGTEYUh4FjarT+4Dm8nazPtlNwojO15qCiZSVjb4OjmL5NM/ZKCCdC61Bh+ykjsY6hamUNMnUkrB6Kfqv2x/tdJRZmOHhKC8fP/wFVq2f9w==",
+    "stderr_utf8": "",
+    "GPU_used": false,
+    "summary": {
+      "status": "PASS",
+      "own_pins": 4,
+      "input_pins": 8,
+      "frozen_pins": 461,
+      "raw_HEAD_equal_disk": true,
+      "index_empty": true,
+      "boards": {
+        "coordinacion/CHECKPOINT.md": "5a1c3f73a993c29dff7a36f2371e2a544dcb6a0ce95149bf6f2ac3a94606d103",
+        "coordinacion/COLA-DE-TRABAJO.md": "9b0e191c1b7d904c26b9a76e2dd0099d61ee6d24934a3d1b654ec1046a93dc55",
+        "coordinacion/THINKTANK.md": "b1d2557cb08d4b57d2cce62e3c2cfa2ffa05015f3c230bf4cfbb62c05beb2089",
+        "coordinacion/TABLON.md": "29b7b4581c627cf0375864c79935df20ac1ff038a16f4e872340b926b2928e9b"
+      },
+      "GPU_used": false
+    }
+  },
+  "final": {
+    "rc": 0,
+    "timed_out": false,
+    "before_deadline": true,
+    "started_utc": "2026-10-07T11:03:02.886161+00:00",
+    "ended_utc": "2026-10-07T11:03:03.478045+00:00",
+    "deadline_utc": "2026-10-07T11:03:37.886161+00:00",
+    "elapsed_QA_seconds": 0.591884,
+    "timeout_seconds": 30,
+    "affinity_mask": 1,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "RAM_available_before_bytes": 8359297024,
+    "RAM_budget_bytes": 134217728,
+    "RAM_reserve_after_budget_bytes": 8225079296,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      ".cognition/neuro3d-mega-geometry-20261005/existing-p03-scene-invariants-final-integrity.py"
+    ],
+    "stdout_bytes": 545,
+    "stdout_sha256": "d329a2cf0d0a36df8aa0e831f5e3e59ebddb368b029194bf8598cfe8439b2d6c",
+    "stdout_zlib_base64": "eNplkE1rHDEMhu+F/ocw56a1Lduyc5skSzfdsLs02/NgWzIMSWa280Hahvz3esKWUHIyfiWeR9JzNU5hmsfq4qza13d31aezqn/qmmPbLZku37Y7ztO/wJUgD/0ffmuxsmRDeGrWq/q64Z9zeGioHe9LbRpmfiUQ/2r48Tj9fgtjHwZaAM9V6vuB2i6ktu++XK1XV5v97mZ7+PxIy1jW2SA9OoxSxGyApWaMpKMj7xmtQgTKipM1BpOT1isnlLI+++X1y0r/G3a39fn16vzwvb6sv+1OGu1kktorYJReBpF9cYoEzipACYKEtyEaCwBMOpNwJhS79MSJDdM7zWF9s90c6u3mJMAcDQSr0YLQEoOKnilJbxOylSpYF0FaJAu5CCBykCFr0ILBKQnuvaC+vN1tT/RlHBIZvDOslEGnfCoHUC64aFIse6ngKUofFlFpIiTULHLO0UXk6qXgv+5/NPPICzCHh5FfPn74C2OenjE=",
+    "stderr_utf8": "",
+    "GPU_used": false,
+    "summary": {
+      "status": "PASS",
+      "own_pins": 4,
+      "input_pins": 8,
+      "frozen_pins": 461,
+      "raw_HEAD_equal_disk": true,
+      "index_empty": true,
+      "boards": {
+        "coordinacion/CHECKPOINT.md": "686a19787b10bf53e14e7bd4b8d99e762773df2ec6557c81692802269f980229",
+        "coordinacion/COLA-DE-TRABAJO.md": "481c14923e7191a0f99780c386237130d096ab56333ed4fd085ae7619dece5ed",
+        "coordinacion/THINKTANK.md": "7fb53a647630417a2b9edc196c7e612a68b3167d63fed43bea1af4340e382138",
+        "coordinacion/TABLON.md": "085ad0f3985e2257829cf9828a8b5cb9232a9db19aa68b85ed7d74e0fffb8b7e"
+      },
+      "GPU_used": false
+    }
+  },
+  "timestamp_correction_only": "board/checkpoint UTC 11:04 corrected to observed11:02; no math/schema/budget changes"
+}

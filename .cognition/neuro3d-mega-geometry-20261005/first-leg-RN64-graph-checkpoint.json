@@ -1,0 +1,105 @@
+{
+  "ID": "PRECISION-ORIGINAL-SOURCE-FIRST-LEG-RN64-GRAPH-HOST-001",
+  "UTC": "2026-10-07T09:30:00Z",
+  "HEAD": "7b3edcc4e488e89423dcf57c7bd1f8e39577041a",
+  "parent": "2f54b21433e9d7a3d1268b86d37ce60670066417",
+  "own_files": {
+    "Blender/benchmarks/capacity_audit/original_SOURCE_first_leg_RN64_graph_HOST_v1.py": {
+      "bytes": 10445,
+      "sha256": "d4e1de31d00cc4767725ccad0120ac59875e788c24d6ec0911dc4350857f38d6"
+    },
+    "Blender/tests/test_original_SOURCE_first_leg_RN64_graph_HOST_v1.py": {
+      "bytes": 7666,
+      "sha256": "cf1b0a735b6cbfc5c869379347cca0299cff890233db8d0fff546c3b20039c42"
+    },
+    "Docs/EXP-005-ORIGINAL-SOURCE-FIRST-LEG-RN64-GRAPH-HOST-001.md": {
+      "bytes": 4208,
+      "sha256": "38382da2aaf463aaf7fb77e89b1e2db2813850b2b2f54ad81392daff4c21102a"
+    },
+    "coordinacion/respuestas/PRECISION-ORIGINAL-SOURCE-FIRST-LEG-RN64-GRAPH-HOST-001-CODEX.json": {
+      "bytes": 39697,
+      "sha256": "e25bb94201574e0778023a36d5c7db7bb842727fdffda82890aa314ff8ad2262"
+    }
+  },
+  "status": "PASS_CONDITIONAL_HOST_NATIVE_STOP",
+  "QA": {
+    "status": "PASS",
+    "tests": 5,
+    "records": 93,
+    "kinds": {
+      "FIXED_GRAPH_OR_STOP": 28,
+      "GRAPH_CONTROL": 8,
+      "NEGATIVE": 56,
+      "NO_ALIAS": 1
+    }
+  },
+  "QA_capture": {
+    "start": "2026-10-07T09:24:23.689077+00:00",
+    "end": "2026-10-07T09:24:24.552504+00:00",
+    "deadline": "2026-10-07T09:24:58.689077+00:00",
+    "stdout_sha256": "8d92e2e6937c6f94fd2546ee25dc55ea5be455d20fd4cf19ac38b4b0d71161b5"
+  },
+  "independent_verification": {
+    "GPU_used": false,
+    "SOURCE_context_bindings": 28,
+    "captured_old_root_certificates_verified_no_replay": 16,
+    "exact_RN_corner_zero_simulations": 19,
+    "fixed_conditional_allowances_BU_decimal_integer_strings": {
+      "direction_scaled/S0": [
+        "10142460653939",
+        "79228162514264337593543950336"
+      ],
+      "direction_scaled/S1": [
+        "1241620898413",
+        "39614081257132168796771975168"
+      ],
+      "oblique/S0": [
+        "10142460653939",
+        "79228162514264337593543950336"
+      ],
+      "oblique/S1": [
+        "1241620898413",
+        "39614081257132168796771975168"
+      ],
+      "shared_ref1000/S0": [
+        "10142460653939",
+        "79228162514264337593543950336"
+      ],
+      "shared_ref1000/S1": [
+        "1241620898413",
+        "39614081257132168796771975168"
+      ],
+      "tiny_gap_2m60/S0": [
+        "1",
+        "79228162514264337593543950336"
+      ],
+      "tiny_gap_2m60/S1": [
+        "1",
+        "79228162514264337593543950336"
+      ]
+    },
+    "frozen_pins_verified": 461,
+    "full_costs": "UNKNOWN_NOT_ZERO",
+    "native_precision_certified": false,
+    "new_graphs_verified": 17,
+    "new_root_certificates_verified": 34,
+    "retained_upstream_STOP": 20,
+    "status": "PASS"
+  },
+  "oracle_capture": {
+    "start": "2026-10-07T09:27:23.117758+00:00",
+    "end": "2026-10-07T09:27:23.404143+00:00",
+    "deadline": "2026-10-07T09:27:58.117758+00:00",
+    "stdout_sha256": "73c2c5583172dcdcfac5c3092b153b456e35f347f66fe7c62a76ecb03bffaaf7"
+  },
+  "preserved_failed_oracle": "case/SOURCE collapsed primitive/path rows; full captured-row SHA key corrected, no model/cap changes",
+  "native_SOURCE_ingress_error_bound_BU": null,
+  "native_first_leg_error_bound_BU": null,
+  "native_phase_error_bound_rad": null,
+  "GPU_used": false,
+  "full_costs": "UNKNOWN_NOT_ZERO",
+  "JEV": "LOCAL_SECURITY_BLOCKED_NO_RETRY",
+  "next": "Fail-closed contract for scene/backend-bound SOURCE ingress ABI, first-leg graph identity and explicit budgets, with existing Claude artifacts or explicit absence; no GPU admission by default.",
+  "shared_boards_staged": false,
+  "peer_ACK_scope": "No matches for current ID or parent detector ID in coordinacion/respuestas/*CLAUDE*, not global absence"
+}
