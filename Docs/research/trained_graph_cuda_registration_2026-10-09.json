@@ -1,0 +1,14 @@
+{
+  "schema": "optic_neuro_blender.profile_registration.v1",
+  "kind": "HUMAN_GITHUB_EXCEPTION",
+  "approved": true,
+  "profile_id": "1ce88403-bf12-4680-9ee1-7e8ef26e89f4",
+  "profile_sha256": "6073f16df3daec27c156f7d347be27d3f621152408ed942da67e4ee32218da19",
+  "evidence_origin": "DIRECT_HUMAN_USER_MESSAGE_VERIFIED_BY_OPERATOR",
+  "evidence_reference": "Docs/research/github_sequence_authorization_2026-10-09.json",
+  "human_sequence_approval_sha256": "22e7b2039b791a538ad0458c0e1b04787c393cb8a55aefe84cb4fe8c29824b0a",
+  "preregId": null,
+  "ipfsCid": null,
+  "external_route_retained": true,
+  "authorization_scope": "Actualdirecthumanapproval of successiveprofiles fixed andpublished beforedata, keepingexternal/IPFSroutepending"
+}
