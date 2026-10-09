@@ -18,4 +18,21 @@ La pérdida de estrechez se localizó en el redondeo a la rejilla de 128 bits du
 
 Se mantienen los mismos presupuestos y salidas observadas. Siete controles incluyen el ángulo que dio la mayor anchura original y ángulos negativos, grandes y con radio explícito, frente a 90 dígitos independientes. Este método se publica antes de recalcular el certificado secundario.
 
+## Resultado secundario con los mismos presupuestos
+
+El [analysis02](validation/observed-graph-output-enclosure-2026-10-09/analysis02/evidence_index.json)
+da `CERTIFIED_OBSERVED_REPRESENTED_OUTPUTS`. Máximo error de campo L1:
+`4.9383434427813286e-15`; máximo error de potencia absoluta:
+`3.1372973883238074e-15`. Los ocho terminales cumplen ambos presupuestos.
+R1 sigue siendo el argmax representado, con margen inferior redondeado hacia
+abajo `0.18933601504039158`. El valor exacto del margen y todos los intervalos
+racionales están en el certificado.
+
+Una segunda composición de todo el grafo, escrita con `mpmath` a 90 dígitos y
+sin importar el productor ni el compositor de intervalos, cae dentro de los
+intervalos de campo y potencia de los ocho terminales. Es una comprobación
+numérica independiente; la prueba de inclusión procede del cálculo racional
+con redondeo exterior. Siete controles pasan. La captura, el resultado observado,
+los presupuestos y los criterios permanecen iguales entre analysis01 y analysis02.
+
 Código: [composición independiente](../Blender/blender_lab/state_graph_enclosure_v1.py), [CLI y auditoría](../Tools/certify_captured_graph_outputs_v1.py).

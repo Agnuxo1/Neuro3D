@@ -1,0 +1,38 @@
+{
+  "certificate.json": {
+    "sha256": "148e4a2c031f742de5c0dccd944ee752c479aad945b5210107ec02724c5cc834",
+    "bytes": 12766
+  },
+  "controls.log": {
+    "sha256": "c3eeaac5cb89af121167955030d1bf69884ecc9d5de452ad9290bba9f9539f35",
+    "bytes": 1397
+  },
+  "independent_mpmath_crosscheck.json": {
+    "sha256": "3d6c385833eebaba2dda4d003c085a789677a45f5c4383b7b1adba5cf257106a",
+    "bytes": 2693
+  },
+  "secondary_analysis_archive.py": {
+    "sha256": "294c3e241d86899c86de6d6bc1c375a964d14cb2777790ac853fae6468adff03",
+    "bytes": 4831
+  },
+  "sources/Tools/audit_coherent_state_graph_v1.py": {
+    "sha256": "2bb9bb285ec93922fd96cc1eec98fa1fc2c73d20856140536ba5adfe50d4519d",
+    "bytes": 9570
+  },
+  "sources/Tools/certify_captured_graph_outputs_v1.py": {
+    "sha256": "6802179ea598fece166e5da1997c69a6da4b71bf26be534aca6095ff177a17f9",
+    "bytes": 2419
+  },
+  "sources/Blender/blender_lab/state_graph_enclosure_v1.py": {
+    "sha256": "a972b5cc196489e9bbbdb8f47fef51db5fbf748c92648fee78b30666f996db15",
+    "bytes": 7177
+  },
+  "sources/Blender/tests/test_state_graph_enclosure_v1.py": {
+    "sha256": "8e524c8cd3933abfd5848b83aa2426864dc3f56aa4f1a9e5d9372912c857777e",
+    "bytes": 5153
+  },
+  "sources/Blender/benchmarks/capacity_audit/rational_interval_v1.py": {
+    "sha256": "34ae4b0ea08a7bd9a3cd35c599f1d6277539dd7e5e936fe56c71254d3858b53d",
+    "bytes": 5002
+  }
+}
