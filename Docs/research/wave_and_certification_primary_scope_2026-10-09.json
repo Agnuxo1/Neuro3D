@@ -1,0 +1,59 @@
+{
+  "schema": "optic_neuro_blender.primary_wave_sources.v1",
+  "date": "2026-10-09",
+  "evidence": [
+    {
+      "title": "A Differentiable Wave Optics Model for End-to-End Computational Imaging System Optimization",
+      "authors": "Ho et al.",
+      "version": "arXiv2412.09774v2, 2025-08-06 / ICCV2025",
+      "url": "https://arxiv.org/html/2412.09774v2",
+      "sha256": "8d98e924e24112f33d51d2178a421c0f6119f00ed5624199d5db4956c0b31ec5",
+      "review_scope": "Methods3.1 andapplications4.6/limitations4.7; coherentFizeaurecovery; mainimaging Eq1 is incoherentPSFsuperposition, notour5coherentinputs",
+      "implication": "Geometry-deriveddifferentiablewaveoptics/interference notnew; noimplementationbenchmarkhere"
+    },
+    {
+      "title": "Classical and Modern Optics",
+      "author": "Daniel A. Steck",
+      "url": "https://atomoptics.uoregon.edu/~dsteck/teaching/optics/optics-notes.pdf",
+      "sha256": "2ecd596a87669dbab9c0ddc3950c570a114074d313d26ac5aefcd453bf986995",
+      "review_scope": "Chapter6GaussianBeams, Eqs6.15-6.18, waistRayleighlength/complexphase/finiteaperturepower. Privatelyretrieved359pages, onlyrelevantpassagesinspected",
+      "implication": "AnalyticGaussian reference/paraxiallimit; no newlawclaimed"
+    },
+    {
+      "title": "Band-Limited Angular Spectrum Method for Numerical Simulation of Free-Space Propagation in Far and Near Fields",
+      "authors": "Matsushima and Shimobaba",
+      "year": 2009,
+      "url": "https://doi.org/10.1364/OE.17.019662",
+      "review_scope": "Identityandrelatedauthorimplementationdocumentation; fullpaperretrievalfailedHTTP429web/URLErrorCLI",
+      "implication": "Do notclaimweimplementedtheirbandlimit orreadwholepaper; finiteFFTwindowneedscontrols"
+    },
+    {
+      "title": "Quantization-Aware Interval Bound Propagation for Training Certifiably Robust Quantized Neural Networks",
+      "authors": "Lechner et al.",
+      "year": 2023,
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/view/26747",
+      "review_scope": "Publisherabstract/identityonly",
+      "implication": "NativequantizedsemanticsandGPUcertification alreadyhaveantecedents; intervalpropagationaloneisnotnovel"
+    },
+    {
+      "title": "Certifying Geometric Robustness of Neural Networks",
+      "authors": "Balunovic et al.",
+      "year": 2019,
+      "url": "https://ggndpsngh.github.io/files/neurips19-deepg.pdf",
+      "review_scope": "pp1-5methodandrelatedwork excerpts; inputimagetransformations, notopticaltriangles",
+      "implication": "Jointgeometryanddecisioncertification inanotherdomain hasprecedent; noabsenceclaim"
+    },
+    {
+      "title": "Coherent optical neural network that learns desirable phase values in the frequency domain by use of multiple optical-path differences",
+      "authors": "Kawata and Hirose",
+      "year": 2003,
+      "url": "https://doi.org/10.1364/OL.28.002524",
+      "review_scope": "Publisherabstractandidentityonly",
+      "implication": "Learningcoherentpathdifferencephases hasantecedents evenbefore2017"
+    }
+  ],
+  "private_full_texts_not_redistributed": true,
+  "novelty_status": "NOVELTY_NOT_ESTABLISHED",
+  "old_catalog_106_pending_extractions_unchanged": true,
+  "not_exhaustive": true
+}
