@@ -1,0 +1,11 @@
+OpticNeuroBlender 0.1.1
+Blender 4.5, Windows/Linux, NumPy bundled with Blender.
+Install this ZIP through Preferences > Add-ons > Install from Disk.
+Open the OpticNeuro sidebar; open the own trained example only after preserving your current scene.
+Choose an existing evidence directory, set common-coherence amplitudes and phases, then infer.
+Training uses the declared Iris 120/30 split and 60 audited geometry updates inside a background Blender.
+Cancel stops only the owned process. Apply/recover checks the unchanged scene, inputs, package and evidence receipt.
+Save requires a NEW .blend path; evidence directories are never deleted automatically.
+Unit: BU, wavelength 0.1 BU, normalized scalar modal power; no calibrated watts or physical-network validation.
+UI runs are exploratory; scientific claims require separately frozen protocols.
+No external BlenderPhotonics or BOS implementation is bundled. Original source MIT; see LICENSE.

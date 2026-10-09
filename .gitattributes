@@ -124,3 +124,9 @@ Docs/research/own_blender_addon_registration_v2_2026-10-09.json -text !eol white
 
 Docs/research/own_blender_addon_profile_v3_2026-10-09.json -text !eol whitespace=cr-at-eol
 Docs/research/own_blender_addon_registration_v3_2026-10-09.json -text !eol whitespace=cr-at-eol
+
+Docs/research/external_cpu_reproduction_profile_2026-10-09.json -text !eol whitespace=cr-at-eol
+Docs/research/external_cpu_reproduction_registration_2026-10-09.json -text !eol whitespace=cr-at-eol
+Docs/research/external_cpu_requirements_2026-10-09.txt -text !eol whitespace=cr-at-eol
+Docs/research/external_cpu_dependency_primary_receipt_2026-10-09.json -text !eol whitespace=cr-at-eol
+Docs/validation/external-cpu-reproduction-2026-10-09/** -text !eol whitespace=cr-at-eol

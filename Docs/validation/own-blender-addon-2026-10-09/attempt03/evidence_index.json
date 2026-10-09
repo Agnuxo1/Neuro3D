@@ -1,0 +1,442 @@
+{
+  "archive_and_plot.py": {
+    "sha256": "3f7eace99c62b1b0ccbdd2ecb07f7c020951e85b6666cd0905c55fa1e140035c",
+    "bytes": 7109
+  },
+  "blender.log": {
+    "sha256": "88758fe9bc0e746ce0811dff2df6dfdaeb8daf3eb859005192fb27bc4b54d560",
+    "bytes": 1867
+  },
+  "operator_lifecycle_limitation_receipt.json": {
+    "sha256": "d42054b75a493e339f52b7224102a0cc33c6e281ab9b74a090b785540018ab0e",
+    "bytes": 628
+  },
+  "prepare_own_addon_profile_v3_20261009.py": {
+    "sha256": "a969df5ff4b3069a2d7a0ea14dd3b18869a747064352dee78240f5a523ee0000",
+    "bytes": 3047
+  },
+  "prepare_own_addon_sources_v3_20261009.py": {
+    "sha256": "477749036a854530f21a393aceef20a73ed05bf5fc6173467021d20419e14b59",
+    "bytes": 2576
+  },
+  "profile.json": {
+    "sha256": "f862a82373396cd5a98af4b7e9aa15c451d540715263b13430a3b00d832b4325",
+    "bytes": 5906
+  },
+  "published-own-addon-v3-20261009.json": {
+    "sha256": "717e3905e309db5e4cdff4547a3c0c94ab532319cbffa0c40f296100bf9a7caa",
+    "bytes": 430
+  },
+  "registration.json": {
+    "sha256": "5e3098d8795688ddf56134b05399d91add0a59011d563a6e2534cd697ecfa44e",
+    "bytes": 749
+  },
+  "runtime_profile.json": {
+    "sha256": "21765d91490a84a4b45269c2c919e5a1a970e431e8ab1bd699ec1256982132ee",
+    "bytes": 6014
+  },
+  "supervisor.json": {
+    "sha256": "1210b1c9c2c9c4c4b322776c33ab5c5c4473e1ace65889e190dfdd51313531e5",
+    "bytes": 15585
+  },
+  "source/LICENSE": {
+    "sha256": "3e678775bdc901ec198d173d64cffd4d5998a5491fd67899ce3067e93c842ab5",
+    "bytes": 1106
+  },
+  "worker/recovered_geometry.blend": {
+    "sha256": "ea6682638b0d0e8070e193013a9eb36762492e917e523813bafe223747f95ef9",
+    "bytes": 7923953
+  },
+  "worker/result.json": {
+    "sha256": "c15b38ed7ff2f404d9592d8f30994e112a353aeca451a517196fde6036b5bfa1",
+    "bytes": 1930
+  },
+  "worker/jobs/optic-neuro-326edc59834b425d92ea2a99f43faa61/capture.json": {
+    "sha256": "e7602631d7eafda33e6629f72c922b25d4686e2ff2593328a1e29f2e7fd3c2cb",
+    "bytes": 4533179
+  },
+  "worker/jobs/optic-neuro-326edc59834b425d92ea2a99f43faa61/initial_capture.json": {
+    "sha256": "28f4b30d571e067674f8337e39783f49910c961333d065902f51e1c1a4f7472f",
+    "bytes": 4533177
+  },
+  "worker/jobs/optic-neuro-326edc59834b425d92ea2a99f43faa61/initial_graph.json": {
+    "sha256": "13ddcc35653737dc57c75a01adbd1076d99a143f2b7a33ae1053f7270bcaa420",
+    "bytes": 160543
+  },
+  "worker/jobs/optic-neuro-326edc59834b425d92ea2a99f43faa61/initial_scene.json": {
+    "sha256": "c9449205f4600cc19e121d01faf4ed22eeed4c4da8fb4fb4816b6a381553abb8",
+    "bytes": 1185141
+  },
+  "worker/jobs/optic-neuro-326edc59834b425d92ea2a99f43faa61/native_training_profile.json": {
+    "sha256": "2d3e7aa247b64f6a938174fa8b4845931df4b3f2e861fe4c59dfb23b962d62f5",
+    "bytes": 4953
+  },
+  "worker/jobs/optic-neuro-326edc59834b425d92ea2a99f43faa61/request.json": {
+    "sha256": "94c78b751d37640dffb7c58ad6700b66389a1a8333e1cecfff546b4218eac7f2",
+    "bytes": 609
+  },
+  "worker/jobs/optic-neuro-326edc59834b425d92ea2a99f43faa61/result.json": {
+    "sha256": "3e8ed06fb9c542031583705206c949c0ef443a22f1cb4fb38000cf3a24f8a8bd",
+    "bytes": 155060
+  },
+  "worker/jobs/optic-neuro-326edc59834b425d92ea2a99f43faa61/snapshot.blend": {
+    "sha256": "f3884c23bd7588b0e5a2d5074fd3bfa63428caa7ea99424818ed9d9d5d20f719",
+    "bytes": 7923653
+  },
+  "worker/jobs/optic-neuro-326edc59834b425d92ea2a99f43faa61/supervision.json": {
+    "sha256": "448dfa36e8f2d14070aff07c9316a5ae7c719a4ac7d24c2efc1803fb374bf7c2",
+    "bytes": 306
+  },
+  "worker/jobs/optic-neuro-326edc59834b425d92ea2a99f43faa61/trained_geometry.blend": {
+    "sha256": "3d8eff642fda90ae3c43eb673e2e58de0152e66b1fc51cf40924c5d629ca4273",
+    "bytes": 7923653
+  },
+  "worker/jobs/optic-neuro-326edc59834b425d92ea2a99f43faa61/trained_native_capture.json": {
+    "sha256": "28f4b30d571e067674f8337e39783f49910c961333d065902f51e1c1a4f7472f",
+    "bytes": 4533177
+  },
+  "worker/jobs/optic-neuro-326edc59834b425d92ea2a99f43faa61/trained_native_graph.json": {
+    "sha256": "13ddcc35653737dc57c75a01adbd1076d99a143f2b7a33ae1053f7270bcaa420",
+    "bytes": 160543
+  },
+  "worker/jobs/optic-neuro-326edc59834b425d92ea2a99f43faa61/trained_native_scene.json": {
+    "sha256": "c9449205f4600cc19e121d01faf4ed22eeed4c4da8fb4fb4816b6a381553abb8",
+    "bytes": 1185141
+  },
+  "worker/jobs/optic-neuro-326edc59834b425d92ea2a99f43faa61/worker.stdout": {
+    "sha256": "43abf8218d18480f250c7cb8448d3d3daf882af6c17e7fa8bc72ca60063690cf",
+    "bytes": 4882
+  },
+  "worker/jobs/optic-neuro-3d446b08c6d243e0847e9bbbb47b3dcd/capture.json": {
+    "sha256": "e7602631d7eafda33e6629f72c922b25d4686e2ff2593328a1e29f2e7fd3c2cb",
+    "bytes": 4533179
+  },
+  "worker/jobs/optic-neuro-3d446b08c6d243e0847e9bbbb47b3dcd/initial_capture.json": {
+    "sha256": "aafcce700c721fe0683782e32167cca8971de97d6f1c4aa673a236d66cb9b87a",
+    "bytes": 4533177
+  },
+  "worker/jobs/optic-neuro-3d446b08c6d243e0847e9bbbb47b3dcd/initial_graph.json": {
+    "sha256": "13ddcc35653737dc57c75a01adbd1076d99a143f2b7a33ae1053f7270bcaa420",
+    "bytes": 160543
+  },
+  "worker/jobs/optic-neuro-3d446b08c6d243e0847e9bbbb47b3dcd/initial_scene.json": {
+    "sha256": "c9449205f4600cc19e121d01faf4ed22eeed4c4da8fb4fb4816b6a381553abb8",
+    "bytes": 1185141
+  },
+  "worker/jobs/optic-neuro-3d446b08c6d243e0847e9bbbb47b3dcd/request.json": {
+    "sha256": "7410357d8ce0cef4bf11c953cc3369a64c4d8bbc54bb86d8be7d660ff31f8f4a",
+    "bytes": 609
+  },
+  "worker/jobs/optic-neuro-3d446b08c6d243e0847e9bbbb47b3dcd/result.json": {
+    "sha256": "ba29dc154ef6f4a8e175218cf7bc2753d8650d319e12a59be717c4212d545de6",
+    "bytes": 125540
+  },
+  "worker/jobs/optic-neuro-3d446b08c6d243e0847e9bbbb47b3dcd/snapshot.blend": {
+    "sha256": "2875da8a00a22d95a97d465e2849918b2f4e68decdacae6f6e137960198b4aae",
+    "bytes": 7923328
+  },
+  "worker/jobs/optic-neuro-3d446b08c6d243e0847e9bbbb47b3dcd/supervision.json": {
+    "sha256": "282ad56ac6cee52f81a31ce46000443d0273d0609c27f2b5a86848cc1640109b",
+    "bytes": 307
+  },
+  "worker/jobs/optic-neuro-3d446b08c6d243e0847e9bbbb47b3dcd/worker.stdout": {
+    "sha256": "4768f7f83c6b49d01114e14f4e80416b12f30c6671700ced9a52399f07eba4d2",
+    "bytes": 340
+  },
+  "worker/jobs/optic-neuro-b5108a5ecb844122b8e42438bdf39969/capture.json": {
+    "sha256": "e7602631d7eafda33e6629f72c922b25d4686e2ff2593328a1e29f2e7fd3c2cb",
+    "bytes": 4533179
+  },
+  "worker/jobs/optic-neuro-b5108a5ecb844122b8e42438bdf39969/request.json": {
+    "sha256": "7410357d8ce0cef4bf11c953cc3369a64c4d8bbc54bb86d8be7d660ff31f8f4a",
+    "bytes": 609
+  },
+  "worker/jobs/optic-neuro-b5108a5ecb844122b8e42438bdf39969/snapshot.blend": {
+    "sha256": "ff53570e1ef7c8ca5e53f6bdbf2d42f3fc52c2344780fda7305c2ce8c8fd3634",
+    "bytes": 7923653
+  },
+  "worker/jobs/optic-neuro-b5108a5ecb844122b8e42438bdf39969/supervision.json": {
+    "sha256": "245022149f123a0d6b5af1c524fd6b6854b3db2157200c10b919fe2968559781",
+    "bytes": 231
+  },
+  "worker/jobs/optic-neuro-b5108a5ecb844122b8e42438bdf39969/worker.stdout": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  "worker/jobs/optic-neuro-326edc59834b425d92ea2a99f43faa61/training/final_virtual_graph.json": {
+    "sha256": "22f854bf29a2ce0f6564a70cd6e5ba8ec8fd2461545ee73bedb17264ebb3c7c6",
+    "bytes": 367003
+  },
+  "worker/jobs/optic-neuro-326edc59834b425d92ea2a99f43faa61/training/final_virtual_scene.json": {
+    "sha256": "0d5818890104d08ca213f863e6797761d7b2ed98bedda74e2db5bf1a6c465acc",
+    "bytes": 2681990
+  },
+  "worker/jobs/optic-neuro-326edc59834b425d92ea2a99f43faa61/training/progress.jsonl": {
+    "sha256": "4437b46a92467d01b57604e1c79ccfe5f3bd5e16128267fbfdeacf258a9fdd02",
+    "bytes": 31579
+  },
+  "worker/jobs/optic-neuro-326edc59834b425d92ea2a99f43faa61/training/result.json": {
+    "sha256": "9506397ed41b3b22d090f1af637b0829138c4971d65ef48eaa455f6c5d500d11",
+    "bytes": 43983
+  },
+  "source/Tools/audit_captured_pilot_result_v1.py": {
+    "sha256": "a3f683ab11aa07eb52aefb4046ba89516321bb175ef01697c39131234b3ac686",
+    "bytes": 9836
+  },
+  "source/Tools/audit_coherent_state_graph_v1.py": {
+    "sha256": "2bb9bb285ec93922fd96cc1eec98fa1fc2c73d20856140536ba5adfe50d4519d",
+    "bytes": 9570
+  },
+  "source/Tools/audit_graph_neighborhood_v1.py": {
+    "sha256": "a5186cabf4ae3e7b0ea3995f66b315709e64751d3e4636b37d2172a7fad02ef2",
+    "bytes": 4025
+  },
+  "source/Tools/audit_installed_own_blender_addon_v3.py": {
+    "sha256": "94e40a67e7ee41f2d283659fe3d6a54daa3b5d18e505a5a1b83b40fca03af903",
+    "bytes": 8609
+  },
+  "source/Tools/bind_network_capture_v1.py": {
+    "sha256": "af3bdbc41636214f01c2078ce26bd271794fa763ccefecd2a006f1014d2f117b",
+    "bytes": 2085
+  },
+  "source/Tools/build_own_blender_addon_v2.py": {
+    "sha256": "4763e9d108c4df6fb5d634616903ff8b5e924d2c019baa72b7cfd773d53e0d5f",
+    "bytes": 6307
+  },
+  "source/Tools/run_frozen_own_addon_audit_v3.py": {
+    "sha256": "5e0565095fb4c4b4422a49bc7ae0bc6b7537f9c3a99c33a35b1139f5b1290d8f",
+    "bytes": 8216
+  },
+  "source/Tools/trace_indexed_scene_v1.py": {
+    "sha256": "e1ce3a4cf1c83234897de221cc28833017e76863c4ac88e2ead3957f1bac13ac",
+    "bytes": 1732
+  },
+  "source/Tools/train_captured_geometry_v1.py": {
+    "sha256": "5700e71eed99d398239603f35c6c449814be0926d477df4944ff999a8e9b9dba",
+    "bytes": 9575
+  },
+  "source/Docs/research/captured_geometry_training_profile_2026-10-09.json": {
+    "sha256": "0eba46caad4b11a4405910d80d6d52c802e7db743e5b267004612d563f971914",
+    "bytes": 5909
+  },
+  "source/Docs/research/iris_coherent_contract_v1.json": {
+    "sha256": "72cd57ad26e9becfccab6304ccd62dc9afea21efd651ffbae1aefdfef337dd0b",
+    "bytes": 4662
+  },
+  "source/Docs/research/iris_scene_coordinate_bindings_v1.json": {
+    "sha256": "85d7b5dd77589b5c1b11b19b1de082be4fb8e4cb7ddceafa50f35cdd4767b515",
+    "bytes": 7872
+  },
+  "source/Docs/validation/captured-scalar-ingress-2026-10-08/semantics.json": {
+    "sha256": "bcd17460a49dbbe244997638b056dc5dfcf544f2bc2b59c3f18ce9edb2569336",
+    "bytes": 11610
+  },
+  "source/Docs/validation/trained-geometry-blender-reproduction-2026-10-09/attempt01/worker/trained_geometry.blend": {
+    "sha256": "7d800f4c598674c21e4ce5d39db5d02d59cadec0ba8458304622f69e020e8f04",
+    "bytes": 7922480
+  },
+  "source/Docs/validation/captured-geometry-training-2026-10-09/attempt01/worker/result.json": {
+    "sha256": "cd15f461839d9e7863079e60cedbfcbad040f77a18b6f1cec4d7594d03b3df3a",
+    "bytes": 44267
+  },
+  "source/Blender/blender_lab/affine_geometry_network_v1.py": {
+    "sha256": "3f163e622e645a706b903ab3f714f3a695605463d2de51b9cd7218b02023696c",
+    "bytes": 9264
+  },
+  "source/Blender/blender_lab/coherent_contract_v1.py": {
+    "sha256": "4339ff387837932c71ffdd0a7107146fd378878a7ad38d5a8b773b56c71316f2",
+    "bytes": 10178
+  },
+  "source/Blender/blender_lab/coherent_state_graph_v1.py": {
+    "sha256": "d67c389be8a48d9aebe563fd3333af8c962c28d5f5942ea092bf448af403e439",
+    "bytes": 8421
+  },
+  "source/Blender/blender_lab/scalar_scene_ingress_v1.py": {
+    "sha256": "a2f53daa2f34ea71585bc9e9c3d742a02e66651cff2dee450dba09274b30d3d3",
+    "bytes": 10227
+  },
+  "source/Blender/blender_lab/scene_capture_v1.py": {
+    "sha256": "fe676b61a9e743277d69b54890688555a604f659c7f23ee223703b907ad8a2d0",
+    "bytes": 13990
+  },
+  "source/Blender/blender_lab/__init__.py": {
+    "sha256": "8c93d859b2364fdd697db5fc3234c0406e2a01cbcceb9c6b05a72b92996f372f",
+    "bytes": 85
+  },
+  "source/Blender/demo_lattice_iris/iris.csv": {
+    "sha256": "9cc1c345c71bcc9b486b74cbf6063fa66f4bb5e0f603a4b3c3471ec2e5e8e355",
+    "bytes": 3858
+  },
+  "source/Blender/releases/optic-neuro-blender-0.1.1-manifest.json": {
+    "sha256": "f2ec0bbbfdff30dfa68308ca66e5010188fb006fd8face844d4f2e44ab1cce7d",
+    "bytes": 14562
+  },
+  "source/Blender/releases/optic-neuro-blender-0.1.1.zip": {
+    "sha256": "2e247000af5cdbc88c6fe43c6d6dae454c8a6bfb92a68c5766a9d7be7fd7903f",
+    "bytes": 619921
+  },
+  "source/Blender/benchmarks/capacity_audit/exact_object_index_v1.py": {
+    "sha256": "ce7313f7702b46ed987943a2808957e0da4fb313a09e54a7f77a9c1b2b5126d2",
+    "bytes": 3618
+  },
+  "source/Blender/benchmarks/capacity_audit/robust_multipath_v1.py": {
+    "sha256": "26dcbe7bb61dbf98430cd481292970d5631e79aec9fc9794ba672611f559d4d8",
+    "bytes": 16867
+  },
+  "source/Blender/addon/optic_neuro_blender/bootstrap.py": {
+    "sha256": "858c26e08bef42f8e0ce5f4a22f4dbfc50cf2acb5623bae67c36e80638f45dbb",
+    "bytes": 1158
+  },
+  "source/Blender/addon/optic_neuro_blender/model.py": {
+    "sha256": "6ef4efb2588b0a4b41c8c6dcfe3e0ca00368decb230ebf7b6362b66cbfbc53d6",
+    "bytes": 3528
+  },
+  "source/Blender/addon/optic_neuro_blender/runtime.py": {
+    "sha256": "42f0f87c2cf323bdcd70bcb00e3ee295a2c538f78bfd2e9389e7036cbe92918c",
+    "bytes": 6411
+  },
+  "source/Blender/addon/optic_neuro_blender/worker_v2.py": {
+    "sha256": "35b81ac6af071f22f8411851f2cf816161d1b81355d71ead3d21d5e6a3a63c78",
+    "bytes": 7968
+  },
+  "source/Blender/addon/optic_neuro_blender/__init__.py": {
+    "sha256": "315bf7a198de1e39c2b6bde9bd1183fc8867b93f0107f048dda48003ec538899",
+    "bytes": 11808
+  },
+  "isolated/scripts/addons/optic_neuro_blender/bootstrap.py": {
+    "sha256": "858c26e08bef42f8e0ce5f4a22f4dbfc50cf2acb5623bae67c36e80638f45dbb",
+    "bytes": 1158
+  },
+  "isolated/scripts/addons/optic_neuro_blender/INSTALL.txt": {
+    "sha256": "de55d3a97445add9feb9fc78fd967ca47fb52374af2e8b3906e7794a100cd9a9",
+    "bytes": 942
+  },
+  "isolated/scripts/addons/optic_neuro_blender/LICENSE": {
+    "sha256": "3e678775bdc901ec198d173d64cffd4d5998a5491fd67899ce3067e93c842ab5",
+    "bytes": 1106
+  },
+  "isolated/scripts/addons/optic_neuro_blender/model.py": {
+    "sha256": "6ef4efb2588b0a4b41c8c6dcfe3e0ca00368decb230ebf7b6362b66cbfbc53d6",
+    "bytes": 3528
+  },
+  "isolated/scripts/addons/optic_neuro_blender/package_manifest.json": {
+    "sha256": "f2ec0bbbfdff30dfa68308ca66e5010188fb006fd8face844d4f2e44ab1cce7d",
+    "bytes": 14562
+  },
+  "isolated/scripts/addons/optic_neuro_blender/runtime.py": {
+    "sha256": "42f0f87c2cf323bdcd70bcb00e3ee295a2c538f78bfd2e9389e7036cbe92918c",
+    "bytes": 6411
+  },
+  "isolated/scripts/addons/optic_neuro_blender/worker_v2.py": {
+    "sha256": "35b81ac6af071f22f8411851f2cf816161d1b81355d71ead3d21d5e6a3a63c78",
+    "bytes": 7968
+  },
+  "isolated/scripts/addons/optic_neuro_blender/__init__.py": {
+    "sha256": "315bf7a198de1e39c2b6bde9bd1183fc8867b93f0107f048dda48003ec538899",
+    "bytes": 11808
+  },
+  "isolated/scripts/addons/optic_neuro_blender/data/contract.json": {
+    "sha256": "72cd57ad26e9becfccab6304ccd62dc9afea21efd651ffbae1aefdfef337dd0b",
+    "bytes": 4662
+  },
+  "isolated/scripts/addons/optic_neuro_blender/data/iris.csv": {
+    "sha256": "9cc1c345c71bcc9b486b74cbf6063fa66f4bb5e0f603a4b3c3471ec2e5e8e355",
+    "bytes": 3858
+  },
+  "isolated/scripts/addons/optic_neuro_blender/data/network.json": {
+    "sha256": "85d7b5dd77589b5c1b11b19b1de082be4fb8e4cb7ddceafa50f35cdd4767b515",
+    "bytes": 7872
+  },
+  "isolated/scripts/addons/optic_neuro_blender/data/semantics.json": {
+    "sha256": "bcd17460a49dbbe244997638b056dc5dfcf544f2bc2b59c3f18ce9edb2569336",
+    "bytes": 11610
+  },
+  "isolated/scripts/addons/optic_neuro_blender/data/trained_geometry.blend": {
+    "sha256": "7d800f4c598674c21e4ce5d39db5d02d59cadec0ba8458304622f69e020e8f04",
+    "bytes": 7922480
+  },
+  "isolated/scripts/addons/optic_neuro_blender/data/training_profile.json": {
+    "sha256": "0eba46caad4b11a4405910d80d6d52c802e7db743e5b267004612d563f971914",
+    "bytes": 5909
+  },
+  "isolated/scripts/addons/optic_neuro_blender/data/training_result.json": {
+    "sha256": "cd15f461839d9e7863079e60cedbfcbad040f77a18b6f1cec4d7594d03b3df3a",
+    "bytes": 44267
+  },
+  "isolated/scripts/addons/optic_neuro_blender/_vendor/__init__.py": {
+    "sha256": "44be256a676b1ee83d2db8665b77e0dff09c4f7f0e6ba5d4c9caa76a11eb0f87",
+    "bytes": 64
+  },
+  "isolated/scripts/addons/optic_neuro_blender/_vendor/Blender/__init__.py": {
+    "sha256": "44be256a676b1ee83d2db8665b77e0dff09c4f7f0e6ba5d4c9caa76a11eb0f87",
+    "bytes": 64
+  },
+  "isolated/scripts/addons/optic_neuro_blender/_vendor/Tools/audit_captured_pilot_result_v1.py": {
+    "sha256": "a3f683ab11aa07eb52aefb4046ba89516321bb175ef01697c39131234b3ac686",
+    "bytes": 9836
+  },
+  "isolated/scripts/addons/optic_neuro_blender/_vendor/Tools/audit_coherent_state_graph_v1.py": {
+    "sha256": "c9e4258b32354d318e2b7bc598b0b49e00529fc05ada38f9d6c10ff13cf87b96",
+    "bytes": 9598
+  },
+  "isolated/scripts/addons/optic_neuro_blender/_vendor/Tools/audit_graph_neighborhood_v1.py": {
+    "sha256": "c0aff0f726f29448f0186750d38511fce4d7e5c053cc0b47eaa98660ff5c2f95",
+    "bytes": 4081
+  },
+  "isolated/scripts/addons/optic_neuro_blender/_vendor/Tools/bind_network_capture_v1.py": {
+    "sha256": "5966d65c6acf9f70dfab4f80b7abfcdf3295276269b9ecc1b92918c26a1d07fd",
+    "bytes": 2113
+  },
+  "isolated/scripts/addons/optic_neuro_blender/_vendor/Tools/trace_indexed_scene_v1.py": {
+    "sha256": "ab53ebae4a30711a44f6161c35a406f9a64b96c5e90081676a6f2648279ce381",
+    "bytes": 1844
+  },
+  "isolated/scripts/addons/optic_neuro_blender/_vendor/Tools/train_captured_geometry_v1.py": {
+    "sha256": "0616aeafc13ff39eef669223fc97fecde40e041999703c6b3f86114fb8450ab4",
+    "bytes": 9715
+  },
+  "isolated/scripts/addons/optic_neuro_blender/_vendor/Tools/__init__.py": {
+    "sha256": "44be256a676b1ee83d2db8665b77e0dff09c4f7f0e6ba5d4c9caa76a11eb0f87",
+    "bytes": 64
+  },
+  "isolated/scripts/addons/optic_neuro_blender/_vendor/Blender/benchmarks/__init__.py": {
+    "sha256": "44be256a676b1ee83d2db8665b77e0dff09c4f7f0e6ba5d4c9caa76a11eb0f87",
+    "bytes": 64
+  },
+  "isolated/scripts/addons/optic_neuro_blender/_vendor/Blender/blender_lab/affine_geometry_network_v1.py": {
+    "sha256": "77bc3b419cf5a5c2141687d8f46664e745832b3c5651d41efd6111691aa56cb0",
+    "bytes": 9292
+  },
+  "isolated/scripts/addons/optic_neuro_blender/_vendor/Blender/blender_lab/coherent_contract_v1.py": {
+    "sha256": "4339ff387837932c71ffdd0a7107146fd378878a7ad38d5a8b773b56c71316f2",
+    "bytes": 10178
+  },
+  "isolated/scripts/addons/optic_neuro_blender/_vendor/Blender/blender_lab/coherent_state_graph_v1.py": {
+    "sha256": "9859e21508b1224cd91b9863310d9691f4cd50dfc54ef3876989fd340488f613",
+    "bytes": 8477
+  },
+  "isolated/scripts/addons/optic_neuro_blender/_vendor/Blender/blender_lab/scalar_scene_ingress_v1.py": {
+    "sha256": "2c04c2c8255b2c29a93020ebda9b0be304528b3d3f7d86dfcdf5b09ff5ed5c24",
+    "bytes": 10255
+  },
+  "isolated/scripts/addons/optic_neuro_blender/_vendor/Blender/blender_lab/scene_capture_v1.py": {
+    "sha256": "fe676b61a9e743277d69b54890688555a604f659c7f23ee223703b907ad8a2d0",
+    "bytes": 13990
+  },
+  "isolated/scripts/addons/optic_neuro_blender/_vendor/Blender/blender_lab/__init__.py": {
+    "sha256": "8c93d859b2364fdd697db5fc3234c0406e2a01cbcceb9c6b05a72b92996f372f",
+    "bytes": 85
+  },
+  "isolated/scripts/addons/optic_neuro_blender/_vendor/Blender/benchmarks/capacity_audit/exact_object_index_v1.py": {
+    "sha256": "ce7313f7702b46ed987943a2808957e0da4fb313a09e54a7f77a9c1b2b5126d2",
+    "bytes": 3618
+  },
+  "isolated/scripts/addons/optic_neuro_blender/_vendor/Blender/benchmarks/capacity_audit/robust_multipath_v1.py": {
+    "sha256": "26dcbe7bb61dbf98430cd481292970d5631e79aec9fc9794ba672611f559d4d8",
+    "bytes": 16867
+  },
+  "isolated/scripts/addons/optic_neuro_blender/_vendor/Blender/benchmarks/capacity_audit/__init__.py": {
+    "sha256": "44be256a676b1ee83d2db8665b77e0dff09c4f7f0e6ba5d4c9caa76a11eb0f87",
+    "bytes": 64
+  }
+}
