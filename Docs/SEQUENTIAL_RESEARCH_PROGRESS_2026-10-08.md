@@ -117,3 +117,7 @@ Frozen ba108e9/profile91c35578/32 pins verified preanalysis. All450 recorded out
 ## 2026-10-09T09:41:00.055632+00:00 — captured-surface native graphics derivative audit PASS
 
 Frozen699f01e publishedmain+branch beforeFIFO;88pins. Full336.924254s/RSS434.86MiB;16params5probes21,280queries/32independentFDgeom audits296.745830s. field6.5773e-14/Jacfield5.7353e-12/Jacpower9.2771e-13/lossgrad5.4321e-12;FDscaled<=2.6588e-9/all8084GLstageszeroerrors/bitfield+Jac echoes/zeroexact. ExplicithybridCPUtopology/originjets/merges/power-loss; noGPUfulltraining/OptiX/AMD/physical/speed claim. Raw hashesverified/archive ready; publishbeforeOptiXtrial. Goalactive13:55UTC.
+
+## 2026-10-09T09:53:26.410773+00:00 — compiled reproducible scientific article and graphics selection
+
+Actual pdflatex MiKTeX25.12 two passes0/no-shell-escape;12pages350185bytes/PDFsha28a30a45aac6e0ae1b94809b94288976340a9a4a9487dfd9f0bddd043140243a/zerooverfull. Sourceequations/tables/readout/derivative controls andfullrawlinks inspected. Researchdraftnotexternalpeerreview/notjournal. Advancedprimarydocumentation mappedactualOpenGL/installedOptiX/SERAda constraint/Vulkan/AMD hardware gap/licenses; noSDKcontractaccepted. OptiXprofiled98f506 frozen92pins/09:45:58receiptqueuedbehindsharedNeuroPixel9GiB; noOptiXoutcome. Nextnativegraphicsactual60steptraining withwholeoriginalfamilyproof/newcompactstrictGLlog andactualnativecaptures. Goalactive13:55UTC.
