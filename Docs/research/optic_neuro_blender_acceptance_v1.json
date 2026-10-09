@@ -75,8 +75,8 @@
       "status": "PARTIAL_ACTUAL_NATIVE_GRAPHICS_FRONTIER_AND_CUDA_ARITHMETIC_VERIFIED",
       "acceptance": "Equivalent outputs and precision, actual vendor execution receipts, complete preparation/transfer/compute/readout/training cost and resource/ablation evidence",
       "amd_execution_verified": false,
-      "achieved": "ActualRTX3090/CUDA12.4/Torch2.6.0 kernels/readback60inputs; ownfields/powers/manualJacobian parity/autogradcontrol; independentobservedfieldsL1<=2.9356882610688944e-15,power<=1.3807709003001215e-15;59argmaxcertified,zeroUNKNOWN;5repeatsbatches1/150/2048,fullworker6.7155s,source/setup/transfers/readback costs andequivalentdensebaseline measured; pairedfullactualCPU/CUDAowntraining60updates61geometryauditsboth27of30/150decisionssame, field5.4e-16/gradient2.85e-13parity;CPU370.46/CUDA390.09s,nofullspeedup,CUDA22MiBreserved; independentlyprovedwholeoriginaltrainingfamily1251exactaffineexpressions, freshfullCPUpointaudit/continuousproofpair393.11/90.93s ratio4.3233,all61coordinates/lossand150powers/predictionsidentical; singlepairnoCI; actualBlenderOpenGLRTX3090 source-drivenfrontier17batches/133verifiedgeometrycandidates/186edges17060paths/all150predictionssame/field5.12e-16power5.55e-16; threecompleteCPU29.87\u201330.77s/GPU+proof31.53\u201333.01s,noglobalspeedup; nearplaneFP32failure retained",
-      "remaining": "ActualAMDhardware; energy/structuralscaling/ablations; exact GPU geometry predicates or lower-cost valid candidate certificates; installedgraphicsintegration"
+      "achieved": "ActualRTX3090/CUDA12.4/Torch2.6.0 kernels/readback60inputs; ownfields/powers/manualJacobian parity/autogradcontrol; independentobservedfieldsL1<=2.9356882610688944e-15,power<=1.3807709003001215e-15;59argmaxcertified,zeroUNKNOWN;5repeatsbatches1/150/2048,fullworker6.7155s,source/setup/transfers/readback costs andequivalentdensebaseline measured; pairedfullactualCPU/CUDAowntraining60updates61geometryauditsboth27of30/150decisionssame, field5.4e-16/gradient2.85e-13parity;CPU370.46/CUDA390.09s,nofullspeedup,CUDA22MiBreserved; independentlyprovedwholeoriginaltrainingfamily1251exactaffineexpressions, freshfullCPUpointaudit/continuousproofpair393.11/90.93s ratio4.3233,all61coordinates/lossand150powers/predictionsidentical; singlepairnoCI; actualBlenderOpenGLRTX3090 source-drivenfrontier17batches/133verifiedgeometrycandidates/186edges17060paths/all150predictionssame/field5.12e-16power5.55e-16; threecompleteCPU29.87\u201330.77s/GPU+proof31.53\u201333.01s,noglobalspeedup; nearplaneFP32failure retained; prospectivegraphicsv2 exactplane/Gram/squarewitness/all133states+150outputs preserved;originalCPU29.81\u201330.04s/GPUplusnewrefinement10.45\u201310.60s/medianratio2.85combinedroute,notisolatedGPUadvantage",
+      "remaining": "ActualAMDhardware; energy/structuralscaling/ablations; exact GPU geometry predicates or lower-cost valid candidate certificates; installedgraphicsintegration; identical-refinementCPUcandidatecausalablation"
     },
     {
       "id": 9,
@@ -130,6 +130,6 @@
   "latest_geometry_reuse_training": "Docs/validation/geometry-reuse-training-2026-10-09/attempt01/supervisor.json",
   "latest_geometry_cuda_training": "Docs/validation/geometry-cuda-training-2026-10-09/attempt01/supervisor.json",
   "latest_external_native_blender": "Docs/validation/external-native-blender-2026-10-09/attempt02/artifact/result.json",
-  "latest_native_graphics_frontier": "Docs/validation/native-graphics-frontier-2026-10-09/attempt01/worker/result.json",
+  "latest_native_graphics_frontier": "Docs/validation/native-graphics-frontier-2026-10-09/attempt02/worker/result.json",
   "latest_training_process_recovery": "Docs/validation/training-recovery-2026-10-09/attempt02/supervisor.json"
 }
