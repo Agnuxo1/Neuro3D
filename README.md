@@ -110,6 +110,17 @@ Esto caracteriza una familia gaussiana escalar declarada; la fidelidad física d
 
 ![Mayor ventana y referencia independiente](Docs/assets/gaussian-wave-remedial-2026-10-09.png)
 
+El [complemento propio instalable](Docs/OWN_BLENDER_ADDON_PROTOCOL_2026-10-09.md)
+supera nueve controles reales en Blender: instalación aislada, inferencia, entrenamiento geométrico propio dentro de Blender,
+cancelación, rechazo de resultados obsoletos, recuperación y copia/reapertura. Reproduce los 27/30 aciertos Iris y las 150 potencias
+con diferencia observada cero; coste completo 729,01 s. El registro conserva un fallo de doble desregistro al cerrar, pendiente de corrección.
+
+![Resultados nativos del complemento propio](Docs/assets/own-blender-addon-native-training-2026-10-09.png)
+
+El [borrador científico reproducible](Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.md)
+reúne métodos, datos, costes, resultados negativos y límites. La revisión externa, la fidelidad física completa,
+la validación AMD y una aportación original de importancia excepcional siguen pendientes.
+
 El [ejecutor y auditor del piloto](Docs/CAPTURED_PILOT_SUPERVISOR_2026-10-08.md)
 están preparados con fuentes/inputs fijados, límites de recursos y negativa por
 registro ausente. Pasan 66 controles conjuntos de software. El piloto se ejecutó

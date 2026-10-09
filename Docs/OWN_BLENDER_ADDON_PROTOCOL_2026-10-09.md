@@ -1,6 +1,6 @@
 # Instalación e interfaz de la red geométrica propia
 
-Estado: PRIMER INTENTO INVÁLIDO, métrica nula; integración nativa pendiente. Este complemento nuevo es una integración del núcleo óptico propio desde geometría evaluada. El complemento histórico y sus resultados se conservan.
+Estado: NUEVE CONTROLES NATIVOS SATISFECHOS en ZIP 0.1.1; queda un fallo de doble desregistro al cerrar. Los dos intentos anteriores, con métricas nulas, se conservan. Este complemento nuevo integra el núcleo óptico propio desde geometría evaluada.
 
 ## Artefacto reproducible
 
@@ -64,7 +64,7 @@ La comprobación de todos los bytes Git y del remoto debe terminar con salida 0 
 
 El segundo intento se ejecutó después de verificar las 32 fuentes y el remoto en `02572a80ba966e6a807b993c6e6c3d76dc67fa0a`. La instalación ZIP aislada y el registro de operadores sí funcionaron. La inferencia se detuvo al pasar campos complejos al auditor mediante un conversor que sólo admite racionales. Se conserva [el intento completo](validation/own-blender-addon-2026-10-09/attempt02/evidence_index.json), 42,7916 s, RSS agregado máximo 529,461 MiB, métrica nula y sin resultado de inferencia o entrenamiento. La corrección será un nuevo worker que usa el conversor complejo existente y un ZIP 0.1.1, conservando 0.1.0.
 
-## Perfil v3 con conversión compleja, todavía no ejecutado
+## Perfil v3 con conversión compleja: ejecutado
 
 [ZIP 0.1.1](../Blender/releases/optic-neuro-blender-0.1.1.zip), SHA-256 `2e247000af5cdbc88c6fe43c6d6dae454c8a6bfb92a68c5766a9d7be7fd7903f`, 619921 bytes. Dos reconstrucciones produjeron esos mismos bytes. El nuevo `worker_v2.py` utiliza `Tools.trace_indexed_scene_v1.wire` para conservar racionales y campos `{real, imag}` al entregar y guardar el resultado para el auditor. El núcleo geométrico, los algoritmos de propagación/gradientes/entrenamiento, las nueve comprobaciones y todas las tolerancias/límites siguen iguales. El ZIP 0.1.0 y su worker se conservan como versiones anteriores.
 
@@ -73,3 +73,13 @@ El segundo intento se ejecutó después de verificar las 32 fuentes y el remoto 
 ```powershell
 python -X utf8 Tools/run_frozen_own_addon_audit_v3.py --profile Docs/research/own_blender_addon_profile_v3_2026-10-09.json --registration Docs/research/own_blender_addon_registration_v3_2026-10-09.json --out D:/PROJECTS/.cognition/neuro3d-sequential-20261008/own-blender-addon-20261009-run03
 ```
+
+El perfil y sus 32 fuentes se publicaron y verificaron antes de ejecutar en `b7127929b045077374a952ae2efae255b1307ca3`. [Índice completo](validation/own-blender-addon-2026-10-09/attempt03/evidence_index.json) y [resultado nativo](validation/own-blender-addon-2026-10-09/attempt03/worker/result.json), SHA-256 `c15b38ed7ff2f404d9592d8f30994e112a353aeca451a517196fde6036b5bfa1`.
+
+Pasan las nueve puertas prefijadas, métrica 1. Coste completo 729,0129 s, RSS agregado máximo 573,492 MiB, sin interrupción y procesos propios terminados. La inferencia instalada reproduce los 150 ejemplos con diferencia máxima de potencia cero y las mismas decisiones. El entrenamiento propio dentro de un Blender secundario conserva las 61 auditorías y reproduce exactamente la pérdida `6,255440538348521→0,30970667211199093`, los 27/30 aciertos reservados y las 150 potencias de la ejecución anterior. La reconstrucción nativa final también tiene diferencia de potencia cero. Son resultados de software/aritmética observada, sin certificación física ni réplica externa.
+
+Se verifican rechazo tras cambiar entradas o geometría, cancelación real de un proceso de Blender sin resultado ficticio, recuperación de un trabajo completo tras desregistrar/registrar, aplicación atómica, copia/reapertura con original intacto y rechazo de un resultado manipulado. El resultado identifica por separado el hash del perfil efectivo con ruta de instalación (`runtime_profile.json`) y el supervisor conserva el hash del perfil público congelado.
+
+![Entrenamiento y potencias observados en el complemento instalado](assets/own-blender-addon-native-training-2026-10-09.png)
+
+**Limitación de ciclo de vida conservada:** después de que el script finalizase sus nueve puertas y llamase directamente a `unregister()`, Blender volvió a desregistrar el módulo habilitado durante el cierre. El registro contiene un `RuntimeError` de doble desregistro. No cambia la pérdida, las potencias ni la métrica de esas nueve puertas, pero la gestión de registro/desregistro idempotente sigue pendiente. Se corregirá en otra versión y se evaluará con un protocolo breve específico, conservando este registro completo.

@@ -50,7 +50,7 @@
       "name": "Own inference and training from geometry",
       "status": "OWN_GEOMETRY_TRAINING_AND_NATIVE_BLENDER_REPRODUCTION_VERIFIED_FOR_FROZEN_IRIS_FAMILY",
       "acceptance": "Forward and gradients originate from captured geometry; held-fixed readout; training-only preprocessing and updates; saved scene changes reproduce inference",
-      "achieved": "16pairedmirrortranslations; owngeometryforward/gradients;61independentlyauditedquantizedstates; train110/120,heldout27/30; historicaltraineddelaysreset; freshfinalfieldrebuilderror<=4.619448428525917e-16; actualBlender4.5.14nativeupdate/save/reopen/capturePASS; exactopticalgeometrymatchesvirtualscene; all150powersandpredictionsidentical",
+      "achieved": "16pairedmirrortranslations; owngeometryforward/gradients;61independentlyauditedquantizedstates; train110/120,heldout27/30; historicaltraineddelaysreset; freshfinalfieldrebuilderror<=4.619448428525917e-16; actualBlender4.5.14nativeupdate/save/reopen/capturePASS; exactopticalgeometrymatchesvirtualscene; all150powersandpredictionsidentical; ZIP0.1.1 ownoptimizerandmanualgradients runinsidebackgroundBlender,61audits,all150nativepowerdifference0 and27of30sameheldout",
       "remaining": "Broader geometry/input families and clean installation; testdataset previously examined; numerical field/decision certification for trainedbatch is separate"
     },
     {
@@ -58,8 +58,8 @@
       "name": "Capacity, stability, physical fidelity",
       "status": "PARTIAL_CAPACITY_STABILITY_AND_DECLARED_WAVE_REGIME_CHARACTERIZED",
       "acceptance": "State restricted function family; compare analytic and independent wave references over declared regime; physical-model error quantified or unknown",
-      "achieved": "Realquadraticcapacity and3seedWinevariability; independentGaussianFFTvsHankel/paraxialstudy36casescompleted withvalidnegative metric0: window16fails2e-6radialbudgetat\u03bb.1/z4; window32reduceserror. Fullnetworkphysicalfidelityremainsunknown",
-      "remaining": "Resolve/freeze largerwindowfamily withoutrelaxingbudgets; parameter/inputrobustness andfullnetworkwave model/physicalmeasurements"
+      "achieved": "Restrictedquadraticcapacity and3seedWinevariability; originalGaussianwindownegativepreserved; separatelyfrozenlargerwindow36casespassallsamegates,observedradialfieldmax9.292e-8L64. Fullnetworkphysicalfidelityunknown",
+      "remaining": "Parameter/input/nativeuncertaintyrobustness andfullnetworkwave model/physicalmeasurements; declaredGaussianfamilydoesnotderivecapturedmode"
     },
     {
       "id": 7,
@@ -81,9 +81,10 @@
     {
       "id": 9,
       "name": "Recovery, Blender interface, clean reproduction",
-      "status": "OPEN",
+      "status": "PARTIAL_STANDALONE_NATIVE_ADDON_FLOW_VERIFIED_WITH_OPEN_SHUTDOWN_LIFECYCLE",
       "acceptance": "Install/edit/run/cancel/save/reopen/export; guarded failure recovery; clean-environment documented reproduction",
-      "achieved": "Actual trainedscene save/reopen/capture and owninferencePASS; originalblend preserved; new interface and clean install stillpending"
+      "achieved": "ZIP0.1.1 isolatedactualinstall/registeredoperators; ownbackgroundBlenderinfer150/training61audits27of30,staleinput/scene,ownedcancel,recover/apply,newcopy/reopen,tamperrejectionPASS9. Originalpreserved;shutdownlogshowsdoubleunregisterRuntimeError retained",
+      "remaining": "Idempotentregistration/unregistration shortnativeaudit; interruptedhost/crashrecovery,Windows/Linuxcleaninstallandspecialistoutsideusability"
     },
     {
       "id": 10,
@@ -115,5 +116,7 @@
   "latest_nvidia_result": "Docs/validation/trained-graph-cuda-2026-10-09/attempt01/worker/result.json",
   "latest_nvidia_certificate": "Docs/validation/trained-graph-cuda-2026-10-09/attempt01/interval_analysis02/certificate.json",
   "latest_wine_comparison": "Docs/validation/wine-comparison-2026-10-09/attempt01/worker/result.json",
-  "latest_wave_reference": "Docs/validation/gaussian-wave-reference-2026-10-09/attempt01/worker/result.json"
+  "latest_wave_reference": "Docs/validation/gaussian-wave-reference-2026-10-09/attempt01/worker/result.json",
+  "latest_own_addon_native_audit": "Docs/validation/own-blender-addon-2026-10-09/attempt03/worker/result.json",
+  "latest_wave_remedial": "Docs/validation/gaussian-wave-remedial-2026-10-09/attempt01/worker/result.json"
 }
