@@ -29,7 +29,7 @@
       "proposal_id": "957514f2-a233-421f-aa04-50cccd063d97",
       "protocol_sha256": "5d0cf372f2f66f043c2a219ba6a60f0182ced8a60039348d486ec163be736226",
       "result_collected": false,
-      "achieved": "Original frozen pilot remains deadline/null; separate frozen graph COMPLETE133states186edges17060terminalpaths104objects5sources; independent closed nearest and nonzero branch audit",
+      "achieved": "Original frozen pilot remains deadline/null; separate frozen graph COMPLETE133states186edges17060terminalpaths104objects5sources; independent closed nearest and nonzero branch audit; independent interval certificates of450 recorded graphical outputs and4coherence controls, fieldL1<=9.98e-14/power<=7.16e-15/all150unique argmax decisions separated",
       "remaining": "Originalpilotdeadline remains unchanged/null; wideradmittedfamilies andexternalregistration remain separate",
       "latest_attempt": "Docs/validation/captured-pilot-execution-2026-10-09/attempt02/supervisor.json",
       "latest_attempt_status": "WORKER_DEADLINE",
@@ -133,5 +133,6 @@
   "latest_native_graphics_frontier": "Docs/validation/native-graphics-frontier-2026-10-09/attempt02/worker/result.json",
   "latest_training_process_recovery": "Docs/validation/training-recovery-2026-10-09/attempt02/supervisor.json",
   "latest_native_geometry_ablation": "Docs/validation/native-geometry-ablation-2026-10-09/attempt01/worker/result.json",
-  "latest_native_graphics_coherent_field": "Docs/validation/native-graphics-field-2026-10-09/attempt11/worker/result.json"
+  "latest_native_graphics_coherent_field": "Docs/validation/native-graphics-field-2026-10-09/attempt11/worker/result.json",
+  "latest_native_graphics_field_certificate": "Docs/validation/native-graphics-field-certificate-2026-10-09/attempt01/worker/certificate.json"
 }

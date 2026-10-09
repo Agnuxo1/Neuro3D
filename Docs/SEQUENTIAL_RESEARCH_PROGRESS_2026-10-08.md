@@ -109,3 +109,7 @@ Frozen86904e4/profile6ffad8cb/source50 verified beforeactualFIFO. All6nativeCPU-
 ## 2026-10-09T09:03:13.173865+00:00 — actual captured-surface native graphics coherent field PASS
 
 Frozen 95f58608/profile90f7701c/81 pins verified before FIFO. Full 36.618470 s/RSS403.04 MiB; three150-input GPU fragment runs 19,950 queries each, all150predictions same27of30, field7.50105e-14/power7.21645e-15; four coherence controls pass. Exactinputecho and all 3634 owned GL stages pass; actual programzero-beforedeletion fixes release-build lifecycle. No dense transfermatrix/CPU phase evaluation substituted, CPU exacttopology and compensatedmerges explicit. No speedup/RTcore/AMD/physical/unobserved-roundingcert claim. All raw hashes checked and archive prepared; publish before secondary interval certificates. Goal active13:55UTC.
+
+## 2026-10-09T09:08:56.544562+00:00 — observed native graphics fields independently certified
+
+Frozen ba108e9/profile91c35578/32 pins verified preanalysis. All450 recorded outputs (three exactly equal repetitions) and4coherence controls bounded independently; unique150argmax separated/137correct13wrong/27of30test. RecordedfieldL1<=9.97352e-14/power<=7.15062e-15; idealencoderfield<=9.97449e-14/power<=7.09173e-15, margin>=.00021119712011813. Full21.017427s/RSS105.49MiB. All raw hashes verified; archive ready for publish before next milestone. Not universal GPU rounding/physical/gradient certification. Goalactive13:55UTC.

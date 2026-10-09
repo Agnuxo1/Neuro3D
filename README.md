@@ -14,7 +14,8 @@ La [propagación coherente en el motor gráfico 3D](Docs/NATIVE_GRAPHICS_COHEREN
 ya se ha ejecutado en Blender y RTX 3090: el fragment shader selecciona superficies
 capturadas y calcula distancia, fase y campos complejos, sin recibir una matriz de
 transferencia precomputada. **150 decisiones iguales**, diferencia máxima de campo
-**7,51×10⁻¹⁴**, con controles reales de fase e interferencia. La admisión geométrica
+**7,51×10⁻¹⁴**, con controles reales de fase e interferencia. La [certificación racional independiente](Docs/NATIVE_GRAPHICS_FIELD_CERTIFICATE_PROTOCOL_2026-10-09.md)
+cubre las 450 salidas observadas y sus decisiones: cota de campo ≤9,98×10⁻¹⁴. La admisión geométrica
 exacta y la fusión coherente siguen en CPU. No demuestra ventaja de velocidad,
 fidelidad física ni ejecución AMD.
 
