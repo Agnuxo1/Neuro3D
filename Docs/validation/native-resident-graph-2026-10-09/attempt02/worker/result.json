@@ -1,0 +1,8 @@
+{
+  "schema": "optic_neuro_blender.native_resident_graph.v2",
+  "status": "INCONCLUSIVE_ENVIRONMENT_OR_INVALID_OUTPUT",
+  "primary_metric": null,
+  "failure_type": "ValueError",
+  "reason": "Independent coherent controls require equivalent fields",
+  "seconds": 24.43913459999021
+}

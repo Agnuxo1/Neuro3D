@@ -1,0 +1,4 @@
+[gpuq] 2026-10-09T15:48:45 en cola: Neuro3D:native-resident-optical-graph-v3-20261009
+[gpuq] 2026-10-09T15:48:53 TURNO: Neuro3D:native-resident-optical-graph-v3-20261009 -> C:\Python313\python.exe D:\PROJECTS\Neuro3D-Scientific-20261008\Tools\run_frozen_native_resident_graph_v3.py --profile D:\PROJECTS\Neuro3D-Scientific-20261008\Docs\research\native_resident_graph_v3_profile_2026-10-09.json --registration D:\PROJECTS\Neuro3D-Scientific-20261008\Docs\research\native_resident_graph_v3_registration_2026-10-09.json --out D:\PROJECTS\.cognition\neuro3d-sequential-20261008\native-resident-graph-v3-attempt01-20261009
+{"status": "INCONCLUSIVE_ENVIRONMENT_OR_INVALID_OUTPUT", "primary_metric": null, "worker_seconds": 25.610539800007246, "peak_owned_rss_mib": 342.60546875, "reason": "Complete actual scaling trial required"}
+[gpuq] 2026-10-09T15:49:21 fin: Neuro3D:native-resident-optical-graph-v3-20261009 rc=3
