@@ -1,6 +1,6 @@
 # Actual-surface local coefficients and resident optical graph
 
-**Experimental; no successful native execution is claimed when this protocol is frozen.** This variant addresses the measured overhead of the existing per-frontier pipeline while keeping the optical computation tied to the captured Blender scene.
+**Experimental; successful native execution requires the corresponding completed trial.** This variant addresses the measured overhead of the existing per-frontier pipeline while keeping the optical computation tied to the captured Blender scene.
 
 1. Open the actual learned Blender scene, capture evaluated geometry and build the source-driven GPU graph. Independently audit the complete133state/17,060path geometry.
 2. Query each of the133current captured surfaces on the native FP64 optical shader with unit incoming field. Retain selected triangles, distance, local first/second complex branches and exact incoming field/derivative echoes. These actual GPU-derived **local coefficients** are uploaded with admitted topology; no CPU global transfer matrix enters the inference shader.
@@ -18,3 +18,9 @@ The prospective resource envelope matches the preceding scaling trial:900seconds
 ## Actual first native attempt: framebuffer limit, NULL
 
 Publication564dae98/profiledc077d1/120pins were verified13:27UTC, followed by sharedFIFO admission13:37:27UTC. The actual capturedgraph and independent audit complete; native localcoefficient derivation/shadercreation reached. Blender rejects eight colorattachments: `AttributeError: too many attachments, max is 6`. No coherent resident outputs or speedresult accepted. Alloriginalrawhashes verified and retained. [Original evidence](validation/native-resident-graph-2026-10-09/attempt01/evidence_index.json). A separatev2 protocol must use two four-mode outputpasses plus an inputechopass, within sixattachments; the originalv1/profile remains unchanged.
+
+## Separate v2: six attachments, prepared before execution
+
+The revised engine uses six attachments, two passes of four modal outputs and one exact five-channel input-echo pass. Every optical output pass traverses all 133 states. The coherent input, field/power/decision controls and resource envelope remain the same. The first NULL, its immutable profile and code are preserved. Preparation and Python syntax checks do not establish native shader equivalence or a speed result.
+
+[V2 profile](research/native_resident_graph_v2_profile_2026-10-09.json) · [V2 registration](research/native_resident_graph_v2_registration_2026-10-09.json) · [V2 engine](../Blender/blender_lab/native_resident_optical_graph_v2.py) · [V2 worker](../Tools/audit_native_resident_graph_v2.py) · [V2 supervisor](../Tools/run_frozen_native_resident_graph_v2.py).
