@@ -1,6 +1,6 @@
 # Instalación e interfaz de la red geométrica propia
 
-Estado: PREPARADO, prueba nativa pendiente. Este complemento nuevo es una integración del núcleo óptico propio desde geometría evaluada. El complemento histórico y sus resultados se conservan.
+Estado: PRIMER INTENTO INVÁLIDO, métrica nula; integración nativa pendiente. Este complemento nuevo es una integración del núcleo óptico propio desde geometría evaluada. El complemento histórico y sus resultados se conservan.
 
 ## Artefacto reproducible
 
@@ -45,3 +45,9 @@ python -X utf8 Tools/run_frozen_own_addon_audit_v1.py --profile Docs/research/ow
 ```
 
 Referencia de API: [operador de guardar una copia](https://docs.blender.org/UATEST/api/current/bpy.ops.wm.html). La prueba nativa confirma el comportamiento efectivo del ejecutable fijado, por encima de su descripción documental.
+
+## Primer intento: sin resultado de instalación
+
+Publicado `8c3e189bd325ac0f65502e78bada57cc1a66024d`. La verificación previa detectó LICENSE con CRLF en el directorio y LF en el blob Git; era el único desajuste de las 32 fuentes. El operador inició el ensayo pese a ese fallo de verificación, por lo que no se considera un ensayo con todas las preimágenes verificadas. El proceso real de Blender terminó antes de instalar el ZIP: el control comparaba la cadena «4.5.14» con `bpy.app.version_string`, cuyo valor efectivo incluye «LTS».
+
+Se conservan [salida bruta, recibo del operador e índice](validation/own-blender-addon-2026-10-09/attempt01/evidence_index.json): 2,433 s, RSS agregado máximo 151,094 MiB, salida 3, métrica nula, sin resultado de instalación ni de red y procesos propios cerrados. La corrección será un perfil nuevo y publicado, comparando la versión numérica y exigiendo verificación completa exitosa antes de ejecutar. El ZIP y el perfil anterior no se sustituyen.
