@@ -4,7 +4,7 @@ Red óptica escalar entrenable que calcula desde la **geometría evaluada de Ble
 
 **El motor gráfico ya participa en el aprendizaje:** la RTX 3090 selecciona triángulos capturados y calcula distancia, fase y derivadas ópticas en shaders FP64. La topología exacta, las fusiones coherentes, la pérdida y Adam se calculan en CPU. Todos los resultados, protocolos, código y fallos se publican en `main`, conservando las versiones anteriores.
 
-[Instalar y usar](Docs/OPTIC_NEURO_BLENDER_USER_GUIDE_2026-10-09.md) · [Complemento 0.1.3](Blender/releases/optic-neuro-blender-0.1.3.zip) · [Artículo PDF](Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.pdf) · [Fuentes del artículo](Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.md) · [Estado de los diez objetivos](Docs/research/optic_neuro_blender_acceptance_v1.json)
+[Instalar y usar](Docs/OPTIC_NEURO_BLENDER_USER_GUIDE_2026-10-09.md) · [Complemento 0.1.3](Blender/releases/optic-neuro-blender-0.1.3.zip) · [Artículo PDF](Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.pdf) · [Fuentes del artículo](Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.md) · [Estado de los diez objetivos](Docs/SCIENTIFIC_ACCEPTANCE_REPORT_2026-10-09.md)
 
 ## Resultados comprobados
 
@@ -73,6 +73,8 @@ La supervisión del aprendizaje gráfico completo cuesta **3066.60 s**, incluyen
 
 [Selección técnica y límites de hardware](Docs/ADVANCED_GRAPHICS_TECHNOLOGY_SELECTION_2026-10-09.md), [OptiX real](Docs/NATIVE_CYCLES_OPTIX_COMPONENT_V2_PROTOCOL_2026-10-09.md), [comparación directa/diferida](Docs/NATIVE_DEFERRED_GRAPHICS_STATE_PROTOCOL_2026-10-09.md). SER, Vulkan e HIP/AMD no se etiquetan como ejecutados por disponer de una API o documentación.
 
+La [auditoría de paquetes y lecturas](Docs/NATIVE_PACKET_WORKLOAD_PROTOCOL_2026-10-09.md) reconcilia 5.834 lotes con los registros gráficos. Un candidato de empaquetado produce los mismos 5.650 paquetes ópticos byte por byte y mejora la preparación para 150/4096 entradas; empeora el caso de una entrada. Son mediciones locales en CPU, sin integración GPU ni mejora global demostrada.
+
 ## Instalación, recuperación y reproducción
 
 Usa **Blender 4.5.14 LTS**, instala el ZIP 0.1.3 y abre el panel **OpticNeuro**. El paquete contiene el modelo propio, el ejemplo, datos y manifiesto; usa Python y NumPy incluidos en Blender. [Guía paso a paso](Docs/OPTIC_NEURO_BLENDER_USER_GUIDE_2026-10-09.md).
@@ -93,7 +95,7 @@ El Blender propietario se interrumpe en checkpoint12; un Blender nuevo reanuda c
 - Registro externo/IPFS: ruta conservada, **sin identificadores emitidos**. Los protocolos ejecutados usaron autorización GitHub publicada.
 - La novedad excepcional, importancia e impacto duradero requieren evidencia adicional. No están demostrados por estos ensayos.
 
-La fabricación es opcional para el simulador. El artículo es un borrador reproducible, sin envío a revista ni revisión especializada. Una cota numérica, un test de software y un acierto neuronal son evidencias diferentes.
+El [paquete de revisión externa](Docs/EXTERNAL_REVIEW_PACKET_2026-10-09.md) fija las comprobaciones y criterios de rechazo para futuros revisores; está preparado y no enviado. La fabricación es opcional para el simulador. El artículo es un borrador reproducible, sin envío a revista ni revisión especializada. Una cota numérica, un test de software y un acierto neuronal son evidencias diferentes.
 
 ## Evidencia, licencias e historia
 

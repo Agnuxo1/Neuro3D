@@ -1,0 +1,24 @@
+{
+  "schema": "optic_neuro_blender.evidence_index.v1",
+  "recorded_utc": "2026-10-09T13:16:47.731158+00:00",
+  "preexecution_receipt": {
+    "utc": "2026-10-09T13:14:21.379444+00:00",
+    "published_commit": "1a53ef6260c26698a837ae552efe39e6fa738eeb",
+    "pins": 126,
+    "profile_sha256": "64a2fb9cbcfc26f996ae43dc0bbed8a4fc688af0be7abcdb2f4c3d2a53332a81",
+    "registration_sha256": "db2042838bae9f3df25f71821eb3b90af2f3bcf7b1fce533d86eb125d6c3c314",
+    "git_blob_source_byte_identity": true,
+    "preexecution": true,
+    "profile_id": "0bcc373d-2b4e-444d-962f-2d5d71d50fc8"
+  },
+  "primary_metric": 1,
+  "raw_hashes_verified": 4,
+  "scope": "CPU-only secondary synthetic packet replay from archived actual fields and matching rays. Packing timings exclude input-list construction, digest checks, allocation/upload/driver/readback/merges. No total GPU speedup, causal cost fraction, new generalization, or physical bandwidth claim.",
+  "files": {
+    "profile.json": "64a2fb9cbcfc26f996ae43dc0bbed8a4fc688af0be7abcdb2f4c3d2a53332a81",
+    "registration.json": "db2042838bae9f3df25f71821eb3b90af2f3bcf7b1fce533d86eb125d6c3c314",
+    "supervisor.json": "9be096028bd96c547934825786318edd0c58c4c5823076ec318cbf88ed172f56",
+    "worker.stdout": "430b1bcaf80ce61580904db5ffc0b8c1f8115e3f38ca275dbef43d9ac0950e11",
+    "worker/result.json": "a719101cb8f6bf1503020d451c04b30b177e08844fcf3764266d5888c62b303b"
+  }
+}
