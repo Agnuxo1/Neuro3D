@@ -1,0 +1,125 @@
+{
+  "schema": "optic_neuro_blender.bounded_primary_prior_review.v1",
+  "recorded_utc": "2026-10-09T05:52:42.419813+00:00",
+  "status": "NOVELTY_NOT_ESTABLISHED",
+  "historical_catalog_counts_unmodified": {
+    "raw": 194,
+    "unique": 175,
+    "completed_extractions": 30,
+    "pending_requested_extractions": 106
+  },
+  "additional_works": 3,
+  "additional_files": 4,
+  "scope": "Selected primary passages reviewed; not full literature completeness, wholepaper proof verification, implemented benchmark or outside expert endorsement. Full PDFs and raw extraction material private, not redistributed.",
+  "sources": [
+    {
+      "identity": "knoll",
+      "primary_url": "https://www.sci.utah.edu/~knolla/cgrtia.pdf",
+      "doi": "10.1111/j.1467-8659.2008.01189.x",
+      "sha256": "0c3c5afe38cab5e15fecd663f0905e0ed17129909bab2fc1fa224ee63da3bfb4",
+      "bytes": 8629953,
+      "reviewed_pdf_pages_one_based": [
+        1,
+        3,
+        4,
+        9
+      ],
+      "full_paper_review_claimed": false,
+      "implementation_executed": false
+    },
+    {
+      "identity": "dekoning",
+      "primary_url": "https://arxiv.org/pdf/2302.12031",
+      "doi": "10.1007/s11081-023-09841-9",
+      "sha256": "0b52527f75a38c8ca43579d6f98c08fece6d182d6b48e4bddeabfbb70dfd3fae",
+      "bytes": 3694531,
+      "reviewed_pdf_pages_one_based": [
+        1,
+        3,
+        9,
+        32
+      ],
+      "full_paper_review_claimed": false,
+      "implementation_executed": false
+    },
+    {
+      "identity": "rfdt",
+      "primary_url": "https://xyzhang.ucsd.edu/papers/Xingyu.Chen_MobiCom26_RFDT.pdf",
+      "doi": "10.1145/3795866.3796686",
+      "sha256": "b86aae2fbbe84b75fd862654fa9e1adde48e2140343b80cbc2c91c792d3b67bf",
+      "bytes": 29534584,
+      "reviewed_pdf_pages_one_based": [
+        1,
+        4,
+        5
+      ],
+      "full_paper_review_claimed": false,
+      "implementation_executed": false
+    },
+    {
+      "identity": "rfdt_arxiv_version",
+      "primary_url": "https://arxiv.org/pdf/2603.18026v1",
+      "doi": "10.48550/arXiv.2603.18026",
+      "sha256": "d2839e82c565fbd7e64bccfcb32327cb8b0ab652e5fe9fbc176ec55259d34c6d",
+      "bytes": 14999067,
+      "reviewed_pdf_pages_one_based": [
+        1,
+        4,
+        19
+      ],
+      "full_paper_review_claimed": false,
+      "implementation_executed": false
+    }
+  ],
+  "retrieval_attempts": {
+    "initial": [
+      {
+        "id": "knoll",
+        "url": "https://www.sci.utah.edu/~knolla/cgrtia.pdf",
+        "utc": "2026-10-09T05:34:59.677706+00:00",
+        "retrieved": false,
+        "failure_type": "URLError",
+        "http_status": null
+      },
+      {
+        "id": "rfdt",
+        "url": "https://xyzhang.ucsd.edu/papers/Xingyu.Chen_MobiCom26_RFDT.pdf",
+        "utc": "2026-10-09T05:35:00.527848+00:00",
+        "retrieved": false,
+        "failure_type": "URLError",
+        "http_status": null
+      },
+      {
+        "id": "dekoning",
+        "url": "https://arxiv.org/pdf/2302.12031",
+        "utc": "2026-10-09T05:35:01.323217+00:00",
+        "retrieved": true,
+        "bytes": 3694531,
+        "sha256": "0b52527f75a38c8ca43579d6f98c08fece6d182d6b48e4bddeabfbb70dfd3fae",
+        "pages": 37,
+        "candidate_method_pages": [
+          1,
+          3,
+          9,
+          32
+        ]
+      }
+    ],
+    "tls_verified_requests_retry": [
+      {
+        "id": "knoll",
+        "retrieved": true,
+        "sha256": "0c3c5afe38cab5e15fecd663f0905e0ed17129909bab2fc1fa224ee63da3bfb4",
+        "bytes": 8629953
+      },
+      {
+        "id": "rfdt",
+        "retrieved": true,
+        "sha256": "b86aae2fbbe84b75fd862654fa9e1adde48e2140343b80cbc2c91c792d3b67bf",
+        "bytes": 29534584
+      }
+    ]
+  },
+  "accepted_schedule_url": "https://sigmobile.org/mobicom/2026/accepted_papers_schedule.html",
+  "rfdt_conference_state": "Accepted/scheduled at future26-30October2026, not already presented"
+}

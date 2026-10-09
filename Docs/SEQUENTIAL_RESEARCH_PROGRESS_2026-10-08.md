@@ -62,3 +62,7 @@ Prioridad reafirmada por el propietario: [OpticNeuroBlender, sistema neuronal pr
 ## Continuidad verificada del 9 de octubre: instrumento propio y límites
 
 La réplica CPU Linux real de GitHub reproduce 150 decisiones y 27/30 aciertos, con 34 controles y 61 auditorías. ZIP 0.1.2 cierra el doble desregistro mediante cinco controles nativos, preservando el entrenamiento completo de 0.1.1 y todos los fallos. El certificado independiente de las 150 salidas incluye codificador ideal: 150 argmax separados, 137 correctos y 13 erróneos. La nueva prueba continua de 16 parámetros mantiene topología en cuatro cajas y certifica 147/131/40/0 decisiones, conservando desconocidos. [Protocolos y resultados actuales](CONDITIONAL_PARAMETER_BOX_PROTOCOL_2026-10-09.md). No hay fidelidad física completa, GPU AMD, réplica por investigadores independientes, crítica especializada o novedad excepcional demostradas.
+
+## 2026-10-09 — Antecedentes y preparación de Blender Linux nativo
+
+Análisis de cajas continuas publicado en be4c73f8f1aaa49ebeea9765bd70f4c85f0dd3e0; cuatro topologías probadas y decisiones147/131/40/0, UNKNOWN preservado. Tres antecedentes primarios adicionales documentados sin alterar recuentos históricos ni afirmar novedad. Archivo oficial Blender Linux4.5.14 descargado y hashes archivo/binario verificados; no se ejecutó localmente. Nuevo perfil de reproducción nativa Linux con complemento0.1.2 y nueve controles preparado para congelación/push antes de ejecución. Registro externo/IPFS pendiente.
