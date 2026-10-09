@@ -1,0 +1,204 @@
+{
+  "id": "PRECISION-EXISTING-P03-SCENE-INVARIANTS-HOST-001",
+  "updated_utc": "2026-10-07T11:02:00Z",
+  "commit": "fe439f00099a318decad053ce43db7bce05f5346",
+  "parent_commit": "b3db56243ce1ac45b467eb64c6e606ace9b46be3",
+  "owned_pins": {
+    "Blender/benchmarks/capacity_audit/scene_necessary_invariants_HOST_v1.py": {
+      "sha256": "a3357459aced55eb076728911863ac499b753feb2a2d0cb87c52743ee278d352",
+      "bytes": 5423
+    },
+    "Blender/tests/test_existing_p03_scene_invariants_HOST_v1.py": {
+      "sha256": "50453ca9829037e8cc4f3126b25649bf236d2f19cce994285134559cab55346b",
+      "bytes": 6997
+    },
+    "Docs/EXP-005-EXISTING-P03-SCENE-INVARIANTS-HOST-001.md": {
+      "sha256": "6df4541b50e5f028a7953248b89f27b811ce214fae9b5caf77c0e57a62ea8b31",
+      "bytes": 3675
+    },
+    "coordinacion/respuestas/PRECISION-EXISTING-P03-SCENE-INVARIANTS-HOST-001-CODEX.json": {
+      "sha256": "20d8469d1e695af286da02a02ff4a02bc2fe6008330efd272997b3ff26b02333",
+      "bytes": 42353
+    }
+  },
+  "input_pins": {
+    "Blender/benchmarks/capacity_audit/scene_necessary_invariants_HOST_v1.py": {
+      "sha256": "a3357459aced55eb076728911863ac499b753feb2a2d0cb87c52743ee278d352",
+      "bytes": 5423
+    },
+    "Blender/tests/test_existing_p03_scene_invariants_HOST_v1.py": {
+      "sha256": "50453ca9829037e8cc4f3126b25649bf236d2f19cce994285134559cab55346b",
+      "bytes": 6997
+    },
+    "Docs/EXP-005-EXISTING-P03-SCENE-INVARIANTS-HOST-001.md": {
+      "sha256": "6df4541b50e5f028a7953248b89f27b811ce214fae9b5caf77c0e57a62ea8b31",
+      "bytes": 3675
+    },
+    "coordinacion/respuestas/PRECISION-OBLIQUE-COMMON-DETECTOR-LENGTH-CPU-001-CODEX.json": {
+      "sha256": "139cb34a315f476fa026bb346086a3a59d7c22241932ca3f4c291a501f4ca47e",
+      "bytes": 26731
+    },
+    "D:/PROJECTS/.cognition/neuro3d/p0_scene_gpu/p03_manifest.json": {
+      "sha256": "3343fa298cef2286e6643026a7e8b23ac4a6db011b443ffdf8c9c625fa89fe5b",
+      "bytes": 152882
+    },
+    "D:/PROJECTS/.cognition/neuro3d/p0_scene_gpu/p03_cuda_result.json": {
+      "sha256": "ed222ba40e6aaa8ca809353e101a2ff70dab847dd2aa4d0c613fb15bc8c44bba",
+      "bytes": 72738
+    },
+    "coordinacion/respuestas/PRECISION-EXISTING-P03-BACKEND-SCOPE-HOST-001-CODEX.json": {
+      "sha256": "71bc2991dc808dac8a28cb191c0b5e7b14d4d420da46ee3a1d598373e1e84b2c",
+      "bytes": 30194
+    },
+    "coordinacion/respuestas/GPU-GUARD-OWNED-TREE-CONTAINMENT-CPU-001-CODEX.json": {
+      "sha256": "172576dd8a38cf8119f2a1a3d229b534a7e77fdbde2632e2ef967b10e2d6e9f4",
+      "bytes": 128597
+    }
+  },
+  "qa": {
+    "rc": 0,
+    "timed_out": false,
+    "before_deadline": true,
+    "started_utc": "2026-10-07T10:58:10.574255+00:00",
+    "ended_utc": "2026-10-07T10:58:11.101356+00:00",
+    "deadline_utc": "2026-10-07T10:58:45.574255+00:00",
+    "elapsed_QA_seconds": 0.527101,
+    "timeout_seconds": 30,
+    "affinity_mask": 1,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "RAM_available_before_bytes": 7028723712,
+    "RAM_budget_bytes": 134217728,
+    "RAM_reserve_after_budget_bytes": 6894505984,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      "Blender/tests/test_existing_p03_scene_invariants_HOST_v1.py"
+    ],
+    "stdout_bytes": 264887,
+    "stdout_sha256": "0d584cd44bd78d8a5a4a7e385c648cc6f498e6f19f194e5b4fa0d9688c814d2e",
+    "stdout_zlib_base64": "SEE_SEALED_RECEIPT",
+    "stderr_utf8": ".....\r\n----------------------------------------------------------------------\r\nRan 5 tests in 0.331s\r\n\r\nOK\r\n",
+    "GPU_used": false,
+    "summary": {
+      "status": "PASS",
+      "tests": 5,
+      "records": 431,
+      "kinds": {
+        "ARCHIVED_SCENE_COMPARISON": 416,
+        "CASE_SUMMARY": 4,
+        "INVALID_INPUT_STOP": 6,
+        "SYNTHETIC_EQUAL_BBOX_DIFFERENT_SURFACE_STOP": 1,
+        "SYNTHETIC_NEGATIVE": 3,
+        "SYNTHETIC_REORDER_SCALE_STILL_STOP": 1
+      }
+    }
+  },
+  "oracle": {
+    "rc": 0,
+    "timed_out": false,
+    "before_deadline": true,
+    "started_utc": "2026-10-07T11:00:14.816707+00:00",
+    "ended_utc": "2026-10-07T11:00:15.150736+00:00",
+    "deadline_utc": "2026-10-07T11:00:49.816707+00:00",
+    "elapsed_QA_seconds": 0.334029,
+    "timeout_seconds": 30,
+    "affinity_mask": 1,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "RAM_available_before_bytes": 8242638848,
+    "RAM_budget_bytes": 134217728,
+    "RAM_reserve_after_budget_bytes": 8108421120,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      ".cognition/neuro3d-mega-geometry-20261005/existing-p03-scene-invariants-oracle.py"
+    ],
+    "stdout_bytes": 885,
+    "stdout_sha256": "5825d2cd918ce4c97c0a10fe993655317cd6be200d19bb8eef89879b2106b4b2",
+    "stdout_zlib_base64": "SEE_SEALED_RECEIPT",
+    "stderr_utf8": "",
+    "GPU_used": false,
+    "summary": {
+      "status": "PASS",
+      "comparisons": 416,
+      "input_pins": 8,
+      "frozen_pins": 461,
+      "independent_proof": "original surfaces Z[0,3] outside archived Z[-1/8,1/8]; SOURCE Z1/4 vs0",
+      "summaries": [
+        {
+          "kind": "CASE_SUMMARY",
+          "case": "oblique",
+          "comparisons": 104,
+          "mismatches": {
+            "surface_extent_BU": 104,
+            "oriented_SOURCE_multiset": 104,
+            "lambda_BU": 71
+          }
+        },
+        {
+          "kind": "CASE_SUMMARY",
+          "case": "direction_scaled",
+          "comparisons": 104,
+          "mismatches": {
+            "surface_extent_BU": 104,
+            "oriented_SOURCE_multiset": 104,
+            "lambda_BU": 71
+          }
+        },
+        {
+          "kind": "CASE_SUMMARY",
+          "case": "shared_ref1000",
+          "comparisons": 104,
+          "mismatches": {
+            "surface_extent_BU": 104,
+            "oriented_SOURCE_multiset": 104,
+            "lambda_BU": 71
+          }
+        },
+        {
+          "kind": "CASE_SUMMARY",
+          "case": "tiny_gap_2m60",
+          "comparisons": 104,
+          "mismatches": {
+            "surface_extent_BU": 104,
+            "oriented_SOURCE_multiset": 104,
+            "lambda_BU": 71
+          }
+        }
+      ],
+      "native_equivalence": false,
+      "GPU_used": false
+    }
+  },
+  "scope": "whole_declared_scene_necessary_invariants_same_BU_frame_no_coordinate_conversion",
+  "independent_z_separators": {
+    "original_surface": [
+      "0",
+      "3"
+    ],
+    "archived_surface": [
+      "-1/8",
+      "1/8"
+    ],
+    "original_SOURCE": "1/4",
+    "archived_SOURCE": "0"
+  },
+  "native_precision_bound_rad": null,
+  "GPU_used": false,
+  "foreign_writer": false,
+  "physics_replays": 0,
+  "full_costs": "UNKNOWN_NOT_ZERO",
+  "frozen_pins": 461,
+  "sharedboards_staged": false,
+  "JEV": "LOCAL_SECURITY_BLOCK_NO_RETRY_OR_ENDORSEMENT",
+  "next": "Claude ACK ID+SHA: existing originalscene/query links or explicit frame conversion and ingress/ALU/budgets/costs or precise gaps. Historical backend/guard already recovered; do not recreate or replay."
+}

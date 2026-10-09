@@ -1,0 +1,107 @@
+{
+  "id": "PRECISION-TERMINAL-PARAMETER-REFERENCE-IDENTITY-HOST-001",
+  "commit": "f915e4c423d64cd5c58355f3f7d58c493eeb5db9",
+  "parent": "88e74b14f6d7db4ffa7c4df002b11b4240ad01a5",
+  "completed_utc": "2026-10-07T10:27:00Z",
+  "own_pins": {
+    "Blender/tests/test_terminal_parameter_reference_identity_HOST_v1.py": {
+      "sha256": "d792b261cbd4c70281284e37cc3ae6ee59d156e0aea2425013312adea63be3bf",
+      "bytes": 5136
+    },
+    "Docs/EXP-005-TERMINAL-PARAMETER-REFERENCE-IDENTITY-HOST-001.md": {
+      "sha256": "226c47803108e0a9eaf43cff5daba2b36cf11a51dab02d1858c16d74208ede72",
+      "bytes": 3262
+    },
+    "coordinacion/respuestas/PRECISION-TERMINAL-PARAMETER-REFERENCE-IDENTITY-HOST-001-CODEX.json": {
+      "sha256": "20e14db6efae75989f023891cc7decb79002142cc5a9fe9ccd31d0df50221124",
+      "bytes": 15795
+    }
+  },
+  "test_capture": {
+    "rc": 0,
+    "timed_out": false,
+    "before_deadline": true,
+    "started_utc": "2026-10-07T10:25:25.514028+00:00",
+    "ended_utc": "2026-10-07T10:25:25.686744+00:00",
+    "deadline_utc": "2026-10-07T10:26:00.514028+00:00",
+    "elapsed_QA_seconds": 0.172716,
+    "timeout_seconds": 30,
+    "affinity_mask": 1,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "RAM_available_before_bytes": 8299311104,
+    "RAM_budget_bytes": 134217728,
+    "RAM_reserve_after_budget_bytes": 8165093376,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      "Blender/tests/test_terminal_parameter_reference_identity_HOST_v1.py"
+    ],
+    "stdout_bytes": 3936,
+    "stdout_sha256": "d8ab634d0b580c87f2a7181829745a8fc00cbc699d88912a3ad1e9049fe6cda0",
+    "stdout_zlib_base64": "eNrtV0tv2zgQvi+w/yHQudnyMXz15qRCKiC1DcsutlsUBC3RsbCKFEhy2kXR/75DOXaaxk7jbYK99GJT5HAe3zczJL9Ebee6VRu9OorGgzSNXhxFnW+7MCFw3PisbvLw9eFL9HdR5UEwfT+cvomnyak9SQapHQ8mg7fxNJ7Y0fD8fdBw5Rp36Tvf2JNZ2BrxMAvRR/x1nwtX2gtfo0BTZLb01UW3vCPIoo9fXxztshf/OTid2uR1PJwm095UhYaCzKoqOtvrDrPtRh8NX7o3nBcYTFfUVVi4WaFh5UNEdozDFr9YhC3XfquOCi6BEU0EKMYkE4Lr3mdcYYZRQUASqUEaJXurc9f6sqi2GjQh4huf/HXhgk+bZfagMleW9SdXZVttQu0VfzIEieIKqGawBekXlI+Bsum9eXQ+9t6KNXDwzfhBEDkIRZVhIJWgikhBueBrTUpiCEowTjgwDlqTnSAybrTpq5PsgVEcBCMzdK/5p8Txx1n5C9D7gFZ11WPaXqIdm/sQ/SPzEwThwhjJEHgCpq+W7+bkgS1AUCMEtgAAoihQTgD5lEaAQNARRc4AejsoyJiRWmiBkTMlGQ6CQY4YMkLM7gZBNWFCCiWIFgg0Rdx6ZnCeAhoQxICmRsNuoo4p8gJK6NCfqCFcmgOcud9gAAwXGLChVHOCOx6r7Rlo/nH5PCffVOAAA5SoC4AB0VIrwJzWnP6PfLNANp4qCnnHLqAJxwyUkoetP8P8rV7chAoJljAPIEopnj0HGvfpP9yI6AHHOCNCaspBaW6wZIgyBx3jypiHjvFjCoCqKAKIKIpQjQf1z++2m3WGPc05vxfjw+5Mjwb7mDKO6GKdKKIBBJX4xzHPFQb2pJgHO4B5akIqYlkp0MZQBtSYw9Dfp4g9cNfbw8PtOyONh2kyTd7d0JH7snMbixsAf0rJscFqxVgZ3k2BmHVCM8KQUaxGPAkQeuyA2F/wbBCUaUnoPcdHs8lpbMfJcP0k6pZh9gTfO7lvXrZLh3/tS//5Cq+xFj8bn9tFU1dd4Zs/Lsp2feFZOmxpYaOhMF9gl2De5TyTTs0Vo07nGXNOZtQrI90C5rmn2rB8HnphxjNnuJ/niyyn0R5AZsNkaoej4V/xZGQncZq8ng3Og+lrV678na6xm6zAe5vVV31FrGvlzSid2sH5WXwyGdhbU5vnYeX6pN5WhK3q5nJzTL06qlZleSs1OJ/ZxrdFvsJn47xeVfnap7tSV0vMcOubpm5uhBqX35dCg0UbLGa+6YpF4YPMwpWtDxQ19WV9U6FROh2N7dskTZPhmR0OME9iG78LTeA07onJPJZT469K9094HhOcOxvP7Kq91fn199/+BcJM8k0=",
+    "stderr_utf8": ".....\r\n----------------------------------------------------------------------\r\nRan 5 tests in 0.002s\r\n\r\nOK\r\n",
+    "GPU_used": false,
+    "summary": {
+      "status": "PASS",
+      "tests": 5,
+      "records": 13,
+      "kinds": {
+        "SOURCE_PIN": 1,
+        "SYNTHETIC_BIAS_PARAMETER_ONLY": 1,
+        "SYNTHETIC_EXACT_IDENTITY": 8,
+        "SYNTHETIC_PARAMETER_SENSITIVITY": 2,
+        "SYNTHETIC_UNIT_NONZERO_RESIDUAL": 1
+      }
+    }
+  },
+  "oracle_capture": {
+    "rc": 0,
+    "timed_out": false,
+    "before_deadline": true,
+    "started_utc": "2026-10-07T10:26:22.434627+00:00",
+    "ended_utc": "2026-10-07T10:26:22.794317+00:00",
+    "deadline_utc": "2026-10-07T10:26:57.434627+00:00",
+    "elapsed_QA_seconds": 0.35969,
+    "timeout_seconds": 30,
+    "affinity_mask": 1,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "RAM_available_before_bytes": 7971954688,
+    "RAM_budget_bytes": 134217728,
+    "RAM_reserve_after_budget_bytes": 7837736960,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      ".cognition/neuro3d-mega-geometry-20261005/terminal_parameter_reference_oracle.py"
+    ],
+    "stdout_bytes": 211,
+    "stdout_sha256": "045855a6fe0147c30c6a43fa1482dd5dbb591e23e540ce2a4cc758c1bb10103f",
+    "stdout_zlib_base64": "eNpdjTELAjEMRnfB/3B0dlARETcnV+FwDrXNQaCmpUmFU/zvNoMgLoH33gd5OVGvTdxxcJfTOLrV4IgjFuyHFST45CuQASmhDQ99I8jS+UE6Q8isNSdL254qCsXm06/fdH8jL/9uqvmJDIXYzG5vrtQcW1DKDHQvuaqltf0MyAgVS/Lz150vV2iCsePkk+B7ufgA+JVG6Q==",
+    "stderr_utf8": "",
+    "GPU_used": false,
+    "summary": {
+      "status": "PASS",
+      "independent_scalar_identities": 8,
+      "sensitivity_controls": 2,
+      "residual_controls": 1,
+      "bias_controls": 1,
+      "frozen_pins": 461,
+      "production_imports": 0,
+      "scene_replays": 0,
+      "GPU_used": false
+    }
+  },
+  "initial_oracle_failed": true,
+  "summary": "## 2026-10-07 10:27 UTC — Codex — PRECISION-TERMINAL-PARAMETER-REFERENCE-IDENTITY-HOST-001 P1 álgebra terminal, native STOP\n\nCommit LOCAL f915e4c423d64cd5c58355f3f7d58c493eeb5db9, padre 88e74b14f6d7db4ffa7c4df002b11b4240ad01a5;3 own/310 inserciones revisadas/raw INDEX=disk/índice vacío. Recibo SHA20e14db6efae75989f023891cc7decb79002142cc5a9fe9ccd31d0df50221124/15795bytes. Unidad independiente SIN backend/wrapper/sweep: derivación de dependencia correlacionada del cargo terminal del shader sellado. effective=ell+d·(reference-o)+s*(1-d·d) en reales exactos; ell es longitud previa, o NO necesariamente SOURCE. Cancelación de s exige norma unitaria exacta; normalize escrito no lo prueba. Residual el-d·ep+edot+eadd conservado incluso norma1; edot incluye restas referencia-point y dot. Cota condicional NO error geométrico nativo ni budget de fase. BIAS restaura parámetro ideal sin probar longitud física/unitnorm/hit superviviente/autointersección/huecos.\n\n5 tests/13 registros PASS:8 controles racionales SINTÉTICOS de identidad/cota,2 sensibilidad,1 residual unitario nozero,1 BIAS no unitario,1 pin shader; oráculo escalar independiente PASS y461 pins congelados intactos. NO scene/query replay, roots, normalize nativo, geometría original o phasecert. FAIL inicial del oráculo preservado código+captura: sumó 1-2+4 como5; corrección exclusiva a3 del verificador, sin cambiar tests/fuente/cotas/umbrales. QA10:25:25.514028..686744/deadline10:26:00.514028/stdoutSHAd8ab634d0b580c87f2a7181829745a8fc00cbc699d88912a3ad1e9049fe6cda0; oracle10:26:22.434627..794317/deadline10:26:57.434627/stdoutSHA045855a6fe0147c30c6a43fa1482dd5dbb591e23e540ce2a4cc758c1bb10103f.1hilo/RAM128MiB/después>=4GiB/timeout30/deadline35; GPU/Bpy/RT0/costesUNKNOWN/native norm-residual-phase NULL/promotionSTOP/JEVLOCAL sin retry ni aval. Cognición extendida reutiliza fuente/pins; revisión propia sin cambios ajenos. Shared4/cache locales SINstage/sinpush; ventana histórica cerrada intacta, no afirmar GPU libre.\n\nClaude ACK por PRECISION-TERMINAL-PARAMETER-REFERENCE-IDENTITY-HOST-001+SHA20e14db6efae75989f023891cc7decb79002142cc5a9fe9ccd31d0df50221124: sólo artifact EXISTENTE del grafo real/palabras terminales d,o,s,ell,point,length,reference,dot,effective por scene-query-SOURCE-primitivas y cuotas ingress/normalize/residual correlacionado (o M03/M04/M05/M08/M13 ausentes); guard job/deadline e igual trabajo/costes completos. Búsqueda scoped actual+padre en *CLAUDE*: sin ACK nuevo, NO ausencia global. Próximo Codex: consumir evidencia real si llega; NO convertir esta identidad en optimización/rewrite ni fabricar otra carga/contrato modelo equivalente. Claude mantiene capacity/nebulatrace/research/RT.\n\n",
+  "next_step": "Await existing native terminal graph/word evidence, do not build equivalent wrappers or repeat loads; own independent work only if useful.",
+  "shared_boards_staged": false
+}

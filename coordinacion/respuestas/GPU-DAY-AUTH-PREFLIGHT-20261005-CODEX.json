@@ -1,0 +1,120 @@
+{
+  "schema": "neuro3d-gpu-day-authorization-preflight-v1",
+  "id": "GPU-DAY-AUTH-PREFLIGHT-20261005-CODEX",
+  "user_authorization": {
+    "date_local": "2026-10-05",
+    "timezone": "Europe/Madrid",
+    "text": "tienes la GPU libre todo el día, puedes hacer todas las pruebas que necesites",
+    "interpretation": "GPU disponible para pruebas utiles coordinadas por trabajo; no permiso de uso ilimitado ni override de seguridad"
+  },
+  "scope": "Codex capacity_audit/EXP005; Claude conserva capacity/nebulatrace/research/RT",
+  "evidence": {
+    "JEV": "LOCAL_FALLBACK_SECURITY_BLOCK_NO_RETRY",
+    "base_head": "70179200ca3ad446ba913c84f0f972576f8ea7e1",
+    "frozen_guard_sha256": "958163c3bba7f16d619c9788893771eaf7fc6a17b1e295eae8cf84b15bfcd818",
+    "future_job_admission": "NOT_ADMITTED: no chosen verified native backend, no per-job reservation or fresh job deadline",
+    "gpu_load_started": false,
+    "gpu_query": {
+      "rc": 0,
+      "stdout": "0, NVIDIA GeForce RTX 3090, 2014, 24576, 29, 15"
+    },
+    "historical_guard_deadline_utc": "2026-09-30T06:00:00+00:00",
+    "holder": null,
+    "id": "GPU-DAY-AUTH-PREFLIGHT-20261005-CODEX",
+    "observed_utc": "2026-10-05T06:14:45.730016+00:00",
+    "processes": [
+      {
+        "name": "python.exe",
+        "pid": 1224,
+        "rss_bytes": 10350592
+      },
+      {
+        "name": "dwm.exe",
+        "pid": 1924,
+        "rss_bytes": 63188992
+      },
+      {
+        "name": "pythonw.exe",
+        "pid": 16376,
+        "rss_bytes": 18501632
+      },
+      {
+        "name": "pythonw.exe",
+        "pid": 16612,
+        "rss_bytes": 10407936
+      },
+      {
+        "name": "pythonw.exe",
+        "pid": 16636,
+        "rss_bytes": 4087808
+      },
+      {
+        "name": "pythonw.exe",
+        "pid": 16896,
+        "rss_bytes": 14422016
+      },
+      {
+        "name": "python.exe",
+        "pid": 17884,
+        "rss_bytes": 3137536
+      },
+      {
+        "name": "python.exe",
+        "pid": 17940,
+        "rss_bytes": 3162112
+      },
+      {
+        "name": "python.exe",
+        "pid": 17964,
+        "rss_bytes": 13131776
+      },
+      {
+        "name": "python.exe",
+        "pid": 18044,
+        "rss_bytes": 80232448
+      },
+      {
+        "name": "python.exe",
+        "pid": 18688,
+        "rss_bytes": 20041728
+      },
+      {
+        "name": "python.exe",
+        "pid": 37128,
+        "rss_bytes": 15765504
+      }
+    ],
+    "queue_read_only_no_prune": true,
+    "ram_available_bytes": 4915650560,
+    "ram_headroom_above_4GiB_bytes": 620683264,
+    "staged": [],
+    "tickets": []
+  },
+  "preflight_stdout_sha256": "186d216dd8ec2bbcaa7b7d8cf9de442f5ad476719169bfec7dc0e343e4ae6c52",
+  "preflight_stdout_bytes": 1494,
+  "preflight_elapsed_seconds": 2.2520796000026166,
+  "preflight_code": "import json,pathlib,hashlib,subprocess,psutil,datetime\nroot=pathlib.Path('D:/PROJECTS/9_NEBULA_NEW')\nq=pathlib.Path('D:/PROJECTS/.cognition/gpu_queue')\nout={'id':'GPU-DAY-AUTH-PREFLIGHT-20261005-CODEX','observed_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'gpu_load_started':False,'JEV':'LOCAL_FALLBACK_SECURITY_BLOCK_NO_RETRY','queue_read_only_no_prune':True}\ndef info(p):\n b=p.read_bytes(); d=json.loads(b); keep={k:d.get(k) for k in ['name','pid','ctime','child_pid','child_ctime','vram','ram','started','enqueued']}\n keep['sha256']=hashlib.sha256(b).hexdigest()\n keep['file']=str(p)\n for k,ck in [('pid','ctime'),('child_pid','child_ctime')]:\n  try:keep[k+'_alive']=abs(psutil.Process(d[k]).create_time()-d[ck])<2\n  except Exception:keep[k+'_alive']='UNKNOWN_OR_ABSENT'\n return keep\nout['holder']=info(q/'holder.json') if (q/'holder.json').exists() else None\nout['tickets']=[info(p) for p in sorted((q/'tickets').glob('*.json'))]\nout['ram_available_bytes']=psutil.virtual_memory().available\nout['ram_headroom_above_4GiB_bytes']=out['ram_available_bytes']-4*2**30\nout['processes']=[{'pid':p.pid,'name':p.info['name'],'rss_bytes':p.info['memory_info'].rss} for p in psutil.process_iter(['name','memory_info']) if p.info['name'] and (p.info['name'].lower().startswith(('python','blender','claude')) or p.pid==1924)]\np=subprocess.run(['nvidia-smi','--query-gpu=index,name,memory.used,memory.total,temperature.gpu,utilization.gpu','--format=csv,noheader,nounits'],capture_output=True,text=True,timeout=5)\nout['gpu_query']={'rc':p.returncode,'stdout':p.stdout.strip()}\nout['base_head']=subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip()\nout['staged']=subprocess.check_output(['git','diff','--cached','--name-only'],cwd=root,text=True).splitlines()\nout['frozen_guard_sha256']=hashlib.sha256((root/'Blender/benchmarks/capacity_audit/guarded_job.py').read_bytes()).hexdigest()\nout['historical_guard_deadline_utc']='2026-09-30T06:00:00+00:00'\nout['future_job_admission']='NOT_ADMITTED: no chosen verified native backend, no per-job reservation or fresh job deadline'\nprint(json.dumps(out,ensure_ascii=True,sort_keys=True))\n",
+  "controls": {
+    "gpu_loads_started": 0,
+    "numerical_suites_repeated": 0,
+    "frozen_guard_modified": false,
+    "historical_deadline_reopened": false,
+    "foreign_processes_killed": 0,
+    "foreign_tickets_cancelled": 0,
+    "shared_boards_staged": false,
+    "JEV_retried": false
+  },
+  "decision": "PREPARATION_ONLY_NOT_GPU_ADMISSION",
+  "next_step": "Elegir prueba nativa no duplicada; backend opt-in con contrato/tests/commit, reserva Claude, nuevo deadline verificable por job y guard fail-closed; repetir toda telemetria inmediatamente antes de cargar. Pedir artifacts existentes SAMEINPUT/ABI/budgets/backendguard/costes; no sustituir escena por datos CPU precalculados.",
+  "limits": {
+    "ram_free_after_budget_gib": 4,
+    "whole_device_vram_cap_gib": 18,
+    "temperature_max_c": 80,
+    "bytes_per_cell_min": 1024,
+    "additional_margins_temporaries_required": true,
+    "pilot_max_seconds": 120,
+    "other_child_max_seconds": 600,
+    "no_MLP32768": true,
+    "no_near_limit_after_0x9F": true
+  }
+}

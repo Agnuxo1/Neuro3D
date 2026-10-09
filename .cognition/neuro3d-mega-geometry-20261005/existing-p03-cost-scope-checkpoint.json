@@ -1,0 +1,116 @@
+{
+  "id": "PRECISION-EXISTING-P03-COST-SCOPE-HOST-001",
+  "commit": "b3db56243ce1ac45b467eb64c6e606ace9b46be3",
+  "parent": "a07fd8c9caf71a4d5ebfbaadd0265e6848cf8ed3",
+  "completed_utc": "2026-10-07T10:47:00Z",
+  "own_pins": {
+    "Blender/tests/test_existing_p03_cost_scope_HOST_v1.py": {
+      "sha256": "bcfc6c986eaa878b23e011075a0e4b41e51215e5f94f111c8270e753171e404a",
+      "bytes": 5523
+    },
+    "Docs/EXP-005-EXISTING-P03-COST-SCOPE-HOST-001.md": {
+      "sha256": "dd3d394577ba7ef634e3fc1ab7913b0619c1196726e9ee2af2f21736b984df6e",
+      "bytes": 3587
+    },
+    "coordinacion/respuestas/PRECISION-EXISTING-P03-COST-SCOPE-HOST-001-CODEX.json": {
+      "sha256": "8253dff5124fb8a9c5b9206140a560c17611834bf3ac3ea9790c6fb546e49e58",
+      "bytes": 15796
+    }
+  },
+  "test_capture": {
+    "rc": 0,
+    "timed_out": false,
+    "before_deadline": true,
+    "started_utc": "2026-10-07T10:44:59.707523+00:00",
+    "ended_utc": "2026-10-07T10:44:59.876333+00:00",
+    "deadline_utc": "2026-10-07T10:45:34.707523+00:00",
+    "elapsed_QA_seconds": 0.16881,
+    "timeout_seconds": 30,
+    "affinity_mask": 1,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "RAM_available_before_bytes": 7543898112,
+    "RAM_budget_bytes": 134217728,
+    "RAM_reserve_after_budget_bytes": 7409680384,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      "Blender/tests/test_existing_p03_cost_scope_HOST_v1.py"
+    ],
+    "stdout_bytes": 2837,
+    "stdout_sha256": "920813cc64dc0f93d22fd0e13c242f25ffc51acd914b48a3e5214d2843095e8e",
+    "stdout_zlib_base64": "eNrFVt+P4jYQfq/U/2HF8wnFSZwf+8ZBbheVC6sQVJ2q1cgEA+kGO7WT296d9n/v2JAl7UJfWrEIRYkzM/7mm4m/+THQDWtaPbi9GTyMFovBh5tBw3VjFjy8V7yQam2efvsxeCrF2hiO54scJkk+ms4gnecwTSG/ny4gSxbLWW5C7EutS7GFRtZQ8a+8gkLuaym4sJEJsaEbVgq+hq2SbQ2NYgUH3a6acs8VGm1YpTnayWbHFfqLRslKAxdb9IJ1q1hTSoGGoq0qtOOCq+03+F22Fden5eedrDjUZc0r42dwMMVWlbnVzcmug7znTGj4zpXsMLx8uDnlnpm002QCd9l8+QBJeodPMFlmo3w6T03uesdqbghD/vBPHs0a0igsjQNnSL3Q9wIHf8RzaeRZp0Jap0GejcYJfFqmYxPP0vtxlI/vYZ7h6mwG96MsTbBQ/w2V+waV44QkIF4cx1EcUZ/6/nVxhRfY8v3Apa6LuOKA0ii4LqrgAiqH+C5yZWoYRpQGUXxdXP5FXJ4fIRqsYuTHbkzfg65zzUVdYmsYB6Ebk2vjov9CFwk88y16UeT6cfQeTX+GL5eQ0AkNXxFePf89uutsGR3XJbaOTki9a59d9DIuEvimv0JK/NjzvP+1vzosMMqm+f3nJJ+OYZ7Ovgys6lg5OmiYbvfQA0aGThBRbC8DzJ5eeN4bpx1TgmsNB3VFCew5ucMw9ijWPAiJT0LXsyfetmVqjdqHUoo5/W0TMgyp6xFiy+JE/fj7UrT6ErbQpY4XuLhN4DpBGAYhPe108Ozi9PyiYUyjkBBMBQ8YJwwOrYmyjfptBBlqJb9yDXhRO87WPSU/Y4VyvMenopLFE0gj8+jGtrznpXjNWQOa7euDsDu4WHO1kWrPRNFJeqntMPBWsRfzZYbVz6efkww+zpfpBMuY2Ennj5aJBmpZlcU3WHGMyLv5optCGtUaECvWFLvO5DCqFKyqTgZLWMtnUUm2BibWcNx0U/JqrYFtGhxhrNvJQ3HdVpgXVyWryu92mjladrz/AwQGEHpjhyHDxcGhaVS5ao+j0GCZ/pLOf8VOXXxJx8fh7FOSZcnE5GtptsPcsW9vDY8YrhW4ba9zbs3OQ3N5bYnb12Z904WPL4/9ry1LxvNsgt+NpXwBo3TS8XGi//UDMoyWWwH8T150aXSlF/wZ7h6WZ99xLF4Fz1I9QcFVUyLV/V7b4FRnJ7yzb2tMptTHPtzLfuiXn3/6CxO+YGs=",
+    "stderr_utf8": "...\r\n----------------------------------------------------------------------\r\nRan 3 tests in 0.018s\r\n\r\nOK\r\n",
+    "GPU_used": false,
+    "summary": {
+      "status": "PASS",
+      "tests": 3,
+      "records": 13,
+      "kinds": {
+        "COST_DETAIL_NOT_IN_THIS_RESULT": 1,
+        "RETAINED_DURATION_ARITHMETIC_ONLY": 1,
+        "RETAINED_GROUP_ENGINE_DURATION": 10,
+        "SOURCE_TIMER_BOUNDARIES": 1
+      }
+    }
+  },
+  "oracle_capture": {
+    "rc": 0,
+    "timed_out": false,
+    "before_deadline": true,
+    "started_utc": "2026-10-07T10:46:01.285713+00:00",
+    "ended_utc": "2026-10-07T10:46:01.539567+00:00",
+    "deadline_utc": "2026-10-07T10:46:36.285713+00:00",
+    "elapsed_QA_seconds": 0.253854,
+    "timeout_seconds": 30,
+    "affinity_mask": 1,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "RAM_available_before_bytes": 7482773504,
+    "RAM_budget_bytes": 134217728,
+    "RAM_reserve_after_budget_bytes": 7348555776,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      ".cognition/neuro3d-mega-geometry-20261005/existing_p03_cost_scope_oracle.py"
+    ],
+    "stdout_bytes": 690,
+    "stdout_sha256": "a25202042e1c9e302fd15de45bfc181d2ff10b0c139750998d7f4cf147f47e84",
+    "stdout_zlib_base64": "eNp1kk1v2zAMhu8D9h8Kn4fAsmPJ2i1YAyzAlg5pdtiJUGXG0WpLBiVlH0X/+yR37TxguwiQXj58SYoPhQ8qRF+8vSo+bW5vizdXhSJ9NhcEZTtw3yxMxma9KpNGGJSx2EFPLk7QRVLBuFlnWcfvSgfoUJtRDUCondVmMC9BTYrxLpJGCGZEgjsXbafIYFYDRUwBJ3I/8cV3zVl+i8MA2vkAGimYk8EuaSc1+EygRep/wFcXhzmRTdHpeVneQ3FvbGaKw/a42e2313D9+bA57m72sDnsju8/bo+7d3Cz//ClmDP2qc/fbfo4gs+9dPOg2KrkbcPrUkopJG+atq6aDJ0VWfR+7pu6NKUFVK2ErBspay7Ymomq5pnoo6IO0F5wcBP+ZcJWoqlqxlhykWW7zD8aG/3/ahNVU9a8Sja8KrkQXDR/nJ7I5zwLrl3JphWMpVbatSwFX2fIx7tA6UfTDGEid0EP6aAzquX0/xGl3Timmx6cvgdH6Z4w1eOCIpxQBfBqnJ4+Le/PhHRyNCqbFiTlmNJmeGefqcfH169+AcY+5B8=",
+    "stderr_utf8": "",
+    "GPU_used": false,
+    "summary": {
+      "status": "PASS",
+      "archive_and_own_pins": 20,
+      "retained_group_durations": 10,
+      "exact_decimal_reconciliations": 5,
+      "source_timer_boundaries": true,
+      "frozen_pins": 461,
+      "full_cost_certified": false,
+      "energy_joules": null,
+      "durations": {
+        "kind": "RETAINED_DURATION_ARITHMETIC_ONLY",
+        "engine_group_sum_seconds": "1.0685630999796558325",
+        "harness_recorded_seconds": "2.7935993671417236",
+        "guard_envelope_seconds": "11.7523111999908",
+        "harness_minus_group_sum_seconds": "1.7250362671620677675",
+        "guard_minus_harness_seconds": "8.9587118328490764",
+        "subtraction_proves_overhead": false,
+        "subtraction_proves_common_clock_or_coverage": false,
+        "repeat_samples": 0,
+        "performance_comparison": false
+      }
+    }
+  },
+  "summary": "## 2026-10-07 10:47 UTC — Codex — PRECISION-EXISTING-P03-COST-SCOPE-HOST-001 P1 costes retenidos, comparación STOP\n\nCommit LOCAL b3db56243ce1ac45b467eb64c6e606ace9b46be3, padre a07fd8c9caf71a4d5ebfbaadd0265e6848cf8ed3;3 own/345 inserciones/raw INDEX=disk/revisión propia/índice vacío. Recibo SHA8253dff5124fb8a9c5b9206140a560c17611834bf3ac3ea9790c6fb546e49e58/15796bytes. Subtarea independiente CPU metadata sin benchmarks: reconciliar los timers YA EXISTENTES P0-3 y sus límites en fuente sellada (AST, sin imports ajenos). Diez engine.seconds_total suman DECIMAL DEL TEXTO1.0685630999796558325s; result/harness.seconds2.7935993671417236s; envelope.seconds11.7523111999908s. Remainders1.7250362671620677675s y8.9587118328490764s son ARITMÉTICA, NO overhead/contextoCUDA ni tres repeticiones/performance/winner. No inferir precisión de medición desde todos esos dígitos, ni clock/coverage común.\n\nEngine t0 ocurre DESPUÉS de quant_policy y llamada Batch previa; Ureadback+composición SOURCE HOST posteriores a trace. H2D iniciado antes puede terminar al sincronizar dentro: atribución asíncronaUNKNOWN, no coste cero. Harness también calcula oráculos/MZI/conf1/4negativos/control estricto; timer acaba ANTES de serializar JSON. Checker ocurre después del harness en job distinto de sus mediciones, no atribuirlo al harness. Imports+lectura manifest antes del harness t0. Resultado no retiene subtimer trace por grupo ni tiempos engine de controles ni11componentes detallados Batch/normalización/aristas/H2D/D2H/HOSTfields/energía/peaks RAM-VRAM/coldwarm/commonclock. Ausencia SCOPED en ese archivo, NO global; fullcostcomparable/energía NULL, UNKNOWN no cero. Igualtrabajo/precisión/promociónfalse; RT16Mvs1M/salidas distintas NOequivalente.\n\n3 tests13recordsPASS; oráculo independiente Fraction verifica10duraciones/5cuentas exactas contra Decimal,20pins entrada+own/461frozen intactos/timerboundaries. QA10:44:59.707523..876333/deadline10:45:34.707523/stdoutSHA920813cc64dc0f93d22fd0e13c242f25ffc51acd914b48a3e5214d2843095e8e. Oracle10:46:01.285713..539567/deadline10:46:36.285713/stdoutSHAa25202042e1c9e302fd15de45bfc181d2ff10b0c139750998d7f4cf147f47e84. Revisión ajustó SOLO doc: checker job posterior no ejecución del harness, ninguna duración/cota/umbral/grafo alterados. CPU1hilo/RAM128MiB/después>=4GiB/timeout30/deadline35. Nuevasmuestras/physicsreplay0/foreignwriter0/GPU-Bpy-RT0/noSDKpushmerge; JEVLOCAL bloqueado sin retry/aval. Artefactos históricos/guardfloor1.5/deadline cerrado intactos NO autoridad actual; no afirmar GPU libre. Cognición reutiliza evidencia y revisión acota interpretación; shared4/cache locales SINstage.\n\nClaude ACK por PRECISION-EXISTING-P03-COST-SCOPE-HOST-001+SHA8253dff5124fb8a9c5b9206140a560c17611834bf3ac3ea9790c6fb546e49e58: sólo desglose EXISTENTE Batch/ingressHOST/H2D/trace-propagación/D2H/HOSTSOURCEfields/checker/IO/intervalos comunes/coldwarm/recursos-energía o declarar faltantes específicos. Backend/guard/timers parciales YA recuperados, no cargas para rellenar ni pedir recrearlos. Consulta/ingress/ALU/budgets precisión actuales siguen pendientes del puente anterior; no transplantar PASS ni normalización ideal. Codex próximo: integrar desgloses/associations reales si llegan, sin otro wrapper/costes ficticios/cargas repetidas. Claude capacity/nebulatrace/research/RT intacto.\n\n",
+  "next_step": "Only consume existing current-query associations and complete cost breakdown; no repeated physical tests, backend wrappers, or fictitious missing=0 costs.",
+  "shared_boards_staged": false
+}

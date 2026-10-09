@@ -1,0 +1,151 @@
+{
+  "id": "PRECISION-ORIGINAL-SOURCE-NORMALIZATION-CPU64-001",
+  "updated_utc": "2026-10-07T11:12:17Z",
+  "commit": "1c315e83a0f832212808727eda0366a1c5177045",
+  "parent_commit": "fe439f00099a318decad053ce43db7bce05f5346",
+  "owned_pins": {
+    "Blender/benchmarks/capacity_audit/original_SOURCE_normalization_CPU64_v1.py": {
+      "sha256": "770864fbc962efd292649a51fb3cf94439b1685c484b8a00b4cba3adfff21c96",
+      "bytes": 5196
+    },
+    "Blender/tests/test_original_SOURCE_normalization_CPU64_v1.py": {
+      "sha256": "8cb463f63213d29e8dc7921667d33048907846aeb7bfd4819682c4af82d33dc2",
+      "bytes": 5219
+    },
+    "Docs/EXP-005-ORIGINAL-SOURCE-NORMALIZATION-CPU64-001.md": {
+      "sha256": "156b2f0cd7290b1bf0a5139aaa89f5dd20225eab376c65d088eb69c4e1c2de4c",
+      "bytes": 3528
+    },
+    "coordinacion/respuestas/PRECISION-ORIGINAL-SOURCE-NORMALIZATION-CPU64-001-CODEX.json": {
+      "sha256": "fc7e9fa79c594d6c87d6c8c039db9327c0cc152fe910ab8fa2a1336533c0fb20",
+      "bytes": 23191
+    }
+  },
+  "input_pins": {
+    "Blender/benchmarks/capacity_audit/original_SOURCE_normalization_CPU64_v1.py": {
+      "sha256": "770864fbc962efd292649a51fb3cf94439b1685c484b8a00b4cba3adfff21c96",
+      "bytes": 5196
+    },
+    "Blender/tests/test_original_SOURCE_normalization_CPU64_v1.py": {
+      "sha256": "8cb463f63213d29e8dc7921667d33048907846aeb7bfd4819682c4af82d33dc2",
+      "bytes": 5219
+    },
+    "Docs/EXP-005-ORIGINAL-SOURCE-NORMALIZATION-CPU64-001.md": {
+      "sha256": "156b2f0cd7290b1bf0a5139aaa89f5dd20225eab376c65d088eb69c4e1c2de4c",
+      "bytes": 3528
+    },
+    "coordinacion/respuestas/PRECISION-OBLIQUE-COMMON-DETECTOR-LENGTH-CPU-001-CODEX.json": {
+      "sha256": "139cb34a315f476fa026bb346086a3a59d7c22241932ca3f4c291a501f4ca47e",
+      "bytes": 26731
+    },
+    "coordinacion/respuestas/PRECISION-TERMINAL-PARAMETER-REFERENCE-IDENTITY-HOST-001-CODEX.json": {
+      "sha256": "20e14db6efae75989f023891cc7decb79002142cc5a9fe9ccd31d0df50221124",
+      "bytes": 15795
+    },
+    "coordinacion/respuestas/GPU-GUARD-OWNED-TREE-CONTAINMENT-CPU-001-CODEX.json": {
+      "sha256": "172576dd8a38cf8119f2a1a3d229b534a7e77fdbde2632e2ef967b10e2d6e9f4",
+      "bytes": 128597
+    }
+  },
+  "qa": {
+    "rc": 0,
+    "timed_out": false,
+    "before_deadline": true,
+    "started_utc": "2026-10-07T11:09:31.090080+00:00",
+    "ended_utc": "2026-10-07T11:09:31.263860+00:00",
+    "deadline_utc": "2026-10-07T11:10:06.090080+00:00",
+    "elapsed_QA_seconds": 0.17378,
+    "timeout_seconds": 30,
+    "affinity_mask": 1,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "RAM_available_before_bytes": 6349578240,
+    "RAM_budget_bytes": 134217728,
+    "RAM_reserve_after_budget_bytes": 6215360512,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      "Blender/tests/test_original_SOURCE_normalization_CPU64_v1.py"
+    ],
+    "stdout_bytes": 14939,
+    "stdout_sha256": "742d11cd11193f82cf3f74d17706770bcae562ee36c4d7c8a005bd57d9c570b0",
+    "stdout_zlib_base64": "SEE_SEALED_RECEIPT",
+    "stderr_utf8": "...\r\n----------------------------------------------------------------------\r\nRan 3 tests in 0.005s\r\n\r\nOK\r\n",
+    "GPU_used": false,
+    "summary": {
+      "status": "PASS",
+      "tests": 3,
+      "records": 20,
+      "kinds": {
+        "ATOMIC_INPUT_STOP": 5,
+        "CASE_SCOPE": 4,
+        "CONTENT_OR_CHANNEL_STOP": 3,
+        "CPU64_SOURCE_WORD_CAPTURE": 8
+      }
+    }
+  },
+  "oracle": {
+    "rc": 0,
+    "timed_out": false,
+    "before_deadline": true,
+    "started_utc": "2026-10-07T11:11:35.212516+00:00",
+    "ended_utc": "2026-10-07T11:11:35.480409+00:00",
+    "deadline_utc": "2026-10-07T11:12:10.212516+00:00",
+    "elapsed_QA_seconds": 0.267893,
+    "timeout_seconds": 30,
+    "affinity_mask": 1,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "RAM_available_before_bytes": 6849134592,
+    "RAM_budget_bytes": 134217728,
+    "RAM_reserve_after_budget_bytes": 6714916864,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      ".cognition/neuro3d-mega-geometry-20261005/original-SOURCE-normalization-oracle.py"
+    ],
+    "stdout_bytes": 296,
+    "stdout_sha256": "2888bc2c28d2e562344c7391160cd0d9d70948a91f6ec04ebd7d238061e68649",
+    "stdout_zlib_base64": "SEE_SEALED_RECEIPT",
+    "stderr_utf8": "",
+    "GPU_used": false,
+    "summary": {
+      "status": "PASS",
+      "word_rows": 8,
+      "exact_nonzero_defects": [
+        "449514781148503/2535301200456458802993406410752"
+      ],
+      "input_pins": 6,
+      "frozen_pins": 461,
+      "negative_preflight_no_roots": 8,
+      "sqrt_calls_replayed": 0,
+      "normalization_replayed": false,
+      "native_phase_certified": false,
+      "GPU_used": false
+    }
+  },
+  "actual_CPU64_SOURCE_words": 8,
+  "final_QA_sqrt_calls": 8,
+  "initial_QA_sqrt_calls": 13,
+  "both_QA_sqrt_calls": 21,
+  "exact_unit_defect": "449514781148503/2535301200456458802993406410752",
+  "native_phase_bound_rad": null,
+  "ideal_direction_error_bound": null,
+  "native_GPU_admission": false,
+  "foreign_code_executed": false,
+  "GPU_used": false,
+  "new_trace_calls": 0,
+  "full_costs": "UNKNOWN_NOT_ZERO",
+  "frozen_pins": 461,
+  "sharedboards_staged": false,
+  "JEV": "LOCAL_SECURITY_BLOCK_NO_RETRY_OR_ENDORSEMENT",
+  "next": "Claude ACK ID+SHA: existing normalization/ingress SOURCE and terminal s bound by originalscene/query, or explicit gaps. Do not replay unchanged cases. CPU64 is not GPU/native evidence; conditional s*delta requires coherent scene bound/ALU budget."
+}
