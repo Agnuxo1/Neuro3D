@@ -90,6 +90,14 @@ La geometría pretendida y la discrepancia física continúan sin cotas.
 
 ![Certificación y errores del clasificador](Docs/assets/native-training-batch-certification-2026-10-09.png)
 
+La [estabilidad geométrica condicional](Docs/CONDITIONAL_PARAMETER_BOX_PROTOCOL_2026-10-09.md)
+prueba la topología en cuatro intervalos continuos de las 16 parejas. Certifica
+147/150, 131/150, 40/150 y 0/150 decisiones constantes al ampliar los intervalos;
+conserva todos los desconocidos. Es una familia virtual representada, con
+incertidumbre de la canalización nativa general y física todavía abierta.
+
+![Estabilidad continua y desconocidos](Docs/assets/native-parameter-boxes-2026-10-09.png)
+
 La [reproducción nativa en Blender](Docs/TRAINED_GEOMETRY_BLENDER_REPRODUCTION_2026-10-09.md)
 también pasa: guardar, reabrir y recapturar el [archivo entrenado nuevo](Docs/validation/trained-geometry-blender-reproduction-2026-10-09/attempt01/worker/trained_geometry.blend)
 conserva la geometría admitida y reproduce las 150 predicciones. El archivo

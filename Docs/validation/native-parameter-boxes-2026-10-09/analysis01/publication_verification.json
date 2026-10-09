@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-09T05:33:58.113848+00:00",
+  "published_commit": "1a27b3c9373930907a839564cfbd322998a5aee6",
+  "pins": 29,
+  "profile_sha256": "283249c645c3457f874f8ff85bfd50938412cd9c78f8aab6fb76d7f217f727b7",
+  "registration_sha256": "292ad0a0aaa32b8c1206e0c720612760609c58363d3e30e362792fba898d1394",
+  "git_blob_source_byte_identity": true,
+  "preexecution": true,
+  "profile_id": "3dc215f1-e2b6-4288-9944-2b9b8ae5a9c6"
+}

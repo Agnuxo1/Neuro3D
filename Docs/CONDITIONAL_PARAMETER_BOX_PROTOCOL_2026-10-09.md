@@ -1,6 +1,6 @@
 # Estabilidad condicional en intervalos continuos de parámetros
 
-Estado: preparado, no ejecutado. La certificación nativa anterior fija la aritmética de 150 filas, pero no la geometría pretendida ni una tolerancia física. Este análisis añade una familia virtual explícita de perturbaciones sobre las superficies representadas.
+Estado: cuatro análisis continuos completos; topología demostrada en las cuatro cajas y decisiones desconocidas conservadas. La certificación nativa anterior fija la aritmética de 150 filas, pero no la geometría pretendida ni una tolerancia física. Este análisis añade una familia virtual explícita de perturbaciones sobre las superficies representadas.
 
 [Perfil](research/native_parameter_box_profile_2026-10-09.json), UUID `3dc215f1-e2b6-4288-9944-2b9b8ae5a9c6`, SHA-256 `283249c645c3457f874f8ff85bfd50938412cd9c78f8aab6fb76d7f217f727b7`, 29 pins; [continuidad humana GitHub](research/native_parameter_box_registration_2026-10-09.json). Registro externo/IPFS pendiente y sin IDs.
 
@@ -31,3 +31,22 @@ python Tools/run_frozen_parameter_boxes_v1.py --profile Docs/research/native_par
 ```
 
 Esto no encierra incertidumbre de malla/transformación original, medición de entradas, redondeo de ejecuciones nativas perturbadas no observadas, difracción/polarización/Maxwell o calibración física. No se afirma que el presupuesto de error completo hasta un dispositivo físico esté cerrado.
+
+## Resultado y límites de utilidad
+
+Publicado y verificado antes de analizar en `1a27b3c9373930907a839564cfbd322998a5aee6`, todos los 29 pins idénticos a Git. [Certificado completo](validation/native-parameter-boxes-2026-10-09/analysis01/worker/certificate.json) e [índice de evidencia](validation/native-parameter-boxes-2026-10-09/analysis01/evidence_index.json). Tiempo completo 276,3123 s, RSS máximo 64,731 MiB. Métrica 1 significa **análisis válido**, no robustez de todas las decisiones.
+
+En cada caja se prueban los 133 estados y las 13.699 exclusiones de objetos competidores, con pertenencia continua a las uniones de superficies seleccionadas. No queda topología desconocida para estas cuatro cajas. El máximo desplazamiento por parámetro de la caja 1 es `9,5367431640625×10⁻⁷ BU`.
+
+| Ampliación | Máximo desplazamiento BU | Argmax estables | Desconocidos | Estables correctos / equivocados |
+|---|---:|---:|---:|---:|
+| 1 | 9,5367431640625×10⁻⁷ | 147/150 | 3 | 137 / 10 |
+| 10 | 9,5367431640625×10⁻⁶ | 131/150 | 19 | 127 / 4 |
+| 100 | 9,5367431640625×10⁻⁵ | 40/150 | 110 | 40 / 0 |
+| 1000 | 9,5367431640625×10⁻⁴ | 0/150 | 150 | 0 / 0 |
+
+La primera caja deja indeterminadas las filas 56, 83 y 84; las tres son errores del clasificador en el centro. No se ha demostrado que esas filas cambien de clase con una perturbación. En la ampliación 1000 la inclusión conservadora deja todas las decisiones desconocidas: no significa que todas sean físicamente inestables.
+
+Las cotas máximas campo L1/potencia frente al centro nativo son 0,012213/0,006176, 0,121962/0,068354, 1,215121/1,341013 y 14,316026/108,262837. Son cotas superiores de variación, redondeadas hacia arriba en este resumen, no variaciones medidas ni fallos del presupuesto aritmético `10⁻¹¹`. Dependencias repetidas y sumas de numerosos caminos pueden ensancharlas; el método no promete cotas óptimas. La prueba sólo cubre la familia afín conjunta declarada.
+
+![Cobertura y cotas de estabilidad condicional](assets/native-parameter-boxes-2026-10-09.png)
