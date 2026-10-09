@@ -140,3 +140,5 @@ Docs/validation/external-native-blender-2026-10-09/** -text !eol whitespace=cr-a
 Docs/validation/geometry-cuda-training-2026-10-09/** -text !eol whitespace=cr-at-eol
 Docs/research/external_cpu_reproduction_profile_v2_2026-10-09.json -text !eol whitespace=cr-at-eol
 Docs/research/external_cpu_reproduction_registration_v2_2026-10-09.json -text !eol whitespace=cr-at-eol
+
+Docs/validation/native-operator-gram-2026-10-09/** -text !eol whitespace=cr-at-eol

@@ -438,3 +438,10 @@ La colaboración Codex–Claude–JEV y la agenda actual están documentadas en
 MIT. Consulta [LICENSE](LICENSE).
 
 La [versión propia 0.1.2](Blender/releases/optic-neuro-blender-0.1.2.zip) cierra el defecto de doble desregistro: [cinco controles reales en Blender](Docs/OWN_ADDON_LIFECYCLE_PROTOCOL_2026-10-09.md) y salida sin errores, con las 150 potencias/predicciones iguales y el núcleo científico intacto.
+
+El [operador completo de cinco entradas y ocho salidas](Docs/NATIVE_OPERATOR_GRAM_PROTOCOL_2026-10-09.md)
+tiene rango cinco certificado por LDL con intervalos. Para cualquier entrada compleja,
+la variación relativa de norma cuadrada queda acotada por 3.07e-19.
+La prueba se refiere al modelo escalar representado y no calibra potencia física.
+
+![Gram del operador completo y alcance de la prueba](Docs/assets/native-operator-gram-2026-10-09.png)

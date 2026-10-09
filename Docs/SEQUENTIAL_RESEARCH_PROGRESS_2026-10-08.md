@@ -78,3 +78,7 @@ Frozenc1642ca/profile321bb660/42blobs runnerverifiedbeforeexecution. Run37891059
 ## 2026-10-09T06:22:57.778342+00:00 — full own CUDA training pair PASS, no observed speedup
 
 Frozen9225699/profileb6144639/source25verifiedbeforeFIFO entry. CPU370.4629s/CUDA390.0937s,total760.8022s/RSS878.598MiB/CUDAreserved22MiB;60updates61geometryauditsboth27of30/150predsame/deltafinaldiff0/powerdiff3.886e-16. Maxsame-statefield5.404e-16/power6.662e-16/loss8.882e-16/gradient2.843e-13;freshgeometry5.118e-16/FD1.475e-6. GPUqueue released. Allrawhashesverified; archivepreparedneedpublishbeforeglobaloperatornorm/rank study. NativeLinuxresultpublished2d810d5+figure62865f1; finalfigurefooterlayoutfixpendingincludednext. Articletexpreparednotpublished; localpdflatexfirst8pagespasses,builtinhelperenvfailed/latexmknoPerl. JEVconnectedprovenancejevglobalintervalGram/rank/contractivitywitness recommended, noactualGramstudyexecutedyet. Goalactiveuntil13:55UTC.
+
+## 2026-10-09T06:32:54.717914+00:00 — all-channel operator rank and normalization certified
+
+Frozenbea19eb/profile232eefdd/source33publishedverifiedbeforeanalysis. Independent133geometryauditPASS/fivepositiveintervalLDLpivots/rank5; allcomplexinputeigenvalueswithin1±3.0665868333669135e-19. Approximate represented scalar isometry at all8ports, noexactidentity/physicalcalibration. Full6.4683s/RSS46.207MiB; allrawhashesverified/archivereadyneedpublish. Nextcontinuouswholetrainingboxproof before anyauditreuseoptimization. Goalactiveuntil13:55UTC.
