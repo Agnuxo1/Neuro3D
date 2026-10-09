@@ -161,3 +161,7 @@ fullnativeGPUdeferred60updates/61actualcaptures/62cachegenerations/familyproofPA
 ## 2026-10-09T11:53:54.386260+00:00 — final observed native GPU learning field certificate
 
 independentfinalnativeGPUtrained150field/power/encoder intervalanalysis metric1, fieldL19.97449e-14/power7.09172e-15, argmax150/150 correct137wrong13UNKNOWN0; full19.822942s/RSS36.86MiB/23sourcepins/allrawhashesverified. No universaltraininggradient/preimage/physical certificate. Newscalingd72b1d77/116pins frozen notyetexecuted. Goalactive13:55UTC.
+
+## 2026-10-09T12:00:34.878721+00:00 — native batch scaling original RAM-floor null
+
+Published31591b9/d72b1d77/116pins. Threecompletedmodalfield/power/decisionarms passed; fourth stoppedHOST_RAM_FLOOR2500MiB. Preflight8257.35MiB/ownedRSS357.25/wholeGPUmax928MiB/full51.313518s. FullsixpairresultNULL/allSHApreserved. No cause assigned orspeedclaim. Reclaimoldappresidentpagesreversibly, noapplicationtermination; sameprofilefuturefreshattempt. CorefullGPU3066.60s/61captures60updates27of30 andindependentfinal150certificatePASSalreadymain. Goalactive13:55UTC.
