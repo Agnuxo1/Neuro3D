@@ -1,0 +1,28 @@
+{
+  "utc": "2026-10-09T03:46:16.168343+00:00",
+  "files": [
+    {
+      "name": "ho2025.html",
+      "url": "https://arxiv.org/html/2412.09774v2",
+      "status": "RETRIEVED",
+      "bytes": 174679,
+      "sha256": "8d98e924e24112f33d51d2178a421c0f6119f00ed5624199d5db4956c0b31ec5"
+    },
+    {
+      "name": "matsushima2009.pdf",
+      "url": "https://kansai-u.repo.nii.ac.jp/record/11127/files/KU-1100-20091015-50.pdf",
+      "status": "NOT_RETRIEVED",
+      "error_type": "URLError",
+      "http_status": null
+    },
+    {
+      "name": "steck-optics-notes.pdf",
+      "url": "https://atomoptics.uoregon.edu/~dsteck/teaching/optics/optics-notes.pdf",
+      "status": "RETRIEVED",
+      "bytes": 43949552,
+      "sha256": "2ecd596a87669dbab9c0ddc3950c570a114074d313d26ac5aefcd453bf986995",
+      "pages": 359
+    }
+  ],
+  "private_only_not_redistributed": true
+}

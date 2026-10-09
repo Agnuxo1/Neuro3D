@@ -1,0 +1,16 @@
+{
+  "schema": "optic_neuro_blender.software_control_receipt.v1",
+  "operator_recorded": true,
+  "first_wave_run": {
+    "pass": 2,
+    "fail": 1,
+    "failure": "Gaussian disk integration atgrid256/window2: absoluteerror0.00011229601451445692 exceededunchanged0.0001"
+  },
+  "correction": "Fixturegrid512/window2, same0.0001budget; nofrozenresearchtrialstarted; productionfunctionunchanged",
+  "second_wave_run": {
+    "pass": 3,
+    "fail": 0,
+    "elapsed_seconds": 0.041
+  },
+  "scope": "Softwarecontrols, notphysicalmeasurements orfullnetworkvalidation"
+}

@@ -1,6 +1,6 @@
 # Control ondulatorio coherente: familia gaussiana declarada
 
-Este protocolo está preparado y **no ejecutado** al publicarse. [Perfil fijado](research/gaussian_wave_profile_2026-10-09.json), [autorización humana GitHub](research/gaussian_wave_registration_2026-10-09.json). Se mantiene la vía externa/IPFS sin identificadores emitidos. Los datos se incorporarán después del ensayo, incluidos fallos de tolerancia.
+El ensayo produce un **resultado negativo válido**, con los 36 casos recogidos: la ventana 16 BU falla el presupuesto de campo para λ=0,1 BU y z=4 BU. Se conserva métrica 0, sin interrupción ni modificación de tolerancias. El [perfil fijado](research/gaussian_wave_profile_2026-10-09.json) y la [autorización humana GitHub](research/gaussian_wave_registration_2026-10-09.json) se publicaron antes de ejecutar, en `faa9b788a93b22e64963a079f1fac5c5cbc38d33`, SHA256 de perfil `6c138f2ab91c9ca01942d5113efcef4abdf38ef0ac75d8f09d56f1a27575ad6e`. Se mantiene la vía externa/IPFS sin identificadores emitidos. [Supervisor](validation/gaussian-wave-reference-2026-10-09/attempt01/supervisor.json), [resultado completo](validation/gaussian-wave-reference-2026-10-09/attempt01/worker/result.json), [índice de evidencia](validation/gaussian-wave-reference-2026-10-09/attempt01/evidence_index.json).
 
 Se añade una implementación propia de propagación escalar coherente por espectro angular, como componente del laboratorio. La entrada es un campo gaussiano `E(x,y,0)=exp(−(x²+y²)/w₀²)`, con `w₀=0,1 BU`, longitudes de onda `0,1 / 0,025 / 0,00625 BU`, distancias `1 / 2 / 4 BU`, índice 1 y apertura circular de lectura de radio `0,15 BU`. Estas son **hipótesis nuevas explícitas**; la captura neuronal anterior no especifica ese perfil espacial. El ensayo no modifica su detector modal ni aplica factores gaussianos a sus potencias.
 
@@ -21,3 +21,22 @@ Presupuesto: 240 s, un núcleo CPU, ≥4.000 MiB RAM libre inicial / ≥2.500 Mi
 La [actualización primaria de alcance](research/wave_and_certification_primary_scope_2026-10-09.json) conserva acceso, versiones y limitaciones de lectura. [Ho et al., 2025](https://arxiv.org/html/2412.09774v2) ya combina rayos, difracción y optimización, e incluye aplicaciones coherentes. Su readout de imagen por PSF incoherente no reemplaza nuestra suma de cinco entradas coherentes. La bibliografía de espectro angular y los antecedentes de certificación neuronal impiden reivindicar esos ingredientes como nuevos. Los 106 antecedentes históricos pendientes de extracción siguen pendientes.
 
 Un pase del ensayo caracterizará **esta familia escalar libre**. Para la red completa siguen faltando perfiles espaciales/modos, aperturas de cada superficie, solapamiento, polarización, pérdidas, dispersión y validación conjunta ondulatoria. La geometría capturada y sus cotas aritméticas no proporcionan esas magnitudes. No se afirmará fidelidad de Maxwell, procesador físico o novedad excepcional.
+
+## Resultado y fallo de ventana
+
+El worker terminó en **32,915 s**, RSS máximo **510,734 MiB**, sin interrupción. Todos los controles de norma y apertura pasan en los 36 casos. Ocho de las nueve combinaciones físicas pasan todos sus controles; λ=0,1 BU / z=4 BU falla dos controles de campo. La referencia continua refinada difiere `3,475×10⁻¹⁵` entre órdenes de cuadratura en ese caso; es convergencia numérica, no cota rigurosa total.
+
+| Malla y ventana, λ=0,1 / z=4 BU | Diferencia máxima compleja en 65 puntos | Fracción en apertura | Diferencia absoluta frente a referencia continua |
+|---|---:|---:|---:|
+| 512² / 16 BU | 2,23119×10⁻⁶ | 0,0271111 | 3,06369×10⁻⁵ |
+| 1024² / 16 BU | 2,23119×10⁻⁶ | 0,0271611 | 1,93992×10⁻⁵ |
+| 2048² / 16 BU | 2,23119×10⁻⁶ | 0,0271401 | 1,62756×10⁻⁶ |
+| 2048² / 32 BU | 4,08665×10⁻⁷ | 0,0271611 | 1,93461×10⁻⁵ |
+
+Refinar la malla a ventana fija no reduce ese error de campo. Aumentar la ventana reduce el error y cambia el espaciado de frecuencias; el contraste al mismo paso espacial también supera el umbral. Es evidencia de una limitación de ventana/muestreo espectral en este caso, sin reivindicar una prueba universal de su causa. La precisión de la integral de apertura y la precisión del campo espacial son criterios distintos: no se sustituye el campo fallido por un detector que pasó.
+
+![Campos y aperturas frente a referencias independientes](assets/gaussian-wave-reference-2026-10-09.png)
+
+La aproximación paraxial y la referencia de Helmholtz tampoco se equiparan. Para λ=0,1 BU y z=1 BU, la referencia continua de fracción circular es aproximadamente 0,32419, frente a 0,33251 paraxial. Es una diferencia bajo el perfil gaussiano declarado, no una medición de la red ni una cota de su readout modal. En las longitudes de onda menores las diferencias complejas FFT/referencia son del orden de `10⁻¹⁴` en los puntos evaluados; la integración de apertura conserva su error de discretización mayor.
+
+El resultado negativo queda publicado antes de preparar el ensayo de reparación con ventanas mayores y los mismos presupuestos de campo/apertura. El nuevo ensayo tendrá identificador y límites de recursos propios; no sustituirá este perfil ni convertirá su métrica 0 en éxito.
