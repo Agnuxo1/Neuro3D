@@ -1,0 +1,63 @@
+{
+  "schema": "optic_neuro_blender.verified_animation.v1",
+  "sources": {
+    "Docs/validation/installed-blender-host-recovery-2026-10-09/attempt01/supervisor.json": "77751dc9c0d114a0362b0d19c3a5b73b96e8fedc5881bb9ad2950f7315288d52",
+    "Docs/validation/installed-blender-host-recovery-2026-10-09/attempt01/jobs/optic-neuro-9bca025e46c145e3b41e0c0533b0c32f/training/progress.jsonl": "24c80109512bf4399c7cf0717389559f0232db998f83bb2118f15234401b131a",
+    "Docs/validation/installed-blender-host-recovery-2026-10-09/attempt01/jobs/optic-neuro-f72310fc06b343babd282b0c524c5930/training/progress.jsonl": "24c80109512bf4399c7cf0717389559f0232db998f83bb2118f15234401b131a",
+    "Docs/validation/installed-blender-host-recovery-2026-10-09/attempt01/jobs/optic-neuro-9bca025e46c145e3b41e0c0533b0c32f/result.json": "a4cdcd8b4a1bea73c5fe28172142f9c2fa734eee666a81f36cd1768b120bedbf",
+    "Docs/validation/installed-blender-host-recovery-2026-10-09/attempt01/jobs/optic-neuro-f72310fc06b343babd282b0c524c5930/result.json": "7fca9beef8fedc966d833d351a0e1b476a755d8fc4f002037007e430825e75bc"
+  },
+  "outputs": {
+    "Docs/assets/installed-blender-exact-resume-2026-10-09.gif": {
+      "sha256": "1ee3151666f226978f0386f976e01bdd9f15d9205dcd8f333a19144fad901e34",
+      "bytes": 710834
+    },
+    "Docs/assets/installed-blender-exact-resume-preview-2026-10-09.png": {
+      "sha256": "6764bb5a8239ab135e4eb9692d94961cc76cf837b8c5dea018941f8b8e76ae7b",
+      "bytes": 99818
+    }
+  },
+  "frames": 31,
+  "size_px": [
+    1320,
+    693
+  ],
+  "sampled_optimizer_states": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20,
+    22,
+    24,
+    26,
+    28,
+    30,
+    32,
+    34,
+    36,
+    38,
+    40,
+    42,
+    44,
+    46,
+    48,
+    50,
+    52,
+    54,
+    56,
+    58,
+    60
+  ],
+  "all61_optimizer_coordinate_and_loss_floathex_exact": true,
+  "all150_native_power_difference": 0,
+  "checkpoint_next_step": 12,
+  "final_test_correct": 27,
+  "scope": "Animation of recorded CPU baseline and actual native installed host-interruption/recovery. Prefix is replayed; all61 losses/positions and150 powers match. Cursor is optimizer state, not wall/physical time; no GPU or machine powerloss claim."
+}
