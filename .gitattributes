@@ -156,3 +156,7 @@ Docs/validation/native-graphics-field-certificate-2026-10-09/** -text !eol white
 Docs/validation/native-graphics-gradients-2026-10-09/** -text !eol whitespace=cr-at-eol
 Docs/validation/native-cycles-optix-2026-10-09/** -text !eol whitespace=cr-at-eol
 Docs/validation/native-cycles-optix-2026-10-09/**/worker.stdout -text !eol -whitespace
+
+Docs/validation/native-graphics-training-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/native-graphics-training-2026-10-09/**/worker.stdout -text !eol -whitespace
+Docs/validation/installed-blender-host-recovery-2026-10-09/** -text !eol whitespace=cr-at-eol

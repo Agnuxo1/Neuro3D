@@ -1,0 +1,4 @@
+addon_utils.disable: optic_neuro_blender not loaded
+Modules Installed (optic_neuro_blender) from 'D:\\PROJECTS\\Neuro3D-Scientific-20261008\\Blender\\releases\\optic-neuro-blender-0.1.2.zip' into 'D:\\PROJECTS\\.cognition\\neuro3d-sequential-20261008\\native-graphics-training-attempt01-20261009\\isolated_scripts\\addons'
+Info: Modules Installed (optic_neuro_blender) from 'D:\\PROJECTS\\Neuro3D-Scientific-20261008\\Blender\\releases\\optic-neuro-blender-0.1.2.zip' into 'D:\\PROJECTS\\.cognition\\neuro3d-sequential-20261008\\native-graphics-training-attempt01-20261009\\isolated_scripts\\addons'
+{"native_graphics_step": 0, "train_loss": 6.255440538348442, "field_max_difference": 6.772587951110447e-14, "loss_gradient_max_difference": 8.640199666842818e-12}
