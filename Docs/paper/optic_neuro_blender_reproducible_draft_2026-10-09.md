@@ -46,6 +46,8 @@ At fixed geometry, the network is linear in complex input: E = Ux. Detection int
 
 The current model has no intermediate optical nonlinear activation and does not establish universal neural approximation. Normalizing the common input power is part of the declared encoding, shared with the classical comparisons. A dense matrix compiled from the graph's five basis responses is an equivalent fixed-geometry baseline, useful for auditing and cost comparison.
 
+A separately frozen independent five-basis interval composition of the final native trained graph encloses the full 8×5 operator. Hermitian interval LDL certifies column rank five. Gershgorin bounds enclose every eigenvalue of U†U within [1−ε, 1+ε], ε <= 3.0665868333669135e-19, proving |‖Ux‖²−‖x‖²| <= ε‖x‖² for every complex represented input x. This fixed-geometry approximate isometry includes all eight terminal modes; the three class detectors are only a subset. It is not an exact identity or calibrated physical-flux result. Midpoint eigensolver values are diagnostic only; a proposed vector is separately checked with rational Rayleigh intervals. Full analysis costs 6.468 s and 46.207 MiB RSS.
+
 ## 3. Independent numerical checks
 
 The independent output enclosure uses rational outward rounding at 128 bits, interval π from Machin series with remainder, square-root bounds from integer arithmetic and exact rational Taylor evaluation with explicit remainders. Complex sums and powers are composed through the audited graph. This bounds an already observed native output against the exact represented model rather than claiming that every libm or GPU execution has the same error.
@@ -158,6 +160,7 @@ Repository: [Agnuxo1/Neuro3D](https://github.com/Agnuxo1/Neuro3D), branch `codex
 | Actual native save/reopen | [native reproduction](../TRAINED_GEOMETRY_BLENDER_REPRODUCTION_2026-10-09.md) | [native result](../validation/trained-geometry-blender-reproduction-2026-10-09/attempt01/worker/result.json) |
 | Wine and matched baselines | [comparison](../WINE_GENERALIZATION_COMPARISON_2026-10-09.md) | [complete result](../validation/wine-comparison-2026-10-09/attempt01/worker/result.json) |
 | Actual CUDA training and paired full cost | [training protocol](../GEOMETRY_CUDA_TRAINING_PROTOCOL_2026-10-09.md) | [CPU/CUDA pair](../validation/geometry-cuda-training-2026-10-09/attempt01/supervisor.json) |
+| Complete operator rank and normalization | [Gram protocol](../NATIVE_OPERATOR_GRAM_PROTOCOL_2026-10-09.md) | [rational operator certificate](../validation/native-operator-gram-2026-10-09/analysis01/worker/certificate.json) |
 | Actual NVIDIA | [benchmark](../TRAINED_GRAPH_NVIDIA_BENCHMARK_2026-10-09.md) | [indexed evidence](../validation/trained-graph-cuda-2026-10-09/attempt01/evidence_index.json) |
 | Gaussian negative/remedial | [original](../GAUSSIAN_WAVE_REFERENCE_PROTOCOL_2026-10-09.md), [remedial](../GAUSSIAN_WAVE_REMEDIAL_PROTOCOL_2026-10-09.md) | [original result](../validation/gaussian-wave-reference-2026-10-09/attempt01/worker/result.json), [remedial result](../validation/gaussian-wave-remedial-2026-10-09/attempt01/worker/result.json) |
 | Standalone addon acceptance | [versioned protocol, failures and lifecycle limitation](../OWN_BLENDER_ADDON_PROTOCOL_2026-10-09.md) | [nine-control native result](../validation/own-blender-addon-2026-10-09/attempt03/worker/result.json) |
