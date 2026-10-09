@@ -1,5 +1,11 @@
 # Estados geométricos exactos y gradientes propios
 
+**Resultado posterior de la captura real:** grafo `COMPLETE` con 133 estados, 186 aristas, las 104 superficies alcanzadas y **17.060 caminos terminales representados** desde cinco fuentes. El [auditor separado](validation/coherent-state-graph-capture-2026-10-09/attempt01/supervisor.json) verifica primeros hits y ramas no nulas; métrica 1 del perfil nuevo. Duración supervisada 18,047651 s y pico propio 29,605469 MiB. La construcción ocupa 17,768547 s. El tiempo no incluye la captura Blender inicial ni constituye coste completo de inferencia comparado con un baseline.
+
+Se produjeron ocho campos/potencias para el estímulo de cinco entradas reales unitarias coherentes. La suma de potencias estimadas es `5,000000000000005`, frente a entrada 5; es un control observado, todavía sin cota formal. Se enviaron 33.920 triángulos a selección frente a 885.248 oportunidades exhaustivas sobre esos 133 estados; esto acredita un recuento, no una razón de velocidad general.
+
+Los [bytes, fuentes y figura](validation/coherent-state-graph-capture-2026-10-09/artifact_index.json) están archivados. Los dos ensayos anteriores continúan inconclusos. El auditor no verifica independientemente la vecindad interior de abanicos, y los campos aún son estimaciones nativas. No se acredita precisión del pipeline interno de transformaciones Blender/GPU, entrenamiento de la captura, acierto Iris o óptica física.
+
 Se implementa un grafo finito de origen, dirección y plano óptico previo exactamente iguales. En la referencia del origen se suman **campos complejos**; los campos acumulados reciben el mismo operador futuro. El grafo conserva cada rama de coeficiente no nulo. No agrupa estados próximos, ni descarta amplitudes pequeñas. Los ciclos o estados no resueltos conservan `INCOMPLETE` y campos nulos.
 
 La equivalencia se obtiene por linealidad: para un operador futuro común `T`, se cumple `T(E₁+E₂)=T(E₁)+T(E₂)`. La fase de cada segmento se aplica después de sumar en su referencia común. La referencia modal del detector se conserva expresamente. Un orden topológico completo permite representar todos los caminos del grafo acíclico sin enumerar sus combinaciones. Es una aplicación de ingredientes con antecedentes; no una reivindicación de novedad.
