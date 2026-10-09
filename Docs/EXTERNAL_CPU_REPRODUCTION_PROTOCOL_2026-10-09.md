@@ -1,0 +1,33 @@
+# Repetición CPU en un entorno Linux de GitHub
+
+Estado: PREPARADO, todavía no ejecutado. Esta prueba usa un entorno de ejecución externo al ordenador de desarrollo, con nuestro mismo código y protocolo. No se denomina reproducción realizada o interpretada por un investigador independiente.
+
+## Perfil y límites fijados
+
+[Perfil](research/external_cpu_reproduction_profile_2026-10-09.json), UUID `313e31a5-f555-4ce2-9652-f753f05dee6a`, SHA-256 `ecb48f85f0785572bedc91a4254381ef5ca9683e3aaca7e9355a6db62b131385`, 38 fuentes/artefactos. La [autorización humana GitHub](research/external_cpu_reproduction_registration_2026-10-09.json) permite esta continuidad prospectivamente publicada. Registro externo/IPFS pendiente, sin identificadores emitidos.
+
+Plataforma declarada: GitHub Actions Ubuntu 24.04 x86_64, Python 3.12.12, NumPy 2.2.6, psutil 7.0.0 y mpmath 1.3.0. Las ruedas Linux de [PyPI](research/external_cpu_dependency_primary_receipt_2026-10-09.json) se verifican mediante SHA-256 y `--require-hashes --only-binary=:all:`. Los commits de checkout/setup-python/upload-artifact se verificaron contra las etiquetas primarias de sus repositorios GitHub y se fijan completos en el workflow. La [versión de Python](https://www.python.org/downloads/release/python-31212/) es deliberadamente reproducible; no se afirma que sea la más reciente.
+
+Antes de cualquier cómputo científico, el ejecutor exige igualdad de HEAD con el evento GitHub y comprueba que las 38 fuentes, el perfil y el recibo son exactamente los blobs publicados. El checkout sólo descarga las familias de archivos necesarias. El workflow sólo tiene permiso `contents: read`, no expone credenciales y conserva siempre los resultados disponibles.
+
+Etapas:
+
+1. Cinco módulos de controles adversos CPU: índice exacto, grafo coherente, derivadas geométricas, vecindades independientes e intervalos con referencias de alta precisión.
+2. Recomposición racional independiente del certificado del grafo capturado ya observado. Es repetición del cálculo de ese certificado, no una observación nueva de GPU o de Blender.
+3. Repetición del entrenamiento Iris original sin modificar entradas, división 120/30, 60 actualizaciones, controles de gradiente, 61 auditorías ni reconstrucción final. Su supervisor original conserva el límite de 900 s.
+
+El resultado informa pérdida, aciertos y diferencias de potencias/predicciones frente a la ejecución local. Las trayectorias entre plataformas no tienen que ser idénticas bit a bit; cualquier diferencia se conserva. No se elige el mejor resultado ni se cambia un umbral después de verlo. Un fallo válido de descenso de pérdida mantiene métrica 0; una interrupción ambiental o fuente/runtime inválido conserva métrica nula.
+
+Presupuesto exterior: 1500 s, un núcleo CPU, sin GPU, RAM libre inicial ≥4000 MiB/suelo ≥2500 MiB, RSS agregado propio ≤1500 MiB y evidencia ≤128 MiB. Controles y certificado tienen 120 s cada uno; entrenamiento conserva sus 900 s. El job completo tiene un límite de 35 minutos, incluidos instalación y archivo de artefactos. La supervisión externa termina sólo sus procesos creados.
+
+## Alcance y reproducción
+
+[Workflow](../.github/workflows/external-cpu-reproduction-20261009.yml). Se inicia al publicar cambios en ese workflow/perfil/ejecutor en la rama autorizada o mediante ejecución manual. Artefactos brutos se conservan diez días en GitHub y luego se archivarán con hashes en el repositorio.
+
+```bash
+python -X utf8 Tools/run_external_cpu_reproduction_v1.py --profile Docs/research/external_cpu_reproduction_profile_2026-10-09.json --registration Docs/research/external_cpu_reproduction_registration_2026-10-09.json --verify-only
+python -m pip install --require-hashes --only-binary=:all: -r Docs/research/external_cpu_requirements_2026-10-09.txt
+python -X utf8 Tools/run_external_cpu_reproduction_v1.py --profile Docs/research/external_cpu_reproduction_profile_2026-10-09.json --registration Docs/research/external_cpu_reproduction_registration_2026-10-09.json --out reproduction-evidence
+```
+
+Esta receta no ejecuta Blender nativo ni CUDA/AMD y no puede validar hardware fotónico. La descarga oficial de Blender Linux no pudo verificarse desde este entorno, por lo que no se sustituye esa ausencia por una afirmación de instalación Linux satisfactoria. La crítica especializada y réplica independiente humana permanecen pendientes.
