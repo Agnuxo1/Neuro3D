@@ -93,6 +93,15 @@ muestra aprendizaje y sensibilidad a la inicialización; no demuestra superiorid
 
 ![Wine: geometría propia y baselines con las mismas entradas](Docs/assets/wine-geometry-and-baselines-2026-10-09.png)
 
+El [contraste ondulatorio gaussiano independiente](Docs/GAUSSIAN_WAVE_REFERENCE_PROTOCOL_2026-10-09.md)
+conserva un resultado negativo: 36 casos ejecutados, con fallo de campo en
+λ=0,1 BU / z=4 BU para ventana 16 BU. Refinar la malla no elimina el error;
+ampliar la ventana lo reduce. La referencia continua y la aproximación paraxial
+se distinguen. Este control caracteriza una familia escalar declarada; la
+fidelidad física de la red completa sigue pendiente.
+
+![Control ondulatorio y fallo de ventana conservado](Docs/assets/gaussian-wave-reference-2026-10-09.png)
+
 El [ejecutor y auditor del piloto](Docs/CAPTURED_PILOT_SUPERVISOR_2026-10-08.md)
 están preparados con fuentes/inputs fijados, límites de recursos y negativa por
 registro ausente. Pasan 66 controles conjuntos de software. El piloto se ejecutó

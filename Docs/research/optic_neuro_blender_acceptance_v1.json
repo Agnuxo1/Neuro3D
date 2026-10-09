@@ -9,9 +9,9 @@
       "id": 1,
       "name": "Falsifiable contribution and novelty",
       "status": "OPEN",
-      "achieved": "Operational identity/completeness/field/readout gates; directed review concludes NOVELTY_NOT_ESTABLISHED",
+      "achieved": "Operationaljointgeometry/field/decisioncertificates implemented forcapturedDAG, actualowntrainingandobservedCUDA; directedprimaryreviewincludingHo2025/QAIBP2023/DEEPG2019 reinforcesNOVELTY_NOT_ESTABLISHED",
       "acceptance": "Implemented joint certificate and nonvacuous frozen family; primary comparison and justified originality or explicit replication contribution",
-      "remaining": "End-to-end evidence and pending literature extraction"
+      "remaining": "Verifiableclosestmethodcomparison and106pendingliteratureextractions; exceptionaloriginality/impactnotproved"
     },
     {
       "id": 2,
@@ -56,10 +56,10 @@
     {
       "id": 6,
       "name": "Capacity, stability, physical fidelity",
-      "status": "PARTIAL_REAL_QUADRATIC_CAPACITY_AND_THREE_SEED_STABILITY_CHARACTERIZED",
+      "status": "PARTIAL_CAPACITY_STABILITY_AND_DECLARED_WAVE_REGIME_CHARACTERIZED",
       "acceptance": "State restricted function family; compare analytic and independent wave references over declared regime; physical-model error quantified or unknown",
-      "achieved": "All8ports realquadratic equivalence: rank<=2perdetector; sameinputdensefields/powers reconstructed. Threefixedinitializations and183independentaudits evaluated; broadcapacity/universalitynotclaimed",
-      "remaining": "Quantifiedparameter/inputperturbation robustness andindependentwave references; actualfullnetworkphysicalerror unknown"
+      "achieved": "Realquadraticcapacity and3seedWinevariability; independentGaussianFFTvsHankel/paraxialstudy36casescompleted withvalidnegative metric0: window16fails2e-6radialbudgetat\u03bb.1/z4; window32reduceserror. Fullnetworkphysicalfidelityremainsunknown",
+      "remaining": "Resolve/freeze largerwindowfamily withoutrelaxingbudgets; parameter/inputrobustness andfullnetworkwave model/physicalmeasurements"
     },
     {
       "id": 7,
@@ -114,5 +114,6 @@
   "latest_native_blender_reproduction": "Docs/validation/trained-geometry-blender-reproduction-2026-10-09/attempt01/worker/result.json",
   "latest_nvidia_result": "Docs/validation/trained-graph-cuda-2026-10-09/attempt01/worker/result.json",
   "latest_nvidia_certificate": "Docs/validation/trained-graph-cuda-2026-10-09/attempt01/interval_analysis02/certificate.json",
-  "latest_wine_comparison": "Docs/validation/wine-comparison-2026-10-09/attempt01/worker/result.json"
+  "latest_wine_comparison": "Docs/validation/wine-comparison-2026-10-09/attempt01/worker/result.json",
+  "latest_wave_reference": "Docs/validation/gaussian-wave-reference-2026-10-09/attempt01/worker/result.json"
 }
