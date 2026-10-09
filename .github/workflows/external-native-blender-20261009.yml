@@ -7,6 +7,8 @@ on:
       - .github/workflows/external-native-blender-20261009.yml
       - Docs/research/external_native_blender_profile_2026-10-09.json
       - Docs/research/external_native_blender_registration_2026-10-09.json
+      - Docs/research/external_native_blender_profile_v2_2026-10-09.json
+      - Docs/research/external_native_blender_registration_v2_2026-10-09.json
   workflow_dispatch:
 
 permissions:
@@ -53,13 +55,13 @@ jobs:
           architecture: x64
       - name: Verify published source bytes and human continuity before execution
         run: |
-          python -X utf8 Tools/run_external_native_blender_v1.py --profile Docs/research/external_native_blender_profile_2026-10-09.json --registration Docs/research/external_native_blender_registration_2026-10-09.json --verify-only
+          python -X utf8 Tools/run_external_native_blender_v2.py --profile Docs/research/external_native_blender_profile_v2_2026-10-09.json --registration Docs/research/external_native_blender_registration_v2_2026-10-09.json --verify-only
       - name: Install exact hashed Linux supervisor wheels
         run: |
           python -m pip install --require-hashes --only-binary=:all: -r Docs/research/external_cpu_requirements_2026-10-09.txt
       - name: Prepare official Blender and execute nine bounded native controls
         run: |
-          python -X utf8 Tools/run_external_native_blender_v1.py --profile Docs/research/external_native_blender_profile_2026-10-09.json --registration Docs/research/external_native_blender_registration_2026-10-09.json --out native-reproduction-evidence
+          python -X utf8 Tools/run_external_native_blender_v2.py --profile Docs/research/external_native_blender_profile_v2_2026-10-09.json --registration Docs/research/external_native_blender_registration_v2_2026-10-09.json --out native-reproduction-evidence
       - name: Preserve every outcome and error
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -68,3 +70,4 @@ jobs:
           path: native-reproduction-evidence
           if-no-files-found: warn
           retention-days: 10
+          include-hidden-files: true
