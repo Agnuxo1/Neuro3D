@@ -30,7 +30,7 @@
       "protocol_sha256": "5d0cf372f2f66f043c2a219ba6a60f0182ced8a60039348d486ec163be736226",
       "result_collected": false,
       "achieved": "Original frozen pilot remains deadline/null; separate frozen graph COMPLETE133states186edges17060terminalpaths104objects5sources; independent closed nearest and nonzero branch audit",
-      "remaining": "Independent interior-neighborhood check and scientific training validation; original pilot deadline remains unchanged",
+      "remaining": "Scientific training validation; original pilot deadline remains unchanged",
       "latest_attempt": "Docs/validation/captured-pilot-execution-2026-10-09/attempt02/supervisor.json",
       "latest_attempt_status": "WORKER_DEADLINE",
       "primary_metric": null,
@@ -43,7 +43,7 @@
       "status": "PARTIAL_OBSERVED_REPRESENTED_ERROR_CERTIFIED",
       "acceptance": "All relevant branches covered; adverse controls; capture/representation/geometry/phase/sum/readout budgets complete; invalid margins stay unknown",
       "achieved": "Independent interval enclosure: observed native field L1<=4.9383434427813286e-15,power<=3.1372973883238074e-15; represented det.R1 argmax margin>=0.18933601504039158; seven adverse/enclosure controls plus full graph90-digit cross-check",
-      "remaining": "Unknown intended-geometry/native Blender transform error and physical model error; independent fan interior-neighborhood audit; broader inputs/families/GPU"
+      "remaining": "Unknown intended-geometry/native Blender transform error and physical model error; broader inputs/families/GPU"
     },
     {
       "id": 5,
@@ -98,5 +98,6 @@
     "external_route_retained": true
   },
   "latest_state_date": "2026-10-09",
-  "latest_output_certificate": "Docs/validation/observed-graph-output-enclosure-2026-10-09/analysis02/certificate.json"
+  "latest_output_certificate": "Docs/validation/observed-graph-output-enclosure-2026-10-09/analysis02/certificate.json",
+  "latest_neighborhood_audit": "Docs/validation/independent-surface-neighborhood-2026-10-09/audit.json"
 }
