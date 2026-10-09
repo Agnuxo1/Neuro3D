@@ -58,7 +58,7 @@
       "name": "Capacity, stability, physical fidelity",
       "status": "PARTIAL_CAPACITY_STABILITY_AND_DECLARED_WAVE_REGIME_CHARACTERIZED",
       "acceptance": "State restricted function family; compare analytic and independent wave references over declared regime; physical-model error quantified or unknown",
-      "achieved": "Restrictedquadraticcapacity and3seedWinevariability; originalGaussianwindownegativepreserved; separatelyfrozenlargerwindow36casespassallsamegates,observedradialfieldmax9.292e-8L64. Fullnetworkphysicalfidelityunknown; independentcontinuous16Dpairedtranslation boxes x1/10/100/1000 prove133states and13699competitors each,decisioncoverage147/131/40/0 of150, unknownretained",
+      "achieved": "Restrictedquadraticcapacity and3seedWinevariability; originalGaussianwindownegativepreserved; separatelyfrozenlargerwindow36casespassallsamegates,observedradialfieldmax9.292e-8L64. Fullnetworkphysicalfidelityunknown; independentcontinuous16Dpairedtranslation boxes x1/10/100/1000 prove133states and13699competitors each,decisioncoverage147/131/40/0 of150, unknownretained; independent full8x5operator intervalLDLrank5/Gershgorinallcomplexinputisometry1\u00b13.067e-19,physicalfluxunknown",
       "remaining": "Parameter/input/nativeuncertaintyrobustness andfullnetworkwave model/physicalmeasurements; declaredGaussianfamilydoesnotderivecapturedmode"
     },
     {
@@ -75,7 +75,7 @@
       "status": "PARTIAL_ACTUAL_NVIDIA_COMPLEX128_GRAPH_AND_GRADIENTS_VERIFIED",
       "acceptance": "Equivalent outputs and precision, actual vendor execution receipts, complete preparation/transfer/compute/readout/training cost and resource/ablation evidence",
       "amd_execution_verified": false,
-      "achieved": "ActualRTX3090/CUDA12.4/Torch2.6.0 kernels/readback60inputs; ownfields/powers/manualJacobian parity/autogradcontrol; independentobservedfieldsL1<=2.9356882610688944e-15,power<=1.3807709003001215e-15;59argmaxcertified,zeroUNKNOWN;5repeatsbatches1/150/2048,fullworker6.7155s,source/setup/transfers/readback costs andequivalentdensebaseline measured; pairedfullactualCPU/CUDAowntraining60updates61geometryauditsboth27of30/150decisionssame, field5.4e-16/gradient2.85e-13parity;CPU370.46/CUDA390.09s,nofullspeedup,CUDA22MiBreserved",
+      "achieved": "ActualRTX3090/CUDA12.4/Torch2.6.0 kernels/readback60inputs; ownfields/powers/manualJacobian parity/autogradcontrol; independentobservedfieldsL1<=2.9356882610688944e-15,power<=1.3807709003001215e-15;59argmaxcertified,zeroUNKNOWN;5repeatsbatches1/150/2048,fullworker6.7155s,source/setup/transfers/readback costs andequivalentdensebaseline measured; pairedfullactualCPU/CUDAowntraining60updates61geometryauditsboth27of30/150decisionssame, field5.4e-16/gradient2.85e-13parity;CPU370.46/CUDA390.09s,nofullspeedup,CUDA22MiBreserved; independentlyprovedwholeoriginaltrainingfamily1251exactaffineexpressions, freshfullCPUpointaudit/continuousproofpair393.11/90.93s ratio4.3233,all61coordinates/lossand150powers/predictionsidentical; singlepairnoCI",
       "remaining": "ActualAMDhardware; geometryGPUexecution/energy/structuralscaling/ablations; ownCUDAtrainingfullcostcompleted; noGPUtrianglepredicate claimed"
     },
     {
@@ -83,7 +83,7 @@
       "name": "Recovery, Blender interface, clean reproduction",
       "status": "PARTIAL_STANDALONE_NATIVE_ADDON_FLOW_AND_LIFECYCLE_VERIFIED",
       "acceptance": "Install/edit/run/cancel/save/reopen/export; guarded failure recovery; clean-environment documented reproduction",
-      "achieved": "ZIP0.1.1 isolatedactualinstall/registeredoperators; ownbackgroundBlenderinfer150/training61audits27of30,staleinput/scene,ownedcancel,recover/apply,newcopy/reopen,tamperrejectionPASS9. Originalpreserved;shutdownlogshowsdoubleunregisterRuntimeError retained; separatelyfrozenZIP0.1.2 unchangedscientificpayload,5actualnativecycles/cancel/infercontrols PASS65.04s,wholepostexitlognoerror; actualnativeLinuxBlender run37891059818 all9controls/61trainingaudits27of30/logclean/full685.77s/RSS756.34MiB",
+      "achieved": "ZIP0.1.1 isolatedactualinstall/registeredoperators; ownbackgroundBlenderinfer150/training61audits27of30,staleinput/scene,ownedcancel,recover/apply,newcopy/reopen,tamperrejectionPASS9. Originalpreserved;shutdownlogshowsdoubleunregisterRuntimeError retained; separatelyfrozenZIP0.1.2 unchangedscientificpayload,5actualnativecycles/cancel/infercontrols PASS65.04s,wholepostexitlognoerror; actualnativeLinuxBlender run37891059818 all9controls/61trainingaudits27of30/logclean/full685.77s/RSS756.34MiB; version-specificSpanishinstall/coherentinputs/normalization/recovery/resourceguideprepared",
       "remaining": "Interruptedhost/crashrecovery, humanusabilityandindependentexperts"
     },
     {
@@ -124,5 +124,10 @@
   "latest_external_cpu_result": "Docs/validation/external-cpu-reproduction-2026-10-09/attempt02/artifact/result.json",
   "latest_own_addon_lifecycle": "Docs/validation/own-addon-lifecycle-2026-10-09/attempt01/worker/result.json",
   "latest_native_training_batch_certificate": "Docs/validation/native-training-batch-certificate-2026-10-09/analysis01/worker/certificate.json",
-  "latest_conditional_parameter_box_analysis": "Docs/validation/native-parameter-boxes-2026-10-09/analysis01/worker/certificate.json"
+  "latest_conditional_parameter_box_analysis": "Docs/validation/native-parameter-boxes-2026-10-09/analysis01/worker/certificate.json",
+  "latest_operator_gram_certificate": "Docs/validation/native-operator-gram-2026-10-09/analysis01/worker/certificate.json",
+  "latest_global_training_family": "Docs/validation/global-training-family-2026-10-09/analysis01/worker/certificate.json",
+  "latest_geometry_reuse_training": "Docs/validation/geometry-reuse-training-2026-10-09/attempt01/supervisor.json",
+  "latest_geometry_cuda_training": "Docs/validation/geometry-cuda-training-2026-10-09/attempt01/supervisor.json",
+  "latest_external_native_blender": "Docs/validation/external-native-blender-2026-10-09/attempt02/artifact/result.json"
 }
