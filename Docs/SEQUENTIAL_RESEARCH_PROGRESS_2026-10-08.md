@@ -181,3 +181,7 @@ JEV actualexit0/provenancejev/statusconnected recommends frozen count/byte-parit
 ## 2026-10-09T13:16:47.731158+00:00 — exact packet replay and structural cost audit
 
 Exact same originalfrozenpacketprofile accepted,5650packetsbyteidentical; CPUcandidate faster150/4096/slower1; structural counts5834/35004reads/46488textures, logicalpayloadsnotPCIecounters. Full10GPUtraining+finalcert+scaling alreadybothmain. MainforeignEXP005history merged1a53ef6, all126sourcepinsunchanged. Candidate notGPUintegrated. Next actualBlenderCPUcompatibility/graphicsAPIinspection whileforeignFIFOhead11GiB remainsblocked. Goalactive13:55UTC.
+
+## 2026-10-09T13:25:58.843037+00:00 — resident optical graph hypothesis prepared, NOT EXECUTED
+
+ActualGPU-derived localcoefficients (notglobalU) plus GPU133state fragmentpropagation/complexKahanmerges/all8modalreadbacks/exactfiveinputbit echoes. Freshgeometry/independentfullproof/fourcoherencecontrols/sixsameCPUoutputpairs required, fixedbudgets1e-11. 120pins/profiledc077d1be88d90f7916d7bcf278d37c8a8f83704f4b24148c4a74f3f5f7501ba. Existingvalidatedengines/installerunchanged. PublishverifybeforeFIFOadmission; no native shadercompilation/equivalence/speedclaim yet. Goalactive13:55UTC.
