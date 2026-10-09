@@ -1,0 +1,11 @@
+# Independent certificates of observed native graphics coherent fields
+
+This secondary deterministic study is published and fixed before computation, after the underlying GPU trial was published. It is not a new blind experiment or retrospective external preregistration. GitHub continuity is authorized; external/IPFS identifiers remain absent.
+
+The observed fragment-shader fields and CPU compensated merges from three complete 150-input runs are compared with independently composed rational outward intervals of the exact admitted scalar geometric network. Original native scene, complete graph, encoded inputs, train-only feature scaler and dataset are pinned. The GPU graph must equal the independently audited complete native graph. Actual GPU supervision and result hashes must demonstrate successful captured-surface execution, without a precomputed transfer matrix. Repeated field/power arrays must be exactly equal before sharing one unique-input certificate across all 450 observations.
+
+Field and power budgets remain 1e-11; input encoding remains 1e-12. Independently checked ideal train-only encoding is separate from recorded exact binary64 inputs. Four previously observed GPU controls (global phase, destructive source superposition and two individual source bases) receive separate field/power certificates. Decisions require separated power intervals; overlapping intervals remain UNKNOWN. Class accuracy and certified numerical argmax are distinct.
+
+No GPU forward/phase kernel is used by the interval composer. This bounds these observations, including end-to-end numerical accumulation against the exact represented model. It does not prove every unobserved GPU execution, intended Blender geometry, native-transform preimages, measured physical optics, GPU gradients or training. Resources: 240 seconds, one CPU core, 4,000 MiB free RAM preflight, 2,500 MiB floor, 1,500 MiB owned RSS and 64 MiB result limit. No GPU lease is required for rational secondary analysis.
+
+[Frozen profile](research/native_graphics_field_certificate_profile_2026-10-09.json), [registration](research/native_graphics_field_certificate_registration_2026-10-09.json), [primary graphics evidence](NATIVE_GRAPHICS_COHERENT_FIELD_PROTOCOL_2026-10-09.md).
