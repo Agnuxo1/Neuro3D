@@ -1,0 +1,43 @@
+{
+  "id": "PRECISION-ORIGINAL-SOURCE-PREVIOUS-CONTACT-BOX-CPU-001",
+  "frozen_pins_unchanged": 461,
+  "head": "88de36c77904d1ffd161dafff765cebcfb3c9bba",
+  "index_empty": true,
+  "own4_clean": true,
+  "parent": "19f71b3b6e22eabab92961573735e613c2ad6279",
+  "raw_HEAD_equals_disk": true,
+  "owned_files": {
+    "Blender/benchmarks/capacity_audit/original_SOURCE_previous_contact_box_CPU_v1.py": {
+      "bytes": 8085,
+      "sha256": "424786c5bdd48821e04fbf704467ffa79d3a688c2f9aa03777105a6b945fe62c"
+    },
+    "Blender/tests/test_original_SOURCE_previous_contact_box_CPU_v1.py": {
+      "bytes": 9175,
+      "sha256": "0cf7636bb2d96205542914911f9712d1432f8e012955d3b3461a2a2db0533233"
+    },
+    "Docs/EXP-005-ORIGINAL-SOURCE-PREVIOUS-CONTACT-BOX-CPU-001.md": {
+      "bytes": 7081,
+      "sha256": "d85840f383dfb02cfcfc932844c71a369b78edbdc49f6ffaba8a8fc6708ddcf5"
+    },
+    "coordinacion/respuestas/PRECISION-ORIGINAL-SOURCE-PREVIOUS-CONTACT-BOX-CPU-001-CODEX.json": {
+      "bytes": 63038,
+      "sha256": "f109f605bfd9176b543942a95405218911a5d4709669860d895860e7ddc70025"
+    }
+  },
+  "tests": 4,
+  "records": 35,
+  "original_SOURCE_conditions": 12,
+  "original_corner_combinations": 768,
+  "native_previous_contact_STOP_revoked": false,
+  "condition_valid_calls": 24,
+  "malformed_attempts": 9,
+  "initial_PASS_captures_retained": 2,
+  "native_ABI_budget_exclusion_phase_certified": false,
+  "GPU_launched": false,
+  "old_contact_evaluator_or_suite_replays": 0,
+  "oracle_rows": 21,
+  "all_previous_failures_preserved": true,
+  "JEV": "LOCAL_SECURITY_BLOCKED_NO_RETRY",
+  "sharedboards_staged": false,
+  "next": "Conditional next-hit/length-reference-phase enclosure under non-singleton directions only; native origin/exclusion credential still missing. Request only existing artifacts by ID/SHA, no old suite replay."
+}

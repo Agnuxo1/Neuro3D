@@ -1,0 +1,98 @@
+{
+  "id": "PRECISION-ORIGINAL-SOURCE-NEXT-CHORD-LENGTH-CPU-001",
+  "checkpoint_UTC": "2026-10-07T08:13:00Z",
+  "head": "99071f1ae2388c0f5790047ec99e011a8c1df1ee",
+  "parent": "1a21ffe52730fc68c58ef2436aefcaf444ca007e",
+  "own": [
+    {
+      "path": "Blender/benchmarks/capacity_audit/original_SOURCE_next_chord_length_CPU_v1.py",
+      "sha256": "39ec676e7aca019f0e044335f40dc79249c27d977de412fa2739d4c6c624731d",
+      "bytes": 6511
+    },
+    {
+      "path": "Blender/tests/test_original_SOURCE_next_chord_length_CPU_v1.py",
+      "sha256": "9fdf0f120b9d433c6bd8a92ee5b1a71b548a7e8504d91b53c8dbe8ddd1fbd1a5",
+      "bytes": 8825
+    },
+    {
+      "path": "Docs/EXP-005-ORIGINAL-SOURCE-NEXT-CHORD-LENGTH-CPU-001.md",
+      "sha256": "6067676dc69b567b243da50acb12991ab8648db8df91ea96a59a6949131d4d2b",
+      "bytes": 5682
+    },
+    {
+      "path": "coordinacion/respuestas/PRECISION-ORIGINAL-SOURCE-NEXT-CHORD-LENGTH-CPU-001-CODEX.json",
+      "sha256": "73aa493db7344763bfc814b9298327e25c96b802ffcba5fdea0c5a87db4b3366",
+      "bytes": 32694
+    }
+  ],
+  "frozen_pins": 461,
+  "own4clean": true,
+  "index_empty": true,
+  "raw_HEAD_equals_disk": true,
+  "receipt_sha256": "73aa493db7344763bfc814b9298327e25c96b802ffcba5fdea0c5a87db4b3366",
+  "summary": {
+    "fixed_SOURCE_slots": 12,
+    "fixed_position_rows_as_DATA": 28,
+    "conditional_interior_rows": 12,
+    "previous_contact_STOP_rows": 12,
+    "conditional_miss_rows": 4,
+    "new_norm_controls": 8,
+    "promotion_NEG": 17,
+    "input_NEG": 10,
+    "tests": 4,
+    "records": 64,
+    "new_valid_norms": 37,
+    "new_integer_root_certificates": 74,
+    "fixed_corner_combinations": 1792,
+    "control_corner_combinations": 512,
+    "caller_corner_combinations": 64,
+    "old_position_evaluator_replays": 0,
+    "old_length_producer_replays": 0,
+    "old_geometry_queries": 0,
+    "old_roots_replayed": 0,
+    "old_suites": 0,
+    "preserved_nonzero_scalar_errors": 72,
+    "preserved_prior_error_rows": 16
+  },
+  "oracle_summary": {
+    "GPU_used": false,
+    "SOURCE_slots": 12,
+    "capacity_NEG_preserved": true,
+    "captured_norm_rows": 36,
+    "corner_combinations": 2304,
+    "fixed_bindings": 28,
+    "frozen_pins": 461,
+    "independent_root_certificates": 72,
+    "input_NEG": 10,
+    "native_length_error_bound": null,
+    "old_position_replays": 0,
+    "original_ledger_STOPs": 12,
+    "phase_error_bound": null,
+    "positive_nonzero_width_length_intervals": 12,
+    "promotion_NEG": 17,
+    "root_fraction_bits": 96,
+    "source_snapshots": 2,
+    "status": "PASS"
+  },
+  "claims": {
+    "native_precision_certified": false,
+    "native_length_graph_certified": false,
+    "length_accuracy_budget_admitted": false,
+    "native_length_error_bound": null,
+    "nearest_hit_certified": false,
+    "launch_exclusion_allowed": false,
+    "full_path_visibility_certified": false,
+    "GPU_launch_allowed": false,
+    "phase_certified": false,
+    "phase_error_bound": null,
+    "length_reference_phase_bound": null,
+    "SOURCE_merged": false,
+    "GPU_used": false,
+    "Bpy_used": false,
+    "RT_used": false,
+    "full_costs": "UNKNOWN_NOT_ZERO"
+  },
+  "next": "Siguiente propia Codex: composición condicional referencia/longitud de onda/ciclos de fase desde cotas propagadas y presupuestos SOURCE separados explícitos; mantener STOP y resolución96 sin importar cotas ideales ni promoción nativa. Claude mantiene capacity/nebulatrace/research/RT. No GPU solicitada/reservada ni telemetría nueva; no se afirma libre/ocupada. Ventana nocturna histórica cerrada intacta; JEV bloqueado sin reintento.",
+  "sharedboards_stage": false,
+  "JEV": "LOCAL_SECURITY_BLOCKED_NO_REMOTE_ENDORSEMENT"
+}

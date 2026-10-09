@@ -1,0 +1,254 @@
+{
+ "task_id": "P0-3-SCENE-STATES-CLAUDE",
+ "status": "phase_A_CPU_device_PASS_phase_B_GPU_pending_resources",
+ "timestamp_utc": "2026-09-30T17:56:45+00:00",
+ "contract_registered_before_measuring": "D:/PROJECTS/.cognition/neuro3d/p0_scene_gpu/CONTRATO-P0-3.md",
+ "contract_sha256": "ebaf059828776cd30ca67731deab247288a19bd23320ac072135c4ed681e159a",
+ "scope": "Fase A: gpu_states.py (torch float64) en dispositivo CPU de torch; 1,5 s; sin GPU. Fase B (cuda) por gpuq+guard_v4 cuando haya RAM 6,3 GiB libres; mismas escenas y umbrales.",
+ "artifacts": {
+  "CONTRATO-P0-3.md": "D:/PROJECTS/.cognition/neuro3d/p0_scene_gpu/CONTRATO-P0-3.md",
+  "p03_harness.py": "D:/PROJECTS/.cognition/neuro3d/p0_scene_gpu/p03_harness.py",
+  "p03_cpu.json": "D:/PROJECTS/.cognition/neuro3d/p0_scene_gpu/p03_cpu.json"
+ },
+ "artifact_sha256": {
+  "CONTRATO-P0-3.md": "ebaf059828776cd30ca67731deab247288a19bd23320ac072135c4ed681e159a",
+  "p03_harness.py": "2a1b6b0ba19e2d9ccaff9f5c5a6be6dd8152e1773a01f0e3525355b059d1ea27",
+  "p03_cpu.json": "51cd9fd98a37d3fb76d6bba24f717f10b946a5a750030e0f14b260879996a15e"
+ },
+ "input_sha256": {
+  "nebulatrace/gpu_states.py": "a39cc506dad29de8e87bc37e875504f5d0c6d5eff1ab228a48c83ac5bcf0a12f",
+  "nebulatrace/statefuse.py": "a5d40e68f56c654623d4dd58ea9d7cb86fb2f53cd61212a54f6569051d5256b0"
+ },
+ "results": {
+  "device": "cpu",
+  "torch": "2.6.0+cu124",
+  "mzi": {
+   "max_diff_vs_my_oracle": 2.842517866562357e-14,
+   "states": 42,
+   "casts": 42
+  },
+  "negatives": [
+   {
+    "case": "rayo perdido (fuente hacia +z)",
+    "aborted": true,
+    "error": "TraceError: lost ray x1"
+   },
+   {
+    "case": "dos fuentes en el mismo estado",
+    "aborted": true,
+    "error": "TraceError: dos fuentes en el mismo estado"
+   },
+   {
+    "case": "terminal no colineal",
+    "aborted": true,
+    "error": "TraceError: terminal direction mismatch"
+   },
+   {
+    "case": "geometria ambigua (espejo duplicado coincidente)",
+    "aborted": true,
+    "error": "TraceError: ambiguous geometry x1"
+   }
+  ],
+  "conf1": {
+   "states": 136,
+   "ref_states": 136,
+   "edges": 192,
+   "casts": 136,
+   "levels": 14,
+   "prop_iters": 36,
+   "max_diff_vs_statefuse": 7.716930080124026e-13,
+   "max_diff_vs_oracleB": 6.443855206984259e-13,
+   "seconds_total": 0.048581100010778755
+  },
+  "errors": [],
+  "scenes_valid": 104,
+  "max_diff_vs_my_oracle": 7.282284489880101e-14,
+  "max_diff_vs_codex": 1.319791833869674e-13,
+  "sync_audit": {
+   "\\.cpu\\(\\)": 0,
+   "\\.item\\(\\)": 0,
+   "\\.numpy\\(\\)": 0,
+   "int\\(": 4,
+   "\\.any\\(\\)": 7,
+   "\\.numel\\(\\)": 13,
+   "torch\\.equal": 3
+  },
+  "seconds": 1.4981882572174072
+ },
+ "groups": [
+  {
+   "shape(obj,puertos,fuentes)": [
+    3,
+    3,
+    1
+   ],
+   "scenes": 14,
+   "states": 14,
+   "edges": 0,
+   "casts": 14,
+   "levels": 1,
+   "prop_iters": 1,
+   "seconds_total": 0.08387420000508428,
+   "max_diff_vs_my_oracle": 2.851609513701226e-14,
+   "max_diff_vs_codex_ideal_fields": 3.000910450293386e-14
+  },
+  {
+   "shape(obj,puertos,fuentes)": [
+    3,
+    3,
+    2
+   ],
+   "scenes": 8,
+   "states": 16,
+   "edges": 0,
+   "casts": 16,
+   "levels": 1,
+   "prop_iters": 1,
+   "seconds_total": 0.0034639000077731907,
+   "max_diff_vs_my_oracle": 2.1316282072803006e-14,
+   "max_diff_vs_codex_ideal_fields": 3.0031071074703975e-14
+  },
+  {
+   "shape(obj,puertos,fuentes)": [
+    7,
+    3,
+    1
+   ],
+   "scenes": 15,
+   "states": 22,
+   "edges": 7,
+   "casts": 22,
+   "levels": 3,
+   "prop_iters": 3,
+   "seconds_total": 0.020395100000314415,
+   "max_diff_vs_my_oracle": 7.282284489880101e-14,
+   "max_diff_vs_codex_ideal_fields": 7.686568796949742e-14
+  },
+  {
+   "shape(obj,puertos,fuentes)": [
+    6,
+    3,
+    1
+   ],
+   "scenes": 14,
+   "states": 17,
+   "edges": 3,
+   "casts": 17,
+   "levels": 2,
+   "prop_iters": 2,
+   "seconds_total": 0.004206600002362393,
+   "max_diff_vs_my_oracle": 2.851609513701226e-14,
+   "max_diff_vs_codex_ideal_fields": 4.1870129882597856e-14
+  },
+  {
+   "shape(obj,puertos,fuentes)": [
+    4,
+    3,
+    1
+   ],
+   "scenes": 11,
+   "states": 13,
+   "edges": 2,
+   "casts": 13,
+   "levels": 2,
+   "prop_iters": 2,
+   "seconds_total": 0.0048423999978695065,
+   "max_diff_vs_my_oracle": 6.508975417915324e-14,
+   "max_diff_vs_codex_ideal_fields": 5.529334225474593e-14
+  },
+  {
+   "shape(obj,puertos,fuentes)": [
+    6,
+    3,
+    2
+   ],
+   "scenes": 9,
+   "states": 18,
+   "edges": 0,
+   "casts": 18,
+   "levels": 1,
+   "prop_iters": 1,
+   "seconds_total": 0.0019268000032752752,
+   "max_diff_vs_my_oracle": 2.851609513701226e-14,
+   "max_diff_vs_codex_ideal_fields": 5.3865385111493056e-14
+  },
+  {
+   "shape(obj,puertos,fuentes)": [
+    5,
+    3,
+    1
+   ],
+   "scenes": 17,
+   "states": 19,
+   "edges": 2,
+   "casts": 19,
+   "levels": 2,
+   "prop_iters": 2,
+   "seconds_total": 0.004131399997277185,
+   "max_diff_vs_my_oracle": 5.685667168744362e-14,
+   "max_diff_vs_codex_ideal_fields": 6.003360979500261e-14
+  },
+  {
+   "shape(obj,puertos,fuentes)": [
+    7,
+    3,
+    2
+   ],
+   "scenes": 7,
+   "states": 19,
+   "edges": 5,
+   "casts": 19,
+   "levels": 3,
+   "prop_iters": 3,
+   "seconds_total": 0.008052400007727556,
+   "max_diff_vs_my_oracle": 5.898242022697304e-14,
+   "max_diff_vs_codex_ideal_fields": 1.319791833869674e-13
+  },
+  {
+   "shape(obj,puertos,fuentes)": [
+    4,
+    3,
+    2
+   ],
+   "scenes": 6,
+   "states": 12,
+   "edges": 0,
+   "casts": 12,
+   "levels": 1,
+   "prop_iters": 1,
+   "seconds_total": 0.0019874999998137355,
+   "max_diff_vs_my_oracle": 5.682747885392757e-14,
+   "max_diff_vs_codex_ideal_fields": 8.492968489279461e-14
+  },
+  {
+   "shape(obj,puertos,fuentes)": [
+    5,
+    3,
+    2
+   ],
+   "scenes": 3,
+   "states": 6,
+   "edges": 0,
+   "casts": 6,
+   "levels": 1,
+   "prop_iters": 1,
+   "seconds_total": 0.0017272999975830317,
+   "max_diff_vs_my_oracle": 2.843146557549047e-14,
+   "max_diff_vs_codex_ideal_fields": 4.522370536061473e-14
+  }
+ ],
+ "findings": [
+  "H1 CUMPLIDA (fase A): campos por detector de gpu_states desde escena frente a mi oraculo independiente: max 7,3e-14 en 104 escenas validas aleatorias (de 300 generadas), frente a ideal_fields de Codex 1,3e-13; MZI de Codex (6 configuraciones) 2,8e-14; conf1 K4 136 estados (igual que statefuse), diferencia 7,7e-13 frente a statefuse y 6,4e-13 frente a las matrices retenidas del oraculo B. Umbral 1e-10 / 1e-9.",
+  "H2: contadores coherentes: conf1 136 estados, 192 aristas (<= 2x estados), 136 lanzamientos, 14 niveles de frente, 36 iteraciones de propagacion; el mismo numero de estados que el DAG de statefuse.",
+  "H3 (auditoria estatica de trace()): 0 llamadas .cpu()/.item()/.numpy(); sincronizaciones de control: int(...) x4, .any() x7, .numel() x13, torch.equal x3 (conteos y comprobaciones de colision), ninguna transferencia de datos intermedia; el resultado U solo se lleva a CPU en la llamada del arnes. Falta la medicion en cuda (fase B).",
+  "H4 CUMPLIDA: los 4 negativos abortan con TraceError (rayo perdido, dos fuentes en el mismo estado, terminal no colineal, geometria ambigua por espejo duplicado coincidente).",
+  "El recorrido es desde escena: entrada = instantanea (triangulos, fuentes, propiedades, lambda por escena); no hay rutas ni matriz precalculada; ninguna ruta de CPU se suministra al dispositivo."
+ ],
+ "limits": [
+  "fase A en dispositivo CPU de torch: demuestra correccion del algoritmo de estados, no la ejecucion en cuda (fase B)",
+  "clase de escenas: axial/diagonal diadica, mismas reglas que el oraculo",
+  "fusion con quant 1e-9; ver P0-1 para el limite en lambda pequena",
+  "no mide velocidad ni ventaja"
+ ],
+ "no_jev_aval": false
+}

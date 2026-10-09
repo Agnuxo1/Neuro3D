@@ -1,0 +1,85 @@
+{
+  "id": "PRECISION-ORIGINAL-SOURCE-CANDIDATE-TOTAL-PHASE-HOST-001",
+  "UTC": "2026-10-07T08:55:15Z",
+  "HEAD": "15b266eb20f982095e38b00386c5d210da0fdbe8",
+  "parent": "a4cb6a49aaae1aacd3db861c184e7606366d6ce1",
+  "own_files": {
+    "Blender/benchmarks/capacity_audit/original_SOURCE_candidate_total_phase_HOST_v1.py": {
+      "sha256": "5e60d8b2a9451d58e074f9e1ee8777ae37a8d611fb2e96f716708c780c42932e",
+      "bytes": 12927
+    },
+    "Blender/tests/test_original_SOURCE_candidate_total_phase_HOST_v1.py": {
+      "sha256": "177b1621cffe4259cf2313b29b24206325d939322522230ac757ffd62eb56644",
+      "bytes": 12147
+    },
+    "Docs/EXP-005-ORIGINAL-SOURCE-CANDIDATE-TOTAL-PHASE-HOST-001.md": {
+      "sha256": "61d29370c966090f89826693101d2c8cc187caea86fddc7848550493e2522058",
+      "bytes": 5596
+    },
+    "coordinacion/respuestas/PRECISION-ORIGINAL-SOURCE-CANDIDATE-TOTAL-PHASE-HOST-001-CODEX.json": {
+      "sha256": "fd5a88e33e911f340f62f2414b578f44568b0c1515a629e25cbb7aa360db9fdd",
+      "bytes": 52201
+    }
+  },
+  "QA": {
+    "tests": 6,
+    "records": 56,
+    "stdout_sha256": "5f81adf139c6d36fb1a4b1f71df6e6fbdbb2ccb7f5574ae3272ca8d1ddea405a",
+    "deadline": "2026-10-07T08:52:51.381140+00:00",
+    "before_deadline": true
+  },
+  "oracle": {
+    "GPU_used": false,
+    "SOURCE_HOST_radius_to_literal_cap_ratios": {
+      "direction_scaled": [
+        174153756670629,
+        2048
+      ],
+      "oblique": [
+        174153756670629,
+        2048
+      ],
+      "shared_ref1000": [
+        174153756670629,
+        2048
+      ],
+      "tiny_gap_2m60": [
+        1,
+        1024
+      ]
+    },
+    "candidate_rows": 28,
+    "fixed_statuses": {
+      "CONDITIONAL_HOST_OVERLAY_CAPS_ONLY": 1,
+      "STOP_ALL_SOURCE_DIAGNOSTIC_CAP": 3,
+      "STOP_ORIGINAL_PHASE_UNKNOWN": 4
+    },
+    "frozen_producer_replays": 0,
+    "groups": {
+      "CAPTURE_NEG": 5,
+      "COMMON_MATERIAL_ALL_SOURCE_STOP": 1,
+      "FIXED_JOIN": 8,
+      "INCLUSIVE_SOURCE_CAP_RELATIVE_STOP": 1,
+      "INPUT_NEG": 37,
+      "OFFSET_COPY_CONTROL": 1,
+      "OUTPUT_CAPACITY512_STOP": 1,
+      "SEPARATE_SOURCE_UNCERTAINTY": 2
+    },
+    "id": "PRECISION-ORIGINAL-SOURCE-CANDIDATE-TOTAL-PHASE-HOST-001",
+    "new_total_phase_corner_combinations": 128,
+    "old_geometry_queries": 0,
+    "phase_certified": false,
+    "pinned_files_intact": 461,
+    "records": 56,
+    "root_evaluations": 0,
+    "status": "PASS",
+    "tests": 6,
+    "upstream_STOP_preserved": 20
+  },
+  "oracle_stdout_sha256": "5a816b077e087d75b0c6150f7fd39e535d5169386e8f2986fb069a12c08b18d5",
+  "scope": "HOST_CONDITIONAL_DECLARED_OVERLAY_NOT_ORIGINAL_OR_NATIVE_PHASE",
+  "JEV": "LOCAL_SECURITY_BLOCKED_NO_RETRY",
+  "GPU_used": false,
+  "sharedboards_staged": false,
+  "next": "SOURCE ingress/first-leg ALU and detector connection plus scene/backend reference-lambda-phase budgets; existing Claude artifacts or explicit absent M03/M04/M05/M08/M13"
+}

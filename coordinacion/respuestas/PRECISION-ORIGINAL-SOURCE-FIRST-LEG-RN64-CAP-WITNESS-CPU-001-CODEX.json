@@ -1,0 +1,419 @@
+{
+  "id": "PRECISION-ORIGINAL-SOURCE-FIRST-LEG-RN64-CAP-WITNESS-CPU-001",
+  "owner": "Codex",
+  "priority": "P1",
+  "model": "original-SOURCE-first-leg-RN64-cap-witness-CPU-v1",
+  "status": "PASS_ALGEBRAIC_ISOLATED_TERM_COUNTEREXAMPLE_NATIVE_STOP",
+  "code_doc_sha256": {
+    "Blender/benchmarks/capacity_audit/original_SOURCE_first_leg_RN64_cap_witness_CPU_v1.py": "e1157f05993af5d575d26ae7d3b96eade2beeccaed4db94087eba74b2d7e6be5",
+    "Blender/tests/test_original_SOURCE_first_leg_RN64_cap_witness_CPU_v1.py": "d43235d25a3326d487a68cdcea1fef83b2a5db70b2fe6f6f0a92c0ec4ecd9cc0",
+    "Docs/EXP-005-ORIGINAL-SOURCE-FIRST-LEG-RN64-CAP-WITNESS-CPU-001.md": "3b76b17ae0ed203a891cb63017d838c87a93c18c75fd77bd58c61d270fdcf7d1"
+  },
+  "files": {
+    "Blender/benchmarks/capacity_audit/original_SOURCE_first_leg_RN64_cap_witness_CPU_v1.py": {
+      "bytes": 11120
+    },
+    "Blender/tests/test_original_SOURCE_first_leg_RN64_cap_witness_CPU_v1.py": {
+      "bytes": 5820
+    },
+    "Docs/EXP-005-ORIGINAL-SOURCE-FIRST-LEG-RN64-CAP-WITNESS-CPU-001.md": {
+      "bytes": 4454
+    }
+  },
+  "parent_receipts_sha256": {
+    "PRECISION-ORIGINAL-SOURCE-FIRST-LEG-RN64-GRAPH-HOST-001-CODEX.json": "e25bb94201574e0778023a36d5c7db7bb842727fdffda82890aa314ff8ad2262",
+    "PRECISION-OBLIQUE-COMMON-DETECTOR-LENGTH-CPU-001-CODEX.json": "139cb34a315f476fa026bb346086a3a59d7c22241932ca3f4c291a501f4ca47e"
+  },
+  "frozen_manifest": {
+    "path": "coordinacion/respuestas/GPU-GUARD-OWNED-TREE-CONTAINMENT-CPU-001-CODEX.json",
+    "sha256": "172576dd8a38cf8119f2a1a3d229b534a7e77fdbde2632e2ef967b10e2d6e9f4",
+    "pins_verified": 461
+  },
+  "preserved_pre_semantic_correction_QA": {
+    "rc": 0,
+    "timed_out": false,
+    "before_deadline": true,
+    "started_utc": "2026-10-07T09:42:00.863587+00:00",
+    "ended_utc": "2026-10-07T09:42:01.541819+00:00",
+    "deadline_utc": "2026-10-07T09:42:35.863587+00:00",
+    "elapsed_QA_seconds": 0.678232,
+    "timeout_seconds": 30,
+    "affinity_mask": 1,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "RAM_available_before_bytes": 5493788672,
+    "RAM_budget_bytes": 134217728,
+    "RAM_reserve_after_budget_bytes": 5359570944,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      "Blender/tests/test_original_SOURCE_first_leg_RN64_cap_witness_CPU_v1.py"
+    ],
+    "stdout_bytes": 33724,
+    "stdout_sha256": "5b6ffca573e5d64c272878ef11276b43e497af8a7507ffd6fbdc7be6377064b0",
+    "stdout_zlib_base64": "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",
+    "stderr_utf8": "",
+    "GPU_used": false,
+    "summary": {
+      "status": "PASS",
+      "tests": 4,
+      "records": 61,
+      "kinds": {
+        "EXACT_ZERO_CONTROL": 1,
+        "FIXED_WITNESS_OR_STOP": 28,
+        "NEGATIVE": 30,
+        "TIE_CONTROL": 2
+      }
+    }
+  },
+  "test_runner_code": "import base64,ctypes,datetime,hashlib,json,os,psutil,subprocess,zlib\nfrom pathlib import Path\nk=ctypes.windll.kernel32\nk.GetCurrentProcess.restype=ctypes.c_void_p\nk.SetProcessAffinityMask.argtypes=[ctypes.c_void_p,ctypes.c_size_t]\nassert k.SetProcessAffinityMask(k.GetCurrentProcess(),1)\nbudget=128*1024**2\nram=psutil.virtual_memory().available\nassert ram-budget>=4*1024**3\nstart=datetime.datetime.now(datetime.timezone.utc)\ndeadline=start+datetime.timedelta(seconds=35)\ncmd=['C:/Python313/python.exe','-B','Blender/tests/test_original_SOURCE_first_leg_RN64_cap_witness_CPU_v1.py']\nenv=dict(os.environ)\nfor v in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS'):env[v]='1'\np=subprocess.run(cmd,capture_output=True,timeout=30,env=env)\nend=datetime.datetime.now(datetime.timezone.utc)\nout=dict(rc=p.returncode,timed_out=False,before_deadline=end<deadline,started_utc=start.isoformat(),ended_utc=end.isoformat(),deadline_utc=deadline.isoformat(),elapsed_QA_seconds=(end-start).total_seconds(),timeout_seconds=30,affinity_mask=1,thread_environment={v:env[v]for v in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS')},RAM_available_before_bytes=ram,RAM_budget_bytes=budget,RAM_reserve_after_budget_bytes=ram-budget,command=cmd,stdout_bytes=len(p.stdout),stdout_sha256=hashlib.sha256(p.stdout).hexdigest(),stdout_zlib_base64=base64.b64encode(zlib.compress(p.stdout,9)).decode(),stderr_utf8=p.stderr.decode('utf-8','replace'),GPU_used=False)\nif p.returncode==0:\n d=json.loads(p.stdout);out['summary']=dict(status=d['status'],tests=d['tests'],records=len(d['records']),kinds={key:sum(r['kind']==key for r in d['records'])for key in sorted(set(r['kind']for r in d['records']))})\nprint(json.dumps(out,ensure_ascii=True))\n",
+  "preserved_initial_QA": {
+    "rc": 0,
+    "timed_out": false,
+    "before_deadline": true,
+    "started_utc": "2026-10-07T09:40:24.906004+00:00",
+    "ended_utc": "2026-10-07T09:40:25.530172+00:00",
+    "deadline_utc": "2026-10-07T09:40:59.906004+00:00",
+    "elapsed_QA_seconds": 0.624168,
+    "timeout_seconds": 30,
+    "affinity_mask": 1,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "RAM_available_before_bytes": 5725224960,
+    "RAM_budget_bytes": 134217728,
+    "RAM_reserve_after_budget_bytes": 5591007232,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      "Blender/tests/test_original_SOURCE_first_leg_RN64_cap_witness_CPU_v1.py"
+    ],
+    "stdout_bytes": 29224,
+    "stdout_sha256": "565e23e678a3d3ad4911a90d215292d9eb75114546870ee72c59d5c83b656456",
+    "stdout_zlib_base64": "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",
+    "stderr_utf8": "",
+    "GPU_used": false,
+    "summary": {
+      "status": "PASS",
+      "tests": 4,
+      "records": 61,
+      "kinds": {
+        "EXACT_ZERO_CONTROL": 1,
+        "FIXED_WITNESS_OR_STOP": 28,
+        "NEGATIVE": 30,
+        "TIE_CONTROL": 2
+      }
+    },
+    "superseded_reason": "Explicitly preserve unknown/no-phase/no-native flags on the 20 STOP rows; correct doc claim to incorrect capture pin. No arithmetic/cap change.",
+    "arithmetic_or_caps_changed": false
+  },
+  "independent_verification": {
+  "rc": 0,
+  "timed_out": false,
+  "before_deadline": true,
+  "started_utc": "2026-10-07T09:48:08.108874+00:00",
+  "ended_utc": "2026-10-07T09:48:08.393300+00:00",
+  "deadline_utc": "2026-10-07T09:48:43.108874+00:00",
+  "elapsed_QA_seconds": 0.284426,
+  "timeout_seconds": 30,
+  "affinity_mask": 1,
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "RAM_available_before_bytes": 7568809984,
+  "RAM_budget_bytes": 134217728,
+  "RAM_reserve_after_budget_bytes": 7434592256,
+  "command": [
+    "C:/Python313/python.exe",
+    "-B",
+    ".cognition/neuro3d-mega-geometry-20261005/first_leg_RN64_cap_witness_oracle.py"
+  ],
+  "stdout_bytes": 1267,
+  "stdout_sha256": "d6e4990650f80c9edeb8b337876f3e6a36501ff82d9e896674c7d00b20a39635",
+  "stdout_zlib_base64": "eNqdVE1rGzEQvRf6H8KeC9XX6qO3HkoPBdvECYWWIpTdsS2Qta6kddqG/PeO1jgU101Mb2I+3puZ99BD83Fxa8cMffPuauVChjdXTTeMsWQMPDTwowPop6zEzMpPcYbP4uH4HHe5JHBbu7yZL2qMPNbaNPyCaHc+ZruH5Fd+ghGS1uQYgu2GPME1t7NPs/nnmZ3Nb+yXD9fzBit8HoIr0NsCaWvDcA/J3uFgvR0QzQaPcRfsve/LxubOBbA9dH6LMR8LrLEGp/JxfVik9wm64od4qO3fLgnGvzaMcWGoklRRwWklFsTI5hs+/m6hhxatGCOKYAdVtYMRoaeO4S747yNcgP1U+RJk3riER0iwooSQC5BPG54lqDpFV/we7A6X9blu20EqR7WOlohwb9MwFAt7F0ZXr1LvSuoqya99fJKiG2JJrit25XwYUwVGwf7EyhDwrjjj9cwGiOuyyf8lnVBKKq1VK7gRnJnpDC3hrTGSKa6IeEFIyaUhLZWKtaxVilcAqgme1OiWGKGp0eKcsBczn8h8OeF52S/mPW+Cy+mLjz/t2u0s28pn2VtqGDNSt7rlQjMlGT7qGJhHwx1NeYL373HQo9JQrQQXlBtOMS8ow7laTqXWhNcBq2tzcWWcPo/F++WytpahoIF2rnoQmc7b7/H1q9+5nGJi",
+  "stderr_utf8": "",
+  "GPU_used": false,
+  "summary": {
+    "GPU_used": false,
+    "counts": {
+      "exceeded": 6,
+      "fits": 2,
+      "ties": 2,
+      "upstream_STOP": 20
+    },
+    "frozen_pins_verified": 461,
+    "full_costs": "UNKNOWN_NOT_ZERO",
+    "isolated_term_lower_bound_over_literal_width_scale_decimal_integer_strings": {
+      "direction_scaled/S0": [
+        "22349176171431",
+        "4096"
+      ],
+      "direction_scaled/S1": [
+        "2872207071417",
+        "2048"
+      ],
+      "oblique/S0": [
+        "22349176171431",
+        "4096"
+      ],
+      "oblique/S1": [
+        "2872207071417",
+        "2048"
+      ],
+      "shared_ref1000/S0": [
+        "22349176171431",
+        "4096"
+      ],
+      "shared_ref1000/S1": [
+        "2872207071417",
+        "2048"
+      ]
+    },
+    "native_precision_certified": false,
+    "new_root_evaluations": 0,
+    "original_width_contract_failure_proved": false,
+    "selected_RN_lengths_decimal_integer_strings": {
+      "direction_scaled/S0": [
+        "4776788754394329",
+        "4503599627370496"
+      ],
+      "direction_scaled/S1": [
+        "6369051672525773",
+        "18014398509481984"
+      ],
+      "oblique/S0": [
+        "4776788754394329",
+        "4503599627370496"
+      ],
+      "oblique/S1": [
+        "6369051672525773",
+        "18014398509481984"
+      ],
+      "shared_ref1000/S0": [
+        "4776788754394329",
+        "4503599627370496"
+      ],
+      "shared_ref1000/S1": [
+        "6369051672525773",
+        "18014398509481984"
+      ],
+      "tiny_gap_2m60/S0": [
+        "4776788754394329",
+        "5192296858534827628530496329220096"
+      ],
+      "tiny_gap_2m60/S1": [
+        "6369051672525773",
+        "20769187434139310514121985316880384"
+      ]
+    },
+    "status": "PASS",
+    "total_path_cap_failure_proved": false
+  },
+  "oracle_code": "\"\"\"Independent algebraic cap witness checks. No project imports or roots.\"\"\"\nimport ast,base64,hashlib,json,math,zlib\nfrom fractions import Fraction as F\nfrom pathlib import Path\nID=\"PRECISION-ORIGINAL-SOURCE-FIRST-LEG-RN64-CAP-WITNESS-CPU-001\"\nr=json.loads((Path(\"coordinacion/respuestas\")/(ID+\"-CODEX.json\")).read_bytes())\ndef sha(b):return hashlib.sha256(b).hexdigest()\ndef digest(v):return sha(json.dumps(v,sort_keys=True,separators=(\",\",\":\"),allow_nan=False).encode())\ndef cap(c):\n assert c[\"rc\"]==0 and c.get(\"timed_out\",False)is False\n b=zlib.decompress(base64.b64decode(c[\"stdout_zlib_base64\"],validate=True))\n assert len(b)==c[\"stdout_bytes\"] and sha(b)==c[\"stdout_sha256\"]\n d=json.loads(b);assert d[\"status\"]==\"PASS\";return d\nfor p,h in r[\"code_doc_sha256\"].items():assert sha(Path(p).read_bytes())==h\ncore=next(p for p in r[\"code_doc_sha256\"]if \"/capacity_audit/\"in p)\ntree=ast.parse(Path(core).read_text(encoding=\"utf-8\"))\nfor node in ast.walk(tree):\n if isinstance(node,ast.Call):\n  name=node.func.id if isinstance(node.func,ast.Name)else node.func.attr if isinstance(node.func,ast.Attribute)else \"\"\n  assert name not in (\"sqrt\",\"isqrt\",\"run_kernel\",\"enclose_triangle\")\ndata=cap(r[\"test_run\"]);assert r[\"test_run\"][\"before_deadline\"]is True and data[\"tests\"]==4 and len(data[\"records\"])==61\nparents={}\nfor name,h in r[\"parent_receipts_sha256\"].items():\n b=(Path(\"coordinacion/respuestas\")/name).read_bytes();assert sha(b)==h\n parents[name]=cap(json.loads(b)[\"test_run\"])\ngraphs=parents[next(n for n in parents if \"GRAPH-HOST\" in n)]\ngrows={digest(z[\"result\"]):z[\"result\"]for z in graphs[\"records\"]if z[\"kind\"]==\"FIXED_GRAPH_OR_STOP\"};assert len(grows)==28\ninputs=parents[next(n for n in parents if \"COMMON-DETECTOR\" in n)][\"data\"][\"inputs\"]\ncounts=dict(exceeded=0,fits=0,upstream_STOP=0,ties=0)\nratios={}\nselected={}\nfor z in data[\"records\"]:\n if z[\"kind\"]==\"TIE_CONTROL\":\n  c=z[\"result\"];q=F(*c[\"squared_input_BU2\"]);lo,hi=map(lambda v:F(*v),c[\"adjacent_candidates_BU\"])\n  assert q==((lo+hi)/2)**2 and c[\"tie_to_even_applied\"]is True\n  e=lo.numerator.bit_length()-lo.denominator.bit_length()\n  if lo<F(2)**e:e-=1\n  index=lo/(F(2)**(e-52))\n  assert index.denominator==1\n  assert F(*c[\"selected_RN64_length_BU\"])==(lo if index.numerator%2==0 else hi)\n  counts[\"ties\"]+=1;continue\n if z[\"kind\"]!=\"FIXED_WITNESS_OR_STOP\":continue\n o=z[\"result\"];g=grows[o[\"captured_graph_row_sha256\"]]\n assert o[\"case\"]==g[\"case\"]and o[\"source_id\"]==g[\"source_id\"]\n assert o[\"promotion\"]==\"STOP\"and o[\"native_precision_certified\"]is False and o[\"GPU_used\"]is False\n assert o[\"SOURCE_merged\"]is False and o[\"new_root_evaluations\"]==0\n if o[\"status\"]==\"STOP_UPSTREAM_NO_CAP_WITNESS\":\n  assert g[\"status\"]==\"STOP_UPSTREAM_NO_FIRST_LEG_GRAPH\";counts[\"upstream_STOP\"]+=1;continue\n query=inputs[o[\"case\"]][\"request\"];scene=inputs[o[\"case\"]][\"scene\"]\n assert digest(query)==o[\"query_sha256\"]==g[\"query_sha256\"]and digest(scene)==o[\"scene_sha256\"]\n c=o[\"selection\"];q=F(*c[\"squared_input_BU2\"]);lo,hi=map(lambda v:F(*v),c[\"adjacent_candidates_BU\"])\n # Different lattice verification from producer integer successor.\n v=float(lo);assert F.from_float(v)==lo and F.from_float(math.nextafter(v,math.inf))==hi\n assert lo*lo<=q<=hi*hi\n midpoint=((lo+hi)/2)**2;assert midpoint==F(*c[\"squared_midpoint_BU2\"])\n assert q!=midpoint and c[\"tie_to_even_applied\"]is False\n rn=lo if q<midpoint else hi\n assert rn==F(*c[\"selected_RN64_length_BU\"])\n geom_lo,geom_hi=map(lambda v:F(*v),g[\"captured_geometric_first_length_BU\"])\n assert geom_lo*geom_lo<=q<=geom_hi*geom_hi\n delta=[F(*b[0])-F(*a[0])for a,b in zip(g[\"source_box_BU\"],g[\"previous_P_box_BU\"])]\n assert q==sum((v*v for v in delta),F(0))==F(*g[\"radicand_interval_BU2\"][0])\n signed=(rn-geom_hi,rn-geom_lo)\n assert signed==tuple(F(*v)for v in o[\"signed_first_leg_discrepancy_BU\"])\n low=F(0)if signed[0]<=0<=signed[1]else min(abs(v)for v in signed)\n high=max(abs(v)for v in signed)\n assert (low,high)==tuple(F(*v)for v in o[\"absolute_first_leg_discrepancy_BU\"])\n wave=F(*query[\"lambda_BU\"]);budget=F(*query[\"source_width_caps_rad\"][query[\"source_ids\"].index(o[\"source_id\"])])\n phase=(6*low/wave,8*high/wave)\n assert phase==tuple(F(*v)for v in o[\"isolated_phase_term_error_rad\"])\n assert budget==F(*o[\"original_SOURCE_cap_rad\"])==F(1,2**80)\n assert o[\"total_path_cap_failure_proved\"]is False and o[\"phase_certified\"]is False\n assert o[\"native_SOURCE_ingress_error_bound_BU\"]is None and o[\"first_leg_native_accuracy_budget_BU\"]is None\n assert o[\"cancellation_with_other_terms_excluded\"]is False\n assert o[\"original_cap_observable\"]==\"GEOMETRIC_INTERVAL_WIDTH_RAD_NOT_NATIVE_ACCURACY\"\n assert o[\"original_width_contract_failure_proved\"]is False\n assert o[\"modeled_RN_point_length_interval_BU\"]==[c[\"selected_RN64_length_BU\"]]*2\n assert o[\"modeled_RN_point_length_width_BU\"]==[0,1]and o[\"formal_deterministic_term_uncertainty_width_rad\"]==[0,1]\n assert o[\"modeled_pointwise_discrepancy_nonzero_proved\"]is True and rn*rn!=q\n if phase[0]>budget:\n  counts[\"exceeded\"]+=1;assert o[\"status\"]==\"TERM_ERROR_ABOVE_LITERAL_WIDTH_SCALE\"\n  ratios[o[\"case\"]+\"/\"+o[\"source_id\"]]=[str((phase[0]/budget).numerator),str((phase[0]/budget).denominator)]\n else:\n  counts[\"fits\"]+=1;assert phase[1]<=budget and o[\"status\"]==\"TERM_ERROR_BOUND_WITHIN_LITERAL_WIDTH_SCALE\"\n selected[o[\"case\"]+\"/\"+o[\"source_id\"]]=[str(rn.numerator),str(rn.denominator)]\nassert counts==dict(exceeded=6,fits=2,upstream_STOP=20,ties=2)\nm=r[\"frozen_manifest\"];raw=Path(m[\"path\"]).read_bytes();assert sha(raw)==m[\"sha256\"]\nc=json.loads(raw)[\"pinned_manifest_capture\"];raw=zlib.decompress(base64.b64decode(c[\"stdout_zlib_base64\"]));assert sha(raw)==c[\"stdout_sha256\"]\npins=json.loads(raw)[\"pins\"];assert len(pins)==461 and all(sha(Path(p).read_bytes())==h for p,h in pins.items())\nprint(json.dumps(dict(status=\"PASS\",counts=counts,frozen_pins_verified=461,selected_RN_lengths_decimal_integer_strings=selected,\n isolated_term_lower_bound_over_literal_width_scale_decimal_integer_strings=ratios,new_root_evaluations=0,\n total_path_cap_failure_proved=False,original_width_contract_failure_proved=False,native_precision_certified=False,GPU_used=False,full_costs=\"UNKNOWN_NOT_ZERO\"),sort_keys=True))\n",
+  "oracle_runner_code": "import base64,ctypes,datetime,hashlib,json,os,psutil,subprocess,zlib\nfrom pathlib import Path\nk=ctypes.windll.kernel32\nk.GetCurrentProcess.restype=ctypes.c_void_p\nk.SetProcessAffinityMask.argtypes=[ctypes.c_void_p,ctypes.c_size_t]\nassert k.SetProcessAffinityMask(k.GetCurrentProcess(),1)\nbudget=128*1024**2\nram=psutil.virtual_memory().available\nassert ram-budget>=4*1024**3\nstart=datetime.datetime.now(datetime.timezone.utc)\ndeadline=start+datetime.timedelta(seconds=35)\ncmd=['C:/Python313/python.exe','-B','.cognition/neuro3d-mega-geometry-20261005/first_leg_RN64_cap_witness_oracle.py']\nenv=dict(os.environ)\nfor v in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS'):env[v]='1'\np=subprocess.run(cmd,capture_output=True,timeout=30,env=env)\nend=datetime.datetime.now(datetime.timezone.utc)\nout=dict(rc=p.returncode,timed_out=False,before_deadline=end<deadline,started_utc=start.isoformat(),ended_utc=end.isoformat(),deadline_utc=deadline.isoformat(),elapsed_QA_seconds=(end-start).total_seconds(),timeout_seconds=30,affinity_mask=1,thread_environment={v:env[v]for v in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS')},RAM_available_before_bytes=ram,RAM_budget_bytes=budget,RAM_reserve_after_budget_bytes=ram-budget,command=cmd,stdout_bytes=len(p.stdout),stdout_sha256=hashlib.sha256(p.stdout).hexdigest(),stdout_zlib_base64=base64.b64encode(zlib.compress(p.stdout,9)).decode(),stderr_utf8=p.stderr.decode('utf-8','replace'),GPU_used=False)\nif p.returncode==0:\n out['summary']=json.loads(p.stdout)\nprint(json.dumps(out,ensure_ascii=True))\n",
+  "preserved_pre_semantic_correction": {
+    "rc": 0,
+    "timed_out": false,
+    "before_deadline": true,
+    "started_utc": "2026-10-07T09:43:04.795648+00:00",
+    "ended_utc": "2026-10-07T09:43:05.372650+00:00",
+    "deadline_utc": "2026-10-07T09:43:39.795648+00:00",
+    "elapsed_QA_seconds": 0.577002,
+    "timeout_seconds": 30,
+    "affinity_mask": 1,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "RAM_available_before_bytes": 6806405120,
+    "RAM_budget_bytes": 134217728,
+    "RAM_reserve_after_budget_bytes": 6672187392,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      ".cognition/neuro3d-mega-geometry-20261005/first_leg_RN64_cap_witness_oracle.py"
+    ],
+    "stdout_bytes": 1211,
+    "stdout_sha256": "f8afa0ff2ee5ff1a0251f74f2d08ff39ed60280c1723745a3d38805a9aee8f8c",
+    "stdout_zlib_base64": "eNqdVE1rGzEQvRf6H8KeC9XX6qO3HkoPBdvECYWWIJTdsS2QV66kTdqG/PeONjgH102W3oYZzXszek96aD6vru2YoW8+XGxcyPDuouniOJSMiYcGfnYA/VSVWNn4Kc8wLB6O4XjIJYHb2/XVclVz5LGeTfE3DPbgh2zvIPmNn2CEpLU4hmC7mCe45nrxZbH8urCL5ZX99uly2eAJn2NwBXpbIO1tiPeQ7C0O1tuIaDYmv/WDQxB3sD10fo+xHwpssYjj+GH7tEHvE3TFx8HmzgXo368J5r83jHFhqJJUUcFpZRTEyOYGg79b6FOLVowRRbCDqtrBiNBTR7wN/scIM7CfT74GmXcu4fYJNpQQMgP5tOFFgirQ4Iq/A3vAZX2u23aQylGmoxcGuLcpxmLhzoXR1Vup90oqIQS8JqS8XNgAw7bs8n8pIZSSSmvVCm4EZ2baqiW8NUYyxRURr+giuTSkpVKxlrVK8QpANcEbMrolRmhqtDin02zmE9XmE55XcTbveU3n0xc//LJbfCFsL19kb6lhzEjd6pYLzZRkGNQxsI7+OXrsBO/f46DlpKFaCS4oN5xiXVCGc7WcSq0JrwNWE+biyjh9AquP63VtLbGggQ6u7Ka3vXE+jKnaFN/9szMf3775A7a/TLs=",
+    "stderr_utf8": "",
+    "GPU_used": false,
+    "summary": {
+      "GPU_used": false,
+      "counts": {
+        "exceeded": 6,
+        "fits": 2,
+        "ties": 2,
+        "upstream_STOP": 20
+      },
+      "frozen_pins_verified": 461,
+      "full_costs": "UNKNOWN_NOT_ZERO",
+      "isolated_term_lower_bound_over_original_cap_decimal_integer_strings": {
+        "direction_scaled/S0": [
+          "22349176171431",
+          "4096"
+        ],
+        "direction_scaled/S1": [
+          "2872207071417",
+          "2048"
+        ],
+        "oblique/S0": [
+          "22349176171431",
+          "4096"
+        ],
+        "oblique/S1": [
+          "2872207071417",
+          "2048"
+        ],
+        "shared_ref1000/S0": [
+          "22349176171431",
+          "4096"
+        ],
+        "shared_ref1000/S1": [
+          "2872207071417",
+          "2048"
+        ]
+      },
+      "native_precision_certified": false,
+      "new_root_evaluations": 0,
+      "selected_RN_lengths_decimal_integer_strings": {
+        "direction_scaled/S0": [
+          "4776788754394329",
+          "4503599627370496"
+        ],
+        "direction_scaled/S1": [
+          "6369051672525773",
+          "18014398509481984"
+        ],
+        "oblique/S0": [
+          "4776788754394329",
+          "4503599627370496"
+        ],
+        "oblique/S1": [
+          "6369051672525773",
+          "18014398509481984"
+        ],
+        "shared_ref1000/S0": [
+          "4776788754394329",
+          "4503599627370496"
+        ],
+        "shared_ref1000/S1": [
+          "6369051672525773",
+          "18014398509481984"
+        ],
+        "tiny_gap_2m60/S0": [
+          "4776788754394329",
+          "5192296858534827628530496329220096"
+        ],
+        "tiny_gap_2m60/S1": [
+          "6369051672525773",
+          "20769187434139310514121985316880384"
+        ]
+      },
+      "status": "PASS",
+      "total_path_cap_failure_proved": false
+    },
+    "oracle_code": "\"\"\"Independent algebraic cap witness checks. No project imports or roots.\"\"\"\nimport ast,base64,hashlib,json,math,zlib\nfrom fractions import Fraction as F\nfrom pathlib import Path\nID=\"PRECISION-ORIGINAL-SOURCE-FIRST-LEG-RN64-CAP-WITNESS-CPU-001\"\nr=json.loads((Path(\"coordinacion/respuestas\")/(ID+\"-CODEX.json\")).read_bytes())\ndef sha(b):return hashlib.sha256(b).hexdigest()\ndef digest(v):return sha(json.dumps(v,sort_keys=True,separators=(\",\",\":\"),allow_nan=False).encode())\ndef cap(c):\n assert c[\"rc\"]==0 and c.get(\"timed_out\",False)is False\n b=zlib.decompress(base64.b64decode(c[\"stdout_zlib_base64\"],validate=True))\n assert len(b)==c[\"stdout_bytes\"] and sha(b)==c[\"stdout_sha256\"]\n d=json.loads(b);assert d[\"status\"]==\"PASS\";return d\nfor p,h in r[\"code_doc_sha256\"].items():assert sha(Path(p).read_bytes())==h\ncore=next(p for p in r[\"code_doc_sha256\"]if \"/capacity_audit/\"in p)\ntree=ast.parse(Path(core).read_text(encoding=\"utf-8\"))\nfor node in ast.walk(tree):\n if isinstance(node,ast.Call):\n  name=node.func.id if isinstance(node.func,ast.Name)else node.func.attr if isinstance(node.func,ast.Attribute)else \"\"\n  assert name not in (\"sqrt\",\"isqrt\",\"run_kernel\",\"enclose_triangle\")\ndata=cap(r[\"test_run\"]);assert r[\"test_run\"][\"before_deadline\"]is True and data[\"tests\"]==4 and len(data[\"records\"])==61\nparents={}\nfor name,h in r[\"parent_receipts_sha256\"].items():\n b=(Path(\"coordinacion/respuestas\")/name).read_bytes();assert sha(b)==h\n parents[name]=cap(json.loads(b)[\"test_run\"])\ngraphs=parents[next(n for n in parents if \"GRAPH-HOST\" in n)]\ngrows={digest(z[\"result\"]):z[\"result\"]for z in graphs[\"records\"]if z[\"kind\"]==\"FIXED_GRAPH_OR_STOP\"};assert len(grows)==28\ninputs=parents[next(n for n in parents if \"COMMON-DETECTOR\" in n)][\"data\"][\"inputs\"]\ncounts=dict(exceeded=0,fits=0,upstream_STOP=0,ties=0)\nratios={}\nselected={}\nfor z in data[\"records\"]:\n if z[\"kind\"]==\"TIE_CONTROL\":\n  c=z[\"result\"];q=F(*c[\"squared_input_BU2\"]);lo,hi=map(lambda v:F(*v),c[\"adjacent_candidates_BU\"])\n  assert q==((lo+hi)/2)**2 and c[\"tie_to_even_applied\"]is True\n  e=lo.numerator.bit_length()-lo.denominator.bit_length()\n  if lo<F(2)**e:e-=1\n  index=lo/(F(2)**(e-52))\n  assert index.denominator==1\n  assert F(*c[\"selected_RN64_length_BU\"])==(lo if index.numerator%2==0 else hi)\n  counts[\"ties\"]+=1;continue\n if z[\"kind\"]!=\"FIXED_WITNESS_OR_STOP\":continue\n o=z[\"result\"];g=grows[o[\"captured_graph_row_sha256\"]]\n assert o[\"case\"]==g[\"case\"]and o[\"source_id\"]==g[\"source_id\"]\n assert o[\"promotion\"]==\"STOP\"and o[\"native_precision_certified\"]is False and o[\"GPU_used\"]is False\n assert o[\"SOURCE_merged\"]is False and o[\"new_root_evaluations\"]==0\n if o[\"status\"]==\"STOP_UPSTREAM_NO_CAP_WITNESS\":\n  assert g[\"status\"]==\"STOP_UPSTREAM_NO_FIRST_LEG_GRAPH\";counts[\"upstream_STOP\"]+=1;continue\n query=inputs[o[\"case\"]][\"request\"];scene=inputs[o[\"case\"]][\"scene\"]\n assert digest(query)==o[\"query_sha256\"]==g[\"query_sha256\"]and digest(scene)==o[\"scene_sha256\"]\n c=o[\"selection\"];q=F(*c[\"squared_input_BU2\"]);lo,hi=map(lambda v:F(*v),c[\"adjacent_candidates_BU\"])\n # Different lattice verification from producer integer successor.\n v=float(lo);assert F.from_float(v)==lo and F.from_float(math.nextafter(v,math.inf))==hi\n assert lo*lo<=q<=hi*hi\n midpoint=((lo+hi)/2)**2;assert midpoint==F(*c[\"squared_midpoint_BU2\"])\n assert q!=midpoint and c[\"tie_to_even_applied\"]is False\n rn=lo if q<midpoint else hi\n assert rn==F(*c[\"selected_RN64_length_BU\"])\n geom_lo,geom_hi=map(lambda v:F(*v),g[\"captured_geometric_first_length_BU\"])\n assert geom_lo*geom_lo<=q<=geom_hi*geom_hi\n delta=[F(*b[0])-F(*a[0])for a,b in zip(g[\"source_box_BU\"],g[\"previous_P_box_BU\"])]\n assert q==sum((v*v for v in delta),F(0))==F(*g[\"radicand_interval_BU2\"][0])\n signed=(rn-geom_hi,rn-geom_lo)\n assert signed==tuple(F(*v)for v in o[\"signed_first_leg_discrepancy_BU\"])\n low=F(0)if signed[0]<=0<=signed[1]else min(abs(v)for v in signed)\n high=max(abs(v)for v in signed)\n assert (low,high)==tuple(F(*v)for v in o[\"absolute_first_leg_discrepancy_BU\"])\n wave=F(*query[\"lambda_BU\"]);budget=F(*query[\"source_width_caps_rad\"][query[\"source_ids\"].index(o[\"source_id\"])])\n phase=(6*low/wave,8*high/wave)\n assert phase==tuple(F(*v)for v in o[\"isolated_phase_term_error_rad\"])\n assert budget==F(*o[\"original_SOURCE_cap_rad\"])==F(1,2**80)\n assert o[\"total_path_cap_failure_proved\"]is False and o[\"phase_certified\"]is False\n assert o[\"native_SOURCE_ingress_error_bound_BU\"]is None and o[\"first_leg_native_accuracy_budget_BU\"]is None\n assert o[\"cancellation_with_other_terms_excluded\"]is False\n if phase[0]>budget:\n  counts[\"exceeded\"]+=1;assert o[\"status\"]==\"ISOLATED_TERM_CAP_EXCEEDED\"\n  ratios[o[\"case\"]+\"/\"+o[\"source_id\"]]=[str((phase[0]/budget).numerator),str((phase[0]/budget).denominator)]\n else:\n  counts[\"fits\"]+=1;assert phase[1]<=budget and o[\"status\"]==\"ISOLATED_TERM_BOUND_FITS_CAP\"\n selected[o[\"case\"]+\"/\"+o[\"source_id\"]]=[str(rn.numerator),str(rn.denominator)]\nassert counts==dict(exceeded=6,fits=2,upstream_STOP=20,ties=2)\nm=r[\"frozen_manifest\"];raw=Path(m[\"path\"]).read_bytes();assert sha(raw)==m[\"sha256\"]\nc=json.loads(raw)[\"pinned_manifest_capture\"];raw=zlib.decompress(base64.b64decode(c[\"stdout_zlib_base64\"]));assert sha(raw)==c[\"stdout_sha256\"]\npins=json.loads(raw)[\"pins\"];assert len(pins)==461 and all(sha(Path(p).read_bytes())==h for p,h in pins.items())\nprint(json.dumps(dict(status=\"PASS\",counts=counts,frozen_pins_verified=461,selected_RN_lengths_decimal_integer_strings=selected,\n isolated_term_lower_bound_over_original_cap_decimal_integer_strings=ratios,new_root_evaluations=0,\n total_path_cap_failure_proved=False,native_precision_certified=False,GPU_used=False,full_costs=\"UNKNOWN_NOT_ZERO\"),sort_keys=True))\n",
+    "correction": "Prior labels suggested cap failure; literal cap is geometric interval width, not pointwise native accuracy. Numerical witness/bounds unchanged; final semantic claims explicitly deny width-contract or total-path failure.",
+    "numerical_bounds_or_original_caps_changed": false
+  }
+},
+  "test_run": {
+  "rc": 0,
+  "timed_out": false,
+  "before_deadline": true,
+  "started_utc": "2026-10-07T09:47:13.304838+00:00",
+  "ended_utc": "2026-10-07T09:47:13.561047+00:00",
+  "deadline_utc": "2026-10-07T09:47:48.304838+00:00",
+  "elapsed_QA_seconds": 0.256209,
+  "timeout_seconds": 30,
+  "affinity_mask": 1,
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "RAM_available_before_bytes": 9002065920,
+  "RAM_budget_bytes": 134217728,
+  "RAM_reserve_after_budget_bytes": 8867848192,
+  "command": [
+    "C:/Python313/python.exe",
+    "-B",
+    "Blender/tests/test_original_SOURCE_first_leg_RN64_cap_witness_CPU_v1.py"
+  ],
+  "stdout_bytes": 37990,
+  "stdout_sha256": "a6481ef701a1a2c11262ee3de18213af7853150d1b99c91a8f01ab7de01d563d",
+  "stdout_zlib_base64": "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",
+  "stderr_utf8": "",
+  "GPU_used": false,
+  "summary": {
+    "status": "PASS",
+    "tests": 4,
+    "records": 61,
+    "kinds": {
+      "EXACT_ZERO_CONTROL": 1,
+      "FIXED_WITNESS_OR_STOP": 28,
+      "NEGATIVE": 30,
+      "TIE_CONTROL": 2
+    }
+  }
+},
+  "semantic_review_correction": {
+  "reason": "The original literal is a geometric interval width/radius cap, NOT a native pointwise accuracy budget. Replace cap-failure labels with numerical width-scale diagnostics, explicitly prove zero modeled RN width does not imply zero pointwise discrepancy. Original bounds/caps unchanged.",
+  "thresholds_or_numerical_bounds_changed": false
+},
+  "summary": {
+    "tests": 4,
+    "records": 61,
+    "negative_controls": 30,
+    "modeled_term_error_above_literal_width_scale": 6,
+    "modeled_term_error_bound_within_literal_width_scale": 2,
+    "original_width_contract_failure_proved": false,
+    "modeled_RN_singleton_width_zero": 8,
+    "modeled_pointwise_discrepancy_nonzero_proved": 8,
+    "upstream_STOP_preserved": 20,
+    "new_root_evaluations": 0,
+    "old_root_replays": 0,
+    "claims": "Isolated first-leg pointwise discrepancy; original geometric width cap is only a diagnostic scale, NOT an equivalent native accuracy budget. Zero deterministic RN point width does not imply zero error. No original width-cap failure, total-path failure, or native certification; cancellation with other terms remains possible.",
+    "SOURCE_or_material_phase_assumed_zero": false,
+    "native_SOURCE_ingress_error_bound_BU": null,
+    "native_first_leg_accuracy_budget_BU": null,
+    "total_path_cap_failure_proved": false,
+    "GPU_used": false,
+    "Bpy_used": false,
+    "RT_used": false,
+    "full_costs": "UNKNOWN_NOT_ZERO",
+    "JEV": "LOCAL_SECURITY_BLOCKED_NO_RETRY"
+  },
+  "review": {
+    "by": "Codex direct local review",
+    "subagents_used": 0,
+    "thresholds_changed": false,
+    "frozen_producers_executed": false
+  },
+  "peer_request": {
+    "ID": "PRECISION-ORIGINAL-SOURCE-FIRST-LEG-RN64-CAP-WITNESS-CPU-001",
+    "owner": "Claude",
+    "existing_only": [
+      "M03",
+      "M04",
+      "M05",
+      "M08",
+      "M13"
+    ],
+    "request": "ACK ID+SHA y artifacts existentes o ausencia de ABI/grafo SOURCE/primer tramo, RN/sqrt/FMA/orden, precisión/cancelación justificada, guard fail-closed deadline/job e igual trabajo/costes completos. Sin nuevas cargas de relleno."
+  }
+}

@@ -1,0 +1,407 @@
+{
+ "task_id": "P0-FUSION-BRIDGE-002-CLAUDE",
+ "status": "complete_CPU_float64_CUDA_pending",
+ "timestamp_utc": "2026-09-30T18:30:02+00:00",
+ "ack": {
+  "codex_response": "coordinacion/respuestas/P0-FUSION-BRIDGE-001-CODEX.json",
+  "sha256": "44ed782b4579673ac9dbed70906b65c5ca6c7dc01be4ecf62788e9549a6fe5cf",
+  "task_input_sha256": "ee7383bcf3f0d0e1a01ac7acb3498af8480f3de3eb26e75d8e6f5ef53aafa70e",
+  "libraries_reviewed_unchanged": {
+   "statefuse.py": "a5d40e68f56c654623d4dd58ea9d7cb86fb2f53cd61212a54f6569051d5256b0",
+   "gpu_states.py": "a39cc506dad29de8e87bc37e875504f5d0c6d5eff1ab228a48c83ac5bcf0a12f"
+  },
+  "distinction": "todo CPU float64 (torch dispositivo cpu y statefuse numpy); CUDA pendiente: nada de esto se ha ejecutado en GPU"
+ },
+ "reading_of_the_counterexample": "Codex tiene razon: mi quant auto de statefuse (P0-1) era una politica por escena solo en la CPU; el lote mixto de gpu_states seguia usando un unico quant escalar (1e-9). El contraejemplo (MB desplazado 2^-31 BU, lambda 2^-17) es la clase de H1 de P0-1 y lo reproduzco: la politica legada fixed da 1,92e-4 (FAIL del gate 1e-4; Codex 1,9174763709e-4). Mis 104 escenas de P0-3 no se refutan retroactivamente (lambda >= 0,07): quedan como cobertura de ese rango.",
+ "new_variant": {
+  "file": "D:/PROJECTS/.cognition/neuro3d/nebulatrace/gpu_states_v2.py",
+  "sha256": "506b13c9c6bb442d16d9be07b8508a79b01ded9dd4c87c261ac1af83849b426e",
+  "originals_untouched": true,
+  "policies": {
+   "fixed": "legado: un quant/dquant escalar",
+   "auto_per_scene": "quant_s = min(1e-9, 1e-6*lambda_s/(8*pi)) POR ESCENA (tensor indexado por escena en la clave cuantizada)",
+   "auto_strict_per_scene": "eps 1e-8 en lugar de 1e-6"
+  },
+  "explicit_rejection_before_fusing": "si quant_s < 32 ulp(coordenada maxima de la escena s) se lanza TraceError antes de fusionar (lambda no cubierta); un lote con una escena no cubierta se rechaza ENTERO (no se bajan escenas ni se pasa un escalar minimo silencioso)"
+ },
+ "controls_CPU_float64": [
+  {
+   "status": "ok",
+   "states": 8,
+   "edges": 10,
+   "casts": 8,
+   "err_per_scene": [
+    0.00019174767540612402
+   ],
+   "err_per_scene_per_source": [
+    [
+     0.00019174755899081303,
+     0.00019174767540612402
+    ]
+   ],
+   "policy": {
+    "policy": "fixed",
+    "quant": 1e-09
+   },
+   "policy_name": "fixed",
+   "case": "adversario lambda 2^-17",
+   "lambdas": [
+    7.62939453125e-06
+   ],
+   "strict_control_1e8": false,
+   "gate_1e4": false
+  },
+  {
+   "status": "ok",
+   "states": 8,
+   "edges": 10,
+   "casts": 8,
+   "err_per_scene": [
+    1.1703349400704613e-08
+   ],
+   "err_per_scene_per_source": [
+    [
+     1.170334229527726e-08,
+     1.1703349400704613e-08
+    ]
+   ],
+   "policy": {
+    "policy": "fixed",
+    "quant": 1e-09
+   },
+   "policy_name": "fixed",
+   "case": "control lambda 0,125",
+   "lambdas": [
+    0.125
+   ],
+   "strict_control_1e8": false,
+   "gate_1e4": true
+  },
+  {
+   "status": "ok",
+   "states": 16,
+   "edges": 20,
+   "casts": 16,
+   "err_per_scene": [
+    0.00019174767540612402,
+    1.1703349400704613e-08
+   ],
+   "err_per_scene_per_source": [
+    [
+     0.00019174755899081303,
+     0.00019174767540612402
+    ],
+    [
+     1.170334229527726e-08,
+     1.1703349400704613e-08
+    ]
+   ],
+   "policy": {
+    "policy": "fixed",
+    "quant": 1e-09
+   },
+   "policy_name": "fixed",
+   "case": "lote mixto [2^-17, 0,125]",
+   "lambdas": [
+    7.62939453125e-06,
+    0.125
+   ],
+   "strict_control_1e8": false,
+   "gate_1e4": false
+  },
+  {
+   "status": "ok",
+   "states": 16,
+   "edges": 20,
+   "casts": 16,
+   "err_per_scene": [
+    1.1703349400704613e-08,
+    0.00019174767540612402
+   ],
+   "err_per_scene_per_source": [
+    [
+     1.170334229527726e-08,
+     1.1703349400704613e-08
+    ],
+    [
+     0.00019174755899081303,
+     0.00019174767540612402
+    ]
+   ],
+   "policy": {
+    "policy": "fixed",
+    "quant": 1e-09
+   },
+   "policy_name": "fixed",
+   "case": "lote mixto [0,125, 2^-17]",
+   "lambdas": [
+    0.125,
+    7.62939453125e-06
+   ],
+   "strict_control_1e8": false,
+   "gate_1e4": false
+  },
+  {
+   "status": "ok",
+   "states": 10,
+   "edges": 10,
+   "casts": 10,
+   "err_per_scene": [
+    2.328306404677817e-10
+   ],
+   "err_per_scene_per_source": [
+    [
+     2.328306404677817e-10,
+     1.1641531972090656e-10
+    ]
+   ],
+   "policy": {
+    "policy": "auto_per_scene",
+    "eps": 1e-06,
+    "per_scene": [
+     {
+      "scene": 0,
+      "lambda": 7.62939453125e-06,
+      "quant": 3.035639631116778e-13,
+      "floor": 1.4210854715202004e-14
+     }
+    ]
+   },
+   "policy_name": "auto_per_scene",
+   "case": "adversario lambda 2^-17",
+   "lambdas": [
+    7.62939453125e-06
+   ],
+   "strict_control_1e8": true,
+   "gate_1e4": true
+  },
+  {
+   "status": "ok",
+   "states": 8,
+   "edges": 10,
+   "casts": 8,
+   "err_per_scene": [
+    1.1703349400704613e-08
+   ],
+   "err_per_scene_per_source": [
+    [
+     1.170334229527726e-08,
+     1.1703349400704613e-08
+    ]
+   ],
+   "policy": {
+    "policy": "auto_per_scene",
+    "eps": 1e-06,
+    "per_scene": [
+     {
+      "scene": 0,
+      "lambda": 0.125,
+      "quant": 1e-09,
+      "floor": 1.4210854715202004e-14
+     }
+    ]
+   },
+   "policy_name": "auto_per_scene",
+   "case": "control lambda 0,125",
+   "lambdas": [
+    0.125
+   ],
+   "strict_control_1e8": false,
+   "gate_1e4": true
+  },
+  {
+   "status": "ok",
+   "states": 18,
+   "edges": 20,
+   "casts": 18,
+   "err_per_scene": [
+    2.328306404677817e-10,
+    1.1703349400704613e-08
+   ],
+   "err_per_scene_per_source": [
+    [
+     2.328306404677817e-10,
+     1.1641531972090656e-10
+    ],
+    [
+     1.170334229527726e-08,
+     1.1703349400704613e-08
+    ]
+   ],
+   "policy": {
+    "policy": "auto_per_scene",
+    "eps": 1e-06,
+    "per_scene": [
+     {
+      "scene": 0,
+      "lambda": 7.62939453125e-06,
+      "quant": 3.035639631116778e-13,
+      "floor": 1.4210854715202004e-14
+     },
+     {
+      "scene": 1,
+      "lambda": 0.125,
+      "quant": 1e-09,
+      "floor": 1.4210854715202004e-14
+     }
+    ]
+   },
+   "policy_name": "auto_per_scene",
+   "case": "lote mixto [2^-17, 0,125]",
+   "lambdas": [
+    7.62939453125e-06,
+    0.125
+   ],
+   "strict_control_1e8": false,
+   "gate_1e4": true
+  },
+  {
+   "status": "ok",
+   "states": 18,
+   "edges": 20,
+   "casts": 18,
+   "err_per_scene": [
+    1.1703349400704613e-08,
+    2.328306404677817e-10
+   ],
+   "err_per_scene_per_source": [
+    [
+     1.170334229527726e-08,
+     1.1703349400704613e-08
+    ],
+    [
+     2.328306404677817e-10,
+     1.1641531972090656e-10
+    ]
+   ],
+   "policy": {
+    "policy": "auto_per_scene",
+    "eps": 1e-06,
+    "per_scene": [
+     {
+      "scene": 0,
+      "lambda": 0.125,
+      "quant": 1e-09,
+      "floor": 1.4210854715202004e-14
+     },
+     {
+      "scene": 1,
+      "lambda": 7.62939453125e-06,
+      "quant": 3.035639631116778e-13,
+      "floor": 1.4210854715202004e-14
+     }
+    ]
+   },
+   "policy_name": "auto_per_scene",
+   "case": "lote mixto [0,125, 2^-17]",
+   "lambdas": [
+    0.125,
+    7.62939453125e-06
+   ],
+   "strict_control_1e8": false,
+   "gate_1e4": true
+  },
+  {
+   "status": "REJECTED_before_fusing",
+   "reason": "politica auto_strict_per_scene: escena 0 lambda=7.62939e-06 no cubierta (quant 3.04e-15 < suelo 1.42e-14 = 32 ulp de la coordenada maxima 2); no se fusiona",
+   "policy_name": "auto_strict_per_scene",
+   "case": "adversario lambda 2^-17",
+   "lambdas": [
+    7.62939453125e-06
+   ],
+   "strict_control_1e8": null,
+   "gate_1e4": null
+  },
+  {
+   "status": "ok",
+   "states": 10,
+   "edges": 10,
+   "casts": 10,
+   "err_per_scene": [
+    1.421183046862147e-14
+   ],
+   "err_per_scene_per_source": [
+    [
+     1.421183046862147e-14,
+     7.107378661848078e-15
+    ]
+   ],
+   "policy": {
+    "policy": "auto_strict_per_scene",
+    "eps": 1e-08,
+    "per_scene": [
+     {
+      "scene": 0,
+      "lambda": 0.125,
+      "quant": 4.97359197162173e-11,
+      "floor": 1.4210854715202004e-14
+     }
+    ]
+   },
+   "policy_name": "auto_strict_per_scene",
+   "case": "control lambda 0,125",
+   "lambdas": [
+    0.125
+   ],
+   "strict_control_1e8": true,
+   "gate_1e4": true
+  },
+  {
+   "status": "REJECTED_before_fusing",
+   "reason": "politica auto_strict_per_scene: escena 0 lambda=7.62939e-06 no cubierta (quant 3.04e-15 < suelo 1.42e-14 = 32 ulp de la coordenada maxima 2); no se fusiona",
+   "policy_name": "auto_strict_per_scene",
+   "case": "lote mixto [2^-17, 0,125]",
+   "lambdas": [
+    7.62939453125e-06,
+    0.125
+   ],
+   "strict_control_1e8": null,
+   "gate_1e4": null
+  },
+  {
+   "status": "REJECTED_before_fusing",
+   "reason": "politica auto_strict_per_scene: escena 1 lambda=7.62939e-06 no cubierta (quant 3.04e-15 < suelo 1.42e-14 = 32 ulp de la coordenada maxima 2); no se fusiona",
+   "policy_name": "auto_strict_per_scene",
+   "case": "lote mixto [0,125, 2^-17]",
+   "lambdas": [
+    0.125,
+    7.62939453125e-06
+   ],
+   "strict_control_1e8": null,
+   "gate_1e4": null
+  }
+ ],
+ "refs_unfused_states": {
+  "7.62939453125e-06": {
+   "states_unfused": 18,
+   "seconds": 0.0033349990844726562
+  },
+  "0.125": {
+   "states_unfused": 18,
+   "seconds": 0.0027854442596435547
+  }
+ },
+ "findings": [
+  "adversario lambda 2^-17: fixed 1,92e-4 (FAIL gate 1e-4); auto_per_scene 2,3e-10 (pasa, quant 3,0e-13 >= suelo); auto_strict RECHAZA antes de fusionar (quant 3,0e-15 < suelo 2,1e-14).",
+  "control lambda 0,125: fixed y auto_per_scene dan 1,17e-8 (FALLAN el control estricto 1e-8 de Codex; conservado, no es PASS universal); auto_strict da 1,4e-14 (pasa).",
+  "lote mixto [2^-17, 0,125] y [0,125, 2^-17]: con auto_per_scene cada escena usa su propio quant (2,3e-10 y 1,17e-8 en ambos ordenes, sin dependencia del orden, 18 estados); con fixed 1,92e-4 y 1,17e-8; con auto_strict el lote entero se rechaza antes de fusionar (la escena 2^-17 no esta cubierta).",
+  "Honestidad: elegir eps=1e-8 (auto_strict) despues de ver que eps=1e-6 no pasa el control estricto es una eleccion a posteriori; se publica como politica adicional, no como correccion retroactiva del umbral.",
+  "Campos por fuente: err_per_scene_per_source en controls_CPU_float64 (dos fuentes independientes, s y s2)."
+ ],
+ "pending_declared": [
+  "cota angular con longitud restante: el error de una fusion angular es ~k*L_restante*dquant; un quant escalar no la acota sin conocer L_restante por estado",
+  "margenes topologicos: estados cerca de aristas o de empates pueden caer en celdas distintas con la misma fisica o en la misma con fisica distinta",
+  "acumulacion de multiples fusiones: el error por fusion se suma en el peor caso a lo largo de un camino; auto no es una prueba uniforme"
+ ],
+ "artifacts": {
+  "nebulatrace/gpu_states_v2.py": "D:/PROJECTS/.cognition/neuro3d/nebulatrace/gpu_states_v2.py",
+  "p0_fusion/p02_bridge.py": "D:/PROJECTS/.cognition/neuro3d/p0_fusion/p02_bridge.py",
+  "p0_fusion/p02_bridge.json": "D:/PROJECTS/.cognition/neuro3d/p0_fusion/p02_bridge.json"
+ },
+ "artifact_sha256": {
+  "nebulatrace/gpu_states_v2.py": "506b13c9c6bb442d16d9be07b8508a79b01ded9dd4c87c261ac1af83849b426e",
+  "p0_fusion/p02_bridge.py": "cda6dafc81eacd39d063b2eb315d21676f9c8471ebbd81cffe5e88c3adbc89eb",
+  "p0_fusion/p02_bridge.json": "62090806a483f2fadc515cf163e097e4be1fbe337c67c5a9202d9b9f3d7800b6"
+ },
+ "no_jev_aval": false
+}

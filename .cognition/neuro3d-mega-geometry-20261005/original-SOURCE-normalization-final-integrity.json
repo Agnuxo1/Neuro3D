@@ -1,0 +1,46 @@
+{
+  "rc": 0,
+  "timed_out": false,
+  "before_deadline": true,
+  "started_utc": "2026-10-07T11:14:01.470006+00:00",
+  "ended_utc": "2026-10-07T11:14:02.104786+00:00",
+  "deadline_utc": "2026-10-07T11:14:36.470006+00:00",
+  "elapsed_QA_seconds": 0.63478,
+  "timeout_seconds": 30,
+  "affinity_mask": 1,
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "RAM_available_before_bytes": 7043149824,
+  "RAM_budget_bytes": 134217728,
+  "RAM_reserve_after_budget_bytes": 6908932096,
+  "command": [
+    "C:/Python313/python.exe",
+    "-B",
+    ".cognition/neuro3d-mega-geometry-20261005/original-SOURCE-normalization-final-integrity.py"
+  ],
+  "stdout_bytes": 591,
+  "stdout_sha256": "ea597a57b229dda78374feab6dbebaa18f5eb5f103571a7cf159add87e2dd51d",
+  "stdout_zlib_base64": "eNplkVtv1DAQhd+R+A9VninYju3YvKXtii1b7a7o8hzNeGakiDYJuVCg6n/HWy0qqC++nDmeT3P8WEwzzMtUfDwr9vXtbfHurOgfumZou6Nm87XthmX+K/gsyNj/5heL11kb4aFZr+qrhr8vcNdQO33LtXlc+LkD8c+G74f5179iO7fZCh010nb5lGCYl5GnZsgLjz+YXtzYw0hH3GOR+n6k/CC1fffhcr263Ox319vD+/ujvVDelBxIkWZgg1FCVfpooqp8si64CtHoChi0lEaR90YrzL5KUS4RHwP4n7C7qc+vVueHL/VF/Xl3wpRWadHRgdNaFEJECNraskKwQQFb9oHJV9qTIRQGFFNGJc5X6PP+CnNYX283h3q7OQEMIicnMQbjPBGLsSJOFIigToKKNTt0RN66kgAqF1FUMgA2WiF6DagvbnbbU3cXgyPFKSdBwYlLKSmVfM6jCkH7iMYqYyBQHgyNj3kcKW2Ojb214mPxlNt/2n9tlun5lwTuJn56++YPfHqzSg==",
+  "stderr_utf8": "",
+  "GPU_used": false,
+  "summary": {
+    "status": "PASS",
+    "own_pins": 4,
+    "input_pins": 6,
+    "frozen_pins": 461,
+    "raw_HEAD_equal_disk": true,
+    "index_empty": true,
+    "initial_and_final_captures_preserved": true,
+    "boards": {
+      "coordinacion/CHECKPOINT.md": "0623e8d0d1eae2b9f8736929076c45857bb217aea1f320d66210b2b970d7bbde",
+      "coordinacion/COLA-DE-TRABAJO.md": "3401f195a511f0ba9ba814437ba480ae4e68ed6716d2dbfeabf2390f567b690f",
+      "coordinacion/THINKTANK.md": "2bbec5f998256ddef24ff5f0affb1cfb0e1e5b5dd6453daa759bf0c2aa494fdd",
+      "coordinacion/TABLON.md": "5985d0ec17ad85f5ccc00c60d6788169b24022a8da9bb2694e6f347aee644f69"
+    },
+    "GPU_used": false
+  }
+}

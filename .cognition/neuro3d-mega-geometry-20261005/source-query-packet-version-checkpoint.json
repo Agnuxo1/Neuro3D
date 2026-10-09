@@ -1,0 +1,28 @@
+{
+  "id": "PRECISION-ORIGINAL-SOURCE-QUERY-PACKET-CPU-001",
+  "head": "6da46a9b100b510e7361cd616af25f91ca0a977f",
+  "parent": "ba87272570be38188cb0bee7ae8bbc7fcd08a3f6",
+  "owned_files_sha256": {
+    "Blender/benchmarks/capacity_audit/original_SOURCE_query_packet_CPU_v1.py": "bd39e42cdb59941470b0b37b662a003a22ea261f98aeba22829098d15642fc8b",
+    "Blender/tests/test_original_SOURCE_query_packet_CPU_v1.py": "dcde0639fa2f2a79b1c836f1623de77e9253b9ec8c03a2320c5ffc1003e8f322",
+    "Docs/EXP-005-ORIGINAL-SOURCE-QUERY-PACKET-CPU-001.md": "86850db32f119e69fb87894291d00e6a3c4af10c4aaa924041bc11c9a0bfd0a5",
+    "coordinacion/respuestas/PRECISION-ORIGINAL-SOURCE-QUERY-PACKET-CPU-001-CODEX.json": "5f6b3d0ec64df544fc771044796cd88f62967322a879b10fd74fd012a194d272"
+  },
+  "raw_HEAD_equals_disk": true,
+  "own_clean": true,
+  "index_empty": true,
+  "frozen_pins_verified": 461,
+  "boards_sha256": {
+    "CHECKPOINT.md": "025a45cfbb8f577f40ffe56cb48b0f483041b367f2825c16cc4ac872ac83ac3c",
+    "COLA-DE-TRABAJO.md": "1b2d6a7cd2a3fe154dccfe46d2ea447c410f221d1a3313cb5e1214d4cbcde246",
+    "THINKTANK.md": "6f0a2a7a7af6786321300445e27c9cceeeb02bae74158dcf4794d3a3bdf1ab59",
+    "TABLON.md": "b3bb3532c02bd01f39c04c6e8c962b69b6acc2f7a8e01bdfbbbbddea53dee339"
+  },
+  "suite_replayed": false,
+  "GPU_launched": false,
+  "SDK_installed": false,
+  "push_merge": false,
+  "native_ABI_or_phase_certified": false,
+  "JEV": "LOCAL_SECURITY_BLOCKED_NO_RETRY",
+  "next": "Join existing consumer/evidence; no repeated packing sweeps without changes."
+}

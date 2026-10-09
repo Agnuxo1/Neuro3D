@@ -1,0 +1,49 @@
+{
+  "id": "PRECISION-ORIGINAL-SOURCE-CANDIDATE-PATH-CYCLES-HOST-001",
+  "UTC": "2026-10-07T08:36:00Z",
+  "status": "HOST_CONDITIONAL_GEOMETRIC_CYCLES_DONE_NATIVE_STOP",
+  "head": "a4cb6a49aaae1aacd3db861c184e7606366d6ce1",
+  "parent": "99071f1ae2388c0f5790047ec99e011a8c1df1ee",
+  "rawHEAD_disk": true,
+  "own4_clean": true,
+  "index_empty": true,
+  "own": {
+    "Blender/benchmarks/capacity_audit/original_SOURCE_candidate_path_cycles_HOST_v1.py": {
+      "sha256": "493101fe9905516dd917152c1a02c271eacfb16a39dc0a0b5c90f468c669010e",
+      "bytes": 14579
+    },
+    "Blender/tests/test_original_SOURCE_candidate_path_cycles_HOST_v1.py": {
+      "sha256": "ea6f240cd2b7ffe6116062c0a113826db1d30383c5c098427ca3e64062efa549",
+      "bytes": 12195
+    },
+    "Docs/EXP-005-ORIGINAL-SOURCE-CANDIDATE-PATH-CYCLES-HOST-001.md": {
+      "sha256": "75f73532f8cd3da6288df797630362e9479c333e0624c2564e0f28da8268ccbe",
+      "bytes": 6871
+    },
+    "coordinacion/respuestas/PRECISION-ORIGINAL-SOURCE-CANDIDATE-PATH-CYCLES-HOST-001-CODEX.json": {
+      "sha256": "53b739dcaaf08e2bbce9ca81ce7a24b98bc53074357720a4bc9aaaf317aae1fe",
+      "bytes": 145539
+    }
+  },
+  "receipt_sha256": "53b739dcaaf08e2bbce9ca81ce7a24b98bc53074357720a4bc9aaaf317aae1fe",
+  "tests": 5,
+  "records": 87,
+  "original_scene_SOURCE_cycles": 8,
+  "new_first_segment_norms": 8,
+  "new_first_root_certificates": 16,
+  "retained_next_root_inequalities_verified": 16,
+  "fixed_STOPS": 20,
+  "negative_rows": 50,
+  "fixtureFAILs_preserved": 2,
+  "frozen_pins": 461,
+  "phase_certified": false,
+  "phase_error_bound": null,
+  "GPU_used": false,
+  "Bpy_used": false,
+  "RT_used": false,
+  "full_costs": "UNKNOWN_NOT_ZERO",
+  "JEV": "LOCAL_SECURITY_BLOCKED_NO_RETRY",
+  "boards_UNSTAGED": true,
+  "scope": "Conditional S/P/Q geometric broken line; no native first-leg ALU/ingress or detector/phase admission; no ideal bounds transplant",
+  "next": "Opt-in SOURCE/material phase and explicit ingress/budget contract; original UNKNOWN remains, no assumed zero"
+}

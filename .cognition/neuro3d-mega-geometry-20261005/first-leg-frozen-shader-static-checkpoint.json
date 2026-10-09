@@ -1,0 +1,84 @@
+{
+  "id": "PRECISION-FIRST-LEG-FROZEN-SHADER-STATIC-AUDIT-HOST-001",
+  "UTC": "2026-10-07T10:14:00Z",
+  "HEAD": "88e74b14f6d7db4ffa7c4df002b11b4240ad01a5",
+  "parent": "cd5e2dea735f06ee862d68c498f1baac4794c1c1",
+  "raw_HEAD_equals_disk": true,
+  "own_clean": true,
+  "index_empty": true,
+  "own_files": {
+    "Blender/benchmarks/capacity_audit/first_leg_frozen_shader_static_audit_HOST_v1.py": {
+      "sha256": "5fc453a7d1516de1d41773aabcb0304685142e16f63a22578374a5759525611a",
+      "bytes": 4845
+    },
+    "Blender/tests/test_first_leg_frozen_shader_static_audit_HOST_v1.py": {
+      "sha256": "62b660c2b8b22f268ff2c55303c623cf7c21229fc4b3569dff347bcdd84fe8b1",
+      "bytes": 2368
+    },
+    "Docs/EXP-005-FIRST-LEG-FROZEN-SHADER-STATIC-AUDIT-HOST-001.md": {
+      "sha256": "866fb77c1ef213c0bc806e9dc9f884b6b338f7f3f8e5d6adf167664e449f7d48",
+      "bytes": 2471
+    },
+    "coordinacion/respuestas/PRECISION-FIRST-LEG-FROZEN-SHADER-STATIC-AUDIT-HOST-001-CODEX.json": {
+      "sha256": "7d1827aed5233161f86ab8fc4a2f894c6c6ec30234e6241e2d516d4a03a39255",
+      "bytes": 16578
+    }
+  },
+  "source_pins": {
+    "Blender/shaders/exp005_shared_frontier.glsl": {
+      "sha256": "914bf2962ead3c6a7b721a8dc2aa6c1e796af4bde1892db1802c3ca93ebdfcd1",
+      "bytes": 4930
+    },
+    "Blender/benchmarks/capacity_audit/shared_frontier_gpu.py": {
+      "sha256": "f38a93ae116be66284062297a31aa4dac37c40f7d9eefcf77fc4c146aca23c6b",
+      "bytes": 3819
+    },
+    "Blender/benchmarks/capacity_audit/original_SOURCE_first_leg_RN64_graph_HOST_v1.py": {
+      "sha256": "d4e1de31d00cc4767725ccad0120ac59875e788c24d6ec0911dc4350857f38d6",
+      "bytes": 10445
+    }
+  },
+  "facts": [
+    "Frozen source accumulates selected intersection parameter plus restored BIAS; not hypothetical endpoint norm sub/square/add/sqrt source graph.",
+    "13 exact source/runner line anchors; source text only, no compiler/RN/FMA or native numerical failure proof.",
+    "No model pointwise budget transfer allowed solely by sharing scene or double."
+  ],
+  "tests": {
+    "status": "PASS",
+    "tests": 2,
+    "records": 11,
+    "kinds": {
+      "NEGATIVE": 10,
+      "PINNED_STATIC_AUDIT": 1
+    }
+  },
+  "QA": {
+    "started": "2026-10-07T10:11:48.847566+00:00",
+    "deadline": "2026-10-07T10:12:23.847566+00:00",
+    "stdout_sha256": "e62801e8401dc1371d6ad1f7bfd02af3926c1e33108c3defa8f3f8ac77a7e986"
+  },
+  "oracle": {
+    "GPU_used": false,
+    "compiled_native_GRAPH_certified": false,
+    "exact_line_anchors": 13,
+    "frozen_pins": 461,
+    "ideal_nonequivalence_proved": false,
+    "numerical_failure_proved": false,
+    "pin_negative_controls": 10,
+    "pinned_sources": 3,
+    "runner_additional_pin_not_in_frozen_manifest": true,
+    "status": "PASS"
+  },
+  "oracle_capture": {
+    "started": "2026-10-07T10:13:38.410034+00:00",
+    "deadline": "2026-10-07T10:14:13.410034+00:00",
+    "stdout_sha256": "05b379869cc89451681681bd3ba5f97fe225cff33be869c228ce129f7a1e746f"
+  },
+  "failure_preserved": "Initial independent oracle KeyError: runner not among frozen461; source runner separately pinned. Fixed verification only, manifest unchanged.",
+  "native_precision_certified": false,
+  "native_error_bounds": null,
+  "GPU_used": false,
+  "JEV": "LOCAL_SECURITY_BLOCKED_NO_RETRY",
+  "shared_boards_staged": false,
+  "next": "Existing Claude actual backend/first-leg graph/ABI/SOURCE-P ingress/budgets by ID+SHA, guard perjob and equal-work full costs. No equivalent norm wrappers/replays. Native parameter-plus-BIAS analysis needs explicit scene/query/budgets."
+}

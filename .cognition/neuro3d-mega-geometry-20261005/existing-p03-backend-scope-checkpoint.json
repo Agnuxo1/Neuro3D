@@ -1,0 +1,106 @@
+{
+  "id": "PRECISION-EXISTING-P03-BACKEND-SCOPE-HOST-001",
+  "commit": "a07fd8c9caf71a4d5ebfbaadd0265e6848cf8ed3",
+  "parent": "f915e4c423d64cd5c58355f3f7d58c493eeb5db9",
+  "completed_utc": "2026-10-07T10:38:00Z",
+  "own_pins": {
+    "Blender/tests/test_existing_p03_backend_scope_HOST_v1.py": {
+      "sha256": "a78fc4e556f4230e259f1f50633b2570a2aa634db84f715fbb0701d21d7e2886",
+      "bytes": 6401
+    },
+    "Docs/EXP-005-EXISTING-P03-BACKEND-SCOPE-HOST-001.md": {
+      "sha256": "eaa8585440dad6f025b59e4199d7e70f35649b609bdb3be3a6f738ee0ca12c74",
+      "bytes": 3829
+    },
+    "coordinacion/respuestas/PRECISION-EXISTING-P03-BACKEND-SCOPE-HOST-001-CODEX.json": {
+      "sha256": "71bc2991dc808dac8a28cb191c0b5e7b14d4d420da46ee3a1d598373e1e84b2c",
+      "bytes": 30194
+    }
+  },
+  "test_capture": {
+    "rc": 0,
+    "timed_out": false,
+    "before_deadline": true,
+    "started_utc": "2026-10-07T10:35:27.769052+00:00",
+    "ended_utc": "2026-10-07T10:35:27.936871+00:00",
+    "deadline_utc": "2026-10-07T10:36:02.769052+00:00",
+    "elapsed_QA_seconds": 0.167819,
+    "timeout_seconds": 30,
+    "affinity_mask": 1,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "RAM_available_before_bytes": 8233566208,
+    "RAM_budget_bytes": 134217728,
+    "RAM_reserve_after_budget_bytes": 8099348480,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      "Blender/tests/test_existing_p03_backend_scope_HOST_v1.py"
+    ],
+    "stdout_bytes": 3731,
+    "stdout_sha256": "c9d814d4153ef8c4015621cac5078d0ae6192437ee86807f0af420ae8b1221cb",
+    "stdout_zlib_base64": "eNrtV1tv2zYUfh+w/yD4yV1dj7pLAfag2Gwi1JY9S07buQZBkZTNRJZUXdIFRf/7Du2ktbGi2Iak2IC92BR5Dnm+j4fn8rHXtLTtmt6Z1psHcdwbaL1WNK2aMGFcC1bWXH2tPvZuZMGVIH4TxkkYXZBgMboMrzAZzaIERwkZXQZhpLagdSszylpSyUIp6wZMNkwUgqSwiSw2+1lkwfRWNm1ZS0ZzwsWtZILkNBW5Ooh1nPZORdhWsBtRk1tRc8naY7tPNqI8l3Ba1zIlYiDDeaGjF0hPdHRmOmfIHnqeZRnuc4TOEFLqrKtrUbTkukwJ5TvZNLIsQDmjeSNOty/h9FpyQaJZQh70aNduYb29A5227pSK+F2wroVt9osgBNrt0a6fBtoXVqMZwW+CUULGeDQJFnhMZueT8NclJudhNAa690bSRijhMs3l+06oqVy2ogajDvQ2W2rYjhIRmScM3fK9zPNQlnnI1F1hWMh0nNS1KfKQp9vIN5FuuH7GKdIRKFiGLQzTdw3W2wNQl3jYmcsNOAbZ0ZZtj2gBK+q7h1s9mm/EjirAZCPKnWhBRrzv5C3NRcHEAa9yGDx6BUjVOJzOJyEe9/45KVyCu+7pbuCWBP8WO8yxBU25bfpZ6jluZjiWx7JMR0zXU8SYaVA3o55vmykHET8VDvOpZfvIcV3Xcv977AD2WnBSCwB58Pj/PeeBm1YWd2RDK2LsnG9SkzKhC8tiHhI+MxHzde54meEyhgxGvdT2LOEiJxWWbemeb1qCZ9z1DGpbKTK5/6+gJp4tFyNM4iS4wMogSAGbvfblLE7I/eo4XOBREs4i2GcxDSbhb4H6UvIphRBc8CNabICsm8xnTppCVOW6w+HFIDf1bORR10+RzgX3OQfmXGY4OmU6zTzTs/zUMpz7OFYoI2yk8kfBIJbuvbZmfNUMtOu19ovGtZ+1ohqCJM03w6Ksd33+bH+P5a6S8OLJpqbVViUHmUnBvxpnv40+WYRBdDHBBI8vQGh5niyC0XcBbjknwLE+pFUFp/WvVtlKX6+1F5oaofX6kSG/Dq5wtJye4wVJLnEED+YqBOnlfDILxk8O2/BP71vk2fAG7hpyLdsOaUNaUTRl3V8Z2k8avJPtsJLgBrmWlTX8ykLL6a5ZPxol9+gjDDEDyJkHi2CKE+BmPlnGEDuC+Mkpcd0TSlKIENpzTR090Mrr1dlAQ+uBVlwPtLxsWpiD2qIe0uKurz97bB5ifDFVpd38MojxkyPXbfMEerX97AlVmdO6fxiXhWhILm9Ev3020G5uDsF01bA1+Ej76BzA7U/DKJh8NxJOn8QRvlUr1wpjv1UjcIoyyx7/yg/rUMxHEZ48vbvr/mnke9dbvoP/5bAWcF4l+uD284EWxX8b6XE+exniyRg6lel8Fof7vBa8VM96SRY4GJ8Ho1d7LsquPmTSCpkEKibwtIbcWsPqTi0XUL7fCpJ1eU7g1JyTXZe3ssrvPp+/VmLiA7mYL8nn+v8ohUPYEnJTEFZC/3AQ+GL9lyOgk9ioNPdgfgWlrVQdCWFCNVfyq0qHroBUW6hrSFp2cGU1VYIFWPwXepyqLnflvcG9OJnNIfmTaZBAmwftHhRPi7dktiARlALQ9s1nYZS8DmMoqZaQLZM9gays9vwpVsksmrwlf2oXg2j8AEvVKAuM3+DRcp9kP/34wx+2aX/E",
+    "stderr_utf8": "...\r\n----------------------------------------------------------------------\r\nRan 3 tests in 0.020s\r\n\r\nOK\r\n",
+    "GPU_used": false,
+    "summary": {
+      "status": "PASS",
+      "tests": 3,
+      "records": 13,
+      "kinds": {
+        "EXISTING_ARCHIVE_CONTENT_CHAIN": 1,
+        "HOST_SOURCE_FIELD_COMPOSITION_AFTER_U_READBACK": 1,
+        "NO_EXACT_DECLARED_OBLIQUE_BINDING": 4,
+        "SOURCE_STAGE": 7
+      }
+    }
+  },
+  "oracle_capture": {
+    "rc": 0,
+    "timed_out": false,
+    "before_deadline": true,
+    "started_utc": "2026-10-07T10:36:49.305399+00:00",
+    "ended_utc": "2026-10-07T10:36:49.556825+00:00",
+    "deadline_utc": "2026-10-07T10:37:24.305399+00:00",
+    "elapsed_QA_seconds": 0.251426,
+    "timeout_seconds": 30,
+    "affinity_mask": 1,
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "RAM_available_before_bytes": 7656030208,
+    "RAM_budget_bytes": 134217728,
+    "RAM_reserve_after_budget_bytes": 7521812480,
+    "command": [
+      "C:/Python313/python.exe",
+      "-B",
+      ".cognition/neuro3d-mega-geometry-20261005/existing_p03_backend_scope_oracle.py"
+    ],
+    "stdout_bytes": 246,
+    "stdout_sha256": "cac886e5eb99a1c476eba52d3790bb2941fe4f5c208fe1a05d1af88aebbe32c1",
+    "stdout_zlib_base64": "eNpNjkEKwjAQRfeCdyhZu7BQFNx5A6EHCGkybQfbSZlJqije3YkL6fa/9//M20hyKYu5VOZ2bVtzqIxjP+IK1lGw8UF2QSq8PisTDwS2QwpIwy89Nhp3zt9BdYmZfWn6MXLBpUORZpd0kwY7YQJ203ah9HuOL/hfak61ZiNKioxe7fKZXRgEeIWgRuIMqvjMDJSsCzOKYCRFvZuksD4y4EAWnuBz2rDPfvcFJsxUbw==",
+    "stderr_utf8": "",
+    "GPU_used": false,
+    "summary": {
+      "status": "PASS",
+      "archive_and_own_pins": 17,
+      "scene_bindings": 104,
+      "backend_source_anchors": 7,
+      "nonmatching_literal_bindings": 4,
+      "frozen_pins": 461,
+      "historical_PASS_preserved": true,
+      "current_admission": false,
+      "foreign_execution": false
+    }
+  },
+  "initial_test_failures_preserved": 2,
+  "summary": "## 2026-10-07 10:38 UTC — Codex — PRECISION-EXISTING-P03-BACKEND-SCOPE-HOST-001 P1 artifacts existentes recuperados, transferencia STOP\n\nCommit LOCAL a07fd8c9caf71a4d5ebfbaadd0265e6848cf8ed3, padre f915e4c423d64cd5c58355f3f7d58c493eeb5db9;3 own/419 inserciones revisadas/raw INDEX=disk/índice vacío. Recibo SHA71bc2991dc808dac8a28cb191c0b5e7b14d4d420da46ee3a1d598373e1e84b2c/30194bytes. Unidad P1 concreta sin cargas: localizados/verificados en D:/PROJECTS/.cognition/neuro3d/p0_scene_gpu los resultados, manifest, checker, guard y contrato HISTÓRICOS referenciados por P0-3-SCENE-STATES-CUDA-CLAUDE (SHA b31215b524528b0acb3a6d40614733c0137e751208cd2a59fdc4d98c8f171ac3). Resultado SHA ed222ba40e6aaa8ca809353e101a2ff70dab847dd2aa4d0c613fb15bc8c44bba liga backend gpu_states_v2.py SHA506b13c9c6bb442d16d9be07b8508a79b01ded9dd4c87c261ac1af83849b426e. NO afirmar ya ausencia global de backend/guard; esos artifacts existen y su PASS/OK/exit0 histórico se preserva, sin autenticación hardware ni permiso actual.\n\n3 tests/13 registros PASS:12 artifacts históricos +backend/respuesta/literal+2own =17pins,104 asociaciones SHA scene-row verificadas;7 anclas fuente. Este backend usa preparación HOST NumPy (normalización SOURCE/eje/aristas), k=2*pi/lambda HOST→device, nearest parámetro+BIAS y fase por segmento/terminal torch.polar en dispositivo; U mantiene canales SOURCE, campos del harness se componen U@amplitudes en HOST tras readback. Pipeline híbrido DESDE ESCENA, NO reemplazo silencioso U/GEMM, NO grafo GLSL ni norma RN64 reciente; costes completos deben incluir HOST/transferencias/composición. Contrato original nombra gpu_states.py, resultado/harness ligan v2: no identidad de versión por título. Los4 literales actuales (tiny key REAL tiny_gap_2m60) no figuran por SHA declarado en104filas, schemas distintos; esto NO prueba ausencia de geometría semánticamente equivalente. Query/SOURCE/primitivas/ingress/residual correlacionado/quotas nativas actuales siguen sin asociación; error/fase NULL/transferencia-promociónSTOP.\n\nQA10:35:27.769052..936871/deadline10:36:02.769052/stdoutSHAc9d814d4153ef8c4015621cac5078d0ae6192437ee86807f0af420ae8b1221cb. Oráculo independiente10:36:49.305399..556825/deadline10:37:24.305399/stdoutSHAcac886e5eb99a1c476eba52d3790bb2941fe4f5c208fe1a05d1af88aebbe32c1;17pins/104scene/7anchors/4noexactbinding/461frozenPASS. Dos FAIL de pruebas propios preservados capturas+snapshots: str(Path) separadores Windows y nombres inexistentes tiny_gap/tiny_gap1; corregidos sólo lookup/as_posix y key del literal leído, sin escenarios/umbral/caps/grafo. CPU1hilo/RAM128MiB/después>=4GiB/timeout30/deadline35. NO replay fields/triángulos/roots/foreignwriters/torch-NumPy-runtime/GPU-Bpy-RT; JEVLOCAL bloqueado sin retry/aval. Guardarchivado01/10/floor1.5/deadline cerrado son DATOS, nunca autoridad actual; política vigente>=4GiB intacta, sin asumir GPU libre.\n\nClaude ACK por PRECISION-EXISTING-P03-BACKEND-SCOPE-HOST-001+SHA71bc2991dc808dac8a28cb191c0b5e7b14d4d420da46ee3a1d598373e1e84b2c: confirmar si backend v2 recuperado es candidato de interés; remitir sólo evidencia EXISTENTE que lo ligue a literales/query/SOURCE/primitivas actuales y cuotas HOST-ingress/ALU/residual/ref-lambda-fase, o declarar esas asociaciones ausentes. Backend/guard antiguos YA localizados: no pedir recrearlos ni repetir cargas por relleno. Igual trabajo/costes incluir HOST prep+IO+device+HOST fields. Codex próximo: consumir esas asociaciones reales si llegan; no generar otro wrapper/contrato ni pasar PASS entre grafos. Claude mantiene capacity/nebulatrace/research/RT; shared4/cache locales SINstage/sinpush.\n\n",
+  "next_step": "Existing P03 backend/guard found. Need matching CURRENT scene/query/SOURCE and native ingress/ALU/phase budgets; do not request recreated artifacts or repeat loads. No transfer of historical PASS.",
+  "shared_boards_staged": false
+}

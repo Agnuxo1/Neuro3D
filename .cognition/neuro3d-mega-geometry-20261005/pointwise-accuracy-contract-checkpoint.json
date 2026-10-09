@@ -1,0 +1,80 @@
+{
+  "id": "PRECISION-ORIGINAL-SOURCE-POINTWISE-ACCURACY-CONTRACT-HOST-001",
+  "UTC": "2026-10-07T10:04:00Z",
+  "HEAD": "cd5e2dea735f06ee862d68c498f1baac4794c1c1",
+  "parent": "71e5bcc4990da196f87c20c94558d9e59969a9c5",
+  "raw_HEAD_equals_disk": true,
+  "own_clean": true,
+  "index_empty": true,
+  "own_files": {
+    "Blender/benchmarks/capacity_audit/original_SOURCE_pointwise_accuracy_contract_HOST_v1.py": {
+      "sha256": "ade7fdd4a916efd62001f1a1ea932172c7bb1c4163298f7379561a1aa3274bbc",
+      "bytes": 8256
+    },
+    "Blender/tests/test_original_SOURCE_pointwise_accuracy_contract_HOST_v1.py": {
+      "sha256": "f16c1aac0a0049edf0f1d78cdf9369848fe494946fd9e50e09ec3a03d6d016e8",
+      "bytes": 6372
+    },
+    "Docs/EXP-005-ORIGINAL-SOURCE-POINTWISE-ACCURACY-CONTRACT-HOST-001.md": {
+      "sha256": "7f2d5a4472336dfd0d61509cbccfd8fc33f60012b01f642dc480a6dfb3055a07",
+      "bytes": 3161
+    },
+    "coordinacion/respuestas/PRECISION-ORIGINAL-SOURCE-POINTWISE-ACCURACY-CONTRACT-HOST-001-CODEX.json": {
+      "sha256": "1bb4a67f51f97c3fb9f86a94e97ae1b368b23e9f87b720fee14e0801057b3c57",
+      "bytes": 27207
+    }
+  },
+  "status": "PASS_MODEL_CONTRACT_NATIVE_STOP",
+  "facts": [
+    "Explicit pointwise length/isolated phase model budgets, not inherited geometric width caps.",
+    "Fixed receipt membership rejects caller-resealed witnesses; scene/query/SOURCE/backend/reference/lambda bound.",
+    "24 fixed synthetic allocations:10 model fits/6 model exceeds/8 missing;20 upstream STOP; all native admission STOP. No original cap changed or native accuracy proved."
+  ],
+  "tests": {
+    "status": "PASS",
+    "tests": 4,
+    "records": 81,
+    "kinds": {
+      "BOUNDARY_CONTROL": 5,
+      "COPY_ISOLATION": 1,
+      "FIXED_EXPLICIT_ALLOCATION": 24,
+      "NEGATIVE": 29,
+      "PARTIAL_ALLOCATION_STOP": 2,
+      "UPSTREAM_STOP_PRESERVED": 20
+    }
+  },
+  "QA": {
+    "started": "2026-10-07T10:00:46.716512+00:00",
+    "deadline": "2026-10-07T10:01:21.716512+00:00",
+    "stdout_sha256": "11cdc1682e537cf0276f2b44f8deef4309912005b3605aee4ce8aeb19f079967"
+  },
+  "oracle": {
+    "GPU_used": false,
+    "boundary_controls": 5,
+    "census": {
+      "MODEL_BOUND_FITS_EXPLICIT_POINTWISE_BUDGET": 10,
+      "MODEL_ERROR_EXCEEDS_EXPLICIT_POINTWISE_BUDGET": 6,
+      "STOP_UNALLOCATED_POINTWISE_BUDGET": 8
+    },
+    "copy_isolation": 1,
+    "explicit_allocation_checks": 24,
+    "fixed_SOURCE_rows": 8,
+    "frozen_pins": 461,
+    "native_admitted": false,
+    "negative_controls": 29,
+    "new_roots": 0,
+    "old_producer_replays": 0,
+    "partial_unknown_STOP": 2,
+    "status": "PASS",
+    "upstream_STOP_rows": 20
+  },
+  "oracle_capture": {
+    "started": "2026-10-07T10:02:39.871170+00:00",
+    "deadline": "2026-10-07T10:03:14.871170+00:00",
+    "stdout_sha256": "9a8a5bcba366bff8d32224128ea7b84f62c4ba5d796eb26447c06098673fd341"
+  },
+  "GPU_used": false,
+  "JEV": "LOCAL_SECURITY_BLOCKED_NO_RETRY",
+  "shared_boards_staged": false,
+  "next": "Use existing native artifacts/ACK by ID+SHA. No equivalent modeled wrappers/sweeps or native/GPU promotion from explicit model fits."
+}

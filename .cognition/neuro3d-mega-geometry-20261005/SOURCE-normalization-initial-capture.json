@@ -1,0 +1,41 @@
+{
+  "rc": 0,
+  "timed_out": false,
+  "before_deadline": true,
+  "started_utc": "2026-10-07T11:08:47.392583+00:00",
+  "ended_utc": "2026-10-07T11:08:47.568337+00:00",
+  "deadline_utc": "2026-10-07T11:09:22.392583+00:00",
+  "elapsed_QA_seconds": 0.175754,
+  "timeout_seconds": 30,
+  "affinity_mask": 1,
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "RAM_available_before_bytes": 6933635072,
+  "RAM_budget_bytes": 134217728,
+  "RAM_reserve_after_budget_bytes": 6799417344,
+  "command": [
+    "C:/Python313/python.exe",
+    "-B",
+    "Blender/tests/test_original_SOURCE_normalization_CPU64_v1.py"
+  ],
+  "stdout_bytes": 14787,
+  "stdout_sha256": "37968e39e26c0322f5fd094c048649f73041d3eed28322fac1c41bf5107f7c30",
+  "stdout_zlib_base64": "eNrtW21v2zYQ/j5g/8Hw56bjiyhKy6fUNbphmR34ZcVWFARFHm2hsqRKchK76H8fKTtxEitp19Xo6skwIPtIHsm757k7CtKHblnJall2f+50L87G4+6zTreCsnICan8XoLJCu39vPnTfxal2HXvDwaQ/mIjhSPR+ORsM+udiPBleuLGJjCBxfa6KLJ2JUkEKIo9T17bI9KYtK+JZnMrkZDycjnr9kzQrFjKJ17KKs/SkdzH1vZNL7IbsFnczQQGyzFInqXX/9H4JxaqjsrSCtOrYmTqLuFzISs2795f/1v6dFTKfu7FKlpWAa6kqEaf5sipPF8tEXF/Xl9WqvqzXp1Jrcb2qL+tTq3T+vHxfVKc6vrTidb1AleXgNJ71JtOzc1EvXmz2JX4dvBr1x2MxHJz/6Tq/upiKZQnOhkYmJVjRi3z1UDSaPJRs1S2gmN2Tp9ZglyCc2tzuNC6t+YSCoopNfK9jrEEmQse2kzOxgKLIChFly9qf6TJJdtryuSxh0yYKeaf9xmsiz+K0uopdr6WeQdU4pVoWhfVIvTiprU/c4u60G6tUqGyDtO508Ntg+HogBsOJ+Ks/GnY/Put8Cd5qNLR4a/F2cLyVVzLPQQs1l2kKSXkAwFkkQQG6U0IuC1lB50ZtZ6O2c3fuFnlHgby7Rn09HL0UvbOLyXTUd0a1rqwdkEVJbMNQ7ZRsWSgQcT14jDZ+cim3nEvCfCcFEwDBXhiYIEDGBIhiDsRD1PcjziQKUIAZCinChIdGS4SRHeARBoSGnCincxNWdzoN8z0qJQkJpx4yikccAY6oMTogDAUhMA6SE0x1gCEIKdVKeVhHNNIRstazOvOsjGsXXTncijlcO+x2qdHo7sd1/SyZQ/3O7zXW91SbBjX7MvTgU6sulUxkIWpe3dP7oXvtLo2aVqvHWtZr17I3k225rsd4DS3l+6Usaug90lxU2+l8iULwfW5opLRDWPcmAtmItTPSQ/PA3XFqY559WaN5Mou5RZwuy22scaqFm1TsVv2m63khwx4PMPYChqjTRhhlDnsIeRZUzGKUhKEFle9hxBmplW/5cIuYjXOTrCzFi2mtuDYA7r79imTCR0EmCPYR3yRrydSS6WkynY37YtwbXjzGnn9V/OxR1ZYSL8b90R/9l7c1xW1htM3SbYnzvZQ4znnLtIoXUFM8XuQJLKy+GhG1B/NVNc/qQ9vml7iEYjtHlz7H9Dl3bdGqgrooduIkrqqkRp5JMlmJhbQL1PHMtjHqWFpkmd2NTBK3KPLPM8POwi5cbeLsZ9RbymcgI81oaKLAMp34XqCMwUhhHCGlKJHcyCBkNnzbLmEEvgqlx0Lkc8493pQiEAmIIijiPgeMwf5EivuYBhD4ijGFWRR6iEkSaY0g5J6iRvrggQKPoch8m3qrKa42yb4sRXg2tzaniKaWT6cI8nSKII+mCLulNkV8RVbho2DVwQqvllVt4dVMo7YCayuwo6rAbKi2nBMFGHwTHb7N/S6bKHzJMRACymBD3Xmcaoa5B1T7LCKhIthOpAD8UBJqBSZgRHlahX7IcXu/qz2i/0fqr09xCh8Fp9rbXi2nDlh97ZOorb3a2uuoaq8qTldiJnNBFv7nll6RAgyepwJ7WlYUqRBrPzCEK4WIkkHEAg848iN7fPZwYBkK2mgeEMm8CFEdNqWJEPOIKqLt6d4GEWVVRJ4PNj4RZL/EcK5MxLRHSRTaNKRZZBioMAh1wKTP+FNpQu2faBtlbZpo08RXKL0+QSl8FJQi+1VWk6ylVEupL6m89jjUFl5t4fW9FF5nk+Hvv/asSy+mk/0nCtdQZDv7HuB5wjRL3RwdE6dxBTcPETpd7QOEx/IA4dMQu43BLuBX87jQB4CZk2wXYGP4RJwPN68VtAA7foDtttUirEXYIRAWZVliV+o2JpMDYKta5aA7dydoUfU/QJXU23eHkjh9dwBYbV4bun2Boz7md27mahH2vSLsbbO9TFZAPLO7tCCyDgS1rO6bBK7E9ubPPTgJd3hwUwV7O31kDx9//OFvoF+psg==",
+  "stderr_utf8": "...\r\n----------------------------------------------------------------------\r\nRan 3 tests in 0.006s\r\n\r\nOK\r\n",
+  "GPU_used": false,
+  "summary": {
+    "status": "PASS",
+    "tests": 3,
+    "records": 20,
+    "kinds": {
+      "ATOMIC_INPUT_STOP": 5,
+      "CASE_SCOPE": 4,
+      "CONTENT_OR_CHANNEL_STOP": 3,
+      "CPU64_SOURCE_WORD_CAPTURE": 8
+    }
+  }
+}
