@@ -1,0 +1,108 @@
+{
+  "schema": "optic_neuro_blender.native_graphics_frontier_audit.v1",
+  "status": "VALID_NATIVE_GRAPHICS_FIELD_AUDIT",
+  "primary_metric": 1,
+  "native_gpu_executed": true,
+  "gpu_geometry_readback": true,
+  "gpu_fields_executed": true,
+  "hardware_RT_executed": false,
+  "blender_version": "4.5.14 LTS",
+  "blender_build_hash": "62c1db4208e8",
+  "backend": "OPENGL",
+  "vendor": "NVIDIA Corporation",
+  "renderer": "NVIDIA GeForce RTX 3090/PCIe/SSE2",
+  "driver": "4.6.0 NVIDIA 581.29",
+  "owned_program_release": {
+    "schema": "optic_neuro_blender.native_program_release.v1",
+    "previous_owned_program": 1,
+    "current_program_after_release": 0,
+    "same_context_verified": true,
+    "gl_errors": []
+  },
+  "profile_sha256": "90f7701c9d5a748a4fc53067f749dc1442fd2d6a54dbd096e721b6a69510df18",
+  "source_driven_frontier": true,
+  "cpu_runs": [
+    {
+      "repetition": 0,
+      "phase_only_graph_reuse_seconds": 0.458411800005706
+    },
+    {
+      "repetition": 1,
+      "phase_only_graph_reuse_seconds": 0.45586870000261115
+    },
+    {
+      "repetition": 2,
+      "phase_only_graph_reuse_seconds": 0.46087570000236155
+    }
+  ],
+  "graphics_runs": [
+    {
+      "repetition": 0,
+      "transport_seconds": 2.507487700000638,
+      "states": 133,
+      "samples": 150,
+      "actual_geometric_ray_queries": 19950,
+      "frontier_batches": 36,
+      "field_max_difference": 7.501049965432943e-14,
+      "power_max_difference": 7.216449660063518e-15,
+      "transport_local_max_difference": 7.701387660778206e-15
+    },
+    {
+      "repetition": 1,
+      "transport_seconds": 3.2332019999957993,
+      "states": 133,
+      "samples": 150,
+      "actual_geometric_ray_queries": 19950,
+      "frontier_batches": 36,
+      "field_max_difference": 7.501049965432943e-14,
+      "power_max_difference": 7.216449660063518e-15,
+      "transport_local_max_difference": 7.701387660778206e-15
+    },
+    {
+      "repetition": 2,
+      "transport_seconds": 3.480321900002309,
+      "states": 133,
+      "samples": 150,
+      "actual_geometric_ray_queries": 19950,
+      "frontier_batches": 36,
+      "field_max_difference": 7.501049965432943e-14,
+      "power_max_difference": 7.216449660063518e-15,
+      "transport_local_max_difference": 7.701387660778206e-15
+    }
+  ],
+  "represented_terminal_paths": 17060,
+  "edges": 186,
+  "independent_audit": {
+    "primary_metric": 1,
+    "status": "VALID_COMPLETE_GRAPH",
+    "states": 133,
+    "sources": 5,
+    "nearest_hits_independently_verified": true,
+    "nonzero_branch_coverage_verified": true,
+    "boundary_neighborhood_independently_verified": false,
+    "field_certified": false,
+    "physical_optics_certified": false
+  },
+  "all150_predictions_same": true,
+  "field_max_difference": 7.501049965432943e-14,
+  "power_max_difference": 7.216449660063518e-15,
+  "transport_local_max_difference": 7.701387660778206e-15,
+  "coherence_controls": {
+    "max_complex_difference": 1.2621282740001445e-13,
+    "global_phase_complex_difference": 5.258673054301723e-14,
+    "global_phase_power_difference": 6.106226635438361e-15,
+    "coherent_vs_intensity_sum_difference": 0.273758785263555,
+    "destructive_superposition_pass": true
+  },
+  "cost_seconds": {
+    "capture_and_admission": 1.6414560000048368,
+    "fresh_exact_verified_gpu_geometry": 10.05181939999602,
+    "independent_full_graph_audit": 5.597693300005631,
+    "native_field_shader_geometry_pack_compile_upload": 0.3899068999962765
+  },
+  "cpu_compensated_coherent_merging": true,
+  "precomputed_transfer_matrix_used": false,
+  "native_rounding_certified": false,
+  "scope": "Actual captured triangle raster/depth selects each transport surface. FP64 fragment shader derives intersection distance, wavelength phase, splitter/mirror branch fields and terminal reference phase from captured planes/materials and current rays/inputs. Exact CPU topology/admission and compensated coherent merging explicit. Geometry reselected for each of150inputs rather than precomputed transfer-matrix multiplication. Native binary64 fields/parity observed, not rigorous GPU rounding or physical-wave certification. CPU timing is phase-only graph reuse, GPU timing includes re-selection; no equivalent speed claim.",
+  "seconds": 34.588296900001296
+}

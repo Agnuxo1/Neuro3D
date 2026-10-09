@@ -9,6 +9,17 @@
 ![Investigación](https://img.shields.io/badge/investigaci%C3%B3n-hip%C3%B3tesis%20falsable-6e4c9b)
 ![Licencia](https://img.shields.io/badge/licencia-MIT-2ea44f)
 
+
+La [propagación coherente en el motor gráfico 3D](Docs/NATIVE_GRAPHICS_COHERENT_FIELD_PROTOCOL_2026-10-09.md)
+ya se ha ejecutado en Blender y RTX 3090: el fragment shader selecciona superficies
+capturadas y calcula distancia, fase y campos complejos, sin recibir una matriz de
+transferencia precomputada. **150 decisiones iguales**, diferencia máxima de campo
+**7,51×10⁻¹⁴**, con controles reales de fase e interferencia. La admisión geométrica
+exacta y la fusión coherente siguen en CPU. No demuestra ventaja de velocidad,
+fidelidad física ni ejecución AMD.
+
+![Transporte óptico real en shaders gráficos](Docs/assets/native-graphics-coherent-fields-2026-10-09.png)
+
 ## Estado consolidado
 
 **Prioridad reafirmada:** OpticNeuroBlender será nuestro sistema propio de red
