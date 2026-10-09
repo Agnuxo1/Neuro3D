@@ -189,3 +189,7 @@ ActualGPU-derived localcoefficients (notglobalU) plus GPU133state fragmentpropag
 ## 2026-10-09T13:36:17.318480+00:00 — publication and scientific acceptance audit
 
 Requirement-by-requirement acceptance reviewed, stale historicalstatements replaced with currentcompleteGPUtraining/intervalcertificate/negativecost/0.1.3actualrecovery evidence; originalacceptancejson preserved. PublicHTTP7artifacts4051651bytes exactGitblobmatching. SpecialistreviewpacketpreparedNOTsent/reviewed. ResidentexperimentalGPUprofiledc077d1 published564dae9 and120pins verified13:27UTC; sharedFIFOrequestwaiting/max10min. Allremainingphysical/AMD/GPUUI/humanreview/IPFS/exceptionalnovelty explicit; fullprojectNOTcomplete. Goalactive13:55UTC.
+
+## 2026-10-09T13:40:19.252040+00:00 — actual resident GPU first attempt NULL
+
+SharedFIFOadmitted13:37:27, fullactual133stategraph+independentaudit reached; nativeGPUlocalcoefficients/shadercompile reached; Blender framebuffermax6 rejects8attachments. Original120pins/profiledc077d1 preserved; allrawSHAverified. Newv2two4modepasses+5inputecho plannedbeforedeadline13:55, newfreeze/publicationbeforeexecution required. Noresidentinference/speedclaim.

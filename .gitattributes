@@ -177,4 +177,5 @@ Docs/validation/native-graphics-scaling-2026-10-09/**/*.stdout -text !eol -white
 # Preserve all raw bytes and hashes while keeping millions of array rows out of
 # automatic diff previews. Canonical source code and protocols remain diffable.
 Docs/validation/** -diff
+Docs/validation/native-resident-graph-2026-10-09/** -text !eol
 Docs/validation/**/evidence_index.json diff

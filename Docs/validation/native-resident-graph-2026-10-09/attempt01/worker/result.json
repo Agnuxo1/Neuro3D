@@ -1,0 +1,7 @@
+{
+  "schema": "optic_neuro_blender.native_resident_graph.v1",
+  "status": "INCONCLUSIVE_ENVIRONMENT_OR_INVALID_OUTPUT",
+  "primary_metric": null,
+  "failure_type": "AttributeError",
+  "seconds": 25.891316099994583
+}
