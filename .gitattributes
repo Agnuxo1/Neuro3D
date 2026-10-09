@@ -163,3 +163,6 @@ Docs/validation/installed-blender-host-recovery-2026-10-09/** -text !eol whitesp
 
 Docs/validation/native-deferred-state-2026-10-09/** -text !eol whitespace=cr-at-eol
 Docs/validation/native-deferred-state-2026-10-09/**/worker.stdout -text !eol -whitespace
+
+Docs/validation/external-installed-blender-recovery-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/external-installed-blender-recovery-2026-10-09/**/*.stdout -text !eol -whitespace

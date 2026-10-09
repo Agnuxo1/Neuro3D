@@ -40,6 +40,8 @@ El ejemplo admite el contrato de objetos, fuentes y detectores incluido. Modific
 
 ## Evidencia de esta versión y antecedentes conservados
 
+- [Instalación limpia Linux 0.1.3, cierre del propietario y reanudación exacta](EXTERNAL_INSTALLED_BLENDER_RECOVERY_PROTOCOL_2026-10-09.md).
+
 - [Recuperación nativa instalada 0.1.3: interrupción real, reanudación y comparación exacta](INSTALLED_BLENDER_HOST_RECOVERY_PROTOCOL_2026-10-09.md).
 - [Guía anterior 0.1.2 y su paquete preservado](OPTIC_NEURO_BLENDER_012_USER_GUIDE_2026-10-09.md).
 

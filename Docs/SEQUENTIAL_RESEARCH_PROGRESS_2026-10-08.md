@@ -141,3 +141,7 @@ Frozen975d264/90471d0d/40pins. Actualnativebaseline/ownhostkillstep12/childselfe
 ## 2026-10-09T10:51:06.032000+00:00 — deferred native full-state pilot PASS, equivalent cost no gain
 
 Frozen d6986c4/425317fc/102pins. Deferredandforward120inputs/16params/sameactualgeometry fields/Jac/lossgrad/loss EXACT0diff. IndependentCPUfield6.773e-14/Jac6.848e-12/lossgrad8.641e-12. DEFERRED42.973787/FORWARD38.272944s;noperformancegain; old322snotcausal. Full270.328783/RSS503.53. ActualGPU266surfacequeries/550620opticalfragments/2geometrygenerations. ZEROupdates/untrained40of12010of30. Rawscope60updates templateerratumandlegacystagelabeldocumentedwithouteditingraw. Nextseparatelyfrozenfull60updateprofile. ExternalLinuxinstalled0.1.3run37919893102/sourcefb690da ongoing. Goalactive13:55UTC.
+
+## 2026-10-09T11:04:04.214276+00:00 — fresh external Linux0.1.3 installed host recovery PASS
+
+Run37919893102/job113785020096/sourcefb690da/profile9ff0569c/49preverifiedGitblobs. ActualofficialnativeBlender, ownhostkill12/worker-selfexit9/controller-onlysubreaper/freshResume. All61coords-lossfloathex and150powers exactbaseline/test27of30; stale-corrupt-4forged-applyNEWsave-reopen/logcleanPASS. Outer652.831612/RSS787.05, officialprep20.981/native630.903. Artifact11611358901/ZIPe46daecc/11702543bytes plusallouterandinnerhashes verified/permanentarchive. NotGPU/AMD/humanreview/powerloss. Fullnativegraphicslearning4e72544/50248df9/107pins runningactualGPU; state0 numericalparityPASS, restpending. Goalactive13:55UTC.

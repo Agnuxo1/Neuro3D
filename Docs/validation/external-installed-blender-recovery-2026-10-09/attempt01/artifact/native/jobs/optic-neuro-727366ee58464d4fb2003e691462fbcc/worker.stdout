@@ -1,0 +1,69 @@
+{"continuous_family_proved": true, "resume_step": 0, "prefix_replay_seconds": 0}
+{"step": 0, "train_loss": 6.255440538348521, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 1, "train_loss": 4.757272827018384, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 2, "train_loss": 3.267679552335506, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 3, "train_loss": 2.0562786280459324, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 4, "train_loss": 1.3033543819175557, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 5, "train_loss": 0.9602861054411652, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 6, "train_loss": 0.8919869747362533, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 7, "train_loss": 0.9309577345656839, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 8, "train_loss": 0.9824975794799035, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 9, "train_loss": 1.013747849312524, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 10, "train_loss": 1.0155566892814671, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 11, "train_loss": 0.9900723296682724, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 12, "train_loss": 0.9456411998229686, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 13, "train_loss": 0.8927972585875786, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 14, "train_loss": 0.8411747763159544, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 15, "train_loss": 0.7967863855487115, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 16, "train_loss": 0.7605643822573552, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 17, "train_loss": 0.7290752703477186, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 18, "train_loss": 0.6983382380843134, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 19, "train_loss": 0.6666393619178138, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 20, "train_loss": 0.6353089927011133, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 21, "train_loss": 0.6086242437598187, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 22, "train_loss": 0.5914511947071449, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 23, "train_loss": 0.5851868769908979, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 24, "train_loss": 0.5839097395305498, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 25, "train_loss": 0.5791170744306652, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 26, "train_loss": 0.5697015856693717, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 27, "train_loss": 0.5619584506079297, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 28, "train_loss": 0.5604300292769905, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 29, "train_loss": 0.5604703658832598, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 30, "train_loss": 0.5535539301410385, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 31, "train_loss": 0.5386287722955742, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 32, "train_loss": 0.5224069296240184, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 33, "train_loss": 0.5101457665713773, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 34, "train_loss": 0.4991625704749615, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 35, "train_loss": 0.4839792265672121, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 36, "train_loss": 0.46427315363910626, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 37, "train_loss": 0.4439163715438035, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 38, "train_loss": 0.4259464777990775, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 39, "train_loss": 0.41036657959756784, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 40, "train_loss": 0.3962048991453947, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 41, "train_loss": 0.3839633174891367, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 42, "train_loss": 0.37502709926035405, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 43, "train_loss": 0.36936697393660645, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 44, "train_loss": 0.3647579579721723, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 45, "train_loss": 0.3590599124186988, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 46, "train_loss": 0.3526965493682115, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 47, "train_loss": 0.34846866240554597, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 48, "train_loss": 0.34798007610526666, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 49, "train_loss": 0.34907785062039454, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 50, "train_loss": 0.3481451528940576, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 51, "train_loss": 0.34438572421412744, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 52, "train_loss": 0.34024151899798444, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 53, "train_loss": 0.33733638270948096, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 54, "train_loss": 0.33408167650585546, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 55, "train_loss": 0.3288286692313537, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 56, "train_loss": 0.32316088588093195, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 57, "train_loss": 0.3193636499512208, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 58, "train_loss": 0.31665709253416335, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 59, "train_loss": 0.3131763882854319, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"step": 60, "train_loss": 0.309706672111991, "continuous_family_membership": "EXACT_PARAMETER_MEMBERSHIP_VERIFIED"}
+{"status": "PASS", "initial_train_loss": 6.255440538348521, "final_train_loss": 0.309706672111991, "train_accuracy": 0.9166666666666666, "heldout_accuracy": 0.9, "gradient_difference_max_absolute_error": 1.4742271901013737e-06, "field_rebuild_max_absolute_error": 5.23691153334427e-16}
+Info: Saved copy as "trained_geometry.blend"
+{"status": "PASS", "action": "TRAIN", "seconds": 227.124407755, "decision": "det.R1"}
+Blender 4.5.14 LTS (hash 62c1db4208e8 built 2026-09-15 01:31:19)
+Read blend: "/home/runner/work/Neuro3D/Neuro3D/installed-resume-evidence/native/jobs/optic-neuro-727366ee58464d4fb2003e691462fbcc/snapshot.blend"
+
+Blender quit
