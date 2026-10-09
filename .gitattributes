@@ -150,3 +150,4 @@ Docs/validation/native-graphics-geometry-2026-10-09/** -text !eol whitespace=cr-
 Docs/validation/native-graphics-frontier-2026-10-09/** -text !eol whitespace=cr-at-eol
 
 Docs/validation/training-recovery-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/native-geometry-ablation-2026-10-09/** -text !eol whitespace=cr-at-eol

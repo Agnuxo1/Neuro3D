@@ -130,8 +130,12 @@ requieren controles adicionales.
 El [nuevo refinamiento exacto de la ruta gráfica](Docs/NATIVE_GRAPHICS_FRONTIER_PROTOCOL_2026-10-09.md)
 reduce la construcción observada a **10,45–10,60 s**, frente a **29,81–30,04 s**
 de la CPU original, manteniendo los 133 estados, los 17.060 caminos y las 150 decisiones.
-Es una mejora combinada de GPU y verificación más eficiente; falta la ablación con
-idéntica verificación en CPU para atribuir una ventaja a la GPU.
+La [ablación con idéntica verificación](Docs/NATIVE_GEOMETRY_ENGINE_ABLATION_PROTOCOL_2026-10-09.md)
+ya ejecutada da **9,83–9,90 s en BVH nativo CPU** y **9,91–10,00 s en raster GPU**.
+No demuestra ventaja global de GPU en esta escena: la mejora anterior combina
+la sustitución del motor y una verificación geométrica más eficiente.
+
+![Ablación equivalente del motor 3D](Docs/assets/native-geometry-ablation-2026-10-09.png)
 
 ![Ruta gráfica y verificación exacta](Docs/assets/native-graphics-frontier-v2-2026-10-09.png)
 

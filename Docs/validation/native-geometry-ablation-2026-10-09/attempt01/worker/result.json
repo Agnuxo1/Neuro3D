@@ -1,0 +1,173 @@
+{
+  "schema": "optic_neuro_blender.native_graphics_frontier_audit.v1",
+  "status": "VALID_NATIVE_GRAPHICS_FRONTIER_AUDIT",
+  "primary_metric": 1,
+  "native_gpu_executed": true,
+  "gpu_geometry_readback": true,
+  "gpu_fields_executed": false,
+  "hardware_RT_executed": false,
+  "blender_version": "4.5.14 LTS",
+  "blender_build_hash": "62c1db4208e8",
+  "backend": "OPENGL",
+  "vendor": "NVIDIA Corporation",
+  "renderer": "NVIDIA GeForce RTX 3090/PCIe/SSE2",
+  "driver": "4.6.0 NVIDIA 581.29",
+  "independent_audit": {
+    "primary_metric": 1,
+    "status": "VALID_COMPLETE_GRAPH",
+    "states": 133,
+    "sources": 5,
+    "nearest_hits_independently_verified": true,
+    "nonzero_branch_coverage_verified": true,
+    "boundary_neighborhood_independently_verified": false,
+    "field_certified": false,
+    "physical_optics_certified": false
+  },
+  "represented_terminal_paths": 17060,
+  "edges": 186,
+  "field_max_difference": 5.117875266520903e-16,
+  "power_max_difference": 5.551115123125783e-16,
+  "all150_predictions_same": true,
+  "cost_seconds": {
+    "capture_and_admission": 1.6267212000020663,
+    "independent_full_graph_and_field_audit": 5.9009187999981805,
+    "all150_coherent_inference": 0.4940731000024243
+  },
+  "profile_sha256": "6ffad8cb044c29b735c55a1c2aeb1cd9a6cc96db160655209622038f5db0b4de",
+  "triangles": 6656,
+  "source_driven_frontier": true,
+  "identical_exact_refinement": true,
+  "alternating_order": true,
+  "cpu_runs": [
+    {
+      "repetition": 0,
+      "execution_kind": "CPU_BVH",
+      "pair_order": [
+        "CPU_BVH",
+        "GPU_RASTER"
+      ],
+      "build_seconds": 9.897550999994564,
+      "pack_compile_upload_and_build_seconds": 9.897550999994564,
+      "pack_compile_upload_seconds": 0.014600299997255206,
+      "status": "COMPLETE",
+      "states": 133,
+      "frontier_batches": 17,
+      "selection_statistics": {
+        "queries": 133,
+        "verified_candidates": 133,
+        "rejected_candidates": 0,
+        "exact_verification_seconds": 9.091531600010057
+      },
+      "candidate_fallback": false
+    },
+    {
+      "repetition": 1,
+      "execution_kind": "CPU_BVH",
+      "pair_order": [
+        "GPU_RASTER",
+        "CPU_BVH"
+      ],
+      "build_seconds": 9.829980499998783,
+      "pack_compile_upload_and_build_seconds": 9.829980499998783,
+      "pack_compile_upload_seconds": 0.014309500002127606,
+      "status": "COMPLETE",
+      "states": 133,
+      "frontier_batches": 17,
+      "selection_statistics": {
+        "queries": 133,
+        "verified_candidates": 133,
+        "rejected_candidates": 0,
+        "exact_verification_seconds": 8.986808099936752
+      },
+      "candidate_fallback": false
+    },
+    {
+      "repetition": 2,
+      "execution_kind": "CPU_BVH",
+      "pair_order": [
+        "CPU_BVH",
+        "GPU_RASTER"
+      ],
+      "build_seconds": 9.868582199997036,
+      "pack_compile_upload_and_build_seconds": 9.868582199997036,
+      "pack_compile_upload_seconds": 0.014379899999767076,
+      "status": "COMPLETE",
+      "states": 133,
+      "frontier_batches": 17,
+      "selection_statistics": {
+        "queries": 133,
+        "verified_candidates": 133,
+        "rejected_candidates": 0,
+        "exact_verification_seconds": 9.046714699950826
+      },
+      "candidate_fallback": false
+    }
+  ],
+  "graphics_runs": [
+    {
+      "repetition": 0,
+      "execution_kind": "GPU_RASTER",
+      "pair_order": [
+        "CPU_BVH",
+        "GPU_RASTER"
+      ],
+      "build_seconds": 9.964845800001058,
+      "pack_compile_upload_and_build_seconds": 9.964845800001058,
+      "pack_compile_upload_seconds": 0.05042799999500858,
+      "status": "COMPLETE",
+      "states": 133,
+      "frontier_batches": 17,
+      "selection_statistics": {
+        "queries": 133,
+        "verified_candidates": 133,
+        "rejected_candidates": 0,
+        "exact_verification_seconds": 9.07882800000516
+      },
+      "candidate_fallback": false
+    },
+    {
+      "repetition": 1,
+      "execution_kind": "GPU_RASTER",
+      "pair_order": [
+        "GPU_RASTER",
+        "CPU_BVH"
+      ],
+      "build_seconds": 10.004324099994847,
+      "pack_compile_upload_and_build_seconds": 10.004324099994847,
+      "pack_compile_upload_seconds": 0.047996000001148786,
+      "status": "COMPLETE",
+      "states": 133,
+      "frontier_batches": 17,
+      "selection_statistics": {
+        "queries": 133,
+        "verified_candidates": 133,
+        "rejected_candidates": 0,
+        "exact_verification_seconds": 9.073642400020617
+      },
+      "candidate_fallback": false
+    },
+    {
+      "repetition": 2,
+      "execution_kind": "GPU_RASTER",
+      "pair_order": [
+        "CPU_BVH",
+        "GPU_RASTER"
+      ],
+      "build_seconds": 9.91286140000011,
+      "pack_compile_upload_and_build_seconds": 9.91286140000011,
+      "pack_compile_upload_seconds": 0.05443620000005467,
+      "status": "COMPLETE",
+      "states": 133,
+      "frontier_batches": 17,
+      "selection_statistics": {
+        "queries": 133,
+        "verified_candidates": 133,
+        "rejected_candidates": 0,
+        "exact_verification_seconds": 9.016770500005805
+      },
+      "candidate_fallback": false
+    }
+  ],
+  "scope": "Alternating native Blender CPU BVH and GPU raster candidates generate the same source-driven geometry frontier. Both use identical exact plane/Gram/interior/nearest verification and the same tolerances, branches and phase rules. Full backend preparation and construction costs included. Three pairs on a shared host are exploratory; no physical/RTcore/AMD/energy claim.",
+  "seconds": 70.4183378999951
+}
