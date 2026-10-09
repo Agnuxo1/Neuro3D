@@ -62,3 +62,15 @@ Fecha de compromiso: 2026-10-09, antes de implementar el solver de referencia y 
 ## 9. Registro externo
 
 Pendiente de autorización. Este commit es la marca temporal interna.
+
+## Enmienda 1 (2026-10-09, antes de cualquier simulación del interferómetro)
+
+**Motivo.** La sección 3 fijaba incidencia de ±10° y brazos de 30 a 40λ. La ejecución de la fase de calibración mostró que esa geometría es imposible: con w ≥ 8λ, los haces reflejados en divisores a incidencia casi normal no se separan dentro de brazos de esa longitud (la separación angular es ≤ 20°, y separar haces de ancho ±2w exige unos 95λ). La especificación original era, por tanto, inconsistente. Ninguna simulación del interferómetro se ejecutó con ella. La calibración a incidencia normal y la prueba PML en vacío se conservan como historial.
+
+**Cambios.**
+1. **Geometría:** Mach–Zehnder estándar, con divisores a **45°** (modo TM). El régimen declarado pasa a ser: w ≥ 8λ, divisores a 45°, brazos de unos 30λ.
+2. **Calibración:** la película se recalibra a 45° (TM) con su solución 1D y se verifica en el solver 2D con onda plana a 45°. El criterio no cambia: diferencias en |r|² y |t|² < 0,005. El ajuste de índice por malla se registra.
+3. **Mallas:** gruesa λ/16 y fina **λ/24**. La malla λ/32 se declara no viable (coste medido: ~3,8 M incógnitas, ~2,4 h y más de 30 GB por factorización). El criterio de convergencia (diferencia de E_max entre mallas < 0,005) se mantiene. Si no se cumple, el resultado es no concluyente.
+4. **Decisión:** sin cambios respecto a la sección 6, aplicada al régimen de esta enmienda.
+
+**Alcance declarado.** La validación cubre el interferómetro con divisores a 45° y w ≥ 8λ. No cubre incidencias ±10°, haces estrechos ni otras geometrías. Esta enmienda se decidió con JEV (procedencia `jev`; confianza 1,0 en ambas decisiones).
