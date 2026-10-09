@@ -193,3 +193,7 @@ Requirement-by-requirement acceptance reviewed, stale historicalstatements repla
 ## 2026-10-09T13:40:19.252040+00:00 — actual resident GPU first attempt NULL
 
 SharedFIFOadmitted13:37:27, fullactual133stategraph+independentaudit reached; nativeGPUlocalcoefficients/shadercompile reached; Blender framebuffermax6 rejects8attachments. Original120pins/profiledc077d1 preserved; allrawSHAverified. Newv2two4modepasses+5inputecho plannedbeforedeadline13:55, newfreeze/publicationbeforeexecution required. Noresidentinference/speedclaim.
+
+## 2026-10-09T13:41:44.879350+00:00 — resident GPUv2 prepared, NOT_EXECUTED
+
+ActualBlender6attachmentceiling handledbynewv2(two4modeoutputpasses+5inputbit-echo) withallnumericgates unchanged; v1NULLsource preserved/published1d0d31e/raw163hashes. JEVprovenancejev recommendsseparatefrozenv2. 123pins/profile83db9d5d7c893063d49bb6a80dab56371067828bd09cee8232ff130019000748. PublishverifybeforeFIFO/nativeexecution; deadline13:55UTC.
