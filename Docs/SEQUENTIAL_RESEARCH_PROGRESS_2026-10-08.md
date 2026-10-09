@@ -113,3 +113,7 @@ Frozen 95f58608/profile90f7701c/81 pins verified before FIFO. Full 36.618470 s/R
 ## 2026-10-09T09:08:56.544562+00:00 — observed native graphics fields independently certified
 
 Frozen ba108e9/profile91c35578/32 pins verified preanalysis. All450 recorded outputs (three exactly equal repetitions) and4coherence controls bounded independently; unique150argmax separated/137correct13wrong/27of30test. RecordedfieldL1<=9.97352e-14/power<=7.15062e-15; idealencoderfield<=9.97449e-14/power<=7.09173e-15, margin>=.00021119712011813. Full21.017427s/RSS105.49MiB. All raw hashes verified; archive ready for publish before next milestone. Not universal GPU rounding/physical/gradient certification. Goalactive13:55UTC.
+
+## 2026-10-09T09:41:00.055632+00:00 — captured-surface native graphics derivative audit PASS
+
+Frozen699f01e publishedmain+branch beforeFIFO;88pins. Full336.924254s/RSS434.86MiB;16params5probes21,280queries/32independentFDgeom audits296.745830s. field6.5773e-14/Jacfield5.7353e-12/Jacpower9.2771e-13/lossgrad5.4321e-12;FDscaled<=2.6588e-9/all8084GLstageszeroerrors/bitfield+Jac echoes/zeroexact. ExplicithybridCPUtopology/originjets/merges/power-loss; noGPUfulltraining/OptiX/AMD/physical/speed claim. Raw hashesverified/archive ready; publishbeforeOptiXtrial. Goalactive13:55UTC.

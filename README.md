@@ -25,6 +25,9 @@ normalizadas; las unidades Blender todavía no son una calibración física.
 Topología exacta y fusión coherente permanecen en CPU. AMD, fidelidad física de
 la red completa, reproducción por expertos y novedad excepcional siguen abiertos.
 
+
+Los [gradientes ópticos en shaders desde geometría](Docs/NATIVE_GRAPHICS_GEOMETRY_GRADIENT_PROTOCOL_2026-10-09.md) también pasan: 16 parámetros, cinco sondas y32 geometrías perturbadas auditadas. Discrepancia máxima de Jacobiano de campo **5,74×10⁻¹²**; diferencias finitas escaladas **≤2,66×10⁻⁹**. La CPU conserva topología, tangentes afines, fusiones y pérdida; este ensayo aún no constituye entrenamiento completo en el motor gráfico.
+
 ## Funcionamiento verificado de la red
 
 ![Recorrido del campo coherente observado en GPU](Docs/assets/captured-gpu-coherent-network-2026-10-09.gif)
