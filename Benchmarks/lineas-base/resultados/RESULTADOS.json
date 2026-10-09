@@ -1,0 +1,288 @@
+{
+ "schema": "p0-4.resultados",
+ "preregistro": "PREREGISTRO-P0-4.md",
+ "bootstrap": {
+  "n": 10000,
+  "seed": 0,
+  "unit": "particion"
+ },
+ "decision_rule": {
+  "superior": "IC95 inferior > 0 y p Wilcoxon (Holm sobre 2 lineas base) < 0.05, frente a ambas lineas base",
+  "equivalente": "IC95 contenido en [-0.02, +0.02]",
+  "otro": "inferior_o_inconcluso"
+ },
+ "wine_seeds_per_partition": [
+  1,
+  3
+ ],
+ "wine_seeds_used_in_analysis": [
+  1049
+ ],
+ "wine_k0_extra_seeds_test_accuracy": {
+  "1049": 0.8918918918918919,
+  "1050": 0.8378378378378378,
+  "1051": 0.6756756756756757
+ },
+ "datasets": {
+  "iris": {
+   "n_partitions": 10,
+   "test_accuracy_per_partition": {
+    "optico": [
+     0.9,
+     1.0,
+     1.0,
+     0.9666666666666667,
+     0.9666666666666667,
+     0.9333333333333333,
+     0.9666666666666667,
+     0.9666666666666667,
+     0.9,
+     0.9
+    ],
+    "linear": [
+     0.9,
+     1.0,
+     1.0,
+     0.9666666666666667,
+     0.9666666666666667,
+     0.9666666666666667,
+     0.9333333333333333,
+     0.9666666666666667,
+     0.8666666666666667,
+     0.9
+    ],
+    "quadratic": [
+     0.9,
+     1.0,
+     1.0,
+     0.9666666666666667,
+     0.9666666666666667,
+     0.9666666666666667,
+     0.9333333333333333,
+     0.9666666666666667,
+     0.8666666666666667,
+     0.9
+    ]
+   },
+   "descriptives": {
+    "optico": {
+     "mean": 0.95,
+     "std": 0.0392837100659193,
+     "min": 0.9,
+     "max": 1.0,
+     "n": 10
+    },
+    "linear": {
+     "mean": 0.9466666666666667,
+     "std": 0.04499657051403685,
+     "min": 0.8666666666666667,
+     "max": 1.0,
+     "n": 10
+    },
+    "quadratic": {
+     "mean": 0.9466666666666667,
+     "std": 0.04499657051403685,
+     "min": 0.8666666666666667,
+     "max": 1.0,
+     "n": 10
+    }
+   },
+   "comparisons": {
+    "linear": {
+     "paired_diff_optical_minus_baseline": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.033333333333333326,
+      0.033333333333333326,
+      0.0,
+      0.033333333333333326,
+      0.0
+     ],
+     "mean_diff": 0.0033333333333333327,
+     "ci95_bootstrap": [
+      -0.006666666666666665,
+      0.01333333333333333
+     ],
+     "wilcoxon_p_raw": 1.0,
+     "wilcoxon_method": "scipy.stats.wilcoxon bilateral, zero_method=wilcox, method=auto",
+     "wilcoxon_p_holm": 1.0,
+     "classification": "equivalente"
+    },
+    "quadratic": {
+     "paired_diff_optical_minus_baseline": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.033333333333333326,
+      0.033333333333333326,
+      0.0,
+      0.033333333333333326,
+      0.0
+     ],
+     "mean_diff": 0.0033333333333333327,
+     "ci95_bootstrap": [
+      -0.006666666666666665,
+      0.01333333333333333
+     ],
+     "wilcoxon_p_raw": 1.0,
+     "wilcoxon_method": "scipy.stats.wilcoxon bilateral, zero_method=wilcox, method=auto",
+     "wilcoxon_p_holm": 1.0,
+     "classification": "equivalente"
+    }
+   },
+   "dataset_classification": "equivalente",
+   "dataset_classification_note": "superior/equivalente solo si se cumple frente a las dos lineas base; el detalle por linea base esta en comparisons"
+  },
+  "wine": {
+   "n_partitions": 10,
+   "test_accuracy_per_partition": {
+    "optico": [
+     0.8918918918918919,
+     0.8918918918918919,
+     0.7837837837837838,
+     0.8378378378378378,
+     0.8648648648648649,
+     0.918918918918919,
+     0.8648648648648649,
+     0.8108108108108109,
+     0.918918918918919,
+     0.8378378378378378
+    ],
+    "linear": [
+     0.8918918918918919,
+     0.918918918918919,
+     0.7837837837837838,
+     0.8648648648648649,
+     0.8648648648648649,
+     0.8918918918918919,
+     0.8648648648648649,
+     0.7837837837837838,
+     0.8648648648648649,
+     0.8108108108108109
+    ],
+    "quadratic": [
+     0.8918918918918919,
+     0.918918918918919,
+     0.7837837837837838,
+     0.8648648648648649,
+     0.8648648648648649,
+     0.8918918918918919,
+     0.8648648648648649,
+     0.7837837837837838,
+     0.918918918918919,
+     0.8378378378378378
+    ]
+   },
+   "descriptives": {
+    "optico": {
+     "mean": 0.8621621621621622,
+     "std": 0.04495486468423299,
+     "min": 0.7837837837837838,
+     "max": 0.918918918918919,
+     "n": 10
+    },
+    "linear": {
+     "mean": 0.854054054054054,
+     "std": 0.04628912640960407,
+     "min": 0.7837837837837838,
+     "max": 0.918918918918919,
+     "n": 10
+    },
+    "quadratic": {
+     "mean": 0.8621621621621622,
+     "std": 0.04843127948005627,
+     "min": 0.7837837837837838,
+     "max": 0.918918918918919,
+     "n": 10
+    }
+   },
+   "comparisons": {
+    "linear": {
+     "paired_diff_optical_minus_baseline": [
+      0.0,
+      -0.027027027027027084,
+      0.0,
+      -0.027027027027027084,
+      0.0,
+      0.027027027027027084,
+      0.0,
+      0.027027027027027084,
+      0.05405405405405406,
+      0.027027027027026973
+     ],
+     "mean_diff": 0.008108108108108103,
+     "ci95_bootstrap": [
+      -0.005405405405405439,
+      0.02432432432432431
+     ],
+     "wilcoxon_p_raw": 0.5625,
+     "wilcoxon_method": "scipy.stats.wilcoxon bilateral, zero_method=wilcox, method=auto",
+     "wilcoxon_p_holm": 1.0,
+     "classification": "inferior_o_inconcluso"
+    },
+    "quadratic": {
+     "paired_diff_optical_minus_baseline": [
+      0.0,
+      -0.027027027027027084,
+      0.0,
+      -0.027027027027027084,
+      0.0,
+      0.027027027027027084,
+      0.0,
+      0.027027027027027084,
+      0.0,
+      0.0
+     ],
+     "mean_diff": 0.0,
+     "ci95_bootstrap": [
+      -0.010810810810810834,
+      0.010810810810810834
+     ],
+     "wilcoxon_p_raw": 1.0,
+     "wilcoxon_method": "scipy.stats.wilcoxon bilateral, zero_method=wilcox, method=auto",
+     "wilcoxon_p_holm": 1.0,
+     "classification": "equivalente"
+    }
+   },
+   "dataset_classification": "inferior_o_inconcluso",
+   "dataset_classification_note": "superior/equivalente solo si se cumple frente a las dos lineas base; el detalle por linea base esta en comparisons"
+  }
+ },
+ "cpu_seconds": {
+  "iris_optical_total": 345.53125,
+  "wine_optical_total_process": 4353.6875,
+  "wine_seed_training_cpu_per_run": [
+   358.17111060000025,
+   374.47156579999137,
+   376.90366829998675,
+   371.3102666999912,
+   358.2848445999989,
+   356.6353882000112,
+   352.64242399999057,
+   357.2049713000015,
+   359.017068000001,
+   353.54992160000256,
+   360.2841914000019,
+   356.9496325999935
+  ]
+ },
+ "wine_worker_status": [
+  "PASS",
+  "PASS",
+  "PASS",
+  "PASS",
+  "PASS",
+  "PASS",
+  "PASS",
+  "PASS",
+  "PASS",
+  "PASS"
+ ],
+ "wine_runs_not_pass": [],
+ "wine_baseline_predictions_identical_to_worker": true
+}

@@ -1,0 +1,20 @@
+{
+  "demo_sha256": "6b5b32434679ae4da9410afbeeeee2c25a614eaf4b2776892aa8fb907617592d",
+  "stub_import_ok": true,
+  "cpu_s_original": 34.34375,
+  "cpu_s_numeric": 34.171875,
+  "loss_original": 0.043710367060916036,
+  "loss_numeric": 0.043710367060916036,
+  "loss_abs_diff": 0.0,
+  "params_max_abs_diff": 0.0,
+  "train_acc": 0.975,
+  "test_acc": 1.0,
+  "equivalent_below_1e-12": true,
+  "trained_lattice_same_split_and_scaler": true,
+  "trained_lattice_params_max_abs_diff": 6.45283930439245,
+  "trained_lattice_saved_train_acc": 0.975,
+  "trained_lattice_saved_test_acc": 0.9666666666666667,
+  "trained_lattice_loss_of_saved_params": 0.04306181793969568,
+  "note_published_0.309707": "La cifra 0,309707 pertenece al protocolo de geometria capturada (Wine/Iris con 61 estados auditados), no a train() del demo; no hay cifra de perdida publicada de train() en el repo para comparar.",
+  "cpu_s_total": 68.546875
+}
