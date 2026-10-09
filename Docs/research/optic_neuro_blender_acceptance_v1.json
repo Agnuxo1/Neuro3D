@@ -24,15 +24,16 @@
     {
       "id": 3,
       "name": "Frozen pilot and captured-scene traversal",
-      "status": "AUTHORIZED_GITHUB_PILOT_NOT_EXECUTED",
+      "status": "FROZEN_PILOT_EXECUTED_INCONCLUSIVE_DEADLINE",
       "acceptance": "Valid external registration or explicit human GitHub exception, then execute unchanged archived protocol and independent categorical audit",
       "proposal_id": "957514f2-a233-421f-aa04-50cccd063d97",
       "protocol_sha256": "5d0cf372f2f66f043c2a219ba6a60f0182ced8a60039348d486ec163be736226",
       "result_collected": false,
-      "achieved": "Pinned supervisor and independent local-ledger auditor prepared;16 new controls,66 total PASS;real preflight and missing-registration negative did not start worker",
-      "remaining": "Execute unchanged pilot when host free RAM meets frozen4000MiB threshold; retain refusal and audit actual result; external route remains separate",
-      "latest_attempt": "Docs/validation/captured-pilot-execution-2026-10-09/attempt01/supervisor.json",
-      "latest_attempt_status": "NOT_EXECUTED_HOST_RAM_PREFLIGHT"
+      "achieved": "Authorized frozen worker executed once; pins,90s supervisor limit,raw preimages and cleanup audited; prior RAM refusal retained",
+      "remaining": "New prospective traversal work required; no field result from frozen pilot; external registry still pending",
+      "latest_attempt": "Docs/validation/captured-pilot-execution-2026-10-09/attempt02/supervisor.json",
+      "latest_attempt_status": "WORKER_DEADLINE",
+      "primary_metric": null
     },
     {
       "id": 4,
