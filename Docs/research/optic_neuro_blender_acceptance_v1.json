@@ -58,7 +58,7 @@
       "name": "Capacity, stability, physical fidelity",
       "status": "PARTIAL_CAPACITY_STABILITY_AND_DECLARED_WAVE_REGIME_CHARACTERIZED",
       "acceptance": "State restricted function family; compare analytic and independent wave references over declared regime; physical-model error quantified or unknown",
-      "achieved": "Restrictedquadraticcapacity and3seedWinevariability; originalGaussianwindownegativepreserved; separatelyfrozenlargerwindow36casespassallsamegates,observedradialfieldmax9.292e-8L64. Fullnetworkphysicalfidelityunknown",
+      "achieved": "Restrictedquadraticcapacity and3seedWinevariability; originalGaussianwindownegativepreserved; separatelyfrozenlargerwindow36casespassallsamegates,observedradialfieldmax9.292e-8L64. Fullnetworkphysicalfidelityunknown; independentcontinuous16Dpairedtranslation boxes x1/10/100/1000 prove133states and13699competitors each,decisioncoverage147/131/40/0 of150, unknownretained",
       "remaining": "Parameter/input/nativeuncertaintyrobustness andfullnetworkwave model/physicalmeasurements; declaredGaussianfamilydoesnotderivecapturedmode"
     },
     {
@@ -123,5 +123,6 @@
   "latest_wave_remedial": "Docs/validation/gaussian-wave-remedial-2026-10-09/attempt01/worker/result.json",
   "latest_external_cpu_result": "Docs/validation/external-cpu-reproduction-2026-10-09/attempt02/artifact/result.json",
   "latest_own_addon_lifecycle": "Docs/validation/own-addon-lifecycle-2026-10-09/attempt01/worker/result.json",
-  "latest_native_training_batch_certificate": "Docs/validation/native-training-batch-certificate-2026-10-09/analysis01/worker/certificate.json"
+  "latest_native_training_batch_certificate": "Docs/validation/native-training-batch-certificate-2026-10-09/analysis01/worker/certificate.json",
+  "latest_conditional_parameter_box_analysis": "Docs/validation/native-parameter-boxes-2026-10-09/analysis01/worker/certificate.json"
 }

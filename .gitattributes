@@ -134,5 +134,6 @@ Docs/validation/external-cpu-reproduction-2026-10-09/** -text !eol whitespace=cr
 *.yml text eol=lf
 Docs/validation/own-addon-lifecycle-2026-10-09/** -text !eol whitespace=cr-at-eol
 Docs/validation/native-training-batch-certificate-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/native-parameter-boxes-2026-10-09/** -text !eol whitespace=cr-at-eol
 Docs/research/external_cpu_reproduction_profile_v2_2026-10-09.json -text !eol whitespace=cr-at-eol
 Docs/research/external_cpu_reproduction_registration_v2_2026-10-09.json -text !eol whitespace=cr-at-eol
