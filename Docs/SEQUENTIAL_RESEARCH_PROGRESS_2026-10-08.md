@@ -157,3 +157,7 @@ Frozen50248df9/107pins: 58of61 actual native states complete; currentloss0.31936
 ## 2026-10-09T11:48:39.758665+00:00 — complete actual native graphics learning PASS
 
 fullnativeGPUdeferred60updates/61actualcaptures/62cachegenerations/familyproofPASS, train110/120,test27/30, all150nativeCPU/shadowdecisionssame, quantizedshadowpositionsEXACT0, field8.99309e-14/Jac7.60358e-12/lossgrad1.03455e-11, full3066.598s/RSS499.45MiB; allrawSHAverified; actualnewBlendsavereopen. Independentobservedfinal150certificate/newscalingprofilepreparednotyetexecuted. CPUoptimizer/topology/mergeexplicit/no speed/RT/AMD/physical/humanexpertclaim. Goalactive13:55UTC.
+
+## 2026-10-09T11:53:54.386260+00:00 — final observed native GPU learning field certificate
+
+independentfinalnativeGPUtrained150field/power/encoder intervalanalysis metric1, fieldL19.97449e-14/power7.09172e-15, argmax150/150 correct137wrong13UNKNOWN0; full19.822942s/RSS36.86MiB/23sourcepins/allrawhashesverified. No universaltraininggradient/preimage/physical certificate. Newscalingd72b1d77/116pins frozen notyetexecuted. Goalactive13:55UTC.
