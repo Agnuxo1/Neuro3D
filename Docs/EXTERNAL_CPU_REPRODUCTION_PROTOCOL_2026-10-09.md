@@ -1,6 +1,6 @@
 # Repetición CPU en un entorno Linux de GitHub
 
-Estado: PRIMER WORKFLOW RECHAZADO ANTES DE CREAR JOBS; no se ejecutó el worker científico ni se obtuvo una réplica. Esta prueba prevé un entorno de ejecución externo al ordenador de desarrollo, con nuestro mismo código y protocolo. No se denomina reproducción realizada o interpretada por un investigador independiente.
+Estado: REPRODUCCIÓN CPU EN LINUX GITHUB COMPLETADA con el perfil v2. El primer workflow fallido permanece archivado. Se ejecutó nuestro código en un entorno externo al ordenador de desarrollo; la réplica realizada e interpretada por un investigador independiente sigue pendiente.
 
 ## Perfil y límites fijados
 
@@ -36,6 +36,25 @@ Esta receta no ejecuta Blender nativo ni CUDA/AMD y no puede validar hardware fo
 
 Publicado `62c9c5d5194d81382793d5f06a25871d37e16447`, fuentes/perfil/recibo byte a byte verificados localmente. El [run GitHub 37886493361](https://github.com/Agnuxo1/Neuro3D/actions/runs/37886493361) terminó inmediatamente con fallo y cero jobs/artefactos. El parser YAML local identifica `--only-binary=:all:` dentro de un escalar de comando sin bloque: el último `:` seguido de espacio provoca sintaxis inválida. Se conservan [metadatos primarios, preimágenes Git y recibo del operador](validation/external-cpu-reproduction-2026-10-09/attempt01/evidence_index.json), con métrica nula y sin ejecución científica. La corrección usará bloque literal de comando y un perfil nuevo publicado; no se considerará este intento reproducción externa.
 
-## Perfil v2 con sintaxis corregida, todavía no ejecutado
+## Perfil v2 con sintaxis corregida y resultado completo
 
 [Perfil v2](research/external_cpu_reproduction_profile_v2_2026-10-09.json), UUID `67ba33d3-4006-43d9-b3cf-e0eae2fc1d6a`, SHA-256 `cee34399e9d6a0529cdae293677551ae8341640853a0e60c628fe510ded42fef`. Cambia únicamente el hash del workflow por el uso de bloques literales y rutas de perfil/recibo versionadas. Los otros 37 pins, datos, controles, software científico, ruedas de dependencias, versiones y límites son los mismos. Un parser YAML confirma ahora la sintaxis antes de publicar. La ejecución sigue exigiendo igualdad con todos los blobs Git antes de obtener datos.
+
+Publicado antes del ensayo en `bbc06c3ace138d98873df9ba0a4d83252ebfefc8`. El [run 37886830249](https://github.com/Agnuxo1/Neuro3D/actions/runs/37886830249), job `113678593248`, verificó los 40 blobs —38 pins, perfil y autorización— antes de ejecutar la ciencia. El recibo local de las 05:05:45 UTC se obtuvo después del inicio del run y no se usa como prueba de ese orden: la comprobación autoritativa es la etapa del propio runner.
+
+| Medida observada | Resultado |
+|---|---:|
+| Controles adversos CPU | 34/34 pasan |
+| Recomposición racional independiente | Certificado reproducido |
+| Estados geométricos del entrenamiento auditados | 61/61 |
+| Aciertos entrenamiento / evaluación | 110/120 / 27/30 |
+| Predicciones iguales a referencia Windows | 150/150 |
+| Máxima diferencia de potencia entre runtimes | 3,885780586188048×10⁻¹⁶ |
+| Tiempo total del ejecutor científico | 367,366 s |
+| RSS agregado propio máximo | 88,289 MiB |
+
+El entorno real fue Linux x86_64, kernel `6.17.0-1022-azure`, Python 3.12.12 y las tres versiones fijadas. Los tiempos incluyen controles, certificado y entrenamiento dentro del worker; el checkout, instalación y subida del artefacto se miden separadamente en los metadatos del job y no se ocultan como cómputo neuronal.
+
+Se descargó el artefacto GitHub `11596084252`, cuyo ZIP tiene SHA-256 `84691994ad4c34285f14a032998da461c817d31bcc7e893d5f9b8f5dd7fdbae8`, y se verificaron todos los hashes internos. [Archivo permanente de resultados, logs, metadatos primarios y preimágenes](validation/external-cpu-reproduction-2026-10-09/attempt02/evidence_index.json). El estado es `VALID_EXTERNAL_CPU_REPRODUCTION_RESULT`, métrica 1. Un fallo temporal HTTP403 del enlace de descarga del conector se resolvió usando el acceso GitHub existente; no altera el resultado ni los bytes de evidencia.
+
+Para repetir exactamente este perfil, utilice el commit fijado anterior y sustituya en los comandos las rutas originales por `external_cpu_reproduction_profile_v2_2026-10-09.json` y `external_cpu_reproduction_registration_v2_2026-10-09.json`. Cualquier modificación científica exige un perfil nuevo publicado. No se ejecutó Blender nativo ni GPU en Linux y no se obtuvo revisión especializada, calibración física o registro externo/IPFS.
