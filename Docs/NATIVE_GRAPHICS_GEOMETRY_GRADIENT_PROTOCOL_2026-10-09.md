@@ -1,0 +1,13 @@
+# Native graphics optical derivatives from captured geometry
+
+This new bounded trial is frozen and published on main before execution under the explicit continuing GitHub authorization. External/IPFS registration remains pending. Native Blender 4.5.14 and the fixed RTX 3090 execute under the shared GPU FIFO.
+
+The shader derives the intersection parameter and its translation derivative from captured plane normals, offsets, object displacement tangents and current ray origins/directions. It derives phase and complex-field derivatives through propagation, splitter/mirror branching and terminal reference phase in FP64. Incoming fields and tangents are supplied by explicit CPU compensated coherent accumulation, not a precomputed optical matrix. Exact CPU affine origin/displacement tangents and topology admission are declared parts of this hybrid model. Power differentiation and cross-entropy chain rule remain CPU.
+
+Each selected surface is checked against the independently admitted graph. Two actual draws verify bit-exact incoming field and derivative echoes, with identical selected geometry. Five probes are fixed: native Iris rows 0, 74, 149; a declared bounded complex input; and zero input. All16 paired-mirror world-X parameters are differentiated. Field agreement remains 1e-11, field/power Jacobian absolute agreement 1e-9, loss-gradient agreement 1e-8. A separately evaluated central finite difference at 1e-7 BU must agree within 1e-4 scaled discrepancy; all32 perturbed represented geometries receive independent full neighbourhood/nearest/branch audits. Zero input must have exactly zero field/power geometry gradients.
+
+The five probe labels define a diagnostic loss, not a new classifier training or generalization experiment. CPU finite differences use exact virtual materialized geometry, not fresh native Blender saves at each offset. These numerical controls do not rigorously enclose every unobserved derivative or physical optical model. No GPU training claim follows from a derivative test.
+
+Resources:480seconds, oneCPUcore, free RAM4,000MiB/floor2,500MiB, ownedRSS2,000MiB/evidence128MiB; sampled GPUmemory2,048MiB/temperature80C. Failure or deadline gives no accepted gradient result; original trials and thresholds are retained.
+
+[Profile](research/native_graphics_gradient_profile_2026-10-09.json), [registration](research/native_graphics_gradient_registration_2026-10-09.json), [previous verified graphical fields](NATIVE_GRAPHICS_COHERENT_FIELD_PROTOCOL_2026-10-09.md), [independent observed field certificates](NATIVE_GRAPHICS_FIELD_CERTIFICATE_PROTOCOL_2026-10-09.md).
