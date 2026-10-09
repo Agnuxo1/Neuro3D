@@ -58,6 +58,15 @@ generalización y fidelidad física. El nuevo perfil conserva los dos ensayos in
 
 ![Recorrido y detectores de la captura real](Docs/assets/captured-coherent-graph-2026-10-09.png)
 
+El [primer entrenamiento propio desde la captura](Docs/CAPTURED_GEOMETRY_TRAINING_PROTOCOL_2026-10-09.md)
+también pasa: 16 traslaciones de parejas de espejos, 60 actualizaciones y 61
+estados geométricos auditados independientemente. Se borraron los retardos
+históricos antes del ensayo. La pérdida bajó de 6,26 a 0,31; el último estado
+acierta 110/120 filas de entrenamiento y 27/30 reservadas. Iris ya fue utilizado
+en el proyecto; faltan comparaciones y conjuntos independientes.
+
+![Entrenamiento propio y matriz de errores](Docs/assets/captured-own-geometry-training-2026-10-09.png)
+
 El [ejecutor y auditor del piloto](Docs/CAPTURED_PILOT_SUPERVISOR_2026-10-08.md)
 están preparados con fuentes/inputs fijados, límites de recursos y negativa por
 registro ausente. Pasan 66 controles conjuntos de software. El piloto se ejecutó
