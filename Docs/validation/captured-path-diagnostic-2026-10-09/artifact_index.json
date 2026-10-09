@@ -1,0 +1,81 @@
+{
+  "files": [
+    {
+      "path": "attempt01/profile.json",
+      "bytes": 2782,
+      "sha256": "f15da7e118a2b340f53528bf6207e4fc3c9f0fe5cc2b72228dab2127c0ed9948"
+    },
+    {
+      "path": "attempt01/registration.json",
+      "bytes": 896,
+      "sha256": "d5ddf19788594296877a5edf8eb19385e1184c4520a01153d3e8870827667dd7"
+    },
+    {
+      "path": "attempt01/result.json",
+      "bytes": 139580,
+      "sha256": "10231caa40af79faa3414cce920260eafb14169b01f7a881fb2be7486a45a63b"
+    },
+    {
+      "path": "attempt01/source/Blender/benchmarks/capacity_audit/exact_object_index_v1.py",
+      "bytes": 3618,
+      "sha256": "ce7313f7702b46ed987943a2808957e0da4fb313a09e54a7f77a9c1b2b5126d2"
+    },
+    {
+      "path": "attempt01/source/Blender/benchmarks/capacity_audit/robust_multipath_v1.py",
+      "bytes": 16867,
+      "sha256": "26dcbe7bb61dbf98430cd481292970d5631e79aec9fc9794ba672611f559d4d8"
+    },
+    {
+      "path": "attempt01/source/Blender/blender_lab/scalar_scene_ingress_v1.py",
+      "bytes": 10227,
+      "sha256": "a2f53daa2f34ea71585bc9e9c3d742a02e66651cff2dee450dba09274b30d3d3"
+    },
+    {
+      "path": "attempt01/source/Blender/blender_lab/scene_capture_v1.py",
+      "bytes": 13990,
+      "sha256": "fe676b61a9e743277d69b54890688555a604f659c7f23ee223703b907ad8a2d0"
+    },
+    {
+      "path": "attempt01/source/Docs/validation/captured-scalar-ingress-2026-10-08/scene.json",
+      "bytes": 1184286,
+      "sha256": "59963192f88df24bf5b1d7fd2f8119a81a0ecad353f62ee16831ccfb98627097"
+    },
+    {
+      "path": "attempt01/source/Tools/audit_captured_pilot_result_v1.py",
+      "bytes": 9836,
+      "sha256": "a3f683ab11aa07eb52aefb4046ba89516321bb175ef01697c39131234b3ac686"
+    },
+    {
+      "path": "attempt01/source/Tools/bind_network_capture_v1.py",
+      "bytes": 2085,
+      "sha256": "af3bdbc41636214f01c2078ce26bd271794fa763ccefecd2a006f1014d2f117b"
+    },
+    {
+      "path": "attempt01/source/Tools/diagnose_captured_paths_v1.py",
+      "bytes": 2492,
+      "sha256": "fc0854946b5bf84fd1b57c544eeb5a52d538c1214899e501d1a71f8cebda9e51"
+    },
+    {
+      "path": "attempt01/source/Tools/run_frozen_path_diagnostic_v1.py",
+      "bytes": 8135,
+      "sha256": "4a144f3bd8225852581fe962fda7f2c74b8fd5899c92a7ae1659624febbc04ba"
+    },
+    {
+      "path": "attempt01/source/Tools/trace_indexed_scene_v1.py",
+      "bytes": 1732,
+      "sha256": "e1ce3a4cf1c83234897de221cc28833017e76863c4ac88e2ead3957f1bac13ac"
+    },
+    {
+      "path": "attempt01/supervisor.json",
+      "bytes": 3290,
+      "sha256": "948612fb736dec3962beaaec2f14b9ad7428ac5ef078aadbbbdbf6cd4026d100"
+    },
+    {
+      "path": "attempt01/worker.stdout",
+      "bytes": 8611,
+      "sha256": "fdffc8d91f6a3b7559ba9c80399eb39ac118714d6e8dc26aabb051478a88661c"
+    }
+  ],
+  "primary_metric": 0,
+  "diagnostic_only": true
+}
