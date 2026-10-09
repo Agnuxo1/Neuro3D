@@ -83,3 +83,5 @@ Se verifican rechazo tras cambiar entradas o geometría, cancelación real de un
 ![Entrenamiento y potencias observados en el complemento instalado](assets/own-blender-addon-native-training-2026-10-09.png)
 
 **Limitación de ciclo de vida conservada:** después de que el script finalizase sus nueve puertas y llamase directamente a `unregister()`, Blender volvió a desregistrar el módulo habilitado durante el cierre. El registro contiene un `RuntimeError` de doble desregistro. No cambia la pérdida, las potencias ni la métrica de esas nueve puertas, pero la gestión de registro/desregistro idempotente sigue pendiente. Se corregirá en otra versión y se evaluará con un protocolo breve específico, conservando este registro completo.
+
+Actualización posterior: [ZIP 0.1.2 y ensayo específico de ciclo de vida](OWN_ADDON_LIFECYCLE_PROTOCOL_2026-10-09.md) superan cinco controles nativos y salida completa sin traceback/desregistro. Sólo cambia la gestión del ciclo de vida; el payload científico y datos son idénticos a 0.1.1. El registro fallido anterior permanece intacto.

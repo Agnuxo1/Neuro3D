@@ -1,0 +1,5 @@
+{"status": "PASS", "action": "INFER", "seconds": 39.93406110000069, "decision": "det.R1"}
+Blender 4.5.14 LTS (hash 62c1db4208e8 built 2026-09-15 01:33:49)
+Read blend: "D:\PROJECTS\.cognition\neuro3d-sequential-20261008\own-addon-lifecycle-20261009-run01\worker\jobs\optic-neuro-d345dce1862945b9bbf0226dbb86ff17\snapshot.blend"
+
+Blender quit

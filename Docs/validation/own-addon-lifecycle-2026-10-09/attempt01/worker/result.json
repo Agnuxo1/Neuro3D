@@ -1,0 +1,39 @@
+{
+  "schema": "optic_neuro_blender.native_addon_lifecycle.v1",
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "unchanged_scientific_worker_vendor_and_data_bytes",
+      "pass": true,
+      "changed_package_files": [
+        "optic_neuro_blender/__init__.py",
+        "optic_neuro_blender/INSTALL.txt",
+        "optic_neuro_blender/package_manifest.json"
+      ]
+    },
+    {
+      "name": "three_direct_duplicate_register_unregister_cycles",
+      "pass": true
+    },
+    {
+      "name": "two_actual_blender_enable_disable_cycles",
+      "pass": true
+    },
+    {
+      "name": "disabling_addon_cancels_owned_blender_job",
+      "pass": true
+    },
+    {
+      "name": "native150_inference_after_enable_disable",
+      "pass": true,
+      "power_max_difference": 0.0
+    }
+  ],
+  "archive_sha256": "7b1b747ea6148f6f924a55d7b24a5d065db696295297563f5309904962d9f65f",
+  "previous_archive_sha256": "2e247000af5cdbc88c6fe43c6d6dae454c8a6bfb92a68c5766a9d7be7fd7903f",
+  "profile_sha256": "d51dad2d9c138f81fad04a7df3f1b31daa94d3f3b2b436d80d6d20e0260b5731",
+  "seconds": 64.1245041000002,
+  "blender_version": "4.5.14 LTS",
+  "training_reexecuted": false,
+  "scope": "Actual local Blender lifecycle regression and native150 inference; unchanged training worker/core/data independently byte-checked against ZIP0.1.1; no new training, human usability, physical or independent expert claim"
+}
