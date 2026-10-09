@@ -68,3 +68,10 @@ Los números 4, 5 y 8 no entran en el criterio mecánico de inclusión del proto
 ## Lectura conjunta
 
 Los componentes C1, C2 y C4 (en su forma parcial: trazado de rayos diferenciable sobre geometría) aparecen por separado y, en el caso de C1+C2, también juntos en diseño inverso de dispositivos nanofotónicos (métodos 3 a 5). Ningún resultado combina esos dos con certificados de intervalo sobre la salida de la red (C3), ni con una escena leída desde una herramienta estándar como Blender (C4). Los trabajos 1 y 2 tocan cotas, pero sobre aproximación teórica o sobre el error de un simulador, no sobre la salida de la red óptica.
+
+## Corrección (2026-10-09, revisión en profundidad)
+
+- Método 4: la nota «registro de título casi idéntico» (doi:10.1002/nap2.70302) es incorrecta. Los títulos del preprint (arXiv:2604.21301) y del registro de revista son distintos. Coinciden los autores. Solo puede afirmarse que son posiblemente la misma línea de trabajo; no está demostrado que sean el mismo trabajo. Las cifras de resultados también difieren entre las dos versiones.
+- Método 3: el preprint arXiv:2409.18284 es de 2024 y la versión de revista (ACS Photonics 12(3), 2025) es posterior. Se citan ambas.
+- Todas las afirmaciones se contrastaron solo con resúmenes. Antes de afirmar «primer trabajo» hay que leer el texto completo de los métodos 1 a 5.
+- Detalle en `PROFUNDIDAD-METODOS-P1-6.md` y `IDENTIDADES-PROFUNDIDAD-P1-6.json`.

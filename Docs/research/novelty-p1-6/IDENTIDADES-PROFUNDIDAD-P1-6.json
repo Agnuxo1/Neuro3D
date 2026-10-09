@@ -1,0 +1,117 @@
+{
+ "fecha": "2026-10-09",
+ "fuentes": "OpenAlex (DOI), arXiv API, WebFetch editorial",
+ "nota": "Las marcas C1-C4 siguen el protocolo: sobre resumen; donde no hubo resumen se dice.",
+ "records": [
+  {
+   "record_id": "R027",
+   "title_screening": "On the degree of standard geometric predicates for line transversals in 3D",
+   "identifier": {
+    "doi": "10.1016/j.comgeo.2007.11.002",
+    "arxiv": null
+   },
+   "year": 2008,
+   "venue": "Computational Geometry",
+   "first_author": "Hazel Everett",
+   "n_authors": 4,
+   "title_match": true,
+   "matched_via": "OpenAlex por DOI (W2049799129); sin registro en arXiv",
+   "marks": {
+    "C1": "no",
+    "C2": "no",
+    "C3": "no",
+    "C4": "no"
+   },
+   "marks_source": "solo titulo y venue (OpenAlex no devuelve resumen); geometria computacional sin relacion con redes opticas",
+   "verifiable": "parcial: identidad confirmada, marcas sin resumen"
+  },
+  {
+   "record_id": "R031",
+   "title_screening": "Accurate and Robust Geometric Algorithms for Regridding on the Sphere",
+   "identifier": {
+    "doi": "10.5194/gmd-19-6545-2026 (el cribado traia el DOI de preprint 10.5194/egusphere-2026-636)",
+    "arxiv": null
+   },
+   "year": 2026,
+   "venue": "Geoscientific Model Development",
+   "first_author": "Hongyu Chen",
+   "n_authors": 8,
+   "title_match": true,
+   "matched_via": "OpenAlex por DOI de preprint; devuelve version publicada con DOI distinto",
+   "marks": {
+    "C1": "no",
+    "C2": "no",
+    "C3": "no",
+    "C4": "no"
+   },
+   "marks_source": "resumen (OpenAlex): algoritmos geometricos de remallado en la esfera con formulas estables en coma flotante y caracterizacion de error; sin redes opticas ni certificados sobre una salida de red",
+   "verifiable": "si"
+  },
+  {
+   "record_id": "R040",
+   "title_screening": "Three-dimensional photonic neural networks: computing beyond the planar limit",
+   "identifier": {
+    "doi": "10.2738/foe.2026.0020",
+    "arxiv": null
+   },
+   "year": 2026,
+   "venue": "Frontiers of Optoelectronics 19(2), art. 20",
+   "first_author": "Yizhi Wang",
+   "n_authors": 2,
+   "title_match": true,
+   "matched_via": "OpenAlex por DOI y pagina de la editorial (journal.hep.com.cn)",
+   "marks": {
+    "C1": "parcial",
+    "C2": "no",
+    "C3": "no",
+    "C4": "no"
+   },
+   "marks_source": "pagina de la editorial: es un comentario sin resumen formal sobre un dispositivo 3D escrito con laser en vidrio con fases programables; la geometria queda fija por fabricacion, se entrena en los desfasadores; sin cotas ni escena",
+   "verifiable": "si (comentario, no articulo de investigacion)"
+  },
+  {
+   "record_id": "R041",
+   "title_screening": "Programmable photonic circuits",
+   "identifier": {
+    "doi": "10.1038/s41586-020-2764-0",
+    "arxiv": null
+   },
+   "year": 2020,
+   "venue": "Nature",
+   "first_author": "Wim Bogaerts",
+   "n_authors": 8,
+   "title_match": true,
+   "matched_via": "OpenAlex por DOI; la pagina de Nature redirige a un muro de autenticacion y no se pudo leer",
+   "marks": {
+    "C1": "no verificable",
+    "C2": "no verificable",
+    "C3": "no verificable",
+    "C4": "no verificable"
+   },
+   "marks_source": "sin resumen accesible (OpenAlex sin resumen, editorial inaccesible, sin preprint en arXiv encontrado). Pista no verificada: revision de mallas programables, probable C1 parcial",
+   "verifiable": "parcial: identidad confirmada, marcas no verificables"
+  },
+  {
+   "record_id": "R056",
+   "title_screening": "Single-chip photonic deep neural network with forward-only training",
+   "identifier": {
+    "doi": "10.1038/s41566-024-01567-z",
+    "arxiv": null
+   },
+   "year": 2024,
+   "venue": "Nature Photonics",
+   "first_author": "Saumil Bandyopadhyay",
+   "n_authors": 9,
+   "title_match": true,
+   "matched_via": "OpenAlex por DOI; editorial inaccesible (muro de autenticacion); busquedas en arXiv por titulo sin resultados",
+   "marks": {
+    "C1": "no verificable",
+    "C2": "no verificable",
+    "C3": "no verificable",
+    "C4": "no verificable"
+   },
+   "marks_source": "sin resumen accesible. Pista no verificada: entrenamiento de los parametros de fase del chip, no de geometria de escena",
+   "verifiable": "parcial: identidad confirmada, marcas no verificables"
+  }
+ ]
+}
