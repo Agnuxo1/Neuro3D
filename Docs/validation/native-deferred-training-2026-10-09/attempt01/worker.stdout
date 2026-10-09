@@ -1,0 +1,71 @@
+addon_utils.disable: optic_neuro_blender not loaded
+Modules Installed (optic_neuro_blender) from 'D:\\PROJECTS\\Neuro3D-Scientific-20261008\\Blender\\releases\\optic-neuro-blender-0.1.2.zip' into 'D:\\PROJECTS\\.cognition\\neuro3d-sequential-20261008\\native-deferred-full-training-attempt01-20261009\\isolated_scripts\\addons'
+Info: Modules Installed (optic_neuro_blender) from 'D:\\PROJECTS\\Neuro3D-Scientific-20261008\\Blender\\releases\\optic-neuro-blender-0.1.2.zip' into 'D:\\PROJECTS\\.cognition\\neuro3d-sequential-20261008\\native-deferred-full-training-attempt01-20261009\\isolated_scripts\\addons'
+{"native_graphics_step": 0, "train_loss": 6.255440538348442, "field_max_difference": 6.772587951110447e-14, "loss_gradient_max_difference": 8.640199666842818e-12}
+{"native_graphics_step": 1, "train_loss": 4.757272827018314, "field_max_difference": 6.507882314593345e-14, "loss_gradient_max_difference": 1.0345502232667059e-11}
+{"native_graphics_step": 2, "train_loss": 3.2676795523354536, "field_max_difference": 6.548982030558727e-14, "loss_gradient_max_difference": 1.0118128557223827e-11}
+{"native_graphics_step": 3, "train_loss": 2.0562786280459013, "field_max_difference": 7.040639850423333e-14, "loss_gradient_max_difference": 8.29913915367797e-12}
+{"native_graphics_step": 4, "train_loss": 1.3033543819175368, "field_max_difference": 7.559357260635642e-14, "loss_gradient_max_difference": 5.087485988042317e-12}
+{"native_graphics_step": 5, "train_loss": 0.9602861054411533, "field_max_difference": 7.988882560959434e-14, "loss_gradient_max_difference": 4.831690603168681e-12}
+{"native_graphics_step": 6, "train_loss": 0.8919869747362427, "field_max_difference": 8.413440190754221e-14, "loss_gradient_max_difference": 3.0409841311751507e-12}
+{"native_graphics_step": 7, "train_loss": 0.9309577345656727, "field_max_difference": 8.69503998922157e-14, "loss_gradient_max_difference": 2.851052727237402e-12}
+{"native_graphics_step": 8, "train_loss": 0.9824975794798918, "field_max_difference": 8.891254641248381e-14, "loss_gradient_max_difference": 2.715161429023283e-12}
+{"native_graphics_step": 9, "train_loss": 1.013747849312513, "field_max_difference": 8.981574324837911e-14, "loss_gradient_max_difference": 2.6290081223123707e-12}
+{"native_graphics_step": 10, "train_loss": 1.0155566892814574, "field_max_difference": 8.993091332264442e-14, "loss_gradient_max_difference": 2.7853275241795927e-12}
+{"native_graphics_step": 11, "train_loss": 0.9900723296682643, "field_max_difference": 8.984786466208929e-14, "loss_gradient_max_difference": 2.7533531010703882e-12}
+{"native_graphics_step": 12, "train_loss": 0.9456411998229624, "field_max_difference": 8.902400443558696e-14, "loss_gradient_max_difference": 2.6574298317427747e-12}
+{"native_graphics_step": 13, "train_loss": 0.8927972585875749, "field_max_difference": 8.818198524123274e-14, "loss_gradient_max_difference": 2.488675931999751e-12}
+{"native_graphics_step": 14, "train_loss": 0.8411747763159518, "field_max_difference": 8.676376955333595e-14, "loss_gradient_max_difference": 2.178479618919482e-12}
+{"native_graphics_step": 15, "train_loss": 0.7967863855487102, "field_max_difference": 8.537869511763018e-14, "loss_gradient_max_difference": 2.1085355683680973e-12}
+{"native_graphics_step": 16, "train_loss": 0.7605643822573552, "field_max_difference": 8.422898088703369e-14, "loss_gradient_max_difference": 1.971756091734278e-12}
+{"native_graphics_step": 17, "train_loss": 0.729075270347719, "field_max_difference": 8.313473264818098e-14, "loss_gradient_max_difference": 1.8758328224066645e-12}
+{"native_graphics_step": 18, "train_loss": 0.6983382380843141, "field_max_difference": 8.252337369263916e-14, "loss_gradient_max_difference": 1.907807245515869e-12}
+{"native_graphics_step": 19, "train_loss": 0.6666393619178141, "field_max_difference": 8.229536624246909e-14, "loss_gradient_max_difference": 1.91491267287347e-12}
+{"native_graphics_step": 20, "train_loss": 0.6353089927011132, "field_max_difference": 8.283171653327883e-14, "loss_gradient_max_difference": 1.9131363160340698e-12}
+{"native_graphics_step": 21, "train_loss": 0.6086242437598172, "field_max_difference": 8.30258300587883e-14, "loss_gradient_max_difference": 1.6857626405908377e-12}
+{"native_graphics_step": 22, "train_loss": 0.591451194707142, "field_max_difference": 8.319690154923851e-14, "loss_gradient_max_difference": 1.6484591469634324e-12}
+{"native_graphics_step": 23, "train_loss": 0.5851868769908937, "field_max_difference": 8.298213907088822e-14, "loss_gradient_max_difference": 1.6511236822225328e-12}
+{"native_graphics_step": 24, "train_loss": 0.5839097395305444, "field_max_difference": 8.295071746063916e-14, "loss_gradient_max_difference": 1.730171561575844e-12}
+{"native_graphics_step": 25, "train_loss": 0.5791170744306593, "field_max_difference": 8.263815617667968e-14, "loss_gradient_max_difference": 1.673328142715036e-12}
+{"native_graphics_step": 26, "train_loss": 0.5697015856693656, "field_max_difference": 8.171671831030865e-14, "loss_gradient_max_difference": 1.4956924587750109e-12}
+{"native_graphics_step": 27, "train_loss": 0.5619584506079248, "field_max_difference": 7.984298506584413e-14, "loss_gradient_max_difference": 1.7355006320940447e-12}
+{"native_graphics_step": 28, "train_loss": 0.5604300292769869, "field_max_difference": 7.863138528913872e-14, "loss_gradient_max_difference": 1.9806378759312793e-12}
+{"native_graphics_step": 29, "train_loss": 0.5604703658832567, "field_max_difference": 7.723276191135319e-14, "loss_gradient_max_difference": 1.8616219676914625e-12}
+{"native_graphics_step": 30, "train_loss": 0.553553930141035, "field_max_difference": 7.647363030455884e-14, "loss_gradient_max_difference": 1.8740564655672642e-12}
+{"native_graphics_step": 31, "train_loss": 0.5386287722955703, "field_max_difference": 7.607225688231613e-14, "loss_gradient_max_difference": 1.7568169141668477e-12}
+{"native_graphics_step": 32, "train_loss": 0.5224069296240129, "field_max_difference": 7.561018206590935e-14, "loss_gradient_max_difference": 1.212363542890671e-12}
+{"native_graphics_step": 33, "train_loss": 0.5101457665713712, "field_max_difference": 7.582115398285425e-14, "loss_gradient_max_difference": 1.1652900866465643e-12}
+{"native_graphics_step": 34, "train_loss": 0.499162570474955, "field_max_difference": 7.561797891044273e-14, "loss_gradient_max_difference": 1.0182965581861936e-12}
+{"native_graphics_step": 35, "train_loss": 0.483979226567206, "field_max_difference": 7.433816363099917e-14, "loss_gradient_max_difference": 9.977574322306282e-13}
+{"native_graphics_step": 36, "train_loss": 0.464273153639101, "field_max_difference": 7.291288022616583e-14, "loss_gradient_max_difference": 1.0089706847793423e-12}
+{"native_graphics_step": 37, "train_loss": 0.4439163715437985, "field_max_difference": 7.12599092563647e-14, "loss_gradient_max_difference": 1.5516476992161188e-12}
+{"native_graphics_step": 38, "train_loss": 0.42594647779907285, "field_max_difference": 6.958481610155195e-14, "loss_gradient_max_difference": 1.3464784842653899e-12}
+{"native_graphics_step": 39, "train_loss": 0.41036657959756345, "field_max_difference": 6.75438964847137e-14, "loss_gradient_max_difference": 2.007283228522283e-12}
+{"native_graphics_step": 40, "train_loss": 0.39620489914539037, "field_max_difference": 6.558933809970516e-14, "loss_gradient_max_difference": 2.6219026949547697e-12}
+{"native_graphics_step": 41, "train_loss": 0.38396331748913304, "field_max_difference": 6.595050091911071e-14, "loss_gradient_max_difference": 3.5638159090467525e-12}
+{"native_graphics_step": 42, "train_loss": 0.3750270992603514, "field_max_difference": 6.638353886160993e-14, "loss_gradient_max_difference": 4.6700421307832585e-12}
+{"native_graphics_step": 43, "train_loss": 0.3693669739366051, "field_max_difference": 6.707954744084491e-14, "loss_gradient_max_difference": 5.8619775700208265e-12}
+{"native_graphics_step": 44, "train_loss": 0.36475795797217203, "field_max_difference": 6.85379304104628e-14, "loss_gradient_max_difference": 6.377121053446899e-12}
+{"native_graphics_step": 45, "train_loss": 0.35905991241869895, "field_max_difference": 6.938800644546453e-14, "loss_gradient_max_difference": 6.906475391588174e-12}
+{"native_graphics_step": 46, "train_loss": 0.3526965493682114, "field_max_difference": 7.039242992451461e-14, "loss_gradient_max_difference": 7.034373084024992e-12}
+{"native_graphics_step": 47, "train_loss": 0.34846866240554536, "field_max_difference": 7.225259879898913e-14, "loss_gradient_max_difference": 7.58504370423907e-12}
+{"native_graphics_step": 48, "train_loss": 0.3479800761052658, "field_max_difference": 7.317719480612069e-14, "loss_gradient_max_difference": 7.597478202114871e-12}
+{"native_graphics_step": 49, "train_loss": 0.349077850620393, "field_max_difference": 7.362530437028686e-14, "loss_gradient_max_difference": 7.267964008406125e-12}
+{"native_graphics_step": 50, "train_loss": 0.34814515289405656, "field_max_difference": 7.412337321264084e-14, "loss_gradient_max_difference": 8.15170153600775e-12}
+{"native_graphics_step": 51, "train_loss": 0.3443857242141271, "field_max_difference": 7.481638841515909e-14, "loss_gradient_max_difference": 9.351464047568925e-12}
+{"native_graphics_step": 52, "train_loss": 0.3402415189979854, "field_max_difference": 7.463954751788851e-14, "loss_gradient_max_difference": 8.057554623519536e-12}
+{"native_graphics_step": 53, "train_loss": 0.3373363827094829, "field_max_difference": 7.438630970298823e-14, "loss_gradient_max_difference": 7.769784815536696e-12}
+{"native_graphics_step": 54, "train_loss": 0.33408167650585785, "field_max_difference": 7.470885336804635e-14, "loss_gradient_max_difference": 8.459011269223993e-12}
+{"native_graphics_step": 55, "train_loss": 0.32882866923135556, "field_max_difference": 7.512709891387166e-14, "loss_gradient_max_difference": 8.750333790885634e-12}
+{"native_graphics_step": 56, "train_loss": 0.3231608858809322, "field_max_difference": 7.486048705821621e-14, "loss_gradient_max_difference": 7.865708084864309e-12}
+{"native_graphics_step": 57, "train_loss": 0.31936364995121985, "field_max_difference": 7.524298509064797e-14, "loss_gradient_max_difference": 7.364553411548513e-12}
+{"native_graphics_step": 58, "train_loss": 0.31665709253416147, "field_max_difference": 7.542788965333048e-14, "loss_gradient_max_difference": 6.720846101870848e-12}
+{"native_graphics_step": 59, "train_loss": 0.31317638828542993, "field_max_difference": 7.541879921766587e-14, "loss_gradient_max_difference": 7.030820370346191e-12}
+{"native_graphics_step": 60, "train_loss": 0.3097066721119895, "field_max_difference": 7.501049965432942e-14, "loss_gradient_max_difference": 6.632111526627682e-12}
+Info: Saved copy as "trained_graphics_geometry.blend"
+{"status": "VALID_NATIVE_GRAPHICS_GEOMETRY_TRAINING", "primary_metric": 1, "seconds": 3064.332147699999, "train_correct": 110, "test_correct": 27}
+Read blend: "D:\PROJECTS\Neuro3D-Scientific-20261008\Docs\validation\own-blender-addon-2026-10-09\attempt03\worker\jobs\optic-neuro-326edc59834b425d92ea2a99f43faa61\trained_geometry.blend"
+Read blend: "D:\PROJECTS\.cognition\neuro3d-sequential-20261008\native-deferred-full-training-attempt01-20261009\worker\trained_graphics_geometry.blend"
+Saved session recovery to "D:\PROJECTS\.cognition\neuro3d-sequential-20261008\native-deferred-full-training-attempt01-20261009\temporary\quit.blend"
+
+Blender quit

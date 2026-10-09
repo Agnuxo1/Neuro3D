@@ -166,3 +166,9 @@ Docs/validation/native-deferred-state-2026-10-09/**/worker.stdout -text !eol -wh
 
 Docs/validation/external-installed-blender-recovery-2026-10-09/** -text !eol whitespace=cr-at-eol
 Docs/validation/external-installed-blender-recovery-2026-10-09/**/*.stdout -text !eol -whitespace
+
+Docs/validation/native-deferred-training-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/native-deferred-training-2026-10-09/**/*.stdout -text !eol -whitespace
+Docs/validation/native-deferred-training-certificate-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/native-graphics-scaling-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/native-graphics-scaling-2026-10-09/**/*.stdout -text !eol -whitespace

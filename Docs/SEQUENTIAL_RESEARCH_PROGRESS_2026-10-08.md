@@ -145,3 +145,15 @@ Frozen d6986c4/425317fc/102pins. Deferredandforward120inputs/16params/sameactual
 ## 2026-10-09T11:04:04.214276+00:00 — fresh external Linux0.1.3 installed host recovery PASS
 
 Run37919893102/job113785020096/sourcefb690da/profile9ff0569c/49preverifiedGitblobs. ActualofficialnativeBlender, ownhostkill12/worker-selfexit9/controller-onlysubreaper/freshResume. All61coords-lossfloathex and150powers exactbaseline/test27of30; stale-corrupt-4forged-applyNEWsave-reopen/logcleanPASS. Outer652.831612/RSS787.05, officialprep20.981/native630.903. Artifact11611358901/ZIPe46daecc/11702543bytes plusallouterandinnerhashes verified/permanentarchive. NotGPU/AMD/humanreview/powerloss. Fullnativegraphicslearning4e72544/50248df9/107pins runningactualGPU; state0 numericalparityPASS, restpending. Goalactive13:55UTC.
+
+## 2026-10-09T11:22:50.330182+00:00 — native GPU learning progress, complete result pending
+
+Immutable4e72544/50248df9/107pins. Actual28of61capturedstates numericalgatesPASS; loss6.255440538348442 to0.5619584506079248, maxlossgrad1.035e-11<=1e-8, CPUshadowposeexact0. Finaloutcome/notyetknown. Newobservedfinal150certificateandpairedtiled1/150/4096costscalingpreparednotexecuted; originalGPUkernelpreserved. Native0.1.3Linuxownerrecoveryrawalreadymain dc47ad9. Goalactive13:55UTC.
+
+## 2026-10-09T11:45:16.927153+00:00 — native graphics training progress, still provisional
+
+Frozen50248df9/107pins: 58of61 actual native states complete; currentloss0.31936364995121985; maximumlossgradientdiscrepancy1.0345502232667059e-11; CPUshadowcoordinatesexact0. Finalsave/reopen150outcome stillpending. Independentfinalcertificate/scalingprotocol codepreparedbutnotfrozen/notexecuted. Goalactive13:55UTC.
+
+## 2026-10-09T11:48:39.758665+00:00 — complete actual native graphics learning PASS
+
+fullnativeGPUdeferred60updates/61actualcaptures/62cachegenerations/familyproofPASS, train110/120,test27/30, all150nativeCPU/shadowdecisionssame, quantizedshadowpositionsEXACT0, field8.99309e-14/Jac7.60358e-12/lossgrad1.03455e-11, full3066.598s/RSS499.45MiB; allrawSHAverified; actualnewBlendsavereopen. Independentobservedfinal150certificate/newscalingprofilepreparednotyetexecuted. CPUoptimizer/topology/mergeexplicit/no speed/RT/AMD/physical/humanexpertclaim. Goalactive13:55UTC.
