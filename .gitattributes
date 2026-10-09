@@ -148,3 +148,5 @@ Docs/validation/geometry-reuse-training-2026-10-09/** -text !eol whitespace=cr-a
 Docs/validation/native-graphics-geometry-2026-10-09/** -text !eol whitespace=cr-at-eol
 
 Docs/validation/native-graphics-frontier-2026-10-09/** -text !eol whitespace=cr-at-eol
+
+Docs/validation/training-recovery-2026-10-09/** -text !eol whitespace=cr-at-eol

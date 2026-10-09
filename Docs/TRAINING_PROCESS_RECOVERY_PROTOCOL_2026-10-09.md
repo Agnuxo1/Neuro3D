@@ -11,3 +11,9 @@ Three meaningful software controls cover atomic round-trip, invalid identity/int
 [Profile](research/training_recovery_profile_2026-10-09.json) and [authorization](research/training_recovery_registration_2026-10-09.json) are published and byte-verified before any actual interruption. External/IPFS remains pending without identifiers.
 
 This is research-worker process recovery. It does not yet establish an installed Blender resume interface, survival of a whole Blender host crash, operating-system or power-loss durability, physical fidelity, or external independent reproduction.
+
+## Attempt 01: metadata failure before the recovery stages
+
+Frozen `6534318d8fa61814cc5237440d5b82d0e0438a73`, 38 pins published and byte-verified before execution. The uninterrupted prerequisite worker failed in 99.8353 seconds while constructing its final result: the optimizer checkpoint identity had shadowed the affine-expression certificate identity, causing `KeyError: status`. Progress and atomic checkpoints are preserved, but there is no completed scientific result and no actual interruption/resume stage yet. The primary metric remains null. [Evidence](validation/training-recovery-2026-10-09/attempt01/evidence_index.json).
+
+The [prospective v2 profile](research/training_recovery_profile_v2_2026-10-09.json) gives the affine and checkpoint identities distinct names. Optimization, native quantization, crash step, four adversaries and every acceptance/resource gate are unchanged. [Authorization](research/training_recovery_registration_v2_2026-10-09.json) and the revised source pins must be published and byte-verified before execution.
