@@ -86,3 +86,7 @@ Frozenbea19eb/profile232eefdd/source33publishedverifiedbeforeanalysis. Independe
 ## 2026-10-09T06:38:33.656077+00:00 — whole original training family certified
 
 Frozen19fbf26/profile1ad1f3c9/source30verifiedpreexecution. All133statetopologies/competitorsexcluded acrossoriginalboxincluding±.035+nativeallowance+initialFD;0issues. Exact1251scalarbase+16coefficientidentitiesmatchproducer. Full71.9677s/RSS49.160MiB. Needpublishbeforefreshoptimizedtrainer/protocol/fullcostpair. Articletexbuild02twopdflatexpasses9pagesworks butneedslatestfamilycontentregenerationlater. Goalactiveuntil13:55UTC.
+
+## 2026-10-09T06:52:15.565855+00:00 — verified exact training equivalence with fresh continuous proof, observed cost reduction
+
+Frozenaaf32b/profile7ab66f8c/source34verifiedpreexecution. Original393.1103s/continuous90.9292s,observed4.3233ratio/full484.3170/RSS70.129MiB. Every61coordinate/loss exactsame,150powers/predictionssame,27of30. Freshwholeproofcostincluded; singlepairsharedmachine/noCI/energy/notinstalledaddon. Allrawhashesverifiedarchivepreparedneedpublish. Recoveryv3/checkpoint/wrappercodepreparednotfrozen/executed; JEVconnectedprovenancejev. HomeAssistantrecheck06:50zeroHA/nooldpythonexperiments; currentonlyownpython, RAM6223MiB, activeCodex/ChatGPT/browserpreserved. Article/manual/reviewerpacketprepared, needfinalPDFcurrentcompile/publication. Goalactiveuntil13:55UTC.

@@ -445,3 +445,14 @@ la variación relativa de norma cuadrada queda acotada por 3.07e-19.
 La prueba se refiere al modelo escalar representado y no calibra potencia física.
 
 ![Gram del operador completo y alcance de la prueba](Docs/assets/native-operator-gram-2026-10-09.png)
+
+La [optimización con una prueba geométrica continua nueva](Docs/GEOMETRY_REUSE_TRAINING_PROTOCOL_2026-10-09.md)
+reduce el coste completo observado de **393,11 s a 90,93 s (4,32×)** en una pareja CPU.
+Mantiene exactamente las coordenadas y la pérdida de los 61 estados, las 150 potencias
+y decisiones, y 27/30 aciertos. Incluye toda la prueba y reconstrucción; es una pareja,
+sin intervalo estadístico de velocidad. El ZIP 0.1.2 conserva su entrenador original.
+
+![Coste completo de reutilizar una prueba continua](Docs/assets/geometry-reuse-training-2026-10-09.png)
+
+[Guía de instalación y uso](Docs/OPTIC_NEURO_BLENDER_USER_GUIDE_2026-10-09.md) ·
+[Paquete de reproducción y crítica especializada pendiente](Docs/EXTERNAL_SPECIALIST_REVIEW_PACKET_2026-10-09.md)
