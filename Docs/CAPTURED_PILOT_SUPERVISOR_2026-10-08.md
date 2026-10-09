@@ -2,13 +2,13 @@
 
 Continuación verificada el 2026-10-09 (Europe/Madrid). Las rutas `2026-10-08` conservan la identidad del protocolo y del conjunto de trabajo original.
 
-Se prepara un ejecutor y un auditor separado para el protocolo ya publicado. La comprobación real de preflight verifica las entradas y fuentes fijadas; una invocación sin registro termina sin iniciar el worker. **No se ha ejecutado el piloto ni obtenido su métrica.** El siguiente paso dependiente sigue siendo la decisión de registro.
+Se prepara un ejecutor y un auditor separado para el protocolo ya publicado. La comprobación real de preflight verifica las entradas y fuentes fijadas; una invocación sin registro termina sin iniciar el worker. **No se ha ejecutado el piloto ni obtenido su métrica.** El propietario ha [autorizado posteriormente la vía GitHub y conserva la vía externa/IPFS](PILOT_REGISTRATION_DUAL_ROUTE_2026-10-09.md); la siguiente ejecución puede usar ese recibo humano nuevo tras verificar recursos.
 
 ## Identidad y autorización pendiente
 
 El protocolo se identifica por UUID `957514f2-a233-421f-aa04-50cccd063d97`, commit publicado `f22e7a1307e3a3b4c74a507463a0a8055d45fc04` y SHA256 `5d0cf372f2f66f043c2a219ba6a60f0182ced8a60039348d486ec163be736226`. El ejecutor comprueba sus bytes y los cinco pins de sus tres inputs y dos fuentes. No acepta un protocolo cambiado ni amplía sus límites desde la CLI.
 
-La [skill científica aplicada](C:/Users/Windows-500GB/.codex/plugins/cache/claude-cowork/anthropic-skills/1.0.0/skills/scientific-research-procedure/SKILL.md) establece en la fase 2: «`preregId` issued, `ipfsCid` recorded, all mandatory fields locked». La continuación del propietario conserva expresamente la necesidad de registro externo o autorización humana para el protocolo congelado en GitHub. La pregunta concreta presentada en este chat aún no ha recibido esa elección; «continúa» no se registró como excepción.
+La [skill científica aplicada](C:/Users/Windows-500GB/.codex/plugins/cache/claude-cowork/anthropic-skills/1.0.0/skills/scientific-research-procedure/SKILL.md) establece en la fase 2: «`preregId` issued, `ipfsCid` recorded, all mandatory fields locked». La continuación del propietario permite registro externo o autorización humana para el protocolo congelado en GitHub. La elección estuvo pendiente durante los controles archivados; la autorización explícita posterior se conserva en un recibo separado, sin modificar aquellos controles.
 
 El [formulario preparado](research/captured_pilot_registration_prepared_v1.json) tiene `approved=false` y no es autorización. El ejecutor requiere una referencia verificable al mensaje humano directo para una excepción GitHub, con preregId/IPFS nulos y divulgados; o un recibo externo real, verificado por su proveedor, con ambos IDs. El parser verifica forma e identidad del protocolo, **no autentica la procedencia de un mensaje ni emite un registro**. El operador debe establecer esa procedencia desde evidencia confiable antes de invocarlo. Un texto recuperado, JEV o un formulario rellenado con datos ficticios no autoriza la ejecución. Aquí no se creó ningún registro aprobado.
 
@@ -35,4 +35,4 @@ python -m unittest Blender.tests.test_captured_pilot_supervision_v1 -v
 python Tools/run_captured_scalar_pilot_v1.py --out NUEVO_DIRECTORIO --preflight-only
 ```
 
-Una futura ejecución autorizada usará `--registration RECIBO_VERIFICADO.json` sin `--preflight-only`. No se proporciona un recibo aprobado ficticio ni un comando que omita ese gate. La prioridad 3 sigue `WAITING_REGISTRATION_DECISION`; este cierre corresponde al software preparado y comprobado, no al ensayo pendiente ni al proyecto completo.
+Una futura ejecución autorizada usará `--registration RECIBO_VERIFICADO.json` sin `--preflight-only`. No se proporciona un recibo aprobado ficticio ni un comando que omita ese gate. La prioridad 3 pasa a `AUTHORIZED_GITHUB_PILOT_NOT_EXECUTED` por el mensaje humano posterior; este cierre corresponde al software preparado y comprobado, no al ensayo pendiente ni al proyecto completo.

@@ -24,13 +24,13 @@
     {
       "id": 3,
       "name": "Frozen pilot and captured-scene traversal",
-      "status": "WAITING_REGISTRATION_DECISION",
+      "status": "AUTHORIZED_GITHUB_PILOT_NOT_EXECUTED",
       "acceptance": "Valid external registration or explicit human GitHub exception, then execute unchanged archived protocol and independent categorical audit",
       "proposal_id": "957514f2-a233-421f-aa04-50cccd063d97",
       "protocol_sha256": "5d0cf372f2f66f043c2a219ba6a60f0182ced8a60039348d486ec163be736226",
       "result_collected": false,
       "achieved": "Pinned supervisor and independent local-ledger auditor prepared;16 new controls,66 total PASS;real preflight and missing-registration negative did not start worker",
-      "remaining": "Explicit human GitHub exception or verified external registration; then unchanged pilot execution and result audit"
+      "remaining": "Check resources,execute unchanged pilot using verified human GitHub receipt,and audit result;external registration is retained as separate route"
     },
     {
       "id": 4,
@@ -86,6 +86,9 @@
     "preregId": null,
     "ipfsCid": null,
     "external_registration_obtained": false,
-    "human_exception_received": false
-  }
+    "human_exception_received": true,
+    "authorization_record": "Docs/research/captured_pilot_github_authorization_2026-10-09.json",
+    "external_route_retained": true
+  },
+  "latest_state_date": "2026-10-09"
 }

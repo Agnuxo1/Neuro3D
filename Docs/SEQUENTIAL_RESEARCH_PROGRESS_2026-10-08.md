@@ -15,7 +15,8 @@ parcial de software; no cierra los antiguos puntos de forward/RT/cotas/entrenami
 La prioridad actual 3 dispone de [supervisor y auditor preparados](CAPTURED_PILOT_SUPERVISOR_2026-10-08.md),
 con 16 controles nuevos y 66 conjuntos PASS. El preflight comprueba los cinco pins
 congelados y la negativa por registro ausente no inicia el worker. No hay nuevo
-resultado del piloto; sigue pendiente la elección explícita de registro.
+resultado del piloto. La [autorización posterior del propietario](PILOT_REGISTRATION_DUAL_ROUTE_2026-10-09.md)
+resuelve la excepción GitHub y conserva el objetivo de registro externo/IPFS.
 
 El propietario confirmó el 2026-10-08 el orden siguiente. Se conservan los cierres históricos 1–6 y el mapa original de 26 puntos. Esta secuencia nueva empieza por formular la aportación y revisar antecedentes antes del trazador RT, siguiendo la prioridad científica indicada.
 
