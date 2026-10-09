@@ -81,10 +81,10 @@
     {
       "id": 9,
       "name": "Recovery, Blender interface, clean reproduction",
-      "status": "PARTIAL_STANDALONE_NATIVE_ADDON_FLOW_AND_LIFECYCLE_VERIFIED",
+      "status": "PARTIAL_NATIVE_ADDON_AND_ACTUAL_RESEARCH_WORKER_CRASH_RECOVERY_VERIFIED",
       "acceptance": "Install/edit/run/cancel/save/reopen/export; guarded failure recovery; clean-environment documented reproduction",
-      "achieved": "ZIP0.1.1 isolatedactualinstall/registeredoperators; ownbackgroundBlenderinfer150/training61audits27of30,staleinput/scene,ownedcancel,recover/apply,newcopy/reopen,tamperrejectionPASS9. Originalpreserved;shutdownlogshowsdoubleunregisterRuntimeError retained; separatelyfrozenZIP0.1.2 unchangedscientificpayload,5actualnativecycles/cancel/infercontrols PASS65.04s,wholepostexitlognoerror; actualnativeLinuxBlender run37891059818 all9controls/61trainingaudits27of30/logclean/full685.77s/RSS756.34MiB; version-specificSpanishinstall/coherentinputs/normalization/recovery/resourceguideprepared",
-      "remaining": "Interruptedhost/crashrecovery, humanusabilityandindependentexperts"
+      "achieved": "ZIP0.1.1 isolatedactualinstall/registeredoperators; ownbackgroundBlenderinfer150/training61audits27of30,staleinput/scene,ownedcancel,recover/apply,newcopy/reopen,tamperrejectionPASS9. Originalpreserved;shutdownlogshowsdoubleunregisterRuntimeError retained; separatelyfrozenZIP0.1.2 unchangedscientificpayload,5actualnativecycles/cancel/infercontrols PASS65.04s,wholepostexitlognoerror; actualnativeLinuxBlender run37891059818 all9controls/61trainingaudits27of30/logclean/full685.77s/RSS756.34MiB; version-specificSpanishinstall/coherentinputs/normalization/recovery/resourceguideprepared; actualownworker terminatedatatomiccheckpoint12/nonzerocode/noresult; freshworker repeatswholefamilyproof+exact12prefixreplay/restoresAdam;all61coords/loss+150powers/predictionsidentical,27of30;fouradversariesrejected includingvalidhashforgedstate;full267.222s/RSS56.59MiB",
+      "remaining": "InstalledBlenderresumeUI/wholeBlenderhost-crash/power-lossdurability; humanusabilityandindependentexperts"
     },
     {
       "id": 10,
@@ -130,5 +130,6 @@
   "latest_geometry_reuse_training": "Docs/validation/geometry-reuse-training-2026-10-09/attempt01/supervisor.json",
   "latest_geometry_cuda_training": "Docs/validation/geometry-cuda-training-2026-10-09/attempt01/supervisor.json",
   "latest_external_native_blender": "Docs/validation/external-native-blender-2026-10-09/attempt02/artifact/result.json",
-  "latest_native_graphics_frontier": "Docs/validation/native-graphics-frontier-2026-10-09/attempt01/worker/result.json"
+  "latest_native_graphics_frontier": "Docs/validation/native-graphics-frontier-2026-10-09/attempt01/worker/result.json",
+  "latest_training_process_recovery": "Docs/validation/training-recovery-2026-10-09/attempt02/supervisor.json"
 }
