@@ -169,3 +169,7 @@ Published31591b9/d72b1d77/116pins. Threecompletedmodalfield/power/decisionarms p
 ## 2026-10-09T12:42:59.210841+00:00 — actual native equal-output scaling complete
 
 exactsamefrozenprofile repeat full1/150/4096batchsixpairedCPU/GPUmodaloutputcomparisonsPASS, GPUallpairsSLOWERthanownCPUgeometryDAG, maxfield7.50105e-14/power7.21645e-15, full239.213s/RSS364.48MiB;189wholeGPU powersamples notisolatedenergy; originalRAMfloorNULLretained;116immutablepins reverified72e367e before repeat; rawSHAverified. Next publish all results, actualcostGIF, updatearticle/PDF/integrity thenremaining feasibleGPUengine optimization work. Physical/AMD/human/IPFS/exceptionalnovelty stillopen. Goalactive13:55UTC.
+
+## 2026-10-09T13:01:03.903748+00:00 — updated scientific manuscript and publication integrity
+
+Full native GPU60updates/61actualcaptures and independentfinal150numericcertificate + equal-output1/150/4096scaling included. ActualMiKTeX twoexits0,14pages368032bytes/PDFc0e879bb91746af839a4f645583ce8c43e0318ca265db7b3a03dd99b329224d1, zerooverfull. Local110documentlinks+77animation sourcehashes+allsourceTex/PDF/receipt hashesPASS. Literaturecounts corrected:106eligiblebackgroundnotfullymethodextracted,30selected29papers/discussion1chapter/16inside14outsidecohort, fulltextsnotallreadentirely. Nojournal/expertreview/novelty/AMD/physical/IPFS claim. Sourceversion7cce9f0 alreadybothmain+branch; nextpublishmanuscript thenactualcall-count/CPUpacking optimization auditwhileforeignGPUFIFOheadrequires11GiBRAMwith5GiBfree. Goalactive13:55UTC.

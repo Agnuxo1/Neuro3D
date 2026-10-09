@@ -2,6 +2,7 @@
 *.py text eol=lf
 *.json text eol=lf
 *.md text eol=lf
+*.tex text eol=lf
 *.glsl text eol=lf
 *.comp text eol=lf
 *.hlsl text eol=lf
