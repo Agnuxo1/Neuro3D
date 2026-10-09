@@ -73,6 +73,16 @@ también pasa: guardar, reabrir y recapturar el [archivo entrenado nuevo](Docs/v
 conserva la geometría admitida y reproduce las 150 predicciones. El archivo
 original se mantiene. Es una reproducción local; no una réplica externa.
 
+La [ejecución real NVIDIA del grafo entrenado](Docs/TRAINED_GRAPH_NVIDIA_BENCHMARK_2026-10-09.md)
+verifica campos, potencias y gradientes propios en la RTX 3090. Una referencia
+racional independiente acota las salidas CUDA de 60 entradas: campo L1
+≤ `2,94×10⁻¹⁵`, potencia ≤ `1,39×10⁻¹⁵`; 59 decisiones certificadas y la
+entrada nula indeterminada. Los tiempos muestran CUDA más lento en lotes
+pequeños y más rápido para 2.048 entradas, con un baseline matricial equivalente
+todavía más eficiente para geometría fija. AMD real sigue pendiente.
+
+![Coste medido CPU/CUDA y baseline equivalente](Docs/assets/trained-graph-cpu-cuda-scaling-2026-10-09.png)
+
 El [ejecutor y auditor del piloto](Docs/CAPTURED_PILOT_SUPERVISOR_2026-10-08.md)
 están preparados con fuentes/inputs fijados, límites de recursos y negativa por
 registro ausente. Pasan 66 controles conjuntos de software. El piloto se ejecutó

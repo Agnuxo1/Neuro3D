@@ -69,9 +69,11 @@
     {
       "id": 8,
       "name": "Optimizations, NVIDIA, AMD, complete cost",
-      "status": "OPEN",
+      "status": "PARTIAL_ACTUAL_NVIDIA_COMPLEX128_GRAPH_AND_GRADIENTS_VERIFIED",
       "acceptance": "Equivalent outputs and precision, actual vendor execution receipts, complete preparation/transfer/compute/readout/training cost and resource/ablation evidence",
-      "amd_execution_verified": false
+      "amd_execution_verified": false,
+      "achieved": "ActualRTX3090/CUDA12.4/Torch2.6.0 kernels/readback60inputs; ownfields/powers/manualJacobian parity/autogradcontrol; independentobservedfieldsL1<=2.9356882610688944e-15,power<=1.3807709003001215e-15;59argmaxcertified,zeroUNKNOWN;5repeatsbatches1/150/2048,fullworker6.7155s,source/setup/transfers/readback costs andequivalentdensebaseline measured",
+      "remaining": "ActualAMDhardware; wholetrainingandgeometryGPUcost/energy/structuralscaling/ablations; noGPUtrianglepredicate claimed"
     },
     {
       "id": 9,
@@ -105,5 +107,7 @@
   "latest_output_certificate": "Docs/validation/observed-graph-output-enclosure-2026-10-09/analysis02/certificate.json",
   "latest_neighborhood_audit": "Docs/validation/independent-surface-neighborhood-2026-10-09/audit.json",
   "latest_training_result": "Docs/validation/captured-geometry-training-2026-10-09/attempt01/worker/result.json",
-  "latest_native_blender_reproduction": "Docs/validation/trained-geometry-blender-reproduction-2026-10-09/attempt01/worker/result.json"
+  "latest_native_blender_reproduction": "Docs/validation/trained-geometry-blender-reproduction-2026-10-09/attempt01/worker/result.json",
+  "latest_nvidia_result": "Docs/validation/trained-graph-cuda-2026-10-09/attempt01/worker/result.json",
+  "latest_nvidia_certificate": "Docs/validation/trained-graph-cuda-2026-10-09/attempt01/interval_analysis02/certificate.json"
 }
