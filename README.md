@@ -75,6 +75,8 @@ La supervisión del aprendizaje gráfico completo cuesta **3066.60 s**, incluyen
 
 La [auditoría de paquetes y lecturas](Docs/NATIVE_PACKET_WORKLOAD_PROTOCOL_2026-10-09.md) reconcilia 5.834 lotes con los registros gráficos. Un candidato de empaquetado produce los mismos 5.650 paquetes ópticos byte por byte y mejora la preparación para 150/4096 entradas; empeora el caso de una entrada. Son mediciones locales en CPU, sin integración GPU ni mejora global demostrada.
 
+El [grafo óptico residente experimental](Docs/NATIVE_RESIDENT_OPTICAL_GRAPH_PROTOCOL_2026-10-09.md) deriva coeficientes locales desde superficies GPU y recorre los 133 estados con sumas coherentes en un shader. Los tres intentos nativos están conservados: primero un límite de seis adjuntos de Blender; después una discrepancia de campo **6,38e-8**, superior al límite **1e-11**, aunque las cinco entradas pasan el eco exacto. Esta variante sigue rechazada; el motor híbrido validado conserva su condición de referencia.
+
 ## Instalación, recuperación y reproducción
 
 Usa **Blender 4.5.14 LTS**, instala el ZIP 0.1.3 y abre el panel **OpticNeuro**. El paquete contiene el modelo propio, el ejemplo, datos y manifiesto; usa Python y NumPy incluidos en Blender. [Guía paso a paso](Docs/OPTIC_NEURO_BLENDER_USER_GUIDE_2026-10-09.md).

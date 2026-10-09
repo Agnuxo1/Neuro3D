@@ -205,3 +205,7 @@ Actualnative sixattachments/2outputpasses+fiveinputexactecho reached; initialcoh
 ## 2026-10-09T13:47:36.203091+00:00 — newresidentv3diagnostic protocol NOT_EXECUTED
 
 GPUenginev2 unchanged and1e-11 gatesunchanged; worker nowretains actualcoefficients/fourcontrolfields/inputs beforefailuregate. 125pins/profilef63f3a4ad3d577a464f0c7dbed051452d38b1ccdce503c74604708cfceed3b2f. Publishverifybeforeexecution, deadline13:55UTC.
+
+## 2026-10-09T13:53:10.748087+00:00 — residentv3actualGPUrejection witness retained
+
+125pins/profilef63f3a4 preverifiedf78fcc3/13:48:20; FIFOactualadmitted13:48:53; allfiveinputexactecho pass, controlfieldmax6.376147888196662e-8 exceeds1e-11. All64observedcontrolscalarsonbinary32grid, causeUNKNOWN; actualGPUunitcoefficients andcontrolfields retainedbeforegate. v1/v2/v3NULLs/allrawSHAarchived, no speedadvantage. EarliercompletehybridGPU60updates/61captures and150certificate remainvalid. Next publishlastdiagnostics/updatearticle/finalintegrity before13:55UTC deadline. Fullproject notcomplete.

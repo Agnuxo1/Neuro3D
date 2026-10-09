@@ -1,0 +1,20 @@
+Read blend: "D:\PROJECTS\Neuro3D-Scientific-20261008\Docs\validation\native-deferred-training-2026-10-09\attempt01\worker\trained_graphics_geometry.blend"
+Traceback (most recent call last):
+  File "D:\PROJECTS\Neuro3D-Scientific-20261008\Tools\audit_native_resident_graph_v3.py", line 100, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\PROJECTS\Neuro3D-Scientific-20261008\Tools\audit_native_resident_graph_v3.py", line 92, in main
+    if failure is not None:raise failure
+                           ^^^^^^^^^^^^^
+  File "D:\PROJECTS\Neuro3D-Scientific-20261008\Tools\audit_native_resident_graph_v3.py", line 55, in main
+    need(float(np.max(np.abs(native_controls-cpu_controls)))<=p['field_tolerance'],'Independent coherent controls require equivalent fields')
+  File "D:\PROJECTS\Neuro3D-Scientific-20261008\Tools\audit_captured_pilot_result_v1.py", line 12, in need
+    raise ValueError(message)
+ValueError: Independent coherent controls require equivalent fields
+addon_utils.disable: optic_neuro_blender not loaded
+Modules Installed (optic_neuro_blender) from 'D:\\PROJECTS\\Neuro3D-Scientific-20261008\\Blender\\releases\\optic-neuro-blender-0.1.2.zip' into 'D:\\PROJECTS\\.cognition\\neuro3d-sequential-20261008\\native-resident-graph-v3-attempt01-20261009\\isolated_scripts\\addons'
+Info: Modules Installed (optic_neuro_blender) from 'D:\\PROJECTS\\Neuro3D-Scientific-20261008\\Blender\\releases\\optic-neuro-blender-0.1.2.zip' into 'D:\\PROJECTS\\.cognition\\neuro3d-sequential-20261008\\native-resident-graph-v3-attempt01-20261009\\isolated_scripts\\addons'
+
+Error: script failed, file: 'D:\PROJECTS\Neuro3D-Scientific-20261008\Tools\audit_native_resident_graph_v3.py', exiting.
+
+Blender quit

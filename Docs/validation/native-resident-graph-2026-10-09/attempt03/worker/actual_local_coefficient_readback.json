@@ -1,0 +1,4162 @@
+{
+  "rows": [
+    {
+      "object": "c00.bs1",
+      "primitive_id": 8,
+      "distance_BU": 1.0,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c01.bs1",
+      "primitive_id": 392,
+      "distance_BU": 1.0,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c00.bs1",
+      "primitive_id": 39,
+      "distance_BU": 0.9999998807907104,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c10.bs1",
+      "primitive_id": 1575,
+      "distance_BU": 0.9999999403953552,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c20.bs1",
+      "primitive_id": 3111,
+      "distance_BU": 0.9999998807907104,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c00.r1",
+      "primitive_id": 264,
+      "distance_BU": 2.011037588119507,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -0.7690056711762474,
+        -0.6392419555213573
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c00.m2",
+      "primitive_id": 231,
+      "distance_BU": 1.999999761581421,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -1.0,
+        -0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c01.r1",
+      "primitive_id": 648,
+      "distance_BU": 2.025648593902588,
+      "first_jacobian_reim": [
+        0.0,
+        -0.0
+      ],
+      "first_reim": [
+        0.04074107778339731,
+        -0.9991697376227162
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c01.m2",
+      "primitive_id": 615,
+      "distance_BU": 1.9999998807907104,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -1.0,
+        -0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c10.m2",
+      "primitive_id": 1767,
+      "distance_BU": 1.999999761581421,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -1.0,
+        -0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c10.r1",
+      "primitive_id": 1800,
+      "distance_BU": 1.989414095878601,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -0.7868399661241101,
+        0.6171570851167547
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c20.m2",
+      "primitive_id": 3303,
+      "distance_BU": 1.9999998807907104,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -1.0,
+        -0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c20.r1",
+      "primitive_id": 3336,
+      "distance_BU": 2.014116048812866,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -0.6317772377425913,
+        -0.7751499995938471
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c00.r2",
+      "primitive_id": 344,
+      "distance_BU": 0.4999999701976776,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -1.0,
+        -0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c00.bs2",
+      "primitive_id": 72,
+      "distance_BU": 1.0,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c01.r2",
+      "primitive_id": 728,
+      "distance_BU": 0.5,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -1.0,
+        -0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c01.bs2",
+      "primitive_id": 456,
+      "distance_BU": 1.0,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c10.bs2",
+      "primitive_id": 1608,
+      "distance_BU": 1.0,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c10.r2",
+      "primitive_id": 1880,
+      "distance_BU": 0.5,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -1.0,
+        -0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c20.bs2",
+      "primitive_id": 3144,
+      "distance_BU": 1.0,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c20.r2",
+      "primitive_id": 3416,
+      "distance_BU": 0.5,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -1.0,
+        -0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c00.f1",
+      "primitive_id": 183,
+      "distance_BU": 1.0110374689102173,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -0.7690056711762474,
+        -0.6392419555213573
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c10.bs1",
+      "primitive_id": 1544,
+      "distance_BU": 3.0167996883392334,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.3484136761153245,
+        0.6153112304320519
+      ],
+      "second_reim": [
+        -0.6153112304320519,
+        0.3484136761153245
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c01.bs1",
+      "primitive_id": 423,
+      "distance_BU": 2.0227997303009033,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.09743382542506519,
+        0.7003617991174547
+      ],
+      "second_reim": [
+        -0.7003617991174547,
+        0.09743382542506519
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c01.f1",
+      "primitive_id": 567,
+      "distance_BU": 1.0256484746932983,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        0.04074107778339731,
+        -0.9991697376227162
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c11.bs1",
+      "primitive_id": 1928,
+      "distance_BU": 3.0167996883392334,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.3484136761153245,
+        0.6153112304320519
+      ],
+      "second_reim": [
+        -0.6153112304320519,
+        0.3484136761153245
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c02.bs1",
+      "primitive_id": 807,
+      "distance_BU": 2.0490000247955322,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        -0.7057122016713937,
+        0.04438793092850895
+      ],
+      "second_reim": [
+        -0.04438793092850895,
+        -0.7057122016713937
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c20.bs1",
+      "primitive_id": 3080,
+      "distance_BU": 3.039799690246582,
+      "first_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "first_reim": [
+        -0.5667852221126362,
+        0.4227936990953501
+      ],
+      "second_reim": [
+        -0.4227936990953501,
+        -0.5667852221126362
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c11.bs1",
+      "primitive_id": 1959,
+      "distance_BU": 2.0227997303009033,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.09743382542506519,
+        0.7003617991174547
+      ],
+      "second_reim": [
+        -0.7003617991174547,
+        0.09743382542506519
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c10.f1",
+      "primitive_id": 1719,
+      "distance_BU": 0.9894141554832458,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -0.7868399661241101,
+        0.6171570851167547
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c30.bs1",
+      "primitive_id": 4616,
+      "distance_BU": 3.069000005722046,
+      "first_jacobian_reim": [
+        0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -0.26029328231798504,
+        -0.6574552510856763
+      ],
+      "second_reim": [
+        0.6574552510856763,
+        -0.26029328231798504
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c21.bs1",
+      "primitive_id": 3495,
+      "distance_BU": 2.0228002071380615,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.09741284214804896,
+        0.7003647179753125
+      ],
+      "second_reim": [
+        -0.7003647179753125,
+        0.09741284214804896
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c20.f1",
+      "primitive_id": 3255,
+      "distance_BU": 1.0141161680221558,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -0.6317772377425913,
+        -0.7751499995938471
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c00.bs2",
+      "primitive_id": 103,
+      "distance_BU": 1.4999998807907104,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c01.bs2",
+      "primitive_id": 487,
+      "distance_BU": 1.499999761581421,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c11.r1",
+      "primitive_id": 2184,
+      "distance_BU": 2.000490188598633,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -0.999525734185997,
+        -0.030794588809460136
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c11.m2",
+      "primitive_id": 2151,
+      "distance_BU": 2.000000238418579,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -0.9999999995511824,
+        -2.9960562258909154e-05
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c02.m2",
+      "primitive_id": 999,
+      "distance_BU": 1.999999761581421,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -1.0,
+        -0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c02.r1",
+      "primitive_id": 1032,
+      "distance_BU": 1.9707201719284058,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        0.26567309271649486,
+        0.9640631762527044
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c10.bs2",
+      "primitive_id": 1639,
+      "distance_BU": 1.4999998807907104,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c30.r1",
+      "primitive_id": 4872,
+      "distance_BU": 1.9896219968795776,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -0.7948344085972828,
+        0.6068263861351182
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c30.m2",
+      "primitive_id": 4839,
+      "distance_BU": 1.999999761581421,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -1.0,
+        -0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c21.m2",
+      "primitive_id": 3687,
+      "distance_BU": 1.999999761581421,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -1.0,
+        -0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c21.r1",
+      "primitive_id": 3720,
+      "distance_BU": 2.0020503997802734,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -0.9917128332847567,
+        -0.12847434101142763
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c20.bs2",
+      "primitive_id": 3175,
+      "distance_BU": 1.4999998807907104,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c11.r2",
+      "primitive_id": 2264,
+      "distance_BU": 0.5,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -1.0,
+        -0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c11.bs2",
+      "primitive_id": 1992,
+      "distance_BU": 1.0,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c02.bs2",
+      "primitive_id": 840,
+      "distance_BU": 1.0,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c02.r2",
+      "primitive_id": 1112,
+      "distance_BU": 0.5,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -1.0,
+        -0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c30.r2",
+      "primitive_id": 4952,
+      "distance_BU": 0.5,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -1.0,
+        -0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c30.bs2",
+      "primitive_id": 4680,
+      "distance_BU": 1.0,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c21.bs2",
+      "primitive_id": 3528,
+      "distance_BU": 1.0,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c21.r2",
+      "primitive_id": 3800,
+      "distance_BU": 0.5,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -1.0,
+        -0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c11.f1",
+      "primitive_id": 2103,
+      "distance_BU": 1.0004900693893433,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -0.999525734185997,
+        -0.030794588809460136
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c21.bs1",
+      "primitive_id": 3464,
+      "distance_BU": 3.039799451828003,
+      "first_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "first_reim": [
+        -0.5667852221126362,
+        0.4227936990953501
+      ],
+      "second_reim": [
+        -0.4227936990953501,
+        -0.5667852221126362
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c12.bs1",
+      "primitive_id": 2343,
+      "distance_BU": 2.048999547958374,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        -0.7057108714672895,
+        0.044409074442942134
+      ],
+      "second_reim": [
+        -0.044409074442942134,
+        -0.7057108714672895
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c12.bs1",
+      "primitive_id": 2312,
+      "distance_BU": 3.0167996883392334,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.3484136761153245,
+        0.6153112304320519
+      ],
+      "second_reim": [
+        -0.6153112304320519,
+        0.3484136761153245
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c03.bs1",
+      "primitive_id": 1191,
+      "distance_BU": 2.078599691390991,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.1585803368464106,
+        -0.6890952595727812
+      ],
+      "second_reim": [
+        0.6890952595727812,
+        0.1585803368464106
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c02.f1",
+      "primitive_id": 951,
+      "distance_BU": 0.9707201719284058,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        0.26567309271649486,
+        0.9640631762527044
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c30.f1",
+      "primitive_id": 4791,
+      "distance_BU": 0.9896220564842224,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -0.7948344085972828,
+        0.6068263861351182
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "det.R0",
+      "primitive_id": 6416,
+      "distance_BU": 1.0,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        1.0,
+        0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c31.bs1",
+      "primitive_id": 5031,
+      "distance_BU": 2.0228002071380615,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.09741284214804896,
+        0.7003647179753125
+      ],
+      "second_reim": [
+        -0.7003647179753125,
+        0.09741284214804896
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c31.bs1",
+      "primitive_id": 5000,
+      "distance_BU": 3.069000005722046,
+      "first_jacobian_reim": [
+        0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -0.26029328231798504,
+        -0.6574552510856763
+      ],
+      "second_reim": [
+        0.6574552510856763,
+        -0.26029328231798504
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c22.bs1",
+      "primitive_id": 3879,
+      "distance_BU": 2.048999547958374,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        -0.7057108714672895,
+        0.044409074442942134
+      ],
+      "second_reim": [
+        -0.044409074442942134,
+        -0.7057108714672895
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c21.f1",
+      "primitive_id": 3639,
+      "distance_BU": 1.0020502805709839,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -0.9917128332847567,
+        -0.12847434101142763
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c11.bs2",
+      "primitive_id": 2023,
+      "distance_BU": 1.5000003576278687,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067808691854,
+        2.1185316741436408e-05
+      ],
+      "second_reim": [
+        -2.1185316741436408e-05,
+        0.7071067808691854
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c12.m2",
+      "primitive_id": 2535,
+      "distance_BU": 1.999999761581421,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -1.0,
+        -0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c12.r1",
+      "primitive_id": 2568,
+      "distance_BU": 1.977468490600586,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -0.15447874033320796,
+        0.9879961127378312
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c03.m2",
+      "primitive_id": 1383,
+      "distance_BU": 1.9999998807907104,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -1.0,
+        -0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c03.r1",
+      "primitive_id": 1416,
+      "distance_BU": 2.0046048164367676,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -0.9584354909880854,
+        -0.28530932269105347
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c02.bs2",
+      "primitive_id": 871,
+      "distance_BU": 1.499999761581421,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c30.bs2",
+      "primitive_id": 4711,
+      "distance_BU": 1.4999998807907104,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c31.m2",
+      "primitive_id": 5223,
+      "distance_BU": 1.9999998807907104,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -1.0,
+        -0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c31.r1",
+      "primitive_id": 5256,
+      "distance_BU": 1.9852676391601562,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -0.6013061477890254,
+        0.7990187210767485
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c22.m2",
+      "primitive_id": 4071,
+      "distance_BU": 1.999999761581421,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -1.0,
+        -0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c22.r1",
+      "primitive_id": 4104,
+      "distance_BU": 1.9997529983520508,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -0.9998795738712233,
+        0.015518948260139607
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c21.bs2",
+      "primitive_id": 3559,
+      "distance_BU": 1.4999998807907104,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c12.bs2",
+      "primitive_id": 2376,
+      "distance_BU": 1.0,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c12.r2",
+      "primitive_id": 2648,
+      "distance_BU": 0.5,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -1.0,
+        -0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c03.bs2",
+      "primitive_id": 1224,
+      "distance_BU": 1.0,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c03.r2",
+      "primitive_id": 1496,
+      "distance_BU": 0.5,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -1.0,
+        -0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c31.bs2",
+      "primitive_id": 5064,
+      "distance_BU": 1.0,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c31.r2",
+      "primitive_id": 5336,
+      "distance_BU": 0.5,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -1.0,
+        -0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c22.bs2",
+      "primitive_id": 3912,
+      "distance_BU": 1.0,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c22.r2",
+      "primitive_id": 4184,
+      "distance_BU": 0.5,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -1.0,
+        -0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c22.bs1",
+      "primitive_id": 3848,
+      "distance_BU": 3.039799451828003,
+      "first_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "first_reim": [
+        -0.5667852221126362,
+        0.4227936990953501
+      ],
+      "second_reim": [
+        -0.4227936990953501,
+        -0.5667852221126362
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c13.bs1",
+      "primitive_id": 2727,
+      "distance_BU": 2.078599691390991,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.1585803368464106,
+        -0.6890952595727812
+      ],
+      "second_reim": [
+        0.6890952595727812,
+        0.1585803368464106
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c12.f1",
+      "primitive_id": 2487,
+      "distance_BU": 0.9774684309959412,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -0.15447874033320796,
+        0.9879961127378312
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c13.bs1",
+      "primitive_id": 2696,
+      "distance_BU": 3.0167996883392334,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.3484136761153245,
+        0.6153112304320519
+      ],
+      "second_reim": [
+        -0.6153112304320519,
+        0.3484136761153245
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "det.C0",
+      "primitive_id": 6176,
+      "distance_BU": 1.0,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        1.0,
+        0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c03.f1",
+      "primitive_id": 1335,
+      "distance_BU": 1.004604697227478,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -0.9584354909880854,
+        -0.28530932269105347
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "det.R1",
+      "primitive_id": 6480,
+      "distance_BU": 1.0,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        1.0,
+        0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c32.bs1",
+      "primitive_id": 5415,
+      "distance_BU": 2.048999547958374,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        -0.7057108714672895,
+        0.044409074442942134
+      ],
+      "second_reim": [
+        -0.044409074442942134,
+        -0.7057108714672895
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c31.f1",
+      "primitive_id": 5175,
+      "distance_BU": 0.9852675795555115,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -0.6013061477890254,
+        0.7990187210767485
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c32.bs1",
+      "primitive_id": 5384,
+      "distance_BU": 3.069000005722046,
+      "first_jacobian_reim": [
+        0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -0.26029328231798504,
+        -0.6574552510856763
+      ],
+      "second_reim": [
+        0.6574552510856763,
+        -0.26029328231798504
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c23.bs1",
+      "primitive_id": 4263,
+      "distance_BU": 2.078599691390991,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.1585803368464106,
+        -0.6890952595727812
+      ],
+      "second_reim": [
+        0.6890952595727812,
+        0.1585803368464106
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c22.f1",
+      "primitive_id": 4023,
+      "distance_BU": 0.9997528791427612,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -0.9998795738712233,
+        0.015518948260139607
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c13.m2",
+      "primitive_id": 2919,
+      "distance_BU": 1.9999998807907104,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -1.0,
+        -0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c13.r1",
+      "primitive_id": 2952,
+      "distance_BU": 1.9948338270187378,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -0.9477806922095439,
+        0.31892281115467086
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c12.bs2",
+      "primitive_id": 2407,
+      "distance_BU": 1.4999998807907104,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c03.bs2",
+      "primitive_id": 1255,
+      "distance_BU": 1.4999998807907104,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c32.m2",
+      "primitive_id": 5607,
+      "distance_BU": 1.999999761581421,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -1.0,
+        -0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c32.r1",
+      "primitive_id": 5640,
+      "distance_BU": 2.0120646953582764,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -0.7261696778364664,
+        -0.6875155263635018
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c31.bs2",
+      "primitive_id": 5095,
+      "distance_BU": 1.4999998807907104,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c23.m2",
+      "primitive_id": 4455,
+      "distance_BU": 1.999999761581421,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -1.0,
+        -0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c23.r1",
+      "primitive_id": 4488,
+      "distance_BU": 2.0117921829223633,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -0.7378447258433111,
+        -0.6749704886476217
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c22.bs2",
+      "primitive_id": 3943,
+      "distance_BU": 1.499999761581421,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c13.bs2",
+      "primitive_id": 2760,
+      "distance_BU": 1.0,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c13.r2",
+      "primitive_id": 3032,
+      "distance_BU": 0.5,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -1.0,
+        -0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c32.bs2",
+      "primitive_id": 5448,
+      "distance_BU": 1.0,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c32.r2",
+      "primitive_id": 5720,
+      "distance_BU": 0.5,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -1.0,
+        -0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c23.bs2",
+      "primitive_id": 4296,
+      "distance_BU": 1.0,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c23.r2",
+      "primitive_id": 4568,
+      "distance_BU": 0.4999999701976776,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -1.0,
+        -0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c23.bs1",
+      "primitive_id": 4232,
+      "distance_BU": 3.039799451828003,
+      "first_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "first_reim": [
+        -0.5667852221126362,
+        0.4227936990953501
+      ],
+      "second_reim": [
+        -0.4227936990953501,
+        -0.5667852221126362
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "det.C1",
+      "primitive_id": 6240,
+      "distance_BU": 1.0,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        1.0,
+        0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c13.f1",
+      "primitive_id": 2871,
+      "distance_BU": 0.9948338866233826,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -0.9477806922095439,
+        0.31892281115467086
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "det.R2",
+      "primitive_id": 6544,
+      "distance_BU": 1.0000009536743164,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.9999999982047294,
+        5.992112449092465e-05
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c33.bs1",
+      "primitive_id": 5799,
+      "distance_BU": 2.078599691390991,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.1585803368464106,
+        -0.6890952595727812
+      ],
+      "second_reim": [
+        0.6890952595727812,
+        0.1585803368464106
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c32.f1",
+      "primitive_id": 5559,
+      "distance_BU": 1.012064814567566,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -0.7261696778364664,
+        -0.6875155263635018
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c33.bs1",
+      "primitive_id": 5768,
+      "distance_BU": 3.069000244140625,
+      "first_jacobian_reim": [
+        0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -0.26029328231798504,
+        -0.6574552510856763
+      ],
+      "second_reim": [
+        0.6574552510856763,
+        -0.26029328231798504
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "det.C2",
+      "primitive_id": 6304,
+      "distance_BU": 1.0,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        1.0,
+        0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c23.f1",
+      "primitive_id": 4407,
+      "distance_BU": 1.0117920637130737,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -0.7378447258433111,
+        -0.6749704886476217
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c13.bs2",
+      "primitive_id": 2791,
+      "distance_BU": 1.4999998807907104,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c33.m2",
+      "primitive_id": 5991,
+      "distance_BU": 1.999999761581421,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -1.0,
+        -0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c33.r1",
+      "primitive_id": 6024,
+      "distance_BU": 2.0084235668182373,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -0.8631691681972703,
+        -0.5049148315049107
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c32.bs2",
+      "primitive_id": 5479,
+      "distance_BU": 1.4999998807907104,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c23.bs2",
+      "primitive_id": 4327,
+      "distance_BU": 1.4999998807907104,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c33.bs2",
+      "primitive_id": 5832,
+      "distance_BU": 1.0000009536743164,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067799170995,
+        4.237063346385613e-05
+      ],
+      "second_reim": [
+        -4.237063346385613e-05,
+        0.7071067799170995
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c33.r2",
+      "primitive_id": 6104,
+      "distance_BU": 0.4999999701976776,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -1.0,
+        -0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "det.R3",
+      "primitive_id": 6608,
+      "distance_BU": 1.0,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        1.0,
+        0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "det.C3",
+      "primitive_id": 6368,
+      "distance_BU": 1.0,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        1.0,
+        0.0
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c33.f1",
+      "primitive_id": 5943,
+      "distance_BU": 1.0084227323532104,
+      "first_jacobian_reim": [
+        -0.0,
+        -0.0
+      ],
+      "first_reim": [
+        -0.8631994217121243,
+        -0.5048631085312677
+      ],
+      "second_reim": [
+        0.0,
+        0.0
+      ],
+      "second_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    },
+    {
+      "object": "c33.bs2",
+      "primitive_id": 5863,
+      "distance_BU": 1.4999998807907104,
+      "first_jacobian_reim": [
+        0.0,
+        0.0
+      ],
+      "first_reim": [
+        0.7071067811865475,
+        0.0
+      ],
+      "second_reim": [
+        -0.0,
+        0.7071067811865475
+      ],
+      "second_jacobian_reim": [
+        -0.0,
+        0.0
+      ],
+      "input_echo_reim": [
+        1.0,
+        0.0
+      ],
+      "jacobian_echo_reim": [
+        0.0,
+        0.0
+      ],
+      "native_input_bit_echo_verified": true,
+      "native_jacobian_bit_echo_verified": true
+    }
+  ],
+  "deferred_actual_gpu_surface_cache": true,
+  "geometry_generation": 0,
+  "setup_seconds": 0.0046975000004749745,
+  "draw_and_readback_seconds": 0.006787699996493757,
+  "full_seconds": 0.013674900008481927,
+  "native_fp64_fragment_transport": true,
+  "native_integer_readback": {
+    "schema": "optic_neuro_blender.native_integer_readback.v1",
+    "same_context_verified": true,
+    "format": "GL_RGBA_INTEGER",
+    "type": "GL_UNSIGNED_INT",
+    "pack_read_state_restored": true,
+    "word_count_per_slot": 532,
+    "slots": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "gl_errors": []
+  },
+  "native_jacobian_echo_readback": {
+    "schema": "optic_neuro_blender.native_integer_readback.v1",
+    "same_context_verified": true,
+    "format": "GL_RGBA_INTEGER",
+    "type": "GL_UNSIGNED_INT",
+    "pack_read_state_restored": true,
+    "word_count_per_slot": 532,
+    "slots": [
+      5
+    ],
+    "gl_errors": []
+  },
+  "actual_triangle_draws": 2
+}

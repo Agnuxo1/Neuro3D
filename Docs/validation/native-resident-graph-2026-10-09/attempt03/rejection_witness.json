@@ -1,0 +1,11 @@
+{
+  "schema": "optic_neuro_blender.resident_rejection_witness.v1",
+  "actual_control_max_field_difference": 6.376147888196662e-08,
+  "requested_field_budget": 1e-11,
+  "control_scalar_count": 64,
+  "control_scalars_exactly_on_binary32_grid": 64,
+  "local_coefficient_scalar_count": 532,
+  "local_coefficients_exactly_on_binary32_grid": 290,
+  "allfive_exact_native_input_echo": true,
+  "scope": "Deterministic inspection of recorded diagnostic values. Binary32-grid observation does not establish the cause of apparent loss of precision in the new recurrence. No hardware compiler/demotion claim."
+}
