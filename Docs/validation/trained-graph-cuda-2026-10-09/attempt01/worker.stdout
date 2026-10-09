@@ -1,0 +1,4 @@
+{"batch": 1, "completed": true}
+{"batch": 150, "completed": true}
+{"batch": 2048, "completed": true}
+{"status": "PASS", "errors": {"fields": 3.608224830031759e-16, "powers": 3.885780586188048e-16, "field_jacobian": 5.54951617168815e-14, "power_jacobian": 3.552713678800501e-14}, "autograd_error": 1.5631940186722204e-13, "device": "NVIDIA GeForce RTX 3090, GPU-b163fedb-dda0-d4f4-68b2-298b6975efe3, 581.29, 24576 MiB"}
