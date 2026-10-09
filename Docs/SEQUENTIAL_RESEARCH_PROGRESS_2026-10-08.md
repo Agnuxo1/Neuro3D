@@ -66,3 +66,7 @@ La réplica CPU Linux real de GitHub reproduce 150 decisiones y 27/30 aciertos, 
 ## 2026-10-09 — Antecedentes y preparación de Blender Linux nativo
 
 Análisis de cajas continuas publicado en be4c73f8f1aaa49ebeea9765bd70f4c85f0dd3e0; cuatro topologías probadas y decisiones147/131/40/0, UNKNOWN preservado. Tres antecedentes primarios adicionales documentados sin alterar recuentos históricos ni afirmar novedad. Archivo oficial Blender Linux4.5.14 descargado y hashes archivo/binario verificados; no se ejecutó localmente. Nuevo perfil de reproducción nativa Linux con complemento0.1.2 y nueve controles preparado para congelación/push antes de ejecución. Registro externo/IPFS pendiente.
+
+## 2026-10-09 — Linux nativo, fallo previo al ensayo
+
+Run37890682207/commit09ff486:42blobs verificados, descarga oficial HTTP403,0.428s/métrica nula/Blender no iniciado. Raw+ZIP SHA6719928c publicados con preimágenes. Próximo protocolo con transporte alternativo y mismos hashes/controles; novedad aún no establecida.

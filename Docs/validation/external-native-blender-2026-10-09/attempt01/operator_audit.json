@@ -1,0 +1,23 @@
+{
+  "schema": "optic_neuro_blender.external_native_operator_audit.v1",
+  "recorded_utc": "2026-10-09T05:55:39.836126+00:00",
+  "published_commit": "09ff4861ff398de1ee8b9f7d135db98ff64f639d",
+  "run_id": 37890682207,
+  "job_id": 113690683203,
+  "artifact_id": 11597772578,
+  "artifact_sha256": "6719928c99672b2d7b8292462e66dfa31a4999c9aea885766b4c77a1552dd905",
+  "raw_files_verified": 43,
+  "preexecution_publication_verification": "Authoritative runner stage independently verified42blobs before installation/preparation",
+  "status": "INCONCLUSIVE_EXTERNAL_NATIVE_ENVIRONMENT_OR_INVALID_OUTPUT",
+  "metric": null,
+  "failure": "Official download HTTP403inurllib before archive received/nativeexecution. No native scientificresult.",
+  "scientific_trial_started": false,
+  "owned_worker_cleaned_up": true,
+  "seconds": 0.42795651600000184,
+  "next": "New transport profile with fixed UserAgent and prespecified TLS mirror fallbacks; same officialarchive/binary/addonhash andsame ninecontrols/resources. Preservev1source/profile.",
+  "raw_files_present_and_verified": 42,
+  "raw_files_omitted_by_upload_hidden_setting": [
+    "source/.github/workflows/external-native-blender-20261009.yml"
+  ],
+  "omitted_source_preimages_recovered_separately_from_published_git": true
+}
