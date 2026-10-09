@@ -82,3 +82,7 @@ Frozen9225699/profileb6144639/source25verifiedbeforeFIFO entry. CPU370.4629s/CUD
 ## 2026-10-09T06:32:54.717914+00:00 — all-channel operator rank and normalization certified
 
 Frozenbea19eb/profile232eefdd/source33publishedverifiedbeforeanalysis. Independent133geometryauditPASS/fivepositiveintervalLDLpivots/rank5; allcomplexinputeigenvalueswithin1±3.0665868333669135e-19. Approximate represented scalar isometry at all8ports, noexactidentity/physicalcalibration. Full6.4683s/RSS46.207MiB; allrawhashesverified/archivereadyneedpublish. Nextcontinuouswholetrainingboxproof before anyauditreuseoptimization. Goalactiveuntil13:55UTC.
+
+## 2026-10-09T06:38:33.656077+00:00 — whole original training family certified
+
+Frozen19fbf26/profile1ad1f3c9/source30verifiedpreexecution. All133statetopologies/competitorsexcluded acrossoriginalboxincluding±.035+nativeallowance+initialFD;0issues. Exact1251scalarbase+16coefficientidentitiesmatchproducer. Full71.9677s/RSS49.160MiB. Needpublishbeforefreshoptimizedtrainer/protocol/fullcostpair. Articletexbuild02twopdflatexpasses9pagesworks butneedslatestfamilycontentregenerationlater. Goalactiveuntil13:55UTC.
