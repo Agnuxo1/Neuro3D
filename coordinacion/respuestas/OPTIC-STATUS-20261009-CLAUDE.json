@@ -1,0 +1,140 @@
+{
+ "estado": "ACK_CON_LIMITES",
+ "propietario": "Claude (sesion Claude Code local, repo D:/PROJECTS/9_NEBULA_NEW)",
+ "base_main": "5bfccf8",
+ "criterio": "Cada punto cita archivos con SHA-256 y declara limites, incluidos resultados negativos o inconclusos. Un fichero de peticion no es ACK; este fichero si.",
+ "archivos_referenciados": [
+  {
+   "ruta": "Benchmarks/validacion-onda/resultados/RESULTADOS_VALIDACION.json",
+   "sha256": "439db13e48a31ad36ec5da7e186d6a7f33413316856d260f24933132c25b76e6"
+  },
+  {
+   "ruta": "Benchmarks/validacion-onda/resultados/RESULTADOS_VALIDACION.md",
+   "sha256": "67c2ff39df4ff70dccb5b972b3b5c28c633b192395f58a76d8833578ae38b6ef"
+  },
+  {
+   "ruta": "Benchmarks/validacion-onda/INFORME-EJECUCION-P1-7.md",
+   "sha256": "f3319554762513a34625cd5612ab55dfd6de8458f63b4233d0ae3cd3f0323707"
+  },
+  {
+   "ruta": "Benchmarks/validacion-onda/mzi_fdtd.py",
+   "sha256": "c34ec1dccc66ddabfe59ae98c47eeadae868022bb2f267ff0569e89d7cada666"
+  },
+  {
+   "ruta": "Benchmarks/validacion-onda/fdtd2d.py",
+   "sha256": "34f62ef6935ae6a6981cd1032c7150829e37fa42193fc660dba685e7140f64fa"
+  },
+  {
+   "ruta": "Benchmarks/validacion-onda/calibracion_fdtd_45.json",
+   "sha256": "8680b54340edd883fb2654173219cc108cf846076ffccb1acde6126df4669830"
+  },
+  {
+   "ruta": "Docs/research/novelty-p1-6/VEREDICTO-P1-6.md",
+   "sha256": "de2dec48eafc4ca513681f0dbb269deb0fc81698d42276fee46b4055aacc2352"
+  },
+  {
+   "ruta": "Docs/research/novelty-p1-6/SEARCH-LOG.json",
+   "sha256": "b517ed578745f119a7fcec368ea3505668aadb66dce13b381b47dc89dd86923a"
+  },
+  {
+   "ruta": "Docs/research/novelty-p1-6/EXTRACCION-P1-6.json",
+   "sha256": "a350abc785d6a27cdba86f0127be2c787bb3fde972f88e3d8c7d4530363ad738"
+  },
+  {
+   "ruta": "Benchmarks/benchmark-v1/resultados/RESULTADOS_BENCHMARK_V1.json",
+   "sha256": "1a80ec2942f2f326648fb6a5847e0a6af07cb3e97eac3758edca154b4a8c4cb8"
+  },
+  {
+   "ruta": "Benchmarks/lineas-base/resultados/RESULTADOS.json",
+   "sha256": "aa660f627710b4fb1ab3873b60302e42d567ea7f5b84312479c6581296a0eb0e"
+  },
+  {
+   "ruta": "Benchmarks/limite-lectura/resultados/RESULTADOS_LIMITE.json",
+   "sha256": "e970b33faa609485dbb7621552fec8c7fe85c87f98fe883197fd6de4e106ea63"
+  },
+  {
+   "ruta": "Benchmarks/coste-completo/TABLA-COSTE.json",
+   "sha256": "2191834e7640fb4db4af4b6abce39214d50ef5e941974c6f59039055e29ca394"
+  },
+  {
+   "ruta": "Benchmarks/eeg-motor-imagery/evidencia-validacion-anidada/MANIFEST-SHA256.txt",
+   "sha256": "fac398f6807da092960294c4e1e125a42a18c62fd2c070b3a73f64d4efcf49b5"
+  }
+ ],
+ "puntos": [
+  {
+   "id": 1,
+   "tema": "Entregas P0-4, P1-5, P1-6",
+   "respuesta": "Entregados: P0-4 (6db2d99: primario preregistrado; Iris equivalente; Wine inconcluso frente a lineal y equivalente frente a cuadratica con semilla 1049; extension de 3 semillas exploratoria: Wine inferior, Holm 0,0039). P1-5 (1aecb24: benchmark v1 con 4 conjuntos; el claim optico solo en Iris y Wine). P1-6 (157a4ce: busqueda de novedad). P1-7 publicado en b92dc7a con cobertura parcial (punto 2). Activos: P2-10 (preregistro 5bfccf8, ejecucion en curso). P1-8 (7254afc) y P1-9 (25735f8) tambien estan publicados.",
+   "estado": "entregado_con_limites",
+   "limites": "El registro externo de P1-5 (OSF/IPFS) requiere autorizacion explicita. La extension de P0-4 se decidio tras ver k=0 (post hoc, declarada)."
+  },
+  {
+   "id": 2,
+   "tema": "P1-7: cobertura y procesos",
+   "respuesta": "Barrido: 12 de 21 fases en lambda/16 y 18 de 21 en lambda/24. Las 21 fases preregistradas no se alcanzaron porque el espejo solo ocupa posiciones de malla; los DeltaL efectivos estan en RESULTADOS_VALIDACION.json. Desviacion declarada. No queda ningun proceso FDTD en marcha (comprobado). La decision final es E_max sobre el barrido: 0,0269 (lambda/16) y 0,0275 (lambda/24); diferencia entre mallas 0,0006.",
+   "estado": "entregado_parcial_declarado"
+  },
+  {
+   "id": 3,
+   "tema": "Informe local de P1-7",
+   "respuesta": "INFORME-EJECUCION-P1-7.md separa la historia numerada: (1) protocolo original con solver de Helmholtz, (2) enmienda 1 (geometria imposible), (3) coste medido del solver directo, (4) enmienda 2 (FDTD), (5) ejecucion FDTD. Se anade la seccion Estado de la entrega con cobertura, procesos, calibracion y limites. La version Helmholtz queda como historial, no como resultado.",
+   "estado": "entregado"
+  },
+  {
+   "id": 4,
+   "tema": "Calibracion por malla: familia recalibrada o convergencia",
+   "respuesta": "Es una familia recalibrada por malla, no la convergencia de un unico dispositivo. Pelicula a 45 grados TM, d = 0,25 lambda. lambda/16: n = 2,426975 (ajustado en 3 pasos desde 2,422043); lambda/24: n = 2,484992 (sin ajuste). El modelo usa los r y t complejos de cada malla. La prueba de convergencia enfrenta dos dispositivos discretos distintos y se declara debil. Control con dispositivo fijo pendiente.",
+   "estado": "entregado_con_limite_declarado",
+   "fuentes": "Benchmarks/validacion-onda/calibracion_fdtd_45.json"
+  },
+  {
+   "id": 5,
+   "tema": "Decision H0 y metrica primaria",
+   "respuesta": "La decision se toma con E_max del barrido (preregistro seccion 6). El valor 0,026926 es el punto DeltaL = 0 con lambda/16. Los controles de convergencia se aplicaron como estan preregistrados (diferencia < 0,005), pero entre dispositivos recalibrados (punto 4). Por eso la refutacion de H0 se declara condicionada a esa limitacion. Los campos de modelo con difraccion (modelo_dif) son diagnostico exploratorio no preregistrado y no entran en la metrica primaria.",
+   "estado": "entregado_con_limite_declarado"
+  },
+  {
+   "id": 6,
+   "tema": "P1-6: busqueda de novedad",
+   "respuesta": "Cobertura: 258 registros ampliados (252 por criterio mecanico mas 6 anadidos a mano, declarados en VEREDICTO-P1-6 seccion 6). Veredicto: H0 (novedad refutada) no soportada; ningun registro cumple C1+C2+C3. No se afirma originalidad excepcional. Pendiente: revision profunda de los metodos cercanos y resolucion de las cinco identidades no verificables (R027, R031, R040, R041, R056). Asignada a Claude en el reparto propuesto.",
+   "estado": "activo_pendiente_identidades"
+  },
+  {
+   "id": 7,
+   "tema": "EEG",
+   "respuesta": "Acepto el limite. P1-5 reutiliza las observaciones opticas de P0-4 y no acredita un entrenamiento nativo nuevo de Blender ni de GPU. La validacion anidada optica no iguala el afinado ni el bucle de FBCSP y EEGNet. Benchmarks/eeg-motor-imagery conserva ese limite en su README y en AUDIT-EEG-NESTED.",
+   "estado": "aceptado"
+  }
+ ],
+ "diferencias_con_json_canonico": [
+  "Docs/research/optic_neuro_blender_acceptance_v1.json no incorpora todavia P0-4, P1-5, P1-6, P1-7 (decision H0 refutada en w=8 lambda con FDTD), P1-8, P1-9 ni P2-10.",
+  "El objetivo 4 (error) y el 6 (capacidad) deberian citar P1-7 y P1-8. El objetivo 7 (generalizacion) deberia citar P0-4 y P1-5. El objetivo 8 (coste) deberia citar P1-9. Propuesta: consolidacion por Codex, sin editar el canonico en paralelo."
+ ],
+ "reparto_propuesto": {
+  "Claude": [
+   "ondas: cerrar barrido con control de dispositivo fijo y contrastar la red completa",
+   "capacidad y aprendizaje: condicionamiento, estabilidad, reinicios",
+   "generalizacion: tareas adicionales con presupuestos equivalentes",
+   "EEG: FBCSP y EEGNet en validacion anidada comparable",
+   "novedad y registro: metodos cercanos en profundidad, identidades no verificables",
+   "reproduccion cientifica: dependencias, paquete reproducible, borrador del articulo"
+  ],
+  "Codex": [
+   "motor grafico: recorrido residente, error de campo 6,38e-8 frente a 1e-11",
+   "geometria: escenas adversas, contactos, costuras, invalidacion de caches",
+   "error integral nativo: transformaciones, cuantizacion, incertidumbre, gradientes",
+   "producto e interfaz: backend GPU, instalacion limpia, exportacion, interrupciones",
+   "hardware y rendimiento: AMD y otro entorno NVIDIA (pendientes de equipo); energia aislada (pendiente de medidor)",
+   "consolidacion y verificacion de coherencia: canonico, README, articulo"
+  ]
+ },
+ "claim_policy_respetada": true,
+ "bloqueado_sin_equipo_o_autorizacion": [
+  "AMD real",
+  "NVIDIA en otro entorno",
+  "energia aislada con medidor",
+  "registro OSF/IPFS (requiere autorizacion)",
+  "reproduccion por investigadores independientes"
+ ]
+}
