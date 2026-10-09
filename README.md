@@ -4,7 +4,7 @@
 
 > Arquitectura experimental en la que la geometría 3D y las propiedades ópticas de la escena determinan la propagación y transformación de señales entre neuronas. La apariencia visual es secundaria al cómputo.
 
-![Estado del proyecto](https://img.shields.io/badge/estado-experimental%20%7C%20render%20verificado-6f42c1)
+![Estado del proyecto](https://img.shields.io/badge/estado-experimental%20%7C%20c%C3%B3mputo%20verificado-6f42c1)
 ![Blender](https://img.shields.io/badge/Blender-4.5%20LTS-e87d0d)
 ![Investigación](https://img.shields.io/badge/investigaci%C3%B3n-hip%C3%B3tesis%20falsable-6e4c9b)
 ![Licencia](https://img.shields.io/badge/licencia-MIT-2ea44f)
@@ -64,7 +64,7 @@ también pasa: 16 traslaciones de parejas de espejos, 60 actualizaciones y 61
 estados geométricos auditados independientemente. Se borraron los retardos
 históricos antes del ensayo. La pérdida bajó de 6,26 a 0,31; el último estado
 acierta 110/120 filas de entrenamiento y 27/30 reservadas. Iris ya fue utilizado
-en el proyecto; faltan comparaciones y conjuntos independientes.
+en el proyecto; la comparación posterior con Wine amplía la evaluación pública.
 
 ![Entrenamiento propio y matriz de errores](Docs/assets/captured-own-geometry-training-2026-10-09.png)
 
@@ -82,6 +82,16 @@ pequeños y más rápido para 2.048 entradas, con un baseline matricial equivale
 todavía más eficiente para geometría fija. AMD real sigue pendiente.
 
 ![Coste medido CPU/CUDA y baseline equivalente](Docs/assets/trained-graph-cpu-cuda-scaling-2026-10-09.png)
+
+La [evaluación prospectiva en Wine](Docs/WINE_GENERALIZATION_COMPARISON_2026-10-09.md)
+añade tres inicializaciones fijadas y 183 estados geométricos auditados. Aciertan
+33/37, 30/37 y 28/37 filas reservadas; los baselines lineal y cuadrático, con las
+mismas cuatro variables y codificación, aciertan 32/37. Se publican todas las
+semillas, incertidumbre y coste, sin seleccionar por la evaluación. El resultado
+muestra aprendizaje y sensibilidad a la inicialización; no demuestra superioridad
+óptica ni transferencia sin reentrenar.
+
+![Wine: geometría propia y baselines con las mismas entradas](Docs/assets/wine-geometry-and-baselines-2026-10-09.png)
 
 El [ejecutor y auditor del piloto](Docs/CAPTURED_PILOT_SUPERVISOR_2026-10-08.md)
 están preparados con fuentes/inputs fijados, límites de recursos y negativa por
