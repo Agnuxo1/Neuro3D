@@ -201,3 +201,7 @@ ActualBlender6attachmentceiling handledbynewv2(two4modeoutputpasses+5inputbit-ec
 ## 2026-10-09T13:46:55.143718+00:00 — resident GPUv2 coherentcontrol failure
 
 Actualnative sixattachments/2outputpasses+fiveinputexactecho reached; initialcoherentfieldgate1e-11 fails, fullworker24.439s, metricNULL. Original123pins/profile83db9d5 preserved. RawSHAverified; firstworker lacks pre-failurefield/coeff observation files, deficiencyexplicit. Next newdiagnosticworker saves actualcoeffs+fields beforeunchangedgate. Noresidentequivalence orspeedclaim. Deadline13:55UTC.
+
+## 2026-10-09T13:47:36.203091+00:00 — newresidentv3diagnostic protocol NOT_EXECUTED
+
+GPUenginev2 unchanged and1e-11 gatesunchanged; worker nowretains actualcoefficients/fourcontrolfields/inputs beforefailuregate. 125pins/profilef63f3a4ad3d577a464f0c7dbed051452d38b1ccdce503c74604708cfceed3b2f. Publishverifybeforeexecution, deadline13:55UTC.

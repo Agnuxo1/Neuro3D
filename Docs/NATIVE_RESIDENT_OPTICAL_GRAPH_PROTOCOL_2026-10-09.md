@@ -28,3 +28,7 @@ The revised engine uses six attachments, two passes of four modal outputs and on
 ## Actual v2: coherent equivalence failure, NULL
 
 Frozen123pins/profile83db9d5 publishedaec1d0e and verified13:42:29UTC; nativeadmission13:43:22UTC. Sixattachments draw/readback andallfive exactinputecho gates reached. Field equivalence on the initial fourcoherencecontrols fails the unchanged1e-11 budget. Fullnativeworker24.439s; no cost/scaling resultaccepted. The original worker saved neither coefficients nor controlfields before this gate, so their numerical failure magnitude cannot be recovered from that attempt; this missing diagnostic is explicit. [Original raw](validation/native-resident-graph-2026-10-09/attempt02/evidence_index.json). A newdiagnosticversion must retain actual observations before rejection, without relaxing the gate.
+
+## Separate v3 diagnostics, prepared before execution
+
+Samev2GPUengine andunchangedcontrols/budgets. The newworker persists actualunitlocalcoefficients andallfourcoherentcontrolfields/inputbit echoes before the equivalencegate, retaining magnitude anddirection when it fails. [V3profile](research/native_resident_graph_v3_profile_2026-10-09.json), [registration](research/native_resident_graph_v3_registration_2026-10-09.json), [worker](../Tools/audit_native_resident_graph_v3.py). Prepared observations are not a passed native result.
