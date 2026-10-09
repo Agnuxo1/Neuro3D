@@ -1,0 +1,33 @@
+{
+  "schema": "optic_neuro_blender.current_joint_status_audit.v1",
+  "utc": "2026-10-09T19:18:28.078402+00:00",
+  "inspected_public_main_commit": "e2cd6189c9c4abebce276e300ee74eef0a618633",
+  "source_sha256": {
+    "Docs/research/optic_neuro_blender_acceptance_v1.json": "de758aade809b95cf1acaf786934dba6444c028c9ee0e73d9a6de05e239a9f50",
+    "Benchmarks/benchmark-v1/INFORME-EJECUCION-P1-5.md": "5176deb6f95a80a3f21846850a218d0b0358f6b24f0d3970aeb3ab89a9bd94c2",
+    "Benchmarks/benchmark-v1/resultados/RESULTADOS_BENCHMARK_V1.json": "1a80ec2942f2f326648fb6a5847e0a6af07cb3e97eac3758edca154b4a8c4cb8",
+    "Benchmarks/benchmark-v1/resultados/benchmark_v1_raw.json": "916ab35a34813d6f81b0f2f81da3f73f24a7772aac861257a3d86de9ff8086b2",
+    "Benchmarks/eeg-motor-imagery/README.md": "f4a6258263c8272981d0bfb0940ffe6093745c08896db0dfd51e64c071ebc128",
+    "Docs/research/novelty-p1-6/VEREDICTO-P1-6.md": "747c8ab2cc6cd7efb0fa46b39e3dc896550bb5c28c144bf974f359067feffaee",
+    "Benchmarks/validacion-onda/PREREGISTRO-P1-7.md": "95acdeb277c374fb068d706874d0827dc04a9d63add827cd4a2d58e0e3d08493",
+    "Docs/NATIVE_RESIDENT_OPTICAL_GRAPH_PROTOCOL_2026-10-09.md": "581b62faa6dfb5497e02c5ab8a17d8b8a241124cfffd4d5b3c142519096a47ae"
+  },
+  "benchmark_three_published_hashes_verified": true,
+  "wave_local_snapshot": {
+    "root": "D:\\PROJECTS\\9_NEBULA_NEW\\Benchmarks\\validacion-onda",
+    "coarse_files": 12,
+    "fine_files": 9,
+    "required_per_grid": 21,
+    "observed_live_worker_pids_at_snapshot": [
+      5892,
+      36340
+    ],
+    "scope": "Local changing untracked files, not a final or published wave result; PID liveness observed in process inventory during this audit, not inferred from file existence"
+  },
+  "new_experiments_started": false,
+  "claude_untracked_scientific_files_modified": false,
+  "claude_coordination_request": "coordinacion/tareas/OPTIC-STATUS-20261009-CLAUDE.md",
+  "claude_acknowledged": false,
+  "full_project_complete": false,
+  "report": "Docs/PROJECT_STATE_AND_REMAINING_WORK_2026-10-09.md"
+}
