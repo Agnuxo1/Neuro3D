@@ -1,0 +1,232 @@
+I1009 11:59:14.202404 18520 device.cpp:38] CUEW initialization succeeded
+I1009 11:59:14.202404 18520 device.cpp:40] Found precompiled kernels
+I1009 11:59:14.327466 18520 device.cpp:209] Device has compute preemption or is not used for display.
+I1009 11:59:14.327466 18520 device.cpp:212] Added device "NVIDIA GeForce RTX 3090" with id "CUDA_NVIDIA GeForce RTX 3090_0000:17:00".
+I1009 11:59:14.327466 18520 device.cpp:215] Device with id "CUDA_NVIDIA GeForce RTX 3090_0000:17:00" supports OpenImageDenoise.
+I1009 11:59:14.370466 18520 device.cpp:70] HIPEW initialization failed: Error opening HIP dynamic library
+I1009 11:59:15.295463 18520 task.cpp:71] Overriding number of TBB threads to 1.
+I1009 11:59:15.295463 18520 device.cpp:554] Mapped host memory limit set to 21,128,654,848 bytes. (19.68G)
+I1009 11:59:15.464464 18520 device_impl.cpp:80] All knobs on default.
+I1009 11:59:15.881217 18520 device_impl.cpp:80] Opened database: "C:\Users\Windows-500GB\AppData\Local\NVIDIA\OptixCache\optix7cache.db"
+I1009 11:59:15.881217 18520 device_impl.cpp:80]     Cache data size: "1.0 MiB"
+I1009 11:59:15.881217 18520 device_impl.cpp:80] GPU memory capacity exceeds host memory (GPU: 24.00 GiB, host: 23.68 GiB). Please ensure that host allocations do not exceed the amount of physical memory available.
+I1009 11:59:15.883224 18520 device_impl.cpp:47] Using AVX2 CPU kernels.
+I1009 11:59:16.143214 18520 sync.cpp:326] Total time spent synchronizing data: 0.0107824
+I1009 11:59:16.144214  9996 film.cpp:602] Effective scene passes:
+I1009 11:59:16.144214  9996 film.cpp:604] - type: combined, name: "Combined", mode: NOISY, is_written: True
+I1009 11:59:16.144214  9996 scene.cpp:620] Requested features:
+I1009 11:59:16.144214  9996 scene.cpp:621] Use BSDF True
+I1009 11:59:16.144214  9996 scene.cpp:622] Use Emission True
+I1009 11:59:16.144214  9996 scene.cpp:624] Use Volume False
+I1009 11:59:16.144214  9996 scene.cpp:625] Use Bump False
+I1009 11:59:16.144214  9996 scene.cpp:626] Use Voronoi False
+I1009 11:59:16.144214  9996 scene.cpp:628] Use Shader Raytrace False
+I1009 11:59:16.144214  9996 scene.cpp:630] Use MNEE False
+I1009 11:59:16.144214  9996 scene.cpp:631] Use Transparent False
+I1009 11:59:16.144214  9996 scene.cpp:633] Use Denoising False
+I1009 11:59:16.144214  9996 scene.cpp:634] Use Path Tracing True
+I1009 11:59:16.144214  9996 scene.cpp:636] Use Hair False
+I1009 11:59:16.144214  9996 scene.cpp:637] Use Pointclouds False
+I1009 11:59:16.144214  9996 scene.cpp:639] Use Object Motion False
+I1009 11:59:16.144214  9996 scene.cpp:641] Use Baking False
+I1009 11:59:16.144214  9996 scene.cpp:642] Use Subsurface False
+I1009 11:59:16.144214  9996 scene.cpp:643] Use Volume False
+I1009 11:59:16.144214  9996 scene.cpp:644] Use Shadow Catcher False
+I1009 11:59:16.170215  9996 device_impl.cpp:262] Testing for pre-compiled kernel D:\TOOLS\Blender\blender-4.5.14-windows-x64\4.5\scripts\addons_core\cycles\lib/kernel_sm_86.cubin.zst.
+I1009 11:59:16.171214  9996 device_impl.cpp:264] Using precompiled kernel.
+I1009 11:59:16.370213  9996 device_impl.cpp:505] Local memory reserved 796,917,760 bytes. (760.00M)
+I1009 11:59:16.400216  9996 device_impl.cpp:80] Cache hit for key: ptx-496333-key2ee29d8671b870e3d002c50a25455985-sm_86-rtc1-drv581.29
+I1009 11:59:16.400216  9996 device_impl.cpp:80] 
+I1009 11:59:16.519218  9996 device_impl.cpp:80] Info: Pipeline statistics
+	module(s)                            :     1
+	entry function(s)                    :    10
+	trace call(s)                        :     4
+	continuation callable call(s)        :     0
+	direct callable call(s)              :     0
+	basic block(s) in entry functions    :  1085
+	instruction(s) in entry functions    : 15765
+	non-entry function(s)                :     1
+	basic block(s) in non-entry functions:    37
+	instruction(s) in non-entry functions:   662
+	debug information                    :    no
+I1009 11:59:16.519218  9996 svm.cpp:68] Total 109 shaders.
+I1009 11:59:16.520216  9996 svm.cpp:139] Shader manager updated 109 shaders in 0.0008682 seconds.
+I1009 11:59:16.521219  9996 object.cpp:795] Total 105 objects.
+I1009 11:59:16.521219  9996 particles.cpp:102] Total 0 particle systems.
+I1009 11:59:16.522218  9996 geometry.cpp:695] Total 105 meshes.
+I1009 11:59:16.522218  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.525215  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.525215  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.526218  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.526218  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.526218  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.527218  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.527218  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.528218  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.528218  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.528218  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.529217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.529217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.530217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.530217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.530217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.531219  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.531219  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.532217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.532217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.533217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.533217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.534217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.534217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.535218  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.535218  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.536217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.536217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.537218  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.538218  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.538218  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.538218  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.539217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.539217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.540217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.540217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.540217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.541218  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.541218  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.542217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.542217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.542217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.543217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.543217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.543217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.544217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.544217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.544217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.545217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.545217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.546217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.546217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.546217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.547219  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.547219  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.548218  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.548218  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.548218  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.549217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.550217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.550217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.550217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.551218  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.551218  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.552217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.552217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.552217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.553220  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.553220  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.554217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.554217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.554217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.555217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.555217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.555217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.556217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.556217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.556217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.557217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.557217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.557217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.558218  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.558218  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.559216  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.559216  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.559216  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.560217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.560217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.560217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.561218  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.561218  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.562217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.562217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.562217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.563217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.563217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.563217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.564217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.564217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.564217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.565217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.565217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.566217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.566217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.566217  9996 geometry_bvh.cpp:116] Using OPTIX layout.
+I1009 11:59:16.566217  9996 device_impl.cpp:1100] Using fast to trace OptiX BVH
+I1009 11:59:16.568217  9996 tables.cpp:39] Total 9 lookup tables.
+I1009 11:59:16.568217  9996 light.cpp:277] Total 1 lights.
+I1009 11:59:16.568217  9996 light.cpp:290] Background MIS has been disabled.
+I1009 11:59:16.568217  9996 light.cpp:1400] Number of lights sent to the device: 0
+I1009 11:59:16.568217  9996 light.cpp:390] Use light distribution with 6656 emitters.
+I1009 11:59:16.568217  9996 tables.cpp:39] Total 10 lookup tables.
+I1009 11:59:16.568217  9996 scene.cpp:391] System memory statistics after full device sync:
+  Usage: 983,192 (960.15K)
+  Peak: 28,900,114 (27.56M)
+I1009 11:59:16.591215  9996 path_trace.cpp:418] Rendered 1 samples in 0.000821 seconds (0.000821 seconds per sample), occupancy: 3.96977e-06
+I1009 11:59:16.623216  9996 device_impl.cpp:1093] Graphics interop: found matching OpenGL device for CUDA
+I1009 11:59:16.623216  9996 path_trace_work_gpu.cpp:946] Using graphics interop GPU display update.
+I1009 11:59:16.642217  9996 session.cpp:172] Rendering in main loop is done in 0.0520189 seconds.
+I1009 11:59:16.642217  9996 session.cpp:173] 
+Full path tracing report
+
+Path tracing on: NVIDIA GeForce RTX 3090 (OptiX) [CUDA_NVIDIA GeForce RTX 3090_0000:17:00_OptiX]
+
+Render Scheduler Summary
+
+Mode: Background
+Resolution: 4x4
+
+Adaptive sampling:
+  Use: False
+
+Denoiser:
+  Use: False
+
+Time (in seconds):
+                                       Wall              Average
+          Path Tracing             0.000875             0.000875
+        Display Update             0.049925             0.049925
+
+  Total: 0.050801
+
+Rendered 1 samples in 0.051046 seconds
+Average time per sample: 0.051046 seconds
+I1009 11:59:16.642217 18520 session.cpp:476] Total render time: 0.557374
+I1009 11:59:16.642217 18520 session.cpp:477] Render time (without synchronization): 0.0521353
+Read blend: "D:\PROJECTS\Neuro3D-Scientific-20261008\Docs\validation\own-blender-addon-2026-10-09\attempt03\worker\jobs\optic-neuro-326edc59834b425d92ea2a99f43faa61\trained_geometry.blend"
+Saved: 'D:\PROJECTS\.cognition\neuro3d-sequential-20261008\native-cycles-optix-attempt01-20261009\worker\lossless_candidate_pixels\candidate_0.exr'
+Time: 00:01.40 (Saving: 00:00.03)
+
+Traceback (most recent call last):
+  File "D:\PROJECTS\Neuro3D-Scientific-20261008\Tools\audit_native_cycles_optix_v1.py", line 68, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\PROJECTS\Neuro3D-Scientific-20261008\Tools\audit_native_cycles_optix_v1.py", line 60, in main
+    if failure is not None:raise failure
+                           ^^^^^^^^^^^^^
+  File "D:\PROJECTS\Neuro3D-Scientific-20261008\Tools\audit_native_cycles_optix_v1.py", line 38, in main
+    own=build_graphics_graph(scene,backend,max_states=4096,distance_tolerance_BU=profile['distance_absolute_tolerance_BU']);optix_seconds=time.perf_counter()-t
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PROJECTS\Neuro3D-Scientific-20261008\Blender\blender_lab\native_geometry_frontier_v4.py", line 101, in build_graphics_graph
+    observed=backend.query(queries)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PROJECTS\Neuro3D-Scientific-20261008\Blender\blender_lab\native_cycles_optix_geometry_v1.py", line 78, in query
+    if len(rgba)!=4 or not all(math.isfinite(v) for v in rgba):raise ValueError('Complete finite lossless EXR pixel required')
+                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Complete finite lossless EXR pixel required
+addon_utils.disable: optic_neuro_blender not loaded
+Modules Installed (optic_neuro_blender) from 'D:\\PROJECTS\\Neuro3D-Scientific-20261008\\Blender\\releases\\optic-neuro-blender-0.1.2.zip' into 'D:\\PROJECTS\\.cognition\\neuro3d-sequential-20261008\\native-cycles-optix-attempt01-20261009\\isolated_scripts\\addons'
+Info: Modules Installed (optic_neuro_blender) from 'D:\\PROJECTS\\Neuro3D-Scientific-20261008\\Blender\\releases\\optic-neuro-blender-0.1.2.zip' into 'D:\\PROJECTS\\.cognition\\neuro3d-sequential-20261008\\native-cycles-optix-attempt01-20261009\\isolated_scripts\\addons'
+
+Error: script failed, file: 'D:\PROJECTS\Neuro3D-Scientific-20261008\Tools\audit_native_cycles_optix_v1.py', exiting.
+I1009 11:59:16.755214 18520 device_impl.cpp:80] Closed database: "C:\Users\Windows-500GB\AppData\Local\NVIDIA\OptixCache\optix7cache.db"
+I1009 11:59:16.755214 18520 device_impl.cpp:80]     Cache data size: "1.0 MiB"
+
+Blender quit

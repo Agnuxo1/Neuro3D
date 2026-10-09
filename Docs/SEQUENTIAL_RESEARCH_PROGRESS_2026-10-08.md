@@ -121,3 +121,7 @@ Frozen699f01e publishedmain+branch beforeFIFO;88pins. Full336.924254s/RSS434.86M
 ## 2026-10-09T09:53:26.410773+00:00 — compiled reproducible scientific article and graphics selection
 
 Actual pdflatex MiKTeX25.12 two passes0/no-shell-escape;12pages350185bytes/PDFsha28a30a45aac6e0ae1b94809b94288976340a9a4a9487dfd9f0bddd043140243a/zerooverfull. Sourceequations/tables/readout/derivative controls andfullrawlinks inspected. Researchdraftnotexternalpeerreview/notjournal. Advancedprimarydocumentation mappedactualOpenGL/installedOptiX/SERAda constraint/Vulkan/AMD hardware gap/licenses; noSDKcontractaccepted. OptiXprofiled98f506 frozen92pins/09:45:58receiptqueuedbehindsharedNeuroPixel9GiB; noOptiXoutcome. Nextnativegraphicsactual60steptraining withwholeoriginalfamilyproof/newcompactstrictGLlog andactualnativecaptures. Goalactive13:55UTC.
+
+## 2026-10-09T10:03:22.799811+00:00 — installed OptiX partial execution, extent rejected
+
+Frozen d98f506/d7a23b34/92pins prospective. LogRTX3090(OptiX)/OPTIXBVH/4x4 render. Readerexpected1pixelreject64scalars;null8.289187s/RSS639.48. Noacceptednetwork/field/training. Originalallhashesarchived; newv2explicit4x4/fixedpixel beforetrial. Nativegraphicstrainingpreparedfd91670/98pinsnotyetexecuted. Goalactive13:55UTC.
