@@ -8,7 +8,7 @@ Los resultados científicos, código, protocolos, intentos fallidos y evidencias
 están integrados en **`main`** por autorización expresa del propietario.
 [Estado verificable de los diez objetivos](Docs/research/optic_neuro_blender_acceptance_v1.json),
 [guía de instalación y uso](Docs/OPTIC_NEURO_BLENDER_USER_GUIDE_2026-10-09.md) y
-[artículo reproducible en preparación](Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.md).
+[artículo científico: PDF compilado](Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.pdf), [fuente y evidencias](Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.md).
 
 | Resultado medido | Alcance comprobado |
 |---|---|
@@ -27,6 +27,8 @@ la red completa, reproducción por expertos y novedad excepcional siguen abierto
 
 
 Los [gradientes ópticos en shaders desde geometría](Docs/NATIVE_GRAPHICS_GEOMETRY_GRADIENT_PROTOCOL_2026-10-09.md) también pasan: 16 parámetros, cinco sondas y32 geometrías perturbadas auditadas. Discrepancia máxima de Jacobiano de campo **5,74×10⁻¹²**; diferencias finitas escaladas **≤2,66×10⁻⁹**. La CPU conserva topología, tangentes afines, fusiones y pérdida; este ensayo aún no constituye entrenamiento completo en el motor gráfico.
+
+La [selección de aceleración gráfica](Docs/ADVANCED_GRAPHICS_TECHNOLOGY_SELECTION_2026-10-09.md) distingue las tecnologías ejecutadas de los ensayos preparados. El [artículo PDF](Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.pdf) incluye métodos, resultados negativos y mapa de reproducción; se conserva su [recibo de compilación](Docs/paper/scientific_article_build_receipt_2026-10-09.json). Sigue siendo un borrador sin revisión externa ni envío a una revista.
 
 ## Funcionamiento verificado de la red
 
