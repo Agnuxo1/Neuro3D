@@ -1,0 +1,20 @@
+== nested tag=full: 17 sujetos, 36 configuraciones, 50 folds externos (2 sin inner valido -> defecto polar|f12w3|0.001|60)
+   coste: 1368 entrenamientos, 4118 s de entrenamiento (3.01 s/ent.)
+   N1_nested_per_subject_innerBCE         0.7009  ee 0.0257
+   N1b_nested_per_subject_innerACC        0.6967  ee 0.0261
+   N2_LOSO_global_config                  0.7274  ee 0.0249
+   N3_default_fixed                       0.7128  ee 0.0261
+   MAX_LORO_grid_biased                   0.7285  [free|f12w3|0.01|90]
+   MEAN_over_grid                         0.6912  ee 0.0232
+   ORACLE_per_subject_biased              0.7540  ee 0.0205
+   N1-N3          -0.0119 IC95 [-0.0278,+0.0043] p_sf 0.185  5/4/8
+   N2-N3          +0.0146 IC95 [+0.0012,+0.0283] p_sf 0.065  10/2/5
+   N1-N2          -0.0265 IC95 [-0.0395,-0.0136] p_sf 0.002  2/2/13
+   N1-MEANgrid    +0.0098 IC95 [-0.0042,+0.0248] p_sf 0.220  9/0/8
+   N3-MEANgrid    +0.0216 IC95 [+0.0086,+0.0332] p_sf 0.005  14/0/3
+   optimismo: {'MAX_minus_N2': 0.0010695187165775666, 'MAX_minus_N1': 0.027524378735451327, 'default_minus_N2': -0.014595784837999393}
+   senal interna Spearman {'mean': 0.03325289575289575, 'frac_positive': 0.4583333333333333, 'n': 48, 'note': 'rho>0 = a menor BCE interna, mayor exactitud externa (la seleccion interna informa)'}
+   frecuencia N1: {'free|f8w1|0.001|90': 0.08, 'free|f8w1|0.01|90': 0.08, 'free|f12w3|0.001|90': 0.08, 'polar|f8w1|0.01|30': 0.06, 'polar|f12w3|0.001|30': 0.06, 'free|f8w1|0.001|30': 0.06, 'polar|f8w1|0.01|60': 0.06, 'polar|f12w3|0.01|60': 0.04} (configs distintas 24)
+   frecuencia N2: {'free|f12w3|0.01|90': 0.9411764705882353, 'free|f12w3|0.001|90': 0.058823529411764705, 'polar|f8w1|0.001|30': 0.0, 'polar|f8w1|0.001|60': 0.0, 'polar|f8w1|0.01|60': 0.0, 'polar|f8w1|0.01|90': 0.0, 'polar|f8w1|0.001|90': 0.0, 'polar|f8w1|0.01|30': 0.0} (configs distintas 2)
+   ensembles: {'E1_polar+lattice32': 0.7101, 'E2_polar+lattice32+free': 0.7227}
+   T1 umbral mediana (folds equilibrados): {'n_subjects': 17, 'acc_zero_threshold': 0.7106, 'acc_median_threshold': 0.7358, 'mean_pred_move_minus_true_move_fraction_all_folds': -0.0204, 'mean_abs_prior_bias': 0.1764}

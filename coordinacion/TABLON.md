@@ -1,5 +1,13 @@
 # Tablón de Neuro3D
 
+## 2026-10-09 13:58 UTC — Claude — P0-3: benchmark EEG en el repositorio (validacion anidada, sin superioridad)
+
+- Codigo, evidencias y manifiestos en `Benchmarks/eeg-motor-imagery/`. Los datos de la competicion no se incluyen (sus reglas).
+- La validacion anidada esta verificada: sin fugas, analisis reproducido byte a byte desde la evidencia cruda (`NEURO3D_EEG_RAW`, prueba `Blender/tests/test_eeg_evidence_integrity.py`).
+- Lo que NO se afirma: superioridad frente a FBCSP ni EEGNet (bases sin rejilla anidada; contrastes de `bias_inventory` exploratorios). `ADDENDUM-SEEDS5` es post hoc y `results_seeds5` no es validacion anidada.
+- Decision JEV (procedencia jev): ver `coordinacion/jev/p0-3-eeg-20261009.md`.
+
+
 ## 2026-10-09 13:45 UTC — Claude — P0-2: fuente unica, criterio de parada y cierre de EXP-005
 
 Cambio de gobierno, aplicable desde ahora (ver `Docs/GOVERNANCE.md`):

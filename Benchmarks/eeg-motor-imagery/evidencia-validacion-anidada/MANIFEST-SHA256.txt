@@ -1,0 +1,30 @@
+# SHA-256  bytes  ruta (relativa a work/nested; bytes originales, sin conversion)
+cb2bdee68c3d894c4ddbc0f8d060070a03f0f807dc4c538d7d8e49a2dbd117b1  7943  PREINSCRIPCION.md
+077f31959e86839a4c0cf8a8b3e946de6f065cf48040cc636a6fdf7f6f6edb38  20288  INFORME-NESTED.md
+bae6d93e29cb3638f7c4463c0dd3ceaed6154ff2fdc82533abc65a422c835561  1418  ADDENDUM-SEEDS5.md
+96bc68de091565f38afb113125b092407fbf89aee6c6f8a559b5a685a2089a70  9941  results_full.json
+c9889a5f821025ab89b8a5a86bf1d44eb33c4fae507d12b829a57300a4cb7197  2170  results_full.txt
+34f6b2d4b9d385acd2ffaa9cae3e3afd765ab1978cda5ec8b9e6626639ec4b5b  6142  results_seeds5.json
+e5f2dcd821dc6811eeade158e0cd75af16fe0dec2381570a2aa29352f6cfacb5  1815  results_seeds5.txt
+43b719c49bca74a37a9cbead5d17cd0783a938c0aa91f2027d31fbc1bd663efb  6166  bias_inventory.json
+05465cdb2fd86793fa18fb3873634f8a36461d74bf654a8a1a474f6a3fbae9da  5656  logs/full_persubject.log
+9477129d0f653fdec613b0c042afc0438b7dde88e0ff5597ca6d991ae328b123  2429  logs/full_shard0.log
+7c9aeabbc0b6ee37cc6256a377ca1d3facf1e040c1e6d57505567ce1c0040e3e  195  logs/full_shard1.log
+aa77f80e0f2231a9dbd586f09afb4bae9bd28664e49f039a5824e5898a6523f8  2616  logs/predict_var.log
+3143eb1fc9195cf5870ef4731bae278bbfcb6747cbd41fcb720cbc3c4a2f0b75  11230  logs/seeds5.log
+0c663431df6212b48754ca4a2ebc248ca8fabdf5dc0d80445337d9416803e228  2111  smoke_logs/analyze_smoke.log
+684f5e43c4e925513927f0ff909c52312d209b17145d3f4918e6ac5f3cfa2d20  478  smoke_logs/nested_smoke_run.log
+46b27e9db643d66d7cde2f54f378c2d32d849e96025a7a745af0d2358c864300  565  smoke_logs/test_groups_smoke.log
+ca910fe8c82985050f9ad47ab6cf3816906ecde30e56f5313620b88ee91bef6b  392  smoke_logs/time_cpu_probe.log
+cb40ce0dfefb59e514f434d110b128747f7478e333e62e88fca126d17b1219d0  615  bench-historico/bench_eegnet.json  (origen work/bench_eegnet.json; bytes originales, CRLF=23)
+8f7f68ba76698b2d3a593ec446b7c2ada5ff4d5efee5d0fc7a2ff710af0f3236  591  bench-historico/bench_eegnet_loro.json  (origen work/bench_eegnet_loro.json; bytes originales, CRLF=23)
+51ca19f9d2b2855a4efb9735622db7f1d41582089dba5e45374abe114cdf5d1d  1850  bench-historico/bench_fbcsp_optic_free.json  (origen work/bench_fbcsp_optic_free.json; bytes originales, CRLF=67)
+d716a79611f1af1927503ec13ed54d405fe253963bda2f5cccd2944edfe17b70  2393  bench-historico/bench_fbcsp_optic_polar_free_loro.json  (origen work/bench_fbcsp_optic_polar_free_loro.json; bytes originales, CRLF=89)
+c10989e020df38770e8949bbe405460e148771e1c76baa48883610996737a8a7  1212  bench-historico/bench_lattice_lattice32_loro.json  (origen work/bench_lattice_lattice32_loro.json; bytes originales, CRLF=45)
+1996fdf6174304849a2f0d2acc0316ecc10c5f84527a1d2f93faad15c95f74a5  346  bench-historico/bench_lattice_spectral_loro.json  (origen work/bench_lattice_spectral_loro.json; bytes originales, CRLF=17)
+5681c64d8c909a9230e9c9af95197f07855ed120c3ffbe5a9bc9005bf6a0e4ae  620  bench-historico/bench_optic16r8.json  (origen work/bench_optic16r8.json; bytes originales, CRLF=23)
+fffc783b357ec70d4b957942a5559f3d8ffe4bbc55cca0e0aaa537e62da70271  222  bench-historico/bench_optic16r8_optic16r16.json  (origen work/bench_optic16r8_optic16r16.json; bytes originales, CRLF=13)
+fea508bd7f92299abe2586b8ed001e223c2ef858da699fb0ec898d9971b853cd  174  bench-historico/bench_opticsvd.json  (origen work/bench_opticsvd.json; bytes originales, CRLF=9)
+171e8af1a580841cec5aaa94c83971deca4d2e89dc33ac37a05a2add88fc360e  618  bench-historico/bench_polar.json  (origen work/bench_polar.json; bytes originales, CRLF=23)
+4dfade850fca69c7cd9cdac5d8a759c72f7428fc582641c9d463eeb42bd84759  1150  bench-historico/bench_polar_lattice32_loro_f12w3.json  (origen work/bench_polar_lattice32_loro_f12w3.json; bytes originales, CRLF=45)
+e25de14481f6902e84db9ffecc2a66e4d54bec9d0751a25a3ce9047b3b2d6be0  224  bench-historico/time_cpu_probe.json  (origen work/nested/time_cpu_probe.json; bytes originales, CRLF=7)

@@ -1,0 +1,20 @@
+== nested tag=seeds5: 17 sujetos, 3 configuraciones, 50 folds externos (50 sin inner valido -> defecto polar|f12w3|0.01|90)
+   coste: 750 entrenamientos, 2625 s de entrenamiento (3.50 s/ent.)
+   N1_nested_per_subject_innerBCE         0.7113  ee 0.0249
+   N1b_nested_per_subject_innerACC        0.7113  ee 0.0249
+   N2_LOSO_global_config                  0.7299  ee 0.0247
+   N3_default_fixed                       0.7113  ee 0.0249
+   MAX_LORO_grid_biased                   0.7299  [free|f12w3|0.01|90]
+   MEAN_over_grid                         0.7153  ee 0.0221
+   ORACLE_per_subject_biased              0.7456  ee 0.0204
+   N1-N3          +0.0000 IC95 [+0.0000,+0.0000] p_sf 1.000  0/17/0
+   N2-N3          +0.0186 IC95 [+0.0041,+0.0334] p_sf 0.030  10/2/5
+   N1-N2          -0.0186 IC95 [-0.0334,-0.0041] p_sf 0.029  5/2/10
+   N1-MEANgrid    -0.0040 IC95 [-0.0132,+0.0052] p_sf 0.427  7/1/9
+   N3-MEANgrid    -0.0040 IC95 [-0.0132,+0.0052] p_sf 0.431  7/1/9
+   optimismo: {'MAX_minus_N2': 0.0, 'MAX_minus_N1': 0.018611722763971827, 'default_minus_N2': -0.018611722763971827}
+   senal interna Spearman {'mean': None, 'frac_positive': None, 'n': 0, 'note': 'rho>0 = a menor BCE interna, mayor exactitud externa (la seleccion interna informa)'}
+   frecuencia N1: {'polar|f12w3|0.01|90': 1.0, 'lattice32|f12w3|0.01|90': 0.0, 'free|f12w3|0.01|90': 0.0} (configs distintas 1)
+   frecuencia N2: {'free|f12w3|0.01|90': 1.0, 'polar|f12w3|0.01|90': 0.0, 'lattice32|f12w3|0.01|90': 0.0} (configs distintas 1)
+   ensembles: {'E1_polar+lattice32': 0.7132, 'E2_polar+lattice32+free': 0.7184}
+   T1 umbral mediana (folds equilibrados): {'n_subjects': 17, 'acc_zero_threshold': 0.7112, 'acc_median_threshold': 0.7555, 'mean_pred_move_minus_true_move_fraction_all_folds': 0.0076, 'mean_abs_prior_bias': 0.2108}
