@@ -105,3 +105,7 @@ Frozen0c0ce65/profile1192fd7e/source46verified07:30:29/actualFIFOadmitted07:43:0
 
 ## 2026-10-09T08:07:40.001219+00:00 — equivalent native geometry ablation PASS, no GPU speed advantage
 Frozen86904e4/profile6ffad8cb/source50 verified beforeactualFIFO. All6nativeCPU-BVH/GPUraster sourcefrontiers133states186edges17060paths/150nativeoutputs same, maxfield5.118e-16/power5.551e-16. CPU9.82998–9.89755s/GPU9.91286–10.00432s/medianCPUoverGPU0.9903396799171732. No globalGPUadvantage in smallcapturedscene; prior2.85xcombinedchange notGPUcausalproof. Full72.84494s/RSS364.898MiB. Allrawhashesverified/archiveprepared needs publication. Nextactualdepth-selectedFP64fragmentdistance/phase/branchtransport development JEVconnected provenancejev; no trial yet. Goalactive13:55UTC.
+
+## 2026-10-09T09:03:13.173865+00:00 — actual captured-surface native graphics coherent field PASS
+
+Frozen 95f58608/profile90f7701c/81 pins verified before FIFO. Full 36.618470 s/RSS403.04 MiB; three150-input GPU fragment runs 19,950 queries each, all150predictions same27of30, field7.50105e-14/power7.21645e-15; four coherence controls pass. Exactinputecho and all 3634 owned GL stages pass; actual programzero-beforedeletion fixes release-build lifecycle. No dense transfermatrix/CPU phase evaluation substituted, CPU exacttopology and compensatedmerges explicit. No speedup/RTcore/AMD/physical/unobserved-roundingcert claim. All raw hashes checked and archive prepared; publish before secondary interval certificates. Goal active13:55UTC.

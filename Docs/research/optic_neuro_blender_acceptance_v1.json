@@ -19,7 +19,7 @@
       "status": "PARTIAL_SEMANTIC_CONTRACT_VERIFIED",
       "acceptance": "Versioned contract enforced at actual scene ingress; analytic controls and roundtrip; normalized power separated from calibrated watts",
       "remaining": "Broader geometry/model families and calibrated physical units; existing solver/training consume declared common-coherence unit-power input contract",
-      "achieved": "Explicit units, common phase/coherence, modal readout enforced; 50 CPU controls; actual Iris bpy admission and fixture save/reopen PASS"
+      "achieved": "Explicit units, common phase/coherence, modal readout enforced; 50 CPU controls; actual Iris bpy admission and fixture save/reopen PASS; native captured-surface FP64 fragment coherent transport all150 predictions/phase/interference/binary64 echoes/strict GL stages PASS (hybrid exact CPU topology and coherent merging)"
     },
     {
       "id": 3,
@@ -42,7 +42,7 @@
       "name": "Coherent propagation and error",
       "status": "PARTIAL_OBSERVED_REPRESENTED_ERROR_CERTIFIED",
       "acceptance": "All relevant branches covered; adverse controls; capture/representation/geometry/phase/sum/readout budgets complete; invalid margins stay unknown",
-      "achieved": "Independent interval enclosure: observed native field L1<=4.9383434427813286e-15,power<=3.1372973883238074e-15; represented det.R1 argmax margin>=0.18933601504039158; seven adverse/enclosure controls plus full graph90-digit cross-check; independentnative150field/power/decisioncert includesidealtrainonlyinputencoding,fieldmax2.7683e-15/power1.0366e-15,150argmaxcert137correct13wrong",
+      "achieved": "Independent interval enclosure: observed native field L1<=4.9383434427813286e-15,power<=3.1372973883238074e-15; represented det.R1 argmax margin>=0.18933601504039158; seven adverse/enclosure controls plus full graph90-digit cross-check; independentnative150field/power/decisioncert includesidealtrainonlyinputencoding,fieldmax2.7683e-15/power1.0366e-15,150argmaxcert137correct13wrong; native captured-surface FP64 fragment coherent transport all150 predictions/phase/interference/binary64 echoes/strict GL stages PASS (hybrid exact CPU topology and coherent merging)",
       "remaining": "Intendedgeometry/Blendertransform preimages, geometric/inputmeasurementuncertainty andfullphysicalmodelerror; certificateofobservednativearithmetic completed"
     },
     {
@@ -75,7 +75,7 @@
       "status": "PARTIAL_ACTUAL_NATIVE_GRAPHICS_FRONTIER_AND_CUDA_ARITHMETIC_VERIFIED",
       "acceptance": "Equivalent outputs and precision, actual vendor execution receipts, complete preparation/transfer/compute/readout/training cost and resource/ablation evidence",
       "amd_execution_verified": false,
-      "achieved": "ActualRTX3090/CUDA12.4/Torch2.6.0 kernels/readback60inputs; ownfields/powers/manualJacobian parity/autogradcontrol; independentobservedfieldsL1<=2.9356882610688944e-15,power<=1.3807709003001215e-15;59argmaxcertified,zeroUNKNOWN;5repeatsbatches1/150/2048,fullworker6.7155s,source/setup/transfers/readback costs andequivalentdensebaseline measured; pairedfullactualCPU/CUDAowntraining60updates61geometryauditsboth27of30/150decisionssame, field5.4e-16/gradient2.85e-13parity;CPU370.46/CUDA390.09s,nofullspeedup,CUDA22MiBreserved; independentlyprovedwholeoriginaltrainingfamily1251exactaffineexpressions, freshfullCPUpointaudit/continuousproofpair393.11/90.93s ratio4.3233,all61coordinates/lossand150powers/predictionsidentical; singlepairnoCI; actualBlenderOpenGLRTX3090 source-drivenfrontier17batches/133verifiedgeometrycandidates/186edges17060paths/all150predictionssame/field5.12e-16power5.55e-16; threecompleteCPU29.87\u201330.77s/GPU+proof31.53\u201333.01s,noglobalspeedup; nearplaneFP32failure retained; prospectivegraphicsv2 exactplane/Gram/squarewitness/all133states+150outputs preserved;originalCPU29.81\u201330.04s/GPUplusnewrefinement10.45\u201310.60s/medianratio2.85combinedroute,notisolatedGPUadvantage; equivalent native CPU-BVH/GPU-raster exact-refinement ablation all6graphs150outputsPASS,CPU9.83\u20139.90s/GPU9.91\u201310.00s/noGPUglobaladvantage",
+      "achieved": "ActualRTX3090/CUDA12.4/Torch2.6.0 kernels/readback60inputs; ownfields/powers/manualJacobian parity/autogradcontrol; independentobservedfieldsL1<=2.9356882610688944e-15,power<=1.3807709003001215e-15;59argmaxcertified,zeroUNKNOWN;5repeatsbatches1/150/2048,fullworker6.7155s,source/setup/transfers/readback costs andequivalentdensebaseline measured; pairedfullactualCPU/CUDAowntraining60updates61geometryauditsboth27of30/150decisionssame, field5.4e-16/gradient2.85e-13parity;CPU370.46/CUDA390.09s,nofullspeedup,CUDA22MiBreserved; independentlyprovedwholeoriginaltrainingfamily1251exactaffineexpressions, freshfullCPUpointaudit/continuousproofpair393.11/90.93s ratio4.3233,all61coordinates/lossand150powers/predictionsidentical; singlepairnoCI; actualBlenderOpenGLRTX3090 source-drivenfrontier17batches/133verifiedgeometrycandidates/186edges17060paths/all150predictionssame/field5.12e-16power5.55e-16; threecompleteCPU29.87\u201330.77s/GPU+proof31.53\u201333.01s,noglobalspeedup; nearplaneFP32failure retained; prospectivegraphicsv2 exactplane/Gram/squarewitness/all133states+150outputs preserved;originalCPU29.81\u201330.04s/GPUplusnewrefinement10.45\u201310.60s/medianratio2.85combinedroute,notisolatedGPUadvantage; equivalent native CPU-BVH/GPU-raster exact-refinement ablation all6graphs150outputsPASS,CPU9.83\u20139.90s/GPU9.91\u201310.00s/noGPUglobaladvantage; native captured-surface FP64 fragment coherent transport all150 predictions/phase/interference/binary64 echoes/strict GL stages PASS (hybrid exact CPU topology and coherent merging)",
       "remaining": "ActualAMDhardware; energy/structuralscaling/ablations; exact GPU geometry predicates or lower-cost valid candidate certificates; installedgraphicsintegration"
     },
     {
@@ -132,5 +132,6 @@
   "latest_external_native_blender": "Docs/validation/external-native-blender-2026-10-09/attempt02/artifact/result.json",
   "latest_native_graphics_frontier": "Docs/validation/native-graphics-frontier-2026-10-09/attempt02/worker/result.json",
   "latest_training_process_recovery": "Docs/validation/training-recovery-2026-10-09/attempt02/supervisor.json",
-  "latest_native_geometry_ablation": "Docs/validation/native-geometry-ablation-2026-10-09/attempt01/worker/result.json"
+  "latest_native_geometry_ablation": "Docs/validation/native-geometry-ablation-2026-10-09/attempt01/worker/result.json",
+  "latest_native_graphics_coherent_field": "Docs/validation/native-graphics-field-2026-10-09/attempt11/worker/result.json"
 }
