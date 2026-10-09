@@ -52,8 +52,9 @@ La [certificación secundaria independiente](Docs/OBSERVED_GRAPH_OUTPUT_CERTIFIC
 acota las ocho salidas nativas observadas frente al modelo representado: error
 de campo L1 ≤ `4,94×10⁻¹⁵` y de potencia ≤ `3,14×10⁻¹⁵`, con presupuesto
 previo `10⁻¹¹`. Certifica R1 para el estímulo unitario, con margen ≥ `0,189336`.
-Todavía faltan entrenamiento, generalización, auditoría independiente de vecindades
-interiores y fidelidad física. El nuevo perfil conserva los dos ensayos inconclusos.
+La [auditoría de vecindades interiores](Docs/INDEPENDENT_SURFACE_NEIGHBORHOOD_AUDIT_2026-10-09.md)
+también pasa independientemente en los 133 estados. Todavía faltan entrenamiento,
+generalización y fidelidad física. El nuevo perfil conserva los dos ensayos inconclusos.
 
 ![Recorrido y detectores de la captura real](Docs/assets/captured-coherent-graph-2026-10-09.png)
 

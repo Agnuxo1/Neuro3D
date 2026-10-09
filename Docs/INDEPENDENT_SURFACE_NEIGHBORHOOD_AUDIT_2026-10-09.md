@@ -33,3 +33,13 @@ las transformaciones Blender. Las otras cotas de error siguen separadas.
 
 [Auditor independiente](../Tools/audit_graph_neighborhood_v1.py) y
 [controles](../Blender/tests/test_graph_neighborhood_audit_v1.py).
+
+## Resultado sobre la captura real
+
+La [auditoría archivada](validation/independent-surface-neighborhood-2026-10-09/evidence_index.json)
+verifica los 133 estados del grafo, incluyendo sus primeros hits y sus vecindades
+interiores, en 5,54 s locales de análisis secundario. Seis controles pasan.
+El radio proyectado mínimo positivo es aproximadamente `0,053033 BU`; cada
+testigo conserva el radio racional exacto y los recortes de los cuatro lados.
+La vecindad geométrica y la certificación de campos son comprobaciones distintas.
+Este tiempo no es una medida de propagación ni una comparación de velocidad.
