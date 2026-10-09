@@ -1,0 +1,34 @@
+{
+  "files": [
+    {
+      "path": "controls-receipt.json",
+      "bytes": 893,
+      "sha256": "c234323e1046231f1b895ff12ac15783de98a0b3ef0004cc77c77441a558cdb2"
+    },
+    {
+      "path": "controls.stderr",
+      "bytes": 12349,
+      "sha256": "97c85af490a8ecd18c4e24ba998926a03032cf0b71ccee587358be30ee86bc92"
+    },
+    {
+      "path": "controls.stdout",
+      "bytes": 397,
+      "sha256": "1124553a36b842091b807d7a1f03f57d4be77a25ab1a27f0bb0194963c8234b7"
+    },
+    {
+      "path": "source/Blender/benchmarks/capacity_audit/exact_object_index_v1.py",
+      "bytes": 3618,
+      "sha256": "ce7313f7702b46ed987943a2808957e0da4fb313a09e54a7f77a9c1b2b5126d2"
+    },
+    {
+      "path": "source/Blender/benchmarks/capacity_audit/robust_multipath_v1.py",
+      "bytes": 16867,
+      "sha256": "26dcbe7bb61dbf98430cd481292970d5631e79aec9fc9794ba672611f559d4d8"
+    },
+    {
+      "path": "source/Blender/tests/test_exact_object_index_v1.py",
+      "bytes": 4702,
+      "sha256": "6c078262f22863c502acdb4bd394d93eae3af6947d5a56028370798b8d21f855"
+    }
+  ]
+}
