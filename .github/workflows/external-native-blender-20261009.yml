@@ -1,0 +1,70 @@
+name: Frozen external native Blender reproduction 2026-10-09
+
+on:
+  push:
+    branches: [codex/neuro3d-scientific-closure-20261008]
+    paths:
+      - .github/workflows/external-native-blender-20261009.yml
+      - Docs/research/external_native_blender_profile_2026-10-09.json
+      - Docs/research/external_native_blender_registration_2026-10-09.json
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    env:
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      PIP_DISABLE_PIP_VERSION_CHECK: '1'
+    steps:
+      - name: Checkout only frozen own addon and required source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /.gitattributes
+            /LICENSE
+            /.github/workflows/external-native-blender-20261009.yml
+            /Tools/*.py
+            /Blender/addon/optic_neuro_blender/*.py
+            /Blender/blender_lab/*.py
+            /Blender/benchmarks/capacity_audit/*.py
+            /Blender/demo_lattice_iris/iris.csv
+            /Blender/releases/optic-neuro-blender-0.1.2*
+            /Docs/research/external_native_blender_*
+            /Docs/research/external_cpu_requirements_2026-10-09.txt
+            /Docs/research/github_sequence_authorization_2026-10-09.json
+            /Docs/research/captured_geometry_training_profile_2026-10-09.json
+            /Docs/research/iris_coherent_contract_v1.json
+            /Docs/research/iris_scene_coordinate_bindings_v1.json
+            /Docs/validation/captured-geometry-training-2026-10-09/attempt01/worker/result.json
+            /Docs/validation/captured-scalar-ingress-2026-10-08/semantics.json
+            /Docs/validation/trained-geometry-blender-reproduction-2026-10-09/attempt01/worker/trained_geometry.blend
+      - name: Set up the fixed supervisor Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12.12'
+          architecture: x64
+      - name: Verify published source bytes and human continuity before execution
+        run: |
+          python -X utf8 Tools/run_external_native_blender_v1.py --profile Docs/research/external_native_blender_profile_2026-10-09.json --registration Docs/research/external_native_blender_registration_2026-10-09.json --verify-only
+      - name: Install exact hashed Linux supervisor wheels
+        run: |
+          python -m pip install --require-hashes --only-binary=:all: -r Docs/research/external_cpu_requirements_2026-10-09.txt
+      - name: Prepare official Blender and execute nine bounded native controls
+        run: |
+          python -X utf8 Tools/run_external_native_blender_v1.py --profile Docs/research/external_native_blender_profile_2026-10-09.json --registration Docs/research/external_native_blender_registration_2026-10-09.json --out native-reproduction-evidence
+      - name: Preserve every outcome and error
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: external-native-blender-evidence-${{ github.run_id }}-${{ github.run_attempt }}
+          path: native-reproduction-evidence
+          if-no-files-found: warn
+          retention-days: 10
