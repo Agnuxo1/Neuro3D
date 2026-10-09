@@ -85,3 +85,5 @@ This result demonstrates actual graphical geometry and coherent field execution,
 [Evidence index](validation/native-graphics-field-2026-10-09/attempt11/evidence_index.json), [result](validation/native-graphics-field-2026-10-09/attempt11/worker/result.json), [supervision](validation/native-graphics-field-2026-10-09/attempt11/supervisor.json).
 
 ![Actual coherent graphics transport](assets/native-graphics-coherent-fields-2026-10-09.png)
+
+The separately frozen [secondary interval study](NATIVE_GRAPHICS_FIELD_CERTIFICATE_PROTOCOL_2026-10-09.md) now bounds all 450 recorded graphical outputs and all four coherence controls within the unchanged budgets. Its scope remains observed execution against the exact represented scalar model.
