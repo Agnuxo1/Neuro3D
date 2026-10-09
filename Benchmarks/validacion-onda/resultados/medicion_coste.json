@@ -1,0 +1,91 @@
+{
+ "medidas": [
+  {
+   "N": 62500,
+   "t_cpu_s": 28.5,
+   "t_wall_s": 19.4,
+   "nnz_lu": 7776972,
+   "pico_memoria_gb": 0.34,
+   "forma": "cuadrado, PEC central"
+  },
+  {
+   "N": 160000,
+   "t_cpu_s": 246.5,
+   "t_wall_s": 160.8,
+   "nnz_lu": 34319011,
+   "pico_memoria_gb": 1.29,
+   "forma": "cuadrado, PEC central"
+  },
+  {
+   "N": 255195,
+   "t_cpu_s": 148.1,
+   "t_wall_s": 148.1,
+   "nnz_lu": 36376997,
+   "pico_memoria_gb": 1.4,
+   "forma": "321x795, test PML (alargado)"
+  }
+ ],
+ "proyeccion": [
+  {
+   "w": 4,
+   "ppl": 16,
+   "N": 1230288,
+   "mem_LU_optimista_gb": 3.781123459339142,
+   "mem_LU_pesimista_gb": 16.045972446492634,
+   "t_factor_optimista_h": 0.43517221141183715,
+   "t_factor_pesimista_h": 4.397732971736357,
+   "t_21_factorizaciones_optimista_h": 9.138616439648581
+  },
+  {
+   "w": 4,
+   "ppl": 24,
+   "N": 2770625,
+   "mem_LU_optimista_gb": 8.515140507370234,
+   "mem_LU_pesimista_gb": 57.86662586891427,
+   "t_factor_optimista_h": 1.470678000612471,
+   "t_factor_pesimista_h": 27.322064806022752,
+   "t_21_factorizaciones_optimista_h": 30.88423801286189
+  },
+  {
+   "w": 8,
+   "ppl": 16,
+   "N": 2085216,
+   "mem_LU_optimista_gb": 6.408628821372986,
+   "mem_LU_pesimista_gb": 36.93294794549713,
+   "t_factor_optimista_h": 0.9602350316021664,
+   "t_factor_pesimista_h": 14.414628103712202,
+   "t_21_factorizaciones_optimista_h": 20.164935663645494
+  },
+  {
+   "w": 8,
+   "ppl": 24,
+   "N": 4696072,
+   "mem_LU_optimista_gb": 14.432740956544876,
+   "mem_LU_pesimista_gb": 133.19754402795576,
+   "t_factor_optimista_h": 3.2452868750364896,
+   "t_factor_pesimista_h": 89.56055230631361,
+   "t_21_factorizaciones_optimista_h": 68.15102437576628
+  },
+  {
+   "w": 16,
+   "ppl": 16,
+   "N": 4466220,
+   "mem_LU_optimista_gb": 13.72632198035717,
+   "mem_LU_pesimista_gb": 123.04407169091118,
+   "t_factor_optimista_h": 3.009962889221349,
+   "t_factor_pesimista_h": 79.99794570313085,
+   "t_21_factorizaciones_optimista_h": 63.209220673648325
+  },
+  {
+   "w": 16,
+   "ppl": 24,
+   "N": 10055344,
+   "mem_LU_optimista_gb": 30.903737246990204,
+   "mem_LU_pesimista_gb": 443.54988473613105,
+   "t_factor_optimista_h": 10.168253668470928,
+   "t_factor_pesimista_h": 496.71432065764833,
+   "t_21_factorizaciones_optimista_h": 213.53332703788948
+  }
+ ],
+ "nota": "memoria LU = nnz*20 B (16 B complejo + 4 B indice), sin espacio de trabajo; RAM libre medida 9,5 GB; solo SuperLU disponible (1 hilo)"
+}

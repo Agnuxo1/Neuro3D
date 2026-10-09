@@ -1,0 +1,39 @@
+{
+ "casos": [
+  {
+   "ppl": 16,
+   "w": 8.0,
+   "angulo": 0.0,
+   "nx": 321,
+   "ny": 795,
+   "incognitas": 255195,
+   "reflexion_potencia": 2.8147635936181886e-12,
+   "reflexion_amplitud": 1.6777257206165101e-06,
+   "reflexion_plano_1lambda": 2.8049986999341312e-12,
+   "error_relativo_haz": 4.118403538634678e-06,
+   "t_factor_s": 147.59375,
+   "t_cpu_total_s": 148.0625,
+   "nnz_lu": 36376997,
+   "pico_memoria_gb": 1.3988189697265625
+  },
+  {
+   "ppl": 16,
+   "w": 8.0,
+   "angulo": 10.0,
+   "nx": 321,
+   "ny": 795,
+   "incognitas": 255195,
+   "reflexion_potencia": 6.700701713451764e-12,
+   "reflexion_amplitud": 2.5885713653387584e-06,
+   "reflexion_plano_1lambda": 5.96401397887095e-12,
+   "error_relativo_haz": 2.5497484285814667e-05,
+   "t_factor_s": 150.9375,
+   "t_cpu_total_s": 151.328125,
+   "nnz_lu": 36376997,
+   "pico_memoria_gb": 1.4013175964355469
+  }
+ ],
+ "criterio": 0.001,
+ "cumple": true,
+ "cumple_en_amplitud": true
+}
