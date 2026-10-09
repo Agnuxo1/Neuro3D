@@ -6,6 +6,8 @@ Red óptica escalar entrenable que calcula desde la **geometría evaluada de Ble
 
 [Instalar y usar](Docs/OPTIC_NEURO_BLENDER_USER_GUIDE_2026-10-09.md) · [Complemento 0.1.3](Blender/releases/optic-neuro-blender-0.1.3.zip) · [Artículo PDF](Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.pdf) · [Fuentes del artículo](Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.md) · [Estado de los diez objetivos](Docs/SCIENTIFIC_ACCEPTANCE_REPORT_2026-10-09.md)
 
+[Estado conjunto actualizado y lista completa de pendientes](Docs/PROJECT_STATE_AND_REMAINING_WORK_2026-10-09.md): incluye benchmarks posteriores, auditoría EEG, búsqueda de novedad y la coordinación con Claude. La comparación FDTD está en curso y sus archivos locales aún no son un resultado publicado.
+
 ## Resultados comprobados
 
 | Evidencia | Resultado y alcance |

@@ -155,5 +155,21 @@
   "native_resident_graph_status": "REJECTED_NATIVE_CONTROL_FIELD_ERROR_ORIGINAL_THREE_ATTEMPTS_RETAINED",
   "latest_public_http_receipt": "Docs/publication/public_main_http_verification_2026-10-09.json",
   "review_packet": "Docs/EXTERNAL_REVIEW_PACKET_2026-10-09.md",
-  "latest_native_resident_graph_attempt": "Docs/validation/native-resident-graph-2026-10-09/attempt03/evidence_index.json"
+  "latest_native_resident_graph_attempt": "Docs/validation/native-resident-graph-2026-10-09/attempt03/evidence_index.json",
+  "latest_joint_status_report": "Docs/PROJECT_STATE_AND_REMAINING_WORK_2026-10-09.md",
+  "latest_joint_status_audit": "Docs/research/current_joint_status_audit_2026-10-09.json",
+  "published_auxiliary_evidence_reviewed": {
+    "public_commit": "e2cd6189c9c4abebce276e300ee74eef0a618633",
+    "benchmark_v1": "Benchmarks/benchmark-v1/resultados/RESULTADOS_BENCHMARK_V1.json",
+    "EEG_limits": "Benchmarks/eeg-motor-imagery/README.md",
+    "novelty_bounded_search": "Docs/research/novelty-p1-6/VEREDICTO-P1-6.md",
+    "wave_protocol_only": "Benchmarks/validacion-onda/PREREGISTRO-P1-7.md",
+    "all_results_transfer_to_native_Blender_GPU": false
+  },
+  "current_claude_collaboration": {
+    "request": "coordinacion/tareas/OPTIC-STATUS-20261009-CLAUDE.md",
+    "receipt": "Docs/research/claude_coordination_request_2026-10-09.json",
+    "acknowledged": false,
+    "wave_unpublished_in_progress": true
+  }
 }

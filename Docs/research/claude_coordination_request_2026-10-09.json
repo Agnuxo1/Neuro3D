@@ -1,0 +1,15 @@
+{
+  "schema": "optic_neuro_blender.claude_coordination_request.v1",
+  "utc": "2026-10-09T19:13:35.163938+00:00",
+  "authorization": "Directhumanrequest: ImportanteClaude tambi\u00e9n est\u00e1trabajandoenesteproyecto,as\u00edquecolaboracon\u00e9l",
+  "request_path": "coordinacion/tareas/OPTIC-STATUS-20261009-CLAUDE.md",
+  "request_sha256": "338afaf851cc34bd2a60aab9208e067b7aeeb0771ba6ceffab4f5d25137c4802",
+  "existing_claude_checkout": "D:\\PROJECTS\\9_NEBULA_NEW",
+  "delivered_to_existing_shared_task_folder": true,
+  "board_entry_appended": true,
+  "claude_acknowledged": false,
+  "claude_reply_exists": false,
+  "claude_unpublished_wave_files_modified": false,
+  "new_experiments_started": false,
+  "new_agent_started": false
+}
