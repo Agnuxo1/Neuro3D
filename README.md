@@ -28,6 +28,8 @@ la red completa, reproducción por expertos y novedad excepcional siguen abierto
 
 Los [gradientes ópticos en shaders desde geometría](Docs/NATIVE_GRAPHICS_GEOMETRY_GRADIENT_PROTOCOL_2026-10-09.md) también pasan: 16 parámetros, cinco sondas y32 geometrías perturbadas auditadas. Discrepancia máxima de Jacobiano de campo **5,74×10⁻¹²**; diferencias finitas escaladas **≤2,66×10⁻⁹**. La CPU conserva topología, tangentes afines, fusiones y pérdida; este ensayo aún no constituye entrenamiento completo en el motor gráfico.
 
+La [prueba nativa de OptiX en RTX 3090](Docs/NATIVE_CYCLES_OPTIX_COMPONENT_V2_PROTOCOL_2026-10-09.md) también reconstruye el recorrido completo mediante 133 renderizados de los triángulos capturados y verificación geométrica exacta. Las 150 decisiones coinciden. El coste equivalente de candidatos y prueba es **41,01 s con OptiX frente a 10,33 s con BVH CPU** en esta escena pequeña: no hay ventaja de velocidad demostrada. El campo coherente de este componente se calcula en CPU; los shaders coherentes se validan por separado.
+
 La [selección de aceleración gráfica](Docs/ADVANCED_GRAPHICS_TECHNOLOGY_SELECTION_2026-10-09.md) distingue las tecnologías ejecutadas de los ensayos preparados. El [artículo PDF](Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.pdf) incluye métodos, resultados negativos y mapa de reproducción; se conserva su [recibo de compilación](Docs/paper/scientific_article_build_receipt_2026-10-09.json). Sigue siendo un borrador sin revisión externa ni envío a una revista.
 
 ## Funcionamiento verificado de la red

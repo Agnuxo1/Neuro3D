@@ -125,3 +125,7 @@ Actual pdflatex MiKTeX25.12 two passes0/no-shell-escape;12pages350185bytes/PDFsh
 ## 2026-10-09T10:03:22.799811+00:00 — installed OptiX partial execution, extent rejected
 
 Frozen d98f506/d7a23b34/92pins prospective. LogRTX3090(OptiX)/OPTIXBVH/4x4 render. Readerexpected1pixelreject64scalars;null8.289187s/RSS639.48. Noacceptednetwork/field/training. Originalallhashesarchived; newv2explicit4x4/fixedpixel beforetrial. Nativegraphicstrainingpreparedfd91670/98pinsnotyetexecuted. Goalactive13:55UTC.
+
+## 2026-10-09T10:26:31.149847+00:00 — complete actual native OptiX component PASS
+
+Frozen c0917e20/befe0aa4/95pins prospective. RTX3090 OPTIX133nativequeries/exactadmission133states186edges17060paths/all150same, field5.118e-16/power5.552e-16. Full63.167784s/RSS704.27MiB. Identical-proofOptiX41.008s/CPUBVH10.331s/no speedgain. WholeGPU sampled71percent/max2631MiB, notRTcounters/energy. CPUcoherentfields explicit. All raw SHA verified; originalnull preserved. Next frozen native graphics training fd91670/98pins NOT yet executed. Installed0.1.3 resume draft not yet frozen/nativevalidated. Goalactive deadline13:55UTC.
