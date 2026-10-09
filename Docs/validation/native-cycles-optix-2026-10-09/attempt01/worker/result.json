@@ -1,0 +1,36 @@
+{
+  "schema": "optic_neuro_blender.native_cycles_optix_audit.v1",
+  "status": "INCONCLUSIVE_ENVIRONMENT_OR_INVALID_OUTPUT",
+  "primary_metric": null,
+  "native_optix_render_executed": false,
+  "hardware_RT_kernel_counters_measured": false,
+  "gpu_fields_executed": false,
+  "blender_version": "4.5.14 LTS",
+  "blender_build_hash": "62c1db4208e8",
+  "optix_selected_device": {
+    "name": "NVIDIA GeForce RTX 3090",
+    "type": "OPTIX",
+    "id": "CUDA_NVIDIA GeForce RTX 3090_0000:17:00_OptiX"
+  },
+  "cycles_device_inventory": [
+    {
+      "name": "NVIDIA GeForce RTX 3090",
+      "type": "CUDA",
+      "id": "CUDA_NVIDIA GeForce RTX 3090_0000:17:00"
+    },
+    {
+      "name": "Intel Core i9-7900X CPU @ 3.30GHz",
+      "type": "CPU",
+      "id": "CPU"
+    },
+    {
+      "name": "NVIDIA GeForce RTX 3090",
+      "type": "OPTIX",
+      "id": "CUDA_NVIDIA GeForce RTX 3090_0000:17:00_OptiX"
+    }
+  ],
+  "candidate_geometry_pack_seconds": 0.43457300000591204,
+  "failure_type": "ValueError",
+  "reason": "Complete finite lossless EXR pixel required",
+  "seconds": 6.012241199998243
+}
