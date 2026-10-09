@@ -142,3 +142,4 @@ Docs/research/external_cpu_reproduction_profile_v2_2026-10-09.json -text !eol wh
 Docs/research/external_cpu_reproduction_registration_v2_2026-10-09.json -text !eol whitespace=cr-at-eol
 
 Docs/validation/native-operator-gram-2026-10-09/** -text !eol whitespace=cr-at-eol
+Docs/validation/global-training-family-2026-10-09/** -text !eol whitespace=cr-at-eol
