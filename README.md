@@ -19,7 +19,7 @@ Red óptica escalar entrenable que calcula desde la **geometría evaluada de Ble
 | Generalización Wine | Tres semillas: 33/37, 30/37, 28/37; baselines 32/37; sin superioridad demostrada |
 | Recuperación instalada 0.1.3 | Interrupción real en checkpoint12; 61 estados y 150 potencias idénticos al baseline, en Windows y Linux externo |
 
-La certificación independiente del modelo gráfico final está preparada; todavía no se presenta como resultado.
+La [certificación independiente del modelo gráfico final](Docs/NATIVE_DEFERRED_TRAINING_FIELD_CERTIFICATE_PROTOCOL_2026-10-09.md) registra cota de campo L1 **9.97e-14** y potencia **7.09e-15** frente al codificador ideal: **150/150 decisiones separadas**, 137 etiquetas correctas y 13 incorrectas. El cumplimiento de los presupuestos fijados es positivo; certificar el cálculo y acertar la clase son resultados distintos.
 
 [Entrenamiento gráfico completo y todos los estados](Docs/NATIVE_DEFERRED_GRAPHICS_TRAINING_PROTOCOL_2026-10-09.md), [derivadas y controles](Docs/NATIVE_GRAPHICS_GEOMETRY_GRADIENT_PROTOCOL_2026-10-09.md), [comparación Wine](Docs/WINE_GENERALIZATION_COMPARISON_2026-10-09.md). Iris ya se había utilizado en el proyecto; este ensayo no es una nueva prueba ciega de generalización.
 

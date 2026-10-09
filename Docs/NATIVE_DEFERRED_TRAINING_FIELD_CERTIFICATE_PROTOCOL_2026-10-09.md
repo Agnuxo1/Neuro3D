@@ -9,3 +9,16 @@ Fixed secondary limits240s,4,000MiB free RAM before/2,500MiB floor,1,500MiB owne
 This bounds the final observed graphical-field plus CPU-merge error. It does not certify all unobserved GPU arithmetic, every training gradient, native transform quantizer preimages, intended geometry, measurement uncertainty or physical-network fidelity.
 
 [Profile](research/native_deferred_training_certificate_profile_2026-10-09.json), [GitHub authorization receipt](research/native_deferred_training_certificate_registration_2026-10-09.json), [complete native learning](NATIVE_DEFERRED_GRAPHICS_TRAINING_PROTOCOL_2026-10-09.md).
+
+## Actual independent final output analysis: accepted within unchanged budgets
+
+Prospective aa96994/profilefb3c7a8c/23sourcepins verified before execution. The independent complete final native graph audit passes. All150 recorded actual finalGPU fields plusCPUmerges were enclosed by128bit outwardrational composition, separately for recorded encodedamplitudes and idealtrain-onlyencoding. Input encoding maximum1.57867e-16. Complete supervisor19.822942s, peak ownedRSS36.86MiB; allrawSHAverified.
+
+| Reference | MaximumfieldL1bound | Maximumpowerbound | Separated decisions | Correct / wrong labels | UNKNOWN |
+|---|---|---|---|---|---|
+| Recorded encodedinputs | 9.97351188418e-14 | 7.15061421597e-15 | 150 | 137 / 13 | 0 |
+| Ideal train-only encoder | 9.97448534679e-14 | 7.09172299392e-15 | 150 | 137 / 13 | 0 |
+
+Minimum margin lowerbound0.000211197120118; heldout27/30. No claim of correct class for a numericallycertified wrong prediction. Limits on alltraininggradients, unobservedoperations, quantizerpreimages/intendedgeometry/physicalmodel remain unchanged.
+
+[Original outcomes and allhashes](validation/native-deferred-training-certificate-2026-10-09/attempt01/evidence_index.json), [all150 interval certificates](validation/native-deferred-training-certificate-2026-10-09/attempt01/worker/certificate.json).
