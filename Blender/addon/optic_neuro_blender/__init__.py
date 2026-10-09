@@ -11,13 +11,14 @@ from bpy.props import FloatVectorProperty, PointerProperty, StringProperty
 from .bootstrap import PACKAGE, verify_bundle
 from .runtime import OwnedJob, canonical, digest, read_json
 
-bl_info = {'name': 'OpticNeuroBlender', 'author': 'Neuro3D contributors', 'version': (0, 1, 1),
+bl_info = {'name': 'OpticNeuroBlender', 'author': 'Neuro3D contributors', 'version': (0, 1, 2),
            'blender': (4, 5, 0), 'location': 'View3D > Sidebar > OpticNeuro',
            'description': 'Red óptica coherente propia desde geometría evaluada', 'category': '3D View'}
 
 _job = None
 _last_folder = None
 _status = 'Listo. Modelo escalar en BU; escala física sin calibrar.'
+_registered = False
 
 
 def _cleanup_owned_job():
@@ -234,18 +235,33 @@ CLASSES = (ONB_Settings, ONB_OT_LoadExample, ONB_OT_Infer, ONB_OT_Train, ONB_OT_
 
 
 def register():
+    global _registered
     verify_bundle()
-    for cls in CLASSES:
-        bpy.utils.register_class(cls)
-    bpy.types.Scene.optic_neuro_settings = PointerProperty(type=ONB_Settings)
+    if _registered:
+        return
+    created = []
+    try:
+        for cls in CLASSES:
+            bpy.utils.register_class(cls)
+            created.append(cls)
+        bpy.types.Scene.optic_neuro_settings = PointerProperty(type=ONB_Settings)
+        _registered = True
+    except Exception:
+        for cls in reversed(created):
+            bpy.utils.unregister_class(cls)
+        raise
 
 
 def unregister():
+    global _registered
     if _job is not None and _job.state == 'RUNNING':
         _job.cancel('ADDON_UNREGISTERED')
     if bpy.app.timers.is_registered(poll_job):
         bpy.app.timers.unregister(poll_job)
+    if not _registered:
+        return
     if hasattr(bpy.types.Scene, 'optic_neuro_settings'):
         del bpy.types.Scene.optic_neuro_settings
     for cls in reversed(CLASSES):
         bpy.utils.unregister_class(cls)
+    _registered = False
