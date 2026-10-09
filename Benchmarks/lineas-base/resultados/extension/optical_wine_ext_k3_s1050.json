@@ -1,0 +1,43 @@
+{
+ "schema": "p0-4.optical_wine_extension",
+ "exploratorio": "post hoc (decision JEV 2026-10-09)",
+ "k": 3,
+ "seed": 1050,
+ "reused_from_primary_process": false,
+ "sha256_indices": "71ccdfdf79ae9abe3a0348008f2999aecfc7b99d4f137966a3457277319329d1",
+ "profile_copy_sha256": "b5a032b75a5c8458ce63e5454d136fc6b76026901e95715796eed271ca6bd061",
+ "worker_status": "PASS",
+ "run": {
+  "seed": 1050,
+  "status": "PASS",
+  "test_accuracy": 0.7567567567567568,
+  "train_accuracy": 0.8297872340425532,
+  "initial_train_loss": 2.272257604074231,
+  "final_train_loss": 0.5030141773052352,
+  "cpu_seconds_seed_training_plus_rebuild": 389.75531949999277,
+  "cpu_seconds_geometry_audits": 369.6673502999911
+ },
+ "process_cpu_seconds": 391.5,
+ "wall_seconds": 391.54524419999507,
+ "input_sha256": {
+  "wine": "6be6b1203f3d51df0b553a70e57b8a723cd405683958204f96d23d7cd6aea659",
+  "profile_original": "623623be2f0be6acccddfa432a94526fafeb484bf2d05d50b8822319c7b0c81c"
+ },
+ "code_version": {
+  "files": {
+   "Blender/blender_lab/classifier_comparison_v1.py": "04860855ea2570ae77a641e8220625a22e83d2cb4de13ce1ea929873a8844613",
+   "Tools/train_wine_comparison_v1.py": "9e559397262dcf5aa2a307a5bf405dc6c0de26fc533fd8dfbd1af67d220baf97",
+   "Tools/audit_captured_pilot_result_v1.py": "a3f683ab11aa07eb52aefb4046ba89516321bb175ef01697c39131234b3ac686",
+   "Tools/trace_indexed_scene_v1.py": "e1ce3a4cf1c83234897de221cc28833017e76863c4ac88e2ead3957f1bac13ac",
+   "Tools/train_captured_geometry_v1.py": "5700e71eed99d398239603f35c6c449814be0926d477df4944ff999a8e9b9dba",
+   "Blender/blender_lab/affine_geometry_network_v1.py": "3f163e622e645a706b903ab3f714f3a695605463d2de51b9cd7218b02023696c",
+   "Blender/blender_lab/coherent_state_graph_v1.py": "d67c389be8a48d9aebe563fd3333af8c962c28d5f5942ea092bf448af403e439",
+   "Blender/demo_lattice_iris/neuro3d_iris_demo.py": "6b5b32434679ae4da9410afbeeeee2c25a614eaf4b2776892aa8fb907617592d",
+   "Docs/research/wine_comparison_profile_2026-10-09.json": "623623be2f0be6acccddfa432a94526fafeb484bf2d05d50b8822319c7b0c81c",
+   "Benchmarks/lineas-base/run_lineas_base.py": "25604d33cf31131a0ee14b4f31ff555b89414a274b0a6307f6a1e1f256098f87",
+   "Benchmarks/lineas-base/iris_numeric.py": "e1c0ceab4ad342fc3093f313641c38fe80233a73ff1994883bfb377877b3a55f",
+   "Benchmarks/lineas-base/wine_worker_runner.py": "f274fef15cbbbdca42862e594339f26e0b69ef37e62f18eb68c1b92c602e4e0b"
+  },
+  "combined_sha256": "131c88425d032c15b011c345c23d3f7458635acfbcda687ccbb7b36a273fe543"
+ }
+}

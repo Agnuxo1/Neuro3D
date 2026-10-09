@@ -21,8 +21,9 @@ Ejecucion del protocolo de `PREREGISTRO-P0-4.md` (no editado). Solo CPU, sin Ble
 2. **Cifra 0,309707 no comparable**: esa perdida pertenece al protocolo de geometria capturada (60 actualizaciones, 61 auditorias), no a `train()` del demo de Iris. No existe cifra de perdida publicada de `train()` con la que contrastar; se verifico la equivalencia frente al original ejecutado (diferencia 0).
 3. `trained_lattice.json` (producido en Blender con su numpy) no coincide con la salida de `train(seed=0)` en esta maquina: misma particion y escalado, perdida del guardado 0,04306 frente a 0,04371 y parametros distintos (maximo 6,45, minimos locales/fase equivalentes); exactitud guardada 0,975 train / 0,9667 prueba frente a 0,975 / 1,000 aqui. No afecta a la comprobacion de equivalencia del modulo numerico.
 4. Semilla de `train()` de Iris: `seed=0` en todas las particiones (reinicios `0..3`), pues el preregistro fija `seed + r` sin indicar valor para el argumento.
-5. Estratificacion: asignacion fija por clase de prueba (Wine [12,15,10], Iris [10,10,10]) mediante `default_rng(seed).permutation` dentro de cada clase; coincide con la particion congelada del perfil, exigida por el `need()` del worker.
-6. Las lineas base de Iris usan la codificacion de 5 fuentes coherentes (constante 1) de `encode_real_features`; el optico de Iris usa su propio codificado (referencia entrenable). Wine: las predicciones de las lineas base propias son identicas a las del worker en las 10 particiones.
+5. Estratificacion: asignacion fija por clase de prueba (Wine [12,15,10], Iris [10,10,10]) mediante `default_rng(seed).permutation` dentro de cada clase. Coincide con la particion congelada del perfil SOLO en los conteos (141/37 y [12,15,10] por clase, exigidos por el `need()` del worker), no en los indices.
+6. **Iris: mejor reinicio, no media.** El preregistro (seccion 7) resume el optico con la media de los reinicios por particion; el analisis primario uso el mejor reinicio por perdida de train (lo que devuelve `train()`). Sensibilidad con la media de reinicios en `resultados/SENSIBILIDAD_IRIS.md`: optico 0,9483, diferencia +0,0017 frente a ambas lineas base (IC95 [-0,0092, +0,0142], p_Holm = 1,0), clasificacion equivalente: la clasificacion primaria NO cambia. El mejor reinicio se reprodujo con diferencia 0.
+7. Las lineas base de Iris usan la codificacion de 5 fuentes coherentes (constante 1) de `encode_real_features`; el optico de Iris usa su propio codificado (referencia entrenable). Wine: las predicciones de las lineas base propias son identicas a las del worker en las 10 particiones.
 
 ## Resultados
 
@@ -39,3 +40,34 @@ Wilcoxon (con Holm) p = 1,0 en Iris y p_Holm = 1,0 en Wine: ninguna superioridad
 - Wine: 4 de 13 caracteristicas; una sola semilla de inicializacion (plan de respaldo); geometria del perfil no recapturada por particion. Iris: 150 ejemplos.
 - En Iris, lineal y cuadratico dan la misma exactitud en las 10 particiones (con convergencia distinta: iteraciones diferentes); coincidencia observada, no investigada.
 - Las 10 particiones comparten datos entre si (solapamiento), por lo que las diferencias pareadas no son independientes.
+
+## Extension post hoc (EXPLORATORIO, decision JEV 2026-10-09)
+
+**Motivo.** El encargo pedia mas semillas de inicializacion y el plan de respaldo redujo el analisis primario de Wine a una sola semilla (1049). El coordinador autorizo (JEV, confianza 1,0) ejecutar tambien 1050 y 1051 en las 10 particiones. El analisis primario (`RESULTADOS.json/.md`, `analisis.py`, `optical_wine_k*.json`) NO se modifica.
+
+**Advertencia.** Esta extension se decidio despues de observar el resultado de la particion k=0 (semillas 1050 y 1051 ya conocidas: 0,838 y 0,676). Es un analisis post hoc: no es confirmatorio y no sustituye al preregistrado.
+
+**Ejecucion.** k=0 reutilizado (mismo proceso que la ejecucion primaria; verificados hash de particion, copia del perfil y hash de Wine). k=1..9 x semillas 1050 y 1051: 18 ejecuciones, hasta 3 procesos en paralelo, todas en PASS. Coste de CPU por proceso: 380-403 s (media 389 s; algo mas que en serie por la ejecucion en paralelo). Resultados en `resultados/extension/optical_wine_ext_k{k}_s{seed}.json`; analisis en `analisis_extension.py` -> `resultados/RESULTADOS_EXTENSION.json/.md`.
+
+**Cifras** (media de 3 semillas por particion, 10 particiones):
+
+| Modelo | media |
+|---|---|
+| Optico | 0,7910 |
+| Lineal | 0,8541 |
+| Cuadratico | 0,8622 |
+
+- Optico menos lineal: -0,0631, IC95 [-0,0838, -0,0414], p_Holm = 0,0039. Optico menos cuadratico: -0,0712, IC95 [-0,0910, -0,0486], p_Holm = 0,0039. Clasificacion: inferior o inconcluso frente a ambas (aqui con evidencia de inferioridad).
+- Por semilla: 1049 media 0,8622 (supera a lineal en 4 de 10 particiones, 4 empates); 1050 media 0,8270 (1 de 10); 1051 media 0,6838 (0 de 10).
+- Desviacion tipica entre semillas por particion: media 0,096 (rango 0,016 a 0,133), mucho mayor que la desviacion entre particiones de las lineas base.
+
+**Lectura.** El resultado primario (semilla 1049: equivalente al cuadratico, inconcluso frente al lineal) depende de la inicializacion: la semilla 1049 es la mejor de las tres y las otras dos son peores. Con las tres semillas promediadas, el optico queda por debajo de ambas lineas base. La conclusion honesta es que el optico de Wine no iguala a las lineas base de forma robusta a la semilla. Nunca se seleccionaron semillas por el resultado de prueba; la primaria se fijo antes (preregistro).
+
+## Limitaciones anadidas tras la auditoria
+
+- Los hiperparametros del perfil de Wine (pasos, tasa, temperatura, recorte) se fijaron con resultados observados en un intento previo sobre la particion original (attempt01); este conjunto de datos no es un holdout virgen para esos hiperparametros.
+- Reproducibilidad: la comprobacion exacta (diferencia 0) es en esta maquina, con numpy 2.2.6 y scipy 1.15.1. Con otras versiones o BLAS pueden aparecer diferencias numericas (ya se vio con `trained_lattice.json` producido con el numpy de Blender).
+
+## Auditoria independiente
+
+`AUDIT-P0-4.md` reproduce las cifras primarias y de la extension con diferencia 0 (tolerancia 1e-9); los IC95 y los p coinciden. Sin fugas: el escalado min-max se ajusta solo con train y el mejor reinicio de Iris se elige por perdida de train, nunca por prueba. Hashes de los resultados en `resultados/SHA256SUMS.txt` (`verificar_hashes.py`; `--check` para verificar).

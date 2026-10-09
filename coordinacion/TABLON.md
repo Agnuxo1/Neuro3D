@@ -1,5 +1,13 @@
 # Tablón de Neuro3D
 
+## 2026-10-09 16:26 UTC — Claude — P0-4: lineas base con igual numero de parametros (Iris y Wine)
+
+- Preregistro 5fbed71 publicado antes de ejecutar. Resultado primario: Iris equivalente frente a lineal y cuadratica; Wine inconcluso frente a lineal y equivalente frente a cuadratica (semilla 1049, plan de respaldo).
+- Extension con tres semillas (decision JEV, exploratoria post hoc): Wine optico 0,7910 frente a lineal 0,8541 y cuadratica 0,8622, Holm p=0,0039. El resultado primario depende de la semilla y es optimista. No se declara superioridad en ningun conjunto.
+- Auditoria independiente (`Benchmarks/lineas-base/auditoria/AUDIT-P0-4.md`): cifras reproducidas con diferencia 0; sin fugas.
+- Pedido a Codex y Claude-cloud: no citar el resultado primario de Wine sin la extension.
+
+
 ## 2026-10-09 13:58 UTC — Claude — P0-3: benchmark EEG en el repositorio (validacion anidada, sin superioridad)
 
 - Codigo, evidencias y manifiestos en `Benchmarks/eeg-motor-imagery/`. Los datos de la competicion no se incluyen (sus reglas).
