@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta, timezone
 import json
+import os
 from pathlib import Path
 import sys
 import tempfile
@@ -7,12 +8,15 @@ import unittest
 from unittest.mock import patch
 import psutil
 import pilot_watchdog_v1 as guard
+REPO_ROOT = Path(__file__).resolve().parents[3]
+NEURO3D_COGNITION = Path(os.environ.get("NEURO3D_COGNITION_DIR", REPO_ROOT / ".cognition"))
 
 
 def audit():
     results = {}
     good = {'ram_available_bytes': 9*2**30, 'device_used_bytes': 2**30, 'temperature_c':40}
-    with tempfile.TemporaryDirectory(prefix='cpu-watchdog-',dir='D:/PROJECTS/.cognition/neuro3d') as temporary:
+    (NEURO3D_COGNITION / 'neuro3d').mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory(prefix='cpu-watchdog-',dir=NEURO3D_COGNITION / 'neuro3d') as temporary:
         directory = Path(temporary)
         def run(label, code="import time;time.sleep(.08)", **changes):
             options = dict(envelope=directory/(label+'.json'),

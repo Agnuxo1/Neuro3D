@@ -6,9 +6,12 @@ This checks report-gate semantics, not an actual omitted scene or GPU result.
 import ast
 import hashlib
 import json
+import os
 from pathlib import Path
+REPO_ROOT = Path(__file__).resolve().parents[3]
+NEURO3D_COGNITION = Path(os.environ.get("NEURO3D_COGNITION_DIR", REPO_ROOT / ".cognition"))
 
-PEER = Path('D:/PROJECTS/.cognition/neuro3d/p0_scene_gpu/p03_harness_v2.py')
+PEER = NEURO3D_COGNITION / 'neuro3d/p0_scene_gpu/p03_harness_v2.py'
 SHA = '1328b01307fb467bc4bf3d69886f01d5839c6d86ab92495ecf7056294f6b446e'
 
 

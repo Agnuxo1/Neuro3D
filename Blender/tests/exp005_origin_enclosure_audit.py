@@ -3,6 +3,7 @@ import argparse
 import hashlib
 import json
 from fractions import Fraction
+import os
 from pathlib import Path
 from exp005_departure_replay_audit import load_frozen
 from exp005_departure_audit import triangle
@@ -10,6 +11,8 @@ from exp005_interval_audit import Interval, interval_vector, parameters, exact_p
 from exp005_near_origin_audit import vector, sub, dot, cross
 from exp005_triangle_oracle import sub as float_sub
 from exp005_geometric_return_audit import canonical
+REPO_ROOT = Path(__file__).resolve().parents[2]
+NEURO3D_COGNITION = Path(os.environ.get("NEURO3D_COGNITION_DIR", REPO_ROOT / ".cognition"))
 
 REPLAY_SHA = 'd7bb937fca9c70bb2c371a2e8259fa9f2d3efe5f8f096cc0562fc88354d4e34d'
 
@@ -83,8 +86,8 @@ def main():
     parser = argparse.ArgumentParser(); parser.add_argument('--output', type=Path, required=True)
     args = parser.parse_args()
     if args.output.exists(): raise ValueError('new output path required')
-    input_path = Path('D:/PROJECTS/.cognition/neuro3d/exp005_self_hit_cpu_20260930_0804.json')
-    replay_path = Path('D:/PROJECTS/.cognition/neuro3d/exp005_departure_replay_cpu_20260930_0942.json')
+    input_path = NEURO3D_COGNITION / 'neuro3d/exp005_self_hit_cpu_20260930_0804.json'
+    replay_path = NEURO3D_COGNITION / 'neuro3d/exp005_departure_replay_cpu_20260930_0942.json'
     raw = replay_path.read_bytes()
     if hashlib.sha256(raw).hexdigest() != REPLAY_SHA: raise ValueError('frozen replay changed')
     replay = json.loads(raw); deps = dict(replay['code_sha256'])

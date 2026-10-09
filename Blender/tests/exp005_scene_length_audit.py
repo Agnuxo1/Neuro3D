@@ -3,15 +3,18 @@ import argparse
 from fractions import Fraction
 import hashlib
 import json
+import os
 from pathlib import Path
 import sys
 ROOT = Path(__file__).parents[2]
 sys.path.insert(0, str(ROOT/'Blender/benchmarks/capacity_audit'))
 from scene_length_bound_v1 import scene_wavelength_budget
+REPO_ROOT = Path(__file__).resolve().parents[2]
+NEURO3D_COGNITION = Path(os.environ.get("NEURO3D_COGNITION_DIR", REPO_ROOT / ".cognition"))
 
 
 def audit():
-    directory = Path('D:/PROJECTS/.cognition/neuro3d/exp005_chain_native_20260930_0315')
+    directory = NEURO3D_COGNITION / 'neuro3d/exp005_chain_native_20260930_0315'
     rows, inputs = [], {}
     for name in ('K3_base', 'K4_base'):
         p = directory/(name+'.json'); raw = p.read_bytes()

@@ -44,10 +44,12 @@ import tempfile
 import time
 
 import psutil
+REPO_ROOT = Path(__file__).resolve().parents[3]
+NEURO3D_COGNITION = Path(os.environ.get("NEURO3D_COGNITION_DIR", REPO_ROOT / ".cognition"))
 
 GIB = 2**30
 BLENDER = Path("D:/TOOLS/Blender/blender-4.5.14-windows-x64/blender.exe")
-QUEUE = Path("D:/PROJECTS/.cognition/gpu_queue/gpuq.py")
+QUEUE = NEURO3D_COGNITION / "gpu_queue/gpuq.py"
 SMI = Path("C:/Windows/System32/nvidia-smi.exe")
 SHA_RE = re.compile(r"[0-9a-f]{64}")
 UUID_RE = re.compile(r"GPU-[0-9a-fA-F]{8}(?:-[0-9a-fA-F]{4}){3}-[0-9a-fA-F]{12}")

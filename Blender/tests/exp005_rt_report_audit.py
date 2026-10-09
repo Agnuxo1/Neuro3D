@@ -4,11 +4,14 @@ import ast
 import hashlib
 import json
 import math
+import os
 from pathlib import Path
 import statistics
+REPO_ROOT = Path(__file__).resolve().parents[2]
+NEURO3D_COGNITION = Path(os.environ.get("NEURO3D_COGNITION_DIR", REPO_ROOT / ".cognition"))
 
 ROOT = Path(__file__).parents[2]
-PEER = Path('D:/PROJECTS/.cognition/neuro3d/rt')
+PEER = NEURO3D_COGNITION / 'neuro3d/rt'
 
 
 def positive(value):

@@ -1,15 +1,18 @@
 """Registration and integrity controls only: no captured-scene worker launched."""
 import copy
 import tempfile
+import os
 from pathlib import Path
 import unittest
 from unittest.mock import patch
 
 from Tools.run_frozen_indexed_profile_v1 import check_profile,check_registration,main
+REPO_ROOT = Path(__file__).resolve().parents[2]
+NEURO3D_COGNITION = Path(os.environ.get("NEURO3D_COGNITION_DIR", REPO_ROOT / ".cognition"))
 
 ROOT=Path(__file__).resolve().parents[2]
 PROFILE=ROOT/'Docs/research/indexed_capture_profile_prepared_2026-10-09.json'
-WORK=Path('D:/PROJECTS/.cognition/neuro3d-sequential-20261008')
+WORK=NEURO3D_COGNITION / 'neuro3d-sequential-20261008'
 
 
 class IndexedProfileTests(unittest.TestCase):
