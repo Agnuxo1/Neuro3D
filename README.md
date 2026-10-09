@@ -59,8 +59,10 @@ La [selección espacial exacta](Docs/EXACT_OBJECT_INDEX_2026-10-09.md) añade ca
 racionales conservadoras por objeto. Pasan 74 controles de software, incluidos
 160 consultas comparadas con el selector exhaustivo. El recorrido completo de
 la captura y el coste de esta optimización todavía no están validados.
-Está preparado un [perfil posterior separado](Docs/INDEXED_CAPTURE_PROFILE_2026-10-09.md),
-con la misma escena y límites y fuentes fijadas. Requiere resolver su propio registro antes de ejecutarse.
+El [perfil posterior separado](Docs/INDEXED_CAPTURE_PROFILE_2026-10-09.md),
+autorizado antes de ejecutarse, también agotó 90 segundos y conserva métrica nula.
+La autorización humana cubre la secuencia de futuros perfiles fijados y publicados
+antes de sus ensayos; el registro externo/IPFS permanece pendiente.
 
 El [contrato coherente ejecutable](Docs/OPTIC_NEURO_BLENDER_COHERENT_CONTRACT_2026-10-08.md)
 fija unidades, portadora/referencia común, fases, parámetros y potencia modal.
