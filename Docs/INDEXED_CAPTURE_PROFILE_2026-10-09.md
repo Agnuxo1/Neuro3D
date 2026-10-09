@@ -1,4 +1,6 @@
-# Perfil posterior de recorrido: preparado, no ejecutado
+# Perfil posterior de recorrido: ejecución inconclusa
+
+**Resultado posterior:** el worker autorizado se ejecutó y agotó su límite de 90 segundos sin producir salida: 90,055583 s, pico propio de 32,699219 MiB, `WORKER_DEADLINE`, `primary_metric=null`, limpieza verificada. El [recibo](validation/indexed-capture-execution-2026-10-09/attempt01/supervisor.json) y [los bytes archivados](validation/indexed-capture-execution-2026-10-09/artifact_index.json) conservan fuentes, perfil y autorización antes de ejecutarse. No hay una comparación de velocidad válida ni un campo que auditar. El bloque inferior describe el perfil prospectivo original, que permanece intacto.
 
 **Autorización recibida:** el propietario respondió «Sí, autorizo esa continuidad en GitHub» a una pregunta que vinculaba este perfil y los siguientes protocolos de esta secuencia, siempre publicados y fijados antes de cada ensayo. El [recibo separado](research/github_sequence_authorization_2026-10-09.json) conserva esa ampliación y declara ausentes los IDs externos. No se solicitará otra vez la misma autorización.
 
