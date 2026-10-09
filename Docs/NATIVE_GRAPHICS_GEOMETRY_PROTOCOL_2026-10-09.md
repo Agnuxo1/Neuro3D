@@ -11,3 +11,9 @@ Complete disagreement is retained as a valid negative result. Environment, shade
 [Profile](research/native_graphics_geometry_profile_2026-10-09.json) and [GitHub authorization record](research/native_graphics_geometry_registration_2026-10-09.json) must be published and byte-verified before execution. External registration/IPFS remains pending without identifiers.
 
 This uses Blender's graphics pipeline. Hardware ray tracing, OptiX, AMD, coherent GPU fields, training, physical fidelity and speed superiority are not inferred from successful rasterization.
+
+## Attempt 01 and prospective correction
+
+Frozen commit `6c6cb355e0354f93bb078a42f68999d4d66d4b9d` opened Blender 4.5.14 LTS with an actual NVIDIA OpenGL RTX3090 context. Admission stopped before drawing in 8.738 seconds (301.17 MiB RSS): in-memory rational coordinate tuples were compared directly against decoded JSON lists. Its metric remains null and its [raw evidence](validation/native-graphics-geometry-2026-10-09/attempt01/evidence_index.json) is preserved.
+
+The [v2 profile](research/native_graphics_geometry_profile_v2_2026-10-09.json) compares canonical rational wires, preserving exact coordinates, object semantics and every previous numerical gate. It also saves the capture before checking identity so further mismatch is inspectable. [Authorization](research/native_graphics_geometry_registration_v2_2026-10-09.json) must again be published and verified before execution. No positive graphics result is inferred from this correction.
