@@ -1,0 +1,14 @@
+{
+  "schema": "optic_neuro_blender.profile_registration.v1",
+  "kind": "HUMAN_GITHUB_EXCEPTION",
+  "approved": true,
+  "profile_id": "34d26f67-153a-48a7-9e19-9d99800d00ad",
+  "profile_sha256": "79bb9d16ee94bda6c4a1de38d9a95b5c83b42a16464272bdbbbb25b4ecf89af3",
+  "evidence_origin": "DIRECT_HUMAN_USER_MESSAGE_VERIFIED_BY_OPERATOR",
+  "evidence_reference": "Docs/research/github_sequence_authorization_2026-10-09.json",
+  "human_sequence_approval_sha256": "22e7b2039b791a538ad0458c0e1b04787c393cb8a55aefe84cb4fe8c29824b0a",
+  "preregId": null,
+  "ipfsCid": null,
+  "external_route_retained": true,
+  "authorization_scope": "Successive GitHub profiles published and verified before execution; external route pending"
+}
