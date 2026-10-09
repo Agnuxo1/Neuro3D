@@ -1,0 +1,57 @@
+{
+  "controls": [
+    {
+      "name": "nearest_of_two_surfaces",
+      "pass": true
+    },
+    {
+      "name": "exact_previous_zero_contact_mask",
+      "pass": true
+    },
+    {
+      "name": "closed_surface_miss",
+      "pass": true
+    }
+  ],
+  "readback": {
+    "rows": [
+      {
+        "status": "GRAPHICS_SURFACE_CANDIDATE",
+        "object": "near",
+        "distance_BU": 1.0,
+        "primitive_id": 0,
+        "raw_rgba": [
+          0.0,
+          1.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "status": "GRAPHICS_SURFACE_CANDIDATE",
+        "object": "far",
+        "distance_BU": 1.0,
+        "primitive_id": 2,
+        "raw_rgba": [
+          1.0,
+          1.0,
+          2.0,
+          1.0
+        ]
+      },
+      {
+        "status": "MISS",
+        "raw_rgba": [
+          -1.0,
+          -1.0,
+          -1.0,
+          0.0
+        ]
+      }
+    ],
+    "setup_seconds": 9.73999995039776e-05,
+    "draw_sync_readback_seconds": 0.011166500000399537,
+    "total_query_seconds": 0.01127690000430448,
+    "vertex_instances": 36
+  }
+}

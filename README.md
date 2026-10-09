@@ -118,6 +118,14 @@ todavía más eficiente para geometría fija. AMD real sigue pendiente.
 
 ![Coste medido CPU/CUDA y baseline equivalente](Docs/assets/trained-graph-cpu-cuda-scaling-2026-10-09.png)
 
+La [GPU gráfica de Blender ya selecciona superficies reales](Docs/NATIVE_GRAPHICS_GEOMETRY_PROTOCOL_2026-10-09.md):
+6.656 triángulos, los 133 rayos correctos en cinco repeticiones y 3,26–5,66 ms por lote con lectura incluida.
+El control de planos separados por 2⁻²⁵ unidades falla y queda registrado; la selección FP32
+requiere verificación exacta antes de propagar fase. Este es un componente geométrico,
+con recorrido autónomo de la red todavía pendiente; no demuestra aceleración completa.
+
+![Geometría real en GPU gráfica](Docs/assets/native-graphics-geometry-2026-10-09.png)
+
 El [entrenamiento propio con CUDA](Docs/GEOMETRY_CUDA_TRAINING_PROTOCOL_2026-10-09.md)
 completa las 60 actualizaciones y 61 auditorías, con 27/30 aciertos y las 150 decisiones
 iguales a CPU. Las geometrías finales coinciden; diferencia máxima de potencia

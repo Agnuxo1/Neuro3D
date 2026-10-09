@@ -1,0 +1,4125 @@
+[
+  {
+    "origin": [
+      {
+        "numerator": -1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": null
+  },
+  {
+    "origin": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 8436423,
+        "denominator": 2097152
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": null
+  },
+  {
+    "origin": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": -1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": null
+  },
+  {
+    "origin": [
+      {
+        "numerator": 263245,
+        "denominator": 65536
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": null
+  },
+  {
+    "origin": [
+      {
+        "numerator": 8447957,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 3,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": null
+  },
+  {
+    "origin": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c00.bs1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c00.bs1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 8436423,
+        "denominator": 2097152
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c01.bs1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 8436423,
+        "denominator": 2097152
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c01.bs1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 263245,
+        "denominator": 65536
+      },
+      {
+        "numerator": 2,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c10.bs1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 263245,
+        "denominator": 65536
+      },
+      {
+        "numerator": 2,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c10.bs1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 8447957,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 4,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c20.bs1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 8447957,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 4,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c20.bs1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 8434903,
+        "denominator": 4194304
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c00.r1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 2,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c00.m2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 6345245,
+        "denominator": 2097152
+      },
+      {
+        "numerator": 8436423,
+        "denominator": 2097152
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c01.r1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 12630727,
+        "denominator": 2097152
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c01.m2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 263245,
+        "denominator": 65536
+      },
+      {
+        "numerator": 4,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c10.m2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 1574493,
+        "denominator": 262144
+      },
+      {
+        "numerator": 2,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c10.r1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 8447957,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 6,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c20.m2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 10559911,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 4,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c20.r1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 8434903,
+        "denominator": 4194304
+      },
+      {
+        "numerator": 1,
+        "denominator": 2
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": -1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c00.r2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 2,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c00.bs2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 2,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c00.bs2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 6345245,
+        "denominator": 2097152
+      },
+      {
+        "numerator": 9484999,
+        "denominator": 2097152
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": -1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c01.r2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 2,
+        "denominator": 1
+      },
+      {
+        "numerator": 12630727,
+        "denominator": 2097152
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c01.bs2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 2,
+        "denominator": 1
+      },
+      {
+        "numerator": 12630727,
+        "denominator": 2097152
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c01.bs2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 328781,
+        "denominator": 65536
+      },
+      {
+        "numerator": 4,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c10.bs2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 328781,
+        "denominator": 65536
+      },
+      {
+        "numerator": 4,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c10.bs2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 1574493,
+        "denominator": 262144
+      },
+      {
+        "numerator": 5,
+        "denominator": 2
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": -1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c10.r2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 9496533,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 6,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c20.bs2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 9496533,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 6,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c20.bs2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 10559911,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 9,
+        "denominator": 2
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": -1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c20.r2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 2
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c00.f1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 2,
+        "denominator": 1
+      },
+      {
+        "numerator": 9484999,
+        "denominator": 2097152
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c01.f1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 328781,
+        "denominator": 65536
+      },
+      {
+        "numerator": 12630727,
+        "denominator": 2097152
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c11.bs1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 328781,
+        "denominator": 65536
+      },
+      {
+        "numerator": 12630727,
+        "denominator": 2097152
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c11.bs1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 2,
+        "denominator": 1
+      },
+      {
+        "numerator": 1057987,
+        "denominator": 131072
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c02.bs1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 2,
+        "denominator": 1
+      },
+      {
+        "numerator": 1057987,
+        "denominator": 131072
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c02.bs1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 328781,
+        "denominator": 65536
+      },
+      {
+        "numerator": 5,
+        "denominator": 2
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c10.f1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 12714613,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 6,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c30.bs1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 12714613,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 6,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c30.bs1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 9496533,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 2103129,
+        "denominator": 262144
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c21.bs1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 9496533,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 2103129,
+        "denominator": 262144
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c21.bs1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 9496533,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 9,
+        "denominator": 2
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c20.f1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 3679081,
+        "denominator": 524288
+      },
+      {
+        "numerator": 12630727,
+        "denominator": 2097152
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c11.r1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 328781,
+        "denominator": 65536
+      },
+      {
+        "numerator": 2103129,
+        "denominator": 262144
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c11.m2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 2,
+        "denominator": 1
+      },
+      {
+        "numerator": 1320131,
+        "denominator": 131072
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c02.m2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 2081801,
+        "denominator": 524288
+      },
+      {
+        "numerator": 1057987,
+        "denominator": 131072
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c02.r1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 14800883,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 6,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c30.r1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 12714613,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 8,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c30.m2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 9496533,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 2627417,
+        "denominator": 262144
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c21.m2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 11595835,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 2103129,
+        "denominator": 262144
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c21.r1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 3679081,
+        "denominator": 524288
+      },
+      {
+        "numerator": 13679303,
+        "denominator": 2097152
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": -1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c11.r2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 394317,
+        "denominator": 65536
+      },
+      {
+        "numerator": 2103129,
+        "denominator": 262144
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c11.bs2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 394317,
+        "denominator": 65536
+      },
+      {
+        "numerator": 2103129,
+        "denominator": 262144
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c11.bs2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 3,
+        "denominator": 1
+      },
+      {
+        "numerator": 1320131,
+        "denominator": 131072
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c02.bs2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 3,
+        "denominator": 1
+      },
+      {
+        "numerator": 1320131,
+        "denominator": 131072
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c02.bs2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 2081801,
+        "denominator": 524288
+      },
+      {
+        "numerator": 1123523,
+        "denominator": 131072
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": -1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c02.r2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 14800883,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 13,
+        "denominator": 2
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": -1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c30.r2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 13763189,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 8,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c30.bs2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 13763189,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 8,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c30.bs2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 10545109,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 2627417,
+        "denominator": 262144
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c21.bs2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 10545109,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 2627417,
+        "denominator": 262144
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c21.bs2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 11595835,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 2234201,
+        "denominator": 262144
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": -1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c21.r2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 394317,
+        "denominator": 65536
+      },
+      {
+        "numerator": 13679303,
+        "denominator": 2097152
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c11.f1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 394317,
+        "denominator": 65536
+      },
+      {
+        "numerator": 1320131,
+        "denominator": 131072
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c12.bs1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 394317,
+        "denominator": 65536
+      },
+      {
+        "numerator": 1320131,
+        "denominator": 131072
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c12.bs1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 3,
+        "denominator": 1
+      },
+      {
+        "numerator": 6370309,
+        "denominator": 524288
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c03.bs1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 3,
+        "denominator": 1
+      },
+      {
+        "numerator": 6370309,
+        "denominator": 524288
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c03.bs1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 3,
+        "denominator": 1
+      },
+      {
+        "numerator": 1123523,
+        "denominator": 131072
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c02.f1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 13763189,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 13,
+        "denominator": 2
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c30.f1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 13763189,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 2627417,
+        "denominator": 262144
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c31.bs1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 13763189,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 2627417,
+        "denominator": 262144
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c31.bs1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 10545109,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 1582275,
+        "denominator": 131072
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c22.bs1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 10545109,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 1582275,
+        "denominator": 131072
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c22.bs1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 10545109,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 2234201,
+        "denominator": 262144
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c21.f1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 394317,
+        "denominator": 65536
+      },
+      {
+        "numerator": 1582275,
+        "denominator": 131072
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c12.m2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 4191299,
+        "denominator": 524288
+      },
+      {
+        "numerator": 1320131,
+        "denominator": 131072
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c12.r1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 3,
+        "denominator": 1
+      },
+      {
+        "numerator": 7418885,
+        "denominator": 524288
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c03.m2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 10495417,
+        "denominator": 2097152
+      },
+      {
+        "numerator": 6370309,
+        "denominator": 524288
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c03.r1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 13763189,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 3151705,
+        "denominator": 262144
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c31.m2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 15844893,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 2627417,
+        "denominator": 262144
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c31.r1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 10545109,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 1844419,
+        "denominator": 131072
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c22.m2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 6321001,
+        "denominator": 524288
+      },
+      {
+        "numerator": 1582275,
+        "denominator": 131072
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c22.r1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 459853,
+        "denominator": 65536
+      },
+      {
+        "numerator": 1582275,
+        "denominator": 131072
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c12.bs2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 459853,
+        "denominator": 65536
+      },
+      {
+        "numerator": 1582275,
+        "denominator": 131072
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c12.bs2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 4191299,
+        "denominator": 524288
+      },
+      {
+        "numerator": 1385667,
+        "denominator": 131072
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": -1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c12.r2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 4,
+        "denominator": 1
+      },
+      {
+        "numerator": 7418885,
+        "denominator": 524288
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c03.bs2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 4,
+        "denominator": 1
+      },
+      {
+        "numerator": 7418885,
+        "denominator": 524288
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c03.bs2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 10495417,
+        "denominator": 2097152
+      },
+      {
+        "numerator": 6632453,
+        "denominator": 524288
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": -1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c03.r2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 14811765,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 3151705,
+        "denominator": 262144
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c31.bs2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 14811765,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 3151705,
+        "denominator": 262144
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c31.bs2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 15844893,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 2758489,
+        "denominator": 262144
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": -1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c31.r2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 11593685,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 1844419,
+        "denominator": 131072
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c22.bs2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 11593685,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 1844419,
+        "denominator": 131072
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c22.bs2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 6321001,
+        "denominator": 524288
+      },
+      {
+        "numerator": 1647811,
+        "denominator": 131072
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": -1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c22.r2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 459853,
+        "denominator": 65536
+      },
+      {
+        "numerator": 7418885,
+        "denominator": 524288
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c13.bs1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 459853,
+        "denominator": 65536
+      },
+      {
+        "numerator": 7418885,
+        "denominator": 524288
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c13.bs1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 459853,
+        "denominator": 65536
+      },
+      {
+        "numerator": 1385667,
+        "denominator": 131072
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c12.f1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 4,
+        "denominator": 1
+      },
+      {
+        "numerator": 6632453,
+        "denominator": 524288
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c03.f1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 14811765,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 1844419,
+        "denominator": 131072
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c32.bs1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 14811765,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 1844419,
+        "denominator": 131072
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c32.bs1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 14811765,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 2758489,
+        "denominator": 262144
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c31.f1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 11593685,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 8467461,
+        "denominator": 524288
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c23.bs1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 11593685,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 8467461,
+        "denominator": 524288
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c23.bs1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 11593685,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 1647811,
+        "denominator": 131072
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c22.f1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 459853,
+        "denominator": 65536
+      },
+      {
+        "numerator": 8467461,
+        "denominator": 524288
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c13.m2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 9449383,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 7418885,
+        "denominator": 524288
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c13.r1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 14811765,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 2106563,
+        "denominator": 131072
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c32.m2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 528799,
+        "denominator": 32768
+      },
+      {
+        "numerator": 1844419,
+        "denominator": 131072
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c32.r1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 11593685,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 9516037,
+        "denominator": 524288
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c23.m2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 6851601,
+        "denominator": 524288
+      },
+      {
+        "numerator": 8467461,
+        "denominator": 524288
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c23.r1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 525389,
+        "denominator": 65536
+      },
+      {
+        "numerator": 8467461,
+        "denominator": 524288
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c13.bs2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 525389,
+        "denominator": 65536
+      },
+      {
+        "numerator": 8467461,
+        "denominator": 524288
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c13.bs2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 9449383,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 7681029,
+        "denominator": 524288
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": -1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c13.r2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 15860341,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 2106563,
+        "denominator": 131072
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c32.bs2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 15860341,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 2106563,
+        "denominator": 131072
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c32.bs2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 528799,
+        "denominator": 32768
+      },
+      {
+        "numerator": 1909955,
+        "denominator": 131072
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": -1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c32.r2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 12642261,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 9516037,
+        "denominator": 524288
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c23.bs2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 12642261,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 9516037,
+        "denominator": 524288
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c23.bs2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 6851601,
+        "denominator": 524288
+      },
+      {
+        "numerator": 8729605,
+        "denominator": 524288
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": -1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c23.r2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 525389,
+        "denominator": 65536
+      },
+      {
+        "numerator": 7681029,
+        "denominator": 524288
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c13.f1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 15860341,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 9516037,
+        "denominator": 524288
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c33.bs1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 15860341,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 9516037,
+        "denominator": 524288
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c33.bs1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 15860341,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 1909955,
+        "denominator": 131072
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c32.f1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 12642261,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 8729605,
+        "denominator": 524288
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c23.f1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 15860341,
+        "denominator": 1048576
+      },
+      {
+        "numerator": 10564613,
+        "denominator": 524288
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c33.m2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 8983163,
+        "denominator": 524288
+      },
+      {
+        "numerator": 9516037,
+        "denominator": 524288
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c33.r1"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 8454459,
+        "denominator": 524288
+      },
+      {
+        "numerator": 10564613,
+        "denominator": 524288
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c33.bs2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 8454459,
+        "denominator": 524288
+      },
+      {
+        "numerator": 10564613,
+        "denominator": 524288
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c33.bs2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 8983163,
+        "denominator": 524288
+      },
+      {
+        "numerator": 9778181,
+        "denominator": 524288
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": -1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c33.r2"
+  },
+  {
+    "origin": [
+      {
+        "numerator": 8454459,
+        "denominator": 524288
+      },
+      {
+        "numerator": 9778181,
+        "denominator": 524288
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "direction": [
+      {
+        "numerator": 0,
+        "denominator": 1
+      },
+      {
+        "numerator": 1,
+        "denominator": 1
+      },
+      {
+        "numerator": 0,
+        "denominator": 1
+      }
+    ],
+    "previous_name": "c33.f1"
+  }
+]
