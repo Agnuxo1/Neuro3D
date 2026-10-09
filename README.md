@@ -127,11 +127,19 @@ requieren controles adicionales.
 
 ![Recuperación verificada](Docs/assets/training-recovery-2026-10-09.png)
 
+El [nuevo refinamiento exacto de la ruta gráfica](Docs/NATIVE_GRAPHICS_FRONTIER_PROTOCOL_2026-10-09.md)
+reduce la construcción observada a **10,45–10,60 s**, frente a **29,81–30,04 s**
+de la CPU original, manteniendo los 133 estados, los 17.060 caminos y las 150 decisiones.
+Es una mejora combinada de GPU y verificación más eficiente; falta la ablación con
+idéntica verificación en CPU para atribuir una ventaja a la GPU.
+
+![Ruta gráfica y verificación exacta](Docs/assets/native-graphics-frontier-v2-2026-10-09.png)
+
 El [recorrido autónomo con GPU gráfica](Docs/NATIVE_GRAPHICS_FRONTIER_PROTOCOL_2026-10-09.md)
 parte de las cinco fuentes y reproduce **133 estados, 186 conexiones y 17.060 caminos**,
 con los 133 candidatos verificados exactamente y las 150 decisiones originales iguales.
 Diferencia máxima de potencia 5,56×10⁻¹⁶. Construcción completa CPU 29,87–30,77 s
-frente a GPU gráfica + comprobación exacta 31,53–33,01 s: todavía sin aceleración global.
+frente a GPU gráfica + comprobación exacta 31,53–33,01 s: sin aceleración global en esa primera versión.
 La fase se conserva mediante longitudes racionales refinadas; el coste dominante es verificar
 los contactos de los triángulos.
 
