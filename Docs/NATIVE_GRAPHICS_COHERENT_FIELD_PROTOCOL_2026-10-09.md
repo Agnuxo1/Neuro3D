@@ -57,3 +57,9 @@ The [v8 profile](research/native_graphics_field_profile_v8_2026-10-09.json) reco
 Frozen 1c35254d2383a190425fe30c8cfa030676db8201, profile 771d626f, 74 pinned files. No pre-existing GL errors were found. Object UBO creation passes; shader creation introduces GL_INVALID_VALUE 0x501. Transport is rejected before accepting any optical result. Full 22.146367 seconds; peak owned RSS 361.0625 MiB. [Retained stage audit and failure](validation/native-graphics-field-2026-10-09/attempt08/evidence_index.json).
 
 The [v9 profile](research/native_graphics_field_profile_v9_2026-10-09.json) adds a bounded synchronous Khronos debug callback in the owned disposable factory context. It retains the native driver's diagnostic messages around shader creation. Arithmetic, binary64 echo, raw integer readback and all numerical gates remain unchanged. Every newly raised GL error still rejects the trial. No error is waived.
+
+## Attempt09 driver message and prospective lifecycle correction
+
+Frozen dc6f924b111e71a774633ab748aaf29a279d1da6, profile e0067e7a, 78 pinned files. Native driver messages identify an invalid/deleted program handle during shader creation. No optical fields are accepted. Full 22.127184 seconds; peak owned RSS 358.792969 MiB. [Retained diagnostic](validation/native-graphics-field-2026-10-09/attempt09/evidence_index.json).
+
+The [v10 profile](research/native_graphics_field_profile_v10_2026-10-09.json) unbinds the previous owned geometry shader through `gpu.shader.unbind()` before releasing that backend. Blender 4.5.14 source `gl_shader_interface.cc` saves the current program, binds the new program and restores the previous handle; deleting a still-bound old program can invalidate that saved handle when the new one is bound. This explains the observed error but remains a hypothesis until the next trial. FP64 field code, bit echo, strict GL stage checks, integer readback and all numerical gates remain unchanged.
