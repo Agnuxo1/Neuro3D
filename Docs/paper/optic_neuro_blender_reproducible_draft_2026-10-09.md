@@ -197,5 +197,3 @@ Repository: [Agnuxo1/Neuro3D](https://github.com/Agnuxo1/Neuro3D), main with sci
 | External Linux CPU reproduction | [profile, failed setup and completed run](../EXTERNAL_CPU_REPRODUCTION_PROTOCOL_2026-10-09.md) | [actual external result](../validation/external-cpu-reproduction-2026-10-09/attempt02/artifact/result.json) |
 
 Publication commits fixed before experiments are recorded in each linked protocol. Hashes and preimages must be checked before interpreting or rerunning a result. External expert review and author approval of a submission-ready manuscript remain pending.
-
-
