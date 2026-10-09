@@ -1,0 +1,22 @@
+{
+  "schema": "optic_neuro_blender.native_packet_workload_supervision.v1",
+  "status": "VALID_FROZEN_NATIVE_PACKET_WORKLOAD",
+  "primary_metric": 1,
+  "worker_started": true,
+  "gpu_requested": false,
+  "profile_sha256": "64a2fb9cbcfc26f996ae43dc0bbed8a4fc688af0be7abcdb2f4c3d2a53332a81",
+  "registration_sha256": "db2042838bae9f3df25f71821eb3b90af2f3bcf7b1fce533d86eb125d6c3c314",
+  "preflight_free_ram_mib": 4594.73046875,
+  "worker_exit_code": 0,
+  "worker_seconds": 10.31375780000235,
+  "peak_owned_rss_mib": 55.1328125,
+  "stopped": null,
+  "result_sha256": "a719101cb8f6bf1503020d451c04b30b177e08844fcf3764266d5888c62b303b",
+  "owned_worker_cleaned_up": true,
+  "raw_file_sha256": {
+    "profile.json": "64a2fb9cbcfc26f996ae43dc0bbed8a4fc688af0be7abcdb2f4c3d2a53332a81",
+    "registration.json": "db2042838bae9f3df25f71821eb3b90af2f3bcf7b1fce533d86eb125d6c3c314",
+    "worker.stdout": "430b1bcaf80ce61580904db5ffc0b8c1f8115e3f38ca275dbef43d9ac0950e11",
+    "worker/result.json": "a719101cb8f6bf1503020d451c04b30b177e08844fcf3764266d5888c62b303b"
+  }
+}
