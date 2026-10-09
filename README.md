@@ -83,6 +83,13 @@ en el proyecto; la comparación posterior con Wine amplía la evaluación públi
 
 ![Entrenamiento propio y matriz de errores](Docs/assets/captured-own-geometry-training-2026-10-09.png)
 
+La [certificación independiente de las 150 salidas nativas](Docs/NATIVE_TRAINING_BATCH_CERTIFICATION_2026-10-09.md)
+incluye la aritmética del codificador: campo ≤`2,77×10⁻¹⁵`, potencia ≤`1,04×10⁻¹⁵`,
+y 150 argmax separados. **137 decisiones son correctas y 13 equivocadas**.
+La geometría pretendida y la discrepancia física continúan sin cotas.
+
+![Certificación y errores del clasificador](Docs/assets/native-training-batch-certification-2026-10-09.png)
+
 La [reproducción nativa en Blender](Docs/TRAINED_GEOMETRY_BLENDER_REPRODUCTION_2026-10-09.md)
 también pasa: guardar, reabrir y recapturar el [archivo entrenado nuevo](Docs/validation/trained-geometry-blender-reproduction-2026-10-09/attempt01/worker/trained_geometry.blend)
 conserva la geometría admitida y reproduce las 150 predicciones. El archivo
