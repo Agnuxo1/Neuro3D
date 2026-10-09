@@ -1,0 +1,11 @@
+{
+  "scope": "Factual operator receipt, not raw stdout",
+  "published_before_execution": "02572a80ba966e6a807b993c6e6c3d76dc67fa0a",
+  "all32_git_blob_pins_verified": true,
+  "actual_isolated_zip_install_and_registration_succeeded": true,
+  "own_background_inference_failed": true,
+  "failure": "rational_wire does not serialize complex fields, auditor received complex objects instead of {real,imag}; existing Tools.trace_indexed_scene_v1.wire is correct converter",
+  "metric": null,
+  "no_inference_or_training_result_collected": true,
+  "corrective_action": "Retain original worker and ZIP0.1.0; new worker_v2 uses existing coherent complex wire converter, package0.1.1, new published profile before execution, same numerical budgets and nine controls"
+}
