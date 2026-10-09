@@ -49,6 +49,10 @@ Trayectoria observada de entrenamiento en el trabajador **CPU** nativo de Blende
 Todos los 61 estados pasan la auditoría geométrica. La evaluación del test se hace
 después de la actualización final. [Procedencia, hashes y reproducción de los GIFs](Docs/assets/verified-animation-manifest-2026-10-09.json).
 
+![Recuperación nativa de entrenamiento: comparación exacta](Docs/assets/installed-blender-exact-resume-2026-10-09.gif)
+
+La pérdida y las posiciones del entrenamiento reanudado coinciden exactamente con la ejecución sin interrupción. El cursor representa el estado del optimizador; el cierre ocurrió tras 12 actualizaciones. [Datos y hashes del GIF](Docs/assets/verified-recovery-animation-manifest-2026-10-09.json).
+
 La [portada anterior de `main`](Docs/HISTORICAL_MAIN_README_BEFORE_INTEGRATION_2026-10-09.md)
 se conserva con sus fechas y alcance original. Las afirmaciones actuales se
 fundamentan en los protocolos y recibos enlazados.
