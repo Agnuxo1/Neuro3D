@@ -1,0 +1,26 @@
+{
+  "certificate.json": {
+    "sha256": "cbfcd9f7508e0732fcaa1577f00296e54e08a6a6977857913551b419d593d189",
+    "bytes": 12854
+  },
+  "sources/Tools/audit_coherent_state_graph_v1.py": {
+    "sha256": "2bb9bb285ec93922fd96cc1eec98fa1fc2c73d20856140536ba5adfe50d4519d",
+    "bytes": 9570
+  },
+  "sources/Tools/certify_captured_graph_outputs_v1.py": {
+    "sha256": "6802179ea598fece166e5da1997c69a6da4b71bf26be534aca6095ff177a17f9",
+    "bytes": 2419
+  },
+  "sources/Blender/blender_lab/state_graph_enclosure_v1.py": {
+    "sha256": "8d33fe80fcf3d3774235c6ab33276944bc945a8a0aeff2883fac7531bbed2aa4",
+    "bytes": 5980
+  },
+  "sources/Blender/tests/test_state_graph_enclosure_v1.py": {
+    "sha256": "bda8ee302a9a5c7a8415a66cc70cd48f36d123322a4675bf34b755a0efd7f3cc",
+    "bytes": 3758
+  },
+  "sources/Blender/benchmarks/capacity_audit/rational_interval_v1.py": {
+    "sha256": "34ae4b0ea08a7bd9a3cd35c599f1d6277539dd7e5e936fe56c71254d3858b53d",
+    "bytes": 5002
+  }
+}

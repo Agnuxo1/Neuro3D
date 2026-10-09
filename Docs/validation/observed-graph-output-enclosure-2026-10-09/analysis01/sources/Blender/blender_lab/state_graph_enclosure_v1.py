@@ -10,38 +10,8 @@ from functools import lru_cache
 import math
 
 from Blender.benchmarks.capacity_audit.rational_interval_v1 import (
-    Interval as I,pi_interval,error_upper,upward_float,
+    Interval as I,pi_interval,sincos,error_upper,upward_float,
 )
-
-
-def tight_sincos(value,terms=32):
-    """Exact rational midpoint Taylor with Lagrange and Lipschitz enclosure."""
-    if type(terms) is not int or not 1<=terms<=64:
-        raise ValueError('bounded Taylor order required')
-    if not isinstance(value,I):
-        value=I(value)
-    pi=pi_interval()
-    midpoint=(value.lo+value.hi)/2
-    ratio=midpoint/(pi.lo+pi.hi)+F(1,2)
-    cycles=ratio.numerator//ratio.denominator
-    reduced=I(midpoint)-(2*cycles)*pi
-    center=(reduced.lo+reduced.hi)/2
-    radius=value.width()/2+reduced.width()/2
-    if radius>=2 or abs(center)>4:
-        return I(-1,1),I(-1,1)
-    square=center*center
-    sp=F((-1)**(terms-1),math.factorial(2*terms-1))
-    cp=F((-1)**(terms-1),math.factorial(2*terms-2))
-    for j in range(terms-2,-1,-1):
-        sp=sp*square+F((-1)**j,math.factorial(2*j+1))
-        cp=cp*square+F((-1)**j,math.factorial(2*j))
-    sine=center*sp
-    cosine=cp
-    sr=abs(center)**(2*terms+1)/math.factorial(2*terms+1)+radius
-    cr=abs(center)**(2*terms)/math.factorial(2*terms)+radius
-    si=I.rounded(sine-sr,sine+sr)
-    co=I.rounded(cosine-cr,cosine+cr)
-    return I(max(F(-1),si.lo),min(F(1),si.hi)),I(max(F(-1),co.lo),min(F(1),co.hi))
 
 
 def cmultiply(a,b):
@@ -51,13 +21,13 @@ def cmultiply(a,b):
 @lru_cache(maxsize=512)
 def propagation(parameter,norm_squared,wavelength):
     phase=2*pi_interval()*I(parameter)*I(norm_squared).sqrt()/I(wavelength)
-    sine,cosine=tight_sincos(phase)
+    sine,cosine=sincos(phase)
     return cosine,sine
 
 
 @lru_cache(maxsize=512)
 def component(power,turn,phase):
-    sine,cosine=tight_sincos(I(phase))
+    sine,cosine=sincos(I(phase))
     value=I(power).sqrt()*cosine,I(power).sqrt()*sine
     if turn==0:
         return value

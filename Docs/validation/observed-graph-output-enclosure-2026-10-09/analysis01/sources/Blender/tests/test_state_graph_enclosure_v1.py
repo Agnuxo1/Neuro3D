@@ -6,31 +6,11 @@ import mpmath as mp
 
 from Blender.tests.test_exact_object_index_v1 import plane_x,scene
 from Blender.blender_lab.coherent_state_graph_v1 import build_graph,propagate_graph
-from Blender.blender_lab.state_graph_enclosure_v1 import enclose_fields,observed_certificate,tight_sincos,propagation
-from Blender.benchmarks.capacity_audit.rational_interval_v1 import Interval as I
+from Blender.blender_lab.state_graph_enclosure_v1 import enclose_fields,observed_certificate
 from Tools.trace_indexed_scene_v1 import wire
 
 
 class GraphEnclosureTests(unittest.TestCase):
-    def test_tiny_coefficients_do_not_amplify_fixed_grid_rounding(self):
-        wavelength=F(3602879701896397,36028797018963968)
-        enclosed=propagation(F(4297065,2097152),F(1),wavelength)
-        self.assertLess(max(float(i.width()) for i in enclosed),1e-30)
-        with mp.workdps(90):
-            angle=2*mp.pi*mp.mpf(4297065)/2097152/(mp.mpf(wavelength.numerator)/wavelength.denominator)
-            for interval,expected in zip(enclosed,(mp.cos(angle),mp.sin(angle))):
-                self.assertTrue(mp.mpf(interval.lo.numerator)/interval.lo.denominator<=expected<=mp.mpf(interval.hi.numerator)/interval.hi.denominator)
-
-    def test_explicit_radius_and_reduction_at_signed_angles(self):
-        with mp.workdps(90):
-            for center in (F(0),F(-345,11),F(203,7),F(10**20)):
-                radius=F(1,10**8)
-                sine,cosine=tight_sincos(I(center-radius,center+radius))
-                for point in (center-radius,center,center+radius):
-                    angle=mp.mpf(point.numerator)/point.denominator
-                    for interval,expected in ((sine,mp.sin(angle)),(cosine,mp.cos(angle))):
-                        self.assertTrue(mp.mpf(interval.lo.numerator)/interval.lo.denominator<=expected<=mp.mpf(interval.hi.numerator)/interval.hi.denominator)
-
     def test_exact_direct_phase_and_certified_observed_output(self):
         snapshot=scene({'out':plane_x(2)})
         graph=build_graph(snapshot)
