@@ -30,7 +30,9 @@
       "protocol_sha256": "5d0cf372f2f66f043c2a219ba6a60f0182ced8a60039348d486ec163be736226",
       "result_collected": false,
       "achieved": "Pinned supervisor and independent local-ledger auditor prepared;16 new controls,66 total PASS;real preflight and missing-registration negative did not start worker",
-      "remaining": "Check resources,execute unchanged pilot using verified human GitHub receipt,and audit result;external registration is retained as separate route"
+      "remaining": "Execute unchanged pilot when host free RAM meets frozen4000MiB threshold; retain refusal and audit actual result; external route remains separate",
+      "latest_attempt": "Docs/validation/captured-pilot-execution-2026-10-09/attempt01/supervisor.json",
+      "latest_attempt_status": "NOT_EXECUTED_HOST_RAM_PREFLIGHT"
     },
     {
       "id": 4,

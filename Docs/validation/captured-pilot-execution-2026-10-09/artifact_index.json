@@ -1,0 +1,22 @@
+{
+  "schema": "optic_neuro_blender.authorized_pilot_attempt_index.v1",
+  "files": [
+    {
+      "path": "attempt01/supervisor.json",
+      "bytes": 1959,
+      "sha256": "690510a932d4d7640e49b7dc2c3aec521e3d93e30b5871ec5a89db03cfb7ee4d"
+    },
+    {
+      "path": "source/Tools/audit_captured_pilot_result_v1.py",
+      "bytes": 9836,
+      "sha256": "a3f683ab11aa07eb52aefb4046ba89516321bb175ef01697c39131234b3ac686"
+    },
+    {
+      "path": "source/Tools/run_captured_scalar_pilot_v1.py",
+      "bytes": 10897,
+      "sha256": "dc12e5c631e9e7db2c6ce84460d4467862162093826de0b2ee3801cbe920df02"
+    }
+  ],
+  "worker_started": false,
+  "primary_metric": null
+}
