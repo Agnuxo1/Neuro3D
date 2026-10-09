@@ -177,3 +177,7 @@ Full native GPU60updates/61actualcaptures and independentfinal150numericcertific
 ## 2026-10-09T13:12:50.580773+00:00 — secondary packet/count protocol prepared, NOT EXECUTED
 
 JEV actualexit0/provenancejev/statusconnected recommends frozen count/byte-parity replay. Source-derived payload counts and CPU-only microbenchmark do not identify causal GPUcost fractions or speedup. New512MiB/300secCPU secondary envelope based on13.7MiB archived trace; oldGPUlimits unchanged. New helper notGPUintegrated. 126pins/profile64a2fb9cbcfc26f996ae43dc0bbed8a4fc688af0be7abcdb2f4c3d2a53332a81. Publish and verify before execution. Full project stillopen.
+
+## 2026-10-09T13:16:47.731158+00:00 — exact packet replay and structural cost audit
+
+Exact same originalfrozenpacketprofile accepted,5650packetsbyteidentical; CPUcandidate faster150/4096/slower1; structural counts5834/35004reads/46488textures, logicalpayloadsnotPCIecounters. Full10GPUtraining+finalcert+scaling alreadybothmain. MainforeignEXP005history merged1a53ef6, all126sourcepinsunchanged. Candidate notGPUintegrated. Next actualBlenderCPUcompatibility/graphicsAPIinspection whileforeignFIFOhead11GiB remainsblocked. Goalactive13:55UTC.
