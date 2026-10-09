@@ -33,3 +33,9 @@ The separately frozen [v4 diagnostic profile](research/native_graphics_field_pro
 Frozen961930d/profile734f2919/source66verified, full22.693901seconds/RSS377.902344MiB/null. First8rays retain valid captured geometry readback while all five integer attachments, including raw UBO echo, read zero. [Actual word diagnostic](validation/native-graphics-field-2026-10-09/attempt04/worker/native_binary64_diagnostic.json). This does not identify a phase arithmetic error; it rejects the current graphics transport boundary.
 
 The [v5 profile](research/native_graphics_field_profile_v5_2026-10-09.json) adds constant floating/unsigned attachment probes and reads native GL draw-buffer/capability/error state in the same verified context. It preserves every original field gate. Its purpose is to distinguish a missing draw target or unsigned attachment/readback fault from packet interpretation. It does not accept zero outputs as valid fields. All previous sources and diagnostics remain intact.
+
+## Attempt05 native API cap and prospective six-target diagnostic
+
+Frozeneed2d61185238ade87544a9c1e162deee0c7657c/profile2129ae5e/source69verified. Blender's framebuffer API rejects eight color attachments; its exposed maximum is six. Full22.555377seconds/RSS374.289063MiB, null metric; no v5 diagnostic draw. [Preserved API failure](validation/native-graphics-field-2026-10-09/attempt05/evidence_index.json).
+
+The [v6 diagnostic profile](research/native_graphics_field_profile_v6_2026-10-09.json) fits six targets: actual geometry, constant unsigned words, first branch, constant floats, converted input echo and raw UBO echo. It records native GL draw-buffer/capability/error state on the first five geometric source rays of one input. It deliberately stops after recording diagnosis and cannot publish an optical field or numerical success. This bounded API diagnostic changes no optical acceptance tolerance and is distinct from the pending three150input validation.
