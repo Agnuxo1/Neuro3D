@@ -173,3 +173,7 @@ exactsamefrozenprofile repeat full1/150/4096batchsixpairedCPU/GPUmodaloutputcomp
 ## 2026-10-09T13:01:03.903748+00:00 — updated scientific manuscript and publication integrity
 
 Full native GPU60updates/61actualcaptures and independentfinal150numericcertificate + equal-output1/150/4096scaling included. ActualMiKTeX twoexits0,14pages368032bytes/PDFc0e879bb91746af839a4f645583ce8c43e0318ca265db7b3a03dd99b329224d1, zerooverfull. Local110documentlinks+77animation sourcehashes+allsourceTex/PDF/receipt hashesPASS. Literaturecounts corrected:106eligiblebackgroundnotfullymethodextracted,30selected29papers/discussion1chapter/16inside14outsidecohort, fulltextsnotallreadentirely. Nojournal/expertreview/novelty/AMD/physical/IPFS claim. Sourceversion7cce9f0 alreadybothmain+branch; nextpublishmanuscript thenactualcall-count/CPUpacking optimization auditwhileforeignGPUFIFOheadrequires11GiBRAMwith5GiBfree. Goalactive13:55UTC.
+
+## 2026-10-09T13:12:50.580773+00:00 — secondary packet/count protocol prepared, NOT EXECUTED
+
+JEV actualexit0/provenancejev/statusconnected recommends frozen count/byte-parity replay. Source-derived payload counts and CPU-only microbenchmark do not identify causal GPUcost fractions or speedup. New512MiB/300secCPU secondary envelope based on13.7MiB archived trace; oldGPUlimits unchanged. New helper notGPUintegrated. 126pins/profile64a2fb9cbcfc26f996ae43dc0bbed8a4fc688af0be7abcdb2f4c3d2a53332a81. Publish and verify before execution. Full project stillopen.
