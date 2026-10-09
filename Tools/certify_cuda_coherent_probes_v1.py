@@ -13,6 +13,11 @@ def main():
     parser=argparse.ArgumentParser();parser.add_argument('--profile',type=Path,required=True);parser.add_argument('--result',type=Path,required=True);parser.add_argument('--out',type=Path,required=True)
     args=parser.parse_args();p=json.loads(args.profile.read_text());r=json.loads(args.result.read_text())
     need(r['status']=='PASS' and r['profile_sha256']==hashlib.sha256(args.profile.read_bytes()).hexdigest(),'recorded frozen CUDA result identity required')
+    for name in (p['scene'],p['graph']):
+        need(hashlib.sha256((ROOT/name).read_bytes()).hexdigest()==p['pins'][name],'frozen CUDA geometry identity mismatch')
+    need(r['coherent_probe_count']==len(p['coherent_probes'])==len(r['actual_cuda_powers'])
+         and len(r['actual_cuda_fields_reim'])==2 and all(len(a)==len(p['coherent_probes']) for a in r['actual_cuda_fields_reim']),
+         'complete observed CUDA input/output count required')
     scene_wire=json.loads((ROOT/p['scene']).read_text());scene=decode(scene_wire);graph=decode(json.loads((ROOT/p['graph']).read_text()))
     estimates=propagate_graph(graph,{s['id']:s['field_reim'] for s in scene['sources']})
     audit=audit_graph_neighborhood(scene_wire,wire({'graph':graph,**estimates}));need(audit['primary_metric']==1,'independent represented geometry audit required')
