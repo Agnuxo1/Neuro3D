@@ -118,6 +118,15 @@ todavía más eficiente para geometría fija. AMD real sigue pendiente.
 
 ![Coste medido CPU/CUDA y baseline equivalente](Docs/assets/trained-graph-cpu-cuda-scaling-2026-10-09.png)
 
+El [entrenamiento ya se recupera de una interrupción real de su worker](Docs/TRAINING_PROCESS_RECOVERY_PROTOCOL_2026-10-09.md):
+checkpoint atómico tras 12 actualizaciones, nuevo proceso, prueba geométrica nueva y
+reproducción determinista del prefijo antes de restaurar Adam. Los 61 estados y pérdidas,
+y las 150 potencias y decisiones, coinciden exactamente con la ejecución sin interrupción.
+Se rechazan cuatro checkpoints adversos. La interfaz instalada y la caída del host Blender
+requieren controles adicionales.
+
+![Recuperación verificada](Docs/assets/training-recovery-2026-10-09.png)
+
 El [recorrido autónomo con GPU gráfica](Docs/NATIVE_GRAPHICS_FRONTIER_PROTOCOL_2026-10-09.md)
 parte de las cinco fuentes y reproduce **133 estados, 186 conexiones y 17.060 caminos**,
 con los 133 candidatos verificados exactamente y las 150 decisiones originales iguales.

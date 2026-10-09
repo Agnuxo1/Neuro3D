@@ -17,3 +17,15 @@ This is research-worker process recovery. It does not yet establish an installed
 Frozen `6534318d8fa61814cc5237440d5b82d0e0438a73`, 38 pins published and byte-verified before execution. The uninterrupted prerequisite worker failed in 99.8353 seconds while constructing its final result: the optimizer checkpoint identity had shadowed the affine-expression certificate identity, causing `KeyError: status`. Progress and atomic checkpoints are preserved, but there is no completed scientific result and no actual interruption/resume stage yet. The primary metric remains null. [Evidence](validation/training-recovery-2026-10-09/attempt01/evidence_index.json).
 
 The [prospective v2 profile](research/training_recovery_profile_v2_2026-10-09.json) gives the affine and checkpoint identities distinct names. Optimization, native quantization, crash step, four adversaries and every acceptance/resource gate are unchanged. [Authorization](research/training_recovery_registration_v2_2026-10-09.json) and the revised source pins must be published and byte-verified before execution.
+
+## Attempt 02: actual interruption and recovery passed
+
+Frozen `8311fc8a2053dc6bcebf03c6c9a6235dd1567e34`, profile SHA `b43e881e6bf4ab7798a6b713c496045555ea8eff97dd078deedd65bbd268c3b8`, 40 pinned sources published and byte-verified before execution. The uninterrupted process completes in 96.8763 seconds. The owned interruption process atomically commits checkpoint 12 and is actually terminated with exit code 1 after 75.5020 seconds, leaving no completed result. A fresh third process independently repeats the whole-family proof, replays the 12-update prefix, verifies the exact Adam state and completes in 94.5633 seconds.
+
+All 61 coordinate vectors and losses coincide exactly, as do all 150 final powers and predictions. Both runs retain 27/30 held-out correct classifications. All four actual adversarial checkpoint cases are rejected, including the forged optimizer state with a recomputed valid hash. Original crash checkpoint bytes remain unchanged and match the recovered source receipt. Full supervision cost 267.2220 seconds, peak owned RSS 56.59 MiB; each process was assigned CPU core 19.
+
+[Evidence index](validation/training-recovery-2026-10-09/attempt02/evidence_index.json), [supervisor](validation/training-recovery-2026-10-09/attempt02/supervisor.json), [resumed result](validation/training-recovery-2026-10-09/attempt02/resumed/result.json), [preserved crash checkpoint](validation/training-recovery-2026-10-09/attempt02/interrupted/optimizer_checkpoint.json).
+
+![Actual optimizer recovery](assets/training-recovery-2026-10-09.png)
+
+This validates the owned research-worker interruption protocol. The installed add-on 0.1.2 is unchanged: a Blender resume interface, whole-host crash and power-loss/filesystem durability are still separate pending tasks.
