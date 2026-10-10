@@ -1,0 +1,852 @@
+{
+ "versiones": {
+  "python": "3.13.7",
+  "numpy": "2.2.6",
+  "scipy": "1.15.1",
+  "scikit_learn": "1.4.0",
+  "plataforma": "Windows-10-10.0.19045-SP0"
+ },
+ "C1": {
+  "iris": {
+   "configuraciones": 100,
+   "max_error_unitariedad": 3.6637359812630166e-15,
+   "kappa_min": 1.0000000000000002,
+   "kappa_max": 1.0000000000000013,
+   "max_abs_kappa_menos_1": 1.3322676295501878e-15
+  },
+  "wine": {
+   "configuraciones": 100,
+   "max_error_unitariedad": 3.774758283725532e-15,
+   "kappa_min": 1.0000000000000002,
+   "kappa_max": 1.0000000000000013,
+   "max_abs_kappa_menos_1": 1.3322676295501878e-15
+  },
+  "breast_cancer": {
+   "configuraciones": 100,
+   "max_error_unitariedad": 3.552713678800501e-15,
+   "kappa_min": 1.0000000000000002,
+   "kappa_max": 1.000000000000001,
+   "max_abs_kappa_menos_1": 1.1102230246251565e-15
+  },
+  "digits": {
+   "configuraciones": 100,
+   "max_error_unitariedad": 6.661338147750939e-15,
+   "kappa_min": 1.0000000000000004,
+   "kappa_max": 1.0000000000000013,
+   "max_abs_kappa_menos_1": 1.3322676295501878e-15
+  },
+  "pasa_todo": true
+ },
+ "C2": {
+  "iris": {
+   "kappa_G_N_entradas_por_particion": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "media": null,
+   "mediana": null,
+   "nota": "Gram singular (modos de entrada a cero): kappa infinito",
+   "kappa_G_4_activas": {
+    "media": 295.9158319292988,
+    "mediana": 293.9393159281599
+   }
+  },
+  "wine": {
+   "kappa_G_N_entradas_por_particion": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "media": null,
+   "mediana": null,
+   "nota": "Gram singular (modos de entrada a cero): kappa infinito",
+   "kappa_G_4_activas": {
+    "media": 67.69773232941131,
+    "mediana": 76.0535631027528
+   }
+  },
+  "breast_cancer": {
+   "kappa_G_N_entradas_por_particion": [
+    24.611791425207137,
+    27.604434711702186,
+    32.477129666989065,
+    33.38494439199407,
+    29.57576372162345,
+    27.762091621843943,
+    33.81431008112139,
+    28.578244791288228,
+    29.28020176024149,
+    31.41965865192797
+   ],
+   "media": 29.850857082393894,
+   "mediana": 29.42798274093247
+  },
+  "digits": {
+   "kappa_G_N_entradas_por_particion": [
+    10.630817011465753,
+    10.258540772371473,
+    9.938227028257483,
+    9.810872806723774,
+    10.336528637093597,
+    10.246050571445151,
+    10.259550525175426,
+    10.438839667409477,
+    10.180715358374782,
+    10.446264399888674
+   ],
+   "media": 10.254640677820559,
+   "mediana": 10.25904564877345
+  }
+ },
+ "control_sigma0_exacto": {
+  "iris": true,
+  "wine": true,
+  "breast_cancer": true,
+  "digits": true
+ },
+ "C3": {
+  "iris": {
+   "exactitud_media": {
+    "0.0": 0.8233333333333335,
+    "0.01": 0.818,
+    "0.03": 0.7833333333333334,
+    "0.1": 0.7273333333333333,
+    "0.3": 0.5906666666666666
+   },
+   "exactitud_sd_entre_particiones": {
+    "0.0": 0.04172218523448575,
+    "0.01": 0.03887936391289866,
+    "0.03": 0.04323350324076384,
+    "0.1": 0.05253570214625482,
+    "0.3": 0.0718846813125537
+   },
+   "perdida": {
+    "0.01": {
+     "media": 0.005333333333333345,
+     "ic95_bootstrap": [
+      -0.004666666666666664,
+      0.014666666666666694
+     ]
+    },
+    "0.03": {
+     "media": 0.04000000000000002,
+     "ic95_bootstrap": [
+      0.018000000000000016,
+      0.06066666666666672
+     ]
+    },
+    "0.1": {
+     "media": 0.09600000000000009,
+     "ic95_bootstrap": [
+      0.06666666666666674,
+      0.12268333333333321
+     ]
+    },
+    "0.3": {
+     "media": 0.23266666666666674,
+     "ic95_bootstrap": [
+      0.1913333333333334,
+      0.28333333333333344
+     ]
+    }
+   }
+  },
+  "wine": {
+   "exactitud_media": {
+    "0.0": 0.8324324324324325,
+    "0.01": 0.8302702702702703,
+    "0.03": 0.8075675675675675,
+    "0.1": 0.6983783783783784,
+    "0.3": 0.5097297297297296
+   },
+   "exactitud_sd_entre_particiones": {
+    "0.0": 0.04558238068711178,
+    "0.01": 0.04227136086087263,
+    "0.03": 0.04623298433144397,
+    "0.1": 0.03887885826093313,
+    "0.3": 0.05038928080614666
+   },
+   "perdida": {
+    "0.01": {
+     "media": 0.0021621621621621735,
+     "ic95_bootstrap": [
+      -0.010270270270270221,
+      0.011891891891891914
+     ]
+    },
+    "0.03": {
+     "media": 0.02486486486486491,
+     "ic95_bootstrap": [
+      -0.001621621621621594,
+      0.05081081081081087
+     ]
+    },
+    "0.1": {
+     "media": 0.1340540540540541,
+     "ic95_bootstrap": [
+      0.10540540540540544,
+      0.1627162162162161
+     ]
+    },
+    "0.3": {
+     "media": 0.32270270270270274,
+     "ic95_bootstrap": [
+      0.28648648648648656,
+      0.3594594594594595
+     ]
+    }
+   }
+  },
+  "breast_cancer": {
+   "exactitud_media": {
+    "0.0": 0.7157894736842105,
+    "0.01": 0.7094736842105263,
+    "0.03": 0.7124561403508773,
+    "0.1": 0.6907017543859648,
+    "0.3": 0.5903508771929824
+   },
+   "exactitud_sd_entre_particiones": {
+    "0.0": 0.027178830499701177,
+    "0.01": 0.023203923775695464,
+    "0.03": 0.022625609318913054,
+    "0.1": 0.021279640289853727,
+    "0.3": 0.04160891658116292
+   },
+   "perdida": {
+    "0.01": {
+     "media": 0.0063157894736841965,
+     "ic95_bootstrap": [
+      0.002456140350877156,
+      0.010175438596491216
+     ]
+    },
+    "0.03": {
+     "media": 0.0033333333333333106,
+     "ic95_bootstrap": [
+      -0.003157894736842204,
+      0.010000000000000009
+     ]
+    },
+    "0.1": {
+     "media": 0.025087719298245624,
+     "ic95_bootstrap": [
+      0.013684210526315809,
+      0.0380701754385965
+     ]
+    },
+    "0.3": {
+     "media": 0.12543859649122804,
+     "ic95_bootstrap": [
+      0.09298245614035086,
+      0.15631578947368419
+     ]
+    }
+   }
+  },
+  "digits": {
+   "exactitud_media": {
+    "0.0": 0.9080555555555556,
+    "0.01": 0.9063888888888888,
+    "0.03": 0.8997777777777779,
+    "0.1": 0.8394444444444444,
+    "0.3": 0.38249999999999995
+   },
+   "exactitud_sd_entre_particiones": {
+    "0.0": 0.01376176389147352,
+    "0.01": 0.01335196743156431,
+    "0.03": 0.011987647963787698,
+    "0.1": 0.014900216807326986,
+    "0.3": 0.04333115695705932
+   },
+   "perdida": {
+    "0.01": {
+     "media": 0.0016666666666667052,
+     "ic95_bootstrap": [
+      4.4408920985006264e-17,
+      0.003388888888888908
+     ]
+    },
+    "0.03": {
+     "media": 0.008277777777777773,
+     "ic95_bootstrap": [
+      0.005722222222222228,
+      0.010833333333333316
+     ]
+    },
+    "0.1": {
+     "media": 0.06861111111111116,
+     "ic95_bootstrap": [
+      0.06466666666666679,
+      0.0729444444444445
+     ]
+    },
+    "0.3": {
+     "media": 0.5255555555555557,
+     "ic95_bootstrap": [
+      0.4963888888888889,
+      0.558501388888889
+     ]
+    }
+   }
+  }
+ },
+ "H3a": {
+  "por_conjunto": {
+   "iris": {
+    "perdida_media_sigma_0.03": 0.04000000000000002,
+    "ic95": [
+     0.018000000000000016,
+     0.06066666666666672
+    ],
+    "cumple": false
+   },
+   "wine": {
+    "perdida_media_sigma_0.03": 0.02486486486486491,
+    "ic95": [
+     -0.001621621621621594,
+     0.05081081081081087
+    ],
+    "cumple": false
+   },
+   "breast_cancer": {
+    "perdida_media_sigma_0.03": 0.0033333333333333106,
+    "ic95": [
+     -0.003157894736842204,
+     0.010000000000000009
+    ],
+    "cumple": true
+   },
+   "digits": {
+    "perdida_media_sigma_0.03": 0.008277777777777773,
+    "ic95": [
+     0.005722222222222228,
+     0.010833333333333316
+    ],
+    "cumple": true
+   }
+  },
+  "cumple": false
+ },
+ "H3b": {
+  "por_conjunto": {
+   "iris": {
+    "pares": [
+     {
+      "de": "0.0",
+      "a": "0.01",
+      "acc_prev": 0.8233333333333335,
+      "acc_sig": 0.818,
+      "incremento": -0.005333333333333523,
+      "cumple": true
+     },
+     {
+      "de": "0.01",
+      "a": "0.03",
+      "acc_prev": 0.818,
+      "acc_sig": 0.7833333333333334,
+      "incremento": -0.03466666666666651,
+      "cumple": true
+     },
+     {
+      "de": "0.03",
+      "a": "0.1",
+      "acc_prev": 0.7833333333333334,
+      "acc_sig": 0.7273333333333333,
+      "incremento": -0.05600000000000016,
+      "cumple": true
+     },
+     {
+      "de": "0.1",
+      "a": "0.3",
+      "acc_prev": 0.7273333333333333,
+      "acc_sig": 0.5906666666666666,
+      "incremento": -0.13666666666666671,
+      "cumple": true
+     }
+    ],
+    "cumple": true
+   },
+   "wine": {
+    "pares": [
+     {
+      "de": "0.0",
+      "a": "0.01",
+      "acc_prev": 0.8324324324324325,
+      "acc_sig": 0.8302702702702703,
+      "incremento": -0.00216216216216214,
+      "cumple": true
+     },
+     {
+      "de": "0.01",
+      "a": "0.03",
+      "acc_prev": 0.8302702702702703,
+      "acc_sig": 0.8075675675675675,
+      "incremento": -0.022702702702702804,
+      "cumple": true
+     },
+     {
+      "de": "0.03",
+      "a": "0.1",
+      "acc_prev": 0.8075675675675675,
+      "acc_sig": 0.6983783783783784,
+      "incremento": -0.10918918918918918,
+      "cumple": true
+     },
+     {
+      "de": "0.1",
+      "a": "0.3",
+      "acc_prev": 0.6983783783783784,
+      "acc_sig": 0.5097297297297296,
+      "incremento": -0.18864864864864872,
+      "cumple": true
+     }
+    ],
+    "cumple": true
+   },
+   "breast_cancer": {
+    "pares": [
+     {
+      "de": "0.0",
+      "a": "0.01",
+      "acc_prev": 0.7157894736842105,
+      "acc_sig": 0.7094736842105263,
+      "incremento": -0.006315789473684275,
+      "cumple": true
+     },
+     {
+      "de": "0.01",
+      "a": "0.03",
+      "acc_prev": 0.7094736842105263,
+      "acc_sig": 0.7124561403508773,
+      "incremento": 0.0029824561403510863,
+      "cumple": true
+     },
+     {
+      "de": "0.03",
+      "a": "0.1",
+      "acc_prev": 0.7124561403508773,
+      "acc_sig": 0.6907017543859648,
+      "incremento": -0.021754385964912526,
+      "cumple": true
+     },
+     {
+      "de": "0.1",
+      "a": "0.3",
+      "acc_prev": 0.6907017543859648,
+      "acc_sig": 0.5903508771929824,
+      "incremento": -0.10035087719298241,
+      "cumple": true
+     }
+    ],
+    "cumple": true
+   },
+   "digits": {
+    "pares": [
+     {
+      "de": "0.0",
+      "a": "0.01",
+      "acc_prev": 0.9080555555555556,
+      "acc_sig": 0.9063888888888888,
+      "incremento": -0.0016666666666668162,
+      "cumple": true
+     },
+     {
+      "de": "0.01",
+      "a": "0.03",
+      "acc_prev": 0.9063888888888888,
+      "acc_sig": 0.8997777777777779,
+      "incremento": -0.006611111111110901,
+      "cumple": true
+     },
+     {
+      "de": "0.03",
+      "a": "0.1",
+      "acc_prev": 0.8997777777777779,
+      "acc_sig": 0.8394444444444444,
+      "incremento": -0.06033333333333346,
+      "cumple": true
+     },
+     {
+      "de": "0.1",
+      "a": "0.3",
+      "acc_prev": 0.8394444444444444,
+      "acc_sig": 0.38249999999999995,
+      "incremento": -0.4569444444444445,
+      "cumple": true
+     }
+    ],
+    "cumple": true
+   }
+  },
+  "cumple": true
+ },
+ "C4": {
+  "iris": {
+   "mejor_media": 0.8233333333333335,
+   "mediana_reinicios_media": 0.82,
+   "diferencia_por_particion": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -0.033333333333333326,
+    0.0,
+    0.0,
+    0.06666666666666676
+   ],
+   "diferencia_media": 0.0033333333333333435,
+   "ic95_bootstrap": [
+    -0.009999999999999998,
+    0.020000000000000028
+   ],
+   "wilcoxon_p": 1.0,
+   "wilcoxon_nota": null,
+   "sd_entre_reinicios_media": 0.011987432652549777,
+   "rango_acc_prueba_reinicios": [
+    0.7,
+    0.9
+   ],
+   "semillas_mejor": [
+    3,
+    3,
+    5,
+    7,
+    7,
+    7,
+    5,
+    3,
+    7,
+    5
+   ]
+  },
+  "wine": {
+   "mejor_media": 0.8324324324324325,
+   "mediana_reinicios_media": 0.8324324324324325,
+   "diferencia_por_particion": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "diferencia_media": 0.0,
+   "ic95_bootstrap": [
+    0.0,
+    0.0
+   ],
+   "wilcoxon_p": 1.0,
+   "wilcoxon_nota": null,
+   "sd_entre_reinicios_media": 0.009773609931306812,
+   "rango_acc_prueba_reinicios": [
+    0.7837837837837838,
+    0.918918918918919
+   ],
+   "semillas_mejor": [
+    7,
+    8,
+    5,
+    7,
+    7,
+    7,
+    7,
+    2,
+    5,
+    7
+   ]
+  },
+  "breast_cancer": {
+   "mejor_media": 0.7157894736842105,
+   "mediana_reinicios_media": 0.7096491228070174,
+   "diferencia_por_particion": [
+    0.0,
+    0.0,
+    0.004385964912280715,
+    0.013157894736842035,
+    0.0,
+    0.013157894736842035,
+    0.013157894736842146,
+    0.0,
+    0.00877192982456143,
+    0.00877192982456143
+   ],
+   "diferencia_media": 0.006140350877192979,
+   "ic95_bootstrap": [
+    0.0026315789473684292,
+    0.009649122807017529
+   ],
+   "wilcoxon_p": 0.03125,
+   "wilcoxon_nota": null,
+   "sd_entre_reinicios_media": 0.015191581427776579,
+   "rango_acc_prueba_reinicios": [
+    0.6491228070175439,
+    0.7807017543859649
+   ],
+   "semillas_mejor": [
+    6,
+    1,
+    0,
+    5,
+    9,
+    0,
+    5,
+    0,
+    0,
+    7
+   ]
+  },
+  "digits": {
+   "mejor_media": 0.9080555555555554,
+   "mediana_reinicios_media": 0.9012499999999999,
+   "diferencia_por_particion": [
+    0.019444444444444486,
+    0.001388888888888884,
+    -0.004166666666666652,
+    0.001388888888888884,
+    0.01388888888888884,
+    0.009722222222222299,
+    0.02083333333333337,
+    0.004166666666666652,
+    0.005555555555555536,
+    -0.004166666666666652
+   ],
+   "diferencia_media": 0.006805555555555565,
+   "ic95_bootstrap": [
+    0.0018055555555555492,
+    0.012222222222222223
+   ],
+   "wilcoxon_p": 0.046875,
+   "wilcoxon_nota": null,
+   "sd_entre_reinicios_media": 0.010252124790765402,
+   "rango_acc_prueba_reinicios": [
+    0.8638888888888889,
+    0.9361111111111111
+   ],
+   "semillas_mejor": [
+    1,
+    2,
+    9,
+    6,
+    2,
+    2,
+    1,
+    2,
+    0,
+    2
+   ]
+  }
+ },
+ "H4": {
+  "por_conjunto": {
+   "iris": {
+    "diferencia_media_signo": 0.0033333333333333435,
+    "abs": 0.0033333333333333435,
+    "cumple": true
+   },
+   "wine": {
+    "diferencia_media_signo": 0.0,
+    "abs": 0.0,
+    "cumple": true
+   },
+   "breast_cancer": {
+    "diferencia_media_signo": 0.006140350877192979,
+    "abs": 0.006140350877192979,
+    "cumple": true
+   },
+   "digits": {
+    "diferencia_media_signo": 0.006805555555555565,
+    "abs": 0.006805555555555565,
+    "cumple": true
+   }
+  },
+  "cumple_todos": true,
+  "interpretacion": "|media sobre particiones de (mejor - mediana)| < 0,01; mejor = menor perdida de entrenamiento"
+ },
+ "tiempos_cpu_entrenamiento": {
+  "iris": {
+   "n": 100,
+   "media_s": 3.50328125,
+   "mediana_s": 3.5546875,
+   "total_s": 350.328125
+  },
+  "wine": {
+   "n": 100,
+   "media_s": 3.71640625,
+   "mediana_s": 3.765625,
+   "total_s": 371.640625
+  },
+  "breast_cancer": {
+   "n": 100,
+   "media_s": 6.114375,
+   "mediana_s": 6.09375,
+   "total_s": 611.4375
+  },
+  "digits": {
+   "n": 100,
+   "media_s": 58.8109375,
+   "mediana_s": 60.4453125,
+   "total_s": 5881.09375
+  }
+ },
+ "particiones": {
+  "iris": {
+   "n_particiones": 10,
+   "sha256_indices": [
+    "b63b28f456dda5371755970798a13f2dc180e38a4f0e2e3a2f0388ae3e01c752",
+    "9352d9ff03a0374cff18d7e820da14c67b8f0e8fb6303c462d27234f32859355",
+    "376473b95235609d70808221d3053f917a1f941577a5c4f1163c622af181a9d6",
+    "97d692e8283b3de8aa9c734912ff7c8b3f1db4d0f3e497de3168d534f638d968",
+    "7798202aa241b3d37394b1eb3c0c4e9bc62bb64ff555b1ce795cf17fe5ca2530",
+    "6091985a668ae94b40a2ec6d5da5b34dc3038e96a9b30a918511d070ed836f03",
+    "21451c62eb959648a89e90c48f6d0708bef425395be33de6272f2ba2debae6cd",
+    "fc1fb82a99494f0dadb237399d7f8150601216607bba0fc18352fb5c3afc951d",
+    "36aa446a84d08eb4f3f3bda53f16fcdc8f37b6b6049e8a4ef9c17364b3f43233",
+    "9f352b831ef062c59550eed291220473542e2ca0c53ed6f30c6c79eea256c8d7"
+   ]
+  },
+  "wine": {
+   "n_particiones": 10,
+   "sha256_indices": [
+    "80330ba1a919e910963967c24541dd6b3dcce9e5e388b370a4d657ee23c59d2f",
+    "e9ea8a9075469013fb26b55cc668cb086d07a411826fdada045e854f9ebecd7b",
+    "d1e460a062317e0bc624a095aee4138be13e309108c92c8892e688d338fe8dae",
+    "71ccdfdf79ae9abe3a0348008f2999aecfc7b99d4f137966a3457277319329d1",
+    "67d55fe6cac0b065f4e8dfc9454de83d5fb83dee30211bf53bc39f0e40c56d29",
+    "2f311ad7a3248c624cfb93414eac8a079539b9737c6f018ba953bbf5809fcd2d",
+    "9e097ce031ee251a4d249614017f0f308de89e700977e0b649a15cc79d041ba7",
+    "c7e8b3b931db05000336a8191725146c9a44bf969c7aa8aac0c6354cd7bb4f67",
+    "89630277a5a19087562c4f8136d936b1aa7352a670ed3a89b5f39f357cbbd2fd",
+    "6fba22e4b269e4f53aeafdd2351cd32bdd9fc164de2ec1ed2bef9055e55cb852"
+   ]
+  },
+  "breast_cancer": {
+   "n_particiones": 10,
+   "sha256_indices": [
+    "0286465bd40f7a6acc597f705536a41bb22ac68b25ae8b5be83cd72154c9ea7e",
+    "9e144a75d869fc2cf87708c53a4dc8e78662ce801c42ed7b929cc7c190eb303c",
+    "5042baafcfc5698f11c7135ebbdb8e47b25b90530ed5368a8899582094a5a93b",
+    "6220a3f9f9894bb0e203c52cce26fa92bc9374793ccff62b184df347942dc20e",
+    "6829c6088b03c9952a81aef66e226772a21d7d066c8cbbc8e4c54febd54a4497",
+    "cd1147627565b30a43c188543070b446637540d8b11dbfbffb6acb4226f0a1e4",
+    "94b3637ac361dfaa1cafea90c170230912b458b6ff00133c98600e7e3dea9d72",
+    "30200695b0dd74aa9bc0351e2cbd6aa70f304fc6d982ba6d0cd2697006f06653",
+    "4ee2b3912a6071da251b0d88c6232c46c8ddb9916d9efd6fb2fe52a5d764677c",
+    "bf08a968042ff0e57fa89b446d66e08f02d0faea22e7b4728ef6ff81668ec3f8"
+   ]
+  },
+  "digits": {
+   "n_particiones": 10,
+   "sha256_indices": [
+    "5cc39ddef6d2467deb3f0794a36c8ec9aacdf3b3b8a62edb5073d2ed7334ddd7",
+    "c591ee075fb4d6142902f66b82af2c4b82bf85f6b4295a98134a9213285f8a39",
+    "3247d10610adac41546d734669037e7bccf1ea29603ff76ebb8fa9b02af3749e",
+    "22fad24a7e912023cbc43e0ce12cdd2c893f636c40516e5c0ef9e8c30fe2de6e",
+    "6257e40e4174531e90d907d18d45309d2bcfad4ccd2d2a9b7d8f64eb485fc31e",
+    "8c0f4d866ee9cbc7a52bc0f321f093a8274ee1955cedfcc6bb846f809e9ecb61",
+    "532f335b0ed91631c08fb09cdde304ddd64498eff8c0785d45f4a56f2f1f8e9b",
+    "8cc13ab4270219f3cd30e52f2b4c4242b629d7200dbd20b912f72797da93edc7",
+    "d4b1fdf515be33971ae53bc50fc6859e6644c56a782ccb192f750e3e44a5028a",
+    "71fff928e7ef5c5b11083b2cbe5065fdbd328ab1bf0e20dcb4e396c55d5c130a"
+   ]
+  },
+  "digits_vs_escala_modos": {
+   "existe": true,
+   "coinciden_por_particion": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "coinciden_todas": true,
+   "nota": "P2-10 usa train_test_split; F4 usa StratifiedShuffleSplit como P1-5"
+  }
+ },
+ "integridad": {
+  "scripts_sha256": {
+   "familia.py": "30a8716d675bd8c10aef93761d9cfc8b2af5011d6a50836498af7ad65dca3281",
+   "datos.py": "18f5ea2d4acab0249cc9197b55d5907113ac92d50af8064598394089bc424881",
+   "entrenar.py": "5cb6d3a85809b0075a582e0e856e5984fb658eec42b29241c1c2da3630c5406d",
+   "ensayos_f4.py": "9ac0e87a0a7da57e32a5bdde9daf29535f8811199ea4bb722441a932755fd606",
+   "analisis_f4.py": "ae9b7ab0d5de4c87d10fc48f0022f138f65f5f1c4e2a382e1098b3e3dcf2fdfb"
+  },
+  "entradas_sha256": {
+   "splits_P0-4": "fdb35de9323ceba7e925659ee3dc597abd13f50f56ea9d4b8c94356beb3794c2",
+   "iris.csv": "9cc1c345c71bcc9b486b74cbf6063fa66f4bb5e0f603a4b3c3471ec2e5e8e355",
+   "wine.data": "6be6b1203f3d51df0b553a70e57b8a723cd405683958204f96d23d7cd6aea659",
+   "splits_f4.json": "1b41b141d043028a5cde8be75fc50024287e6e95adfbe4d390c7860c222e3830"
+  },
+  "datos_cargados_sha256": {
+   "iris": {
+    "X": "012f498fe9c8b3b34212c3c5d98e1f03f2f79931cd49349beb1bad64dcf164a7",
+    "y": "734737f11162991213afc3a96aa5e8823b2d9cdcfb8992df1e85a0bae44b2395",
+    "X_shape": [
+     150,
+     4
+    ],
+    "y_shape": [
+     150
+    ]
+   },
+   "wine": {
+    "X": "f5e3d4d0c3ad69246fe125673ab27f98cee31b66b63bb7bf3e1a8ea5b201ee2c",
+    "y": "b6514e07a6d27854e0da000ca82d8d8cc3d0cb904c51600344ca34f1ee04884b",
+    "X_shape": [
+     178,
+     4
+    ],
+    "y_shape": [
+     178
+    ]
+   },
+   "breast_cancer": {
+    "X": "6b202a2072f9a0385f405a8f8605b1b06f6f36ae6d23d9cd6cbbc0974a416bc7",
+    "y": "1763c0f8cd3f454b9eda72031113884593bb382411c0cd511e3ec6e7ac85cddb",
+    "X_shape": [
+     569,
+     30
+    ],
+    "y_shape": [
+     569
+    ]
+   },
+   "digits": {
+    "X": "20def7f70a702f0af9732fbba4375e147a7d54fe70d8c45569b8e7c1c7010c10",
+    "y": "a3c91c262eddcf7ba8f0e37507c30284493c9b20412ffe4af30d536401f7ba21",
+    "X_shape": [
+     1797,
+     64
+    ],
+    "y_shape": [
+     1797
+    ]
+   }
+  }
+ }
+}

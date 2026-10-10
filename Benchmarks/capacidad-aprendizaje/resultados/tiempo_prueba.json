@@ -1,0 +1,20 @@
+{
+ "iris": {
+  "cpu_seconds_por_entrenamiento": 3.296875,
+  "train_loss": 0.3542977864664021,
+  "n_train": 120
+ },
+ "digits": {
+  "cpu_seconds_por_entrenamiento": 57.921875,
+  "train_loss": 0.2770188590822791,
+  "n_train": 1437
+ },
+ "estimacion_cpu_s_total_conservadora": 7762.0703125,
+ "estimacion_por_conjunto_s": {
+  "iris": 329.6875,
+  "wine": 390.1302083333333,
+  "breast_cancer": 1250.0651041666665,
+  "digits": 5792.1875
+ },
+ "estimacion_horas_con_2_procesos": 1.0780653211805555
+}
