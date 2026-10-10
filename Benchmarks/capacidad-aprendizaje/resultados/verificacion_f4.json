@@ -1,0 +1,78 @@
+{
+ "a_gradiente": {
+  "criterio": "error relativo maximo < 1e-6",
+  "casos": [
+   {
+    "n": 8,
+    "K": 3,
+    "n_params_probados": 56,
+    "dif_max_rapida_vs_referencia": 3.469446951953614e-16,
+    "error_relativo_norma": 4.0169733981262173e-10,
+    "max_abs_diff": 7.831595372209676e-10,
+    "norma_grad": 4.9419022188065815
+   },
+   {
+    "n": 8,
+    "K": 2,
+    "n_params_probados": 56,
+    "dif_max_rapida_vs_referencia": 2.7755575615628914e-16,
+    "error_relativo_norma": 4.935880792496106e-10,
+    "max_abs_diff": 1.3510637053570917e-10,
+    "norma_grad": 0.815625288207871
+   },
+   {
+    "n": 16,
+    "K": 10,
+    "n_params_probados": 240,
+    "dif_max_rapida_vs_referencia": 1.6653345369377348e-16,
+    "error_relativo_norma": 1.394083620613332e-09,
+    "max_abs_diff": 7.934193857472849e-10,
+    "norma_grad": 2.8130287763547672
+   }
+  ],
+  "max_error_relativo": 1.394083620613332e-09,
+  "pasa": true
+ },
+ "a_copia_vs_original": {
+  "N8": {
+   "error_relativo_copia": 1.1650018153420523e-09,
+   "error_relativo_original": 1.1650018153420523e-09,
+   "norma_grad_copia": 3.860093893250491,
+   "norma_grad_original": 3.860093893250491,
+   "coincide": true
+  },
+  "N8_K4": {
+   "error_relativo_copia": 7.144848729107327e-10,
+   "error_relativo_original": 7.144848729107327e-10,
+   "norma_grad_copia": 1.9710876265264408,
+   "norma_grad_original": 1.9710876265264408,
+   "coincide": true
+  },
+  "N4": {
+   "error_relativo_copia": 9.71509531960617e-10,
+   "error_relativo_original": 9.71509531960617e-10,
+   "norma_grad_copia": 2.419535599066555,
+   "norma_grad_original": 2.419535599066555,
+   "coincide": true
+  }
+ },
+ "b_unitariedad": {
+  "criterio": "error de unitariedad < 1e-12",
+  "N8": {
+   "configuraciones": 20,
+   "max_error_unitariedad": 3.552713678800501e-15,
+   "max_abs_kappa_menos_1": 1.1102230246251565e-15,
+   "max_dif_capas_vs_densa": 5.0242958677880805e-15,
+   "pasa": true
+  },
+  "N16": {
+   "configuraciones": 20,
+   "max_error_unitariedad": 6.772360450213455e-15,
+   "max_abs_kappa_menos_1": 1.5543122344752192e-15,
+   "max_dif_capas_vs_densa": 1.165681306894467e-14,
+   "pasa": true
+  },
+  "pasa": true
+ },
+ "pasa": true
+}
