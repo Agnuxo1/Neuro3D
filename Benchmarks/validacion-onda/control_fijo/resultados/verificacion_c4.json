@@ -1,0 +1,13 @@
+{
+ "E24": 0.02751899213404152,
+ "E16fijo": 0.026621357036246462,
+ "E16orig": 0.02692643372060144,
+ "R": 0.5832157353037744,
+ "T": 0.41684558402491173,
+ "casos": {
+  "A solver n fijo | modelo r,t n fijo   (control tal cual)": 0.026621357036246462,
+  "B solver n fijo | modelo r,t recalibrado (50/50)": 0.05428260220187797,
+  "C solver recal  | modelo r,t n fijo": 0.027676225171090946,
+  "D solver recal  | modelo r,t recalibrado (original P1-7)": 0.02692643372060144
+ }
+}
