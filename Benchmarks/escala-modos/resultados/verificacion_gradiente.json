@@ -1,0 +1,40 @@
+{
+ "criterio": "error relativo < 1e-6 en N=8",
+ "N8": {
+  "n": 8,
+  "K": 8,
+  "n_params_probados": 56,
+  "dif_max_rapida_vs_referencia": 8.326672684688674e-16,
+  "error_relativo_norma": 1.1650018153420523e-09,
+  "max_abs_diff": 1.4999294029038879e-09,
+  "norma_grad": 3.860093893250491
+ },
+ "N8_K4": {
+  "n": 8,
+  "K": 4,
+  "n_params_probados": 56,
+  "dif_max_rapida_vs_referencia": 3.3306690738754696e-16,
+  "error_relativo_norma": 7.144848729107327e-10,
+  "max_abs_diff": 5.017918060234994e-10,
+  "norma_grad": 1.9710876265264408
+ },
+ "N4": {
+  "n": 4,
+  "K": 4,
+  "n_params_probados": 12,
+  "dif_max_rapida_vs_referencia": 4.2674197509029455e-16,
+  "error_relativo_norma": 9.71509531960617e-10,
+  "max_abs_diff": 1.4511942758588248e-09,
+  "norma_grad": 2.419535599066555
+ },
+ "N64_subconjunto": {
+  "n": 64,
+  "K": 10,
+  "n_params_probados": 60,
+  "dif_max_rapida_vs_referencia": 4.163336342344337e-17,
+  "error_relativo_norma": 1.5833719461553697e-08,
+  "max_abs_diff": 4.961841423845037e-10,
+  "norma_grad": 0.06582629809939478
+ },
+ "pasa": true
+}

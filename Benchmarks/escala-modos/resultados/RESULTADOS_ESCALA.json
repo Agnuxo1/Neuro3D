@@ -1,0 +1,238 @@
+{
+ "versiones": {
+  "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.2.6",
+  "scipy": "1.15.1",
+  "sklearn": "1.4.0",
+  "plataforma": "Windows-10-10.0.19045-SP0"
+ },
+ "config": {
+  "N": 64,
+  "K": 10,
+  "T": 0.05,
+  "lr": 0.01,
+  "pasos": 2000,
+  "semillas_fases": [
+   0,
+   1,
+   2
+  ],
+  "hilos_max": 3,
+  "trabajadores_entrenamiento": 3
+ },
+ "exactitud_prueba_por_particion": {
+  "malla_N64": [
+   0.925,
+   0.9583333333333334,
+   0.9472222222222222,
+   0.9638888888888889,
+   0.9583333333333334,
+   0.95,
+   0.9611111111111111,
+   0.95,
+   0.9333333333333333,
+   0.9444444444444444
+  ],
+  "logistica": [
+   0.9222222222222223,
+   0.9444444444444444,
+   0.95,
+   0.95,
+   0.9416666666666667,
+   0.925,
+   0.9555555555555556,
+   0.9388888888888889,
+   0.9277777777777778,
+   0.9388888888888889
+  ],
+  "mlp48": [
+   0.9555555555555556,
+   0.9638888888888889,
+   0.9805555555555555,
+   0.9861111111111112,
+   0.9694444444444444,
+   0.9722222222222222,
+   0.9805555555555555,
+   0.9805555555555555,
+   0.9722222222222222,
+   0.975
+  ],
+  "malla_semilla_elegida": [
+   0,
+   2,
+   2,
+   1,
+   2,
+   1,
+   2,
+   2,
+   2,
+   1
+  ]
+ },
+ "medias": {
+  "malla_N64": 0.9491666666666667,
+  "logistica": 0.9394444444444444,
+  "mlp48": 0.9736111111111111,
+  "sd_malla": 0.012426050118052444,
+  "sd_logistica": 0.011325099889941204,
+  "sd_mlp48": 0.009095779029809476
+ },
+ "H3": {
+  "criterio": "diferencia media malla-logistica >= -0,01 y IC95 inferior >= -0,03 => soportado",
+  "diferencia_media": 0.00972222222222222,
+  "ic95_bootstrap": [
+   0.00527777777777777,
+   0.014722222222222192
+  ],
+  "bootstrap": "10000 remuestreos, semilla 0",
+  "wilcoxon_bilateral": {
+   "estadistico": 1.5,
+   "p": 0.005859375,
+   "nota": "exacto, n=10"
+  },
+  "diferencias_por_particion": [
+   0.002777777777777768,
+   0.01388888888888895,
+   -0.002777777777777768,
+   0.01388888888888895,
+   0.01666666666666672,
+   0.02499999999999991,
+   0.005555555555555536,
+   0.011111111111111072,
+   0.005555555555555536,
+   0.005555555555555536
+  ],
+  "decision": "soportado"
+ },
+ "control_MLP": {
+  "nota": "sin criterio de decision",
+  "diferencia_media": -0.024444444444444435,
+  "ic95_bootstrap": [
+   -0.029999999999999992,
+   -0.018055555555555537
+  ],
+  "wilcoxon_bilateral": {
+   "estadistico": 0.0,
+   "p": 0.001953125,
+   "nota": "exacto, n=10"
+  },
+  "diferencias_por_particion": [
+   -0.030555555555555558,
+   -0.005555555555555536,
+   -0.033333333333333326,
+   -0.022222222222222254,
+   -0.011111111111111072,
+   -0.022222222222222254,
+   -0.019444444444444375,
+   -0.030555555555555558,
+   -0.03888888888888886,
+   -0.030555555555555558
+  ]
+ },
+ "H2": {
+  "criterio": "pendiente p del tiempo por entrada entre 1,8 y 2,2 (ajuste log-log, N=8,16,32,64)",
+  "tiempo_por_entrada": {
+   "pendiente": 1.0283550631141771,
+   "error_estandar": 0.015467865956460325,
+   "ic95": [
+    0.9618022074340391,
+    1.0949079187943151
+   ],
+   "gl": 2,
+   "r2": 0.9995477192053367
+  },
+  "exploratorio_tiempo_por_entrada_en_lote_1000": {
+   "pendiente": 2.4587008944762943,
+   "error_estandar": 0.17640498295515436,
+   "ic95": [
+    1.699691513032298,
+    3.2177102759202905
+   ],
+   "gl": 2,
+   "r2": 0.9898095831731777
+  },
+  "memoria_coeficientes": {
+   "pendiente": 2.0557080719105296,
+   "error_estandar": 0.012249291364366071,
+   "ic95": [
+    2.0030036249847964,
+    2.108412518836263
+   ],
+   "gl": 2,
+   "r2": 0.9999289934839444
+  },
+  "memoria_matriz_densa": {
+   "pendiente": 2.0,
+   "error_estandar": 0.0,
+   "ic95": [
+    2.0,
+    2.0
+   ],
+   "gl": 2,
+   "r2": 1.0
+  },
+  "puntos": [
+   {
+    "N": 8,
+    "t_entrada_us": 57.39019998873118,
+    "t_entrada_lote_us": 0.5883999983780086,
+    "bytes_coeficientes": 1792,
+    "bytes_matriz_densa": 1024
+   },
+   {
+    "N": 16,
+    "t_entrada_us": 114.10229999455623,
+    "t_entrada_lote_us": 2.4447000032523647,
+    "bytes_coeficientes": 7680,
+    "bytes_matriz_densa": 4096
+   },
+   {
+    "N": 32,
+    "t_entrada_us": 230.1920999889262,
+    "t_entrada_lote_us": 11.69649999064859,
+    "bytes_coeficientes": 31744,
+    "bytes_matriz_densa": 16384
+   },
+   {
+    "N": 64,
+    "t_entrada_us": 488.7927999952808,
+    "t_entrada_lote_us": 102.37759999290574,
+    "bytes_coeficientes": 129024,
+    "bytes_matriz_densa": 65536
+   }
+  ],
+  "p_en_rango_estimacion_puntual": false,
+  "ic95_dentro_del_rango": false,
+  "lote_p_en_rango_estimacion_puntual": false
+ },
+ "cpu_entrenamiento_malla_s": {
+  "n": 30,
+  "min": 474.703125,
+  "mediana": 710.1875,
+  "media": 798.4979166666667,
+  "max": 1440.875,
+  "total": 23954.9375
+ },
+ "avisos_convergencia": {
+  "logistica": 0,
+  "mlp_particiones_con_aviso": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ]
+ },
+ "entrenamiento_malla_train_acc_media_elegida": 0.9636047320807238,
+ "limites": [
+  "CPU sin GPU; no se afirma nada sobre la geometria de Neuro3D ni hardware fotonico.",
+  "Cuatro puntos para H2: el IC95 (t con 2 gl) es amplio.",
+  "N<64 solo mide tiempo y memoria; con 10 detectores N=8 no admite clasificacion."
+ ]
+}
