@@ -1,26 +1,56 @@
-"""Escribe resultados/SHA256SUMS.txt (o con --check verifica contra el existente)."""
-import hashlib, sys
+"""Verifica (--check) o regenera resultados/SHA256SUMS.txt.
+
+Formato publicado: "hash  nombre" (dos espacios, como `sha256sum`); tambien se acepta "hash *nombre".
+--check comprueba TODAS las lineas del archivo publicado contra los bytes de cada archivo.
+Sin --check reescribe el archivo con los mismos nombres (y orden) del existente, en formato publicado.
+"""
+import hashlib, re, sys
 from pathlib import Path
 
 RES = Path(__file__).resolve().parent / "resultados"
-NAMES = (["RESULTADOS.json", "RESULTADOS.md", "RESULTADOS_EXTENSION.json", "RESULTADOS_EXTENSION.md", "SENSIBILIDAD_IRIS.json", "SENSIBILIDAD_IRIS.md",
-          "splits.json", "baselines.json", "optical_iris.json"] + ["optical_wine_k%d.json" % k for k in range(10)])
+LINE_RE = re.compile(r"^([0-9a-f]{64}) [ *](.+)$")
 
 
-def files():
-    out = [RES / n for n in NAMES if (RES / n).exists()]
-    return out + sorted((RES / "extension").glob("*.json"))
+def parse_manifest(text):
+    """Devuelve [(hash, nombre)] de todas las lineas no vacias; ValueError si alguna no tiene formato valido."""
+    out = []
+    for n, raw in enumerate(text.splitlines(), 1):
+        if not raw.strip():
+            continue
+        m = LINE_RE.match(raw)
+        if not m:
+            raise ValueError("linea %d con formato invalido: %r" % (n, raw))
+        out.append((m.group(1), m.group(2)))
+    return out
 
 
-def line(f):
-    return "%s *%s" % (hashlib.sha256(f.read_bytes()).hexdigest(), f.relative_to(RES).as_posix())
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def check(res=RES):
+    """Devuelve (total, lista_de_diferencias) sobre todas las lineas de SHA256SUMS.txt."""
+    entries = parse_manifest((res / "SHA256SUMS.txt").read_text(encoding="utf-8"))
+    bad = []
+    for h, name in entries:
+        f = res / name
+        if not f.is_file():
+            bad.append("%s: falta" % name)
+        elif sha(f) != h:
+            bad.append("%s: hash distinto" % name)
+    return len(entries), bad
+
+
+def write(res=RES):
+    entries = parse_manifest((res / "SHA256SUMS.txt").read_text(encoding="utf-8"))
+    body = "".join("%s  %s\n" % (sha(res / name), name) for _, name in entries)
+    (res / "SHA256SUMS.txt").write_bytes(body.encode("utf-8"))
+    return len(entries)
 
 
 if __name__ == "__main__":
-    sums = RES / "SHA256SUMS.txt"
     if "--check" in sys.argv:
-        bad = [l for l in sums.read_text().splitlines() if l not in {line(f) for f in files()}]
-        print("OK" if not bad else "DIFIEREN: %s" % bad)
+        total, bad = check()
+        print("OK %d/%d" % (total, total) if not bad else "DIFIEREN (%d de %d): %s" % (len(bad), total, bad))
         raise SystemExit(1 if bad else 0)
-    sums.write_text("\n".join(line(f) for f in files()) + "\n", encoding="utf-8")
-    print("escritos %d hashes" % len(files()))
+    print("escritos %d hashes" % write())
