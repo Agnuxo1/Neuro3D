@@ -184,3 +184,6 @@ Docs/validation/**/evidence_index.json diff
 Benchmarks/eeg-motor-imagery/evidencia-validacion-anidada/** -text !eol
 Benchmarks/eeg-motor-imagery/codigo/work/nested/nested_bench.py -text !eol
 Benchmarks/eeg-motor-imagery/codigo/work/lattice_torch.py -text !eol
+
+# Listas de hashes: siempre LF, para que `sha256sum -c` no dependa de core.autocrlf.
+**/SHA256SUMS.txt text eol=lf
