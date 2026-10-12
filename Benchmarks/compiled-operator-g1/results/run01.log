@@ -1,0 +1,23 @@
+inference 1 1.2
+training_step 1 1.04
+inference 150 1.14
+training_step 150 1.26
+inference 4096 1.63
+training_step 4096 16.33
+{
+ "H_G1": "REFUTED",
+ "equivalence": {
+  "zero": {
+   "max_field_diff": 6.087272963323594e-16,
+   "max_tangent_diff": 5.434606912323529e-14,
+   "max_tangent_abs": 56.69186524903795
+  },
+  "random": {
+   "max_field_diff": 6.804363002006077e-16,
+   "max_tangent_diff": 4.618527782440651e-14,
+   "max_tangent_abs": 60.417895275918696
+  }
+ },
+ "min_decisive_ratio": 1.1427055820351855
+}
+start=2026-10-12T22:38:20Z end=2026-10-12T22:38:35Z exit=0

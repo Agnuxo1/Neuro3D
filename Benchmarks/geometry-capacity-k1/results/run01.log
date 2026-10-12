@@ -1,0 +1,38 @@
+dimension {"lin_decision_ranks": [26], "quad_decision_rank": 29, "inert_parameters_for_decision_detectors": ["c03.paired_world_x", "c13.paired_world_x", "c23.paired_world_x", "c33.paired_world_x"]}
+seed 0 227.9 {'T_lin': {'S_quad': 0.971, 'S_lin': 0.9825, 'S_geom': 0.9095}, 'T_quad': {'S_quad': 0.968, 'S_lin': 0.9715, 'S_geom': 0.918}, 'T_geom': {'S_quad': 0.9855, 'S_lin': 0.9885, 'S_geom': 0.9565}}
+seed 1 230.0 {'T_lin': {'S_quad': 0.978, 'S_lin': 0.98, 'S_geom': 0.9425}, 'T_quad': {'S_quad': 0.995, 'S_lin': 0.995, 'S_geom': 0.995}, 'T_geom': {'S_quad': 0.9705, 'S_lin': 0.9865, 'S_geom': 0.9455}}
+seed 2 222.2 {'T_lin': {'S_quad': 0.9505, 'S_lin': 0.9625, 'S_geom': 0.8875}, 'T_quad': {'S_quad': 0.9855, 'S_lin': 0.982, 'S_geom': 0.969}, 'T_geom': {'S_quad': 0.9905, 'S_lin': 0.9905, 'S_geom': 0.9835}}
+seed 3 210.6 {'T_lin': {'S_quad': 0.9805, 'S_lin': 0.9875, 'S_geom': 0.9685}, 'T_quad': {'S_quad': 0.9895, 'S_lin': 0.988, 'S_geom': 0.98}, 'T_geom': {'S_quad': 1.0, 'S_lin': 1.0, 'S_geom': 1.0}}
+seed 4 202.7 {'T_lin': {'S_quad': 1.0, 'S_lin': 1.0, 'S_geom': 1.0}, 'T_quad': {'S_quad': 0.973, 'S_lin': 0.983, 'S_geom': 0.885}, 'T_geom': {'S_quad': 0.9825, 'S_lin': 0.9925, 'S_geom': 0.9815}}
+seed 5 202.0 {'T_lin': {'S_quad': 0.9725, 'S_lin': 0.982, 'S_geom': 0.932}, 'T_quad': {'S_quad': 0.978, 'S_lin': 0.99, 'S_geom': 0.9655}, 'T_geom': {'S_quad': 0.975, 'S_lin': 0.983, 'S_geom': 0.9185}}
+seed 6 204.8 {'T_lin': {'S_quad': 0.986, 'S_lin': 0.989, 'S_geom': 0.9415}, 'T_quad': {'S_quad': 0.9745, 'S_lin': 0.971, 'S_geom': 0.9565}, 'T_geom': {'S_quad': 1.0, 'S_lin': 1.0, 'S_geom': 1.0}}
+seed 7 216.2 {'T_lin': {'S_quad': 0.966, 'S_lin': 0.9785, 'S_geom': 0.8985}, 'T_quad': {'S_quad': 0.9765, 'S_lin': 0.9875, 'S_geom': 0.9595}, 'T_geom': {'S_quad': 1.0, 'S_lin': 1.0, 'S_geom': 1.0}}
+seed 8 288.1 {'T_lin': {'S_quad': 0.967, 'S_lin': 0.973, 'S_geom': 0.893}, 'T_quad': {'S_quad': 0.951, 'S_lin': 0.9605, 'S_geom': 0.7815}, 'T_geom': {'S_quad': 0.9825, 'S_lin': 0.988, 'S_geom': 0.97}}
+seed 9 286.9 {'T_lin': {'S_quad': 0.9805, 'S_lin': 0.983, 'S_geom': 0.938}, 'T_quad': {'S_quad': 0.988, 'S_lin': 0.997, 'S_geom': 0.984}, 'T_geom': {'S_quad': 0.981, 'S_lin': 0.989, 'S_geom': 0.9555}}
+{
+ "means": {
+  "T_lin": {
+   "S_quad": 0.9751999999999998,
+   "S_lin": 0.9818000000000001,
+   "S_geom": 0.9311
+  },
+  "T_quad": {
+   "S_quad": 0.9779,
+   "S_lin": 0.98255,
+   "S_geom": 0.9394
+  },
+  "T_geom": {
+   "S_quad": 0.98675,
+   "S_lin": 0.9918000000000001,
+   "S_geom": 0.9711000000000002
+  }
+ },
+ "H_A1": "SUPPORTED",
+ "H_A2": "OPPOSITE",
+ "C_A3": {
+  "mean_S_geom_on_T_geom": 0.9711000000000002,
+  "met": true
+ },
+ "complete_seeds": 10
+}
+start=2026-10-12T21:59:34Z end=2026-10-12T22:37:48Z exit=0
