@@ -1,0 +1,16 @@
+{
+  "pdf_sha256": "e62705b4fb36bef785bd449265971e2c646b0141216f766b7eb22ec0a1cda57c",
+  "pages": 16,
+  "embedded_images": 7,
+  "public_commit_links": 72,
+  "unresolved_relative_links": [],
+  "overfull_boxes": 0,
+  "missing_characters": 0,
+  "all_pages_rendered_and_contact_sheet_reviewed": true,
+  "review_scope": "Visual layouts, tables, seven data figures and captions checked; authorship remains unagreed",
+  "compiler_exit_codes": [
+    0,
+    0,
+    0
+  ]
+}

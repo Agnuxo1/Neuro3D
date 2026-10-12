@@ -1,0 +1,9 @@
+{
+  "run_id": 38258748577,
+  "url": "https://github.com/Agnuxo1/Neuro3D/actions/runs/38258748577",
+  "job_id": 114843506441,
+  "conclusion": "success",
+  "python": "CPython3.12.15",
+  "tests": 57,
+  "scope": "Automatic support-kit Linux reproduction, not independent human interpretation"
+}

@@ -1,0 +1,476 @@
+{
+  "schema": "neuro3d.closure.experiment_registry.v1",
+  "date": "2026-10-12T14:27:03.247509+00:00",
+  "records": [
+    {
+      "inputs": {
+        "subjects": [
+          {
+            "subject": "S001",
+            "sha256": "16bd51df3a6d84ef1eb247bf45d69c9a7a47312f4f9414df23cef8847c6ea83b",
+            "seconds": 27.402221199998166
+          },
+          {
+            "subject": "S002",
+            "sha256": "574b68c2e36c4b1a45b8e9c6624e101dd3f780c574de1786745b467f27fc5d74",
+            "seconds": 30.392187700024806
+          },
+          {
+            "subject": "S003",
+            "sha256": "7b70614deede0dc68ccee827d4312f498cd0334d969b67633fb859da807141f1",
+            "seconds": 27.79084429994691
+          },
+          {
+            "subject": "S004",
+            "sha256": "a6d65f2b0ed24faae6a375e32843bc002b3410be8e5f8c54ee42585d60f57a60",
+            "seconds": 25.075118599983398
+          },
+          {
+            "subject": "S005",
+            "sha256": "d81add96a776e4c0cf1f361026f23bf380ad783ae0fecd657869ba29915c08f1",
+            "seconds": 24.959821600001305
+          },
+          {
+            "subject": "S006",
+            "sha256": "bf68874b8cbe96f73641c3572def5989fa8b46bebdf0427e9ed06cb32200b463",
+            "seconds": 20.990291699999943
+          },
+          {
+            "subject": "S007",
+            "sha256": "fe37e9747d3e91fd5c4e984ba838908ec3cac0d2b7d7f3d91b29382f151e4ea0",
+            "seconds": 10.509716400003526
+          },
+          {
+            "subject": "S009",
+            "sha256": "d3371bc5d42ad3e7fb3aefa4599386d69c4613224a40d41ab204224e2ee4aa7b",
+            "seconds": 32.88394879997941
+          },
+          {
+            "subject": "S010",
+            "sha256": "daf8a6076c90f2aab2d57b4fad3ff07d78de56ab6f3ee4acb7270d1e1e07221b",
+            "seconds": 30.044770299980883
+          },
+          {
+            "subject": "S011",
+            "sha256": "f8941d532a89914b80eb10ccf66f2c54aa5a33247fa37ddda353f3dfa3f1eae7",
+            "seconds": 33.163601400039624
+          },
+          {
+            "subject": "S012",
+            "sha256": "a0f260b9978bd2cd48231bedd2ec247d04d64eeb3753ecdf9cca9084d1ec4d1e",
+            "seconds": 32.50890720001189
+          },
+          {
+            "subject": "S014",
+            "sha256": "65f59cbb2444651ab2b1771ecf7b0002e7be8927789784b79f811449183c746d",
+            "seconds": 33.1149353000219
+          },
+          {
+            "subject": "S016",
+            "sha256": "2027fbe2306c98d7329419d2149cfcb9de27bc880acf2b5499d070b370ca11ca",
+            "seconds": 33.148705400002655
+          },
+          {
+            "subject": "S017",
+            "sha256": "f61d9ebf9d2201f039185ec9cf1f5bd9d97c3fdeb6cd81383e68da269573da4d",
+            "seconds": 45.047384900040925
+          },
+          {
+            "subject": "S018",
+            "sha256": "e45c32a7b24c05809271a32c4bf4983ac4b7354326ac6c178fb46992c816e147",
+            "seconds": 35.84144799999194
+          },
+          {
+            "subject": "S019",
+            "sha256": "cab43f24df89c8d8f919f2ace17cf092c6282311477a65ce807878b9213cc426",
+            "seconds": 37.19061239995062
+          },
+          {
+            "subject": "S020",
+            "sha256": "4091c198360a030acb3225a646318b7adb3a186d223d34143519e0943b3cba66",
+            "seconds": 38.70232380001107
+          }
+        ],
+        "hidden_Xte_access": false,
+        "saved_optical_fold_indices_verified": true
+      },
+      "environment": {
+        "python": "CPython 3.13.7 Windows",
+        "packages": {
+          "numpy": "2.2.6",
+          "scipy": "1.15.1",
+          "scikit-learn": "1.4.0",
+          "torch": "2.6.0+cu124"
+        }
+      },
+      "seeds": [
+        "external k",
+        "internal 100+10*k+j",
+        "bootstrap fresh default_rng(0) per comparison"
+      ],
+      "resource_budget": {
+        "cpu_processes": 1,
+        "blas_threads": 1
+      },
+      "deadline": "2026-10-12",
+      "exit_codes": [
+        0
+      ],
+      "results": {
+        "H1_fbcsp": {
+          "difference": 0.0499108734402852,
+          "ci": [
+            0.014795008912655968,
+            0.08680926916221032
+          ],
+          "confidence": 0.95,
+          "decision": "superior",
+          "description": "superior",
+          "p_wilcoxon": 0.024467523139596277,
+          "wins": 12,
+          "ties": 1,
+          "losses": 4,
+          "subjects": [
+            "S001",
+            "S002",
+            "S003",
+            "S004",
+            "S005",
+            "S006",
+            "S007",
+            "S009",
+            "S010",
+            "S011",
+            "S012",
+            "S014",
+            "S016",
+            "S017",
+            "S018",
+            "S019",
+            "S020"
+          ],
+          "partial": false,
+          "simultaneous_interval_sensitivity": {
+            "difference": 0.0499108734402852,
+            "ci": [
+              0.009447415329768267,
+              0.0925133689839572
+            ],
+            "confidence": 0.975,
+            "decision": "superior",
+            "description": "superior",
+            "p_wilcoxon": 0.024467523139596277,
+            "wins": 12,
+            "ties": 1,
+            "losses": 4
+          },
+          "p_holm": 0.048935046279192554,
+          "wilcoxon_warning": false
+        }
+      },
+      "independent_oracle": "No independently produced human replication",
+      "decision_rule": "Frozen profile and unchanged original numerical/statistical budgets",
+      "decision": "H1 meets original superior-grid rule; H2 unavailable",
+      "deviations": [
+        "EEGNet pilot interrupted by actual host RAM floor; no H2 claim",
+        "If absent H2 is imputed p=1, Holm retains the original two-comparison family",
+        "Simultaneous interval is a separately labelled sensitivity"
+      ],
+      "limitations": [
+        "Known subjects and biased optical-grid design",
+        "free is digital, not a captured passive geometry",
+        "No new blind or independent data",
+        "Raw derivatives require legitimate access and redistribution permission"
+      ],
+      "published_commit": "65b7000966d01f75bd671b01fbbed4a1284abe43",
+      "status": "PARTIAL",
+      "id": "EXP-006-EEG-COMPARATORS-20261012-001",
+      "hypothesis": "Published H1/H2: known optical-grid primary N1 differs from nested FBCSP/EEGNet",
+      "alternative": "No useful paired difference in the original known-subject comparator grids",
+      "protocol_commit": "7e239aa328311c28dca46d0e89f6f86892598b6e",
+      "sources": [
+        {
+          "path": "Benchmarks/eeg-motor-imagery/comparativa-anidada/PREREGISTRO-EEG.md",
+          "sha256": "129682afb9d6c0f73e7e107ac4c9fb7ee9722a906bfe421064e235da54e8b4e9"
+        },
+        {
+          "path": "Benchmarks/eeg-motor-imagery/comparativa-anidada/run_nested_comparators_v1.py",
+          "sha256": "3215b8594e8fa9c142d7576a1483ca9cea32f996eaf497a0f3aba9cf9958122a"
+        },
+        {
+          "path": "Benchmarks/eeg-motor-imagery/comparativa-anidada/analyze_comparators_v1.py",
+          "sha256": "ac621a9f6025d80a7c7570841728c922ed8c0ab19b683f80cdfc79fbad923625"
+        },
+        {
+          "path": "Docs/closure-20261012/eeg-execution.json",
+          "sha256": "55771d6204f399d9eea851cf3467f82770c14a2dbfdc44d95a92c6ca6ecd920c"
+        },
+        {
+          "path": "Docs/closure-20261012/eeg-comparison.json",
+          "sha256": "2d4b0c02af58709308845b617dfab59498080f106a4c5b336df55a3ad479d480"
+        }
+      ],
+      "commands": [
+        "run_nested_comparators_v1.py --method fbcsp --subjects S001 S002 S003 S004 S005 S006 S007 S009 S010 S011 S012 S014 S016 S017 S018 S019 S020 --data <legitimate-data> --optical-raw <legitimate-saved-folds> --out <new-owner-workspace>",
+        "analyze_comparators_v1.py --optical-raw <legitimate-saved-folds> --fbcsp <new-owner-results> --out Docs/closure-20261012/eeg-comparison.json"
+      ]
+    },
+    {
+      "inputs": {
+        "historical_native_controls": 4,
+        "states": 133,
+        "new_native_execution": false
+      },
+      "environment": {
+        "python": "CPython 3.13.7 Windows",
+        "packages": {
+          "numpy": "2.2.6",
+          "scipy": "1.15.1",
+          "scikit-learn": "1.4.0",
+          "torch": "2.6.0+cu124"
+        }
+      },
+      "seeds": [],
+      "resource_budget": {
+        "cpu_processes": 1,
+        "blas_threads": 1
+      },
+      "deadline": "2026-10-12",
+      "exit_codes": [
+        0
+      ],
+      "results": {
+        "schema": "neuro3d.resident.archive_diagnostic.v1",
+        "id": "EXP-006-RESIDENT-ARCHIVE-DIAG-20261012-001",
+        "gpu_coefficients_cpu_replay_vs_archived_cpu_max_field": 9.62378307390625e-14,
+        "gpu_coefficients_cpu_replay_vs_archived_gpu_max_field": 6.376146498978708e-08,
+        "rounded_final_replay_exactly_matches_archived_gpu": false,
+        "rounded_final_max_error": 6.664001874625056e-08,
+        "fixed_field_budget": 1e-11,
+        "coefficient_cpu_replay_pass": true,
+        "states": 133,
+        "controls": 4,
+        "source_pins": {
+          "actual_graph.json": "66adcc66ef4fb336c77d086ac49f7367758211072a607fe71fe68aa40d0edede",
+          "actual_local_coefficient_readback.json": "8bafec77a573b3545cf1e97a21ad3e6b25b5deee6fa38768c9263146d87541d2",
+          "coherence_control_observations_before_gate.json": "6e11757e2b68aa7343572bee29cf5544b2e259452cc8505415d3be2c5430d2a1"
+        },
+        "first_native_divergence": null,
+        "cause": "UNKNOWN_WITHOUT_NATIVE_STAGE_TRACE",
+        "scope": "Actual historical GPU coefficients replayed in CPU binary64. This ablation does not run, repair or accept a GPU shader; archived tolerances and failures are unchanged."
+      },
+      "independent_oracle": "No independently produced human replication",
+      "decision_rule": "Frozen profile and unchanged original numerical/statistical budgets",
+      "decision": "Coefficient CPU ablation passes 1e-11; native resident rejection retained, cause UNKNOWN",
+      "deviations": [],
+      "limitations": [
+        "CPU replay of historical GPU data",
+        "No native intermediate-state trace, GPU acceptance, repair or speed claim"
+      ],
+      "published_commit": "65b7000966d01f75bd671b01fbbed4a1284abe43",
+      "status": "PARTIAL",
+      "id": "EXP-006-RESIDENT-ARCHIVE-DIAG-20261012-001",
+      "hypothesis": "Actual GPU local coefficients propagated on CPU reproduce the archived reference",
+      "alternative": "The archived local coefficients already violate the fixed field budget",
+      "protocol_commit": "6bc5dd7ae9562fd1b1bcf9f76a9d1f7925f07c6e",
+      "sources": [
+        {
+          "path": "Tools/diagnose_resident_archive_v1.py",
+          "sha256": "e3ff355108b476e62c17dfe8c80b7f0da14b64d54e10488db7ec8f01d2e8e7e1"
+        },
+        {
+          "path": "Docs/closure-20261012/archive-diagnostic-profile.json",
+          "sha256": "d55fdea3098376b208aa5647b1b29de4247aec1e360ea0bc2a8d3bf68fbbdb7c"
+        },
+        {
+          "path": "Docs/closure-20261012/resident-archive-diagnostic/result.json",
+          "sha256": "5d44e732be174c8acfdc76b2cdb1c42b4eefe97e8062748a08321175158d8197"
+        }
+      ],
+      "commands": [
+        "python Tools/diagnose_resident_archive_v1.py --out Docs/closure-20261012/resident-archive-diagnostic"
+      ]
+    },
+    {
+      "inputs": {},
+      "environment": {
+        "python": "CPython 3.13.7 Windows",
+        "packages": {
+          "numpy": "2.2.6",
+          "scipy": "1.15.1",
+          "scikit-learn": "1.4.0",
+          "torch": "2.6.0+cu124"
+        }
+      },
+      "seeds": [],
+      "resource_budget": {
+        "seconds": 1800.0,
+        "rss_mib": 1200.0,
+        "free_ram_mib": 700.0
+      },
+      "deadline": "2026-10-12",
+      "exit_codes": [
+        1
+      ],
+      "results": {
+        "schema": "neuro3d.bounded_cpu.v1",
+        "started_utc": "2026-10-12T13:59:44.485125+00:00",
+        "command": [
+          "C:/Python313/python.exe",
+          "Benchmarks/eeg-motor-imagery/comparativa-anidada/run_nested_comparators_v1.py",
+          "--method",
+          "eegnet",
+          "--data",
+          "D:/PROJECTS/neuro3d-kaggle/motor-imagery/work/data",
+          "--optical-raw",
+          "D:/PROJECTS/neuro3d-kaggle/motor-imagery/work/nested/raw/full",
+          "--out",
+          "D:/PROJECTS/.cognition/neuro3d-closure-20261012/eeg-eegnet-pilot",
+          "--subjects",
+          "S001",
+          "--pilot"
+        ],
+        "status": "INCOMPLETE",
+        "metric": null,
+        "limits": {
+          "seconds": 1800.0,
+          "rss_mib": 1200.0,
+          "free_ram_mib": 700.0
+        },
+        "exit_code": 1,
+        "owned_pid": 57836,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "reason": "HOST_RAM_FLOOR",
+        "seconds": 176.68405859998893,
+        "peak_rss_mib": 621.1015625,
+        "owned_worker_terminal": true
+      },
+      "independent_oracle": "No independently produced human replication",
+      "decision_rule": "Frozen profile and unchanged original numerical/statistical budgets",
+      "decision": "BLOCKED by actual host RAM floor; timing/scientific metric NULL",
+      "deviations": [],
+      "limitations": [
+        "No numerical result; original direct-process RSS scope noted; no matching unittest process remained after stop"
+      ],
+      "published_commit": "65b7000966d01f75bd671b01fbbed4a1284abe43",
+      "status": "BLOCKED",
+      "id": "EXP-006-EEGNET-PILOT-20261012-001",
+      "hypothesis": "The complete selected CPU job finishes within its frozen resource envelope",
+      "alternative": "Unavailable host resources prevent a complete result",
+      "protocol_commit": "6e53fefcff7943fdf98d1f87133c8d9224bd3ad3",
+      "sources": [
+        {
+          "path": "Docs/closure-20261012/eegnet-pilot-supervision.json",
+          "sha256": "c889b5379de7c6a26faf43c54119077b56633cac23993fd9adc2222b174df933"
+        }
+      ],
+      "commands": [
+        [
+          "C:/Python313/python.exe",
+          "Benchmarks/eeg-motor-imagery/comparativa-anidada/run_nested_comparators_v1.py",
+          "--method",
+          "eegnet",
+          "--data",
+          "D:/PROJECTS/neuro3d-kaggle/motor-imagery/work/data",
+          "--optical-raw",
+          "D:/PROJECTS/neuro3d-kaggle/motor-imagery/work/nested/raw/full",
+          "--out",
+          "D:/PROJECTS/.cognition/neuro3d-closure-20261012/eeg-eegnet-pilot",
+          "--subjects",
+          "S001",
+          "--pilot"
+        ]
+      ]
+    },
+    {
+      "inputs": {},
+      "environment": {
+        "python": "CPython 3.13.7 Windows",
+        "packages": {
+          "numpy": "2.2.6",
+          "scipy": "1.15.1",
+          "scikit-learn": "1.4.0",
+          "torch": "2.6.0+cu124"
+        }
+      },
+      "seeds": [],
+      "resource_budget": {
+        "seconds": 900.0,
+        "rss_mib": 1000.0,
+        "free_ram_mib": 700.0
+      },
+      "deadline": "2026-10-12",
+      "exit_codes": [
+        1
+      ],
+      "results": {
+        "schema": "neuro3d.bounded_cpu.v1",
+        "started_utc": "2026-10-12T14:00:37.280498+00:00",
+        "command": [
+          "D:/PROJECTS/.cognition/neuro3d-closure-20261012/venv-support/Scripts/python.exe",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "Blender/tests",
+          "-p",
+          "test_*.py",
+          "-v"
+        ],
+        "status": "INCOMPLETE",
+        "metric": null,
+        "limits": {
+          "seconds": 900.0,
+          "rss_mib": 1000.0,
+          "free_ram_mib": 700.0
+        },
+        "exit_code": 1,
+        "owned_pid": 61364,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "reason": "HOST_RAM_FLOOR",
+        "seconds": 108.79594209999777,
+        "peak_rss_mib": 3.390625,
+        "owned_worker_terminal": true
+      },
+      "independent_oracle": "No independently produced human replication",
+      "decision_rule": "Frozen profile and unchanged original numerical/statistical budgets",
+      "decision": "BLOCKED by actual host RAM floor; timing/scientific metric NULL",
+      "deviations": [],
+      "limitations": [
+        "No numerical result; original direct-process RSS scope noted; no matching unittest process remained after stop"
+      ],
+      "published_commit": "65b7000966d01f75bd671b01fbbed4a1284abe43",
+      "status": "BLOCKED",
+      "id": "EXP-006-CPU-DISCOVERY-20261012-001",
+      "hypothesis": "The complete selected CPU job finishes within its frozen resource envelope",
+      "alternative": "Unavailable host resources prevent a complete result",
+      "protocol_commit": "6e53fefcff7943fdf98d1f87133c8d9224bd3ad3",
+      "sources": [
+        {
+          "path": "Docs/closure-20261012/full-unittest-supervision.json",
+          "sha256": "9da55eb3d8260970be5c0547bf6b1a2a4f9a34c9b7a5bee50b11edc5a1c4ff4a"
+        }
+      ],
+      "commands": [
+        [
+          "D:/PROJECTS/.cognition/neuro3d-closure-20261012/venv-support/Scripts/python.exe",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "Blender/tests",
+          "-p",
+          "test_*.py",
+          "-v"
+        ]
+      ]
+    }
+  ],
+  "validation_problems": {
+    "EXP-006-EEG-COMPARATORS-20261012-001": [],
+    "EXP-006-RESIDENT-ARCHIVE-DIAG-20261012-001": [],
+    "EXP-006-EEGNET-PILOT-20261012-001": [],
+    "EXP-006-CPU-DISCOVERY-20261012-001": []
+  },
+  "scope": "Complete metadata does not itself establish scientific truth or external replication"
+}
