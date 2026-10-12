@@ -1,0 +1,21 @@
+{
+ "schema": "neuro3d.lean_record.v1",
+ "date": "2026-10-12",
+ "toolchain": "leanprover/lean4:v4.34.0",
+ "lean_commit": "293d5d0c0c3f3dded4688b3ccd6a33939ac5102b",
+ "command": "lean Bounds.lean",
+ "cwd": "Lean/closure-core",
+ "exit_code": 0,
+ "output": [
+  "'Neuro3D.powerPerturbation' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'Neuro3D.neumannTail' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'Neuro3D.detectorRankTwo' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'Neuro3D.hermitianRankOne' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'Neuro3D.splitterPassive' depends on axioms: [propext, Classical.choice, Quot.sound]"
+ ],
+ "source": "Lean/closure-core/Bounds.lean",
+ "source_sha256": "b6dbfa7238ef00f636f62255b2371b80c75d16a7da89b73fd396f2c72969a1fc",
+ "mathlib": "not used (not installed; download needs the owner's OK)",
+ "axioms_note": "Only the three standard axioms that the openai/math Comparator challenges also allow; no sorryAx.",
+ "scope": "T2-T5 over Int; homogeneous statements transfer to rationals by a common positive denominator. Not proved: real/complex instantiation, operator-norm submultiplicativity linking n_k = ||A^k b|| to the hypothesis q n(k+1) <= p n(k), the infinite-sum limit, the rank <= 4 bound for a difference of two detectors, and that any producer's numbers satisfy these hypotheses."
+}
