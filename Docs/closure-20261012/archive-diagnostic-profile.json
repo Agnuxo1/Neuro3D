@@ -1,0 +1,11 @@
+{
+  "id": "EXP-006-RESIDENT-ARCHIVE-DIAG-20261012-001",
+  "rule": "GPU local coefficients replayed in CPU; budget1e-11; no native repair claim",
+  "sources": {
+    "Tools/diagnose_resident_archive_v1.py": "e3ff355108b476e62c17dfe8c80b7f0da14b64d54e10488db7ec8f01d2e8e7e1",
+    "Docs/validation/native-resident-graph-2026-10-09/attempt03/worker/actual_graph.json": "66adcc66ef4fb336c77d086ac49f7367758211072a607fe71fe68aa40d0edede",
+    "Docs/validation/native-resident-graph-2026-10-09/attempt03/worker/actual_local_coefficient_readback.json": "8bafec77a573b3545cf1e97a21ad3e6b25b5deee6fa38768c9263146d87541d2",
+    "Docs/validation/native-resident-graph-2026-10-09/attempt03/worker/coherence_control_observations_before_gate.json": "6e11757e2b68aa7343572bee29cf5544b2e259452cc8505415d3be2c5430d2a1"
+  },
+  "budget_seconds": 900
+}
