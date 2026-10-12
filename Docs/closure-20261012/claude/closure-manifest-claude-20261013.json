@@ -1,0 +1,100 @@
+{
+ "schema": "neuro3d.closure.manifest.v1",
+ "base_commit": "69db25ce7b04a98e24609bcd539c5041f269658d",
+ "snapshot_date": "2026-10-13",
+ "scope": "Claude successor of closure-manifest-current.json; earlier manifests retained unchanged",
+ "objectives": [
+  {
+   "id": 1,
+   "name": "State and provenance",
+   "state": "PARTIAL",
+   "remaining": [
+    "Maintain sourced claims as experiments change; complete paper/authorship and source review"
+   ]
+  },
+  {
+   "id": 2,
+   "name": "Correct graphics engine",
+   "state": "PARTIAL",
+   "remaining": [
+    "Native per-stage trace; successor field/gradient/batch equivalence under unchanged budgets"
+   ]
+  },
+  {
+   "id": 3,
+   "name": "Geometry and optimizations",
+   "state": "PARTIAL",
+   "remaining": [
+    "Extend adverse geometry; prove cache invalidation and retained branches"
+   ]
+  },
+  {
+   "id": 4,
+   "name": "End-to-end error and robustness",
+   "state": "PARTIAL",
+   "remaining": [
+    "Transform/input/model preimages and all claimed gradient budgets"
+   ]
+  },
+  {
+   "id": 5,
+   "name": "Learning and capacity",
+   "state": "PARTIAL",
+   "remaining": [
+    "Broader geometry families, conditioning, and independent controls",
+    "Still open after: HA-K1: decision dimension geom/lin/quad = 12/26/29, four inert translations; H-A1 SUPPORTED, H-A2 OPPOSITE, C-A3 met=True"
+   ]
+  },
+  {
+   "id": 6,
+   "name": "Generalization and fair references",
+   "state": "PARTIAL",
+   "remaining": [
+    "EEGNet H2 and reserved new-data/geometry-realizable tasks; FBCSP H1 complete for the original known-subject grid"
+   ]
+  },
+  {
+   "id": 7,
+   "name": "Wave fidelity",
+   "state": "PARTIAL",
+   "remaining": [
+    "Confirm diffraction prospectively; validate the declared full network",
+    "Still open after: WAVE-C1: diffraction-inclusive path model CONFIRMED (Emax 0.0040); captured network outside regime (0/17060 paths); full-network wave validation still open"
+   ]
+  },
+  {
+   "id": 8,
+   "name": "Hardware and total cost",
+   "state": "PARTIAL",
+   "remaining": [
+    "External graphics, actual AMD, isolated energy, structural scaling",
+    "Still open after: G1: compiled operator vs graph traversal H-G1 REFUTED (min ratio 1.1); GPU/AMD/energy still open"
+   ]
+  },
+  {
+   "id": 9,
+   "name": "Product and recovery",
+   "state": "PARTIAL",
+   "remaining": [
+    "Accepted GPU UI, repeated resume interruption, bounded power-loss tests"
+   ]
+  },
+  {
+   "id": 10,
+   "name": "Reproduction and scientific delivery",
+   "state": "PARTIAL",
+   "remaining": [
+    "Clean complete reproduction, human specialist critique, final manuscript",
+    "Still open after: External Linux CI rerun of WAVE-C1 and Lean T1-T5; red-team agent report archived; human specialist critique still open"
+   ]
+  },
+  {
+   "id": 11,
+   "name": "Novelty and impact",
+   "state": "OPEN",
+   "remaining": [
+    "Closest-method comparison and demonstrated useful contribution; external identifiers only if obtained"
+   ]
+  }
+ ]
+}

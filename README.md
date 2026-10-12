@@ -8,6 +8,8 @@ Red óptica escalar entrenable que calcula desde la **geometría evaluada de Ble
 
 [Estado conjunto actualizado y lista completa de pendientes](Docs/PROJECT_STATE_AND_REMAINING_WORK_2026-10-09.md): incluye benchmarks posteriores, auditoría EEG, búsqueda de novedad y la coordinación con Claude. La comparación FDTD está publicada y rechaza el modelo sin difracción de camino en el régimen MZI estudiado. [Consolidación del 12 de octubre y ejecución A-R](Docs/closure-20261012/STATUS_A_R.md), [afirmaciones con hashes](Docs/closure-20261012/CLAIMS.md).
 
+**Cierre de Claude (13 de octubre de 2026).** [Informe](Docs/closure-20261012/claude/CLAUDE-CLOSURE-REPORT-20261013.md) · [artículo v3 (PDF)](Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-13_v3.pdf). Con un solver independiente sin malla, el mismo dispositivo continuo y las 21 fases preregistradas, el modelo de caminos con difracción queda **confirmado** (E_max 0,0040 ≤ 0,02) y el modelo sin difracción vuelve a fallar (0,0281); el FDTD de P1-7 coincide dentro de 0,0048. La red capturada está **fuera del régimen sin difracción** a su longitud de onda representada (0 de 17.060 caminos). La geometría capturada abarca 12 dimensiones de decisión frente a 26 de la clase lineal libre, con 4 traslaciones inertes, y pierde 0,051 de exactitud frente a ella en tareas lineales. Compilar el operador no acelera si se recompila en cada llamada (H-G1 refutada). Los lemas T2-T5 están comprobados en Lean. Todo se preregistró antes de ejecutar y un agente verificador independiente revisó los resultados.
+
 ## Resultados comprobados
 
 | Evidencia | Resultado y alcance |

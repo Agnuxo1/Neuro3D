@@ -113,11 +113,46 @@ def capacity_record() -> dict | None:
     }
 
 
+def g1_record() -> dict | None:
+    path = ROOT / "Benchmarks/compiled-operator-g1/results/G1_RESULTS.json"
+    meta = ROOT / "Benchmarks/compiled-operator-g1/results/PUBLISHED_COMMIT.txt"
+    if not path.exists() or not meta.exists():
+        return None
+    res = json.loads(path.read_text(encoding="utf-8"))
+    base = "Benchmarks/compiled-operator-g1/"
+    return {
+        "id": "EXP-006-G1-20261013-001",
+        "hypothesis": "H-G1: with recompilation charged every call, the compiled operator is at least 2x faster than graph traversal for batches 150 and 4096, inference and training step",
+        "alternative": "Any decisive cell below 2x with equivalence holding",
+        "protocol_commit": subprocess.check_output(["git", "rev-parse", "b857779"], cwd=ROOT, text=True).strip(),
+        "sources": [source(base + f) for f in ("PROTOCOL-G1.md", "run_g1.py", "results/G1_RESULTS.json", "RESULTS-G1.md")],
+        "inputs": {"captured_network": "Docs/validation/native-deferred-training-2026-10-09/attempt01/worker/initial_native_{scene,graph}.json",
+                   "batches": [1, 150, 4096], "repeats": 15},
+        "environment": res["environment"],
+        "seeds": [4242, 7],
+        "resource_budget": {"cpu_processes": 1, "blas_threads": 1, "wall_limit_s": 1500, "gpu": False},
+        "deadline": "2026-10-13",
+        "commands": ["cd Benchmarks/compiled-operator-g1 && python run_g1.py"],
+        "exit_codes": [0],
+        "results": {"equivalence": res["equivalence"], "min_decisive_ratio": res["min_decisive_ratio"],
+                    "ratios": {k: v["ratio_graph_over_compiled_with_recompile"] for k, v in res["cells"].items()},
+                    "cached_ratios": {k: v["ratio_graph_over_cached"] for k, v in res["cells"].items()}},
+        "independent_oracle": "Graph traversal and compiled operator are separate computations of the same fields and tangents; equivalence checked before timing",
+        "decision_rule": "CONFIRMED iff equivalence holds and every decisive median ratio >= 2",
+        "decision": f"H-G1 {res['H_G1']}",
+        "deviations": [],
+        "limitations": ["Local CPU timing with uncontrolled host load; not a scaling law", "No GPU, RT, energy or physical claim"],
+        "published_commit": meta.read_text(encoding="utf-8").strip(),
+        "status": "FAIL" if res["H_G1"] == "REFUTED" else "PASS",
+        "jev_consultations": [],
+    }
+
+
 def main() -> int:
     records = [wave_record()]
-    cap = capacity_record()
-    if cap:
-        records.append(cap)
+    for extra in (capacity_record(), g1_record()):
+        if extra:
+            records.append(extra)
     for r in records:
         for key in ("protocol_commit", "published_commit"):
             if not on_origin(r[key]):
