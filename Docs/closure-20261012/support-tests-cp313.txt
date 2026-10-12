@@ -1,0 +1,63 @@
+test_compiled_operator_uses_transpose_not_adjoint (test_closure_support.CoherenceTests.test_compiled_operator_uses_transpose_not_adjoint) ... ok
+test_fsum_recovers_a_cancelled_small_component (test_closure_support.CoherenceTests.test_fsum_recovers_a_cancelled_small_component) ... ok
+test_greedy_is_only_a_permutation (test_closure_support.CoherenceTests.test_greedy_is_only_a_permutation) ... ok
+test_nonfinite_or_overflow_fields_are_rejected (test_closure_support.CoherenceTests.test_nonfinite_or_overflow_fields_are_rejected) ... ok
+test_packet_roundtrip_is_bit_exact (test_closure_support.CoherenceTests.test_packet_roundtrip_is_bit_exact) ... ok
+test_trace_localizes_the_first_divergence (test_closure_support.CoherenceTests.test_trace_localizes_the_first_divergence) ... ok
+test_changed_bytes_and_escapes_fail_closed (test_closure_support.EvidenceTests.test_changed_bytes_and_escapes_fail_closed) ... ok
+test_extraction_rejects_overwrite_and_path_traversal (test_closure_support.EvidenceTests.test_extraction_rejects_overwrite_and_path_traversal) ... ok
+test_malformed_front_identifiers_are_rejected (test_closure_support.EvidenceTests.test_malformed_front_identifiers_are_rejected) ... ok
+test_unresolved_fronts_cannot_be_complete (test_closure_support.EvidenceTests.test_unresolved_fronts_cannot_be_complete) ... ok
+test_coplanar_and_degenerate_queries_are_rejected (test_closure_support.GeometryTests.test_coplanar_and_degenerate_queries_are_rejected) ... ok
+test_distinct_tie_and_contact_remain_unknown (test_closure_support.GeometryTests.test_distinct_tie_and_contact_remain_unknown) ... ok
+test_nearest_order_survives_below_float_ulp (test_closure_support.GeometryTests.test_nearest_order_survives_below_float_ulp) ... ok
+test_shared_seam_keeps_both_primitive_identities (test_closure_support.GeometryTests.test_shared_seam_keeps_both_primitive_identities) ... ok
+test_ultrathin_positive_hit_is_not_skipped (test_closure_support.GeometryTests.test_ultrathin_positive_hit_is_not_skipped) ... ok
+test_binary64_and_hex_decode_identically (test_closure_support.IntervalTests.test_binary64_and_hex_decode_identically) ... ok
+test_coordinate_uncertainty_reaches_segment_length (test_closure_support.IntervalTests.test_coordinate_uncertainty_reaches_segment_length) ... ok
+test_destructive_interference_is_not_a_missing_branch (test_closure_support.IntervalTests.test_destructive_interference_is_not_a_missing_branch) ... ok
+test_large_cycle_reduction_preserves_quarter_turn (test_closure_support.IntervalTests.test_large_cycle_reduction_preserves_quarter_turn) ... ok
+test_machin_pi_with_an_independent_decimal_bracket (test_closure_support.IntervalTests.test_machin_pi_with_an_independent_decimal_bracket) ... ok
+test_overlapping_decisions_remain_unknown (test_closure_support.IntervalTests.test_overlapping_decisions_remain_unknown) ... ok
+test_serialized_bounds_remain_outward_for_large_denominators (test_closure_support.IntervalTests.test_serialized_bounds_remain_outward_for_large_denominators) ... ok
+test_sqrt_uses_verified_endpoint_inequalities (test_closure_support.IntervalTests.test_sqrt_uses_verified_endpoint_inequalities) ... ok
+test_square_handles_zero_crossing (test_closure_support.IntervalTests.test_square_handles_zero_crossing) ... ok
+test_bootstrap_is_paired_and_reproducible (test_closure_support.StatisticsTests.test_bootstrap_is_paired_and_reproducible) ... ok
+test_exact_mcnemar_retains_pairing (test_closure_support.StatisticsTests.test_exact_mcnemar_retains_pairing) ... ok
+test_multiplicity_and_equivalence (test_closure_support.StatisticsTests.test_multiplicity_and_equivalence) ... ok
+test_nonfinite_margin_and_unmatched_units_are_rejected (test_closure_support.StatisticsTests.test_nonfinite_margin_and_unmatched_units_are_rejected) ... ok
+test_overlap_correction_increases_standard_error (test_closure_support.StatisticsTests.test_overlap_correction_increases_standard_error) ... ok
+test_convergence_diagnostic_does_not_claim_a_proof (test_closure_support.WaveTests.test_convergence_diagnostic_does_not_claim_a_proof) ... ok
+test_mode_projection_and_dark_phase (test_closure_support.WaveTests.test_mode_projection_and_dark_phase) ... ok
+test_spectrum_identity_and_declared_paraxial_agreement (test_closure_support.WaveTests.test_spectrum_identity_and_declared_paraxial_agreement) ... ok
+test_waist_control_and_paraxial_norm (test_closure_support.WaveTests.test_waist_control_and_paraxial_norm) ... ok
+test_duplicate_identifiers_rejected_anywhere (test_closure_v2.FirstHitV2.test_duplicate_identifiers_rejected_anywhere) ... ok
+test_possible_interference_still_blocks (test_closure_v2.FirstHitV2.test_possible_interference_still_blocks) ... ok
+test_v1_masking_reproduced_and_corrected (test_closure_v2.FirstHitV2.test_v1_masking_reproduced_and_corrected) ... ok
+test_v2_equals_v1_whenever_v1_met_no_deferred_primitive (test_closure_v2.FirstHitV2.test_v2_equals_v1_whenever_v1_met_no_deferred_primitive) ... ok
+test_initial_frontier_cannot_be_complete (test_closure_v2.FrontierManifest.test_initial_frontier_cannot_be_complete) ... ok
+test_replication_needs_external_evidence (test_closure_v2.FrontierManifest.test_replication_needs_external_evidence) ... ok
+test_eprocess_controls_error_and_has_power (test_closure_v2.InferenceV2.test_eprocess_controls_error_and_has_power) ... ok
+test_eprocess_exact_value_and_inputs (test_closure_v2.InferenceV2.test_eprocess_exact_value_and_inputs) ... ok
+test_tost (test_closure_v2.InferenceV2.test_tost) ... ok
+test_commitment_round_trip_and_tampering (test_closure_v2.IntegrityTools.test_commitment_round_trip_and_tampering) ... ok
+test_identifier_extraction_and_resolution (test_closure_v2.IntegrityTools.test_identifier_extraction_and_resolution) ... ok
+test_record_validation (test_closure_v2.IntegrityTools.test_record_validation) ... ok
+test_detector_gradient_matches_finite_differences (test_closure_v2.LimitsAndBaselines.test_detector_gradient_matches_finite_differences) ... ok
+test_passive_trainer_recovers_a_teacher_network (test_closure_v2.LimitsAndBaselines.test_passive_trainer_recovers_a_teacher_network) ... ok
+test_passivity_tools (test_closure_v2.LimitsAndBaselines.test_passivity_tools) ... ok
+test_reachable_set_rank (test_closure_v2.LimitsAndBaselines.test_reachable_set_rank) ... ok
+test_reference_scales (test_closure_v2.LimitsAndBaselines.test_reference_scales) ... ok
+test_shot_noise_level_semantics_by_simulation (test_closure_v2.LimitsAndBaselines.test_shot_noise_level_semantics_by_simulation) ... ok
+test_dark_field_and_sixty_four_paths_stay_small (test_closure_v2.ReductionAndEnclosureV2.test_dark_field_and_sixty_four_paths_stay_small) ... ok
+test_fsum_overflow_contract (test_closure_v2.ReductionAndEnclosureV2.test_fsum_overflow_contract) ... ok
+test_tighten_is_outward_and_bounded (test_closure_v2.ReductionAndEnclosureV2.test_tighten_is_outward_and_bounded) ... ok
+test_unit_phasor_v2_matches_floating_reference (test_closure_v2.ReductionAndEnclosureV2.test_unit_phasor_v2_matches_floating_reference) ... ok
+test_v1_endpoint_growth_is_bounded_in_v2 (test_closure_v2.ReductionAndEnclosureV2.test_v1_endpoint_growth_is_bounded_in_v2) ... ok
+test_p17_free_space_overlap_is_reproduced (test_closure_v2.WaveCrossCheck.test_p17_free_space_overlap_is_reproduced)
+P1-7 reports a 2.7 % free-diffraction loss for w = 8 lambda over ~95 lambda. ... ok
+
+----------------------------------------------------------------------
+Ran 57 tests in 5.566s
+
+OK

@@ -1,0 +1,80 @@
+{
+  "schema": "neuro3d.frontier.manifest.v1",
+  "base_commit": "69db25ce7b04a98e24609bcd539c5041f269658d",
+  "snapshot_date": "2026-10-12",
+  "scope": "Frontier fronts added by guide revision v2; separate from the eleven closure fronts and from the canonical ten-objective JSON",
+  "objectives": [
+    {
+      "id": "F1",
+      "name": "Central falsifiable hypothesis and nested function-class ablation",
+      "state": "OPEN",
+      "remaining": [
+        "Preregister H-A to H-D; run free, passive and geometry-realizable classes on the same encoding and split"
+      ]
+    },
+    {
+      "id": "F2",
+      "name": "Fundamental theory and formally checked core",
+      "state": "OPEN",
+      "remaining": [
+        "Reachable-set dimension study; Lean statements and proofs for the certificate lemmas T1-T5"
+      ]
+    },
+    {
+      "id": "F3",
+      "name": "Physical demonstrator and sim-to-real fidelity",
+      "state": "OPEN",
+      "remaining": [
+        "Owner decision D0; partner, platform, transfer-matrix tomography and prospective predictions"
+      ]
+    },
+    {
+      "id": "F4",
+      "name": "End-to-end energy and latency at matched accuracy",
+      "state": "OPEN",
+      "remaining": [
+        "Measured optical and electronic chain against the best electronic baseline; reference limits computed"
+      ]
+    },
+    {
+      "id": "F5",
+      "name": "Independent replication by another team",
+      "state": "OPEN",
+      "remaining": [
+        "Results Reproduced or Replicated by people outside the project, with their own record"
+      ]
+    },
+    {
+      "id": "F6",
+      "name": "Adversarial review, blind analysis and registered report",
+      "state": "OPEN",
+      "remaining": [
+        "Sealed test labels, red-team report, Stage 1 submission if the owner chooses that route"
+      ]
+    },
+    {
+      "id": "F7",
+      "name": "Open archive and citable release",
+      "state": "OPEN",
+      "remaining": [
+        "Release DOI, Software Heritage identifier, CITATION.cff, container digest, data licences"
+      ]
+    },
+    {
+      "id": "F8",
+      "name": "Authorship, AI-use disclosure and ethics",
+      "state": "OPEN",
+      "remaining": [
+        "CRediT roles agreed by real authors; AI-use statement; ethics approval before any new human data"
+      ]
+    },
+    {
+      "id": "F9",
+      "name": "External adoption and impact",
+      "state": "OPEN",
+      "remaining": [
+        "Use by independent groups documented by them; cannot be produced by the project itself"
+      ]
+    }
+  ]
+}

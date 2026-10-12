@@ -1,0 +1,22 @@
+test_detecta_hash_distinto_y_falta (Blender.tests.test_verificar_hashes.VerificarHashesTest.test_detecta_hash_distinto_y_falta) ... ok
+test_formato_dos_espacios_y_asterisco (Blender.tests.test_verificar_hashes.VerificarHashesTest.test_formato_dos_espacios_y_asterisco) ... ok
+test_verifica_todas_las_lineas_publicadas (Blender.tests.test_verificar_hashes.VerificarHashesTest.test_verifica_todas_las_lineas_publicadas) ... FAIL
+
+======================================================================
+FAIL: test_verifica_todas_las_lineas_publicadas (Blender.tests.test_verificar_hashes.VerificarHashesTest.test_verifica_todas_las_lineas_publicadas)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\PROJECTS\Neuro3D-Closure-20261012\Blender\tests\test_verificar_hashes.py", line 25, in test_verifica_todas_las_lineas_publicadas
+    self.assertEqual(bad, [])
+AssertionError: Lists differ: ['extension/trabajo/log_k2_s1050.txt: hash[1327 chars]nto'] != []
+
+First list contains 28 additional elements.
+First extra element 0:
+'extension/trabajo/log_k2_s1050.txt: hash distinto'
+
+Diff is 1463 characters long. Set self.maxDiff to None to see it.
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.071s
+
+FAILED (failures=1)

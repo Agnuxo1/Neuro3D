@@ -1,0 +1,175 @@
+{
+  "schema": "neuro3d.checkout_restoration.v1",
+  "manifest": "Benchmarks/lineas-base/resultados/SHA256SUMS.txt",
+  "rows": [
+    {
+      "path": "Benchmarks/lineas-base/resultados/extension/trabajo/log_k2_s1050.txt",
+      "before_sha256": "bcf056bb8d7356741f5ac0f841124d57a2e4cc94344677028ca1f242887fc3b0",
+      "indexed_sha256": "037fef8b7aeed6953f6065296c40124331ac48ab379f1f433606c4fbdf4ee452",
+      "write": true
+    },
+    {
+      "path": "Benchmarks/lineas-base/resultados/wine_trabajo/log_k9.txt",
+      "before_sha256": "ab2c64d62c674fb8043f7406e11609ed6ed6ea67c8e43f0cb9aab07c3cd94e90",
+      "indexed_sha256": "04fd890ac5e60ed4728c113a9386ff11d953340bb89ded120e4d4dccefc6d291",
+      "write": true
+    },
+    {
+      "path": "Benchmarks/lineas-base/resultados/wine_trabajo/log_k0.txt",
+      "before_sha256": "44be277729f9f7013c01f48b684209db32fea98cfea8e9e60920cafef694943a",
+      "indexed_sha256": "08de9f7b06115a2ca717ca7050673dbd2551392c4572992d1d7f4a96a60a38d2",
+      "write": true
+    },
+    {
+      "path": "Benchmarks/lineas-base/resultados/extension/trabajo/log_k4_s1050.txt",
+      "before_sha256": "0346288f99ba7d2c60357462b0bd6969288bd012f79fc9d0561abaf526ac7231",
+      "indexed_sha256": "0c7e567a346ca5276b94dd2daca091ebfe98010a83713dac49c44ec16dbf3558",
+      "write": true
+    },
+    {
+      "path": "Benchmarks/lineas-base/resultados/extension/trabajo/log_k9_s1051.txt",
+      "before_sha256": "5346d497d53688b2a0e01a457470d12a141380e5c0c800d9b64aeee31dbb2279",
+      "indexed_sha256": "116299eca1c7a11374b3cee9729f98d2b3f3c3b3e4db64ce56723e9a6ffd020f",
+      "write": true
+    },
+    {
+      "path": "Benchmarks/lineas-base/resultados/wine_trabajo/log_k7.txt",
+      "before_sha256": "9fd4da2e9cfa110a1f4cc9d03329078ada9fdc3b4ad4b5d20c0b2fd4a22cbe6c",
+      "indexed_sha256": "151e36bb786266b7afc781db45e87edb6eb0eb9dbc8959de015019732f28757a",
+      "write": true
+    },
+    {
+      "path": "Benchmarks/lineas-base/resultados/extension/trabajo/log_k6_s1051.txt",
+      "before_sha256": "ecdb4e96d355db8b89358e7a52300275cc0913a1abf228fa24a100ce9bfad3f0",
+      "indexed_sha256": "19f951c9de5217daf11e6172ce4d979d6920ad05ac2592018fd181d6b9be9900",
+      "write": true
+    },
+    {
+      "path": "Benchmarks/lineas-base/resultados/extension/trabajo/log_k1_s1051.txt",
+      "before_sha256": "d5285c4e1aa7ca6ea76270b02630b30acf44d83ff88bece0e1e1ff3667fd5fea",
+      "indexed_sha256": "1acbe6dee1d6b58f8306be5f2d8ed8c354508d87517f1c8ae8109471daecc121",
+      "write": true
+    },
+    {
+      "path": "Benchmarks/lineas-base/resultados/extension/trabajo/log_k2_s1051.txt",
+      "before_sha256": "aa0fe04e1c98d1a9b9cba12e985f9efc008f66d6f521ecb5e908d4d101caab8f",
+      "indexed_sha256": "324b02c749c2981b67489a36a328ab7d0ad3fa624674dd2449324423fdd38b71",
+      "write": true
+    },
+    {
+      "path": "Benchmarks/lineas-base/resultados/extension/trabajo/log_k3_s1051.txt",
+      "before_sha256": "ba22bd4727ae2f2d6ff319e9326ca8aa23cd79857962499763de291998485591",
+      "indexed_sha256": "4d1c92343fa0e97f38cf2a8a3afd75c6b6381fdad2795b950435ad0509f49551",
+      "write": true
+    },
+    {
+      "path": "Benchmarks/lineas-base/resultados/extension/trabajo/log_k8_s1051.txt",
+      "before_sha256": "ffc23fb57a9f9be920e48d7bcde2abffde3620eaa36c31daa4aa308498cb4ce6",
+      "indexed_sha256": "557c6a802e500ff053f9d9105fa9727795c8685a0fc18736c800c90d32514e90",
+      "write": true
+    },
+    {
+      "path": "Benchmarks/lineas-base/resultados/wine_trabajo/log_k2.txt",
+      "before_sha256": "cde8e1da6b65df7fb1639124c7e0f464fa835da7f7c197aa27069d6df02104d4",
+      "indexed_sha256": "64722bb8586b9af6c52d69a2a16a169c9a74cfd2bc6b6bffa5e988da1c305da4",
+      "write": true
+    },
+    {
+      "path": "Benchmarks/lineas-base/resultados/extension/trabajo/log_k5_s1050.txt",
+      "before_sha256": "4aefe43bca3122d7f38db0f1ff3156ec0092c5858be649ad930005f76e7e88bf",
+      "indexed_sha256": "77f6b24f67757778e0bbb9973f0380bbdc17eef708589a279fcabe28710648b4",
+      "write": true
+    },
+    {
+      "path": "Benchmarks/lineas-base/resultados/extension/trabajo/log_k5_s1051.txt",
+      "before_sha256": "196fea33d9e13e14947c38bb593f4eaaf90d7f4dc7d001828fbc772452f41d79",
+      "indexed_sha256": "78cbe7e78099a277cb16622ea3214b359006edba8cae5cae340db16907e39258",
+      "write": true
+    },
+    {
+      "path": "Benchmarks/lineas-base/resultados/extension/trabajo/log_k7_s1051.txt",
+      "before_sha256": "8539853d721599a1f4e499982950bdd9e719321e0b4e9654723d77fc02d09ca6",
+      "indexed_sha256": "7de2b4afc26477da71168bea30248db3f97bc25348a84dce20c6c3d6bbe94015",
+      "write": true
+    },
+    {
+      "path": "Benchmarks/lineas-base/resultados/extension/trabajo/log_k6_s1050.txt",
+      "before_sha256": "3a226e1805b4ec827387de969ab900aab4e9c94617caba01cabd0c337994d14d",
+      "indexed_sha256": "82c52c249cc198133bb9732a93c022296d547849c567d6b459b7d14f44ee009c",
+      "write": true
+    },
+    {
+      "path": "Benchmarks/lineas-base/resultados/extension/trabajo/log_k8_s1050.txt",
+      "before_sha256": "93b82b862ed23287dec4cd6f2379750ceded335e0860586cb710b8cf9554493d",
+      "indexed_sha256": "8c977bd29333a5950e5bf6426d68a607c1decd1cd25b99362c71f60e1b5027b6",
+      "write": true
+    },
+    {
+      "path": "Benchmarks/lineas-base/resultados/wine_trabajo/log_k1.txt",
+      "before_sha256": "dbb03a0c5c1ff5c48918f91a1301a27ec03f853102d022d33dbbd714ec28be00",
+      "indexed_sha256": "965d7fad2d746046b74c9c12882adb3de15f77dc5b60a796a18ccf6caa1b2313",
+      "write": true
+    },
+    {
+      "path": "Benchmarks/lineas-base/resultados/wine_trabajo/log_k3.txt",
+      "before_sha256": "c97de6798720c8a213c0732a91bd46086261dc59709c594a2adbd21b8b452a8a",
+      "indexed_sha256": "a3c11261ffc945161168ec4b0d687729f468498882d0552984e545e035e5251c",
+      "write": true
+    },
+    {
+      "path": "Benchmarks/lineas-base/resultados/extension/trabajo/log_k7_s1050.txt",
+      "before_sha256": "c76725699c17827f14d76bb015457d921430e7996904a7a7ff1f43f68ae6680e",
+      "indexed_sha256": "a8d6cf9c478bb871cb509876763fe62786998ff54f07f30982da290533b8d9e1",
+      "write": true
+    },
+    {
+      "path": "Benchmarks/lineas-base/resultados/extension/trabajo/log_k9_s1050.txt",
+      "before_sha256": "af6195ff13cddd84d42651834f87fab46cad56948ecb32131b7bef9c4b3819fe",
+      "indexed_sha256": "cca2d48c1ebd769d8c1d1d0c02b3e1e9fc7e425ff187a52c7d2fe6f9ea7fe1cc",
+      "write": true
+    },
+    {
+      "path": "Benchmarks/lineas-base/resultados/wine_trabajo/log_k6.txt",
+      "before_sha256": "995fc38629937ab834e1f465e5ada7d43f86fe519a0add6ec450202ec67ad9b4",
+      "indexed_sha256": "dce508515ae6840ba500b7050bb6588e650a26dabfb1b2abd077048a85dbc027",
+      "write": true
+    },
+    {
+      "path": "Benchmarks/lineas-base/resultados/extension/trabajo/log_k3_s1050.txt",
+      "before_sha256": "a43bb1f188704f419dc9f8bea9334900719cc86ca10f6e0f7bb6db3e9d93c30a",
+      "indexed_sha256": "e1fc41ddceb9560940083911b50de0db074f39240bac327824d1c451488077f9",
+      "write": true
+    },
+    {
+      "path": "Benchmarks/lineas-base/resultados/wine_trabajo/log_k5.txt",
+      "before_sha256": "6f1d22a941b006e1487956fd82f2a47141b5d2fc54f38147fc35e10012f21454",
+      "indexed_sha256": "e34e7f10c99856bd3ee5c21a14048f543bbfe50db23f838ea7fafe795aa60676",
+      "write": true
+    },
+    {
+      "path": "Benchmarks/lineas-base/resultados/extension/trabajo/log_k4_s1051.txt",
+      "before_sha256": "afebb0b4d65845b9a28cd65f555fb10ced495afb39360f31348bad8157eeb902",
+      "indexed_sha256": "f6d322b0c23f9b32a85237fce676c7bb62943f8f2387af54cf02386bdb64f5b8",
+      "write": true
+    },
+    {
+      "path": "Benchmarks/lineas-base/resultados/wine_trabajo/log_k8.txt",
+      "before_sha256": "7ae5bfa2451007dcb25249b2b5a6d80f370d502d75cc629a543c507d42b39e08",
+      "indexed_sha256": "f807511f3f8c309bbfd5f961b43394e0ba5041a3f0ef36c04d1238f08d0814e6",
+      "write": true
+    },
+    {
+      "path": "Benchmarks/lineas-base/resultados/wine_trabajo/log_k4.txt",
+      "before_sha256": "61076a030177424b8799527750be41581fd0bee55eb14e0b1dfee9cd3d4a51c5",
+      "indexed_sha256": "ff1709f2e5b13883dbae622023b964f89f6fea6db0862c35eeb66496727d6907",
+      "write": true
+    },
+    {
+      "path": "Benchmarks/lineas-base/resultados/extension/trabajo/log_k1_s1050.txt",
+      "before_sha256": "308664fa928da5e6ecf7116a5c46fe119ce0c0bf9b3bc01aef93d075d0a6458d",
+      "indexed_sha256": "ff647856d301fc2a49562b7ac506a5eef461d1e33268f0d71e8abed12e9bd6c8",
+      "write": true
+    }
+  ],
+  "scope": "Restores exact indexed historical bytes; expected hashes unchanged"
+}

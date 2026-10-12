@@ -1,0 +1,450 @@
+{
+  "schema": "neuro3d.closure.regressions.v1",
+  "utc": "2026-10-12T12:23:20.981255+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.7.2",
+    "mpmath": "1.3.0",
+    "psutil": "7.2.2",
+    "torch": null
+  },
+  "records": [
+    {
+      "selection": "normal",
+      "module": "test_governance_consistency",
+      "command": [
+        "D:\\PROJECTS\\.cognition\\neuro3d-closure-20261012\\venv-support\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "Blender.tests.test_governance_consistency",
+        "-v"
+      ],
+      "cwd": "D:\\PROJECTS\\Neuro3D-Closure-20261012",
+      "exit_code": 0,
+      "seconds": 0.4369999999762513,
+      "tests": 6,
+      "category": "PASS",
+      "log": "normal-test_governance_consistency.txt",
+      "log_sha256": "85831d16a674d50eb393b840584f57bf61da452e0ea94c176d7fc5884a326335"
+    },
+    {
+      "selection": "normal",
+      "module": "test_coherent_state_graph_v1",
+      "command": [
+        "D:\\PROJECTS\\.cognition\\neuro3d-closure-20261012\\venv-support\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "Blender.tests.test_coherent_state_graph_v1",
+        "-v"
+      ],
+      "cwd": "D:\\PROJECTS\\Neuro3D-Closure-20261012",
+      "exit_code": 0,
+      "seconds": 0.625,
+      "tests": 8,
+      "category": "PASS",
+      "log": "normal-test_coherent_state_graph_v1.txt",
+      "log_sha256": "b3a9c838b240d7946d86e9b728c1fac00908feaba450b4db9e5601279d04e610"
+    },
+    {
+      "selection": "normal",
+      "module": "test_state_graph_enclosure_v1",
+      "command": [
+        "D:\\PROJECTS\\.cognition\\neuro3d-closure-20261012\\venv-support\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "Blender.tests.test_state_graph_enclosure_v1",
+        "-v"
+      ],
+      "cwd": "D:\\PROJECTS\\Neuro3D-Closure-20261012",
+      "exit_code": 0,
+      "seconds": 0.6410000000032596,
+      "tests": 7,
+      "category": "PASS",
+      "log": "normal-test_state_graph_enclosure_v1.txt",
+      "log_sha256": "f2eb01ecdc8c2f96b0ef0b62fbbf1ce558f992993e80c18cc0a335c01e3ef6b6"
+    },
+    {
+      "selection": "normal",
+      "module": "test_surface_union_interior_v1",
+      "command": [
+        "D:\\PROJECTS\\.cognition\\neuro3d-closure-20261012\\venv-support\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "Blender.tests.test_surface_union_interior_v1",
+        "-v"
+      ],
+      "cwd": "D:\\PROJECTS\\Neuro3D-Closure-20261012",
+      "exit_code": 0,
+      "seconds": 0.2029999999795109,
+      "tests": 8,
+      "category": "PASS",
+      "log": "normal-test_surface_union_interior_v1.txt",
+      "log_sha256": "5cf17ac6a31c33c6c55352a81b56dce0c8f8f29cc57d9bbf68c024fd72cd953f"
+    },
+    {
+      "selection": "normal",
+      "module": "test_robust_first_hit_exact_v1",
+      "command": [
+        "D:\\PROJECTS\\.cognition\\neuro3d-closure-20261012\\venv-support\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "Blender.tests.test_robust_first_hit_exact_v1",
+        "-v"
+      ],
+      "cwd": "D:\\PROJECTS\\Neuro3D-Closure-20261012",
+      "exit_code": 0,
+      "seconds": 0.35899999999674037,
+      "tests": 12,
+      "category": "PASS",
+      "log": "normal-test_robust_first_hit_exact_v1.txt",
+      "log_sha256": "eefa8803e47ed0e7822671e4fb9b45942f3b36a02d1abecd1bffcbad3d3e8f71"
+    },
+    {
+      "selection": "normal",
+      "module": "test_affine_geometry_network_v1",
+      "command": [
+        "D:\\PROJECTS\\.cognition\\neuro3d-closure-20261012\\venv-support\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "Blender.tests.test_affine_geometry_network_v1",
+        "-v"
+      ],
+      "cwd": "D:\\PROJECTS\\Neuro3D-Closure-20261012",
+      "exit_code": 0,
+      "seconds": 0.8279999999795109,
+      "tests": 5,
+      "category": "PASS",
+      "log": "normal-test_affine_geometry_network_v1.txt",
+      "log_sha256": "66180299fcc06beb5945b7fd57bc3829ca304243c01331c054a5898fda3b6ca3"
+    },
+    {
+      "selection": "normal",
+      "module": "test_escala_modos",
+      "command": [
+        "D:\\PROJECTS\\.cognition\\neuro3d-closure-20261012\\venv-support\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "Blender.tests.test_escala_modos",
+        "-v"
+      ],
+      "cwd": "D:\\PROJECTS\\Neuro3D-Closure-20261012",
+      "exit_code": 0,
+      "seconds": 27.07800000003772,
+      "tests": 6,
+      "category": "PASS",
+      "log": "normal-test_escala_modos.txt",
+      "log_sha256": "67e23c07ff9f1a474c5bf1275da89b86c621a919bcc94180b0a0b7b4cfa858ed"
+    },
+    {
+      "selection": "normal",
+      "module": "test_verificar_hashes",
+      "command": [
+        "D:\\PROJECTS\\.cognition\\neuro3d-closure-20261012\\venv-support\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "Blender.tests.test_verificar_hashes",
+        "-v"
+      ],
+      "cwd": "D:\\PROJECTS\\Neuro3D-Closure-20261012",
+      "exit_code": 1,
+      "seconds": 2.4219999999622814,
+      "tests": 3,
+      "category": "ASSERTION_FAILURE",
+      "log": "normal-test_verificar_hashes.txt",
+      "log_sha256": "b87a85dabf4d60e26b6af652f20b87fd2bff6a2f39ec1f3484d2d101c3f5fc1a"
+    },
+    {
+      "selection": "reverse",
+      "module": "test_verificar_hashes",
+      "command": [
+        "D:\\PROJECTS\\.cognition\\neuro3d-closure-20261012\\venv-support\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "Blender.tests.test_verificar_hashes",
+        "-v"
+      ],
+      "cwd": "D:\\PROJECTS\\Neuro3D-Closure-20261012",
+      "exit_code": 1,
+      "seconds": 0.23399999999674037,
+      "tests": 3,
+      "category": "ASSERTION_FAILURE",
+      "log": "reverse-test_verificar_hashes.txt",
+      "log_sha256": "88a77c9c88b8b8d98bf84a5d9a590cad3c7811c14e1e4b5ae0fc5f2986825dbc"
+    },
+    {
+      "selection": "reverse",
+      "module": "test_escala_modos",
+      "command": [
+        "D:\\PROJECTS\\.cognition\\neuro3d-closure-20261012\\venv-support\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "Blender.tests.test_escala_modos",
+        "-v"
+      ],
+      "cwd": "D:\\PROJECTS\\Neuro3D-Closure-20261012",
+      "exit_code": 0,
+      "seconds": 8.172000000020489,
+      "tests": 6,
+      "category": "PASS",
+      "log": "reverse-test_escala_modos.txt",
+      "log_sha256": "085372255b3e01f71b5a84aa9282135e6fe3895844b07dbbb872598929bbc4de"
+    },
+    {
+      "selection": "reverse",
+      "module": "test_affine_geometry_network_v1",
+      "command": [
+        "D:\\PROJECTS\\.cognition\\neuro3d-closure-20261012\\venv-support\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "Blender.tests.test_affine_geometry_network_v1",
+        "-v"
+      ],
+      "cwd": "D:\\PROJECTS\\Neuro3D-Closure-20261012",
+      "exit_code": 0,
+      "seconds": 0.8899999999557622,
+      "tests": 5,
+      "category": "PASS",
+      "log": "reverse-test_affine_geometry_network_v1.txt",
+      "log_sha256": "9c350f6c04c065715630afe3d6bc15f8b07e5afdd76910352b427e58647c79af"
+    },
+    {
+      "selection": "reverse",
+      "module": "test_robust_first_hit_exact_v1",
+      "command": [
+        "D:\\PROJECTS\\.cognition\\neuro3d-closure-20261012\\venv-support\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "Blender.tests.test_robust_first_hit_exact_v1",
+        "-v"
+      ],
+      "cwd": "D:\\PROJECTS\\Neuro3D-Closure-20261012",
+      "exit_code": 0,
+      "seconds": 0.25,
+      "tests": 12,
+      "category": "PASS",
+      "log": "reverse-test_robust_first_hit_exact_v1.txt",
+      "log_sha256": "d3ebb3917d63e5a48be9d09c3e7668208354e96f04bc8d99c7a25b4a0701a4f0"
+    },
+    {
+      "selection": "reverse",
+      "module": "test_surface_union_interior_v1",
+      "command": [
+        "D:\\PROJECTS\\.cognition\\neuro3d-closure-20261012\\venv-support\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "Blender.tests.test_surface_union_interior_v1",
+        "-v"
+      ],
+      "cwd": "D:\\PROJECTS\\Neuro3D-Closure-20261012",
+      "exit_code": 0,
+      "seconds": 0.18700000003445894,
+      "tests": 8,
+      "category": "PASS",
+      "log": "reverse-test_surface_union_interior_v1.txt",
+      "log_sha256": "716e56c1d6e441adc1f8cee94288b2689d5ce9547f34864b5d776ff89ec8622e"
+    },
+    {
+      "selection": "reverse",
+      "module": "test_state_graph_enclosure_v1",
+      "command": [
+        "D:\\PROJECTS\\.cognition\\neuro3d-closure-20261012\\venv-support\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "Blender.tests.test_state_graph_enclosure_v1",
+        "-v"
+      ],
+      "cwd": "D:\\PROJECTS\\Neuro3D-Closure-20261012",
+      "exit_code": 0,
+      "seconds": 0.375,
+      "tests": 7,
+      "category": "PASS",
+      "log": "reverse-test_state_graph_enclosure_v1.txt",
+      "log_sha256": "f2eb01ecdc8c2f96b0ef0b62fbbf1ce558f992993e80c18cc0a335c01e3ef6b6"
+    },
+    {
+      "selection": "reverse",
+      "module": "test_coherent_state_graph_v1",
+      "command": [
+        "D:\\PROJECTS\\.cognition\\neuro3d-closure-20261012\\venv-support\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "Blender.tests.test_coherent_state_graph_v1",
+        "-v"
+      ],
+      "cwd": "D:\\PROJECTS\\Neuro3D-Closure-20261012",
+      "exit_code": 0,
+      "seconds": 0.3899999999557622,
+      "tests": 8,
+      "category": "PASS",
+      "log": "reverse-test_coherent_state_graph_v1.txt",
+      "log_sha256": "c40245c04dabaa186d85221193d95e5918d847cc367653d5dc911a692ab2b322"
+    },
+    {
+      "selection": "reverse",
+      "module": "test_governance_consistency",
+      "command": [
+        "D:\\PROJECTS\\.cognition\\neuro3d-closure-20261012\\venv-support\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "Blender.tests.test_governance_consistency",
+        "-v"
+      ],
+      "cwd": "D:\\PROJECTS\\Neuro3D-Closure-20261012",
+      "exit_code": 0,
+      "seconds": 0.25,
+      "tests": 6,
+      "category": "PASS",
+      "log": "reverse-test_governance_consistency.txt",
+      "log_sha256": "cb39d1a7e7b2951fa0449d3c98c32396dd80bafb937b901f019a383fb8acb98f"
+    },
+    {
+      "selection": "foreign-cwd",
+      "module": "test_governance_consistency",
+      "command": [
+        "D:\\PROJECTS\\.cognition\\neuro3d-closure-20261012\\venv-support\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "Blender.tests.test_governance_consistency",
+        "-v"
+      ],
+      "cwd": "D:\\PROJECTS\\Neuro3D-Closure-20261012\\Docs\\closure-20261012\\regressions-cp312",
+      "exit_code": 0,
+      "seconds": 0.1720000000204891,
+      "tests": 6,
+      "category": "PASS",
+      "log": "foreign-cwd-test_governance_consistency.txt",
+      "log_sha256": "7554a30b728423c7b6a9f3f2dcdec591b9b600470f5446eec8861f8238f9fe02"
+    },
+    {
+      "selection": "foreign-cwd",
+      "module": "test_coherent_state_graph_v1",
+      "command": [
+        "D:\\PROJECTS\\.cognition\\neuro3d-closure-20261012\\venv-support\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "Blender.tests.test_coherent_state_graph_v1",
+        "-v"
+      ],
+      "cwd": "D:\\PROJECTS\\Neuro3D-Closure-20261012\\Docs\\closure-20261012\\regressions-cp312",
+      "exit_code": 0,
+      "seconds": 0.4529999999795109,
+      "tests": 8,
+      "category": "PASS",
+      "log": "foreign-cwd-test_coherent_state_graph_v1.txt",
+      "log_sha256": "7f6824eb5a56313eeac81b91ca657a47295a7777e7318de2e19a7a2b1611ebc2"
+    },
+    {
+      "selection": "foreign-cwd",
+      "module": "test_state_graph_enclosure_v1",
+      "command": [
+        "D:\\PROJECTS\\.cognition\\neuro3d-closure-20261012\\venv-support\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "Blender.tests.test_state_graph_enclosure_v1",
+        "-v"
+      ],
+      "cwd": "D:\\PROJECTS\\Neuro3D-Closure-20261012\\Docs\\closure-20261012\\regressions-cp312",
+      "exit_code": 0,
+      "seconds": 0.32800000003771856,
+      "tests": 7,
+      "category": "PASS",
+      "log": "foreign-cwd-test_state_graph_enclosure_v1.txt",
+      "log_sha256": "39b97aa0299e337194e51c1133b7b238dd1857c5c86d6740783781d51762e19a"
+    },
+    {
+      "selection": "foreign-cwd",
+      "module": "test_surface_union_interior_v1",
+      "command": [
+        "D:\\PROJECTS\\.cognition\\neuro3d-closure-20261012\\venv-support\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "Blender.tests.test_surface_union_interior_v1",
+        "-v"
+      ],
+      "cwd": "D:\\PROJECTS\\Neuro3D-Closure-20261012\\Docs\\closure-20261012\\regressions-cp312",
+      "exit_code": 0,
+      "seconds": 0.17199999996228144,
+      "tests": 8,
+      "category": "PASS",
+      "log": "foreign-cwd-test_surface_union_interior_v1.txt",
+      "log_sha256": "716e56c1d6e441adc1f8cee94288b2689d5ce9547f34864b5d776ff89ec8622e"
+    },
+    {
+      "selection": "foreign-cwd",
+      "module": "test_robust_first_hit_exact_v1",
+      "command": [
+        "D:\\PROJECTS\\.cognition\\neuro3d-closure-20261012\\venv-support\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "Blender.tests.test_robust_first_hit_exact_v1",
+        "-v"
+      ],
+      "cwd": "D:\\PROJECTS\\Neuro3D-Closure-20261012\\Docs\\closure-20261012\\regressions-cp312",
+      "exit_code": 0,
+      "seconds": 0.23399999999674037,
+      "tests": 12,
+      "category": "PASS",
+      "log": "foreign-cwd-test_robust_first_hit_exact_v1.txt",
+      "log_sha256": "699351180b302bb42fb51e84730215a49ecc42c01eb4dd5f6bf1c6c11a15898e"
+    },
+    {
+      "selection": "foreign-cwd",
+      "module": "test_affine_geometry_network_v1",
+      "command": [
+        "D:\\PROJECTS\\.cognition\\neuro3d-closure-20261012\\venv-support\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "Blender.tests.test_affine_geometry_network_v1",
+        "-v"
+      ],
+      "cwd": "D:\\PROJECTS\\Neuro3D-Closure-20261012\\Docs\\closure-20261012\\regressions-cp312",
+      "exit_code": 0,
+      "seconds": 0.625,
+      "tests": 5,
+      "category": "PASS",
+      "log": "foreign-cwd-test_affine_geometry_network_v1.txt",
+      "log_sha256": "693b6b63dece05d7c64e839a57a17620c3de6cf9ef42b4d327f5fe78fbf18d46"
+    },
+    {
+      "selection": "foreign-cwd",
+      "module": "test_escala_modos",
+      "command": [
+        "D:\\PROJECTS\\.cognition\\neuro3d-closure-20261012\\venv-support\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "Blender.tests.test_escala_modos",
+        "-v"
+      ],
+      "cwd": "D:\\PROJECTS\\Neuro3D-Closure-20261012\\Docs\\closure-20261012\\regressions-cp312",
+      "exit_code": 0,
+      "seconds": 2.2179999999934807,
+      "tests": 6,
+      "category": "PASS",
+      "log": "foreign-cwd-test_escala_modos.txt",
+      "log_sha256": "320cb09a1a7f97223161c58d9f8daa3cee4f325eccaa71a92ff8b6cd646e867b"
+    },
+    {
+      "selection": "foreign-cwd",
+      "module": "test_verificar_hashes",
+      "command": [
+        "D:\\PROJECTS\\.cognition\\neuro3d-closure-20261012\\venv-support\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "Blender.tests.test_verificar_hashes",
+        "-v"
+      ],
+      "cwd": "D:\\PROJECTS\\Neuro3D-Closure-20261012\\Docs\\closure-20261012\\regressions-cp312",
+      "exit_code": 1,
+      "seconds": 0.23399999999674037,
+      "tests": 3,
+      "category": "ASSERTION_FAILURE",
+      "log": "foreign-cwd-test_verificar_hashes.txt",
+      "log_sha256": "3b697454a2309a5c02cf9433a1b1ec95596b33b6a0a1d87e7b1e2bbeadd586ca"
+    }
+  ],
+  "diagnostic": false,
+  "all_pass": false,
+  "scope": "Selected software regression only; no complete-project or physical validation"
+}
