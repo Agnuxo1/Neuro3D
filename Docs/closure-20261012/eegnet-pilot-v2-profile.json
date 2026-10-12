@@ -1,0 +1,24 @@
+{
+  "id": "EXP-006-EEGNET-PILOT-20261012-002",
+  "created_utc": "2026-10-12T14:33:57.895106+00:00",
+  "parent_protocol_commit": "7e239aa328311c28dca46d0e89f6f86892598b6e",
+  "reason_for_new_attempt": "Host RAM availability changed; use descendant-aware supervisor v2 while preserving interrupted first attempt",
+  "subject": "S001",
+  "fold": "first full external LORO fold; all36 configurations; unchanged seeds, architecture, internal selection and epochs",
+  "preflight_available_ram_mib": 4904.07421875,
+  "preflight_min_mib": 1500,
+  "limits": {
+    "seconds": 1800,
+    "aggregate_owned_rss_mib": 1200,
+    "host_free_ram_mib": 700,
+    "torch_threads": 2,
+    "cpu_workers": 1
+  },
+  "source_pins": {
+    "Tools/run_bounded_cpu_v2.py": "ac5a9a77e4e91bcfd830d9a1e803ea6d42bec559164c9cc6b3959277cc085b3e",
+    "Benchmarks/eeg-motor-imagery/comparativa-anidada/run_nested_comparators_v1.py": "3215b8594e8fa9c142d7576a1483ca9cea32f996eaf497a0f3aba9cf9958122a",
+    "Benchmarks/eeg-motor-imagery/codigo/work/bench.py": "0e535106624704643ab8292fcaa7fff50ca71ab487ace29ab8cd537867a555a4",
+    "Benchmarks/eeg-motor-imagery/codigo/work/nested/nested_bench.py": "77f1652960bfd99fc8cde676d7b8cac3994b1cb3fd007706c71cede204b77589"
+  },
+  "stop": "NULL on interruption. A complete fold yields a new cost measurement only, never17-subject H2. Apply the original3h full/partial decision only after complete measured pilot."
+}
