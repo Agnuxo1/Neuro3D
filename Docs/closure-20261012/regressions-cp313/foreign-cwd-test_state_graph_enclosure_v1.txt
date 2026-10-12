@@ -1,0 +1,12 @@
+test_bad_observed_native_value_has_valid_large_error_not_false_pass (Blender.tests.test_state_graph_enclosure_v1.GraphEnclosureTests.test_bad_observed_native_value_has_valid_large_error_not_false_pass) ... ok
+test_equal_modal_powers_leave_argmax_unknown (Blender.tests.test_state_graph_enclosure_v1.GraphEnclosureTests.test_equal_modal_powers_leave_argmax_unknown) ... ok
+test_exact_direct_phase_and_certified_observed_output (Blender.tests.test_state_graph_enclosure_v1.GraphEnclosureTests.test_exact_direct_phase_and_certified_observed_output) ... ok
+test_explicit_radius_and_reduction_at_signed_angles (Blender.tests.test_state_graph_enclosure_v1.GraphEnclosureTests.test_explicit_radius_and_reduction_at_signed_angles) ... ok
+test_incomplete_graph_and_missing_input_rejected (Blender.tests.test_state_graph_enclosure_v1.GraphEnclosureTests.test_incomplete_graph_and_missing_input_rejected) ... ok
+test_independent_high_precision_nontrivial_splitter_and_phase (Blender.tests.test_state_graph_enclosure_v1.GraphEnclosureTests.test_independent_high_precision_nontrivial_splitter_and_phase) ... ok
+test_tiny_coefficients_do_not_amplify_fixed_grid_rounding (Blender.tests.test_state_graph_enclosure_v1.GraphEnclosureTests.test_tiny_coefficients_do_not_amplify_fixed_grid_rounding) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.037s
+
+OK

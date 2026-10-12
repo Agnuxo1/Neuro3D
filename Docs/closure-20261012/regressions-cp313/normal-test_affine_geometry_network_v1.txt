@@ -1,0 +1,10 @@
+test_field_and_power_gradients_against_central_differences (Blender.tests.test_affine_geometry_network_v1.AffineGeometryTests.test_field_and_power_gradients_against_central_differences) ... ok
+test_forward_equals_fresh_geometric_rebuild_after_nonzero_translation (Blender.tests.test_affine_geometry_network_v1.AffineGeometryTests.test_forward_equals_fresh_geometric_rebuild_after_nonzero_translation) ... ok
+test_only_finite_complete_inputs_and_mirror_translation_parameters (Blender.tests.test_affine_geometry_network_v1.AffineGeometryTests.test_only_finite_complete_inputs_and_mirror_translation_parameters) ... ok
+test_own_loss_gradient_and_one_descent_update (Blender.tests.test_affine_geometry_network_v1.AffineGeometryTests.test_own_loss_gradient_and_one_descent_update) ... ok
+test_unsupported_merge_does_not_silently_share_derivatives (Blender.tests.test_affine_geometry_network_v1.AffineGeometryTests.test_unsupported_merge_does_not_silently_share_derivatives) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.246s
+
+OK

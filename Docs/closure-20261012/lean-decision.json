@@ -1,0 +1,10 @@
+{
+  "toolchain": "leanprover/lean4:v4.34.0",
+  "lean_commit": "293d5d0c0c3f3dded4688b3ccd6a33939ac5102b",
+  "command": "lean Decision.lean",
+  "exit_code": 0,
+  "result": "Neuro3D.separatedBoxes does not depend on any axioms",
+  "source": "Lean/closure-core/Decision.lean",
+  "source_sha256": "b941d5fa75685b4fa7f66e98f7c70238a7db4bd0099cad4c41273b22f3132012",
+  "scope": "Order-only T1; box construction and T2-T5 remain unverified"
+}

@@ -1,0 +1,11 @@
+test_acceptance_has_ten_objectives_with_valid_status (Blender.tests.test_governance_consistency.GovernanceTests.test_acceptance_has_ten_objectives_with_valid_status) ... ok
+test_closure_document_states_closed (Blender.tests.test_governance_consistency.GovernanceTests.test_closure_document_states_closed) ... ok
+test_exp005_index_has_one_row_per_document (Blender.tests.test_governance_consistency.GovernanceTests.test_exp005_index_has_one_row_per_document) ... ok
+test_governance_links_canonical_sources (Blender.tests.test_governance_consistency.GovernanceTests.test_governance_links_canonical_sources) ... ok
+test_readme_claims_appear_in_canonical_record (Blender.tests.test_governance_consistency.GovernanceTests.test_readme_claims_appear_in_canonical_record) ... ok
+test_readme_links_governance_and_closure (Blender.tests.test_governance_consistency.GovernanceTests.test_readme_links_governance_and_closure) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.010s
+
+OK

@@ -217,3 +217,12 @@ Benchmarks/lineas-base/resultados/extension/trabajo/log_k4_s1051.txt text eol=lf
 Benchmarks/lineas-base/resultados/wine_trabajo/log_k8.txt text eol=lf
 Benchmarks/lineas-base/resultados/wine_trabajo/log_k4.txt text eol=lf
 Benchmarks/lineas-base/resultados/extension/trabajo/log_k1_s1050.txt text eol=lf
+
+# Guide extraction bytes and raw closure evidence must survive Windows checkout.
+.gitattributes text eol=lf
+agent_support/*.txt text eol=lf
+agent_support/*.yml text eol=lf
+Docs/closure-20261012/**/*.txt -text -diff !eol
+Lean/**/*.lean text eol=lf
+Lean/**/lean-toolchain text eol=lf
+Docs/closure-20261012/**/*.aux -text -diff !eol

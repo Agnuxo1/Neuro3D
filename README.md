@@ -4,9 +4,9 @@ Red óptica escalar entrenable que calcula desde la **geometría evaluada de Ble
 
 **El motor gráfico ya participa en el aprendizaje:** la RTX 3090 selecciona triángulos capturados y calcula distancia, fase y derivadas ópticas en shaders FP64. La topología exacta, las fusiones coherentes, la pérdida y Adam se calculan en CPU. Todos los resultados, protocolos, código y fallos se publican en `main`, conservando las versiones anteriores.
 
-[Instalar y usar](Docs/OPTIC_NEURO_BLENDER_USER_GUIDE_2026-10-09.md) · [Complemento 0.1.3](Blender/releases/optic-neuro-blender-0.1.3.zip) · [Artículo PDF](Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.pdf) · [Fuentes del artículo](Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-09.md) · [Estado de los diez objetivos](Docs/SCIENTIFIC_ACCEPTANCE_REPORT_2026-10-09.md)
+[Instalar y usar](Docs/OPTIC_NEURO_BLENDER_USER_GUIDE_2026-10-09.md) · [Complemento 0.1.3](Blender/releases/optic-neuro-blender-0.1.3.zip) · [Artículo actualizado PDF](Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-12_v2.pdf) · [Fuentes del artículo](Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-12_v2.md) · [Estado de los diez objetivos](Docs/SCIENTIFIC_ACCEPTANCE_REPORT_2026-10-09.md)
 
-[Estado conjunto actualizado y lista completa de pendientes](Docs/PROJECT_STATE_AND_REMAINING_WORK_2026-10-09.md): incluye benchmarks posteriores, auditoría EEG, búsqueda de novedad y la coordinación con Claude. La comparación FDTD está en curso y sus archivos locales aún no son un resultado publicado.
+[Estado conjunto actualizado y lista completa de pendientes](Docs/PROJECT_STATE_AND_REMAINING_WORK_2026-10-09.md): incluye benchmarks posteriores, auditoría EEG, búsqueda de novedad y la coordinación con Claude. La comparación FDTD está publicada y rechaza el modelo sin difracción de camino en el régimen MZI estudiado. [Consolidación del 12 de octubre y ejecución A-R](Docs/closure-20261012/STATUS_A_R.md), [afirmaciones con hashes](Docs/closure-20261012/CLAIMS.md).
 
 ## Resultados comprobados
 
@@ -108,3 +108,13 @@ Fuente única del estado de los objetivos: [acceptance_v1.json](Docs/research/op
 [Checkpoint científico público](Docs/SEQUENTIAL_RESEARCH_PROGRESS_2026-10-08.md) · [Aceptación por objetivo](Docs/research/optic_neuro_blender_acceptance_v1.json) · [Revisión de antecedentes](Docs/LITERATURE_AND_NOVELTY_AUDIT_2026-10-08.md) · [Técnicas externas y licencias](Docs/OPTIC_NEURO_BLENDER_COMPONENT_SELECTION_2026-10-08.md) · [Recibo de compilación del artículo](Docs/paper/scientific_article_build_receipt_2026-10-09.json)
 
 Las portadas [original de main](Docs/HISTORICAL_MAIN_README_BEFORE_INTEGRATION_2026-10-09.md) y [científica anterior](Docs/HISTORICAL_SCIENTIFIC_README_BEFORE_FINAL_PUBLICATION_2026-10-09.md), versiones previas, protocolos y fallos se conservan. La [animación histórica del entrenamiento CPU](Docs/assets/native-blender-geometry-training-2026-10-09.gif) mantiene su procedencia original. Código propio bajo [MIT](LICENSE); atribuciones y licencias de datos en los protocolos. [Historia de la PR6](https://github.com/Agnuxo1/Neuro3D/pull/6). [Política de diff de registros crudos](Docs/RAW_EVIDENCE_DIFF_POLICY_2026-10-09.md).
+
+## Consolidación verificable del 12 de octubre
+
+El kit de la guía pasa 57 pruebas en Python 3.12 y 3.13 y en CI Linux. Ocho módulos del núcleo suman 55 pruebas y pasan en orden normal, inverso y desde otro directorio en ambos entornos. La suite completa sigue pendiente: se interrumpió por RAM y no se cuenta como aprobada.
+
+EEG conocido: N1 óptico 0,70094 frente a FBCSP anidado 0,65103, diferencia 0,04991 e IC95 [0,01480; 0,08681], con la regla H1 del preregistro. La rejilla incluye una matriz digital libre y se diseñó con resultados conocidos; no demuestra superioridad de la red pasiva capturada. EEGNet H2 no tiene resultado.
+
+Los coeficientes GPU archivados, propagados por CPU a través de 133 estados, coinciden con la referencia dentro de 9,62e-14. La salida GPU residente sigue rechazada y su primera divergencia nativa aún no está localizada. Los seis pares históricos GPU/CPU conservan el resultado de GPU más lenta.
+
+[Reproducción](Docs/closure-20261012/REPRODUCTION.md) · [Estados A-R y dependencias](Docs/closure-20261012/STATUS_A_R.md) · [Código y resultados en PR 7](https://github.com/Agnuxo1/Neuro3D/pull/7). El proyecto completo, la fidelidad de ondas de toda la red, la revisión humana y la réplica independiente siguen abiertos.

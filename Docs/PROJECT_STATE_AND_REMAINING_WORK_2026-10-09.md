@@ -57,3 +57,7 @@ La fabricación no es necesaria para usar Blender-Lab como simulador. Para afirm
 Petición entregada al checkout compartido `D:/PROJECTS/9_NEBULA_NEW` y añadida al tablón: [OPTIC-STATUS-20261009-CLAUDE](../coordinacion/tareas/OPTIC-STATUS-20261009-CLAUDE.md). [Recibo](research/claude_coordination_request_2026-10-09.json). Se solicita ACK, versiones/hashes, estado de P1-7 y contraste de sus límites. **No hay ACK confirmado todavía.**
 
 Reparto propuesto: Claude mantiene su ejecución/entrega de ondas y comunica los resultados; Codex consolida estado y verifica procedencia/comparabilidad, manteniendo separado el futuro diagnóstico del backend gráfico. No se han editado ni publicado los archivos locales de Claude, iniciado simulaciones nuevas o creado agentes adicionales. La revisión entre ambos no reemplaza validación externa especializada.
+
+## Nota de continuidad: 12 de octubre de 2026
+
+La descripción anterior se conserva como snapshot histórico del 9 de octubre. Su FDTD en curso y el control fijo pendiente ya tienen resultados publicados en main 69db25c. El estado vigente, el negativo de ondas, la malla auxiliar de 64 modos, N1 EEG y las dependencias están en [ejecución A-R](closure-20261012/STATUS_A_R.md) y [afirmaciones trazables](closure-20261012/CLAIMS.md). No reetiquetar el piloto original NULL.

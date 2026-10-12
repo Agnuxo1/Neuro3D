@@ -1,0 +1,94 @@
+{
+  "protocol_commit": "7e239aa328311c28dca46d0e89f6f86892598b6e",
+  "subjects": [
+    {
+      "subject": "S001",
+      "sha256": "16bd51df3a6d84ef1eb247bf45d69c9a7a47312f4f9414df23cef8847c6ea83b",
+      "seconds": 27.402221199998166
+    },
+    {
+      "subject": "S002",
+      "sha256": "574b68c2e36c4b1a45b8e9c6624e101dd3f780c574de1786745b467f27fc5d74",
+      "seconds": 30.392187700024806
+    },
+    {
+      "subject": "S003",
+      "sha256": "7b70614deede0dc68ccee827d4312f498cd0334d969b67633fb859da807141f1",
+      "seconds": 27.79084429994691
+    },
+    {
+      "subject": "S004",
+      "sha256": "a6d65f2b0ed24faae6a375e32843bc002b3410be8e5f8c54ee42585d60f57a60",
+      "seconds": 25.075118599983398
+    },
+    {
+      "subject": "S005",
+      "sha256": "d81add96a776e4c0cf1f361026f23bf380ad783ae0fecd657869ba29915c08f1",
+      "seconds": 24.959821600001305
+    },
+    {
+      "subject": "S006",
+      "sha256": "bf68874b8cbe96f73641c3572def5989fa8b46bebdf0427e9ed06cb32200b463",
+      "seconds": 20.990291699999943
+    },
+    {
+      "subject": "S007",
+      "sha256": "fe37e9747d3e91fd5c4e984ba838908ec3cac0d2b7d7f3d91b29382f151e4ea0",
+      "seconds": 10.509716400003526
+    },
+    {
+      "subject": "S009",
+      "sha256": "d3371bc5d42ad3e7fb3aefa4599386d69c4613224a40d41ab204224e2ee4aa7b",
+      "seconds": 32.88394879997941
+    },
+    {
+      "subject": "S010",
+      "sha256": "daf8a6076c90f2aab2d57b4fad3ff07d78de56ab6f3ee4acb7270d1e1e07221b",
+      "seconds": 30.044770299980883
+    },
+    {
+      "subject": "S011",
+      "sha256": "f8941d532a89914b80eb10ccf66f2c54aa5a33247fa37ddda353f3dfa3f1eae7",
+      "seconds": 33.163601400039624
+    },
+    {
+      "subject": "S012",
+      "sha256": "a0f260b9978bd2cd48231bedd2ec247d04d64eeb3753ecdf9cca9084d1ec4d1e",
+      "seconds": 32.50890720001189
+    },
+    {
+      "subject": "S014",
+      "sha256": "65f59cbb2444651ab2b1771ecf7b0002e7be8927789784b79f811449183c746d",
+      "seconds": 33.1149353000219
+    },
+    {
+      "subject": "S016",
+      "sha256": "2027fbe2306c98d7329419d2149cfcb9de27bc880acf2b5499d070b370ca11ca",
+      "seconds": 33.148705400002655
+    },
+    {
+      "subject": "S017",
+      "sha256": "f61d9ebf9d2201f039185ec9cf1f5bd9d97c3fdeb6cd81383e68da269573da4d",
+      "seconds": 45.047384900040925
+    },
+    {
+      "subject": "S018",
+      "sha256": "e45c32a7b24c05809271a32c4bf4983ac4b7354326ac6c178fb46992c816e147",
+      "seconds": 35.84144799999194
+    },
+    {
+      "subject": "S019",
+      "sha256": "cab43f24df89c8d8f919f2ace17cf092c6282311477a65ce807878b9213cc426",
+      "seconds": 37.19061239995062
+    },
+    {
+      "subject": "S020",
+      "sha256": "4091c198360a030acb3225a646318b7adb3a186d223d34143519e0943b3cba66",
+      "seconds": 38.70232380001107
+    }
+  ],
+  "Xte_read": false,
+  "raw_data_redistributed": false,
+  "all_complete_subjects": true,
+  "raw_results_location": "Owner local cognition workspace, eeg-fbcsp-full; not redistributed without verified dataset derivative permission"
+}

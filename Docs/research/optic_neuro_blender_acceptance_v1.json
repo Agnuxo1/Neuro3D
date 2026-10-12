@@ -42,7 +42,7 @@
       "name": "Coherent propagation and error",
       "status": "PARTIAL_OBSERVED_REPRESENTED_ERROR_CERTIFIED",
       "acceptance": "All relevant branches covered; adverse controls; capture/representation/geometry/phase/sum/readout budgets complete; invalid margins stay unknown",
-      "achieved": "Final complete GPU-trained150observed fields independently enclosed including ideal train-only encoder: fieldL1<=9.974485346794684e-14,power<=7.091722993924811e-15. All150argmax intervals separated,137correct/13wrong. Conditional geometry boxes explicitly retain UNKNOWN outcomes.",
+      "achieved": "Final complete GPU-trained150observed fields independently enclosed including ideal train-only encoder: fieldL1<=9.974485346794684e-14,power<=7.091722993924811e-15. All150argmax intervals separated,137correct/13wrong. Conditional geometry boxes explicitly retain UNKNOWN outcomes. P1-7 historical2D MZI withoutdiffraction refuted: Emax .0269264337/.0275189921 > .02. Fixed-index model-solver control distinct from 50/50 device fidelity; full captured-network waves unresolved. Evidence: Benchmarks/validacion-onda/resultados/RESULTADOS_VALIDACION.json.",
       "remaining": "Intendedgeometry/Blendertransform preimages, geometric/inputmeasurementuncertainty andfullphysicalmodelerror; certificateofobservednativearithmetic completed"
     },
     {
@@ -66,7 +66,7 @@
       "name": "Generalization and equivalent baselines",
       "status": "PARTIAL_PROSPECTIVE_WINE_HELDOUT_AND_TRAINONLY_BASELINES_VERIFIED",
       "acceptance": "Prospectively fixed held-out evaluation, no test-fitted preprocessing, matched algebraic and scientific baselines; uncertainty and failures reported",
-      "achieved": "Prospectively fixed Wine141/37split, train-only encoder, three60update seeds allreported33/37,30/37,28/37; equivalent-encoding linear/quadratic baselines32/37. Descriptive Wilson intervals/exploratory paired McNemar. Iris alreadyhistorically used. No superiority orblindexternalgeneralization claim.",
+      "achieved": "Prospectively fixed Wine141/37split, train-only encoder, three60update seeds allreported33/37,30/37,28/37; equivalent-encoding linear/quadratic baselines32/37. Descriptive Wilson intervals/exploratory paired McNemar. Iris alreadyhistorically used. No superiority orblindexternalgeneralization claim. Dated2026-10-12: known-subject17subjectnestedFBCSP N1 .6510328195 vs opticalN1 .7009436930; pairedmean .0499108734 IC95 [.0147950089,.0868092692], Holm .0489350463. H1 meets publishedgridrule; free matrix/known-data bias retained; H2 unavailable after RAM interruption. Evidence: Docs/closure-20261012/eeg-comparison.json.",
       "remaining": "Broaderdatasets/tasks, transferwithoutretraining, multiplerandomsplits andexternalblinddata. No superiorityclaim."
     },
     {
@@ -75,7 +75,7 @@
       "status": "PARTIAL_ACTUAL_NATIVE_GRAPHICS_FRONTIER_AND_CUDA_ARITHMETIC_VERIFIED",
       "acceptance": "Equivalent outputs and precision, actual vendor execution receipts, complete preparation/transfer/compute/readout/training cost and resource/ablation evidence",
       "amd_execution_verified": false,
-      "achieved": "Actual RTX3090 raster/FP64 coherentfields/gradients/fullhybridlearning; actual CyclesOptiX and supplementary CUDA. Identical-proof engine ablations and paired fullcost retained. Native equal-output1/150/4096sixpairs accepted; GPUslower in every pair, no globaladvantage. Secondary CPU packing5650packets exactbyteparity: faster150/4096, slower1;5834chunks/35004integerreads/46488textureallocations reconciled, logicalbytes notPCIecounters. Resident133state GPUgraph/localactualsurface coefficients experimental published120pins, nativeexecution/advantage notyetverified. Native residentphase-cache/GPUrecurrence actually executed: v1max6attachmentNULL; separatev2/v3exactfiveinputecho pass butcoherentcontrol6.376147888196662e-8 exceeds1e-11, so rejected; allrawretained, noadvantage orvalidinferenceclaim.",
+      "achieved": "Actual RTX3090 raster/FP64 coherentfields/gradients/fullhybridlearning; actual CyclesOptiX and supplementary CUDA. Identical-proof engine ablations and paired fullcost retained. Native equal-output1/150/4096sixpairs accepted; GPUslower in every pair, no globaladvantage. Secondary CPU packing5650packets exactbyteparity: faster150/4096, slower1;5834chunks/35004integerreads/46488textureallocations reconciled, logicalbytes notPCIecounters. Resident133state GPUgraph/localactualsurface coefficients experimental, actuallyexecutedandrejected; sourcepinsandrawnegativeevidenceretained. Native residentphase-cache/GPUrecurrence actually executed: v1max6attachmentNULL; separatev2/v3exactfiveinputecho pass butcoherentcontrol6.376147888196662e-8 exceeds1e-11, so rejected; allrawretained, noadvantage orvalidinferenceclaim.",
       "remaining": "ActualAMDhardware; energy/structuralscaling/ablations; exact GPU geometry predicates or lower-cost valid candidate certificates; installedgraphicsintegration"
     },
     {
@@ -115,7 +115,7 @@
     "external_route_retained": true,
     "sequence_authorization_record": "Docs/research/github_sequence_authorization_2026-10-09.json"
   },
-  "latest_state_date": "2026-10-09",
+  "latest_state_date": "2026-10-12",
   "latest_output_certificate": "Docs/validation/native-deferred-training-certificate-2026-10-09/attempt01/worker/certificate.json",
   "latest_neighborhood_audit": "Docs/validation/independent-surface-neighborhood-2026-10-09/audit.json",
   "latest_training_result": "Docs/validation/native-deferred-training-2026-10-09/attempt01/worker/result.json",
@@ -146,7 +146,7 @@
   "latest_native_graphics_learned_field_certificate": "Docs/validation/native-deferred-training-certificate-2026-10-09/attempt01/evidence_index.json",
   "latest_native_graphics_batch_scaling": "Docs/validation/native-graphics-scaling-2026-10-09/attempt02/evidence_index.json",
   "latest_native_packet_workload": "Docs/validation/native-packet-workload-2026-10-09/attempt01/evidence_index.json",
-  "updated_utc": "2026-10-09T13:53:10.748087+00:00",
+  "updated_utc": "2026-10-12T14:16:03.630156+00:00",
   "historical_previous_acceptance": "Docs/research/historical_acceptance_before_final_audit_2026-10-09.json",
   "latest_authoritative_summary": "Docs/SCIENTIFIC_ACCEPTANCE_REPORT_2026-10-09.md",
   "earlier_cpu_geometry_training_result": "Docs/validation/captured-geometry-training-2026-10-09/attempt01/worker/result.json",
@@ -156,7 +156,7 @@
   "latest_public_http_receipt": "Docs/publication/public_main_http_verification_2026-10-09.json",
   "review_packet": "Docs/EXTERNAL_REVIEW_PACKET_2026-10-09.md",
   "latest_native_resident_graph_attempt": "Docs/validation/native-resident-graph-2026-10-09/attempt03/evidence_index.json",
-  "latest_joint_status_report": "Docs/PROJECT_STATE_AND_REMAINING_WORK_2026-10-09.md",
+  "latest_joint_status_report": "Docs/closure-20261012/STATUS_A_R.md",
   "latest_joint_status_audit": "Docs/research/current_joint_status_audit_2026-10-09.json",
   "published_auxiliary_evidence_reviewed": {
     "public_commit": "e2cd6189c9c4abebce276e300ee74eef0a618633",
@@ -171,5 +171,17 @@
     "receipt": "Docs/research/claude_coordination_request_2026-10-09.json",
     "acknowledged": false,
     "wave_unpublished_in_progress": true
+  },
+  "latest_claim_matrix": "Docs/closure-20261012/claims.json",
+  "latest_closure_campaign": {
+    "protocol_commit": "7e239aa328311c28dca46d0e89f6f86892598b6e",
+    "claims_sha256": "0e060f2cdf0b0435277095be3ab1a5ea36e530c7ffd1cda0e7494598b79331f9",
+    "wave_negative": "Benchmarks/validacion-onda/resultados/RESULTADOS_VALIDACION.json",
+    "wave_sha256": "c49bed27c85dea668b590d5cb4c1a6ff3161d032a3777cecab38a8af31774cce",
+    "EEG_N1_comparison": "Docs/closure-20261012/eeg-comparison.json",
+    "EEG_N1_comparison_sha256": "2d4b0c02af58709308845b617dfab59498080f106a4c5b336df55a3ad479d480",
+    "resident_archive_diagnostic": "Docs/closure-20261012/resident-archive-diagnostic/result.json",
+    "resident_archive_diagnostic_sha256": "5d44e732be174c8acfdc76b2cdb1c42b4eefe97e8062748a08321175158d8197",
+    "no_full_project_closure": true
   }
 }

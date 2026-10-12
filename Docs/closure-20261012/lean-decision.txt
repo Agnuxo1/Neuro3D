@@ -1,0 +1,1 @@
+'Neuro3D.separatedBoxes' does not depend on any axioms
