@@ -26,3 +26,7 @@ real/complex instantiation with Mathlib, the operator-norm link for T3, the
 infinite-sum limit, the rank <= 4 bound for a detector difference, and any
 statement that a producer's numbers satisfy these hypotheses. Record:
 `Docs/closure-20261012/claude/lean-bounds.json`.
+
+### Clarification after the red team (13 October 2026)
+
+Over `Int`, the T3 hypotheses `0 <= p < q`, `n >= 0` and `q n(k+1) <= p n(k)` for all k force the sequence to be eventually zero (a strictly decreasing nonnegative integer sequence while positive), so `neumannTail` does not directly describe an infinite positive geometric sequence. The partial-tail bound still transfers to every rational sequence: for fixed K and m, take the finite prefix n(0..K+m+1), multiply it by a common positive denominator and extend it by zeros; the extended integer sequence satisfies all hypotheses (q*0 <= p*n(k) because p n(k) >= 0), and the theorem gives the bound for that partial tail. The "homogeneous, rational by scaling" sentence above must be read in this per-(K, m) sense. `hermitianRankOne` proves the principal 2x2 minors only, as stated; `detectorRankTwo` covers any rank-2 product, which includes a a^T + b b^T.
