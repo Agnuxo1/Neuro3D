@@ -2,7 +2,7 @@
 
 Red óptica escalar entrenable que calcula desde la **geometría evaluada de Blender**: entradas complejas coherentes, propagación, detectores y decisiones. Blender-Lab es el instrumento computacional de investigación.
 
-**El motor gráfico ya participa en el aprendizaje:** la RTX 3090 selecciona triángulos capturados y calcula distancia, fase y derivadas ópticas en shaders FP64. La topología exacta, las fusiones coherentes, la pérdida y Adam se calculan en CPU. Todos los resultados, protocolos, código y fallos se publican en `main`, conservando las versiones anteriores.
+**El motor gráfico ya participa en el aprendizaje:** la RTX 3090 selecciona triángulos capturados y calcula distancia, fase y derivadas ópticas en shaders FP64. La topología exacta, las fusiones coherentes, la pérdida y Adam se calculan en CPU. La evidencia histórica está en `main`; la consolidación actual, sus resultados y código se publican en la rama del [PR 7](https://github.com/Agnuxo1/Neuro3D/pull/7), todavía sin fusionar, conservando las versiones anteriores.
 
 [Instalar y usar](Docs/OPTIC_NEURO_BLENDER_USER_GUIDE_2026-10-09.md) · [Complemento 0.1.3](Blender/releases/optic-neuro-blender-0.1.3.zip) · [Artículo actualizado PDF](Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-12_v2.pdf) · [Fuentes del artículo](Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-12_v2.md) · [Estado de los diez objetivos](Docs/SCIENTIFIC_ACCEPTANCE_REPORT_2026-10-09.md)
 
