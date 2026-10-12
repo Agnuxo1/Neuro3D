@@ -1,0 +1,25 @@
+primary done 0.62 s
+crosscheck_fdtd done 1.37 s
+cascade done 3.66 s
+network_regime done 0.11 s
+{
+ "H": {
+  "primary": "CONFIRMED",
+  "crosscheck_fdtd": "SUPPORTED",
+  "cascade": "CONFIRMED"
+ },
+ "Emax_M0": 0.028130765893887744,
+ "Emax_M1": 0.004012064127020376,
+ "H_C0": "REPLICATED",
+ "cascade_Emax_M1": 0.004406772499561118,
+ "cross_max": {
+  "i": 0.097740471336761,
+  "ii": 0.004820837093094665,
+  "iii": 0.0032763713741364997
+ },
+ "regime": {
+  "fraction_paths_in_regime_at_captured_lambda": 0.0,
+  "rescale_factor_lambda_needed": 0.0012657609524216074
+ }
+}
+start=2026-10-12T21:43:30Z end=2026-10-12T21:43:37Z exit=0
