@@ -1,0 +1,14 @@
+{
+  "schema": "neuro3d.jev_consultation.v1",
+  "date": "2026-10-12",
+  "agent": "Claude (claude-opus-5-5), branch claude/closure-guide-v2-20261012",
+  "provenance": "jev",
+  "model": "jev-1.13.0",
+  "scope": "Advice only; not scientific evidence (guide v2, section 1 note).",
+  "consultations": [
+    {"question": "Independent reference solver for the step-C confirmation", "answer": "angular_spectrum_exact_planar", "confidence": 1.0},
+    {"question": "Primary acceptance budget for the diffraction-inclusive path model", "answer": "keep_p17_0p02 (Emax <= 0.02, refinement <= 0.005, plus solver self-consistency and energy balance 1e-9)", "confidence": 0.94},
+    {"question": "Extent of the wave validation in this campaign", "answer": "mzi_plus_cascade_plus_regime", "confidence": 0.16, "note": "Low confidence; the owner-agent decided by evidence to include the cascade and regime analyses as declared secondary analyses because they cost seconds of CPU and can falsify the model further."},
+    {"question": "Route for Lean lemmas T2-T5 without an approved Mathlib download", "answer": "core_lean_algebraic_forms", "confidence": 0.9}
+  ]
+}
