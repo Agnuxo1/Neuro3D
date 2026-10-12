@@ -1,0 +1,61 @@
+{
+  "schema": "neuro3d.paper_build.v2",
+  "commands": [
+    [
+      "C:\\ProgramData\\anaconda3\\Scripts\\pandoc.EXE",
+      "D:\\PROJECTS\\Neuro3D-Claude-Closure-20261012\\Docs\\closure-20261012\\claude\\paper-build-04\\linked-manuscript.md",
+      "--from=markdown+tex_math_dollars",
+      "--to=latex",
+      "--standalone",
+      "--resource-path=D:\\PROJECTS\\Neuro3D-Claude-Closure-20261012\\Docs\\paper",
+      "-V",
+      "geometry:margin=22mm",
+      "-V",
+      "fontsize:10pt",
+      "-V",
+      "colorlinks:true",
+      "-V",
+      "linkcolor:blue",
+      "-V",
+      "urlcolor:blue",
+      "--include-in-header",
+      "D:\\PROJECTS\\Neuro3D-Claude-Closure-20261012\\Docs\\closure-20261012\\claude\\paper-build-04\\unicode-header.tex",
+      "--output",
+      "D:\\PROJECTS\\Neuro3D-Claude-Closure-20261012\\Docs\\closure-20261012\\claude\\paper-build-04\\manuscript.tex",
+      "--citeproc",
+      "--bibliography",
+      "D:\\PROJECTS\\Neuro3D-Claude-Closure-20261012\\Docs\\paper\\references-closure-20261013.bib"
+    ],
+    [
+      "C:\\Program Files\\MiKTeX\\miktex\\bin\\x64\\pdflatex.EXE",
+      "-no-shell-escape",
+      "-interaction=nonstopmode",
+      "-halt-on-error",
+      "-output-directory=D:\\PROJECTS\\Neuro3D-Claude-Closure-20261012\\Docs\\closure-20261012\\claude\\paper-build-04",
+      "D:\\PROJECTS\\Neuro3D-Claude-Closure-20261012\\Docs\\closure-20261012\\claude\\paper-build-04\\manuscript.tex"
+    ]
+  ],
+  "exit_codes": [
+    0,
+    1
+  ],
+  "source_pins": {
+    "Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-13_v3.md": "5d0d60d0fdd9b7ce5c423af0c37b6904635063fb5414991acda31d3cf9b6e2a6",
+    "Docs/assets/wine-geometry-and-baselines-2026-10-09.png": "1446eb1ec58815b2df771a98e48f8f8feb64459a1441f3ed2774e4c8ac270a1c",
+    "Docs/assets/native-graphics-coherent-fields-2026-10-09.png": "ac2b48797d6131b151ff828887cb1266c72d61fb9b841080e2d1c840081db2cc",
+    "Docs/assets/gaussian-wave-remedial-2026-10-09.png": "53a84258260738c42be530751609a008fc92155ce8bb1b553f68ca123a152b3b",
+    "Docs/closure-20261012/figures/wave-negative.png": "b8a374f917a5f9cc03685f0c5c38ffb43a54882214fb25e97c7c22b076d568cb",
+    "Docs/closure-20261012/figures/paired-cost.png": "e8b42b00aa790c0e256c2b95472ca7fce876e6e5425fc49f5b35cf8e1080b953",
+    "Docs/closure-20261012/figures/resident-ablation.png": "8a99176f82558247991fd7f25b038db678963b6156411de28095390acb76b41e",
+    "Docs/closure-20261012/figures/eeg-paired.png": "7d0fe71843d00169d46aa66a7f1908cb81c7e9829b79b1effb2d024662664cc6",
+    "Benchmarks/wave-confirmation-c1/results/wave-c1-confirmation.png": "d1639bd53d8a5196faac443dc5177882a38da6e8f6b8a4df8f732754d1e6c33b",
+    "Benchmarks/wave-confirmation-c1/results/wave-c1-network-regime.png": "13df647e0d5f6002ab1cd8631d6596d10cfc18fa25e498720a9869da11a34f21",
+    "Benchmarks/geometry-capacity-k1/results/ha-k1-capacity.png": "4081cccce1caa294fd54f313aa5ec397eb192f6bc6445e22b0fb23d5764a38dc",
+    "Docs/paper/references-closure-20261013.bib": "9ec38d03b9a04d174ec7869dbc8e7529261c3928779a648671d934cb381f66f4"
+  },
+  "evidence_link_commit": "f713bf51ffcfbc47bae8e88ffca2d4127987b035",
+  "pandoc_version": "pandoc.EXE 2.12",
+  "pdf_exists": false,
+  "embedded_figure_count": 10,
+  "scope": "Typesetting and embedded figures only; authorship and scientific acceptance are separate"
+}
