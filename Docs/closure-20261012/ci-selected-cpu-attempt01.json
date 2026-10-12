@@ -1,0 +1,10 @@
+{
+  "run_id": 38262725443,
+  "url": "https://github.com/Agnuxo1/Neuro3D/actions/runs/38262725443",
+  "tested_commit": "65b7000966d01f75bd671b01fbbed4a1284abe43",
+  "conclusion": "failure",
+  "passed_modules": 9,
+  "failed_module": "test_validacion_onda_portable_v2",
+  "failure": "Missing psutil dependency in the workflow; five of six wave controls passed",
+  "correction": "Add fixed psutil==7.2.2 and include owned-descendant regression; keep initial failure recorded"
+}
