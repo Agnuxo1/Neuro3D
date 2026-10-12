@@ -464,13 +464,122 @@
           "-v"
         ]
       ]
+    },
+    {
+      "inputs": {},
+      "environment": {
+        "python": "CPython 3.13.7 Windows",
+        "packages": {
+          "numpy": "2.2.6",
+          "scipy": "1.15.1",
+          "scikit-learn": "1.4.0",
+          "torch": "2.6.0+cu124"
+        }
+      },
+      "seeds": [],
+      "resource_budget": {
+        "seconds": 1800.0,
+        "rss_mib": 1200.0,
+        "free_ram_mib": 700.0
+      },
+      "deadline": "2026-10-12",
+      "exit_codes": [
+        1
+      ],
+      "results": {
+        "schema": "neuro3d.bounded_cpu.v2",
+        "started_utc": "2026-10-12T14:34:46.413229+00:00",
+        "command": [
+          "C:/Python313/python.exe",
+          "Benchmarks/eeg-motor-imagery/comparativa-anidada/run_nested_comparators_v1.py",
+          "--method",
+          "eegnet",
+          "--data",
+          "D:/PROJECTS/neuro3d-kaggle/motor-imagery/work/data",
+          "--optical-raw",
+          "D:/PROJECTS/neuro3d-kaggle/motor-imagery/work/nested/raw/full",
+          "--out",
+          "D:/PROJECTS/.cognition/neuro3d-closure-20261012/eeg-eegnet-pilot-v2",
+          "--subjects",
+          "S001",
+          "--pilot"
+        ],
+        "status": "INCOMPLETE",
+        "metric": null,
+        "limits": {
+          "seconds": 1800.0,
+          "rss_mib": 1200.0,
+          "free_ram_mib": 700.0
+        },
+        "exit_code": 1,
+        "owned_pid": 54292,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "reason": "HOST_RAM_FLOOR",
+        "seconds": 210.53143660002388,
+        "peak_rss_mib": 635.74609375,
+        "owned_worker_terminal": true,
+        "owned_descendant_identities": {
+          "55448": 1791815686.437008
+        }
+      },
+      "independent_oracle": "No independently produced human replication",
+      "decision_rule": "Frozen profile and unchanged original numerical/statistical budgets",
+      "decision": "BLOCKED by actual host RAM floor; timing/scientific metric NULL",
+      "deviations": [],
+      "limitations": [
+        "Second complete-fold attempt interrupted by actual host RAM floor; metric NULL",
+        "Aggregate owned RSS and verified descendant creation identities tracked by v2",
+        "No complete pilot or H2 comparison; no duration projection from interrupted attempts"
+      ],
+      "published_commit": "b9e3a05211478d48f1b40c8fb5ec582ed7cf9643",
+      "status": "BLOCKED",
+      "id": "EXP-006-EEGNET-PILOT-20261012-002",
+      "hypothesis": "The complete selected CPU job finishes within its frozen resource envelope",
+      "alternative": "Unavailable host resources prevent a complete result",
+      "protocol_commit": "7cbbe962ca9c2ceb943444ed76219444b7f72d0f",
+      "sources": [
+        {
+          "path": "Docs/closure-20261012/eegnet-pilot-v2-profile.json",
+          "sha256": "7cf64817caf43d706d7f931f2f7ba8f53f9387f1fbbcf9c4b0ac4974d81c5805"
+        },
+        {
+          "path": "Docs/closure-20261012/eegnet-pilot-v2-supervision.json",
+          "sha256": "8da2b8ef353c784633d13b83884a6905333a3b697a8db35c9605490d68498864"
+        },
+        {
+          "path": "Docs/closure-20261012/eegnet-pilot-v2-cleanup.json",
+          "sha256": "3b9055cf123a243bacdcd20f6a5afd07757fe24290d8f6857ba2511f66e6c8f6"
+        },
+        {
+          "path": "Tools/run_bounded_cpu_v2.py",
+          "sha256": "ac5a9a77e4e91bcfd830d9a1e803ea6d42bec559164c9cc6b3959277cc085b3e"
+        }
+      ],
+      "commands": [
+        [
+          "C:/Python313/python.exe",
+          "Benchmarks/eeg-motor-imagery/comparativa-anidada/run_nested_comparators_v1.py",
+          "--method",
+          "eegnet",
+          "--data",
+          "D:/PROJECTS/neuro3d-kaggle/motor-imagery/work/data",
+          "--optical-raw",
+          "D:/PROJECTS/neuro3d-kaggle/motor-imagery/work/nested/raw/full",
+          "--out",
+          "D:/PROJECTS/.cognition/neuro3d-closure-20261012/eeg-eegnet-pilot-v2",
+          "--subjects",
+          "S001",
+          "--pilot"
+        ]
+      ]
     }
   ],
   "validation_problems": {
     "EXP-006-EEG-COMPARATORS-20261012-001": [],
     "EXP-006-RESIDENT-ARCHIVE-DIAG-20261012-001": [],
     "EXP-006-EEGNET-PILOT-20261012-001": [],
-    "EXP-006-CPU-DISCOVERY-20261012-001": []
+    "EXP-006-CPU-DISCOVERY-20261012-001": [],
+    "EXP-006-EEGNET-PILOT-20261012-002": []
   },
   "scope": "Complete metadata does not itself establish scientific truth or external replication"
 }
