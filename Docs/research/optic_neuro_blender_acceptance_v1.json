@@ -58,8 +58,8 @@
       "name": "Capacity, stability, physical fidelity",
       "status": "PARTIAL_CAPACITY_STABILITY_AND_DECLARED_WAVE_REGIME_CHARACTERIZED",
       "acceptance": "State restricted function family; compare analytic and independent wave references over declared regime; physical-model error quantified or unknown",
-      "achieved": "Restricted passive quadratic capacity and independently certified8x5operator rank/isometry under represented normalization. Conditional16Dgeometry boxes decision coverage147/131/40/0 of150 as bounds grow. Gaussian36case enlarged-window reference accepted,max9.292e-8; original finite-window failure retained. No full-network physical fidelity or calibrated flux claim.",
-      "remaining": "Parameter/input/nativeuncertaintyrobustness andfullnetworkwave model/physicalmeasurements; declaredGaussianfamilydoesnotderivecapturedmode"
+      "achieved": "Restricted passive quadratic capacity and independently certified8x5operator rank/isometry under represented normalization. Conditional16Dgeometry boxes decision coverage147/131/40/0 of150 as bounds grow. Gaussian36case enlarged-window reference accepted,max9.292e-8; original finite-window failure retained. No full-network physical fidelity or calibrated flux claim. [2026-10-13 (Claude closure branch)] WAVE-C1: independent mesh-free solver, same continuous device, 21 phases: diffraction-inclusive path model Emax 0.0040 <= 0.02 CONFIRMED; no-diffraction model 0.0281 refutation replicated; archived FDTD within 0.0048; two-MZI cascade 0.0044. HA-K1: F_geom decision dimension 12 of 26 (F_lin), four inert translations; H-A1 SUPPORTED.",
+      "remaining": "Parameter/input/nativeuncertaintyrobustness andfullnetworkwave model/physicalmeasurements; declaredGaussianfamilydoesnotderivecapturedmode [2026-10-13 (Claude closure branch)] Captured scene outside the diffraction-free regime at lambda=0.1 BU (0/17060 paths; ~790x shorter lambda needed): rescaled geometry or diffraction-inclusive network model before any physical claim."
     },
     {
       "id": 7,
@@ -91,7 +91,7 @@
       "name": "External reproduction and scientific article",
       "status": "PARTIAL_EXTERNAL_LINUX_CPU_REPRODUCTION_AND_REPRODUCIBLE_DRAFT_PUBLISHED",
       "acceptance": "Release evidence and reproducible article; independently executed external reproduction explicitly distinguished from local checks",
-      "achieved": "Actual fresh LinuxCPU/Blender/installedhost recovery runs with pinned sources and official binarychecksums, raw artifacts permanentlyarchived. Reproducible English14pagearticle compiled with two actual exits0/nooverfullboxes. Four evidenceGIFs,PDF,installer andREADME actually retrieved publicly byHTTP, all7 byteidentical. Specialistreview packet prepared, notsent/notreviewed; no journal submission.",
+      "achieved": "Actual fresh LinuxCPU/Blender/installedhost recovery runs with pinned sources and official binarychecksums, raw artifacts permanentlyarchived. Reproducible English14pagearticle compiled with two actual exits0/nooverfullboxes. Four evidenceGIFs,PDF,installer andREADME actually retrieved publicly byHTTP, all7 byteidentical. Specialistreview packet prepared, notsent/notreviewed; no journal submission. [2026-10-13 (Claude closure branch)] External Linux CI reran WAVE-C1 (powers within 8.9e-16) and compiled Lean T1-T5; independent agent red-team archived.",
       "remaining": "Independent researchers and specialist critique; actual external GPU beyond native Linux Blender; journal submission and broader replication; exceptional novelty/importance not established"
     }
   ],
@@ -146,7 +146,7 @@
   "latest_native_graphics_learned_field_certificate": "Docs/validation/native-deferred-training-certificate-2026-10-09/attempt01/evidence_index.json",
   "latest_native_graphics_batch_scaling": "Docs/validation/native-graphics-scaling-2026-10-09/attempt02/evidence_index.json",
   "latest_native_packet_workload": "Docs/validation/native-packet-workload-2026-10-09/attempt01/evidence_index.json",
-  "updated_utc": "2026-10-12T14:16:03.630156+00:00",
+  "updated_utc": "2026-10-12T22:40:20.003769+00:00",
   "historical_previous_acceptance": "Docs/research/historical_acceptance_before_final_audit_2026-10-09.json",
   "latest_authoritative_summary": "Docs/SCIENTIFIC_ACCEPTANCE_REPORT_2026-10-09.md",
   "earlier_cpu_geometry_training_result": "Docs/validation/captured-geometry-training-2026-10-09/attempt01/worker/result.json",
@@ -183,5 +183,71 @@
     "resident_archive_diagnostic": "Docs/closure-20261012/resident-archive-diagnostic/result.json",
     "resident_archive_diagnostic_sha256": "5d44e732be174c8acfdc76b2cdb1c42b4eefe97e8062748a08321175158d8197",
     "no_full_project_closure": true
+  },
+  "latest_wave_confirmation": {
+    "protocol": "Benchmarks/wave-confirmation-c1/PROTOCOL-WAVE-C1.md",
+    "protocol_commit": "7327b67ab9be95ed92efa63a8a752df0d5e4a41a",
+    "result": "Benchmarks/wave-confirmation-c1/results/WAVE_C1_RESULTS.json",
+    "result_sha256": "449689459fa7943489595c90f7c1123c251a1e1b0bbd839e6a2bd649d293d972",
+    "decisions": {
+      "H_C1": "CONFIRMED",
+      "H_C0": "REPLICATED",
+      "H_C2": "SUPPORTED",
+      "H_C3": "CONFIRMED"
+    },
+    "Emax_M1": 0.004012064127020376,
+    "Emax_M0": 0.028130765893887744,
+    "captured_network_paths_in_regime": 0.0,
+    "captured_network_lambda_rescale_needed": 0.0012657609524216074
+  },
+  "latest_geometry_capacity": {
+    "protocol": "Benchmarks/geometry-capacity-k1/PROTOCOL-HA-K1.md",
+    "result": "Benchmarks/geometry-capacity-k1/results/HA_K1_RESULTS.json",
+    "result_sha256": "23b31c2cf1f9307dde04097e61c0a9c661bd7d12a4e52d66b9a981a679131652",
+    "H_A1": "SUPPORTED",
+    "H_A2": "OPPOSITE",
+    "C_A3_met": true,
+    "decision_dimension_geom_lin_quad": [
+      12,
+      26,
+      29
+    ],
+    "inert_parameters": [
+      "c03.paired_world_x",
+      "c13.paired_world_x",
+      "c23.paired_world_x",
+      "c33.paired_world_x"
+    ]
+  },
+  "latest_compiled_operator_ablation": {
+    "protocol": "Benchmarks/compiled-operator-g1/PROTOCOL-G1.md",
+    "result": "Benchmarks/compiled-operator-g1/results/G1_RESULTS.json",
+    "result_sha256": "a79b91c903c2e6500a3f517ffcfecfb9331bfbdde3e54814ac207aa01238606d",
+    "H_G1": "REFUTED",
+    "min_ratio_with_recompile": 1.1427055820351855,
+    "scope": "CPU represented model; no GPU, RT or energy claim"
+  },
+  "latest_formal_core": {
+    "source": "Lean/closure-core/Bounds.lean",
+    "source_sha256": "b6dbfa7238ef00f636f62255b2371b80c75d16a7da89b73fd396f2c72969a1fc",
+    "record": "Docs/closure-20261012/claude/lean-bounds.json",
+    "lemmas": [
+      "T2",
+      "T3 (scaled, per-tail)",
+      "T4 (rank<=2, principal minors)",
+      "T5"
+    ],
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "mathlib": false
+  },
+  "latest_red_team": {
+    "report": "Docs/closure-20261012/claude/RED-TEAM-WAVE-C1-LEAN.md",
+    "scope": "Independent verifier agent, not human review",
+    "refuted_numbers": 0,
+    "corrected_statements": 4
   }
 }

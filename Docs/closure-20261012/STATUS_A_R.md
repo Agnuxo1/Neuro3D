@@ -54,3 +54,18 @@ generalization, human review and adoption retain separate acceptance criteria.
 Profile egnet-pilot-v2-profile.json was published at 7cbbe962ca9c2ceb943444ed76219444b7f72d0f before execution after measured RAM availability changed. The unchanged complete S001 fold was supervised with the descendant-aware v2 guard. It again stopped on the actual 700 MiB host RAM floor, after 210.5314 s, aggregate owned RSS peak 635.7461 MiB, before producing a complete fold. Metric and usable timing estimate remain NULL; H2 remains unavailable. The worker and captured descendant creation identities are terminal. Preserve both attempts; do not project full EEGNet cost from either interruption.
 
 The latest evaluated code commit 4064d021015150c685bd16f146b133cedccd7777 has successful Linux CI: 57 support tests and 68 CPU regressions in eleven modules (runs 38263189614 and 38263189549). Later timing-profile/receipt metadata does not change that tested code.
+
+## Addendum 13 October 2026 (Claude, branch claude/closure-guide-v2-20261012)
+
+Rows above are kept unchanged. New evidence ([report](claude/CLAUDE-CLOSURE-REPORT-20261013.md)):
+
+| Step | New delivery | State after this addendum |
+|---|---|---|
+| C | WAVE-C1: prospective same-device, 21-phase confirmation with an independent mesh-free solver; FDTD cross-check; two-MZI cascade; captured-network regime quantified (0/17,060 paths in regime) | PARTIAL: MZI and sub-network confirmed in 2D; full-network wave validation and 3D/vector open |
+| F/K | HA-K1: decision dimension 12/26/29, inert translations, H-A1 supported, H-A2 opposite | PARTIAL: H-B, H-C, H-D and real-data reserved tasks open |
+| G | G1: compiled-operator ablation, equivalence 7e-16, H-G1 refuted with recompilation | PARTIAL: GPU/AMD/energy open |
+| L | T2-T5 in core Lean, Linux CI recompilation | PARTIAL: Mathlib instantiation open (download needs the owner's OK) |
+| O | Independent verifier-agent red team archived, four corrections | PARTIAL: owner-sealed labels and human red team open |
+| P | Three section-18 records with zero validation problems | PARTIAL |
+| Q | CI rerun of WAVE-C1 and Lean on Linux | PARTIAL: DOI/SWH and independent team open |
+| J | Manuscript v3 with embedded figures and verified new references | PARTIAL: authorship and specialist critique open |
