@@ -1,0 +1,19 @@
+{
+  "id": "EXP-006-EEGNET-PILOT-20261012-001",
+  "parent_protocol_commit": "7e239aa328311c28dca46d0e89f6f86892598b6e",
+  "subject": "S001",
+  "external_fold": "first full LORO run, all36 configurations",
+  "known_data": "optical N1/N2 already known; no nested EEGNet observed",
+  "limits": {
+    "seconds": 1800,
+    "owned_rss_mib": 1200,
+    "host_free_ram_mib": 700,
+    "torch_threads": 2,
+    "workers": 1
+  },
+  "stop": "Incomplete pilot gives NULL timing and no projected full-comparison decision; unchanged primary N1 and old3h rule",
+  "source_pins": {
+    "Tools/run_bounded_cpu_v1.py": "80dc36a06b6ff74ad715d53b18ce104809056967d64ca62956da7627020df99c",
+    "Benchmarks/eeg-motor-imagery/comparativa-anidada/run_nested_comparators_v1.py": "3215b8594e8fa9c142d7576a1483ca9cea32f996eaf497a0f3aba9cf9958122a"
+  }
+}
