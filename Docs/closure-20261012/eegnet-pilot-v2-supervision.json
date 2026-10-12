@@ -1,0 +1,36 @@
+{
+  "schema": "neuro3d.bounded_cpu.v2",
+  "started_utc": "2026-10-12T14:34:46.413229+00:00",
+  "command": [
+    "C:/Python313/python.exe",
+    "Benchmarks/eeg-motor-imagery/comparativa-anidada/run_nested_comparators_v1.py",
+    "--method",
+    "eegnet",
+    "--data",
+    "D:/PROJECTS/neuro3d-kaggle/motor-imagery/work/data",
+    "--optical-raw",
+    "D:/PROJECTS/neuro3d-kaggle/motor-imagery/work/nested/raw/full",
+    "--out",
+    "D:/PROJECTS/.cognition/neuro3d-closure-20261012/eeg-eegnet-pilot-v2",
+    "--subjects",
+    "S001",
+    "--pilot"
+  ],
+  "status": "INCOMPLETE",
+  "metric": null,
+  "limits": {
+    "seconds": 1800.0,
+    "rss_mib": 1200.0,
+    "free_ram_mib": 700.0
+  },
+  "exit_code": 1,
+  "owned_pid": 54292,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "reason": "HOST_RAM_FLOOR",
+  "seconds": 210.53143660002388,
+  "peak_rss_mib": 635.74609375,
+  "owned_worker_terminal": true,
+  "owned_descendant_identities": {
+    "55448": 1791815686.437008
+  }
+}

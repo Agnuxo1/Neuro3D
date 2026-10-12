@@ -48,3 +48,9 @@ The guide's section 17 maps all 26 historical points to these steps. No new
 EXP-005 document is created or modified. Computational representation,
 numerical certification, physical fidelity, resource cost, blind statistical
 generalization, human review and adoption retain separate acceptance criteria.
+
+## Fresh EEGNet timing attempt, retained negative admission outcome
+
+Profile egnet-pilot-v2-profile.json was published at 7cbbe962ca9c2ceb943444ed76219444b7f72d0f before execution after measured RAM availability changed. The unchanged complete S001 fold was supervised with the descendant-aware v2 guard. It again stopped on the actual 700 MiB host RAM floor, after 210.5314 s, aggregate owned RSS peak 635.7461 MiB, before producing a complete fold. Metric and usable timing estimate remain NULL; H2 remains unavailable. The worker and captured descendant creation identities are terminal. Preserve both attempts; do not project full EEGNet cost from either interruption.
+
+The latest evaluated code commit 4064d021015150c685bd16f146b133cedccd7777 has successful Linux CI: 57 support tests and 68 CPU regressions in eleven modules (runs 38263189614 and 38263189549). Later timing-profile/receipt metadata does not change that tested code.
