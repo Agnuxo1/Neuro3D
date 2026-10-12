@@ -1,0 +1,29 @@
+{
+  "schema": "neuro3d.closure.support_controls.v2",
+  "scope": "Synthetic CPU support controls; not a claim about the complete Neuro3D device",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "first_hit_far_degenerate": {
+    "v1": "UNKNOWN",
+    "v2": "HIT",
+    "v2_parameter": "1"
+  },
+  "dark_power_upper_bound_v2": 2.120666036141579e-81,
+  "p17_free_space_overlap": {
+    "waist_lambda": 8.0,
+    "distance_lambda": 95.0,
+    "angular_spectrum": 0.9731813440057744,
+    "paraxial_closed_form": 0.9732103180554786,
+    "scope": "Scalar free-space overlap only; not the FDTD device"
+  },
+  "reference_scales": {
+    "photon_energy_1550nm_J": 1.2815779723541474e-19,
+    "landauer_300K_J": 2.870978885078724e-21,
+    "photons_full_scale_4bit_k2": 1024.0,
+    "detection_energy_per_mac_4bit_fanin5_J": 2.6246716873812938e-17,
+    "scope": "Ideal Poisson detection design scale; lasers, modulators and electronics excluded"
+  }
+}

@@ -1,0 +1,8 @@
+test_detecta_hash_distinto_y_falta (Blender.tests.test_verificar_hashes.VerificarHashesTest.test_detecta_hash_distinto_y_falta) ... ok
+test_formato_dos_espacios_y_asterisco (Blender.tests.test_verificar_hashes.VerificarHashesTest.test_formato_dos_espacios_y_asterisco) ... ok
+test_verifica_todas_las_lineas_publicadas (Blender.tests.test_verificar_hashes.VerificarHashesTest.test_verifica_todas_las_lineas_publicadas) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 7.712s
+
+OK

@@ -1,0 +1,15 @@
+{
+  "source_pins": {
+    "Benchmarks/validacion-onda/resultados/RESULTADOS_VALIDACION.json": "c49bed27c85dea668b590d5cb4c1a6ff3161d032a3777cecab38a8af31774cce",
+    "Docs/validation/native-graphics-scaling-2026-10-09/attempt02/worker/result.json": "2556aeb79241cac7e1a867aae8180f4e474c5cf863d5e4e662700ee1ec4fdb18",
+    "Docs/closure-20261012/resident-archive-diagnostic/result.json": "5d44e732be174c8acfdc76b2cdb1c42b4eefe97e8062748a08321175158d8197",
+    "Docs/closure-20261012/eeg-comparison.json": "2d4b0c02af58709308845b617dfab59498080f106a4c5b336df55a3ad479d480"
+  },
+  "figures": {
+    "eeg-paired.png": "7d0fe71843d00169d46aa66a7f1908cb81c7e9829b79b1effb2d024662664cc6",
+    "paired-cost.png": "e8b42b00aa790c0e256c2b95472ca7fce876e6e5425fc49f5b35cf8e1080b953",
+    "resident-ablation.png": "8a99176f82558247991fd7f25b038db678963b6156411de28095390acb76b41e",
+    "wave-negative.png": "b8a374f917a5f9cc03685f0c5c38ffb43a54882214fb25e97c7c22b076d568cb"
+  },
+  "scope": "Plots of retained numerical records; not new native/physical experiments"
+}

@@ -1,0 +1,6 @@
+test_deadline_terminates_the_owned_tree (Blender.tests.test_bounded_cpu_v2.BoundedCPUDescendants.test_deadline_terminates_the_owned_tree) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 8.427s
+
+OK

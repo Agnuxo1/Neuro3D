@@ -1,0 +1,13 @@
+test_arbitrarily_small_open_sector_retained (Blender.tests.test_surface_union_interior_v1.SurfaceUnionTests.test_arbitrarily_small_open_sector_retained) ... ok
+test_complete_fan_center_is_interior (Blender.tests.test_surface_union_interior_v1.SurfaceUnionTests.test_complete_fan_center_is_interior) ... ok
+test_distinct_objects_remain_true_tie (Blender.tests.test_surface_union_interior_v1.SurfaceUnionTests.test_distinct_objects_remain_true_tie) ... ok
+test_missing_sector_remains_boundary (Blender.tests.test_surface_union_interior_v1.SurfaceUnionTests.test_missing_sector_remains_boundary) ... ok
+test_nearby_detached_triangle_does_not_fill_gap (Blender.tests.test_surface_union_interior_v1.SurfaceUnionTests.test_nearby_detached_triangle_does_not_fill_gap) ... ok
+test_nonconforming_t_junction_interior (Blender.tests.test_surface_union_interior_v1.SurfaceUnionTests.test_nonconforming_t_junction_interior) ... ok
+test_opposite_triangle_winding_preserves_union (Blender.tests.test_surface_union_interior_v1.SurfaceUnionTests.test_opposite_triangle_winding_preserves_union) ... ok
+test_outer_polygon_vertex_and_edge_remain_boundary (Blender.tests.test_surface_union_interior_v1.SurfaceUnionTests.test_outer_polygon_vertex_and_edge_remain_boundary) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.014s
+
+OK

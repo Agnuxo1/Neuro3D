@@ -1,0 +1,1 @@
+{"subject": "S001", "run": 1, "method": "fbcsp", "seconds": 15.930039200000465}

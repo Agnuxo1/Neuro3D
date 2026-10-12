@@ -1,0 +1,29 @@
+{
+  "schema": "neuro3d.bounded_cpu.v1",
+  "started_utc": "2026-10-12T14:00:37.280498+00:00",
+  "command": [
+    "D:/PROJECTS/.cognition/neuro3d-closure-20261012/venv-support/Scripts/python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "Blender/tests",
+    "-p",
+    "test_*.py",
+    "-v"
+  ],
+  "status": "INCOMPLETE",
+  "metric": null,
+  "limits": {
+    "seconds": 900.0,
+    "rss_mib": 1000.0,
+    "free_ram_mib": 700.0
+  },
+  "exit_code": 1,
+  "owned_pid": 61364,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "reason": "HOST_RAM_FLOOR",
+  "seconds": 108.79594209999777,
+  "peak_rss_mib": 3.390625,
+  "owned_worker_terminal": true
+}

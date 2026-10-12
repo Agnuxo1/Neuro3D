@@ -1,0 +1,23 @@
+{
+  "consultations": [
+    {
+      "question": "How to execute guide A-R while physical/human dependencies are absent?",
+      "answer": "execute_and_record_dependencies",
+      "date": "2026-10-12",
+      "provenance": "jev",
+      "status": "connected",
+      "exit_code": 0,
+      "confidence": 1.0
+    },
+    {
+      "question": "Next step after GPU-coefficient CPU replay passes but native outputs remain discrepant and RAM guard fails?",
+      "answer": "native_stage_trace_later_CPU_work_now",
+      "date": "2026-10-12",
+      "provenance": "jev",
+      "status": "connected",
+      "exit_code": 0,
+      "confidence": 1.0
+    }
+  ],
+  "scope": "Advisory, not validation or execution evidence"
+}

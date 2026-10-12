@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Cite this software and its exact commit. The research manuscript remains a draft; this citation does not assert independent replication."
+title: "Neuro3D / OpticNeuroBlender: coherent scalar geometry and numerical certification"
+type: software
+authors:
+  - family-names: "Angulo de Lafuente"
+    given-names: "Francisco"
+repository-code: "https://github.com/Agnuxo1/Neuro3D"
+url: "https://github.com/Agnuxo1/Neuro3D"
+license: MIT
+date-released: "2026-10-12"
+version: "2026.10.12-closure-support"

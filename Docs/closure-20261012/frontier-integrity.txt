@@ -1,0 +1,72 @@
+{
+  "schema": "neuro3d.frontier.integrity.v1",
+  "failures": [],
+  "unresolved": [
+    {
+      "id": "F1",
+      "state": "OPEN",
+      "remaining": [
+        "Preregister H-A to H-D; run free, passive and geometry-realizable classes on the same encoding and split"
+      ]
+    },
+    {
+      "id": "F2",
+      "state": "OPEN",
+      "remaining": [
+        "Reachable-set dimension study; Lean statements and proofs for the certificate lemmas T1-T5"
+      ]
+    },
+    {
+      "id": "F3",
+      "state": "OPEN",
+      "remaining": [
+        "Owner decision D0; partner, platform, transfer-matrix tomography and prospective predictions"
+      ]
+    },
+    {
+      "id": "F4",
+      "state": "OPEN",
+      "remaining": [
+        "Measured optical and electronic chain against the best electronic baseline; reference limits computed"
+      ]
+    },
+    {
+      "id": "F5",
+      "state": "OPEN",
+      "remaining": [
+        "Results Reproduced or Replicated by people outside the project, with their own record"
+      ]
+    },
+    {
+      "id": "F6",
+      "state": "OPEN",
+      "remaining": [
+        "Sealed test labels, red-team report, Stage 1 submission if the owner chooses that route"
+      ]
+    },
+    {
+      "id": "F7",
+      "state": "OPEN",
+      "remaining": [
+        "Release DOI, Software Heritage identifier, CITATION.cff, container digest, data licences"
+      ]
+    },
+    {
+      "id": "F8",
+      "state": "OPEN",
+      "remaining": [
+        "CRediT roles agreed by real authors; AI-use statement; ethics approval before any new human data"
+      ]
+    },
+    {
+      "id": "F9",
+      "state": "OPEN",
+      "remaining": [
+        "Use by independent groups documented by them; cannot be produced by the project itself"
+      ]
+    }
+  ],
+  "integrity_pass": true,
+  "all_frontier_fronts_pass": false,
+  "scope": "Manifest integrity only; it never certifies scientific importance or recognition"
+}

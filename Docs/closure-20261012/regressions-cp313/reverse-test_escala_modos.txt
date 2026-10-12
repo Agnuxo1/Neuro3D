@@ -1,0 +1,11 @@
+test_codificacion_ajustada_con_entrenamiento (Blender.tests.test_escala_modos.TestDatos.test_codificacion_ajustada_con_entrenamiento) ... ok
+test_particiones_estratificadas (Blender.tests.test_escala_modos.TestDatos.test_particiones_estratificadas) ... ok
+test_gradiente_vs_diferencias_finitas_n4 (Blender.tests.test_escala_modos.TestGradiente.test_gradiente_vs_diferencias_finitas_n4) ... ok
+test_capas_vs_densa_n4 (Blender.tests.test_escala_modos.TestMalla.test_capas_vs_densa_n4) ... ok
+test_capas_vs_densa_n8 (Blender.tests.test_escala_modos.TestMalla.test_capas_vs_densa_n8) ... ok
+test_tamano_n64 (Blender.tests.test_escala_modos.TestMalla.test_tamano_n64) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.071s
+
+OK
