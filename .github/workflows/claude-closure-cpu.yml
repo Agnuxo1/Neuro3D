@@ -1,0 +1,67 @@
+# External reproduction of the Claude closure deliverables (guide v2 steps C and L).
+# Actions are pinned to commit SHAs (same majors as the existing workflows); the
+# elan installer script is pinned to the v4.2.4 commit and the Lean toolchain to
+# Lean/closure-core/lean-toolchain. This is an environment check, not a human
+# scientific review, and it does not run Blender or any GPU.
+name: Claude closure CPU reproduction
+on:
+  workflow_dispatch:
+  push:
+    branches: ['claude/closure-guide-v2-20261012']
+  pull_request:
+    paths:
+      - 'Benchmarks/wave-confirmation-c1/**'
+      - 'Lean/closure-core/**'
+      - '.github/workflows/claude-closure-cpu.yml'
+permissions:
+  contents: read
+jobs:
+  wave-c1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065  # v5.6.0
+        with:
+          python-version: '3.12'
+      - name: Install pinned numerical dependencies
+        run: python -m pip install numpy==2.3.5 scipy==1.17.0
+      - name: Solver verification tests
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+        run: python -m unittest discover -s Benchmarks/wave-confirmation-c1 -p 'test_*.py' -v
+      - name: Rerun the preregistered WAVE-C1 protocol and compare with the committed results
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+        run: |
+          python Benchmarks/wave-confirmation-c1/run_wave_c1.py --out "$RUNNER_TEMP/wave-c1"
+          python Benchmarks/wave-confirmation-c1/compare_rerun.py "$RUNNER_TEMP/wave-c1/WAVE_C1_RESULTS.json" | tee "$RUNNER_TEMP/wave-c1/compare.json"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02  # v4.6.2
+        with:
+          name: wave-c1-linux-rerun
+          path: ${{ runner.temp }}/wave-c1
+  lean-core:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
+        with:
+          persist-credentials: false
+      - name: Install elan (pinned installer) and the pinned Lean toolchain
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/227caca133724d5516bee25c2aeb3e609478f2d8/elan-init.sh -o elan-init.sh
+          sh elan-init.sh -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: Compile T1-T5 and check axioms
+        working-directory: Lean/closure-core
+        run: |
+          lean --version
+          lean Decision.lean | tee decision.out
+          lean Bounds.lean | tee bounds.out
+          ! grep -q sorryAx decision.out bounds.out
+          test "$(grep -c 'depends on axioms: \[propext, Classical.choice, Quot.sound\]' bounds.out)" = "5"
+          grep -q 'does not depend on any axioms' decision.out
