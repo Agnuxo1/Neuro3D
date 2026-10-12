@@ -68,3 +68,14 @@ Declared criteria (3D circular Gaussian beam, no refocusing): no-diffraction pow
 ## Limits
 
 2D scalar Ez; infinite planar elements (no edge diffraction, whose effect is bounded only indirectly by the 0.0048 FDTD agreement); lossless film and ideal conductor; one wavelength and w = 8 lambda; one geometry family. The confirmation is not blind. It does not validate the captured network, any fabricated device, polarization or 3D effects.
+
+## Dated corrections after the independent red team (13 October 2026)
+
+An independent verifier agent (no access to the producer's reasoning; report in `Docs/closure-20261012/claude/RED-TEAM-WAVE-C1-LEAN.md`) recomputed the MZI with its own direct plane-wave quadrature (max difference 1.4e-13 over 21 phases and 2 ports), 16 of the 63 cascade configurations (1.2e-13), the FDTD cross-check with a different window and sampling (3e-15), the captured-network regime (17,060 paths by dynamic programming) and the M0/M1 values with the frozen `haz_ideal` (< 1e-9). No number above is refuted. Four statements need correction; the original text is kept above:
+
+1. **Cause of the M1 residual.** The sentence attributing the growth of the M1 error to "the paraxial treatment of the displaced beam" is wrong. With an ideal angle-independent splitter the solver and M1 differ by about 3e-5 at j = 0, 10 and 20; with the real slab the residual is 0.0013-0.0040. The paraxial diffraction law reproduces free propagation to about 3e-5; the remaining residual comes from the **angular dependence of the slab coefficients**, which M1 evaluates only at the central angle. This is a measured attribution by the red team, not part of the preregistered decision.
+2. **Cascade scope.** The cascade is solved sequentially with infinite planar elements applied in the declared order. Infinite mirror planes of stages 1 and 2 would intersect other beams; with the finite 40-lambda elements of the P1-7 geometry a hand check finds no collision. H-C3 therefore confirms the diffraction-inclusive path law along the unfolded cascade, not a full-geometry wave simulation of it.
+3. **FDTD cross-check margin.** H-C2 holds with a narrow margin (0.0048 against 0.005). The continuous 50/50 slab (variant iii) agrees with the archived FDTD better than the ideal splitter (0.0033 at lambda/16, 0.0023 at lambda/24).
+4. **Constant.** The protocol rounds the clipping ratio to 1.6449; the code computes erfcinv(1e-3)/sqrt2 = 1.64526. No result changes.
+
+Timing of the preregistration: GitHub's activity log records the branch creation with protocol commit `7327b67` at 2026-10-12T21:43:23Z; the run started at 21:43:30Z. The red-team also notes that the largest unclipped waist (0.86 lambda) is not paraxial, so the regime criterion errs in the direction that favours, not undermines, the conclusion that the captured network is outside the regime.

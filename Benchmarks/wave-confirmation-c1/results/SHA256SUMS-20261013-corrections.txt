@@ -1,0 +1,2 @@
+# RESULTS-WAVE-C1.md after appended red-team corrections; the published original is at commit aeffaa3 and in SHA256SUMS.txt
+99e29db4e1c51fe33aa4c1e7146c7fbceab0fd2fa67c3b6ca182772c3119a40a  RESULTS-WAVE-C1.md
