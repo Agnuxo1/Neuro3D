@@ -1,0 +1,28 @@
+# Copy to .github/workflows/scientific-closure-cpu.yml after the support kit is committed.
+# This job verifies the support kit. It does not certify the full project or a GPU.
+name: Scientific closure support CPU
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'agent_support/**'
+      - '.github/workflows/scientific-closure-cpu.yml'
+permissions:
+  contents: read
+jobs:
+  support:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install declared support dependencies
+        run: python -m pip install -r agent_support/requirements-closure.txt
+      - name: Run support regressions
+        env:
+          PYTHONNOUSERSITE: '1'
+          PYTHONDONTWRITEBYTECODE: '1'
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+        run: python -m unittest discover -s agent_support -p 'test_*.py' -v

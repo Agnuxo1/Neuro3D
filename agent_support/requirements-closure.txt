@@ -1,0 +1,4 @@
+# Support-kit environment verified with CPython 3.12.14 on Linux.
+# This is independent of the historical Windows and Blender environments.
+numpy==2.3.5
+scipy==1.17.0

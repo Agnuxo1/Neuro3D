@@ -187,3 +187,33 @@ Benchmarks/eeg-motor-imagery/codigo/work/lattice_torch.py -text !eol
 
 # Listas de hashes: siempre LF, para que `sha256sum -c` no dependa de core.autocrlf.
 **/SHA256SUMS.txt text eol=lf
+
+# LF pinned benchmark logs: prevent Windows checkout-only hash corruption.
+Benchmarks/lineas-base/resultados/extension/trabajo/log_k2_s1050.txt text eol=lf
+Benchmarks/lineas-base/resultados/wine_trabajo/log_k9.txt text eol=lf
+Benchmarks/lineas-base/resultados/wine_trabajo/log_k0.txt text eol=lf
+Benchmarks/lineas-base/resultados/extension/trabajo/log_k4_s1050.txt text eol=lf
+Benchmarks/lineas-base/resultados/extension/trabajo/log_k9_s1051.txt text eol=lf
+Benchmarks/lineas-base/resultados/wine_trabajo/log_k7.txt text eol=lf
+Benchmarks/lineas-base/resultados/extension/trabajo/log_k6_s1051.txt text eol=lf
+Benchmarks/lineas-base/resultados/extension/trabajo/log_k1_s1051.txt text eol=lf
+Benchmarks/lineas-base/resultados/extension/trabajo/log_k2_s1051.txt text eol=lf
+Benchmarks/lineas-base/resultados/extension/trabajo/log_k3_s1051.txt text eol=lf
+Benchmarks/lineas-base/resultados/extension/trabajo/log_k8_s1051.txt text eol=lf
+Benchmarks/lineas-base/resultados/wine_trabajo/log_k2.txt text eol=lf
+Benchmarks/lineas-base/resultados/extension/trabajo/log_k5_s1050.txt text eol=lf
+Benchmarks/lineas-base/resultados/extension/trabajo/log_k5_s1051.txt text eol=lf
+Benchmarks/lineas-base/resultados/extension/trabajo/log_k7_s1051.txt text eol=lf
+Benchmarks/lineas-base/resultados/extension/trabajo/log_k6_s1050.txt text eol=lf
+Benchmarks/lineas-base/resultados/extension/trabajo/log_k8_s1050.txt text eol=lf
+Benchmarks/lineas-base/resultados/wine_trabajo/log_k1.txt text eol=lf
+Benchmarks/lineas-base/resultados/wine_trabajo/log_k3.txt text eol=lf
+Benchmarks/lineas-base/resultados/extension/trabajo/log_k7_s1050.txt text eol=lf
+Benchmarks/lineas-base/resultados/extension/trabajo/log_k9_s1050.txt text eol=lf
+Benchmarks/lineas-base/resultados/wine_trabajo/log_k6.txt text eol=lf
+Benchmarks/lineas-base/resultados/extension/trabajo/log_k3_s1050.txt text eol=lf
+Benchmarks/lineas-base/resultados/wine_trabajo/log_k5.txt text eol=lf
+Benchmarks/lineas-base/resultados/extension/trabajo/log_k4_s1051.txt text eol=lf
+Benchmarks/lineas-base/resultados/wine_trabajo/log_k8.txt text eol=lf
+Benchmarks/lineas-base/resultados/wine_trabajo/log_k4.txt text eol=lf
+Benchmarks/lineas-base/resultados/extension/trabajo/log_k1_s1050.txt text eol=lf

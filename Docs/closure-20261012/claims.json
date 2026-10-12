@@ -1,0 +1,146 @@
+{
+  "base_commit": "69db25ce7b04a98e24609bcd539c5041f269658d",
+  "claims": [
+    {
+      "model": "Captured represented scalar scene",
+      "data": "Historical Blender capture",
+      "result": "104 objects, 6656 triangles, 5 sources, 8 modes; 133 states, 186 edges, 17060 paths",
+      "source": "Docs/SCIENTIFIC_ACCEPTANCE_REPORT_2026-10-09.md",
+      "sha256": "6750e8dcd8444650b9c4ce222e8c37e86cd43df7f8a72b46c882a123d6c43057",
+      "evidence": "L2 internal frozen simulation",
+      "allowed_interpretation": "Only the stated represented model, dataset and original protocol",
+      "limitation": "One admitted scalar family; not Maxwell paths"
+    },
+    {
+      "model": "Hybrid geometry learning",
+      "data": "Historical Iris split",
+      "result": "16 parameters, 60 updates, 61 captures; train 110/120, test 27/30",
+      "source": "Docs/validation/native-deferred-training-2026-10-09/attempt01/worker/result.json",
+      "sha256": "4fdf2772dd13f7c619c060dbb978a1d949ddba172c4cc6a396a5a73522f5376b",
+      "evidence": "L2 internal frozen simulation",
+      "allowed_interpretation": "Only the stated represented model, dataset and original protocol",
+      "limitation": "Topology, coherent merging, loss and Adam on CPU; known split"
+    },
+    {
+      "model": "Final decision enclosure",
+      "data": "150 historical Iris rows",
+      "result": "150 separated decisions; 137 correct labels and 13 wrong",
+      "source": "Docs/validation/native-deferred-training-certificate-2026-10-09/attempt01/worker/certificate.json",
+      "sha256": "693edc432ada9039dbe880b8ae5ac1c10c027534087668fb6ff7b4870a3d2d29",
+      "evidence": "L2 numerical certificate",
+      "allowed_interpretation": "Only the stated represented model, dataset and original protocol",
+      "limitation": "Numerical separation is not accuracy or physical fidelity"
+    },
+    {
+      "model": "Rejected resident graph",
+      "data": "Four archived coherent controls",
+      "result": "6.376147888196662e-8 exceeds fixed 1e-11 budget",
+      "source": "Docs/validation/native-resident-graph-2026-10-09/attempt03/worker/coherence_control_observations_before_gate.json",
+      "sha256": "6e11757e2b68aa7343572bee29cf5544b2e259452cc8505415d3be2c5430d2a1",
+      "evidence": "L2 observed negative",
+      "allowed_interpretation": "Only the stated represented model, dataset and original protocol",
+      "limitation": "Five input echoes pass; first divergence cause unknown before new diagnostic"
+    },
+    {
+      "model": "GPU total inference cost",
+      "data": "Same-output 1/150/4096 pairs",
+      "result": "GPU slower in all six pairs",
+      "source": "Docs/NATIVE_GRAPHICS_SCALING_PROTOCOL_2026-10-09.md",
+      "sha256": "dd59af3628965b0cd3624292c8a2631e4329f0cdd90c7677c24e710b77ae8dd0",
+      "evidence": "L2 paired local measurement",
+      "allowed_interpretation": "Only the stated represented model, dataset and original protocol",
+      "limitation": "No global speedup, isolated energy or AMD execution"
+    },
+    {
+      "model": "Auxiliary benchmark",
+      "data": "Known Wine partitions",
+      "result": "Optical 0.7910; tuned SVM 0.8676",
+      "source": "Benchmarks/benchmark-v1/resultados/RESULTADOS_BENCHMARK_V1.md",
+      "sha256": "b62af82e470f8119df018a778837714b02a4d920eec4d4a9ec825870599ccc0b",
+      "evidence": "L1 or retained preregistered scope in original report",
+      "allowed_interpretation": "Only the stated represented model, dataset and original protocol",
+      "limitation": "Not native captured Blender generalization"
+    },
+    {
+      "model": "Auxiliary Clements mesh",
+      "data": "Digits, 64 modes",
+      "result": "Mesh 0.9492; tuned logistic 0.9703",
+      "source": "Benchmarks/escala-modos/sensibilidad/resultados_sensibilidad.md",
+      "sha256": "c5810c9580bc4b297a05da61827f2341b74c39f3bfcaf7538ae0e6e0587062f5",
+      "evidence": "L1 tuning sensitivity",
+      "allowed_interpretation": "Only the stated represented model, dataset and original protocol",
+      "limitation": "Auxiliary mesh; no captured geometry, physical fabrication or superiority"
+    },
+    {
+      "model": "P1-7 wave negative",
+      "data": "2D TM MZI, w=8 lambda",
+      "result": "Emax 0.02692643372060144 at lambda/16; 0.02751899213404152 at lambda/24; limit 0.02 missed",
+      "source": "Benchmarks/validacion-onda/resultados/RESULTADOS_VALIDACION.json",
+      "sha256": "c49bed27c85dea668b590d5cb4c1a6ff3161d032a3777cecab38a8af31774cce",
+      "evidence": "L2 with declared deviations",
+      "allowed_interpretation": "Only the stated represented model, dataset and original protocol",
+      "limitation": "12/18 discrete phases; recalibrated devices; no full-network validation"
+    },
+    {
+      "model": "P1-7 diffraction diagnostic",
+      "data": "Same historical MZI",
+      "result": "Exploratory Emax 0.005134910435326212 / 0.004615348997879409",
+      "source": "Benchmarks/validacion-onda/resultados/RESULTADOS_VALIDACION.json",
+      "sha256": "c49bed27c85dea668b590d5cb4c1a6ff3161d032a3777cecab38a8af31774cce",
+      "evidence": "L1 exploratory",
+      "allowed_interpretation": "Only the stated represented model, dataset and original protocol",
+      "limitation": "Not new confirmation; no retrospective threshold change"
+    },
+    {
+      "model": "Fixed-index wave control",
+      "data": "Same nominal film index",
+      "result": "Stable model-solver Emax; coarse R about 0.583 versus fine 0.497",
+      "source": "Benchmarks/validacion-onda/control_fijo/resultados/RESULTADOS_CONTROL.md",
+      "sha256": "4bb92aab9dbcbfcbd606665a01f32b64555f3b7d931b9dc1599640843d81a6e2",
+      "evidence": "L2 limited control",
+      "allowed_interpretation": "Only the stated represented model, dataset and original protocol",
+      "limitation": "Model-solver agreement and calibrated 50/50 device fidelity are distinct"
+    },
+    {
+      "model": "Auxiliary F4",
+      "data": "Interference mesh comparison",
+      "result": "Read according to the original preregistered report, including negatives",
+      "source": "Benchmarks/capacidad-aprendizaje/INFORME-EJECUCION-F4.md",
+      "sha256": "13b35470d318e7e13b2a36f620afc70e9358b23bc553cd84e7104588e1d90b51",
+      "evidence": "Historical auxiliary study",
+      "allowed_interpretation": "Only the stated represented model, dataset and original protocol",
+      "limitation": "No transfer to captured passive network; zero differences do not prove equivalence"
+    },
+    {
+      "model": "EEG optical grid",
+      "data": "17 known subjects",
+      "result": "Primary N1 0.7009; secondary N2 0.7274",
+      "source": "Benchmarks/eeg-motor-imagery/evidencia-validacion-anidada/results_full.json",
+      "sha256": "96bc68de091565f38afb113125b092407fbf89aee6c6f8a559b5a685a2089a70",
+      "evidence": "Retained nested evaluation with known-data bias",
+      "allowed_interpretation": "Only the stated represented model, dataset and original protocol",
+      "limitation": "free is an unconstrained digital matrix; EEG comparators not yet nested"
+    },
+    {
+      "model": "CPU addon recovery",
+      "data": "Installed 0.1.3",
+      "result": "One owner interruption at checkpoint12, exact resume in Windows and Linux",
+      "source": "Docs/EXTERNAL_INSTALLED_BLENDER_RECOVERY_PROTOCOL_2026-10-09.md",
+      "sha256": "e5648091cb6942d9c5de13eb7cb65a1bb1b12ee1fa5aa4cfb694aa984a20582c",
+      "evidence": "L3 automatic external execution",
+      "allowed_interpretation": "Only the stated represented model, dataset and original protocol",
+      "limitation": "No repeated power-loss, human usability or external specialist interpretation"
+    },
+    {
+      "model": "Novelty search",
+      "data": "Bounded primary corpus",
+      "result": "No complete combination found within searched scope",
+      "source": "Docs/research/novelty-p1-6/VEREDICTO-P1-6.md",
+      "sha256": "747c8ab2cc6cd7efb0fa46b39e3dc896550bb5c28c144bf974f359067feffaee",
+      "evidence": "Bounded literature search",
+      "allowed_interpretation": "Only the stated represented model, dataset and original protocol",
+      "limitation": "No universal absence, exceptional importance or independent adoption"
+    }
+  ],
+  "scope": "Sourced historical evidence; no new experiment claims"
+}

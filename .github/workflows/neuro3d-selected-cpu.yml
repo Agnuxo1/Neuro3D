@@ -1,0 +1,42 @@
+# Copy to .github/workflows/neuro3d-selected-cpu.yml. Successor to the manual-only
+# cpu-tests.yml, which installs no dependencies. It runs the eight section 6.2
+# regressions, each in a fresh process. With exactly these pins they passed at
+# 69db25c on Linux with CPython 3.12.3 during guide revision v2 (55 tests); this
+# GitHub job itself has not been run yet. The project lock pins scikit-learn
+# 1.4.0 with numpy 2.2.6, which pip cannot resolve together, so it is not used.
+name: Neuro3D selected CPU regressions
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  selected:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        test:
+          - test_governance_consistency
+          - test_coherent_state_graph_v1
+          - test_state_graph_enclosure_v1
+          - test_surface_union_interior_v1
+          - test_robust_first_hit_exact_v1
+          - test_affine_geometry_network_v1
+          - test_escala_modos
+          - test_verificar_hashes
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065  # v5.6.0
+        with:
+          python-version: '3.12'
+      - name: Install minimal dependencies
+        run: python -m pip install numpy==2.3.5 scipy==1.17.0 scikit-learn==1.7.2 mpmath==1.3.0
+      - name: Run one regression in a fresh process
+        env:
+          PYTHONNOUSERSITE: '1'
+          PYTHONDONTWRITEBYTECODE: '1'
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+        run: python -m unittest Blender/tests/${{ matrix.test }}.py -v

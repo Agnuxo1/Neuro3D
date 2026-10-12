@@ -1,0 +1,65 @@
+{
+  "schema": "neuro3d.closure.campaign.v1",
+  "id": "EXP-006-CLOSURE-20261012-001",
+  "base_commit": "69db25ce7b04a98e24609bcd539c5041f269658d",
+  "created_utc": "2026-10-12T13:49:10.751886+00:00",
+  "sources": {
+    "agent_support/closure_coherent.py": "ed24a106c2e36b10c0fedc6328ed57436558defe2fac0bb3dca8086590911063",
+    "agent_support/closure_evidence.py": "4fc50b31899594047ce42c429455c84709f8a7db3c526b84ee4fd4033b4fc420",
+    "agent_support/closure_evidence_v3.py": "1a2aaee6e1b7f82e9ef16608da820e41747c9145774549b54f41da2ad501b7bb",
+    "agent_support/closure_inference_v2.py": "ff7576694b7b18f34f8af7ca9156cff440b2a4730da66c1ca42c57e144a33302",
+    "agent_support/closure_integrity.py": "5058cb03b18f6c18c06f5623caa32f33344873e73d675c7d745ef004e6db41d5",
+    "agent_support/closure_limits.py": "79c9d6749b74a03f42166179ac4b1492dae6e5520161d427e993f37ae627b647",
+    "agent_support/closure_reference.py": "569e78649fac4cf60d09735e2751a91481affe7b4668fb9bef7d1b62974d3409",
+    "agent_support/closure_statistics.py": "5faa0fdbc13fc9f11c781224dbe9830665825bf5b5d607d9b2bc491f1a87ea5d",
+    "agent_support/closure_v2.py": "4c6278b1e05329ba5f0e960efc8920878aa5c7d5984d67e4aa51ca305a192aca",
+    "agent_support/closure_wave.py": "a0e362a8b01a611d1aa863921b931b617c3a6bf3e020d9a4aa9554f5938d1684",
+    "agent_support/extract_support.py": "ca9ba0fae9e10595b0ff9556241c3ec5f1548bd95d35cab0127514b41167bfd5",
+    "agent_support/support_demo.py": "6d1ac262218c61d5304b6a5e3b846ea92f25cb109690aa1bd957d18d582ad4be",
+    "agent_support/support_demo_v2.py": "6be3d60758566d27f98c52f1ae0f8d81243f06bb8f302a056c979b0a37371ead",
+    "agent_support/test_closure_support.py": "105ab9fcd598dd344f78603ef7ec79ddac8fe0e7701014131b2b090f945856b7",
+    "agent_support/test_closure_v2.py": "ddba0fb95b27e0d6db4bac7f5eae64fc498d1a0d346a1bf04072232d29f89bbc",
+    "Tools/run_closure_regressions_v1.py": "33b799ee2d09315eba1e96c987aa4a43eb945ad389d5e057cad66c94b3e69fb8",
+    "Tools/restore_pinned_checkout_v1.py": "781da38773c5820606d878f88722a77f4a3cae5ac694acef1a8aec59a5c7570d",
+    "Tools/prepare_closure_campaign_v1.py": "1df14f88a2d3da7e6408a022c135c407b5179a54a4e9d42e18666b2652deceb8",
+    "Benchmarks/eeg-motor-imagery/comparativa-anidada/run_nested_comparators_v1.py": "3215b8594e8fa9c142d7576a1483ca9cea32f996eaf497a0f3aba9cf9958122a",
+    "Benchmarks/eeg-motor-imagery/comparativa-anidada/analyze_comparators_v1.py": "ac621a9f6025d80a7c7570841728c922ed8c0ab19b683f80cdfc79fbad923625",
+    "Benchmarks/eeg-motor-imagery/codigo/work/bench.py": "0e535106624704643ab8292fcaa7fff50ca71ab487ace29ab8cd537867a555a4",
+    "Benchmarks/eeg-motor-imagery/codigo/work/nested/nested_bench.py": "77f1652960bfd99fc8cde676d7b8cac3994b1cb3fd007706c71cede204b77589"
+  },
+  "registration": "Publish this profile and exact code on GitHub before new experimental data; existing human GitHub sequence authorization retained, no external registry claim",
+  "known_results": "P1-7 diffraction diagnostic, archived resident rejection, EEG N1/N2, Wine/Digits comparisons all already known",
+  "cpu_budget": {
+    "processes": 1,
+    "blas_threads": 1,
+    "diagnostic_module_deadline_seconds": 45,
+    "eeg_torch_threads": 2,
+    "eeg_max_processes": 2
+  },
+  "trials": [
+    {
+      "id": "EXP-006-EEG-COMPARATORS-20261012-001",
+      "hypothesis": "Original H1/H2 in the 2026-10-10 preregistration, primary N1",
+      "protocol": "Benchmarks/eeg-motor-imagery/comparativa-anidada/PREREGISTRO-EEG.md",
+      "method": "Exact published grids, seeds and folds; pilot one complete external fold; no hidden Xte access",
+      "stop": "Measure one fold per method; complete FBCSP 17 subjects; EEGNet follows original 3h rule, no 17-subject claim from partial data",
+      "metrics": "Raw logits; subject N1; original bootstrap/Wilcoxon/Holm rule; simultaneous intervals separate sensitivity",
+      "limits": [
+        "known subjects and biased optical grid",
+        "not native captured optical geometry",
+        "restricted data not redistributed"
+      ]
+    },
+    {
+      "id": "EXP-006-RESIDENT-ARCHIVE-DIAG-20261012-001",
+      "hypothesis": "Archived unit coefficients propagated in binary64 explain the rejected GPU outputs, or isolate traversal/readback",
+      "method": "CPU replay of all 133 archived states with actual GPU local coefficient rows; compare to archived CPU and GPU four-control fields",
+      "budget": "900 seconds, one CPU thread, 512 MiB working data; native GPU trial separate and only after resource admission",
+      "rule": "Keep fixed field threshold 1e-11; do not assign a GPU precision cause from a CPU-only diagnostic",
+      "limits": [
+        "no new native execution",
+        "cannot locate native first differing intermediate state without native trace"
+      ]
+    }
+  ]
+}
