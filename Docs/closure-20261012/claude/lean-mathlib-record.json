@@ -1,0 +1,61 @@
+{
+ "schema": "neuro3d.lean_record.v1",
+ "date": "2026-10-13",
+ "toolchain": "leanprover/lean4:v4.34.0",
+ "lean_commit": "293d5d0c0c3f3dded4688b3ccd6a33939ac5102b",
+ "mathlib": {
+  "tag": "v4.34.0",
+  "commit": "5ed2965256430c3649e86755f9576b54eca72435",
+  "lean_toolchain": "leanprover/lean4:v4.34.0",
+  "oleans": "prebuilt, via lake exe cache get (8908 files); Mathlib not built from source"
+ },
+ "command": "lake build",
+ "cwd": "Lean/closure-mathlib",
+ "env": {
+  "MATHLIB_CACHE_DIR": "D:/PROJECTS/.cognition/lean-cache/mathlib",
+  "XDG_CACHE_HOME": "D:/PROJECTS/.cognition/lean-cache/xdg",
+  "LAKE_CACHE_DIR": "D:/PROJECTS/.cognition/lean-cache/lake"
+ },
+ "exit_code": 0,
+ "build_summary": [
+  "ℹ [8924/8925] Built Neuro3DCertificates (114s)",
+  "Build completed successfully (8925 jobs)."
+ ],
+ "warnings_or_errors": [],
+ "output": [
+  "'Neuro3D.decisionBox' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'Neuro3D.powerPerturbation_general' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'Neuro3D.powerPerturbation' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'Neuro3D.norm_pow_apply_le' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'Neuro3D.hasSum_tail_majorant' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'Neuro3D.neumann_summable' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'Neuro3D.neumann_partialTail' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'Neuro3D.neumann_tsumTail' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'Neuro3D.neumann_truncation' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'Neuro3D.detectorRankTwo' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'Neuro3D.gramHermitian' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'Neuro3D.gramRankOne' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'Neuro3D.detectorDifferenceRankFour' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'Neuro3D.contraction_normSq_le' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'Neuro3D.passiveEuclidean' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'Neuro3D.sq_norm_eq_re_im' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'Neuro3D.splitterPassive' depends on axioms: [propext, Classical.choice, Quot.sound]"
+ ],
+ "theorem_count": 17,
+ "sorry_free": true,
+ "source": "Lean/closure-mathlib/Neuro3DCertificates.lean",
+ "source_sha256": "6f734cf530357667c1189364609b6110f4b345f9f6b596a48cfa44e877d34e00",
+ "project_files_sha256": {
+  "lakefile.toml": "8b86f28a7884f07241a06bacb5a08d4239e4ada1bd0fee0dff8b40dcd4a636d6",
+  "lean-toolchain": "8733782dc070a99b312039cda424f601b80f3be6f6f512627da5ba25adc27632",
+  "lake-manifest.json": "8cb0eea70f89734bc82e259055b859348fb16e3688f17865cee96d8de9f338e4"
+ },
+ "axioms_note": "Every theorem depends only on propext, Classical.choice, Quot.sound; no sorryAx.",
+ "scope": "T1 (decision boxes, R), T2 (power perturbation, C and any seminormed group), T3 (Neumann series for continuous linear maps with ||A|| <= r < 1: summability, every partial tail, tsum tail, truncation error on a Banach space), T4 (rank <= 2 of a a^T + b b^T over R, Hermitian rank <= 1 Gram form over C, rank <= 4 of a detector difference), T5 (contraction on EuclideanSpace C, concrete symmetric two-port).",
+ "not_proved": "That any producer's numbers satisfy these hypotheses (box soundness, ||A|| <= r < 1, detector structure, passivity constants), floating-point rounding, and any refinement link to shader/Python code.",
+ "disk_usage": {
+  "Lean/closure-mathlib/.lake (git-ignored)": "7.8G",
+  "D:/PROJECTS/.cognition/lean-cache/mathlib (compressed .ltar cache)": "450M",
+  "C: usage": "none beyond the pre-installed elan toolchain"
+ }
+}
