@@ -1,0 +1,251 @@
+{
+  "schema": "neuro3d.status_audit.v1",
+  "snapshot_utc": "2026-10-13T06:46:16.792455+00:00",
+  "main_evidence_commit": "5526bc74fb6843ae3e7b0498ef5f206e689a1c8d",
+  "lab_evidence_commit": "9d4457af410b880d319106e33f85c4b371e6c4b6",
+  "claims_source_checks": [
+    {
+      "path": "Docs/SCIENTIFIC_ACCEPTANCE_REPORT_2026-10-09.md",
+      "declared_sha256": "6750e8dcd8444650b9c4ce222e8c37e86cd43df7f8a72b46c882a123d6c43057",
+      "git_sha256": "6750e8dcd8444650b9c4ce222e8c37e86cd43df7f8a72b46c882a123d6c43057",
+      "local_sha256": "6750e8dcd8444650b9c4ce222e8c37e86cd43df7f8a72b46c882a123d6c43057",
+      "declared_matches_git": true,
+      "declared_matches_local": true
+    },
+    {
+      "path": "Docs/validation/native-deferred-training-2026-10-09/attempt01/worker/result.json",
+      "declared_sha256": "4fdf2772dd13f7c619c060dbb978a1d949ddba172c4cc6a396a5a73522f5376b",
+      "git_sha256": "4fdf2772dd13f7c619c060dbb978a1d949ddba172c4cc6a396a5a73522f5376b",
+      "local_sha256": "4fdf2772dd13f7c619c060dbb978a1d949ddba172c4cc6a396a5a73522f5376b",
+      "declared_matches_git": true,
+      "declared_matches_local": true
+    },
+    {
+      "path": "Docs/validation/native-deferred-training-certificate-2026-10-09/attempt01/worker/certificate.json",
+      "declared_sha256": "693edc432ada9039dbe880b8ae5ac1c10c027534087668fb6ff7b4870a3d2d29",
+      "git_sha256": "693edc432ada9039dbe880b8ae5ac1c10c027534087668fb6ff7b4870a3d2d29",
+      "local_sha256": "693edc432ada9039dbe880b8ae5ac1c10c027534087668fb6ff7b4870a3d2d29",
+      "declared_matches_git": true,
+      "declared_matches_local": true
+    },
+    {
+      "path": "Docs/validation/native-resident-graph-2026-10-09/attempt03/worker/coherence_control_observations_before_gate.json",
+      "declared_sha256": "6e11757e2b68aa7343572bee29cf5544b2e259452cc8505415d3be2c5430d2a1",
+      "git_sha256": "6e11757e2b68aa7343572bee29cf5544b2e259452cc8505415d3be2c5430d2a1",
+      "local_sha256": "6e11757e2b68aa7343572bee29cf5544b2e259452cc8505415d3be2c5430d2a1",
+      "declared_matches_git": true,
+      "declared_matches_local": true
+    },
+    {
+      "path": "Docs/NATIVE_GRAPHICS_SCALING_PROTOCOL_2026-10-09.md",
+      "declared_sha256": "dd59af3628965b0cd3624292c8a2631e4329f0cdd90c7677c24e710b77ae8dd0",
+      "git_sha256": "dd59af3628965b0cd3624292c8a2631e4329f0cdd90c7677c24e710b77ae8dd0",
+      "local_sha256": "dd59af3628965b0cd3624292c8a2631e4329f0cdd90c7677c24e710b77ae8dd0",
+      "declared_matches_git": true,
+      "declared_matches_local": true
+    },
+    {
+      "path": "Benchmarks/benchmark-v1/resultados/RESULTADOS_BENCHMARK_V1.md",
+      "declared_sha256": "b62af82e470f8119df018a778837714b02a4d920eec4d4a9ec825870599ccc0b",
+      "git_sha256": "b62af82e470f8119df018a778837714b02a4d920eec4d4a9ec825870599ccc0b",
+      "local_sha256": "b62af82e470f8119df018a778837714b02a4d920eec4d4a9ec825870599ccc0b",
+      "declared_matches_git": true,
+      "declared_matches_local": true
+    },
+    {
+      "path": "Benchmarks/escala-modos/sensibilidad/resultados_sensibilidad.md",
+      "declared_sha256": "c5810c9580bc4b297a05da61827f2341b74c39f3bfcaf7538ae0e6e0587062f5",
+      "git_sha256": "c5810c9580bc4b297a05da61827f2341b74c39f3bfcaf7538ae0e6e0587062f5",
+      "local_sha256": "c5810c9580bc4b297a05da61827f2341b74c39f3bfcaf7538ae0e6e0587062f5",
+      "declared_matches_git": true,
+      "declared_matches_local": true
+    },
+    {
+      "path": "Benchmarks/validacion-onda/resultados/RESULTADOS_VALIDACION.json",
+      "declared_sha256": "c49bed27c85dea668b590d5cb4c1a6ff3161d032a3777cecab38a8af31774cce",
+      "git_sha256": "c49bed27c85dea668b590d5cb4c1a6ff3161d032a3777cecab38a8af31774cce",
+      "local_sha256": "c49bed27c85dea668b590d5cb4c1a6ff3161d032a3777cecab38a8af31774cce",
+      "declared_matches_git": true,
+      "declared_matches_local": true
+    },
+    {
+      "path": "Benchmarks/validacion-onda/resultados/RESULTADOS_VALIDACION.json",
+      "declared_sha256": "c49bed27c85dea668b590d5cb4c1a6ff3161d032a3777cecab38a8af31774cce",
+      "git_sha256": "c49bed27c85dea668b590d5cb4c1a6ff3161d032a3777cecab38a8af31774cce",
+      "local_sha256": "c49bed27c85dea668b590d5cb4c1a6ff3161d032a3777cecab38a8af31774cce",
+      "declared_matches_git": true,
+      "declared_matches_local": true
+    },
+    {
+      "path": "Benchmarks/validacion-onda/control_fijo/resultados/RESULTADOS_CONTROL.md",
+      "declared_sha256": "4bb92aab9dbcbfcbd606665a01f32b64555f3b7d931b9dc1599640843d81a6e2",
+      "git_sha256": "4bb92aab9dbcbfcbd606665a01f32b64555f3b7d931b9dc1599640843d81a6e2",
+      "local_sha256": "4bb92aab9dbcbfcbd606665a01f32b64555f3b7d931b9dc1599640843d81a6e2",
+      "declared_matches_git": true,
+      "declared_matches_local": true
+    },
+    {
+      "path": "Benchmarks/capacidad-aprendizaje/INFORME-EJECUCION-F4.md",
+      "declared_sha256": "13b35470d318e7e13b2a36f620afc70e9358b23bc553cd84e7104588e1d90b51",
+      "git_sha256": "13b35470d318e7e13b2a36f620afc70e9358b23bc553cd84e7104588e1d90b51",
+      "local_sha256": "13b35470d318e7e13b2a36f620afc70e9358b23bc553cd84e7104588e1d90b51",
+      "declared_matches_git": true,
+      "declared_matches_local": true
+    },
+    {
+      "path": "Benchmarks/eeg-motor-imagery/evidencia-validacion-anidada/results_full.json",
+      "declared_sha256": "96bc68de091565f38afb113125b092407fbf89aee6c6f8a559b5a685a2089a70",
+      "git_sha256": "96bc68de091565f38afb113125b092407fbf89aee6c6f8a559b5a685a2089a70",
+      "local_sha256": "96bc68de091565f38afb113125b092407fbf89aee6c6f8a559b5a685a2089a70",
+      "declared_matches_git": true,
+      "declared_matches_local": true
+    },
+    {
+      "path": "Docs/EXTERNAL_INSTALLED_BLENDER_RECOVERY_PROTOCOL_2026-10-09.md",
+      "declared_sha256": "e5648091cb6942d9c5de13eb7cb65a1bb1b12ee1fa5aa4cfb694aa984a20582c",
+      "git_sha256": "e5648091cb6942d9c5de13eb7cb65a1bb1b12ee1fa5aa4cfb694aa984a20582c",
+      "local_sha256": "e5648091cb6942d9c5de13eb7cb65a1bb1b12ee1fa5aa4cfb694aa984a20582c",
+      "declared_matches_git": true,
+      "declared_matches_local": true
+    },
+    {
+      "path": "Docs/research/novelty-p1-6/VEREDICTO-P1-6.md",
+      "declared_sha256": "747c8ab2cc6cd7efb0fa46b39e3dc896550bb5c28c144bf974f359067feffaee",
+      "git_sha256": "747c8ab2cc6cd7efb0fa46b39e3dc896550bb5c28c144bf974f359067feffaee",
+      "local_sha256": "747c8ab2cc6cd7efb0fa46b39e3dc896550bb5c28c144bf974f359067feffaee",
+      "declared_matches_git": true,
+      "declared_matches_local": true
+    }
+  ],
+  "claim_checks_all_git_match": true,
+  "source_pins": [
+    {
+      "repository": "Neuro3D",
+      "commit": "5526bc74fb6843ae3e7b0498ef5f206e689a1c8d",
+      "path": "Benchmarks/wave-confirmation-c1/results/WAVE_C1_RESULTS.json",
+      "bytes": 122906,
+      "sha256": "449689459fa7943489595c90f7c1123c251a1e1b0bbd839e6a2bd649d293d972"
+    },
+    {
+      "repository": "Neuro3D",
+      "commit": "5526bc74fb6843ae3e7b0498ef5f206e689a1c8d",
+      "path": "Benchmarks/geometry-capacity-k1/results/HA_K1_RESULTS.json",
+      "bytes": 36391,
+      "sha256": "23b31c2cf1f9307dde04097e61c0a9c661bd7d12a4e52d66b9a981a679131652"
+    },
+    {
+      "repository": "Neuro3D",
+      "commit": "5526bc74fb6843ae3e7b0498ef5f206e689a1c8d",
+      "path": "Benchmarks/compiled-operator-g1/results/G1_RESULTS.json",
+      "bytes": 5010,
+      "sha256": "a79b91c903c2e6500a3f517ffcfecfb9331bfbdde3e54814ac207aa01238606d"
+    },
+    {
+      "repository": "Neuro3D",
+      "commit": "5526bc74fb6843ae3e7b0498ef5f206e689a1c8d",
+      "path": "Docs/closure-20261012/claude/lean-mathlib-record.json",
+      "bytes": 3849,
+      "sha256": "389b23c5959152e26f49093564c0e1089d833301ff751d11f38be01e295af75a"
+    },
+    {
+      "repository": "Neuro3D",
+      "commit": "5526bc74fb6843ae3e7b0498ef5f206e689a1c8d",
+      "path": "Lean/closure-mathlib/Neuro3DCertificates.lean",
+      "bytes": 10796,
+      "sha256": "6f734cf530357667c1189364609b6110f4b345f9f6b596a48cfa44e877d34e00"
+    },
+    {
+      "repository": "Neuro3D",
+      "commit": "5526bc74fb6843ae3e7b0498ef5f206e689a1c8d",
+      "path": "Docs/closure-20261012/eeg-comparison.json",
+      "bytes": 10465,
+      "sha256": "2d4b0c02af58709308845b617dfab59498080f106a4c5b336df55a3ad479d480"
+    },
+    {
+      "repository": "Neuro3D",
+      "commit": "5526bc74fb6843ae3e7b0498ef5f206e689a1c8d",
+      "path": "Docs/closure-20261012/claude/OWNER-DECISIONS-20261013.md",
+      "bytes": 1574,
+      "sha256": "7f397b710890f210ac2ed40ff816c3dac49774be09aec11b5e154e55a1bfad42"
+    },
+    {
+      "repository": "Neuro3D",
+      "commit": "5526bc74fb6843ae3e7b0498ef5f206e689a1c8d",
+      "path": "Docs/closure-20261012/STATUS_A_R.md",
+      "bytes": 8621,
+      "sha256": "e4db663f86d032ccb8636f8c8e296230910461438bb3a948ddedc83302160e94"
+    },
+    {
+      "repository": "Neuro3D",
+      "commit": "5526bc74fb6843ae3e7b0498ef5f206e689a1c8d",
+      "path": "Docs/closure-20261012/claude/closure-integrity-claude-20261013.json",
+      "bytes": 4649,
+      "sha256": "c44796665d30b260e7c56b034ca35ea4e1f25d8761053b23cb7980a8d4e3e43d"
+    },
+    {
+      "repository": "Neuro3D",
+      "commit": "5526bc74fb6843ae3e7b0498ef5f206e689a1c8d",
+      "path": "Docs/paper/researchgate/neuro3d_paper.pdf",
+      "bytes": 905721,
+      "sha256": "3d96fc54a9f262d949070c86abbee4aea5a14489e37b3cab9a75606eafb4ae83"
+    },
+    {
+      "repository": "Neuro3D-Lab",
+      "commit": "9d4457af410b880d319106e33f85c4b371e6c4b6",
+      "path": "README.md",
+      "bytes": 34482,
+      "sha256": "c9d31d4521c92f6fd6402e065785e60fd0d130fa08de6bb982c533251aa79cf5"
+    },
+    {
+      "repository": "Neuro3D-Lab",
+      "commit": "9d4457af410b880d319106e33f85c4b371e6c4b6",
+      "path": "evidence/gpu-probe-rtx3090.json",
+      "bytes": 7873,
+      "sha256": "50302c4a85f4c735a21c6736efcf00f7b9a29edeaf018d92e703e1925575b958"
+    },
+    {
+      "repository": "Neuro3D-Lab",
+      "commit": "9d4457af410b880d319106e33f85c4b371e6c4b6",
+      "path": "evidence/refinement-4-8-16-historical.json",
+      "bytes": 5359,
+      "sha256": "af60e3c20192e85f89e104bf2e211abbf0851da16a34ec2f6e0266af8d23a216"
+    },
+    {
+      "repository": "Neuro3D-Lab",
+      "commit": "9d4457af410b880d319106e33f85c4b371e6c4b6",
+      "path": "docs/CONTRACTS/CONTRATO-013-closure-benchmark.md",
+      "bytes": 14125,
+      "sha256": "9b37a4fb49fd5772ae03ae648424ab4826130274b715ded8b82a967c3197639e"
+    },
+    {
+      "repository": "Neuro3D-Lab",
+      "commit": "9d4457af410b880d319106e33f85c4b371e6c4b6",
+      "path": "docs/CONTRACTS/CONTRATO-014-fidelity.md",
+      "bytes": 5823,
+      "sha256": "6708512ddcfd3461971a5f8eeb18835cc76619af4a85e18eb659d68df9d274e0"
+    },
+    {
+      "repository": "Neuro3D-Lab",
+      "commit": "9d4457af410b880d319106e33f85c4b371e6c4b6",
+      "path": "docs/CONTRACTS/CONTRATO-015-maxwell.md",
+      "bytes": 3115,
+      "sha256": "bc4ace9c7c509f3a27d68b9d189fb9c0c2304fc93d5e965ea7c7c60845906026"
+    }
+  ],
+  "lean_source_matches_build_record": true,
+  "jev": {
+    "mode": "v2-query",
+    "exit_code": 0,
+    "provenance": "jev",
+    "status": "connected",
+    "model": "jev-1.13.0",
+    "decisions": {
+      "audit": {
+        "value": "sourced_joint_audit",
+        "confidence": 1.0
+      }
+    },
+    "scope": "Advisory synthesis method, not scientific proof or authorization"
+  },
+  "scope": "Read-only documentary/hash audit; no rerun, no new experimental result, no external human replication. Operational partial-progress snapshot is local; no completed TEST claim."
+}
