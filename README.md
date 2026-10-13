@@ -12,6 +12,29 @@ Red óptica escalar entrenable que calcula desde la **geometría evaluada de Ble
 
 ## Resultados comprobados
 
+El proyecto tiene resultados positivos de funcionamiento, precisión, aprendizaje,
+recuperación y optimización. Los límites de una variante no cambian el resultado
+de otra. La [auditoría de historial y recibos del 13 de octubre](Docs/PERFORMANCE_EVIDENCE_AUDIT_2026-10-13.md)
+comprobó 541 archivos históricos de ocho conjuntos: ninguno se borró ni cambió
+respecto a su publicación original; 216 hashes de dos archivos de evidencia también coinciden.
+
+### Mejoras de rendimiento observadas, con su comparación concreta
+
+| Ruta y tarea | Resultado positivo registrado | Comparador y alcance |
+|---|---|---|
+| Entrenamiento CPU con una prueba geométrica continua nueva | **393,11 → 90,93 s; 4,32×** | Mismos 61 estados, pérdidas, potencias y 150 decisiones. Incluye prueba y reconstrucción; una pareja en el equipo compartido. [Protocolo y recibos](Docs/GEOMETRY_REUSE_TRAINING_PROTOCOL_2026-10-09.md) |
+| Grafo Torch CPU → CUDA, lote de 2.048 entradas | **75,00 → 25,72 ms; 2,92×** en cómputo caliente | Campos, potencias y ambos Jacobianos, mismo programa y precisión. Aproximadamente 2,76× al añadir las transferencias de entrada/lectura registradas. Compilación y arranque se contabilizan aparte; el baseline matricial equivalente es todavía más rápido. [Medidas](Docs/TRAINED_GRAPH_NVIDIA_BENCHMARK_2026-10-09.md) |
+| Operador compilado para geometría fija | Evaluación de campos **121–1.583×** más rápida en los tres lotes de inferencia medidos | Frente al recorrido del grafo CPU, con U ya compilada y cacheada; la compilación inicial no está incluida en cada llamada caliente. No es una medida completa de clasificación ni de un procesador óptico físico. [G1](Benchmarks/compiled-operator-g1/RESULTS-G1.md) |
+| Campos y tangentes, lote 4.096, recompilando U | **508,28 → 31,12 ms; 16,33×** | Incluye recompilación del operador; mide campos y tangentes, sin pérdida/Adam ni auditoría geométrica completa. G1 no alcanzó 2× en todas las otras celdas exigidas por su hipótesis. [Datos crudos](Benchmarks/compiled-operator-g1/results/G1_RESULTS.json) |
+| Empaquetado vectorizado en CPU | **2,01–2,42×** en lote 150 y **2,45–2,50×** en lote 4.096 | Los mismos 5.650 paquetes ópticos byte por byte; solo preparación de paquetes, todavía sin integración GPU. Una entrada empeora. [Ensayo](Docs/NATIVE_PACKET_WORKLOAD_PROTOCOL_2026-10-09.md) |
+
+Son ventajas de rutas de software medidas en CPU/GPU de silicio. La comparación
+de consumo y latencia de un **dispositivo fotónico físico** frente a chips
+convencionales requiere medidas de esa cadena completa y sigue pendiente.
+La energía no medida tiene estado **no disponible**, no un resultado negativo.
+
+### Funcionamiento y precisión
+
 | Evidencia | Resultado y alcance |
 |---|---|
 | Escena capturada | 104 objetos, 6.656 triángulos, cinco fuentes, ocho modos |
@@ -53,6 +76,11 @@ flowchart LR
 La fase relativa cambia la función de la red: sumar intensidades de fuentes independientes elimina interferencias. Las potencias son modales normalizadas; longitud de onda **0,1 BU**, sin calibración física en metros o vatios. El modelo pasivo tiene capacidad cuadrática restringida; no se presenta como aproximador universal.
 
 ## Aceleración gráfica y coste completo
+
+Esta sección evalúa el ejecutor gráfico nativo y su coste de captura, prueba,
+transporte y lectura. Sus resultados no sustituyen las mejoras de la tabla
+anterior: el ensayo CUDA del grafo entrenado y las optimizaciones CPU/operador
+compilado son rutas distintas, con sus propios datos y comparadores.
 
 | Tecnología ejecutada | Resultado medido |
 |---|---|

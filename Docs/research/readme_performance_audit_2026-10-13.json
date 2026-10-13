@@ -1,0 +1,282 @@
+{
+  "schema": "neuro3d.readme_forensic_audit.v1",
+  "utc": "2026-10-13T11:49:18.355863+00:00",
+  "repository": "https://github.com/Agnuxo1/Neuro3D",
+  "audited_main": "d69810cbebebb34599338e6d59193887ba10a9d1",
+  "codex_cut": "74325cc5e0c2d36e5785e3f0fee2ab4c8b69dec6",
+  "metadata": "Commit author strings do not identify an executing LLM or prove intent.",
+  "historical_file_identity": [
+    {
+      "first_commit": "a87033959245eab28186273573812f6e1074ee1c",
+      "prefix": "Docs/validation/geometry-reuse-training-2026-10-09/attempt01",
+      "original_files": 50,
+      "unchanged": 50,
+      "deleted": [],
+      "changed": [],
+      "added": []
+    },
+    {
+      "first_commit": "1d18f22841c818422a0ee3b291f08c5ec7ef5d5f",
+      "prefix": "Docs/validation/trained-graph-cuda-2026-10-09/attempt01",
+      "original_files": 40,
+      "unchanged": 40,
+      "deleted": [],
+      "changed": [],
+      "added": []
+    },
+    {
+      "first_commit": "e4f6cbc13e4c89e9a7836ad2de0cc5e3ea620b79",
+      "prefix": "Docs/validation/native-graphics-frontier-2026-10-09/attempt02",
+      "original_files": 93,
+      "unchanged": 93,
+      "deleted": [],
+      "changed": [],
+      "added": []
+    },
+    {
+      "first_commit": "7cce9f0b0465000a47ad5952654d6f9de28d9b64",
+      "prefix": "Docs/validation/native-graphics-scaling-2026-10-09/attempt02",
+      "original_files": 170,
+      "unchanged": 170,
+      "deleted": [],
+      "changed": [],
+      "added": []
+    },
+    {
+      "first_commit": "a6d0fbec5011bdc76abad71edac86519016348f4",
+      "prefix": "Docs/validation/native-resident-graph-2026-10-09/attempt03",
+      "original_files": 175,
+      "unchanged": 175,
+      "deleted": [],
+      "changed": [],
+      "added": []
+    },
+    {
+      "first_commit": "20631682922eed1c50bc7664cb0d39bcbe0f6230",
+      "prefix": "Docs/validation/native-packet-workload-2026-10-09/attempt01",
+      "original_files": 6,
+      "unchanged": 6,
+      "deleted": [],
+      "changed": [],
+      "added": []
+    },
+    {
+      "first_commit": "874a1443c96229c43573fadc6fe664f4efbdcf26",
+      "prefix": "Benchmarks/compiled-operator-g1/results/G1_RESULTS.json",
+      "original_files": 1,
+      "unchanged": 1,
+      "deleted": [],
+      "changed": [],
+      "added": []
+    },
+    {
+      "first_commit": "25735f8c7ca1be25e2f9e37fd115e2aa3bcb5e45",
+      "prefix": "Benchmarks/coste-completo",
+      "original_files": 6,
+      "unchanged": 6,
+      "deleted": [],
+      "changed": [],
+      "added": []
+    }
+  ],
+  "deleted_paths_since_codex": [],
+  "raw_validation_changes_since_codex": [],
+  "raw_pins": [
+    {
+      "index": "Docs/validation/geometry-reuse-training-2026-10-09/attempt01/supervisor.json",
+      "pins": 47,
+      "failures": []
+    },
+    {
+      "index": "Docs/validation/native-graphics-scaling-2026-10-09/attempt02/evidence_index.json",
+      "pins": 169,
+      "failures": []
+    }
+  ],
+  "positive_full_training": {
+    "ratio": 4.323258416160602,
+    "recorded_ratio": 4.323258416160602,
+    "coordinates_loss_powers_max_differences": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "decision_agreement": 150,
+    "scope": "One paired full-worker CPU comparison: original61pointgeometryaudits versus freshly executed wholecontinuousfamily proof +61exactmembershipchecks. Same data/split/initialization/updates/nativequantization; all61coordinates identical, all150predictions same. Continuous proof and fresh finalrebuild overhead included; no repeatedtiming confidence interval, GPU, energy, native Blender transform or physicalprocessor claim."
+  },
+  "packet_optimization": [
+    {
+      "batch": 1,
+      "repetition": 0,
+      "ratio_original_over_candidate": 0.7091679592422135,
+      "byte_identical": true
+    },
+    {
+      "batch": 1,
+      "repetition": 1,
+      "ratio_original_over_candidate": 0.7950819107027213,
+      "byte_identical": true
+    },
+    {
+      "batch": 150,
+      "repetition": 0,
+      "ratio_original_over_candidate": 2.014172426968433,
+      "byte_identical": true
+    },
+    {
+      "batch": 150,
+      "repetition": 1,
+      "ratio_original_over_candidate": 2.4196207484812824,
+      "byte_identical": true
+    },
+    {
+      "batch": 4096,
+      "repetition": 0,
+      "ratio_original_over_candidate": 2.4973339423586354,
+      "byte_identical": true
+    },
+    {
+      "batch": 4096,
+      "repetition": 1,
+      "ratio_original_over_candidate": 2.449683424845111,
+      "byte_identical": true
+    }
+  ],
+  "native_graphics_negative": [
+    {
+      "batch": 1,
+      "repetition": 0,
+      "CPU_seconds": 0.026787700000568293,
+      "GPU_seconds": 0.592881500000658,
+      "GPU_over_CPU": 22.132601902667275
+    },
+    {
+      "batch": 1,
+      "repetition": 1,
+      "CPU_seconds": 0.020903600001474842,
+      "GPU_seconds": 0.33526139999594307,
+      "GPU_over_CPU": 16.038452705385144
+    },
+    {
+      "batch": 150,
+      "repetition": 0,
+      "CPU_seconds": 0.020159899999271147,
+      "GPU_seconds": 4.0278764000031515,
+      "GPU_over_CPU": 199.7964474103926
+    },
+    {
+      "batch": 150,
+      "repetition": 1,
+      "CPU_seconds": 0.03194149999762885,
+      "GPU_seconds": 3.45844400000351,
+      "GPU_over_CPU": 108.27431398839268
+    },
+    {
+      "batch": 4096,
+      "repetition": 0,
+      "CPU_seconds": 0.02434180000273045,
+      "GPU_seconds": 98.00690849999955,
+      "GPU_over_CPU": 4026.2802458735996
+    },
+    {
+      "batch": 4096,
+      "repetition": 1,
+      "CPU_seconds": 0.026418099994771183,
+      "GPU_seconds": 97.72029940000357,
+      "GPU_over_CPU": 3698.990442891234
+    }
+  ],
+  "warm_CUDA_positive_large_batch": [
+    {
+      "batch": 1,
+      "CPU_graph_seconds": 0.014454700001806486,
+      "CUDA_graph_seconds": 0.024496699996234383,
+      "compute_ratio_CPU_over_CUDA": 0.5900672337101918,
+      "input_and_readback_seconds": 0.0006097000004956499,
+      "ratio_including_reported_input_and_readback": 0.5757376606637802,
+      "CPU_dense_seconds": 7.119999645510688e-05,
+      "CUDA_dense_seconds": 0.0004349000009824522
+    },
+    {
+      "batch": 150,
+      "CPU_graph_seconds": 0.017431000000215136,
+      "CUDA_graph_seconds": 0.027060799999162555,
+      "compute_ratio_CPU_over_CUDA": 0.6441420800846452,
+      "input_and_readback_seconds": 0.00042010000470327213,
+      "ratio_including_reported_input_and_readback": 0.6342950921462929,
+      "CPU_dense_seconds": 0.0004988000000594184,
+      "CUDA_dense_seconds": 0.0005585999970207922
+    },
+    {
+      "batch": 2048,
+      "CPU_graph_seconds": 0.0750019000042812,
+      "CUDA_graph_seconds": 0.025723200000356883,
+      "compute_ratio_CPU_over_CUDA": 2.9157297693615343,
+      "input_and_readback_seconds": 0.0014913000050000846,
+      "ratio_including_reported_input_and_readback": 2.755953627276549,
+      "CPU_dense_seconds": 0.008596799998485949,
+      "CUDA_dense_seconds": 0.0008973000003607012
+    }
+  ],
+  "resident_negative": {
+    "field_error": 6.376147888196662e-08,
+    "budget": 1e-11,
+    "unchanged": true
+  },
+  "compiled_operator_G1": {
+    "rows": [
+      {
+        "cell": "inference_batch1",
+        "with_recompilation": 1.1981061352038154,
+        "cached_U": 1583.368148833909
+      },
+      {
+        "cell": "training_step_batch1",
+        "with_recompilation": 1.0400145346690335,
+        "cached_U": 912.2516358891369
+      },
+      {
+        "cell": "inference_batch150",
+        "with_recompilation": 1.1427055820351855,
+        "cached_U": 792.4467338820343
+      },
+      {
+        "cell": "training_step_batch150",
+        "with_recompilation": 1.262342678703837,
+        "cached_U": 48.8688969484939
+      },
+      {
+        "cell": "inference_batch4096",
+        "with_recompilation": 1.6251936215213887,
+        "cached_U": 121.4645633292921
+      },
+      {
+        "cell": "training_step_batch4096",
+        "with_recompilation": 16.332989503017036,
+        "cached_U": 29.169808775996533
+      }
+    ],
+    "recorded_decision": "REFUTED",
+    "recomputed_decision": "REFUTED",
+    "min_decisive_ratio": 1.1427055820351855,
+    "all_six_medians_improve_with_recompile": true,
+    "interpretation": "The all-four-cells >=2x hypothesis fails; that does not mean the optimized route is slower."
+  },
+  "energy": {
+    "rows": 45,
+    "arithmetic_errors": [],
+    "declared_watts_per_core": 14.0,
+    "disclosure": "La energía NO se mide. E_UB = t_CPU x 14 W es una cota superior declarada en el preregistro (140 W / 10 núcleos); sin medidor externo ni contadores de potencia. No se estima energía de GPU.",
+    "physical_chip_energy_advantage_verified": false,
+    "upper_bound_caution": "Dividing package TDP by core count does not itself certify a bound on per-core/process watts; this is a declared proxy, not measured joules."
+  },
+  "readme_positive_omission": {
+    "claim": "393.11s to90.93s;4.32x paired CPU training",
+    "first_positive_commit": "a87033959245eab28186273573812f6e1074ee1c",
+    "removed_from_readme_commit": "d38a02da590c690185bda0f38e05f4d63ac858c4",
+    "preserved_in": "Docs/GEOMETRY_REUSE_TRAINING_PROTOCOL_2026-10-09.md",
+    "proof": "git log -G and exact before/after README; original result subtree retains blob IDs"
+  },
+  "scope": "Static history, source/pin integrity and recomputation of reported arithmetic; no hardware experiments rerun, no proof of operator intention.",
+  "G1_cost_scope_note": "G1 times fields and field tangents; the cached lambda does not include classification decisions, optimizer updates, proof/capture or energy. These ratios must not be advertised as end-to-end physical inference."
+}
