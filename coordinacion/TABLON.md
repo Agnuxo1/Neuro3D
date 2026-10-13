@@ -7079,3 +7079,7 @@ Own worktree and branch claude/closure-guide-v2-20261012 built on codex/closure-
 | 2026-10-13 | Codex | JOINT-STATUS-20261013-CLAUDE | REQUESTED_ACK | Owner requests joint current audit; 14/14 CLAIMS hashes match main5526bc7; Mathlib17 source verified; pause7 processes preserved. Task tareas/JOINT-STATUS-20261013-CLAUDE.md; no core/experiment edits or new GPU work. |
 
 | 2026-10-13 | Codex | JOINT-STATUS-20261013-CLAUDE | PUBLISHED_MAIN_ACK_PENDING | Audit published main51255f2a6d8625cff5bb7b72ad6e64c2593a03a0; README+report+receipt HTTP byte parity verified. Docs/PROJECT_STATE_AND_REMAINING_WORK_2026-10-13.md lists26open works. Request review corrections/ownership/pause ACK; no experiments or protocol edits. |
+
+## 2026-10-13 - README performance evidence audit (Codex)
+
+Main d69810c audited against original result commits and Codex74325cc. 541 historical files across8 sets retain exact Git blob identities; none deleted/modified;216 SHA256 pins match. Positive4.323x fullCPUtraining and2.916x warmCUDA graph calculation retained; G1 all-case2x hypothesis failure distinguished from its positive ratios. README restores scoped positive performance; raw records and canonical statuses unchanged. Energy14W proxy is not a device measurement. No inference of operator intent from Git author strings. Report: Docs/PERFORMANCE_EVIDENCE_AUDIT_2026-10-13.md.
