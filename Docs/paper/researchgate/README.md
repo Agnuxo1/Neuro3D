@@ -32,7 +32,7 @@ pdflatex --disable-installer -interaction=nonstopmode -halt-on-error neuro3d_pap
 SHA256 of `neuro3d_paper.pdf` (build of 13 October 2026, 04:46 local time):
 
 ```
-3d96fc54a9f262d949070c86abbee4aea5a14489e37b3cab9a75606eafb4ae83
+a6fb69213d7830a9f35f7591b919aed53771ad10b21467b8a01946e180a2e9bf
 ```
 
 A rebuild produces a PDF with a different hash because pdflatex embeds the creation date; the text and layout are unchanged.

@@ -1,0 +1,160 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{reck1994,clements2016}
+\citation{shen2017}
+\citation{lin2018}
+\citation{kawata2003}
+\citation{wright2022}
+\citation{pai2023}
+\citation{hamerly2019}
+\citation{wang2022}
+\citation{jakob2022}
+\citation{dekoning2023}
+\citation{ho2024}
+\citation{chen2026}
+\citation{purcell2002}
+\citation{mauch2013}
+\citation{keksel2023}
+\citation{knoll2009,moore2009}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\newlabel{sec:intro}{{1}{1}{Introduction}{section.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Related work.}{2}{section*.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Contributions.}{2}{section*.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Model}{2}{section.2}\protected@file@percent }
+\newlabel{sec:model}{{2}{2}{Model}{section.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Scene ingress}{2}{subsection.2.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Schematic of the pipeline (diagram only; contains no data). The scene is captured exactly, admitted as a complete finite-state graph and evaluated as a coherent linear map followed by quadratic detection. Training updates 16 mirror-pair translations that are written back to the scene as quantised native coordinates. Certificates enclose observed outputs and decisions; the separate wave reference tests in which regime the path model itself is valid.}}{3}{figure.caption.3}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:schematic}{{1}{3}{Schematic of the pipeline (diagram only; contains no data). The scene is captured exactly, admitted as a complete finite-state graph and evaluated as a coherent linear map followed by quadratic detection. Training updates 16 mirror-pair translations that are written back to the scene as quantised native coordinates. Certificates enclose observed outputs and decisions; the separate wave reference tests in which regime the path model itself is valid}{figure.caption.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Captured scene and admitted graph (historical capture used throughout).}}{3}{table.caption.4}\protected@file@percent }
+\newlabel{tab:scene}{{1}{3}{Captured scene and admitted graph (historical capture used throughout)}{table.caption.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Coherent scalar model and detector semantics}{3}{subsection.2.2}\protected@file@percent }
+\newlabel{eq:field}{{1}{3}{Coherent scalar model and detector semantics}{equation.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Complete finite-state propagation}{3}{subsection.2.3}\protected@file@percent }
+\citation{moore2009}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Geometry-driven derivatives and training}{4}{subsection.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Rank limits of passive coherent detection}{4}{subsection.2.5}\protected@file@percent }
+\newlabel{prop:rank}{{1}{4}{Rank limits of passive coherent detection}{proposition.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Certified numerics}{4}{section.3}\protected@file@percent }
+\newlabel{sec:cert}{{3}{4}{Certified numerics}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Exact graph admission}{4}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Interval enclosures of observed outputs}{4}{subsection.3.2}\protected@file@percent }
+\citation{demoura2021}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Certificates of observed outputs against the exact represented model. Budgets were fixed before computation ($10^{-11}$ for fields and powers unless stated). ``Ideal'' refers to the train-only feature encoding computed from parsed binary64 values.}}{5}{table.caption.5}\protected@file@percent }
+\newlabel{tab:cert}{{2}{5}{Certificates of observed outputs against the exact represented model. Budgets were fixed before computation ($10^{-11}$ for fields and powers unless stated). ``Ideal'' refers to the train-only feature encoding computed from parsed binary64 values}{table.caption.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Decision certificates and conditional robustness}{5}{subsection.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Machine-checked lemmas}{5}{subsection.3.4}\protected@file@percent }
+\citation{fisher1936,uciiris}
+\citation{uciwine}
+\citation{mcnemar1947}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Certificate lemmas and their formal status (source \texttt  {Lean/closure-core}).}}{6}{table.caption.6}\protected@file@percent }
+\newlabel{tab:lean}{{3}{6}{Certificate lemmas and their formal status (source \texttt {Lean/closure-core})}{table.caption.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Learning from geometry}{6}{section.4}\protected@file@percent }
+\newlabel{sec:learn}{{4}{6}{Learning from geometry}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Iris: a historical result with its limits}{6}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Native Blender roundtrip and graphical learning}{6}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Prospectively fixed Wine comparison}{6}{subsection.4.3}\protected@file@percent }
+\citation{wilson1927}
+\citation{wilson1927}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Prospectively fixed Wine comparison (one split, 37 held-out examples; Wilson~\cite  {wilson1927} 95\,\% intervals).}}{7}{table.caption.7}\protected@file@percent }
+\newlabel{tab:wine}{{4}{7}{Prospectively fixed Wine comparison (one split, 37 held-out examples; Wilson~\cite {wilson1927} 95\,\% intervals)}{table.caption.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Paired CPU/GPU measurements with identical outputs (wall-clock seconds unless stated; single shared host, no timing confidence intervals). Warm rows are synchronised medians of five repetitions and exclude preparation and transfers.}}{7}{table.caption.8}\protected@file@percent }
+\newlabel{tab:cost}{{5}{7}{Paired CPU/GPU measurements with identical outputs (wall-clock seconds unless stated; single shared host, no timing confidence intervals). Warm rows are synchronised medians of five repetitions and exclude preparation and transfers}{table.caption.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}GPU cost: a retained negative}{7}{subsection.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Prospective wave confirmation (WAVE-C1)}{7}{section.5}\protected@file@percent }
+\newlabel{sec:wave}{{5}{7}{Prospective wave confirmation (WAVE-C1)}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Background: a retained negative}{7}{subsection.5.1}\protected@file@percent }
+\citation{matsushima2009}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Historical same-output inference pairs for batches of 1, 150 and 4096 inputs (log scale). The GPU route (FP64 shaders with CPU coherent merging) is slower in all six pairs; setup and proof costs are recorded separately in the protocols. These are descriptive local measurements, not energy or photonic-device results.}}{8}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:cost}{{2}{8}{Historical same-output inference pairs for batches of 1, 150 and 4096 inputs (log scale). The GPU route (FP64 shaders with CPU coherent merging) is slower in all six pairs; setup and proof costs are recorded separately in the protocols. These are descriptive local measurements, not energy or photonic-device results}{figure.caption.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Historical 2D MZI test (P1-7). The preregistered path model without diffraction misses the fixed 0.02 budget at both meshes; the exploratory Gaussian correction is shown for context only and motivated the prospective test of Section~\ref {sec:wave}. This is not a validation of the full network.}}{8}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:wavenegative}{{3}{8}{Historical 2D MZI test (P1-7). The preregistered path model without diffraction misses the fixed 0.02 budget at both meshes; the exploratory Gaussian correction is shown for context only and motivated the prospective test of Section~\ref {sec:wave}. This is not a validation of the full network}{figure.caption.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Solver, device and preregistered hypotheses}{8}{subsection.5.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces WAVE-C1 preregistered decisions (single execution, 12 October 2026).}}{9}{table.caption.11}\protected@file@percent }
+\newlabel{tab:wave}{{6}{9}{WAVE-C1 preregistered decisions (single execution, 12 October 2026)}{table.caption.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces WAVE-C1 with the same continuous device at every resolution. (a) Modal output powers of the reference solver (markers) and of the path models M0 (dashed) and M1 (solid) over 21 exact phases. (b) Maximum error over ports: M0 exceeds the 0.02 budget at most phases, M1 stays below 0.0041; triangles show the archived FDTD powers against the reference with the FDTD-calibrated splitter. (c) Two-MZI cascade over 63 configurations; the 21 configurations with stage-1 path difference $\lambda /2$ carry no light into stage 2 and test nothing.}}{9}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:wave}{{4}{9}{WAVE-C1 with the same continuous device at every resolution. (a) Modal output powers of the reference solver (markers) and of the path models M0 (dashed) and M1 (solid) over 21 exact phases. (b) Maximum error over ports: M0 exceeds the 0.02 budget at most phases, M1 stays below 0.0041; triangles show the archived FDTD powers against the reference with the FDTD-calibrated splitter. (c) Two-MZI cascade over 63 configurations; the 21 configurations with stage-1 path difference $\lambda /2$ carry no light into stage 2 and test nothing}{figure.caption.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Results}{9}{subsection.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{FDTD cross-check.}{9}{section*.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Cascade.}{9}{section*.14}\protected@file@percent }
+\citation{kogelnik1966}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Diffraction regime of the captured network ($\lambda = 0.1\,\mathrm  {BU}$, \num {17060} terminal paths). Regime limit: $\zeta \le 0.2857$.}}{10}{table.caption.15}\protected@file@percent }
+\newlabel{tab:regime}{{7}{10}{Diffraction regime of the captured network ($\lambda = 0.1\BU $, \num {17060} terminal paths). Regime limit: $\zeta \le 0.2857$}{table.caption.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Regime map of the captured network. Bars span the range and dots mark the median over \num {17060} paths (log scale); the dashed line is the declared limit $\zeta _{\max } = 0.286$. Every path lies more than two orders of magnitude beyond it.}}{10}{figure.caption.16}\protected@file@percent }
+\newlabel{fig:regime}{{5}{10}{Regime map of the captured network. Bars span the range and dots mark the median over \num {17060} paths (log scale); the dashed line is the declared limit $\zeta _{\max } = 0.286$. Every path lies more than two orders of magnitude beyond it}{figure.caption.16}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}The captured network is outside this regime}{10}{subsection.5.4}\protected@file@percent }
+\newlabel{eq:zeta}{{2}{10}{The captured network is outside this regime}{equation.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Red-team corrections}{10}{subsection.5.5}\protected@file@percent }
+\citation{wilcoxon1945}
+\citation{efron1979}
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces HA-K1 results over 10 seeds: mean test accuracy of each student, paired difference with 95\,\% bootstrap interval ($S_{\mathrm  {lin}}-S_{\mathrm  {geom}}$ for H-A1, $S_{\mathrm  {quad}}-S_{\mathrm  {lin}}$ for H-A2), one-sided Wilcoxon $p$ and Holm-adjusted $p$, and seeds won/tied/lost.}}{11}{table.caption.19}\protected@file@percent }
+\newlabel{tab:hak1}{{8}{11}{HA-K1 results over 10 seeds: mean test accuracy of each student, paired difference with 95\,\% bootstrap interval ($S_{\mathrm {lin}}-S_{\mathrm {geom}}$ for H-A1, $S_{\mathrm {quad}}-S_{\mathrm {lin}}$ for H-A2), one-sided Wilcoxon $p$ and Holm-adjusted $p$, and seeds won/tied/lost}{table.caption.19}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Capacity of the captured geometry (HA-K1)}{11}{section.6}\protected@file@percent }
+\newlabel{sec:capacity}{{6}{11}{Capacity of the captured geometry (HA-K1)}{section.6}{}}
+\@writefile{toc}{\contentsline {paragraph}{Dimensions.}{11}{section*.17}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Teacher--student test.}{11}{section*.18}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Results.}{11}{section*.20}\protected@file@percent }
+\citation{ang2008}
+\citation{lawhern2018}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces HA-K1 test accuracy of the quadratic, free linear and captured-geometry students on three synthetic teacher families (bars: means over 10 seeds; dots: seeds; 2000 test inputs each). Dashed lines mark majority-class rates and the dotted line the 0.95 optimizer-adequacy threshold of the control.}}{12}{figure.caption.21}\protected@file@percent }
+\newlabel{fig:hak1}{{6}{12}{HA-K1 test accuracy of the quadratic, free linear and captured-geometry students on three synthetic teacher families (bars: means over 10 seeds; dots: seeds; 2000 test inputs each). Dashed lines mark majority-class rates and the dotted line the 0.95 optimizer-adequacy threshold of the control}{figure.caption.21}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces G1 timings (medians of 15 alternating repetitions, one CPU thread). Ratios are traversal time divided by compiled time.}}{12}{table.caption.22}\protected@file@percent }
+\newlabel{tab:g1}{{9}{12}{G1 timings (medians of 15 alternating repetitions, one CPU thread). Ratios are traversal time divided by compiled time}{table.caption.22}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Compiled operator versus geometry traversal (G1)}{12}{section.7}\protected@file@percent }
+\newlabel{sec:g1}{{7}{12}{Compiled operator versus geometry traversal (G1)}{section.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}EEG motor-imagery comparison}{12}{section.8}\protected@file@percent }
+\newlabel{sec:eeg}{{8}{12}{EEG motor-imagery comparison}{section.8}{}}
+\citation{lin2018}
+\citation{shen2017,clements2016}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Nested primary N1 accuracy per subject: optical grid versus FBCSP (17 known subjects; dashed line: equality). The optical grid includes an unconstrained digital matrix, so the comparison does not concern a passive captured network.}}{13}{figure.caption.23}\protected@file@percent }
+\newlabel{fig:eeg}{{7}{13}{Nested primary N1 accuracy per subject: optical grid versus FBCSP (17 known subjects; dashed line: equality). The optical grid includes an unconstrained digital matrix, so the comparison does not concern a passive captured network}{figure.caption.23}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9}Discussion and limitations}{13}{section.9}\protected@file@percent }
+\newlabel{sec:discussion}{{9}{13}{Discussion and limitations}{section.9}{}}
+\@writefile{toc}{\contentsline {paragraph}{Simulator, not device.}{13}{section*.24}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{The regime finding.}{13}{section*.25}\protected@file@percent }
+\citation{jakob2022}
+\citation{pai2023}
+\citation{wright2022}
+\citation{uciiris,uciwine}
+\@writefile{toc}{\contentsline {paragraph}{Where an advantage could come from.}{14}{section*.26}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{What would falsify the contribution.}{14}{section*.27}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Path to a demonstrator.}{14}{section*.28}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Further limitations.}{14}{section*.29}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {10}Conclusion}{14}{section.10}\protected@file@percent }
+\newlabel{sec:conclusion}{{10}{14}{Conclusion}{section.10}{}}
+\@writefile{toc}{\contentsline {section}{Reproducibility and data availability}{14}{section*.30}\protected@file@percent }
+\bibstyle{unsrtnat}
+\bibdata{neuro3d_paper}
+\bibcite{reck1994}{{1}{1994}{{Reck et~al.}}{{Reck, Zeilinger, Bernstein, and Bertani}}}
+\bibcite{clements2016}{{2}{2016}{{Clements et~al.}}{{Clements, Humphreys, Metcalf, Kolthammer, and Walmsley}}}
+\bibcite{shen2017}{{3}{2017}{{Shen et~al.}}{{Shen, Harris, Skirlo, Prabhu, Baehr-Jones, Hochberg, Sun, Zhao, Larochelle, Englund, and Solja\v {c}i\'{c}}}}
+\bibcite{lin2018}{{4}{2018}{{Lin et~al.}}{{Lin, Rivenson, Yardimci, Veli, Luo, Jarrahi, and Ozcan}}}
+\bibcite{kawata2003}{{5}{2003}{{Kawata and Hirose}}{{}}}
+\bibcite{wright2022}{{6}{2022}{{Wright et~al.}}{{Wright, Onodera, Stein, Wang, Schachter, Hu, and McMahon}}}
+\bibcite{pai2023}{{7}{2023}{{Pai et~al.}}{{Pai, Sun, Hughes, Park, Bartlett, Williamson, Minkov, Milanizadeh, Abebe, Morichetti, Melloni, Fan, Solgaard, and Miller}}}
+\bibcite{hamerly2019}{{8}{2019}{{Hamerly et~al.}}{{Hamerly, Bernstein, Sludds, Solja\v {c}i\'{c}, and Englund}}}
+\bibcite{wang2022}{{9}{2022}{{Wang et~al.}}{{Wang, Ma, Wright, Onodera, Richard, and McMahon}}}
+\bibcite{jakob2022}{{10}{2022}{{Jakob et~al.}}{{Jakob, Speierer, Roussel, and Vicini}}}
+\bibcite{dekoning2023}{{11}{2023}{{de~Koning et~al.}}{{de~Koning, Heemels, Adam, and M{\"o}ller}}}
+\bibcite{ho2024}{{12}{2024}{{Ho et~al.}}{{Ho, Belhe, Rotenberg, Ramamoorthi, Li, and Antipa}}}
+\bibcite{chen2026}{{13}{2026}{{Chen et~al.}}{{Chen, Zhang, Zheng, Fang, Li, Lu, and Li}}}
+\bibcite{purcell2002}{{14}{2002}{{Purcell et~al.}}{{Purcell, Buck, Mark, and Hanrahan}}}
+\bibcite{mauch2013}{{15}{2013}{{Mauch et~al.}}{{Mauch, Gronle, Lyda, and Osten}}}
+\bibcite{keksel2023}{{16}{2023}{{Keksel et~al.}}{{Keksel, Schmidt, Beck, and Seewig}}}
+\bibcite{knoll2009}{{17}{2009}{{Knoll et~al.}}{{Knoll, Hijazi, Kensler, Schott, Hansen, and Hagen}}}
+\bibcite{moore2009}{{18}{2009}{{Moore et~al.}}{{Moore, Kearfott, and Cloud}}}
+\bibcite{demoura2021}{{19}{2021}{{de~Moura and Ullrich}}{{}}}
+\bibcite{fisher1936}{{20}{1936{}}{{Fisher}}{{}}}
+\bibcite{uciiris}{{21}{1936{}}{{Fisher}}{{}}}
+\bibcite{uciwine}{{22}{1992}{{Aeberhard and Forina}}{{}}}
+\bibcite{mcnemar1947}{{23}{1947}{{McNemar}}{{}}}
+\bibcite{wilson1927}{{24}{1927}{{Wilson}}{{}}}
+\bibcite{matsushima2009}{{25}{2009}{{Matsushima and Shimobaba}}{{}}}
+\bibcite{kogelnik1966}{{26}{1966}{{Kogelnik and Li}}{{}}}
+\bibcite{wilcoxon1945}{{27}{1945}{{Wilcoxon}}{{}}}
+\bibcite{efron1979}{{28}{1979}{{Efron}}{{}}}
+\bibcite{ang2008}{{29}{2008}{{Ang et~al.}}{{Ang, Chin, Zhang, and Guan}}}
+\bibcite{lawhern2018}{{30}{2018}{{Lawhern et~al.}}{{Lawhern, Solon, Waytowich, Gordon, Hung, and Lance}}}
+\gdef \@abspage@last{16}
