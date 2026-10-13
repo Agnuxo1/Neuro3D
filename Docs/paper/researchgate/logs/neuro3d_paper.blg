@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99e
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: neuro3d_paper.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: unsrtnat.bst
+Reallocating 'name_of_file' (item size: 1) to 14 items.
+Database file #1: neuro3d_paper.bib
+You've used 30 entries,
+            2481 wiz_defined-function locations,
+            765 strings with 10716 characters,
+and the built_in function-call counts, 13028 in all, are:
+= -- 1050
+> -- 840
+< -- 14
++ -- 315
+- -- 254
+* -- 1146
+:= -- 2156
+add.period$ -- 117
+call.type$ -- 30
+change.case$ -- 59
+chr.to.int$ -- 29
+cite$ -- 30
+duplicate$ -- 567
+empty$ -- 1091
+format.name$ -- 294
+if$ -- 2704
+int.to.chr$ -- 2
+int.to.str$ -- 31
+missing$ -- 25
+newline$ -- 184
+num.names$ -- 90
+pop$ -- 226
+preamble$ -- 1
+purify$ -- 30
+quote$ -- 0
+skip$ -- 341
+stack$ -- 0
+substring$ -- 560
+swap$ -- 86
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 207
+warning$ -- 0
+while$ -- 101
+width$ -- 0
+write$ -- 445
