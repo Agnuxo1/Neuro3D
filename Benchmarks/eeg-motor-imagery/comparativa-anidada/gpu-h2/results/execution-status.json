@@ -1,0 +1,227 @@
+{
+  "experiment": "EXP-006-EEGNET-GPU-H2-20261013-001",
+  "state": "BLOCKED",
+  "reason": "Owner-authorized GPU pause of all 'neuro3d*' queue jobs (gpuq pause_registry.json, created 2026-10-13T06:39:36Z, reason 'Villa Anzuelo voices have explicit GPU priority until completion', manual_resume_only=true). The driver (pid 47232) and the waiting S012 gpuq ticket (pid 19256) were suspended; the S012 ticket file was moved to the pause folder's deferred_tickets. Not resumed or killed by this agent.",
+  "pause_checkpoint": "D:/PROJECTS/.cognition/neuro3d-gpu-pause-20261013-villa/checkpoint.json",
+  "analysis_run": false,
+  "analysis_note": "No H2 analysis and no EEGNet accuracy was computed or inspected for the 10 completed subjects, to avoid an interim look; H2 waits for the remaining subjects.",
+  "pilot": {
+    "subject": "S001",
+    "seconds": 63.77654839999741,
+    "n_trainings": 24,
+    "steps": 6480,
+    "npz_sha256": "5ea07c979d1470c4724c04d3344a0c00ab27fd822f9f97b86188cb6af1172612"
+  },
+  "completed_subjects": [
+    {
+      "subject": "S001",
+      "exec_seconds": 138.82418029999826,
+      "n_trainings": 84,
+      "steps": 25380,
+      "npz_sha256": "ca3864aeab434e38c68488a753acc48eb5ffbb5f5e5144f5dcec4d851b737a1b",
+      "min_host_available_mib": 5723.2109375,
+      "determinism_warnings": []
+    },
+    {
+      "subject": "S002",
+      "exec_seconds": 122.20494889997644,
+      "n_trainings": 84,
+      "steps": 25380,
+      "npz_sha256": "c222433f31fb436ca823031ce61e923fe690d93c42ba82c8094d5c4b37ca93c5",
+      "min_host_available_mib": 5029.43359375,
+      "determinism_warnings": []
+    },
+    {
+      "subject": "S003",
+      "exec_seconds": 148.5519325999776,
+      "n_trainings": 84,
+      "steps": 25380,
+      "npz_sha256": "2aebb20d81af2753ab887d1cd0307ad214ebfff02de0ad8b4830d551e6173ce4",
+      "min_host_available_mib": 2439.1953125,
+      "determinism_warnings": []
+    },
+    {
+      "subject": "S004",
+      "exec_seconds": 107.43154030002188,
+      "n_trainings": 84,
+      "steps": 25380,
+      "npz_sha256": "45fb1482ac3249d6df45611617658ddda60a31d566498692b0063e393d0fa693",
+      "min_host_available_mib": 6477.3828125,
+      "determinism_warnings": []
+    },
+    {
+      "subject": "S005",
+      "exec_seconds": 105.87429579999298,
+      "n_trainings": 84,
+      "steps": 25380,
+      "npz_sha256": "5ad6c687d915f419ecdcc22cdfc68312f9f1a0b8355f15727475a6ec3cfb7d6c",
+      "min_host_available_mib": 5685.7578125,
+      "determinism_warnings": []
+    },
+    {
+      "subject": "S006",
+      "exec_seconds": 81.99501439998858,
+      "n_trainings": 84,
+      "steps": 19980,
+      "npz_sha256": "6a2fb02b035b14e9c6163d7fb1a317c571e172b1e7d0842d04e3e9ba5a61b69f",
+      "min_host_available_mib": 5614.875,
+      "determinism_warnings": []
+    },
+    {
+      "subject": "S007",
+      "exec_seconds": 21.228788600012194,
+      "n_trainings": 24,
+      "steps": 4320,
+      "npz_sha256": "e3284fcbfcc51a2b64866a625fdd46cddb3d6237b29141b762328514ac139ee3",
+      "min_host_available_mib": 6557.45703125,
+      "determinism_warnings": []
+    },
+    {
+      "subject": "S009",
+      "exec_seconds": 102.8788443999947,
+      "n_trainings": 84,
+      "steps": 25380,
+      "npz_sha256": "b299040f69eb246db789eb3705e70619ce0377f24788e91b56208c409e300186",
+      "min_host_available_mib": 6037.6015625,
+      "determinism_warnings": []
+    },
+    {
+      "subject": "S010",
+      "exec_seconds": 101.94551400002092,
+      "n_trainings": 84,
+      "steps": 25380,
+      "npz_sha256": "d10135afe7cb85dfaab316620bce866d8a11176c3baeb1d9775efbd9e52065de",
+      "min_host_available_mib": 6487.0,
+      "determinism_warnings": []
+    },
+    {
+      "subject": "S011",
+      "exec_seconds": 106.7028699000366,
+      "n_trainings": 84,
+      "steps": 25380,
+      "npz_sha256": "64893c1187517ff9d91fc73bdfe68ca2b4a94c149c9d9afd48b47d77d8b69a66",
+      "min_host_available_mib": 5345.66796875,
+      "determinism_warnings": []
+    }
+  ],
+  "tickets": [
+    {
+      "subject": "S001",
+      "utc_submit": "2026-10-13T02:41:57.713519+00:00",
+      "utc_end": "2026-10-13T02:52:36.836417+00:00",
+      "ticket_wall_s": 639.1228275999893,
+      "exit_code": 0,
+      "exec_s": 138.82418029999826
+    },
+    {
+      "subject": "S002",
+      "utc_submit": "2026-10-13T02:52:36.850246+00:00",
+      "utc_end": "2026-10-13T03:02:38.255930+00:00",
+      "ticket_wall_s": 601.4056371999905,
+      "exit_code": 0,
+      "exec_s": 122.20494889997644
+    },
+    {
+      "subject": "S003",
+      "utc_submit": "2026-10-13T03:02:38.263240+00:00",
+      "utc_end": "2026-10-13T03:27:08.123687+00:00",
+      "ticket_wall_s": 1469.8604376000003,
+      "exit_code": 0,
+      "exec_s": 148.5519325999776
+    },
+    {
+      "subject": "S004",
+      "utc_submit": "2026-10-13T03:27:08.188051+00:00",
+      "utc_end": "2026-10-13T03:43:34.592565+00:00",
+      "ticket_wall_s": 986.4044937000144,
+      "exit_code": 0,
+      "exec_s": 107.43154030002188
+    },
+    {
+      "subject": "S005",
+      "utc_submit": "2026-10-13T03:43:34.624544+00:00",
+      "utc_end": "2026-10-13T03:54:57.581852+00:00",
+      "ticket_wall_s": 682.957290499995,
+      "exit_code": 0,
+      "exec_s": 105.87429579999298
+    },
+    {
+      "subject": "S006",
+      "utc_submit": "2026-10-13T03:54:57.638724+00:00",
+      "utc_end": "2026-10-13T04:27:02.613371+00:00",
+      "ticket_wall_s": 1924.974625199975,
+      "exit_code": 0,
+      "exec_s": 81.99501439998858
+    },
+    {
+      "subject": "S007",
+      "utc_submit": "2026-10-13T04:27:02.654285+00:00",
+      "utc_end": "2026-10-13T04:38:00.510145+00:00",
+      "ticket_wall_s": 657.8558372000116,
+      "exit_code": 0,
+      "exec_s": 21.228788600012194
+    },
+    {
+      "subject": "S009",
+      "utc_submit": "2026-10-13T04:38:00.553026+00:00",
+      "utc_end": "2026-10-13T04:48:39.775126+00:00",
+      "ticket_wall_s": 639.2220749999979,
+      "exit_code": 0,
+      "exec_s": 102.8788443999947
+    },
+    {
+      "subject": "S010",
+      "utc_submit": "2026-10-13T04:48:39.819176+00:00",
+      "utc_end": "2026-10-13T05:17:43.011576+00:00",
+      "ticket_wall_s": 1743.1923700999469,
+      "exit_code": 0,
+      "exec_s": 101.94551400002092
+    },
+    {
+      "subject": "S011",
+      "utc_submit": "2026-10-13T05:17:43.057734+00:00",
+      "utc_end": "2026-10-13T06:11:59.287120+00:00",
+      "ticket_wall_s": 3256.229385399958,
+      "exit_code": 0,
+      "exec_s": 106.7028699000366
+    }
+  ],
+  "remaining_subjects": [
+    "S012",
+    "S014",
+    "S016",
+    "S017",
+    "S018",
+    "S019",
+    "S020"
+  ],
+  "exec_seconds_completed": 1037.6379292000202,
+  "environment": {
+    "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "numpy": "2.2.6",
+    "torch": "2.6.0+cu124",
+    "torch_cuda": "12.4",
+    "cudnn": 90100,
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "torch_threads": 2,
+    "determinism": {
+      "cudnn.deterministic": true,
+      "cudnn.benchmark": false,
+      "use_deterministic_algorithms": true,
+      "warn_only": true,
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+      "warnings": [],
+      "note": "GPU kernels may still be nondeterministic; results may differ numerically from a CPU run"
+    },
+    "source_sha256": {
+      "run_nested_comparators_v1.py": "3215b8594e8fa9c142d7576a1483ca9cea32f996eaf497a0f3aba9cf9958122a",
+      "run_nested_eegnet_gpu_v2.py": "05fd1c5b0139368d9e801dff1995d254aeb356ed02af08b54663ce7b680c4694",
+      "bench.py": "0e535106624704643ab8292fcaa7fff50ca71ab487ace29ab8cd537867a555a4",
+      "nested_bench.py": "77f1652960bfd99fc8cde676d7b8cac3994b1cb3fd007706c71cede204b77589"
+    },
+    "max_memory_allocated_mib": 101.9921875
+  },
+  "raw_outputs": "Owner local workspace D:/PROJECTS/.cognition/neuro3d-closure-20261012/eeg-eegnet-gpu-h2/{pilot,full}; not redistributed"
+}

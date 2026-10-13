@@ -1,0 +1,36 @@
+{
+  "id": "EXP-006-EEGNET-GPU-H2-20261013-001",
+  "state": "BLOCKED",
+  "hypothesis": "H2 optical N1 vs nested EEGNet N1 (PREREGISTRO-EEG.md)",
+  "profile_commit": "4dc75a89b669f56af14451dbc0d06468e00d8c79",
+  "projection_commit": "a45f32f",
+  "pilot_fold_seconds_gpu": 63.78,
+  "projected_total_hours": 1.39,
+  "plan": "complete (17 subjects)",
+  "completed_subjects": 10,
+  "remaining_subjects": [
+    "S012",
+    "S014",
+    "S016",
+    "S017",
+    "S018",
+    "S019",
+    "S020"
+  ],
+  "exec_seconds_completed": 1037.64,
+  "blocking_reason": "Owner-authorized gpuq pause of neuro3d* jobs since 2026-10-13T06:39:36Z (Villa Anzuelo voices priority, manual_resume_only); driver pid 47232 and S012 ticket pid 19256 suspended",
+  "h2_decision": null,
+  "h2_analysis_run": false,
+  "Xte_read": false,
+  "raw_data_redistributed": false,
+  "sha256": {
+    "PROFILE-EEGNET-GPU-H2.md": "92ea2223a968dfdd2cb60f7ea4d00309ec49e179621ee1273d36e160f28ab26b",
+    "RESULTS-EEGNET-GPU-H2.md": "48960e35368b1e3c795db1c0fa7de205a96942690ae1e633ab9de4e0cc4b0422",
+    "run_nested_eegnet_gpu_v2.py": "05fd1c5b0139368d9e801dff1995d254aeb356ed02af08b54663ce7b680c4694",
+    "project_cost_v2.py": "b3d833137ea7d4ffbcce2fbd5faaae11421002cb8c02b5e0fb33f0b56e4db32a",
+    "drive_full_v2.py": "fdfb766dd8f00eb6c3815fd9d135d7a514415a19e3ebe58982969bd01ebe3997",
+    "summarize_v2.py": "dc6af261f187c327bf992ca12dd27eb3d232a5cf36f984b559cd7a83d6512a8a",
+    "results/cost-projection.json": "aedbdf0f24596d8293858bbd94e50b4e929b13e2a551de049686bcfe82e2fc23",
+    "results/execution-status.json": "5b498b2d707f4b921196665bbcdf94ccb25cf6f96408d57d0c7cc46a6b08f438"
+  }
+}
