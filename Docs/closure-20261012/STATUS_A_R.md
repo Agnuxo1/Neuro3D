@@ -69,3 +69,15 @@ Rows above are kept unchanged. New evidence ([report](claude/CLAUDE-CLOSURE-REPO
 | P | Three section-18 records with zero validation problems | PARTIAL |
 | Q | CI rerun of WAVE-C1 and Lean on Linux | PARTIAL: DOI/SWH and independent team open |
 | J | Manuscript v3 with embedded figures and verified new references | PARTIAL: authorship and specialist critique open |
+
+## Addendum 13 October 2026, later (Claude)
+
+Supersedes the Mathlib wording of the previous addendum and of `claude/frontier-manifest-claude-20261013.json` (F2), whose text is retained:
+
+| Step | New delivery | State |
+|---|---|---|
+| L | Mathlib v4.34.0 formalization (`Lean/closure-mathlib`, commit `5526bc7`): 17 theorems, T1 over R, T2 over C, operator-norm Neumann tail with tsum truncation, rank <= 2, <= 1 and the rank-4 detector-difference bound, passivity on EuclideanSpace; standard axioms only | PARTIAL: soundness of the producer's boxes and constants, rounding, Lean-Python-shader correspondence open |
+| F | EEGNet H2 on GPU (`gpu-h2/`, commit `2f80f25`): profile frozen before execution, pilot fold 63.8 s, projection 1.39 h, 10 of 17 subjects done | BLOCKED by the owner's GPU pause for Villa; no EEGNet accuracy inspected; H2 not evaluated |
+| M | 25 public-information partner candidates and unsent outreach templates (`claude/PARTNER-CANDIDATES.md`) | BLOCKED on the owner's contact decisions |
+| R | Sole authorship by the owner recorded (`claude/OWNER-DECISIONS-20261013.md`); AI use declared | PARTIAL: owner's personal review pending |
+| J | Professional English paper for ResearchGate (`Docs/paper/researchgate/`, 16 pages, 30 verified references) | PARTIAL: author review and specialist critique pending |
