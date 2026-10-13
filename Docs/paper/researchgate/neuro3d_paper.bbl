@@ -1,0 +1,232 @@
+\begin{thebibliography}{30}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Reck et~al.(1994)Reck, Zeilinger, Bernstein, and Bertani]{reck1994}
+Michael Reck, Anton Zeilinger, Herbert~J. Bernstein, and Philip Bertani.
+\newblock Experimental realization of any discrete unitary operator.
+\newblock \emph{Physical Review Letters}, 73\penalty0 (1):\penalty0 58--61,
+  1994.
+\newblock \doi{10.1103/PhysRevLett.73.58}.
+
+\bibitem[Clements et~al.(2016)Clements, Humphreys, Metcalf, Kolthammer, and
+  Walmsley]{clements2016}
+William~R. Clements, Peter~C. Humphreys, Benjamin~J. Metcalf, W.~Steven
+  Kolthammer, and Ian~A. Walmsley.
+\newblock Optimal design for universal multiport interferometers.
+\newblock \emph{Optica}, 3\penalty0 (12):\penalty0 1460--1465, 2016.
+\newblock \doi{10.1364/OPTICA.3.001460}.
+
+\bibitem[Shen et~al.(2017)Shen, Harris, Skirlo, Prabhu, Baehr-Jones, Hochberg,
+  Sun, Zhao, Larochelle, Englund, and Solja\v{c}i\'{c}]{shen2017}
+Yichen Shen, Nicholas~C. Harris, Scott Skirlo, Mihika Prabhu, Tom Baehr-Jones,
+  Michael Hochberg, Xin Sun, Shijie Zhao, Hugo Larochelle, Dirk Englund, and
+  Marin Solja\v{c}i\'{c}.
+\newblock Deep learning with coherent nanophotonic circuits.
+\newblock \emph{Nature Photonics}, 11\penalty0 (7):\penalty0 441--446, 2017.
+\newblock \doi{10.1038/nphoton.2017.93}.
+
+\bibitem[Lin et~al.(2018)Lin, Rivenson, Yardimci, Veli, Luo, Jarrahi, and
+  Ozcan]{lin2018}
+Xing Lin, Yair Rivenson, Nezih~T. Yardimci, Muhammed Veli, Yi~Luo, Mona
+  Jarrahi, and Aydogan Ozcan.
+\newblock All-optical machine learning using diffractive deep neural networks.
+\newblock \emph{Science}, 361\penalty0 (6406):\penalty0 1004--1008, 2018.
+\newblock \doi{10.1126/science.aat8084}.
+
+\bibitem[Kawata and Hirose(2003)]{kawata2003}
+Sotaro Kawata and Akira Hirose.
+\newblock Coherent optical neural network that learns desirable phase values in
+  the frequency domain by use of multiple optical-path differences.
+\newblock \emph{Optics Letters}, 28\penalty0 (24):\penalty0 2524, 2003.
+\newblock \doi{10.1364/OL.28.002524}.
+
+\bibitem[Wright et~al.(2022)Wright, Onodera, Stein, Wang, Schachter, Hu, and
+  McMahon]{wright2022}
+Logan~G. Wright, Tatsuhiro Onodera, Martin~M. Stein, Tianyu Wang, Darren~T.
+  Schachter, Zoey Hu, and Peter~L. McMahon.
+\newblock Deep physical neural networks trained with backpropagation.
+\newblock \emph{Nature}, 601\penalty0 (7894):\penalty0 549--555, 2022.
+\newblock \doi{10.1038/s41586-021-04223-6}.
+
+\bibitem[Pai et~al.(2023)Pai, Sun, Hughes, Park, Bartlett, Williamson, Minkov,
+  Milanizadeh, Abebe, Morichetti, Melloni, Fan, Solgaard, and Miller]{pai2023}
+Sunil Pai, Zhanghao Sun, Tyler~W. Hughes, Taewon Park, Ben Bartlett, Ian A.~D.
+  Williamson, Momchil Minkov, Maziyar Milanizadeh, Nathnael Abebe, Francesco
+  Morichetti, Andrea Melloni, Shanhui Fan, Olav Solgaard, and David A.~B.
+  Miller.
+\newblock Experimentally realized in situ backpropagation for deep learning in
+  photonic neural networks.
+\newblock \emph{Science}, 380\penalty0 (6643):\penalty0 398--404, 2023.
+\newblock \doi{10.1126/science.ade8450}.
+
+\bibitem[Hamerly et~al.(2019)Hamerly, Bernstein, Sludds, Solja\v{c}i\'{c}, and
+  Englund]{hamerly2019}
+Ryan Hamerly, Liane Bernstein, Alexander Sludds, Marin Solja\v{c}i\'{c}, and
+  Dirk Englund.
+\newblock Large-scale optical neural networks based on photoelectric
+  multiplication.
+\newblock \emph{Physical Review X}, 9\penalty0 (2):\penalty0 021032, 2019.
+\newblock \doi{10.1103/PhysRevX.9.021032}.
+
+\bibitem[Wang et~al.(2022)Wang, Ma, Wright, Onodera, Richard, and
+  McMahon]{wang2022}
+Tianyu Wang, Shi-Yuan Ma, Logan~G. Wright, Tatsuhiro Onodera, Brian~C. Richard,
+  and Peter~L. McMahon.
+\newblock An optical neural network using less than 1 photon per
+  multiplication.
+\newblock \emph{Nature Communications}, 13:\penalty0 123, 2022.
+\newblock \doi{10.1038/s41467-021-27774-8}.
+
+\bibitem[Jakob et~al.(2022)Jakob, Speierer, Roussel, and Vicini]{jakob2022}
+Wenzel Jakob, S{\'e}bastien Speierer, Nicolas Roussel, and Delio Vicini.
+\newblock {Dr.Jit}: A just-in-time compiler for differentiable rendering.
+\newblock \emph{ACM Transactions on Graphics}, 41\penalty0 (4):\penalty0 1--19,
+  2022.
+\newblock \doi{10.1145/3528223.3530099}.
+
+\bibitem[de~Koning et~al.(2023)de~Koning, Heemels, Adam, and
+  M{\"o}ller]{dekoning2023}
+Bart de~Koning, Alexander Heemels, Aur{\`e}le Adam, and Matthias M{\"o}ller.
+\newblock Gradient descent-based freeform optics design using algorithmic
+  differentiable non-sequential ray tracing.
+\newblock arXiv:2302.12031, 2023.
+
+\bibitem[Ho et~al.(2024)Ho, Belhe, Rotenberg, Ramamoorthi, Li, and
+  Antipa]{ho2024}
+Chi-Jui Ho, Yash Belhe, Steve Rotenberg, Ravi Ramamoorthi, Tzu-Mao Li, and
+  Nicholas Antipa.
+\newblock A differentiable wave optics model for end-to-end computational
+  imaging system optimization.
+\newblock arXiv:2412.09774, 2024.
+
+\bibitem[Chen et~al.(2026)Chen, Zhang, Zheng, Fang, Li, Lu, and Li]{chen2026}
+Xingyu Chen, Xinyu Zhang, Kai Zheng, Xinmin Fang, Tzu-Mao Li, Chris~Xiaoxuan
+  Lu, and Zhengxiong Li.
+\newblock Physically accurate differentiable inverse rendering for radio
+  frequency digital twin.
+\newblock arXiv:2603.18026, 2026.
+
+\bibitem[Purcell et~al.(2002)Purcell, Buck, Mark, and Hanrahan]{purcell2002}
+Timothy~J. Purcell, Ian Buck, William~R. Mark, and Pat Hanrahan.
+\newblock Ray tracing on programmable graphics hardware.
+\newblock \emph{ACM Transactions on Graphics}, 21\penalty0 (3):\penalty0
+  703--712, 2002.
+\newblock \doi{10.1145/566654.566640}.
+
+\bibitem[Mauch et~al.(2013)Mauch, Gronle, Lyda, and Osten]{mauch2013}
+Florian Mauch, Marc Gronle, Wolfram Lyda, and Wolfgang Osten.
+\newblock Open-source graphics processing unit--accelerated ray tracer for
+  optical simulation.
+\newblock \emph{Optical Engineering}, 52\penalty0 (5):\penalty0 053004, 2013.
+\newblock \doi{10.1117/1.OE.52.5.053004}.
+
+\bibitem[Keksel et~al.(2023)Keksel, Schmidt, Beck, and Seewig]{keksel2023}
+Andrej Keksel, Samuel Schmidt, Dietrich Beck, and J{\"o}rg Seewig.
+\newblock Scientific modeling of optical {3D} measuring devices based on
+  {GPU}-accelerated ray tracing using the {NVIDIA} {OptiX} engine.
+\newblock arXiv:2308.04816, 2023.
+
+\bibitem[Knoll et~al.(2009)Knoll, Hijazi, Kensler, Schott, Hansen, and
+  Hagen]{knoll2009}
+A.~Knoll, Y.~Hijazi, A.~Kensler, M.~Schott, C.~Hansen, and H.~Hagen.
+\newblock Fast ray tracing of arbitrary implicit surfaces with interval and
+  affine arithmetic.
+\newblock \emph{Computer Graphics Forum}, 28\penalty0 (1):\penalty0 26--40,
+  2009.
+\newblock \doi{10.1111/j.1467-8659.2008.01189.x}.
+
+\bibitem[Moore et~al.(2009)Moore, Kearfott, and Cloud]{moore2009}
+Ramon~E. Moore, R.~Baker Kearfott, and Michael~J. Cloud.
+\newblock \emph{Introduction to Interval Analysis}.
+\newblock Society for Industrial and Applied Mathematics, Philadelphia, 2009.
+\newblock \doi{10.1137/1.9780898717716}.
+
+\bibitem[de~Moura and Ullrich(2021)]{demoura2021}
+Leonardo de~Moura and Sebastian Ullrich.
+\newblock The {Lean} 4 theorem prover and programming language.
+\newblock In \emph{Automated Deduction -- CADE 28}, volume 12699 of
+  \emph{Lecture Notes in Computer Science}, pages 625--635. Springer, 2021.
+\newblock \doi{10.1007/978-3-030-79876-5_37}.
+
+\bibitem[Fisher(1936{\natexlab{a}})]{fisher1936}
+R.~A. Fisher.
+\newblock The use of multiple measurements in taxonomic problems.
+\newblock \emph{Annals of Eugenics}, 7\penalty0 (2):\penalty0 179--188,
+  1936{\natexlab{a}}.
+\newblock \doi{10.1111/j.1469-1809.1936.tb02137.x}.
+
+\bibitem[Fisher(1936{\natexlab{b}})]{uciiris}
+R.~A. Fisher.
+\newblock Iris.
+\newblock UCI Machine Learning Repository, 1936{\natexlab{b}}.
+\newblock URL \url{https://doi.org/10.24432/C56C76}.
+
+\bibitem[Aeberhard and Forina(1992)]{uciwine}
+Stefan Aeberhard and M.~Forina.
+\newblock Wine.
+\newblock UCI Machine Learning Repository, 1992.
+\newblock URL \url{https://doi.org/10.24432/C5PC7J}.
+
+\bibitem[McNemar(1947)]{mcnemar1947}
+Quinn McNemar.
+\newblock Note on the sampling error of the difference between correlated
+  proportions or percentages.
+\newblock \emph{Psychometrika}, 12\penalty0 (2):\penalty0 153--157, 1947.
+\newblock \doi{10.1007/BF02295996}.
+
+\bibitem[Wilson(1927)]{wilson1927}
+Edwin~B. Wilson.
+\newblock Probable inference, the law of succession, and statistical inference.
+\newblock \emph{Journal of the American Statistical Association}, 22\penalty0
+  (158):\penalty0 209--212, 1927.
+\newblock \doi{10.1080/01621459.1927.10502953}.
+
+\bibitem[Matsushima and Shimobaba(2009)]{matsushima2009}
+Kyoji Matsushima and Tomoyoshi Shimobaba.
+\newblock Band-limited angular spectrum method for numerical simulation of
+  free-space propagation in far and near fields.
+\newblock \emph{Optics Express}, 17\penalty0 (22):\penalty0 19662, 2009.
+\newblock \doi{10.1364/OE.17.019662}.
+
+\bibitem[Kogelnik and Li(1966)]{kogelnik1966}
+H.~Kogelnik and T.~Li.
+\newblock Laser beams and resonators.
+\newblock \emph{Applied Optics}, 5\penalty0 (10):\penalty0 1550, 1966.
+\newblock \doi{10.1364/AO.5.001550}.
+
+\bibitem[Wilcoxon(1945)]{wilcoxon1945}
+Frank Wilcoxon.
+\newblock Individual comparisons by ranking methods.
+\newblock \emph{Biometrics Bulletin}, 1\penalty0 (6):\penalty0 80--83, 1945.
+\newblock \doi{10.2307/3001968}.
+
+\bibitem[Efron(1979)]{efron1979}
+B.~Efron.
+\newblock Bootstrap methods: Another look at the jackknife.
+\newblock \emph{The Annals of Statistics}, 7\penalty0 (1):\penalty0 1--26,
+  1979.
+\newblock \doi{10.1214/aos/1176344552}.
+
+\bibitem[Ang et~al.(2008)Ang, Chin, Zhang, and Guan]{ang2008}
+Kai~Keng Ang, Z.~Y. Chin, Haihong Zhang, and Cuntai Guan.
+\newblock Filter bank common spatial pattern ({FBCSP}) in brain-computer
+  interface.
+\newblock In \emph{2008 IEEE International Joint Conference on Neural Networks
+  (IEEE World Congress on Computational Intelligence)}, pages 2390--2397, 2008.
+\newblock \doi{10.1109/IJCNN.2008.4634130}.
+
+\bibitem[Lawhern et~al.(2018)Lawhern, Solon, Waytowich, Gordon, Hung, and
+  Lance]{lawhern2018}
+Vernon~J. Lawhern, Amelia~J. Solon, Nicholas~R. Waytowich, Stephen~M. Gordon,
+  Chou~P. Hung, and Brent~J. Lance.
+\newblock {EEGNet}: a compact convolutional neural network for {EEG}-based
+  brain--computer interfaces.
+\newblock \emph{Journal of Neural Engineering}, 15\penalty0 (5):\penalty0
+  056013, 2018.
+\newblock \doi{10.1088/1741-2552/aace8c}.
+
+\end{thebibliography}
