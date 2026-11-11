@@ -10,6 +10,10 @@ Red óptica escalar entrenable que calcula desde la **geometría evaluada de Ble
 
 **Cierre de Claude (13 de octubre de 2026).** [Informe](Docs/closure-20261012/claude/CLAUDE-CLOSURE-REPORT-20261013.md) · [artículo v3 (PDF)](Docs/paper/optic_neuro_blender_reproducible_draft_2026-10-13_v3.pdf). Con un solver independiente sin malla, el mismo dispositivo continuo y las 21 fases preregistradas, el modelo de caminos con difracción queda **confirmado** (E_max 0,0040 ≤ 0,02) y el modelo sin difracción vuelve a fallar (0,0281); el FDTD de P1-7 coincide dentro de 0,0048. La red capturada está **fuera del régimen sin difracción** a su longitud de onda representada (0 de 17.060 caminos). La geometría capturada abarca 12 dimensiones de decisión frente a 26 de la clase lineal libre, con 4 traslaciones inertes, y pierde 0,051 de exactitud frente a ella en tareas lineales. La mejora mínima de 2x con recompilación no se cumple en todos los casos (H-G1 refutada); hay mejoras locales, especialmente en lotes grandes. Los 17 teoremas T1-T5 sobre reales y complejos ya están compilados con Mathlib; falta demostrar que el código y sus salidas satisfacen las hipótesis. Todo se preregistró antes de ejecutar y un agente verificador independiente revisó los resultados.
 
+<!-- impact-note:start -->
+<sub><strong>Efficiency and practical value.</strong> Neuro3D turns captured Blender geometry into an inspectable optical-learning experiment with independent numerical checks. Its verified checkpoint recovery resumes saved states instead of discarding completed work after the tested interruption, reducing the need to restart an experiment. The <a href="#resultados-comprobados">recorded results</a> separate geometric correctness, prediction quality and computation cost, helping researchers reuse the workflow and evaluate changes accurately.</sub>
+<!-- impact-note:end -->
+
 ## Resultados comprobados
 
 | Evidencia | Resultado y alcance |
